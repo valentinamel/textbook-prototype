@@ -1,0 +1,11 @@
+_site/
+_bookdown_files/
+_main.Rmd
+_main.md
+QM-to-Understand-EBI.Rmd
+QM-to-Understand-EBI.md
+*_cache/
+*_files/
+.Rhistory
+.RData
+.Rproj.user/

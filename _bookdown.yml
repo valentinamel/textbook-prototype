@@ -1,0 +1,20 @@
+book_filename: "QM-to-Understand-EBI"
+output_dir: "docs"
+delete_merged_file: true
+new_session: true
+language:
+  ui:
+    chapter_name: ""
+rmd_files:
+  - index.Rmd
+  - B01-question-to-evidence.Rmd
+  - B02-typical-pitch.Rmd
+  - B03-relationships.Rmd
+  - B-EP01.Rmd
+  - B04-conditional-probability.Rmd
+  - B05-random-variables.Rmd
+  - B-EP02.Rmd
+  - course-intermediate.Rmd
+  - course-advanced.Rmd
+  - r-refresher.Rmd
+  - video-guide.Rmd

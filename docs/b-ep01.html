@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Tutorial 1: Evidence and probability foundations | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Tutorial 1: Evidence and probability foundations | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tutorial 1: Evidence and probability foundations | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="b03.html"/>
+<link rel="next" href="b04.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecture-preparation-and-external-videos"><i class="fa fa-check"></i>Lecture preparation and external videos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-and-main-dataset"><i class="fa fa-check"></i>R and main dataset</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tutorials-and-assessment"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#working-with-ai"><i class="fa fa-check"></i>Working with AI</a></li>
+</ul></li>
+<li class="part"><span><b>I Course 1 · Basic</b></span></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#before-class"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#how-the-course-works"><i class="fa fa-check"></i>1. How the course works</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#data-analysis-with-r-and-ai"><i class="fa fa-check"></i>2. Data analysis with R and AI</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class-data-collection-exercise"><i class="fa fa-check"></i>3. In-class data collection exercise</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#analyse-the-shark-tank-data"><i class="fa fa-check"></i>4. Analyse the Shark Tank data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#after-class"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#reproduce-the-workflow"><i class="fa fa-check"></i>1. Reproduce the workflow</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#retrieve-the-ideas"><i class="fa fa-check"></i>2. Retrieve the ideas</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#explain-one-graph"><i class="fa fa-check"></i>3. Explain one graph</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#practise-variable-and-graph-choices"><i class="fa fa-check"></i>4. Practise variable and graph choices</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#audit-an-ai-answer"><i class="fa fa-check"></i>5. Audit an AI answer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#before-class-1"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#in-class-1"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#a-probability-model-begins-with-possible-outcomes"><i class="fa fa-check"></i>A probability model begins with possible outcomes</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#probability-laws-and-their-axioms"><i class="fa fa-check"></i>Probability laws and their axioms</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#empirical-proportion-or-future-probability"><i class="fa fa-check"></i>Empirical proportion or future probability?</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#from-complete-outcomes-to-numerical-measurements"><i class="fa fa-check"></i>From complete outcomes to numerical measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#after-class-1"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#retrieval"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#practice"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#worked-exam-interpretation"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#before-class-2"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#in-class-2"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-pmf-assigns-probability-to-each-possible-value"><i class="fa fa-check"></i>A PMF assigns probability to each possible value</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-cdf-accumulates-probability-up-to-a-threshold"><i class="fa fa-check"></i>A CDF accumulates probability up to a threshold</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-is-the-distributions-weighted-centre"><i class="fa fa-check"></i>Expectation is the distribution’s weighted centre</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-after-transforming-a-variable"><i class="fa fa-check"></i>Expectation after transforming a variable</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#model-expectation-and-the-sample-mean"><i class="fa fa-check"></i>Model expectation and the sample mean</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#after-class-2"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#retrieval-1"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#practice-1"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#worked-exam-interpretation-1"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#before-class-3"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#in-class-3"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-1-data-and-measurement"><i class="fa fa-check"></i>Task 1 — Data and measurement</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-2-events-and-probability-rules"><i class="fa fa-check"></i>Task 2 — Events and probability rules</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-3-pmf-cdf-and-expectation"><i class="fa fa-check"></i>Task 3 — PMF, CDF, and expectation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#after-class-3"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#timed-individual-practice-10-minutes"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#check-your-understanding"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#before-class-4"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#in-class-4"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#variance-and-standard-deviation"><i class="fa fa-check"></i>Variance and standard deviation</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#conditional-probability"><i class="fa fa-check"></i>Conditional probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#the-multiplication-rule"><i class="fa fa-check"></i>The multiplication rule</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#partitions-and-the-law-of-total-probability"><i class="fa fa-check"></i>Partitions and the law of total probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#bayes-rule"><i class="fa fa-check"></i>Bayes’ rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#after-class-4"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#retrieval-2"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#practice-2"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#worked-exam-interpretation-2"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#before-class-5"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#in-class-5"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#the-joint-probability-mass-function"><i class="fa fa-check"></i>The joint probability mass function</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#independence-in-a-joint-distribution"><i class="fa fa-check"></i>Independence in a joint distribution</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#covariance-comes-from-expectation"><i class="fa fa-check"></i>Covariance comes from expectation</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#correlation-standardises-covariance"><i class="fa fa-check"></i>Correlation standardises covariance</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#inspect-first-summarise-second"><i class="fa fa-check"></i>Inspect first, summarise second</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#after-class-5"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#retrieval-3"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#practice-3"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#worked-exam-interpretation-3"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#before-class-6"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#in-class-6"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-1-conditional-probability-and-bayes"><i class="fa fa-check"></i>Task 1 — Conditional probability and Bayes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-2-independence"><i class="fa fa-check"></i>Task 2 — Independence</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-3-joint-pmf-covariance-and-correlation"><i class="fa fa-check"></i>Task 3 — Joint PMF, covariance, and correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#after-class-6"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#timed-individual-practice-10-minutes-1"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#check-your-understanding-1"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Course 2 · Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>Intermediate quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#how-this-course-connects"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#tutorials-and-assessment-1"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>III Course 3 · Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>Advanced quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#how-this-course-connects-1"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#tutorials-and-assessment-2"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a>
+<ul>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-r-or-rstudio-is-not-ready"><i class="fa fa-check"></i>If R or RStudio is not ready</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-cannot-reproduce-your-work"><i class="fa fa-check"></i>If you cannot reproduce your work</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-the-data-will-not-load"><i class="fa fa-check"></i>If the data will not load</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-forgot-summaries-or-plots"><i class="fa fa-check"></i>If you forgot summaries or plots</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#a-five-minute-return-to-r-check"><i class="fa fa-check"></i>A five-minute return-to-R check</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a>
+<ul>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#required-preparation-at-a-glance"><i class="fa fa-check"></i>Required preparation at a glance</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#supplementary-probability-reading"><i class="fa fa-check"></i>Supplementary probability reading</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-1-introduction-to-data-analysis"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-2-probability-foundations-and-random-variables"><i class="fa fa-check"></i>Lecture 2: Probability Foundations and Random Variables</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-3-discrete-distributions-and-expectation"><i class="fa fa-check"></i>Lecture 3: Discrete Distributions and Expectation</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-4-variance-conditioning-and-belief-updating"><i class="fa fa-check"></i>Lecture 4: Variance, Conditioning, and Belief Updating</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-5-joint-random-variables-covariance-and-correlation"><i class="fa fa-check"></i>Lecture 5: Joint Random Variables, Covariance, and Correlation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="b-ep01" class="section level1 hasAnchor">
+<h1>Tutorial 1: Evidence and probability foundations<a href="b-ep01.html#b-ep01" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="outcomes">
+<span class="label">By the end of Tutorial 1, you can</span>
+<ul>
+<li>
+distinguish data, events, random variables, and distributions;
+</li>
+<li>
+apply probability rules to the Shark Tank record-selection experiment;
+</li>
+<li>
+calculate and interpret a Bernoulli PMF, CDF, and expectation;
+</li>
+<li>
+write a concise interpretation of supplied R output.
+</li>
+</ul>
+</div>
+<div id="before-class-3" class="section level2 hasAnchor course-phase phase-before">
+<h2>Before class<a href="b-ep01.html#before-class-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bring your after-class work from Lectures 1–3. Without reopening the chapters,
+complete these definitions:</p>
+<ol style="list-style-type: decimal">
+<li>An observational unit is …</li>
+<li>An event is …</li>
+<li>A random variable is …</li>
+<li>A PMF is …</li>
+</ol>
+<details>
+<summary>
+Check your preparation
+</summary>
+<ol style="list-style-type: decimal">
+<li>An observational unit is the entity represented by one row of the data.</li>
+<li>An event is a specified subset of the sample space.</li>
+<li>A random variable is a real-valued function on the sample space.</li>
+<li>A PMF assigns probability <span class="math inline">\(P(X=x)\)</span> to each value in the support of a
+discrete random variable; its masses are non-negative and sum to 1.</li>
+</ol>
+</details>
+</div>
+<div id="in-class-3" class="section level2 hasAnchor course-phase phase-in-class">
+<h2>In class<a href="b-ep01.html#in-class-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Attempt each task before opening its answer. A complete written answer should
+name the quantity, show the calculation, report the value and units, interpret
+it in context, and state an important model or measurement boundary.</p>
+<div id="task-1-data-and-measurement" class="section level3 hasAnchor">
+<h3>Task 1 — Data and measurement<a href="b-ep01.html#task-1-data-and-measurement" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R reports:</p>
+<pre><code>##                     rows                  columns                    deals 
+##              706.0000000                5.0000000              383.0000000 
+##          deal_proportion median_description_words 
+##                0.5424929               23.0000000</code></pre>
+<ol style="list-style-type: decimal">
+<li>What is the observational unit?</li>
+<li>Verify the deal proportion from 383 deals and 323 non-deals.</li>
+<li>Explain why the mean of <code>deal_on_show</code> is a proportion.</li>
+<li>Evaluate: “The data contain 706 successful companies.”</li>
+<li>What exactly does <code>description_words</code> measure?</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>One row is one recorded televised pitch. There are <span class="math inline">\(383+323=706\)</span> records and
+<span class="math inline">\(383/706=0.5425\)</span>, so 54.2% reached an on-air agreement. The mean of a 0/1
+indicator equals the share coded 1 because its sum counts the 1s. “Successful
+companies” is incorrect: the outcome is an agreement made on the show, not
+completed funding or later venture performance. Word count describes the
+written text in the source dataset, not the spoken pitch.</p>
+</details>
+</div>
+<div id="task-2-events-and-probability-rules" class="section level3 hasAnchor">
+<h3>Task 2 — Events and probability rules<a href="b-ep01.html#task-2-events-and-probability-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The experiment selects one of the 706 records uniformly. Let:</p>
+<ul>
+<li><span class="math inline">\(D\)</span>: the selected record has an on-air deal;</li>
+<li><span class="math inline">\(L\)</span>: the selected record is from Seasons 5-8.</li>
+</ul>
+<p>R reports:</p>
+<pre><code>##       P_D       P_L P_D_and_L 
+## 0.5424929 0.6288952 0.3626062</code></pre>
+<ol style="list-style-type: decimal">
+<li>Define <span class="math inline">\(\Omega\)</span>, and distinguish an outcome from event <span class="math inline">\(D\)</span>.</li>
+<li>Translate <span class="math inline">\(D^c\)</span>, <span class="math inline">\(D\cap L\)</span>, and <span class="math inline">\(D\cup L\)</span> into words.</li>
+<li>Calculate <span class="math inline">\(P(D^c)\)</span>.</li>
+<li>Calculate <span class="math inline">\(P(D\cup L)\)</span> using the addition rule.</li>
+<li>Explain why these probabilities do not automatically apply to a future US
+entrepreneur.</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>The sample space is the set of 706 complete pitch records; one selected record
+is an outcome, while <span class="math inline">\(D\)</span> is the subset of 383 deal records. The complement is
+no on-air deal, the intersection is a late-season deal, and the union is
+late-season, deal, or both. <span class="math inline">\(P(D^c)=1-383/706=323/706\approx0.458\)</span>.
+The union is <span class="math inline">\(P(D)+P(L)-P(D\cap L)\approx0.809\)</span>. Future use requires a
+defined target population and comparable selection, time period, and outcome.</p>
+</details>
+</div>
+<div id="task-3-pmf-cdf-and-expectation" class="section level3 hasAnchor">
+<h3>Task 3 — PMF, CDF, and expectation<a href="b-ep01.html#task-3-pmf-cdf-and-expectation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(X=1\)</span> for an on-air deal and <span class="math inline">\(X=0\)</span> otherwise. Use
+<span class="math inline">\(p=383/706\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Write the PMF and verify that its masses sum to 1.</li>
+<li>Write the full piecewise CDF <span class="math inline">\(F_X(a)\)</span>.</li>
+<li>Calculate <span class="math inline">\(E[X]\)</span> from the PMF.</li>
+<li>Explain why <span class="math inline">\(E[X]\)</span> equals the observed proportion of 1s.</li>
+<li>Explain the difference between the random variable <span class="math inline">\(X\)</span> and a realised
+value <span class="math inline">\(x=1\)</span>.</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p><span class="math display">\[
+p_X(0)=1-p,\qquad p_X(1)=p,
+\]</span></p>
+<p>and the masses total <span class="math inline">\(1-p+p=1\)</span>.</p>
+<p><span class="math display">\[
+F_X(a)=
+\begin{cases}
+0,&amp;a&lt;0,\\
+1-p,&amp;0\le a&lt;1,\\
+1,&amp;a\ge1.
+\end{cases}
+\]</span></p>
+<p>The expectation is <span class="math inline">\(E[X]=0(1-p)+1p=p\approx0.542\)</span>. Because the indicator
+contains 383 ones among 706 observations, its mean is also <span class="math inline">\(383/706\)</span>.
+<span class="math inline">\(X\)</span> is the mapping defined before selection; <span class="math inline">\(x=1\)</span> is one possible
+realised value.</p>
+</details>
+</div>
+</div>
+<div id="after-class-3" class="section level2 hasAnchor course-phase phase-after">
+<h2>After class<a href="b-ep01.html#after-class-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="timed-individual-practice-10-minutes" class="section level3 hasAnchor">
+<h3>Timed individual practice — 10 minutes<a href="b-ep01.html#timed-individual-practice-10-minutes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An output block describes word count:</p>
+<pre><code>##      mean    median   minimum        q1        q3   maximum 
+##  29.75779  23.00000   2.00000  11.00000  42.00000 159.00000</code></pre>
+<p>Write no more than 100 words. Compare mean and median, calculate the IQR,
+calculate the range, and state the measurement boundary. Then explain
+which value equals the expectation if the empirical distribution gives mass
+<span class="math inline">\(1/706\)</span> to each record.</p>
+<details>
+<summary>
+Check a model answer
+</summary>
+<p>The written descriptions have a mean length of about 29.8 words and a median
+of 23 words. Their IQR is <span class="math inline">\(42-11=31\)</span> words, and their range is
+<span class="math inline">\(159-2=157\)</span> words. The mean above the median is consistent with the
+right-skewed histogram seen in Lecture 2. If each record receives probability
+<span class="math inline">\(1/706\)</span>, the empirical expectation is the mean, 29.8 words. These values
+describe written dataset text, not spoken-pitch length or quality.</p>
+</details>
+</div>
+<div id="check-your-understanding" class="section level3 hasAnchor">
+<h3>Check your understanding<a href="b-ep01.html#check-your-understanding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Complete from memory:</p>
+<ol style="list-style-type: decimal">
+<li>An event is …</li>
+<li>A PMF must …</li>
+<li>A CDF at <span class="math inline">\(a\)</span> reports …</li>
+<li>Expectation is …</li>
+</ol>
+<details>
+<summary>
+Check your answers
+</summary>
+<ol style="list-style-type: decimal">
+<li>An event is a specified subset of the sample space.</li>
+<li>A PMF is non-negative and sums to 1 over the support.</li>
+<li><span class="math inline">\(F_X(a)=P(X\le a)\)</span>.</li>
+<li><span class="math inline">\(E[X]=\sum_x x p_X(x)\)</span>, the probability-weighted average of the possible
+values.</li>
+</ol>
+</details>
+<p>Continue to <a href="b04.html#b04">Lecture 4: Variance, conditioning, and belief updating</a>.</p>
+</div>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="b03.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="b04.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

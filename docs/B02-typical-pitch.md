@@ -1,0 +1,363 @@
+# Lecture 2: Probability foundations and random variables {#b02}
+
+
+
+<div class="outcomes">
+<span class="label">By the end of Lecture 2, you can</span>
+<ul>
+<li>read frequency and relative-frequency distributions;</li>
+<li>choose a bar chart or histogram and describe centre, spread, and shape;</li>
+<li>define a random experiment, outcome, sample space, and event;</li>
+<li>use complements, intersections, unions, and disjointness;</li>
+<li>state the probability axioms and distinguish empirical proportions from model probabilities;</li>
+<li>distinguish an outcome, a random variable, and a realised value.</li>
+</ul>
+</div>
+
+::: {.course-phase .phase-before}
+
+## Before class
+
+<div class="video-prep">
+<span class="label">Video preparation</span><br>
+Watch <a href="https://www.youtube.com/watch?v=iQ2edOqEQAs">Sample Space</a>
+and <a href="https://www.youtube.com/watch?v=pA83XtLeVig">Probability
+Axioms</a>, then watch
+<a href="https://www.youtube.com/watch?v=vfqPpai_9jI">Definition of Random
+Variables</a>. Be ready to define an outcome, sample space, event, and
+random variable and to state the three probability axioms. All links are also
+listed in the
+<a href="videos.html#videos">External Video Guide</a>.
+</div>
+
+An **empirical distribution** records how often values occur in a dataset.
+For a categorical variable, a frequency table gives counts and a
+relative-frequency table gives proportions.
+
+
+``` r
+season_counts <- table(sharks$season)
+season_counts
+```
+
+```
+## 
+##   1   2   3   4   5   6   7   8 
+##  67  32  60 103 116 116 116  96
+```
+
+``` r
+round(prop.table(season_counts), 3)
+```
+
+```
+## 
+##     1     2     3     4     5     6     7     8 
+## 0.095 0.045 0.085 0.146 0.164 0.164 0.164 0.136
+```
+
+<img src="B02-typical-pitch_files/figure-html/b02-season-plot-1.png" width="672" />
+
+The later seasons contain more records, so an overall percentage gives those
+seasons more weight.
+
+For a quantitative variable, a histogram groups nearby values into intervals.
+
+<img src="B02-typical-pitch_files/figure-html/b02-word-histogram-1.png" width="672" />
+
+The distribution is right-skewed: most descriptions are relatively short, but
+a small number extend far to the right. The median is 23 words; the first and
+third quartiles are 11 and 42 words.
+
+If needed, review [summary statistics](https://walshc.github.io/ebi-prog/dataframes-summary-statistics.html)
+and [plots](https://walshc.github.io/ebi-prog/intro-to-plotting.html) from
+Programming for E&BI.
+
+:::
+
+::: {.course-phase .phase-in-class}
+
+## In class
+
+### A probability model begins with possible outcomes
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/sample-space/">01.2 Sample Space</a>.</p>
+
+Probability starts by specifying exactly what may happen. A probability model
+needs a process, a list of complete possible results, and events that describe
+which results matter for the question.
+
+A **random experiment** is a process whose outcome is not known in advance.
+The word *random* does not mean "unstructured." It means the model does not
+specify in advance which possible outcome will occur.
+
+- An **outcome**, written \(\omega\), is one complete possible result.
+- The **sample space**, written \(\Omega\), is the set of all possible outcomes.
+- An **event** is a specified subset of \(\Omega\) to which the model assigns a
+  probability. It occurs when the realised outcome belongs to that subset.
+
+The distinction is easiest to read from the whole-to-part structure:
+
+| Object | Question it answers | Shark Tank example |
+|---|---|---|
+| experiment | What is done? | Select one of the 706 records uniformly |
+| outcome \(\omega\) | Which complete result occurred? | One complete selected pitch record |
+| sample space \(\Omega\) | Which complete results were possible? | The set of all 706 records |
+| event \(A\) | Which outcomes count as “yes” for this question? | The subset of records with an on-air deal |
+
+For a single roll of a fair six-sided die,
+
+\[
+\Omega=\{1,2,3,4,5,6\}.
+\]
+
+The event \(E=\{2,4,6\}\) means "an even result." The outcome \(\omega=4\)
+belongs to \(E\), so \(E\) occurs when 4 is rolled. The number 4 is an outcome;
+the singleton set \(\{4\}\) is an event.
+
+#### An empirical selection experiment
+
+Define the experiment as **select one of the 706 recorded pitches uniformly at
+random**. The sample space is the set of 706 pitch records. Define:
+
+- \(D\): the selected pitch reached an on-air deal;
+- \(L\): the selected pitch appeared in Seasons 5-8.
+
+Making the selection uniform means every record has probability \(1/706\).
+Consequently, event probabilities equal relative frequencies in this fixed
+dataset. This does not imply the same probabilities for future entrepreneurs.
+
+#### Event language is set language
+
+| Notation | Name | Meaning |
+|---|---|---|
+| \(A^c\) | complement | \(A\) does not occur |
+| \(A\cap B\) | intersection | both \(A\) and \(B\) occur |
+| \(A\cup B\) | union | \(A\), \(B\), or both occur |
+| \(A\subseteq B\) | subset | every outcome in \(A\) is also in \(B\) |
+| \(A\cap B=\varnothing\) | disjoint | \(A\) and \(B\) cannot occur together |
+
+Disjoint does **not** mean independent. If two disjoint events both have
+positive probability, observing one makes the other impossible. Independence,
+introduced in Lecture 5, means that observing one event does not change the
+probability of the other.
+
+### Probability laws and their axioms
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/probability-axioms/">01.4 Probability Axioms</a>.</p>
+
+A **probability law** assigns a number \(P(A)\) to each event \(A\). It must
+satisfy:
+
+1. **Non-negativity:** \(P(A)\ge 0\) for every event \(A\).
+2. **Normalisation:** \(P(\Omega)=1\).
+3. **Countable additivity:** for pairwise disjoint events
+   \(A_1,A_2,\ldots\),
+
+\[
+P\left(\bigcup_{i=1}^{\infty} A_i\right)
+=\sum_{i=1}^{\infty} P(A_i).
+\]
+
+The first two axioms set the probability scale: probability cannot be negative,
+and something in the sample space must occur. The third says that mutually
+exclusive routes can be added because no outcome is counted twice.
+
+For a finite sample space with equally likely outcomes,
+
+\[
+P(A)=\frac{|A|}{|\Omega|}.
+\]
+
+That ratio is a special case, not a universal definition. It applies because
+equal likelihood has been built into the model.
+
+#### Rules derived from the axioms
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/simple-properties-of-probabilities/">01.5 Simple Properties of Probabilities</a>.</p>
+
+Because \(A\) and \(A^c\) are disjoint and together form \(\Omega\),
+
+\[
+P(A^c)=1-P(A).
+\]
+
+When \(A\) and \(B\) may overlap,
+
+\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B).
+\]
+
+The intersection is subtracted once because it was counted in both marginal
+probabilities.
+
+
+``` r
+c(
+  P_D = mean(D),
+  P_L = mean(L),
+  P_D_and_L = mean(D & L),
+  P_not_D = mean(!D),
+  P_D_or_L_direct = mean(D | L),
+  P_D_or_L_rule = mean(D) + mean(L) - mean(D & L)
+)
+```
+
+```
+##             P_D             P_L       P_D_and_L         P_not_D P_D_or_L_direct 
+##       0.5424929       0.6288952       0.3626062       0.4575071       0.8087819 
+##   P_D_or_L_rule 
+##       0.8087819
+```
+
+For example, \(P(D)=383/706\approx0.542\) in the uniform record-selection
+experiment.
+
+For example, “no on-air deal” is \(D^c\), “late-season and deal” is
+\(L\cap D\), and “late-season, deal, or both” is \(L\cup D\).
+
+### Empirical proportion or future probability?
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/interpretations-uses-of-probabilities/">01.10 Interpretations and Uses of Probabilities</a>.</p>
+
+The symbol \(P(D)\) is meaningful only after the probability model is defined.
+For uniform selection from the file, it is exactly 383/706. Calling it the
+probability that a future televised pitch reaches an on-air agreement adds
+assumptions:
+
+- the future case belongs to a defined target population;
+- selection into the show is comparable;
+- the process is stable over time;
+- "deal" retains the same definition.
+
+Calling it the probability of completed investment would additionally change
+the outcome being predicted; completed investment is not recorded here.
+
+### From complete outcomes to numerical measurements
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/definition-of-random-variables/">05.2 Definition of Random Variables</a>.</p>
+
+An outcome is a complete result, but an analysis usually focuses on one
+numerical feature of that result. A **random variable** is the rule that extracts
+that number. Formally,
+
+\[
+X:\Omega\rightarrow\mathbb{R}.
+\]
+
+Read the notation from left to right: \(X\) takes an outcome from the sample
+space \(\Omega\) and returns a real number.
+
+| Symbol | Meaning |
+|---|---|
+| \(\omega\) | one complete outcome, such as one selected pitch record |
+| \(X\) | the fixed measurement rule |
+| \(X(\omega)\) | the number assigned by \(X\) to outcome \(\omega\) |
+| \(x\) | a possible or realised numerical value of \(X\) |
+
+For example, define \(X(\omega)=1\) when pitch \(\omega\) reached an on-air
+deal and \(X(\omega)=0\) otherwise. We could also define \(S(\omega)\) as its
+season and \(W(\omega)\) as its written-description word count. The same
+outcome therefore produces several measurements.
+
+The rule \(X\) is defined before an outcome is selected. After selection,
+\(x=X(\omega)\) is its **realised value**. The variable is called random
+because its value is unknown before the outcome is observed, not because its
+definition changes.
+
+A random variable is **discrete** when its possible values form a finite or
+countably infinite set. Its **support** is the set of values with positive
+probability. The support of the deal indicator is \(\{0,1\}\), while the
+support of season is \(\{1,\ldots,8\}\). Lecture 3 assigns probabilities to
+these possible values.
+
+:::
+
+::: {.course-phase .phase-after}
+
+## After class
+
+### Retrieval
+
+1. What is the difference between an outcome and an event?
+2. What is the difference between a random variable and a realised value?
+3. State the three probability axioms.
+4. Why is the equally-likely ratio a special case?
+5. What extra assumptions turn an empirical proportion into a forecast?
+
+<details>
+<summary>Check your answers</summary>
+
+1. An outcome is one possible complete result; an event is a specified set of
+   outcomes.
+2. A random variable is a fixed function from outcomes to numbers; a realised
+   value is the number produced for the observed outcome.
+3. Probabilities are non-negative, \(P(\Omega)=1\), and probabilities add over
+   any countable collection of pairwise disjoint events.
+4. The ratio \(|A|/|\Omega|\) requires a finite sample space whose outcomes are
+   equally likely.
+5. A forecast requires a defined target population and assumptions about
+   selection, process stability, and a stable outcome definition.
+
+</details>
+
+### Practice
+
+In the uniform selection experiment, use
+\(P(D)=383/706\), \(P(L)=444/706\), and
+\(P(D\cap L)=256/706\).
+
+1. Calculate and interpret \(P(D^c)\).
+2. Calculate and interpret \(P(D\cup L)\).
+3. Are \(D\) and \(D^c\) disjoint? Explain.
+4. Define a random variable \(S\) that records the season of the selected
+   pitch. State its possible values.
+5. Define a deal indicator \(X\). Explain how the event \(D\) and the random
+   variable \(X\) are related but not the same object.
+
+<details>
+<summary>Check your answers</summary>
+
+1. \(P(D^c)=1-383/706=323/706\approx0.458\): 45.8% of the records did not
+   reach an on-air agreement.
+2. \(P(D\cup L)=(383+444-256)/706=571/706\approx0.809\): 80.9% of the records
+   are from Seasons 5--8, reached an on-air deal, or satisfy both conditions.
+3. They are disjoint because a record cannot simultaneously have and not have
+   an on-air deal.
+4. Define \(S(\omega)\) as the season number of pitch record \(\omega\).
+   Its possible values are \(\{1,2,\ldots,8\}\).
+5. Define \(X(\omega)=1\) when \(\omega\in D\) and \(X(\omega)=0\) otherwise.
+   \(D\) is a set of outcomes; \(X\) is a function that assigns a number to
+   every outcome. They are related by \(D=\{\omega:X(\omega)=1\}\).
+
+</details>
+
+### Worked exam interpretation
+
+**Question.** R reports `mean(sharks$deal_on_show) = 0.542`. Is this an
+empirical proportion or a universal probability?
+
+<details>
+<summary>Check a model answer</summary>
+
+It is first an empirical proportion: 383 of the 706 recorded
+pitches reached an on-air agreement. It is also the event probability in a
+model that selects one of those 706 records uniformly. Applying it to a future
+entrepreneur requires additional population, selection, stability, and outcome
+assumptions.
+
+</details>
+
+Continue to [Lecture 3: Discrete distributions and expectation](#b03).
+
+For a more formal explanation, consult
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapters 2--4 for empirical distributions and Chapters 6--8 for probability
+models and random variables.
+
+:::

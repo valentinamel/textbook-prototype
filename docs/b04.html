@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lecture 4: Variance, conditioning, and belief updating | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lecture 4: Variance, conditioning, and belief updating | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lecture 4: Variance, conditioning, and belief updating | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="b-ep01.html"/>
+<link rel="next" href="b05.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecture-preparation-and-external-videos"><i class="fa fa-check"></i>Lecture preparation and external videos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-and-main-dataset"><i class="fa fa-check"></i>R and main dataset</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tutorials-and-assessment"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#working-with-ai"><i class="fa fa-check"></i>Working with AI</a></li>
+</ul></li>
+<li class="part"><span><b>I Course 1 · Basic</b></span></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#before-class"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#how-the-course-works"><i class="fa fa-check"></i>1. How the course works</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#data-analysis-with-r-and-ai"><i class="fa fa-check"></i>2. Data analysis with R and AI</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class-data-collection-exercise"><i class="fa fa-check"></i>3. In-class data collection exercise</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#analyse-the-shark-tank-data"><i class="fa fa-check"></i>4. Analyse the Shark Tank data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#after-class"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#reproduce-the-workflow"><i class="fa fa-check"></i>1. Reproduce the workflow</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#retrieve-the-ideas"><i class="fa fa-check"></i>2. Retrieve the ideas</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#explain-one-graph"><i class="fa fa-check"></i>3. Explain one graph</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#practise-variable-and-graph-choices"><i class="fa fa-check"></i>4. Practise variable and graph choices</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#audit-an-ai-answer"><i class="fa fa-check"></i>5. Audit an AI answer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#before-class-1"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#in-class-1"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#a-probability-model-begins-with-possible-outcomes"><i class="fa fa-check"></i>A probability model begins with possible outcomes</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#probability-laws-and-their-axioms"><i class="fa fa-check"></i>Probability laws and their axioms</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#empirical-proportion-or-future-probability"><i class="fa fa-check"></i>Empirical proportion or future probability?</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#from-complete-outcomes-to-numerical-measurements"><i class="fa fa-check"></i>From complete outcomes to numerical measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#after-class-1"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#retrieval"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#practice"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#worked-exam-interpretation"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#before-class-2"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#in-class-2"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-pmf-assigns-probability-to-each-possible-value"><i class="fa fa-check"></i>A PMF assigns probability to each possible value</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-cdf-accumulates-probability-up-to-a-threshold"><i class="fa fa-check"></i>A CDF accumulates probability up to a threshold</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-is-the-distributions-weighted-centre"><i class="fa fa-check"></i>Expectation is the distribution’s weighted centre</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-after-transforming-a-variable"><i class="fa fa-check"></i>Expectation after transforming a variable</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#model-expectation-and-the-sample-mean"><i class="fa fa-check"></i>Model expectation and the sample mean</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#after-class-2"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#retrieval-1"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#practice-1"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#worked-exam-interpretation-1"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#before-class-3"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#in-class-3"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-1-data-and-measurement"><i class="fa fa-check"></i>Task 1 — Data and measurement</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-2-events-and-probability-rules"><i class="fa fa-check"></i>Task 2 — Events and probability rules</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-3-pmf-cdf-and-expectation"><i class="fa fa-check"></i>Task 3 — PMF, CDF, and expectation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#after-class-3"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#timed-individual-practice-10-minutes"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#check-your-understanding"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#before-class-4"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#in-class-4"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#variance-and-standard-deviation"><i class="fa fa-check"></i>Variance and standard deviation</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#conditional-probability"><i class="fa fa-check"></i>Conditional probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#the-multiplication-rule"><i class="fa fa-check"></i>The multiplication rule</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#partitions-and-the-law-of-total-probability"><i class="fa fa-check"></i>Partitions and the law of total probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#bayes-rule"><i class="fa fa-check"></i>Bayes’ rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#after-class-4"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#retrieval-2"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#practice-2"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#worked-exam-interpretation-2"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#before-class-5"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#in-class-5"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#the-joint-probability-mass-function"><i class="fa fa-check"></i>The joint probability mass function</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#independence-in-a-joint-distribution"><i class="fa fa-check"></i>Independence in a joint distribution</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#covariance-comes-from-expectation"><i class="fa fa-check"></i>Covariance comes from expectation</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#correlation-standardises-covariance"><i class="fa fa-check"></i>Correlation standardises covariance</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#inspect-first-summarise-second"><i class="fa fa-check"></i>Inspect first, summarise second</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#after-class-5"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#retrieval-3"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#practice-3"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#worked-exam-interpretation-3"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#before-class-6"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#in-class-6"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-1-conditional-probability-and-bayes"><i class="fa fa-check"></i>Task 1 — Conditional probability and Bayes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-2-independence"><i class="fa fa-check"></i>Task 2 — Independence</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-3-joint-pmf-covariance-and-correlation"><i class="fa fa-check"></i>Task 3 — Joint PMF, covariance, and correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#after-class-6"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#timed-individual-practice-10-minutes-1"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#check-your-understanding-1"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Course 2 · Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>Intermediate quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#how-this-course-connects"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#tutorials-and-assessment-1"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>III Course 3 · Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>Advanced quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#how-this-course-connects-1"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#tutorials-and-assessment-2"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a>
+<ul>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-r-or-rstudio-is-not-ready"><i class="fa fa-check"></i>If R or RStudio is not ready</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-cannot-reproduce-your-work"><i class="fa fa-check"></i>If you cannot reproduce your work</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-the-data-will-not-load"><i class="fa fa-check"></i>If the data will not load</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-forgot-summaries-or-plots"><i class="fa fa-check"></i>If you forgot summaries or plots</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#a-five-minute-return-to-r-check"><i class="fa fa-check"></i>A five-minute return-to-R check</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a>
+<ul>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#required-preparation-at-a-glance"><i class="fa fa-check"></i>Required preparation at a glance</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#supplementary-probability-reading"><i class="fa fa-check"></i>Supplementary probability reading</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-1-introduction-to-data-analysis"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-2-probability-foundations-and-random-variables"><i class="fa fa-check"></i>Lecture 2: Probability Foundations and Random Variables</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-3-discrete-distributions-and-expectation"><i class="fa fa-check"></i>Lecture 3: Discrete Distributions and Expectation</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-4-variance-conditioning-and-belief-updating"><i class="fa fa-check"></i>Lecture 4: Variance, Conditioning, and Belief Updating</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-5-joint-random-variables-covariance-and-correlation"><i class="fa fa-check"></i>Lecture 5: Joint Random Variables, Covariance, and Correlation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="b04" class="section level1 hasAnchor">
+<h1>Lecture 4: Variance, conditioning, and belief updating<a href="b04.html#b04" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="outcomes">
+<span class="label">By the end of Lecture 4, you can</span>
+<ul>
+<li>
+calculate and interpret variance and standard deviation;
+</li>
+<li>
+distinguish distribution variance from the usual sample variance;
+</li>
+<li>
+calculate conditional probabilities and identify their reference classes;
+</li>
+<li>
+use total probability and Bayes’ rule.
+</li>
+</ul>
+</div>
+<div id="before-class-4" class="section level2 hasAnchor course-phase phase-before">
+<h2>Before class<a href="b04.html#before-class-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="video-prep">
+<p><span class="label">Video preparation</span><br>
+Watch <a href="https://www.youtube.com/watch?v=ZWo1XgAQE5k">Variance</a>,
+<a href="https://www.youtube.com/watch?v=MPRKc4UPoJk">Conditional
+Probabilities</a>, and <a href="https://www.youtube.com/watch?v=kz2tvO_ZAKI">Bayes’
+Rule</a>. Be ready to explain what variance averages, identify the reference
+class in a conditional probability, and explain why reversing a condition
+changes the denominator. All links are also listed in the
+<a href="videos.html#videos">External Video Guide</a>.</p>
+</div>
+<p>Lecture 3 introduced expectation. For a random variable with mean
+<span class="math inline">\(\mu=E[X]\)</span>, variance is the expected squared distance from that mean:</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)=E[(X-\mu)^2].
+\]</span></p>
+<p>Before calculating it, explain why deviations are squared rather than simply
+averaged.</p>
+<details>
+<summary>
+Check your preparation
+</summary>
+<p>The probability-weighted deviations from the mean sum to zero. Squaring makes
+both positive and negative deviations contribute to spread.</p>
+</details>
+<p>Compare:</p>
+<ul>
+<li>“Among pitches in Seasons 5-8, what proportion reached an on-air deal?”</li>
+<li>“Among pitches that reached an on-air deal, what proportion came from
+Seasons 5-8?”</li>
+</ul>
+<p>Let <span class="math inline">\(D\)</span> be the deal event and <span class="math inline">\(L\)</span> the late-season event. The questions are
+<span class="math inline">\(P(D\mid L)\)</span> and <span class="math inline">\(P(L\mid D)\)</span>. The event after the vertical bar defines
+the restricted reference class and therefore the denominator.</p>
+<pre><code>##              Deal
+## Period        No on-air deal On-air deal
+##   Seasons 1-4            135         127
+##   Seasons 5-8            188         256</code></pre>
+<p>Before calculating, point to the numerator and denominator for:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(D)\)</span>;</li>
+<li><span class="math inline">\(P(L)\)</span>;</li>
+<li><span class="math inline">\(P(D\cap L)\)</span>;</li>
+<li><span class="math inline">\(P(D\mid L)\)</span>;</li>
+<li><span class="math inline">\(P(L\mid D)\)</span>.</li>
+</ol>
+<details>
+<summary>
+Check your denominators
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(D)\)</span>: 383 deal records out of 706 records.</li>
+<li><span class="math inline">\(P(L)\)</span>: 444 late-season records out of 706 records.</li>
+<li><span class="math inline">\(P(D\cap L)\)</span>: 256 late-season deal records out of 706 records.</li>
+<li><span class="math inline">\(P(D\mid L)\)</span>: 256 late-season deal records out of 444 late-season records.</li>
+<li><span class="math inline">\(P(L\mid D)\)</span>: 256 late-season deal records out of 383 deal records.</li>
+</ol>
+</details>
+</div>
+<div id="in-class-4" class="section level2 hasAnchor course-phase phase-in-class">
+<h2>In class<a href="b04.html#in-class-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="variance-and-standard-deviation" class="section level3 hasAnchor">
+<h3>Variance and standard deviation<a href="b04.html#variance-and-standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/variance/">06.2 Variance</a>.
+</p>
+<p>Expectation locates the centre of a distribution, but it does not describe how
+tightly values cluster around that centre. Two distributions can have the same
+expectation and very different spreads.</p>
+<p>To measure spread, start with the deviation <span class="math inline">\(X-\mu\)</span>, where
+<span class="math inline">\(\mu=E[X]\)</span>. Positive and negative deviations would cancel if they were
+averaged directly, so variance squares each deviation before taking its
+probability-weighted average. When <span class="math inline">\(E[X^2]&lt;\infty\)</span>,</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)
+=E[(X-\mu)^2]
+=\sum_x (x-\mu)^2p_X(x).
+\]</span></p>
+<p>Read the calculation as four steps:</p>
+<ol style="list-style-type: decimal">
+<li>locate the centre, <span class="math inline">\(\mu=E[X]\)</span>;</li>
+<li>measure each possible deviation, <span class="math inline">\(x-\mu\)</span>;</li>
+<li>square the deviation, <span class="math inline">\((x-\mu)^2\)</span>;</li>
+<li>weight it by <span class="math inline">\(p_X(x)\)</span> and add across the support.</li>
+</ol>
+<p>Large deviations therefore contribute more than small deviations. Variance is
+zero only when all probability is concentrated at one value.</p>
+<p>The equivalent computational form is</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)=E[X^2]-\{E[X]\}^2.
+\]</span></p>
+<p>It gives the same result, but the definition
+<span class="math inline">\(E[(X-\mu)^2]\)</span> is usually easier to interpret.</p>
+<p>The <strong>standard deviation</strong> is</p>
+<p><span class="math display">\[
+\operatorname{SD}(X)=\sqrt{\operatorname{Var}(X)}.
+\]</span></p>
+<p>Variance has squared units; standard deviation returns to the units of <span class="math inline">\(X\)</span>.
+For a Bernoulli variable, <span class="math inline">\(\operatorname{Var}(X)=p(1-p)\)</span>.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="b04.html#cb53-1" tabindex="-1"></a>mu_s <span class="ot">&lt;-</span> <span class="fu">sum</span>(s <span class="sc">*</span> p_s)</span>
+<span id="cb53-2"><a href="b04.html#cb53-2" tabindex="-1"></a>var_s <span class="ot">&lt;-</span> <span class="fu">sum</span>((s <span class="sc">-</span> mu_s)<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> p_s)</span>
+<span id="cb53-3"><a href="b04.html#cb53-3" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="b04.html#cb53-4" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb53-5"><a href="b04.html#cb53-5" tabindex="-1"></a>  <span class="at">Var_X =</span> p_hat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p_hat),</span>
+<span id="cb53-6"><a href="b04.html#cb53-6" tabindex="-1"></a>  <span class="at">SD_X =</span> <span class="fu">sqrt</span>(p_hat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p_hat)),</span>
+<span id="cb53-7"><a href="b04.html#cb53-7" tabindex="-1"></a>  <span class="at">Var_S =</span> var_s,</span>
+<span id="cb53-8"><a href="b04.html#cb53-8" tabindex="-1"></a>  <span class="at">SD_S =</span> <span class="fu">sqrt</span>(var_s)</span>
+<span id="cb53-9"><a href="b04.html#cb53-9" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##     Var_X      SD_X     Var_S      SD_S 
+## 0.2481944 0.4981911 4.4526900 2.1101398</code></pre>
+<div id="distribution-variance-and-sample-variance" class="section level4 hasAnchor">
+<h4>Distribution variance and sample variance<a href="b04.html#distribution-variance-and-sample-variance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For observed values <span class="math inline">\(x_1,\ldots,x_n\)</span>, the usual sample variance is</p>
+<p><span class="math display">\[
+s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2.
+\]</span></p>
+<p>If the empirical distribution assigns probability <span class="math inline">\(1/n\)</span> to each row, its
+variance divides by <span class="math inline">\(n\)</span>. R’s <code>var()</code> uses the conventional sample
+denominator <span class="math inline">\(n-1\)</span>.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="b04.html#cb55-1" tabindex="-1"></a>w <span class="ot">&lt;-</span> sharks<span class="sc">$</span>description_words</span>
+<span id="cb55-2"><a href="b04.html#cb55-2" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb55-3"><a href="b04.html#cb55-3" tabindex="-1"></a>  <span class="at">empirical_variance_divide_n =</span> <span class="fu">mean</span>((w <span class="sc">-</span> <span class="fu">mean</span>(w))<span class="sc">^</span><span class="dv">2</span>),</span>
+<span id="cb55-4"><a href="b04.html#cb55-4" tabindex="-1"></a>  <span class="at">sample_variance_divide_n_minus_1 =</span> <span class="fu">var</span>(w),</span>
+<span id="cb55-5"><a href="b04.html#cb55-5" tabindex="-1"></a>  <span class="at">sample_sd =</span> <span class="fu">sd</span>(w)</span>
+<span id="cb55-6"><a href="b04.html#cb55-6" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##      empirical_variance_divide_n sample_variance_divide_n_minus_1 
+##                        556.36485                        557.15402 
+##                        sample_sd 
+##                         23.60411</code></pre>
+<p>These are different summaries of the same 706 observations. Calling the sample
+variance an estimate of population variance additionally requires a sampling
+model.</p>
+</div>
+</div>
+<div id="conditional-probability" class="section level3 hasAnchor">
+<h3>Conditional probability<a href="b04.html#conditional-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/conditional-probabilities/">02.2 Conditional Probabilities</a>.
+</p>
+<p>For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(P(B)&gt;0\)</span>,</p>
+<p><span class="math display">\[
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+\]</span></p>
+<p>Conditioning keeps only outcomes inside <span class="math inline">\(B\)</span>, rescales their total probability
+to 1, and then asks which of those outcomes are also in <span class="math inline">\(A\)</span>. For a fixed
+<span class="math inline">\(B\)</span>, <span class="math inline">\(P(\cdot\mid B)\)</span> is itself a probability law on the same sample space.</p>
+<p>From the table:</p>
+<p><span class="math display">\[
+P(D\mid L)=\frac{256}{444}\approx0.577,
+\qquad
+P(L\mid D)=\frac{256}{383}\approx0.668.
+\]</span></p>
+<p>The numerator is 256 in both calculations. The denominators—and therefore the
+questions—differ.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="b04.html#cb57-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb57-2"><a href="b04.html#cb57-2" tabindex="-1"></a>  <span class="at">P_deal_given_late =</span> <span class="fu">mean</span>(D[L]),</span>
+<span id="cb57-3"><a href="b04.html#cb57-3" tabindex="-1"></a>  <span class="at">P_late_given_deal =</span> <span class="fu">mean</span>(L[D])</span>
+<span id="cb57-4"><a href="b04.html#cb57-4" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## P_deal_given_late P_late_given_deal 
+##         0.5765766         0.6684073</code></pre>
+<p>A 66.8% figure refers to <span class="math inline">\(P(L\mid D)\)</span>, not <span class="math inline">\(P(D\mid L)\)</span>: 66.8% of deal
+records are from Seasons 5–8, while 57.7% of Seasons 5–8 records reached an
+on-air deal.</p>
+</div>
+<div id="the-multiplication-rule" class="section level3 hasAnchor">
+<h3>The multiplication rule<a href="b04.html#the-multiplication-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-multiplication-rule/">02.6 The Multiplication Rule</a>.
+</p>
+<p>Rearranging the definition gives</p>
+<p><span class="math display">\[
+P(A\cap B)=P(A\mid B)P(B).
+\]</span></p>
+<p>Reversing the roles of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> gives the same joint probability:</p>
+<p><span class="math display">\[
+P(A\cap B)=P(A\mid B)P(B)=P(B\mid A)P(A).
+\]</span></p>
+<p>For the late-season deal event:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="b04.html#cb59-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb59-2"><a href="b04.html#cb59-2" tabindex="-1"></a>  <span class="at">direct_joint =</span> <span class="fu">mean</span>(D <span class="sc">&amp;</span> L),</span>
+<span id="cb59-3"><a href="b04.html#cb59-3" tabindex="-1"></a>  <span class="at">conditional_times_base =</span> <span class="fu">mean</span>(D[L]) <span class="sc">*</span> <span class="fu">mean</span>(L),</span>
+<span id="cb59-4"><a href="b04.html#cb59-4" tabindex="-1"></a>  <span class="at">reverse_conditional_times_base =</span> <span class="fu">mean</span>(L[D]) <span class="sc">*</span> <span class="fu">mean</span>(D)</span>
+<span id="cb59-5"><a href="b04.html#cb59-5" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##                   direct_joint         conditional_times_base 
+##                      0.3626062                      0.3626062 
+## reverse_conditional_times_base 
+##                      0.3626062</code></pre>
+<p>This is the algebraic reason the two conditional probabilities can share a
+numerator while having different denominators.</p>
+</div>
+<div id="partitions-and-the-law-of-total-probability" class="section level3 hasAnchor">
+<h3>Partitions and the law of total probability<a href="b04.html#partitions-and-the-law-of-total-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/total-probability-theorem/">02.7 Total Probability Theorem</a>.
+</p>
+<p>Events <span class="math inline">\(B_1,\ldots,B_k\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span> when they are
+mutually disjoint and their union is <span class="math inline">\(\Omega\)</span>. Every outcome belongs to
+exactly one part.</p>
+<p>If <span class="math inline">\(P(B_i)&gt;0\)</span>, then:</p>
+<p><span class="math display">\[
+P(A)=\sum_{i=1}^{k}P(A\mid B_i)P(B_i).
+\]</span></p>
+<p>The early/late events <span class="math inline">\(\{L^c,L\}\)</span> form a partition, so</p>
+<p><span class="math display">\[
+P(D)=P(D\mid L^c)P(L^c)+P(D\mid L)P(L).
+\]</span></p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="b04.html#cb61-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb61-2"><a href="b04.html#cb61-2" tabindex="-1"></a>  <span class="at">direct =</span> <span class="fu">mean</span>(D),</span>
+<span id="cb61-3"><a href="b04.html#cb61-3" tabindex="-1"></a>  <span class="at">from_periods =</span> <span class="fu">mean</span>(D[<span class="sc">!</span>L]) <span class="sc">*</span> <span class="fu">mean</span>(<span class="sc">!</span>L) <span class="sc">+</span> <span class="fu">mean</span>(D[L]) <span class="sc">*</span> <span class="fu">mean</span>(L)</span>
+<span id="cb61-4"><a href="b04.html#cb61-4" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##       direct from_periods 
+##    0.5424929    0.5424929</code></pre>
+<p>The overall deal probability is a weighted average of the period-specific deal
+probabilities. The group probabilities supply the weights.</p>
+</div>
+<div id="bayes-rule" class="section level3 hasAnchor">
+<h3>Bayes’ rule<a href="b04.html#bayes-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/bayes-rule/">02.8 Bayes’ Rule</a>.
+</p>
+<p>From the multiplication rule,</p>
+<p><span class="math display">\[
+P(B_i\mid A)=\frac{P(A\mid B_i)P(B_i)}{P(A)}.
+\]</span></p>
+<p>Using total probability to expand the denominator:</p>
+<p><span class="math display">\[
+P(B_i\mid A)=
+\frac{P(A\mid B_i)P(B_i)}
+{\sum_jP(A\mid B_j)P(B_j)}.
+\]</span></p>
+<p>For the Shark Tank events:</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="b04.html#cb63-1" tabindex="-1"></a>bayes_late_given_deal <span class="ot">&lt;-</span> <span class="fu">mean</span>(D[L]) <span class="sc">*</span> <span class="fu">mean</span>(L) <span class="sc">/</span> <span class="fu">mean</span>(D)</span>
+<span id="cb63-2"><a href="b04.html#cb63-2" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb63-3"><a href="b04.html#cb63-3" tabindex="-1"></a>  <span class="at">from_bayes =</span> bayes_late_given_deal,</span>
+<span id="cb63-4"><a href="b04.html#cb63-4" tabindex="-1"></a>  <span class="at">from_table =</span> <span class="fu">mean</span>(L[D])</span>
+<span id="cb63-5"><a href="b04.html#cb63-5" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## from_bayes from_table 
+##  0.6684073  0.6684073</code></pre>
+<p>Bayes’ rule reverses the direction of conditioning. It does not reverse causal
+direction and does not make an observational comparison causal.</p>
+<div id="base-rates-and-classification" class="section level4 hasAnchor">
+<h4>Base rates and classification<a href="b04.html#base-rates-and-classification" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Suppose an AI classifier flags a pitch as likely to receive a deal. To find</p>
+<p><span class="math display">\[
+P(\text{deal}\mid\text{positive flag}),
+\]</span></p>
+<p>we need:</p>
+<ul>
+<li>the deal base rate <span class="math inline">\(P(\text{deal})\)</span>;</li>
+<li>sensitivity <span class="math inline">\(P(\text{positive}\mid\text{deal})\)</span>;</li>
+<li>the false-positive rate
+<span class="math inline">\(P(\text{positive}\mid\text{no deal})\)</span>.</li>
+</ul>
+<p>High sensitivity alone is insufficient: the deal base rate and false-positive
+rate also determine the proportion of flagged pitches that receive a deal.</p>
+</div>
+</div>
+</div>
+<div id="after-class-4" class="section level2 hasAnchor course-phase phase-after">
+<h2>After class<a href="b04.html#after-class-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="retrieval-2" class="section level3 hasAnchor">
+<h3>Retrieval<a href="b04.html#retrieval-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>What does variance average?</li>
+<li>Why do variance and standard deviation have different units?</li>
+<li>What is the denominator of <span class="math inline">\(P(A\mid B)\)</span>?</li>
+<li>Why is <span class="math inline">\(P(A\mid B)\)</span> generally different from <span class="math inline">\(P(B\mid A)\)</span>?</li>
+<li>What makes a collection of events a partition?</li>
+<li>What does the denominator in Bayes’ rule calculate?</li>
+</ol>
+<details>
+<summary>
+Check your answers
+</summary>
+<ol style="list-style-type: decimal">
+<li>Variance averages squared deviations from the distribution mean.</li>
+<li>Variance has squared units; standard deviation is its square root and has
+the variable’s original units.</li>
+<li><span class="math inline">\(P(B)\)</span>, the probability of the conditioning event.</li>
+<li>They condition on different reference classes and usually have different
+denominators.</li>
+<li>The parts are mutually disjoint and their union is <span class="math inline">\(\Omega\)</span>.</li>
+<li>It calculates the total probability of the observed evidence across all
+mutually exclusive cases in the partition.</li>
+</ol>
+</details>
+</div>
+<div id="practice-2" class="section level3 hasAnchor">
+<h3>Practice<a href="b04.html#practice-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>A variable <span class="math inline">\(Y\)</span> has PMF <span class="math inline">\(p_Y(0)=0.2\)</span>, <span class="math inline">\(p_Y(1)=0.5\)</span>, and
+<span class="math inline">\(p_Y(2)=0.3\)</span>. Use <span class="math inline">\(E[Y]=1.1\)</span> and <span class="math inline">\(E[Y^2]=1.7\)</span> to calculate
+<span class="math inline">\(\operatorname{Var}(Y)\)</span> and <span class="math inline">\(\operatorname{SD}(Y)\)</span>.</li>
+<li>Use the early/late partition to verify
+<span class="math inline">\(P(D)=P(D\mid L^c)P(L^c)+P(D\mid L)P(L)\)</span>.</li>
+<li>A classifier has a 10% deal base rate, 80% sensitivity, and a 20%
+false-positive rate. Calculate <span class="math inline">\(P(\text{deal}\mid\text{positive flag})\)</span>.</li>
+<li>Calculate and interpret <span class="math inline">\(P(L\mid D)\)</span>. Explain why it differs from
+<span class="math inline">\(P(D\mid L)\)</span>.</li>
+<li>R reports an empirical variance of 556.365 and a sample variance of
+557.154 for written-description length. Explain why the values differ.</li>
+</ol>
+<details>
+<summary>
+Check your answers
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\operatorname{Var}(Y)=1.7-1.1^2=0.49\)</span> and
+<span class="math inline">\(\operatorname{SD}(Y)=\sqrt{0.49}=0.7\)</span>.</li>
+<li><span class="math inline">\((127/262)(262/706)+(256/444)(444/706)=383/706\approx0.542\)</span>.</li>
+<li>Bayes’ rule gives
+<span class="math display">\[
+\frac{0.80(0.10)}{0.80(0.10)+0.20(0.90)}
+=\frac{0.08}{0.26}\approx0.308.
+\]</span>
+About 30.8% of positively flagged cases are deals under this model.</li>
+<li><span class="math inline">\(P(L\mid D)=256/383\approx0.668\)</span>: among deal records, 66.8% came from
+Seasons 5–8. It differs from <span class="math inline">\(P(D\mid L)=256/444\approx0.577\)</span> because
+the conditioning event—and therefore the denominator—is different.</li>
+<li>The empirical-distribution variance weights every one of the 706 records by
+<span class="math inline">\(1/706\)</span> and therefore divides by <span class="math inline">\(n\)</span>. The usual sample variance divides
+by <span class="math inline">\(n-1\)</span>, so it is slightly larger.</li>
+</ol>
+</details>
+</div>
+<div id="worked-exam-interpretation-2" class="section level3 hasAnchor">
+<h3>Worked exam interpretation<a href="b04.html#worked-exam-interpretation-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Question.</strong> A student sees <span class="math inline">\(P(D\mid L)=0.577\)</span> and writes, “57.7% of deal
+pitches came from late seasons.”</p>
+<details>
+<summary>
+Check a model answer
+</summary>
+<p>The calculation conditions on <span class="math inline">\(L\)</span>, so the denominator is
+the 444 pitches in Seasons 5-8. The correct interpretation is that 57.7% of
+late-season records reached an on-air deal. The reverse conditional is
+<span class="math inline">\(P(L\mid D)=256/383=66.8\%\)</span>. Neither quantity measures completed investment
+or a causal season effect.</p>
+</details>
+<p>Next: <a href="b05.html#b05">Lecture 5: Joint random variables, covariance, and correlation</a>.</p>
+<p>For a more formal explanation, consult
+<a href="https://tilburguniversity.on.worldcat.org/oclc/317545871">Nieuwenhuis, <em>Statistical Methods for Business and Economics</em></a>,
+Chapters 7–8.</p>
+</div>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="b-ep01.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="b05.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

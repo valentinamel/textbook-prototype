@@ -1,0 +1,4 @@
+# (PART) Course 1 · Basic {-}
+
+The Basic course contains ten lectures and four tutorials. Tutorials follow
+Lectures 3, 5, 8, and 10.

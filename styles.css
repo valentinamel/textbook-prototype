@@ -1,0 +1,345 @@
+:root {
+  --qm-navy: #17324d;
+  --qm-accent: #2f6f73;
+  --qm-ink: #1f2933;
+  --qm-muted: #5f6b76;
+  --qm-line: #d9e0e6;
+  --qm-surface: #f5f7f8;
+  --qm-warm: #fbf4ea;
+  --qm-before: #edf4fb;
+  --qm-before-accent: #4f78a6;
+  --qm-in-class: #eaf5f0;
+  --qm-in-class-accent: #2f7d65;
+  --qm-after: #f3eff8;
+  --qm-after-accent: #755f93;
+}
+
+body {
+  color: var(--qm-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--qm-navy);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+h1 {
+  border-bottom: 2px solid var(--qm-accent);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  margin-top: 1.9em;
+}
+
+h3 {
+  margin-top: 1.4em;
+}
+
+a {
+  color: #225f72;
+}
+
+.chapter-map,
+.outcomes,
+.exam-bridge,
+.data-caveat,
+.r-refresher,
+.notation,
+.video-note {
+  background: var(--qm-surface);
+  border-left: 3px solid var(--qm-accent);
+  margin: 1.4em 0;
+  padding: 0.9em 1.1em;
+}
+
+.video-prep {
+  background: #ffffff;
+  border: 1px solid var(--qm-before-accent);
+  border-left-width: 4px;
+  border-radius: 4px;
+  margin: 1.2em 0;
+  padding: 0.8em 1em;
+}
+
+.video-prep .label {
+  color: var(--qm-before-accent);
+}
+
+.concept-video {
+  border-left: 2px solid #8da6b8;
+  color: #53666d;
+  font-size: 0.9em;
+  margin: 0.35em 0 1em;
+  padding-left: 0.7em;
+}
+
+.concept-video strong {
+  color: var(--qm-accent);
+}
+
+.data-caveat,
+.exam-bridge {
+  background: var(--qm-warm);
+}
+
+.label,
+.course-number {
+  color: var(--qm-navy);
+  font-size: 0.82em;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.team-grid,
+.course-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.5em 0;
+}
+
+.team-grid {
+  grid-template-columns: 1fr;
+}
+
+.team-card,
+.course-card {
+  background: #fff;
+  border: 1px solid var(--qm-line);
+  border-radius: 4px;
+  padding: 1.1rem;
+}
+
+.team-card {
+  align-items: start;
+  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 18rem minmax(0, 1fr);
+}
+
+.team-card > :not(.team-photo) {
+  grid-column: 2;
+}
+
+.team-photo {
+  border: 1px solid var(--qm-line);
+  border-radius: 50%;
+  display: block;
+  grid-column: 1;
+  grid-row: 1 / span 5;
+  height: 18rem;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 18rem;
+}
+
+.team-photo--valentina {
+  object-position: 50% 38%;
+}
+
+.team-photo--gabriela {
+  object-position: 50% 40%;
+}
+
+.team-photo--serhan {
+  object-position: 50% 50%;
+}
+
+.team-name {
+  color: var(--qm-navy);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  color: var(--qm-muted);
+  font-size: 0.92em;
+  margin-bottom: 0.65rem;
+}
+
+.course-card h3 {
+  font-size: 1.08em;
+  margin: 0.45rem 0 0.55rem;
+}
+
+.course-card p {
+  margin-bottom: 0;
+}
+
+.task {
+  border: 1px solid var(--qm-line);
+  border-radius: 4px;
+  margin: 1em 0;
+  padding: 0.8em 1em;
+}
+
+.course-phase {
+  border: 2px solid;
+  border-radius: 8px;
+  margin: 2em 0;
+  padding: 0 1.25em 1.25em;
+}
+
+.course-phase > h2:first-child {
+  border-radius: 6px 6px 0 0;
+  margin: 0 -1.25em 1em;
+  padding: 0.7em 1em;
+}
+
+.phase-before {
+  background: color-mix(in srgb, var(--qm-before) 42%, white);
+  border-color: var(--qm-before-accent);
+}
+
+.phase-before > h2:first-child {
+  background: var(--qm-before);
+  color: var(--qm-before-accent);
+}
+
+.phase-in-class {
+  background: color-mix(in srgb, var(--qm-in-class) 42%, white);
+  border-color: var(--qm-in-class-accent);
+}
+
+.phase-in-class > h2:first-child {
+  background: var(--qm-in-class);
+  color: var(--qm-in-class-accent);
+}
+
+.phase-after {
+  background: color-mix(in srgb, var(--qm-after) 42%, white);
+  border-color: var(--qm-after-accent);
+}
+
+.phase-after > h2:first-child {
+  background: var(--qm-after);
+  color: var(--qm-after-accent);
+}
+
+@supports not (background: color-mix(in srgb, white, black)) {
+  .phase-before { background: #f8fbfe; }
+  .phase-in-class { background: #f8fcfa; }
+  .phase-after { background: #fbf9fd; }
+}
+
+table {
+  font-size: 0.95em;
+}
+
+code {
+  color: #694221;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.book .book-summary {
+  background: #f7f8fa;
+  border-right: 1px solid var(--qm-line);
+}
+
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li span {
+  color: var(--qm-navy);
+  line-height: 1.35;
+  padding-bottom: 0.52em;
+  padding-top: 0.52em;
+}
+
+.book .book-summary ul.summary li.active > a {
+  color: var(--qm-accent);
+  font-weight: 700;
+}
+
+.book .book-summary .book-title a {
+  color: var(--qm-navy);
+  font-weight: 700;
+}
+
+.book .book-summary .book-footer {
+  color: var(--qm-muted);
+  font-size: 0.84em;
+  padding: 1em 1.2em;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  max-width: 920px;
+}
+
+details {
+  border: 1px solid var(--qm-line);
+  border-radius: 4px;
+  margin: 1em 0;
+  padding: 0.7em 1em;
+}
+
+details summary {
+  color: var(--qm-navy);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 880px) {
+  .team-grid,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card > :not(.team-photo),
+  .team-photo {
+    grid-column: 1;
+  }
+
+  .team-photo {
+    grid-row: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .label {
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  p code,
+  li code,
+  td code {
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  table {
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+@media print {
+  .book-summary,
+  .book-header {
+    display: none;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+}

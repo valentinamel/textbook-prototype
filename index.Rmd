@@ -1,0 +1,153 @@
+---
+title: 'Online Textbook for the Learning Line "Quantitative Methods to Understand E&BI"'
+site: bookdown::bookdown_site
+documentclass: book
+description: "An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University."
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 7,
+  fig.height = 4.5,
+  fig.align = "center"
+)
+
+dir.create("docs/data", recursive = TRUE, showWarnings = FALSE)
+file.copy("data/shark_tank_teaching.csv",
+          "docs/data/shark_tank_teaching.csv",
+          overwrite = TRUE)
+```
+
+# Welcome {-}
+
+Welcome to the learning line Quantitative Methods to Understand E&BI. Across three courses, we
+will learn how to turn questions about entrepreneurship, organizations,
+markets, and innovation into defensible quantitative evidence. This line will help you to learn not only how to understand research papers used in other courses and write a quantitative thesis, but also how to conduct rigorous data analysis at work.
+
+Our aim is not simply to teach formulas or R commands. We want you to become a
+careful reader and producer of evidence: someone who can choose a method,
+explain its logic, interpret its output correctly, and recognize what the available data
+cannot establish. 
+
+<div class="team-grid">
+<div class="team-card">
+<img class="team-photo team-photo--valentina" src="images/lecturers/valentina.jpg" alt="Portrait of Dr Valentina Melentyeva">
+<div class="team-name">Dr Valentina Melentyeva</div>
+<div class="team-role">Basic and Intermediate courses</div>
+<div class="Email">V.Melentyeva@tilburguniversity.edu</div>
+<a href="https://www.tilburguniversity.edu/staff/v-melentyeva">University profile</a>
+</div>
+<div class="team-card">
+<img class="team-photo team-photo--gabriela" src="images/lecturers/gabriela.jpeg" alt="Portrait of Dr Gabriela Miyazato Szini">
+<div class="team-name">Dr Gabriela Miyazato Szini</div>
+<div class="team-role">Basic course</div>
+<div class="Email">G.M.MiyazatoSzini@tilburguniversity.edu</div>
+<a href="https://research.tilburguniversity.edu/en/persons/gabriela-miyazato-szini/">University profile</a>
+</div>
+<div class="team-card">
+<img class="team-photo team-photo--serhan" src="images/lecturers/serhan.webp" alt="Portrait of Dr Serhan Sadikoglu">
+<div class="team-name">Dr Serhan Sadikoglu</div>
+<div class="team-role">Advanced course</div>
+<div class="Email"> S.Sadikoglu@tilburguniversity.edu</div>
+<a href="https://www.tilburguniversity.edu/staff/s-sadikoglu">University profile</a>
+</div>
+</div>
+
+We have designed the three courses as one connected journey. Concepts introduced
+in the Basic course are fundamental building blocks that Intermediate and Advanced build on.
+
+<div class="course-grid">
+<div class="course-card">
+<span class="course-number">Course 1</span>
+<h3>Basic </h3>
+<p>1st Semester</p>
+<p>10 Lectures, 4 tutorials</p>
+<p>Introduction to data analysis, probability theory and statistics.</p>
+</div>
+<div class="course-card">
+<span class="course-number">Course 2</span>
+<h3>Intermediate </h3>
+<p>3d Semester</p>
+<p>6 Lectures, 2 tutorials</p>
+<p> Linear regression analysis.</p>
+</div>
+<div class="course-card">
+<span class="course-number">Course 3</span>
+<h3>Advanced </h3>
+<p>4th Semester</p>
+<p>6 Lectures, 2 tutorials</p>
+<p>More advanced models, methods, data structures for data analysis.</p>
+</div>
+</div>
+
+By the end of the learning line, you should be able to:
+
+- translate an E&BI question into variables, comparisons, and testable claims;
+- work reproducibly with data in R and communicate what the output means;
+- conduct high-quality data analysis for work and research;
+- evaluate the strength and limits of evidence in research papers; and
+- design and complete a quantitative thesis.
+
+## How to use this book
+
+The permanent menu on the left is organized into **Basic**, **Intermediate**,
+**Advanced**, and **Supplementary resources**. On a small (mobile) screen, open the menu
+with the button at the top of the page.
+
+Within each course, follow the chapters in order:
+
+- **Lecture chapters** introduce you to a question and data and teach you how to conduct analysis in R and theory that allows to interpret and understand the output.
+- **Tutorial chapters** help you retrieve, combine, and apply what you have
+  learned. Designed for guided practice and exam preparation.
+- **Supplementary resources** collect reusable help with R and videos.
+
+IMPORTANT: Each lecture includes required pre-class preparation, in-class work, and follow-up practice. Always check and cover the material that is marked as pre-class preparation in the lecture chapter of this textbook. Be consistent with the cycle of pre-class prep, in-class joint work, after-class practice. 
+
+## Lecture preparation and external videos
+
+"Before class" sections include a clearly marked "Video Preparation"
+box. Watch the listed required clips - recorded at MIT - before the lecture and make brief notes on
+the indicated concepts. The [External Video Guide](#videos) separates
+required preparation, review when needed, and optional extension
+clips. Only the first category is compulsory. In-class theory sections also
+link directly to MIT explanations that you can replay after a lecture or an
+absence. External sources may use different notation or cover more material
+than this course; follow the notation and scope stated in this textbook.
+
+## R and main dataset
+
+You will work with R throughout all three courses. You already met R in
+[Programming for E&BI](https://walshc.github.io/ebi-prog/). If a command or
+workflow has become rusty, use the [R Refresher](#r-refresher) and the earlier
+course as references.
+
+Most chapters use a teaching view derived from
+[All Shark Tank US Pitches & Deals](https://www.kaggle.com/datasets/neiljs/all-shark-tank-us-pitches-deals).
+One row represents one recorded televised pitch. The source records the
+season/episode, business identifier, written business description, on-air deal
+status, and sharks associated with a deal. The current teaching view does not
+contain entrepreneur gender, team gender composition, completed investment, or
+later venture performance. Selected additional datasets will be introduced when
+a question requires variables that this dataset does not contain.
+
+## Tutorials and assessment
+
+All three courses end with an exam with open-ended questions that account for 100% of the grade.
+In the Basic course, the written exam can ask you to verify, interpret, and
+describe supplied R output and solve tasks related to learn concepts in probability theory and statistics. In the Intermediate and Advanced courses, you will be asked to work directly with data in R during an exam administered via TestVision platform. Tutorials in all courses are designed as exam preparation sessions and follow lectures to practice solving questions.
+
+## Working with  AI
+
+We provide a chatbot for this course: [Tilly for QM Courseline](https://chatbot.tilburg.ai/). It is designed to support and guide you throughout the course. It can help with organizational questions (schedule, grade composition, etc) as well as act as an individual tutor when solving tasks together. You can also ask it to generate additional practice questions to prepare for the exam.
+
+When you use AI, follow **Attempt → Ask → Verify → Explain**:
+
+1. Attempt to solve the question yourself and identify where you are stuck.
+2. Ask AI for support in the form of a hint, counterexample, or diagnostic question. Be precise and detailed when creating a prompt for AI (better prompt - better answer).
+3. Verify the response against the data, course notation, and R output. Verification becomes the key skill when working with AI.
+4. Explain the result in your own words to internalize the knowledge. Ask AI for feedback on this explanation and/or bring it as a question to lectures/tutorials and your classmates.   
+
+[Start with Lecture 1: Introduction to Data Analysis](#b01).

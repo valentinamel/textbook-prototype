@@ -1,0 +1,451 @@
+# Lecture 4: Variance, conditioning, and belief updating {#b04}
+
+
+
+<div class="outcomes">
+<span class="label">By the end of Lecture 4, you can</span>
+<ul>
+<li>calculate and interpret variance and standard deviation;</li>
+<li>distinguish distribution variance from the usual sample variance;</li>
+<li>calculate conditional probabilities and identify their reference classes;</li>
+<li>use total probability and Bayes' rule.</li>
+</ul>
+</div>
+
+::: {.course-phase .phase-before}
+
+## Before class
+
+<div class="video-prep">
+<span class="label">Video preparation</span><br>
+Watch <a href="https://www.youtube.com/watch?v=ZWo1XgAQE5k">Variance</a>,
+<a href="https://www.youtube.com/watch?v=MPRKc4UPoJk">Conditional
+Probabilities</a>, and <a href="https://www.youtube.com/watch?v=kz2tvO_ZAKI">Bayes'
+Rule</a>. Be ready to explain what variance averages, identify the reference
+class in a conditional probability, and explain why reversing a condition
+changes the denominator. All links are also listed in the
+<a href="videos.html#videos">External Video Guide</a>.
+</div>
+
+Lecture 3 introduced expectation. For a random variable with mean
+\(\mu=E[X]\), variance is the expected squared distance from that mean:
+
+\[
+\operatorname{Var}(X)=E[(X-\mu)^2].
+\]
+
+Before calculating it, explain why deviations are squared rather than simply
+averaged.
+
+<details>
+<summary>Check your preparation</summary>
+
+The probability-weighted deviations from the mean sum to zero. Squaring makes
+both positive and negative deviations contribute to spread.
+
+</details>
+
+Compare:
+
+- “Among pitches in Seasons 5-8, what proportion reached an on-air deal?”
+- “Among pitches that reached an on-air deal, what proportion came from
+  Seasons 5-8?”
+
+Let \(D\) be the deal event and \(L\) the late-season event. The questions are
+\(P(D\mid L)\) and \(P(L\mid D)\). The event after the vertical bar defines
+the restricted reference class and therefore the denominator.
+
+
+```
+##              Deal
+## Period        No on-air deal On-air deal
+##   Seasons 1-4            135         127
+##   Seasons 5-8            188         256
+```
+
+Before calculating, point to the numerator and denominator for:
+
+1. \(P(D)\);
+2. \(P(L)\);
+3. \(P(D\cap L)\);
+4. \(P(D\mid L)\);
+5. \(P(L\mid D)\).
+
+<details>
+<summary>Check your denominators</summary>
+
+1. \(P(D)\): 383 deal records out of 706 records.
+2. \(P(L)\): 444 late-season records out of 706 records.
+3. \(P(D\cap L)\): 256 late-season deal records out of 706 records.
+4. \(P(D\mid L)\): 256 late-season deal records out of 444 late-season records.
+5. \(P(L\mid D)\): 256 late-season deal records out of 383 deal records.
+
+</details>
+
+:::
+
+::: {.course-phase .phase-in-class}
+
+## In class
+
+### Variance and standard deviation
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/variance/">06.2 Variance</a>.</p>
+
+Expectation locates the centre of a distribution, but it does not describe how
+tightly values cluster around that centre. Two distributions can have the same
+expectation and very different spreads.
+
+To measure spread, start with the deviation \(X-\mu\), where
+\(\mu=E[X]\). Positive and negative deviations would cancel if they were
+averaged directly, so variance squares each deviation before taking its
+probability-weighted average. When \(E[X^2]<\infty\),
+
+\[
+\operatorname{Var}(X)
+=E[(X-\mu)^2]
+=\sum_x (x-\mu)^2p_X(x).
+\]
+
+Read the calculation as four steps:
+
+1. locate the centre, \(\mu=E[X]\);
+2. measure each possible deviation, \(x-\mu\);
+3. square the deviation, \((x-\mu)^2\);
+4. weight it by \(p_X(x)\) and add across the support.
+
+Large deviations therefore contribute more than small deviations. Variance is
+zero only when all probability is concentrated at one value.
+
+The equivalent computational form is
+
+\[
+\operatorname{Var}(X)=E[X^2]-\{E[X]\}^2.
+\]
+
+It gives the same result, but the definition
+\(E[(X-\mu)^2]\) is usually easier to interpret.
+
+The **standard deviation** is
+
+\[
+\operatorname{SD}(X)=\sqrt{\operatorname{Var}(X)}.
+\]
+
+Variance has squared units; standard deviation returns to the units of \(X\).
+For a Bernoulli variable, \(\operatorname{Var}(X)=p(1-p)\).
+
+
+``` r
+mu_s <- sum(s * p_s)
+var_s <- sum((s - mu_s)^2 * p_s)
+
+c(
+  Var_X = p_hat * (1 - p_hat),
+  SD_X = sqrt(p_hat * (1 - p_hat)),
+  Var_S = var_s,
+  SD_S = sqrt(var_s)
+)
+```
+
+```
+##     Var_X      SD_X     Var_S      SD_S 
+## 0.2481944 0.4981911 4.4526900 2.1101398
+```
+
+#### Distribution variance and sample variance
+
+For observed values \(x_1,\ldots,x_n\), the usual sample variance is
+
+\[
+s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2.
+\]
+
+If the empirical distribution assigns probability \(1/n\) to each row, its
+variance divides by \(n\). R's `var()` uses the conventional sample
+denominator \(n-1\).
+
+
+``` r
+w <- sharks$description_words
+c(
+  empirical_variance_divide_n = mean((w - mean(w))^2),
+  sample_variance_divide_n_minus_1 = var(w),
+  sample_sd = sd(w)
+)
+```
+
+```
+##      empirical_variance_divide_n sample_variance_divide_n_minus_1 
+##                        556.36485                        557.15402 
+##                        sample_sd 
+##                         23.60411
+```
+
+These are different summaries of the same 706 observations. Calling the sample
+variance an estimate of population variance additionally requires a sampling
+model.
+
+### Conditional probability
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/conditional-probabilities/">02.2 Conditional Probabilities</a>.</p>
+
+For events \(A\) and \(B\) with \(P(B)>0\),
+
+\[
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+\]
+
+Conditioning keeps only outcomes inside \(B\), rescales their total probability
+to 1, and then asks which of those outcomes are also in \(A\). For a fixed
+\(B\), \(P(\cdot\mid B)\) is itself a probability law on the same sample space.
+
+From the table:
+
+\[
+P(D\mid L)=\frac{256}{444}\approx0.577,
+\qquad
+P(L\mid D)=\frac{256}{383}\approx0.668.
+\]
+
+The numerator is 256 in both calculations. The denominators—and therefore the
+questions—differ.
+
+
+``` r
+c(
+  P_deal_given_late = mean(D[L]),
+  P_late_given_deal = mean(L[D])
+)
+```
+
+```
+## P_deal_given_late P_late_given_deal 
+##         0.5765766         0.6684073
+```
+
+A 66.8% figure refers to \(P(L\mid D)\), not \(P(D\mid L)\): 66.8% of deal
+records are from Seasons 5--8, while 57.7% of Seasons 5--8 records reached an
+on-air deal.
+
+### The multiplication rule
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-multiplication-rule/">02.6 The Multiplication Rule</a>.</p>
+
+Rearranging the definition gives
+
+\[
+P(A\cap B)=P(A\mid B)P(B).
+\]
+
+Reversing the roles of \(A\) and \(B\) gives the same joint probability:
+
+\[
+P(A\cap B)=P(A\mid B)P(B)=P(B\mid A)P(A).
+\]
+
+For the late-season deal event:
+
+
+``` r
+c(
+  direct_joint = mean(D & L),
+  conditional_times_base = mean(D[L]) * mean(L),
+  reverse_conditional_times_base = mean(L[D]) * mean(D)
+)
+```
+
+```
+##                   direct_joint         conditional_times_base 
+##                      0.3626062                      0.3626062 
+## reverse_conditional_times_base 
+##                      0.3626062
+```
+
+This is the algebraic reason the two conditional probabilities can share a
+numerator while having different denominators.
+
+### Partitions and the law of total probability
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/total-probability-theorem/">02.7 Total Probability Theorem</a>.</p>
+
+Events \(B_1,\ldots,B_k\) form a **partition** of \(\Omega\) when they are
+mutually disjoint and their union is \(\Omega\). Every outcome belongs to
+exactly one part.
+
+If \(P(B_i)>0\), then:
+
+\[
+P(A)=\sum_{i=1}^{k}P(A\mid B_i)P(B_i).
+\]
+
+The early/late events \(\{L^c,L\}\) form a partition, so
+
+\[
+P(D)=P(D\mid L^c)P(L^c)+P(D\mid L)P(L).
+\]
+
+
+``` r
+c(
+  direct = mean(D),
+  from_periods = mean(D[!L]) * mean(!L) + mean(D[L]) * mean(L)
+)
+```
+
+```
+##       direct from_periods 
+##    0.5424929    0.5424929
+```
+
+The overall deal probability is a weighted average of the period-specific deal
+probabilities. The group probabilities supply the weights.
+
+### Bayes' rule
+
+<p class="concept-video"><strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/bayes-rule/">02.8 Bayes' Rule</a>.</p>
+
+From the multiplication rule,
+
+\[
+P(B_i\mid A)=\frac{P(A\mid B_i)P(B_i)}{P(A)}.
+\]
+
+Using total probability to expand the denominator:
+
+\[
+P(B_i\mid A)=
+\frac{P(A\mid B_i)P(B_i)}
+{\sum_jP(A\mid B_j)P(B_j)}.
+\]
+
+For the Shark Tank events:
+
+
+``` r
+bayes_late_given_deal <- mean(D[L]) * mean(L) / mean(D)
+c(
+  from_bayes = bayes_late_given_deal,
+  from_table = mean(L[D])
+)
+```
+
+```
+## from_bayes from_table 
+##  0.6684073  0.6684073
+```
+
+Bayes' rule reverses the direction of conditioning. It does not reverse causal
+direction and does not make an observational comparison causal.
+
+#### Base rates and classification
+
+Suppose an AI classifier flags a pitch as likely to receive a deal. To find
+
+\[
+P(\text{deal}\mid\text{positive flag}),
+\]
+
+we need:
+
+- the deal base rate \(P(\text{deal})\);
+- sensitivity \(P(\text{positive}\mid\text{deal})\);
+- the false-positive rate
+  \(P(\text{positive}\mid\text{no deal})\).
+
+High sensitivity alone is insufficient: the deal base rate and false-positive
+rate also determine the proportion of flagged pitches that receive a deal.
+
+:::
+
+::: {.course-phase .phase-after}
+
+## After class
+
+### Retrieval
+
+1. What does variance average?
+2. Why do variance and standard deviation have different units?
+3. What is the denominator of \(P(A\mid B)\)?
+4. Why is \(P(A\mid B)\) generally different from \(P(B\mid A)\)?
+5. What makes a collection of events a partition?
+6. What does the denominator in Bayes' rule calculate?
+
+<details>
+<summary>Check your answers</summary>
+
+1. Variance averages squared deviations from the distribution mean.
+2. Variance has squared units; standard deviation is its square root and has
+   the variable's original units.
+3. \(P(B)\), the probability of the conditioning event.
+4. They condition on different reference classes and usually have different
+   denominators.
+5. The parts are mutually disjoint and their union is \(\Omega\).
+6. It calculates the total probability of the observed evidence across all
+   mutually exclusive cases in the partition.
+
+</details>
+
+### Practice
+
+1. A variable \(Y\) has PMF \(p_Y(0)=0.2\), \(p_Y(1)=0.5\), and
+   \(p_Y(2)=0.3\). Use \(E[Y]=1.1\) and \(E[Y^2]=1.7\) to calculate
+   \(\operatorname{Var}(Y)\) and \(\operatorname{SD}(Y)\).
+2. Use the early/late partition to verify
+   \(P(D)=P(D\mid L^c)P(L^c)+P(D\mid L)P(L)\).
+3. A classifier has a 10% deal base rate, 80% sensitivity, and a 20%
+   false-positive rate. Calculate \(P(\text{deal}\mid\text{positive flag})\).
+4. Calculate and interpret \(P(L\mid D)\). Explain why it differs from
+   \(P(D\mid L)\).
+5. R reports an empirical variance of 556.365 and a sample variance of
+   557.154 for written-description length. Explain why the values differ.
+
+<details>
+<summary>Check your answers</summary>
+
+1. \(\operatorname{Var}(Y)=1.7-1.1^2=0.49\) and
+   \(\operatorname{SD}(Y)=\sqrt{0.49}=0.7\).
+2. \((127/262)(262/706)+(256/444)(444/706)=383/706\approx0.542\).
+3. Bayes' rule gives
+   \[
+   \frac{0.80(0.10)}{0.80(0.10)+0.20(0.90)}
+   =\frac{0.08}{0.26}\approx0.308.
+   \]
+   About 30.8% of positively flagged cases are deals under this model.
+4. \(P(L\mid D)=256/383\approx0.668\): among deal records, 66.8% came from
+   Seasons 5--8. It differs from \(P(D\mid L)=256/444\approx0.577\) because
+   the conditioning event—and therefore the denominator—is different.
+5. The empirical-distribution variance weights every one of the 706 records by
+   \(1/706\) and therefore divides by \(n\). The usual sample variance divides
+   by \(n-1\), so it is slightly larger.
+
+</details>
+
+### Worked exam interpretation
+
+**Question.** A student sees \(P(D\mid L)=0.577\) and writes, “57.7% of deal
+pitches came from late seasons.”
+
+<details>
+<summary>Check a model answer</summary>
+
+The calculation conditions on \(L\), so the denominator is
+the 444 pitches in Seasons 5-8. The correct interpretation is that 57.7% of
+late-season records reached an on-air deal. The reverse conditional is
+\(P(L\mid D)=256/383=66.8\%\). Neither quantity measures completed investment
+or a causal season effect.
+
+</details>
+
+Next: [Lecture 5: Joint random variables, covariance, and correlation](#b05).
+
+For a more formal explanation, consult
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapters 7--8.
+
+:::

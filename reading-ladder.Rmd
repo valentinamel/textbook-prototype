@@ -1,0 +1,58 @@
+# Research-paper reading ladder {#reading-ladder}
+
+<div class="chapter-map">
+<span class="label">Purpose</span><br>
+Students encounter real business and management papers in increasingly
+demanding ways. Early reading focuses on questions, variables, samples, and
+descriptive evidence; later reading adds regression, interactions, mechanisms,
+designs, and robustness.
+</div>
+
+## The reading protocol
+
+For every paper, answer the same six questions:
+
+1. **Claim:** What does the paper want readers to believe?
+2. **Design:** What comparison is supposed to support that claim?
+3. **Data:** What is the unit, sample, measurement, and missingness?
+4. **Estimate:** Which number or figure carries the main result?
+5. **Uncertainty:** How precise is the estimate, and what assumptions matter?
+6. **Limitation:** What plausible alternative explanation remains?
+
+## Proposed progression
+
+| Stage | Paper or evidence object | Student reading task |
+|---|---|---|
+| Basic · Lecture 1 | [Ajzen (1991), Theory of Planned Behavior](https://doi.org/10.1016/0749-5978(91)90020-T) | Separate theoretical constructs from measurable variables and hypotheses |
+| Basic · Lectures 2-3 | Supplied thesis, Table 2 | Read N, scales, centre/spread, and the boundary between sample summaries and population claims |
+| Basic · Lecture 5 / Intermediate | Supplied thesis, Table 3, then [Tierney & Farmer (2002), Creative Self-Efficacy](https://doi.org/10.2307/3069429) | Move from covariance/correlation and measured variables to regression-table reading |
+| Intermediate | [Zhao, Seibert & Hills (2005), entrepreneurial intentions](https://doi.org/10.1037/0021-9010.90.6.1265) | Trace predictors, controls, direct paths, and mediation claims |
+| Advanced design | [Van der Stede (2014), causality in cross-sectional survey research](https://doi.org/10.1016/j.aos.2013.12.001) | Audit the identification argument and causal language |
+| Advanced logistic | [Brooks et al. (2014), entrepreneurial pitch success](https://doi.org/10.1073/pnas.1321202111) | Interpret a dummy outcome, odds/probabilities, controls, and field-versus-experimental evidence |
+| Advanced anchor link | [Blood in the Water (2022), valuation on Shark Tank](https://doi.org/10.1016/j.jbvi.2022.e00305) | Compare a purpose-built research dataset with the teaching file and evaluate selection/measurement limits |
+| Advanced interaction | [Fitzsimmons & Douglas (2011), entrepreneurial intentions](https://doi.org/10.1016/j.jbusvent.2010.01.001) | Interpret conditional effects rather than the interaction coefficient alone |
+| Advanced experiment | [Koudstaal, Sloof & van Praag (2016)](https://doi.org/10.1287/mnsc.2015.2249) | Identify treatment/group comparisons and external-validity limits |
+| Advanced panel | [Fazio, Guzman & Stern (2019)](https://www.nber.org/papers/w26099) | Identify the difference-in-differences comparison, fixed effects, and clustered uncertainty |
+
+## How much should students read?
+
+The paper should not become an unstructured extra reading. Each chapter assigns
+a bounded object:
+
+- title, abstract, and research question;
+- one methods paragraph;
+- one descriptive table or figure;
+- one regression column or coefficient plot;
+- one limitations paragraph.
+
+The textbook tells students exactly what to notice and supplies a retrieval
+prompt. Full-paper reading is reserved for synthesis chapters and Advanced
+tutorials.
+
+<div class="paper-lens">
+<span class="label">End-state benchmark</span><br>
+By the end of Advanced, a student should be able to annotate a paper as claim
+-> design -> estimate -> uncertainty -> limitation, reproduce a central
+analysis with data in R when materials permit, and explain why a statistical
+association is or is not credible evidence for the paper's substantive claim.
+</div>

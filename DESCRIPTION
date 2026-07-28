@@ -1,0 +1,8 @@
+Package: placeholder
+Type: Book
+Title: QM to Understand E and BI
+Version: 0.0.1
+Imports:
+    bookdown,
+    knitr,
+    rmarkdown

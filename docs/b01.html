@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lecture 1: Introduction to Data Analysis | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lecture 1: Introduction to Data Analysis | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lecture 1: Introduction to Data Analysis | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="b02.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecture-preparation-and-external-videos"><i class="fa fa-check"></i>Lecture preparation and external videos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-and-main-dataset"><i class="fa fa-check"></i>R and main dataset</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tutorials-and-assessment"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#working-with-ai"><i class="fa fa-check"></i>Working with AI</a></li>
+</ul></li>
+<li class="part"><span><b>I Course 1 · Basic</b></span></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#before-class"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#how-the-course-works"><i class="fa fa-check"></i>1. How the course works</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#data-analysis-with-r-and-ai"><i class="fa fa-check"></i>2. Data analysis with R and AI</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class-data-collection-exercise"><i class="fa fa-check"></i>3. In-class data collection exercise</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#analyse-the-shark-tank-data"><i class="fa fa-check"></i>4. Analyse the Shark Tank data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#after-class"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#reproduce-the-workflow"><i class="fa fa-check"></i>1. Reproduce the workflow</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#retrieve-the-ideas"><i class="fa fa-check"></i>2. Retrieve the ideas</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#explain-one-graph"><i class="fa fa-check"></i>3. Explain one graph</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#practise-variable-and-graph-choices"><i class="fa fa-check"></i>4. Practise variable and graph choices</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#audit-an-ai-answer"><i class="fa fa-check"></i>5. Audit an AI answer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#before-class-1"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#in-class-1"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#a-probability-model-begins-with-possible-outcomes"><i class="fa fa-check"></i>A probability model begins with possible outcomes</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#probability-laws-and-their-axioms"><i class="fa fa-check"></i>Probability laws and their axioms</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#empirical-proportion-or-future-probability"><i class="fa fa-check"></i>Empirical proportion or future probability?</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#from-complete-outcomes-to-numerical-measurements"><i class="fa fa-check"></i>From complete outcomes to numerical measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#after-class-1"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#retrieval"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#practice"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#worked-exam-interpretation"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#before-class-2"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#in-class-2"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-pmf-assigns-probability-to-each-possible-value"><i class="fa fa-check"></i>A PMF assigns probability to each possible value</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-cdf-accumulates-probability-up-to-a-threshold"><i class="fa fa-check"></i>A CDF accumulates probability up to a threshold</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-is-the-distributions-weighted-centre"><i class="fa fa-check"></i>Expectation is the distribution’s weighted centre</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-after-transforming-a-variable"><i class="fa fa-check"></i>Expectation after transforming a variable</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#model-expectation-and-the-sample-mean"><i class="fa fa-check"></i>Model expectation and the sample mean</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#after-class-2"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#retrieval-1"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#practice-1"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#worked-exam-interpretation-1"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#before-class-3"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#in-class-3"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-1-data-and-measurement"><i class="fa fa-check"></i>Task 1 — Data and measurement</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-2-events-and-probability-rules"><i class="fa fa-check"></i>Task 2 — Events and probability rules</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-3-pmf-cdf-and-expectation"><i class="fa fa-check"></i>Task 3 — PMF, CDF, and expectation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#after-class-3"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#timed-individual-practice-10-minutes"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#check-your-understanding"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#before-class-4"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#in-class-4"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#variance-and-standard-deviation"><i class="fa fa-check"></i>Variance and standard deviation</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#conditional-probability"><i class="fa fa-check"></i>Conditional probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#the-multiplication-rule"><i class="fa fa-check"></i>The multiplication rule</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#partitions-and-the-law-of-total-probability"><i class="fa fa-check"></i>Partitions and the law of total probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#bayes-rule"><i class="fa fa-check"></i>Bayes’ rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#after-class-4"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#retrieval-2"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#practice-2"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#worked-exam-interpretation-2"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#before-class-5"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#in-class-5"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#the-joint-probability-mass-function"><i class="fa fa-check"></i>The joint probability mass function</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#independence-in-a-joint-distribution"><i class="fa fa-check"></i>Independence in a joint distribution</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#covariance-comes-from-expectation"><i class="fa fa-check"></i>Covariance comes from expectation</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#correlation-standardises-covariance"><i class="fa fa-check"></i>Correlation standardises covariance</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#inspect-first-summarise-second"><i class="fa fa-check"></i>Inspect first, summarise second</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#after-class-5"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#retrieval-3"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#practice-3"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#worked-exam-interpretation-3"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#before-class-6"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#in-class-6"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-1-conditional-probability-and-bayes"><i class="fa fa-check"></i>Task 1 — Conditional probability and Bayes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-2-independence"><i class="fa fa-check"></i>Task 2 — Independence</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-3-joint-pmf-covariance-and-correlation"><i class="fa fa-check"></i>Task 3 — Joint PMF, covariance, and correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#after-class-6"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#timed-individual-practice-10-minutes-1"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#check-your-understanding-1"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Course 2 · Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>Intermediate quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#how-this-course-connects"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#tutorials-and-assessment-1"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>III Course 3 · Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>Advanced quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#how-this-course-connects-1"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#tutorials-and-assessment-2"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a>
+<ul>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-r-or-rstudio-is-not-ready"><i class="fa fa-check"></i>If R or RStudio is not ready</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-cannot-reproduce-your-work"><i class="fa fa-check"></i>If you cannot reproduce your work</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-the-data-will-not-load"><i class="fa fa-check"></i>If the data will not load</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-forgot-summaries-or-plots"><i class="fa fa-check"></i>If you forgot summaries or plots</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#a-five-minute-return-to-r-check"><i class="fa fa-check"></i>A five-minute return-to-R check</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a>
+<ul>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#required-preparation-at-a-glance"><i class="fa fa-check"></i>Required preparation at a glance</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#supplementary-probability-reading"><i class="fa fa-check"></i>Supplementary probability reading</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-1-introduction-to-data-analysis"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-2-probability-foundations-and-random-variables"><i class="fa fa-check"></i>Lecture 2: Probability Foundations and Random Variables</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-3-discrete-distributions-and-expectation"><i class="fa fa-check"></i>Lecture 3: Discrete Distributions and Expectation</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-4-variance-conditioning-and-belief-updating"><i class="fa fa-check"></i>Lecture 4: Variance, Conditioning, and Belief Updating</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-5-joint-random-variables-covariance-and-correlation"><i class="fa fa-check"></i>Lecture 5: Joint Random Variables, Covariance, and Correlation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="b01" class="section level1 hasAnchor">
+<h1>Lecture 1: Introduction to Data Analysis<a href="b01.html#b01" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="outcomes">
+<span class="label">By the end of Lecture 1, you can</span>
+<ul>
+<li>
+organise a reproducible R analysis and verify AI-assisted work;
+</li>
+<li>
+distinguish categorical, discrete, continuous, and identifier variables;
+</li>
+<li>
+identify a sample, a target population, sampling variability, and selection
+bias;
+</li>
+<li>
+inspect, validate, summarise, visualise, and qualify a real dataset.
+</li>
+</ul>
+</div>
+<div id="before-class" class="section level2 hasAnchor course-phase phase-before">
+<h2>Before class<a href="b01.html#before-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Allow about 30 minutes for this preparation.</p>
+<ol style="list-style-type: decimal">
+<li>Read <a href="index.html#how-to-use-this-book">How to use this book</a> and locate the sections
+called <strong>Before class</strong>, <strong>In class</strong>, and <strong>After class</strong>.</li>
+<li>Open RStudio through an R project. Create a new script and save it before
+writing code.</li>
+<li><a href="data/shark_tank_teaching.csv" download="shark_tank_teaching.csv">Download <code>shark_tank_teaching.csv</code></a>
+and place it in a folder called <code>data</code> inside your project. Keep the
+downloaded file unchanged.</li>
+<li>Run the following commands and bring the output to class.</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="b01.html#cb1-1" tabindex="-1"></a>sharks <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/shark_tank_teaching.csv&quot;</span>,</span>
+<span id="cb1-2"><a href="b01.html#cb1-2" tabindex="-1"></a>                   <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-3"><a href="b01.html#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="b01.html#cb1-4" tabindex="-1"></a><span class="fu">dim</span>(sharks)</span></code></pre></div>
+<pre><code>## [1] 706   5</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="b01.html#cb3-1" tabindex="-1"></a><span class="fu">names</span>(sharks)</span></code></pre></div>
+<pre><code>## [1] &quot;pitch_id&quot;          &quot;deal_on_show&quot;      &quot;season&quot;           
+## [4] &quot;episode&quot;           &quot;description_words&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="b01.html#cb5-1" tabindex="-1"></a><span class="fu">head</span>(sharks, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##   pitch_id deal_on_show season episode description_words
+## 1        1            1      8      26                58
+## 2        2            0      8      26                31
+## 3        3            0      8      26                71</code></pre>
+<p>Write one sentence answering: <strong>What do you think one row in the dataset represents?</strong> It is
+fine if your answer changes during the lecture.</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>One row represents one recorded televised pitch from Seasons 1–8 of
+<em>Shark Tank US</em>.</p>
+</details>
+<div class="r-refresher">
+<p><span class="label">R reactivation</span><br>
+You used scripts, CSV files, data frames, summaries, and plots in
+<a href="https://walshc.github.io/ebi-prog/">Programming for E&amp;BI</a>.
+If the commands above feel unfamiliar, revisit its chapters on
+<a href="https://walshc.github.io/ebi-prog/r-scripts.html">R scripts</a>,
+<a href="https://walshc.github.io/ebi-prog/reading-csv-datasets.html">reading CSV files</a>, and
+<a href="https://walshc.github.io/ebi-prog/dataframes-summary-statistics.html">summarising data frames</a>.</p>
+</div>
+</div>
+<div id="in-class" class="section level2 hasAnchor course-phase phase-in-class">
+<h2>In class<a href="b01.html#in-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-the-course-works" class="section level3 hasAnchor">
+<h3>1. How the course works<a href="b01.html#how-the-course-works" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Every lecture uses the same rhythm:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Prepare before class.</strong> Encounter the question, notation, data, or short
+explanation before the lecture.</li>
+<li><strong>Participate during class.</strong> Predict results, discuss choices, run code, and
+revise your reasoning with the teaching team.</li>
+<li><strong>Practise after class.</strong> Retrieve ideas from memory, reproduce the analysis,
+and explain results without copying a model answer.</li>
+<li><strong>Use the exam preparation sessions.</strong> Bring your attempts and questions;
+work in groups with classmates and teaching assistants.</li>
+</ol>
+<p>Complete the <strong>Before class</strong> section before each lecture; use <strong>After class</strong>
+to check that you can reproduce and explain the analysis independently.</p>
+</div>
+<div id="data-analysis-with-r-and-ai" class="section level3 hasAnchor">
+<h3>2. Data analysis with R and AI<a href="b01.html#data-analysis-with-r-and-ai" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="r-reactivation" class="section level4 hasAnchor">
+<h4>R reactivation<a href="b01.html#r-reactivation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A reproducible script recreates the analysis in a new R session, without
+depending on objects created earlier at the Console.</p>
+<p>Use these habits from the start:</p>
+<ul>
+<li>open the project rather than changing the working directory with <code>setwd()</code>;</li>
+<li>keep downloaded data unchanged;</li>
+<li>use relative paths such as <code>data/shark_tank_teaching.csv</code>;</li>
+<li>record importing, checking, transforming, plotting, and modelling in scripts;</li>
+<li>give objects meaningful names;</li>
+<li>keep code and written interpretation together; and</li>
+<li>restart R and run the complete script before sharing the analysis.</li>
+</ul>
+</div>
+<div id="the-analysis-cycle" class="section level4 hasAnchor">
+<h4>The analysis cycle<a href="b01.html#the-analysis-cycle" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Data analysis is iterative:</p>
+<ol style="list-style-type: decimal">
+<li>Ask a focused question.</li>
+<li>Define the unit and decide how each idea will be measured.</li>
+<li>Obtain or create the data and document their provenance.</li>
+<li>Inspect and validate before calculating.</li>
+<li>Summarise and visualise patterns.</li>
+<li>Interpret the result in context and state its limits.</li>
+</ol>
+</div>
+<div id="use-ai-as-a-fallible-assistant" class="section level4 hasAnchor">
+<h4>Use AI as a fallible assistant<a href="b01.html#use-ai-as-a-fallible-assistant" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>AI systems generate plausible responses; they do not certify that a calculation,
+source, or interpretation is correct. Use:</p>
+<p><strong>Attempt -&gt; Ask -&gt; Verify -&gt; Explain</strong></p>
+<ol style="list-style-type: decimal">
+<li><strong>Attempt</strong> the question and identify where you are stuck.</li>
+<li><strong>Ask</strong> for a hint, diagnostic question, counterexample, or code review.</li>
+<li><strong>Verify</strong> every claim against the data, R output, course notation, and
+reliable sources.</li>
+<li><strong>Explain</strong> the result in your own words and ask for feedback on that
+explanation.</li>
+</ol>
+<p>Do not share confidential, personal, or assessment-restricted material. You
+remain responsible for every submitted claim.</p>
+</div>
+</div>
+<div id="in-class-data-collection-exercise" class="section level3 hasAnchor">
+<h3>3. In-class data collection exercise<a href="b01.html#in-class-data-collection-exercise" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The class will create its first dataset through an anonymous Mentimeter
+activity.</p>
+<div id="a-choice-with-money-at-risk" class="section level4 hasAnchor">
+<h4>A choice with money at risk<a href="b01.html#a-choice-with-money-at-risk" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Imagine receiving EUR 100 and making one choice:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Choice</th>
+<th align="right">Amount placed at risk</th>
+<th>Possible final amounts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Keep it</td>
+<td align="right">EUR 0</td>
+<td>EUR 100 for certain</td>
+</tr>
+<tr class="even">
+<td>Split it</td>
+<td align="right">EUR 50</td>
+<td>EUR 50 or EUR 150, each with 50% chance</td>
+</tr>
+<tr class="odd">
+<td>Go all-in</td>
+<td align="right">EUR 100</td>
+<td>EUR 0 or EUR 200, each with 50% chance</td>
+</tr>
+</tbody>
+</table>
+<p>All three choices have the same average monetary payoff across many repetitions:
+EUR 100. The options differ in how uncertain the one-time result is.</p>
+<p>Next, answer:</p>
+<blockquote>
+<p>How do you see yourself in general? Use 0 for “not at all willing to take
+risks” and 10 for “very willing to take risks.”</p>
+</blockquote>
+<p>Finally, give your current belief:</p>
+<blockquote>
+<p>What is the probability that you will start or co-found a business at least
+once during the next ten years?</p>
+</blockquote>
+<p>The class map places general risk willingness on the horizontal axis and the
+subjective founder probability on the vertical axis. One anonymous point
+represents one responding student.</p>
+</div>
+<div id="from-ideas-to-variables" class="section level4 hasAnchor">
+<h4>From ideas to variables<a href="b01.html#from-ideas-to-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>What is recorded</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>respondent_id</code></td>
+<td>anonymous row label</td>
+<td>identifier</td>
+</tr>
+<tr class="even">
+<td><code>amount_at_risk</code></td>
+<td>0, 50, or 100 euros</td>
+<td>discrete quantitative</td>
+</tr>
+<tr class="odd">
+<td><code>risk_willingness</code></td>
+<td>one selected point from 0 to 10</td>
+<td>ordered discrete rating</td>
+</tr>
+<tr class="even">
+<td><code>founder_probability</code></td>
+<td>belief from 0% to 100%</td>
+<td>continuous concept recorded on a finite-precision slider</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk attitude</strong> is a theoretical construct. The monetary choice and the
+0-10 response are two imperfect measurements of it. They may disagree because
+risk taking depends on context, hypothetical choices differ from real stakes,
+and self-perceptions are imperfect. A single response is not a diagnosis of a
+permanent personality type.</p>
+<p>The first two responses offer separate allowable points. Founder probability
+is conceptualised on the continuum from 0% to 100%, although the software
+stores a rounded value.</p>
+</div>
+<div id="sample-and-target-population" class="section level4 hasAnchor">
+<h4>Sample and target population<a href="b01.html#sample-and-target-population" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The <strong>sample</strong> consists of students who are present and respond. Plausible
+target populations include:</p>
+<ul>
+<li>the responding students;</li>
+<li>everyone attending this lecture;</li>
+<li>all students enrolled in the Basic course;</li>
+<li>all first-year business students in the Netherlands; or</li>
+<li>all young adults in the Netherlands.</li>
+</ul>
+<p>The data describe the respondents. They do not automatically represent wider
+groups because attendance and participation are not random.</p>
+<p>Two uncertainties must not be confused:</p>
+<ul>
+<li><strong>Sampling variability:</strong> even a genuinely random sample can contain an
+unusual number of highly risk-tolerant students by chance. Larger random
+samples usually reduce this chance variation.</li>
+<li><strong>Selection bias:</strong> a convenience sample can systematically exclude certain
+people. Collecting more responses from the same selected group does not
+necessarily repair that bias.</li>
+</ul>
+<p>A probability sample of Dutch students would require a defined population, a
+suitable sampling frame, and random selection. Non-response and measurement
+error could still remain.</p>
+</div>
+</div>
+<div id="analyse-the-shark-tank-data" class="section level3 hasAnchor">
+<h3>4. Analyse the Shark Tank data<a href="b01.html#analyse-the-shark-tank-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="context-and-unit-of-observation" class="section level4 hasAnchor">
+<h4>Context and unit of observation<a href="b01.html#context-and-unit-of-observation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>Shark Tank US</em> is a television programme in which entrepreneurs present a
+venture or product to a panel of investors known as sharks. Entrepreneurs may
+ask for money in exchange for an ownership share. The investors question them,
+negotiate, and may announce a deal during the episode.</p>
+<p>The recorded outcome is an <strong>on-air agreement</strong>. It does not establish that an
+investment was completed or that the venture later succeeded.</p>
+<p>The teaching file contains 706 televised pitches from Seasons 1–8 and five
+variables:</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Meaning</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>pitch_id</code></td>
+<td>row identifier</td>
+<td>identifier</td>
+</tr>
+<tr class="even">
+<td><code>deal_on_show</code></td>
+<td>1 for an on-air agreement; 0 otherwise</td>
+<td>binary categorical, stored as 0/1</td>
+</tr>
+<tr class="odd">
+<td><code>season</code></td>
+<td>television season, 1-8</td>
+<td>ordered discrete/time index</td>
+</tr>
+<tr class="even">
+<td><code>episode</code></td>
+<td>episode number within season</td>
+<td>discrete identifier within season</td>
+</tr>
+<tr class="odd">
+<td><code>description_words</code></td>
+<td>words in the written dataset description</td>
+<td>discrete quantitative count</td>
+</tr>
+</tbody>
+</table>
+<p>The table records selected features of each pitch. It does not measure the
+spoken pitch, completed investment, or later venture performance.</p>
+</div>
+<div id="inspect-and-validate" class="section level4 hasAnchor">
+<h4>Inspect and validate<a href="b01.html#inspect-and-validate" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="b01.html#cb7-1" tabindex="-1"></a><span class="fu">dim</span>(sharks)</span></code></pre></div>
+<pre><code>## [1] 706   5</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="b01.html#cb9-1" tabindex="-1"></a><span class="fu">names</span>(sharks)</span></code></pre></div>
+<pre><code>## [1] &quot;pitch_id&quot;          &quot;deal_on_show&quot;      &quot;season&quot;           
+## [4] &quot;episode&quot;           &quot;description_words&quot;</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="b01.html#cb11-1" tabindex="-1"></a><span class="fu">head</span>(sharks, <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>##   pitch_id deal_on_show season episode description_words
+## 1        1            1      8      26                58
+## 2        2            0      8      26                31
+## 3        3            0      8      26                71
+## 4        4            1      8      26                37</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="b01.html#cb13-1" tabindex="-1"></a><span class="fu">str</span>(sharks)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    706 obs. of  5 variables:
+##  $ pitch_id         : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ deal_on_show     : int  1 0 0 1 1 1 1 1 0 1 ...
+##  $ season           : int  8 8 8 8 8 8 8 8 8 8 ...
+##  $ episode          : int  26 26 26 26 24 24 24 24 23 23 ...
+##  $ description_words: int  58 31 71 37 43 34 40 35 14 52 ...</code></pre>
+<p>There are 706 rows and 5 columns. One row represents
+one recorded televised pitch.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="b01.html#cb15-1" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(sharks))</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="b01.html#cb17-1" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(sharks<span class="sc">$</span>deal_on_show))</span></code></pre></div>
+<pre><code>## [1] 0 1</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="b01.html#cb19-1" tabindex="-1"></a><span class="fu">range</span>(sharks<span class="sc">$</span>season)</span></code></pre></div>
+<pre><code>## [1] 1 8</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="b01.html#cb21-1" tabindex="-1"></a><span class="fu">range</span>(sharks<span class="sc">$</span>episode)</span></code></pre></div>
+<pre><code>## [1]  1 29</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="b01.html#cb23-1" tabindex="-1"></a><span class="fu">range</span>(sharks<span class="sc">$</span>description_words)</span></code></pre></div>
+<pre><code>## [1]   2 159</code></pre>
+<p>The teaching variables contain no missing values. Deal status contains only 0
+and 1; seasons run from 1 to 8; and written descriptions contain from
+2 to 159 words.
+These checks establish internal plausibility. They cannot establish that the
+source captured every pitch or measured every concept well.</p>
+</div>
+<div id="summarise-in-context" class="section level4 hasAnchor">
+<h4>Summarise in context<a href="b01.html#summarise-in-context" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="b01.html#cb25-1" tabindex="-1"></a>deal_count <span class="ot">&lt;-</span> <span class="fu">sum</span>(sharks<span class="sc">$</span>deal_on_show)</span>
+<span id="cb25-2"><a href="b01.html#cb25-2" tabindex="-1"></a>pitch_count <span class="ot">&lt;-</span> <span class="fu">nrow</span>(sharks)</span>
+<span id="cb25-3"><a href="b01.html#cb25-3" tabindex="-1"></a>deal_rate <span class="ot">&lt;-</span> <span class="fu">mean</span>(sharks<span class="sc">$</span>deal_on_show)</span>
+<span id="cb25-4"><a href="b01.html#cb25-4" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="b01.html#cb25-5" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb25-6"><a href="b01.html#cb25-6" tabindex="-1"></a>  <span class="at">on_air_deals =</span> deal_count,</span>
+<span id="cb25-7"><a href="b01.html#cb25-7" tabindex="-1"></a>  <span class="at">recorded_pitches =</span> pitch_count,</span>
+<span id="cb25-8"><a href="b01.html#cb25-8" tabindex="-1"></a>  <span class="at">recorded_deal_rate =</span> deal_rate</span>
+<span id="cb25-9"><a href="b01.html#cb25-9" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##       on_air_deals   recorded_pitches recorded_deal_rate 
+##        383.0000000        706.0000000          0.5424929</code></pre>
+<p>Because a 0/1 variable has mean equal to its proportion of 1s,
+<code>mean(deal_on_show)</code> is 54.2%. A defensible sentence is:</p>
+<blockquote>
+<p>In this dataset, 383 of 706 recorded pitches
+(54.2%) reached an on-air agreement.</p>
+</blockquote>
+<p>This sentence names the dataset and outcome. It does not claim that a randomly
+selected entrepreneur has the same chance of completed investment.</p>
+</div>
+<div id="visualise-the-distribution" class="section level4 hasAnchor">
+<h4>Visualise the distribution<a href="b01.html#visualise-the-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="B01-question-to-evidence_files/figure-html/b01-histogram-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Each bar counts descriptions within a word-count interval. The long right tail
+means a small number of descriptions are much longer than most. Changing the
+interval width can reveal or conceal patterns, so a histogram is an analytical
+choice rather than decoration.</p>
+</div>
+<div id="compare-raw-observations-and-group-means" class="section level4 hasAnchor">
+<h4>Compare raw observations and group means<a href="b01.html#compare-raw-observations-and-group-means" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="B01-question-to-evidence_files/figure-html/b01-raw-points-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Season is a discrete ordered time index, so the points are moved slightly left
+or right only to reduce overlap. The vertical spread within every season warns
+us that a group mean will not describe every pitch.</p>
+<p><img src="B01-question-to-evidence_files/figure-html/b01-season-means-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Mean written-description length is generally higher in Seasons 6–8 than in
+Seasons 1–5 for both deal groups. This does not show that entrepreneurs learned
+to make longer pitches: the variable describes dataset text, not the spoken
+pitch.</p>
+<p>A clear graph matches the variable types, labels its axes and groups, and makes
+the claim inspectable. Colour is reinforced here by point shape and line type,
+so the groups remain distinguishable without relying on colour alone.</p>
+</div>
+</div>
+</div>
+<div id="after-class" class="section level2 hasAnchor course-phase phase-after">
+<h2>After class<a href="b01.html#after-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="reproduce-the-workflow" class="section level3 hasAnchor">
+<h3>1. Reproduce the workflow<a href="b01.html#reproduce-the-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Save the script. In RStudio, choose <strong>Session &gt; Restart R</strong> to clear objects
+from memory. Run the complete script from top to bottom. It should import the
+data, perform the checks, calculate the deal rate, and recreate at least one
+graph without relying on commands run earlier at the Console.</p>
+<details>
+<summary>
+Check the result
+</summary>
+<p>A successful clean run reports 706 rows and five variables, a recorded on-air
+deal rate of 383/706 (54.2%), the stated ranges, and recreates the graph without
+an “object not found” error.</p>
+</details>
+</div>
+<div id="retrieve-the-ideas" class="section level3 hasAnchor">
+<h3>2. Retrieve the ideas<a href="b01.html#retrieve-the-ideas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Answer without reopening the chapter, then check your answers.</p>
+<ol style="list-style-type: decimal">
+<li>What does one row represent, and which population can it describe directly?</li>
+<li>Why is <code>pitch_id</code> an identifier rather than a quantitative measurement?</li>
+<li>What is the difference between sampling variability and selection bias?</li>
+<li>What exactly does <code>description_words</code> measure?</li>
+<li>Why can the group-mean graph not establish that longer pitches cause deals?</li>
+</ol>
+<details>
+<summary>
+Check your answers
+</summary>
+<ol style="list-style-type: decimal">
+<li>One row is one recorded televised pitch; the file directly describes these
+706 records.</li>
+<li><code>pitch_id</code> labels a record. Arithmetic differences between its values have
+no substantive meaning.</li>
+<li>Sampling variability is chance variation across random samples; selection
+bias is systematic distortion from how units enter the sample.</li>
+<li><code>description_words</code> counts words in the written dataset description.</li>
+<li>The graph compares observational group means and does not isolate a causal
+effect. It also does not measure spoken pitch length.</li>
+</ol>
+</details>
+</div>
+<div id="explain-one-graph" class="section level3 hasAnchor">
+<h3>3. Explain one graph<a href="b01.html#explain-one-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Write four sentences about either Shark Tank graph:</p>
+<ol style="list-style-type: decimal">
+<li>name the variables and units;</li>
+<li>describe the main visible pattern;</li>
+<li>state one defensible interpretation; and</li>
+<li>state one important limitation or next question.</li>
+</ol>
+<details>
+<summary>
+Check a model answer
+</summary>
+<p>Each point in the raw-data graph represents one recorded pitch, with season on
+the horizontal axis and written-description word count on the vertical axis.
+Word counts vary widely within every season and tend to be higher in later
+seasons. This is evidence of an association between season and the recorded
+description length. It does not show that spoken pitches became longer; the
+dataset documentation process may have changed.</p>
+</details>
+</div>
+<div id="practise-variable-and-graph-choices" class="section level3 hasAnchor">
+<h3>4. Practise variable and graph choices<a href="b01.html#practise-variable-and-graph-choices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Answer these questions without running R:</p>
+<ol style="list-style-type: decimal">
+<li>Why is <code>amount_at_risk</code> discrete rather than continuous?</li>
+<li>Which graph would you use first for <code>description_words</code> alone?</li>
+<li>Which graph would you use for risk willingness and founder probability?</li>
+<li>Why should <code>pitch_id</code> not be averaged?</li>
+</ol>
+<details>
+<summary>
+Check your answers
+</summary>
+<ol style="list-style-type: decimal">
+<li>It can take only the offered values 0, 50, and 100 euros.</li>
+<li>A histogram shows the distribution of one quantitative variable.</li>
+<li>A scatterplot shows how two quantitative variables vary together.</li>
+<li><code>pitch_id</code> is a label. Its numerical magnitude and mean have no substantive
+interpretation.</li>
+</ol>
+</details>
+</div>
+<div id="audit-an-ai-answer" class="section level3 hasAnchor">
+<h3>5. Audit an AI answer<a href="b01.html#audit-an-ai-answer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An AI assistant writes:</p>
+<blockquote>
+<p>“The dataset contains 706 successful companies and proves that longer
+pitches make investors fund startups.”</p>
+</blockquote>
+<p>Use <strong>Attempt -&gt; Ask -&gt; Verify -&gt; Explain</strong> to correct it. Your final response
+must use the observed count or percentage, name the measured outcome, and state
+why the causal claim is unsupported.</p>
+<details>
+<summary>
+Check a model correction after writing your own
+</summary>
+<p>The file contains 706 recorded televised pitches, of which 383 reached an
+on-air agreement. It does not measure completed investment or later company
+success. <code>description_words</code> counts words in a written dataset description,
+not the spoken pitch, and the observational records do not establish that
+changing description length would cause an investor decision.</p>
+</details>
+<p>Before Lecture 2, open its <strong>Before class</strong> section and complete the marked
+preparation. Continue to
+<a href="b02.html#b02">Lecture 2: Probability foundations and random variables</a>.</p>
+<p>For a more formal explanation, consult
+<a href="https://tilburguniversity.on.worldcat.org/oclc/317545871">Nieuwenhuis, <em>Statistical Methods for Business and Economics</em></a>,
+Chapters 1–5.</p>
+</div>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="b02.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

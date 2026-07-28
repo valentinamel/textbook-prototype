@@ -1,0 +1,19 @@
+bookdown::gitbook:
+  css: styles.css
+  split_by: chapter
+  number_sections: false
+  self_contained: false
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: true
+      before: |
+        <li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+      after: |
+        <li class="book-footer">Quantitative Methods learning line</li>
+    toolbar:
+      position: fixed
+    edit: null
+    download: null
+    sharing: null
+    search: true

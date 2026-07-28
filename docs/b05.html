@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lecture 5: Joint random variables, covariance, and correlation | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lecture 5: Joint random variables, covariance, and correlation | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lecture 5: Joint random variables, covariance, and correlation | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="b04.html"/>
+<link rel="next" href="b-ep02.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecture-preparation-and-external-videos"><i class="fa fa-check"></i>Lecture preparation and external videos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-and-main-dataset"><i class="fa fa-check"></i>R and main dataset</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tutorials-and-assessment"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#working-with-ai"><i class="fa fa-check"></i>Working with AI</a></li>
+</ul></li>
+<li class="part"><span><b>I Course 1 · Basic</b></span></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#before-class"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#how-the-course-works"><i class="fa fa-check"></i>1. How the course works</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#data-analysis-with-r-and-ai"><i class="fa fa-check"></i>2. Data analysis with R and AI</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class-data-collection-exercise"><i class="fa fa-check"></i>3. In-class data collection exercise</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#analyse-the-shark-tank-data"><i class="fa fa-check"></i>4. Analyse the Shark Tank data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#after-class"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#reproduce-the-workflow"><i class="fa fa-check"></i>1. Reproduce the workflow</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#retrieve-the-ideas"><i class="fa fa-check"></i>2. Retrieve the ideas</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#explain-one-graph"><i class="fa fa-check"></i>3. Explain one graph</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#practise-variable-and-graph-choices"><i class="fa fa-check"></i>4. Practise variable and graph choices</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#audit-an-ai-answer"><i class="fa fa-check"></i>5. Audit an AI answer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#before-class-1"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#in-class-1"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#a-probability-model-begins-with-possible-outcomes"><i class="fa fa-check"></i>A probability model begins with possible outcomes</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#probability-laws-and-their-axioms"><i class="fa fa-check"></i>Probability laws and their axioms</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#empirical-proportion-or-future-probability"><i class="fa fa-check"></i>Empirical proportion or future probability?</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#from-complete-outcomes-to-numerical-measurements"><i class="fa fa-check"></i>From complete outcomes to numerical measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#after-class-1"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#retrieval"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#practice"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#worked-exam-interpretation"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#before-class-2"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#in-class-2"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-pmf-assigns-probability-to-each-possible-value"><i class="fa fa-check"></i>A PMF assigns probability to each possible value</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-cdf-accumulates-probability-up-to-a-threshold"><i class="fa fa-check"></i>A CDF accumulates probability up to a threshold</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-is-the-distributions-weighted-centre"><i class="fa fa-check"></i>Expectation is the distribution’s weighted centre</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-after-transforming-a-variable"><i class="fa fa-check"></i>Expectation after transforming a variable</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#model-expectation-and-the-sample-mean"><i class="fa fa-check"></i>Model expectation and the sample mean</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#after-class-2"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#retrieval-1"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#practice-1"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#worked-exam-interpretation-1"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#before-class-3"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#in-class-3"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-1-data-and-measurement"><i class="fa fa-check"></i>Task 1 — Data and measurement</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-2-events-and-probability-rules"><i class="fa fa-check"></i>Task 2 — Events and probability rules</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-3-pmf-cdf-and-expectation"><i class="fa fa-check"></i>Task 3 — PMF, CDF, and expectation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#after-class-3"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#timed-individual-practice-10-minutes"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#check-your-understanding"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#before-class-4"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#in-class-4"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#variance-and-standard-deviation"><i class="fa fa-check"></i>Variance and standard deviation</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#conditional-probability"><i class="fa fa-check"></i>Conditional probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#the-multiplication-rule"><i class="fa fa-check"></i>The multiplication rule</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#partitions-and-the-law-of-total-probability"><i class="fa fa-check"></i>Partitions and the law of total probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#bayes-rule"><i class="fa fa-check"></i>Bayes’ rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#after-class-4"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#retrieval-2"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#practice-2"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#worked-exam-interpretation-2"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#before-class-5"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#in-class-5"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#the-joint-probability-mass-function"><i class="fa fa-check"></i>The joint probability mass function</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#independence-in-a-joint-distribution"><i class="fa fa-check"></i>Independence in a joint distribution</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#covariance-comes-from-expectation"><i class="fa fa-check"></i>Covariance comes from expectation</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#correlation-standardises-covariance"><i class="fa fa-check"></i>Correlation standardises covariance</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#inspect-first-summarise-second"><i class="fa fa-check"></i>Inspect first, summarise second</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#after-class-5"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#retrieval-3"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#practice-3"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#worked-exam-interpretation-3"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#before-class-6"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#in-class-6"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-1-conditional-probability-and-bayes"><i class="fa fa-check"></i>Task 1 — Conditional probability and Bayes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-2-independence"><i class="fa fa-check"></i>Task 2 — Independence</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-3-joint-pmf-covariance-and-correlation"><i class="fa fa-check"></i>Task 3 — Joint PMF, covariance, and correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#after-class-6"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#timed-individual-practice-10-minutes-1"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#check-your-understanding-1"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Course 2 · Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>Intermediate quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#how-this-course-connects"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#tutorials-and-assessment-1"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>III Course 3 · Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>Advanced quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#how-this-course-connects-1"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#tutorials-and-assessment-2"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a>
+<ul>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-r-or-rstudio-is-not-ready"><i class="fa fa-check"></i>If R or RStudio is not ready</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-cannot-reproduce-your-work"><i class="fa fa-check"></i>If you cannot reproduce your work</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-the-data-will-not-load"><i class="fa fa-check"></i>If the data will not load</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-forgot-summaries-or-plots"><i class="fa fa-check"></i>If you forgot summaries or plots</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#a-five-minute-return-to-r-check"><i class="fa fa-check"></i>A five-minute return-to-R check</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a>
+<ul>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#required-preparation-at-a-glance"><i class="fa fa-check"></i>Required preparation at a glance</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#supplementary-probability-reading"><i class="fa fa-check"></i>Supplementary probability reading</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-1-introduction-to-data-analysis"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-2-probability-foundations-and-random-variables"><i class="fa fa-check"></i>Lecture 2: Probability Foundations and Random Variables</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-3-discrete-distributions-and-expectation"><i class="fa fa-check"></i>Lecture 3: Discrete Distributions and Expectation</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-4-variance-conditioning-and-belief-updating"><i class="fa fa-check"></i>Lecture 4: Variance, Conditioning, and Belief Updating</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#lecture-5-joint-random-variables-covariance-and-correlation"><i class="fa fa-check"></i>Lecture 5: Joint Random Variables, Covariance, and Correlation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="b05" class="section level1 hasAnchor">
+<h1>Lecture 5: Joint random variables, covariance, and correlation<a href="b05.html#b05" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="outcomes">
+<span class="label">By the end of Lecture 5, you can</span>
+<ul>
+<li>
+define a pair of random variables on one sample space;
+</li>
+<li>
+read a joint PMF and recover marginal and conditional distributions;
+</li>
+<li>
+derive covariance from expected cross-deviations;
+</li>
+<li>
+explain how correlation standardises covariance;
+</li>
+<li>
+separate linear association from independence, causality, and importance.
+</li>
+</ul>
+</div>
+<div id="before-class-5" class="section level2 hasAnchor course-phase phase-before">
+<h2>Before class<a href="b05.html#before-class-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="video-prep">
+<p><span class="label">Video preparation</span><br>
+Watch
+<a href="https://www.youtube.com/watch?v=7nu97OYx4X4">Joint PMFs and the
+Expected Value Rule</a>,
+<a href="https://www.youtube.com/watch?v=K2Tlj27nkjs">Covariance</a>, and
+<a href="https://www.youtube.com/watch?v=HTs6Zhc2S1M">The Correlation
+Coefficient</a>. Be ready to state what a joint PMF records, what covariance
+averages, and how correlation standardises covariance. All links are also
+listed in the <a href="videos.html#videos">External Video Guide</a>.</p>
+</div>
+<p>In the uniform record-selection experiment, one realised outcome <span class="math inline">\(\omega\)</span> is
+a complete pitch record. Define:</p>
+<p><span class="math display">\[
+X(\omega)=
+\begin{cases}
+1,&amp;\text{on-air deal},\\
+0,&amp;\text{no on-air deal},
+\end{cases}
+\qquad
+Y(\omega)=
+\begin{cases}
+1,&amp;\text{Season 5-8},\\
+0,&amp;\text{Season 1-4}.
+\end{cases}
+\]</span></p>
+<p>The pair <span class="math inline">\((X,Y)\)</span> maps every outcome to one of four possible ordered pairs:</p>
+<p><span class="math display">\[
+\mathcal{X}\times\mathcal{Y}
+=\{(0,0),(0,1),(1,0),(1,1)\}.
+\]</span></p>
+<p>Two separate marginal distributions do not tell us how values are paired. The
+<strong>joint distribution</strong> does.</p>
+</div>
+<div id="in-class-5" class="section level2 hasAnchor course-phase phase-in-class">
+<h2>In class<a href="b05.html#in-class-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-joint-probability-mass-function" class="section level3 hasAnchor">
+<h3>The joint probability mass function<a href="b05.html#the-joint-probability-mass-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/joint-pmfs-and-the-expected-value-rule/">06.7 Joint PMFs and the Expected Value Rule</a>.
+</p>
+<p>For discrete random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, the joint PMF is</p>
+<p><span class="math display">\[
+p_{X,Y}(x,y)=P(X=x,Y=y).
+\]</span></p>
+<p>It must be non-negative and sum to 1 over every possible pair.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="b05.html#cb65-1" tabindex="-1"></a>joint_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(<span class="at">Deal =</span> X, <span class="at">Late_period =</span> Y)</span>
+<span id="cb65-2"><a href="b05.html#cb65-2" tabindex="-1"></a>joint_pmf <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(joint_counts)</span>
+<span id="cb65-3"><a href="b05.html#cb65-3" tabindex="-1"></a>joint_counts</span></code></pre></div>
+<pre><code>##     Late_period
+## Deal   0   1
+##    0 135 188
+##    1 127 256</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="b05.html#cb67-1" tabindex="-1"></a><span class="fu">round</span>(joint_pmf, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##     Late_period
+## Deal     0     1
+##    0 0.191 0.266
+##    1 0.180 0.363</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="b05.html#cb69-1" tabindex="-1"></a><span class="fu">sum</span>(joint_pmf)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div id="recovering-marginal-pmfs" class="section level4 hasAnchor">
+<h4>Recovering marginal PMFs<a href="b05.html#recovering-marginal-pmfs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sum over the values of the other variable:</p>
+<p><span class="math display">\[
+p_X(x)=\sum_y p_{X,Y}(x,y),
+\qquad
+p_Y(y)=\sum_x p_{X,Y}(x,y).
+\]</span></p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="b05.html#cb71-1" tabindex="-1"></a><span class="fu">rowSums</span>(joint_pmf)</span></code></pre></div>
+<pre><code>##         0         1 
+## 0.4575071 0.5424929</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="b05.html#cb73-1" tabindex="-1"></a><span class="fu">colSums</span>(joint_pmf)</span></code></pre></div>
+<pre><code>##         0         1 
+## 0.3711048 0.6288952</code></pre>
+</div>
+<div id="recovering-conditional-pmfs" class="section level4 hasAnchor">
+<h4>Recovering conditional PMFs<a href="b05.html#recovering-conditional-pmfs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/conditional-pmfs/">07.2 Conditional PMFs</a>.
+</p>
+<p>For <span class="math inline">\(p_Y(y)&gt;0\)</span>,</p>
+<p><span class="math display">\[
+p_{X\mid Y}(x\mid y)=
+\frac{p_{X,Y}(x,y)}{p_Y(y)}.
+\]</span></p>
+<p>The probability <span class="math inline">\(p_{X\mid Y}(1\mid1)\)</span> is the late-season deal proportion
+<span class="math inline">\(P(X=1\mid Y=1)=256/444\)</span>.</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="b05.html#cb75-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">prop.table</span>(joint_counts, <span class="at">margin =</span> <span class="dv">2</span>), <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##     Late_period
+## Deal     0     1
+##    0 0.515 0.423
+##    1 0.485 0.577</code></pre>
+<p>The columns each sum to 1 because each column is a conditional PMF of <span class="math inline">\(X\)</span>
+within a fixed value of <span class="math inline">\(Y\)</span>.</p>
+</div>
+</div>
+<div id="independence-in-a-joint-distribution" class="section level3 hasAnchor">
+<h3>Independence in a joint distribution<a href="b05.html#independence-in-a-joint-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanations (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/independence-of-two-events/">03.3 Independence of Two Events</a> and
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/independence-of-random-variables/">07.4 Independence of Random Variables</a>.
+</p>
+<p>Events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent when
+<span class="math inline">\(P(A\cap B)=P(A)P(B)\)</span>. Equivalently, when <span class="math inline">\(P(B)&gt;0\)</span>,
+<span class="math inline">\(P(A\mid B)=P(A)\)</span>. Positive-probability disjoint events are not independent:
+observing one makes the other impossible.</p>
+<p>Discrete random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent if</p>
+<p><span class="math display">\[
+p_{X,Y}(x,y)=p_X(x)p_Y(y)
+\]</span></p>
+<p>for every pair <span class="math inline">\((x,y)\)</span>. One matching cell is not enough; the factorisation
+must hold across the full support.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="b05.html#cb77-1" tabindex="-1"></a>observed_joint_11 <span class="ot">&lt;-</span> <span class="fu">mean</span>(X <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> Y <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb77-2"><a href="b05.html#cb77-2" tabindex="-1"></a>independent_joint_11 <span class="ot">&lt;-</span> <span class="fu">mean</span>(X <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="fu">mean</span>(Y <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb77-3"><a href="b05.html#cb77-3" tabindex="-1"></a><span class="fu">c</span>(<span class="at">observed_joint_11 =</span> observed_joint_11,</span>
+<span id="cb77-4"><a href="b05.html#cb77-4" tabindex="-1"></a>  <span class="at">independent_joint_11 =</span> independent_joint_11)</span></code></pre></div>
+<pre><code>##    observed_joint_11 independent_joint_11 
+##            0.3626062            0.3411712</code></pre>
+<p>The mismatch in the <span class="math inline">\((1,1)\)</span> cell already shows that the empirical variables
+are not independent.</p>
+</div>
+<div id="covariance-comes-from-expectation" class="section level3 hasAnchor">
+<h3>Covariance comes from expectation<a href="b05.html#covariance-comes-from-expectation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanation (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/covariance/">12.5 Covariance</a>.
+</p>
+<p>Lecture 4 defined variance as an expected squared deviation:</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)=E[(X-E[X])^2].
+\]</span></p>
+<p>Covariance uses the same idea for two variables. Let
+<span class="math inline">\(\mu_X=E[X]\)</span> and <span class="math inline">\(\mu_Y=E[Y]\)</span>. Then</p>
+<p><span class="math display">\[
+\operatorname{Cov}(X,Y)
+=E[(X-\mu_X)(Y-\mu_Y)].
+\]</span></p>
+<p>Interpret one product of deviations:</p>
+<ul>
+<li>if both values are above their means, the product is positive;</li>
+<li>if both are below their means, the product is also positive;</li>
+<li>if one is above and the other below, the product is negative.</li>
+</ul>
+<p>The expectation averages those signed products over the joint distribution.
+Expanding the product gives the computational identity:</p>
+<p><span class="math display">\[
+\operatorname{Cov}(X,Y)=E[XY]-E[X]E[Y].
+\]</span></p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="b05.html#cb79-1" tabindex="-1"></a>E_X <span class="ot">&lt;-</span> <span class="fu">mean</span>(X)</span>
+<span id="cb79-2"><a href="b05.html#cb79-2" tabindex="-1"></a>E_Y <span class="ot">&lt;-</span> <span class="fu">mean</span>(Y)</span>
+<span id="cb79-3"><a href="b05.html#cb79-3" tabindex="-1"></a>E_XY <span class="ot">&lt;-</span> <span class="fu">mean</span>(X <span class="sc">*</span> Y)</span>
+<span id="cb79-4"><a href="b05.html#cb79-4" tabindex="-1"></a></span>
+<span id="cb79-5"><a href="b05.html#cb79-5" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb79-6"><a href="b05.html#cb79-6" tabindex="-1"></a>  <span class="at">E_X =</span> E_X,</span>
+<span id="cb79-7"><a href="b05.html#cb79-7" tabindex="-1"></a>  <span class="at">E_Y =</span> E_Y,</span>
+<span id="cb79-8"><a href="b05.html#cb79-8" tabindex="-1"></a>  <span class="at">E_XY =</span> E_XY,</span>
+<span id="cb79-9"><a href="b05.html#cb79-9" tabindex="-1"></a>  <span class="at">covariance_from_moments =</span> E_XY <span class="sc">-</span> E_X <span class="sc">*</span> E_Y</span>
+<span id="cb79-10"><a href="b05.html#cb79-10" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##                     E_X                     E_Y                    E_XY 
+##              0.54249292              0.62889518              0.36260623 
+## covariance_from_moments 
+##              0.02143505</code></pre>
+<p>Covariance has product units. If <span class="math inline">\(X\)</span> is measured in dollars and <span class="math inline">\(Y\)</span> in
+years, covariance is in dollar-years. Its sign is interpretable, but its
+magnitude changes when either measurement unit changes.</p>
+<div id="independence-implies-zero-covariance" class="section level4 hasAnchor">
+<h4>Independence implies zero covariance<a href="b05.html#independence-implies-zero-covariance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent and have finite second moments, then</p>
+<p><span class="math display">\[
+E[XY]=E[X]E[Y],
+\]</span></p>
+<p>so <span class="math inline">\(\operatorname{Cov}(X,Y)=0\)</span>. The reverse is not generally true: zero
+covariance rules out linear co-movement, not every form of dependence.</p>
+</div>
+</div>
+<div id="correlation-standardises-covariance" class="section level3 hasAnchor">
+<h3>Correlation standardises covariance<a href="b05.html#correlation-standardises-covariance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p class="concept-video">
+<strong>MIT explanations (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-correlation-coefficient/">12.8 The Correlation Coefficient</a> and
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/interpreting-the-correlation-coefficient/">12.10 Interpreting the Correlation Coefficient</a>.
+</p>
+<p>For variables with positive finite standard deviations,</p>
+<p><span class="math display">\[
+\rho_{XY}
+=\frac{\operatorname{Cov}(X,Y)}
+{\operatorname{SD}(X)\operatorname{SD}(Y)},
+\qquad -1\le\rho_{XY}\le1.
+\]</span></p>
+<p>Correlation has no units. Its sign gives the direction of linear association,
+and its magnitude measures the strength of linear association.</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="b05.html#cb81-1" tabindex="-1"></a>cov_xy <span class="ot">&lt;-</span> <span class="fu">mean</span>((X <span class="sc">-</span> <span class="fu">mean</span>(X)) <span class="sc">*</span> (Y <span class="sc">-</span> <span class="fu">mean</span>(Y)))</span>
+<span id="cb81-2"><a href="b05.html#cb81-2" tabindex="-1"></a>rho_xy <span class="ot">&lt;-</span> cov_xy <span class="sc">/</span> (<span class="fu">sqrt</span>(<span class="fu">mean</span>((X <span class="sc">-</span> <span class="fu">mean</span>(X))<span class="sc">^</span><span class="dv">2</span>)) <span class="sc">*</span></span>
+<span id="cb81-3"><a href="b05.html#cb81-3" tabindex="-1"></a>                    <span class="fu">sqrt</span>(<span class="fu">mean</span>((Y <span class="sc">-</span> <span class="fu">mean</span>(Y))<span class="sc">^</span><span class="dv">2</span>)))</span>
+<span id="cb81-4"><a href="b05.html#cb81-4" tabindex="-1"></a><span class="fu">c</span>(<span class="at">from_definition =</span> rho_xy,</span>
+<span id="cb81-5"><a href="b05.html#cb81-5" tabindex="-1"></a>  <span class="at">from_R =</span> <span class="fu">cor</span>(X, Y))</span></code></pre></div>
+<pre><code>## from_definition          from_R 
+##      0.08906172      0.08906172</code></pre>
+<p>A correlation near zero can coexist with a strong curved relationship.
+A correlation near 1 or -1 does not establish causality.</p>
+<div id="sample-covariance-and-sample-correlation" class="section level4 hasAnchor">
+<h4>Sample covariance and sample correlation<a href="b05.html#sample-covariance-and-sample-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For observed pairs <span class="math inline">\((x_i,y_i)\)</span>, the usual sample covariance is</p>
+<p><span class="math display">\[
+s_{XY}=\frac{1}{n-1}\sum_{i=1}^{n}
+(x_i-\bar{x})(y_i-\bar{y}),
+\]</span></p>
+<p>and the sample correlation is</p>
+<p><span class="math display">\[
+r_{XY}=\frac{s_{XY}}{s_Xs_Y}.
+\]</span></p>
+<p>These are sample statistics. Under a model and sampling design, they may be
+used to estimate population quantities <span class="math inline">\(\operatorname{Cov}(X,Y)\)</span> and
+<span class="math inline">\(\rho_{XY}\)</span>.</p>
+</div>
+</div>
+<div id="inspect-first-summarise-second" class="section level3 hasAnchor">
+<h3>Inspect first, summarise second<a href="b05.html#inspect-first-summarise-second" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For two quantitative variables, begin with a scatterplot. Treating season as an
+equally spaced time index:</p>
+<p><img src="B05-random-variables_files/figure-html/b05-season-words-plot-1.png" width="672" /></p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="b05.html#cb83-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb83-2"><a href="b05.html#cb83-2" tabindex="-1"></a>  <span class="at">season_with_description_words =</span></span>
+<span id="cb83-3"><a href="b05.html#cb83-3" tabindex="-1"></a>    <span class="fu">cor</span>(sharks<span class="sc">$</span>season, sharks<span class="sc">$</span>description_words),</span>
+<span id="cb83-4"><a href="b05.html#cb83-4" tabindex="-1"></a>  <span class="at">description_words_with_deal =</span></span>
+<span id="cb83-5"><a href="b05.html#cb83-5" tabindex="-1"></a>    <span class="fu">cor</span>(sharks<span class="sc">$</span>description_words, sharks<span class="sc">$</span>deal_on_show)</span>
+<span id="cb83-6"><a href="b05.html#cb83-6" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## season_with_description_words   description_words_with_deal 
+##                     0.4270369                     0.1402766</code></pre>
+<p>Season and word count have a moderate positive linear association
+(<span class="math inline">\(r\approx0.43\)</span>). Description length and the 0/1 deal indicator have a weak
+positive association (<span class="math inline">\(r\approx0.14\)</span>). With a binary variable, ordinary
+Pearson correlation is also called point-biserial correlation.</p>
+<div id="why-the-association-may-mislead" class="section level4 hasAnchor">
+<h4>Why the association may mislead<a href="b05.html#why-the-association-may-mislead" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Three patterns coexist:</p>
+<ol style="list-style-type: decimal">
+<li>later seasons have higher recorded deal proportions;</li>
+<li>later seasons have longer written descriptions;</li>
+<li>deal records have longer written descriptions on average.</li>
+</ol>
+<p>The marginal word-count/deal association may therefore partly reflect
+differences between seasons. The file does not document a causal intervention
+or make written-description length equivalent to spoken pitch length.
+Correlation alone does not establish causation, independence, or practical
+importance.</p>
+</div>
+</div>
+</div>
+<div id="after-class-5" class="section level2 hasAnchor course-phase phase-after">
+<h2>After class<a href="b05.html#after-class-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="retrieval-3" class="section level3 hasAnchor">
+<h3>Retrieval<a href="b05.html#retrieval-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>What information does a joint PMF contain that two marginal PMFs do not?</li>
+<li>How do you recover a marginal PMF from a joint PMF?</li>
+<li>Why can covariance change when units change?</li>
+<li>Why does independence imply zero covariance?</li>
+<li>Why does zero correlation not imply independence?</li>
+</ol>
+<details>
+<summary>
+Check your answers
+</summary>
+<ol style="list-style-type: decimal">
+<li>It records how values of the two variables occur together.</li>
+<li>Sum the joint PMF over every value of the other variable.</li>
+<li>Covariance has product units, so rescaling either variable rescales the
+covariance.</li>
+<li>With finite second moments, independence gives
+<span class="math inline">\(E[XY]=E[X]E[Y]\)</span>, hence zero covariance.</li>
+<li>Correlation measures linear association; dependent variables can have zero
+linear association.</li>
+</ol>
+</details>
+</div>
+<div id="practice-3" class="section level3 hasAnchor">
+<h3>Practice<a href="b05.html#practice-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider this joint PMF:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right"><span class="math inline">\(Y=0\)</span></th>
+<th align="right"><span class="math inline">\(Y=1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(X=0\)</span></td>
+<td align="right">0.30</td>
+<td align="right">0.20</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(X=1\)</span></td>
+<td align="right">0.10</td>
+<td align="right">0.40</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>Find the marginal PMFs of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</li>
+<li>Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> independent?</li>
+<li>Calculate <span class="math inline">\(\operatorname{Cov}(X,Y)\)</span> and interpret its sign.</li>
+<li>Calculate <span class="math inline">\(P(X=1\mid Y=1)\)</span> and compare it with <span class="math inline">\(P(X=1)\)</span>.</li>
+<li>Define <span class="math inline">\(Z=100X\)</span>. Calculate <span class="math inline">\(\operatorname{Cov}(Z,Y)\)</span> and state what
+happens to <span class="math inline">\(\operatorname{Corr}(Z,Y)\)</span>.</li>
+</ol>
+<details>
+<summary>
+Check your answers
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(X=0)=0.50\)</span>, <span class="math inline">\(P(X=1)=0.50\)</span>, <span class="math inline">\(P(Y=0)=0.40\)</span>, and
+<span class="math inline">\(P(Y=1)=0.60\)</span>.</li>
+<li>No. For example, <span class="math inline">\(P(X=1,Y=1)=0.40\)</span>, whereas
+<span class="math inline">\(P(X=1)P(Y=1)=0.50(0.60)=0.30\)</span>.</li>
+<li><span class="math inline">\(E[X]=0.50\)</span>, <span class="math inline">\(E[Y]=0.60\)</span>, and <span class="math inline">\(E[XY]=0.40\)</span>. Therefore,
+<span class="math inline">\(\operatorname{Cov}(X,Y)=0.40-0.50(0.60)=0.10\)</span>. The positive sign means
+the pair <span class="math inline">\((1,1)\)</span> occurs with greater probability than the product of its
+marginal probabilities.</li>
+<li><span class="math inline">\(P(X=1\mid Y=1)=0.40/0.60=2/3\)</span>, which is larger than the marginal
+<span class="math inline">\(P(X=1)=0.50\)</span>. Conditioning on <span class="math inline">\(Y=1\)</span> changes the distribution of <span class="math inline">\(X\)</span>.</li>
+<li><span class="math inline">\(\operatorname{Cov}(Z,Y)=100\operatorname{Cov}(X,Y)=10\)</span>.
+Multiplication by a positive constant changes covariance but leaves
+correlation unchanged.</li>
+</ol>
+</details>
+</div>
+<div id="worked-exam-interpretation-3" class="section level3 hasAnchor">
+<h3>Worked exam interpretation<a href="b05.html#worked-exam-interpretation-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Question.</strong> R reports
+<code>cor(sharks$season, sharks$description_words) = 0.427</code>.</p>
+<details>
+<summary>
+Check a model answer
+</summary>
+<p>Among the 706 records, season and written-description length
+have a moderate positive linear association: descriptions tend to be longer in
+later seasons. The coefficient is dimensionless and summarises linear
+co-movement. It does not show that time caused longer pitches: the variable
+measures dataset text, and the analysis does not identify a causal effect.</p>
+</details>
+<p>Continue to <a href="b-ep02.html#b-ep02">Tutorial 2: Conditioning and relationships</a>.</p>
+<p>For a more formal explanation, consult
+<a href="https://tilburguniversity.on.worldcat.org/oclc/317545871">Nieuwenhuis, <em>Statistical Methods for Business and Economics</em></a>,
+Chapters 5 and 11.</p>
+</div>
+</div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="b04.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="b-ep02.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
