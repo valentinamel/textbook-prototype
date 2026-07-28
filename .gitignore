@@ -5,7 +5,10 @@ _main.md
 QM-to-Understand-EBI.Rmd
 QM-to-Understand-EBI.md
 *_cache/
-*_files/
+/*_files/
 .Rhistory
 .RData
 .Rproj.user/
+.DS_Store
+.Rapp.history
+QM-to-Understand-EBI.rds
