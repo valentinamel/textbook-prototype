@@ -268,8 +268,8 @@ test identifies a causal explanation.
 
 </details>
 
-The Basic course is complete. Continue to
-[Intermediate quantitative methods](#intermediate-course) when that course
-begins.
+QM Basic is complete. Next, use the [QM Basic Formula Sheet](#formula-sheet)
+and attempt the [QM Basic Mock Exam](#basic-mock-exam). Continue to
+[QM Intermediate](#intermediate-course) when that course begins.
 
 :::

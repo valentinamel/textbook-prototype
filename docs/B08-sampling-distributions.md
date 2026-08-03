@@ -150,9 +150,13 @@ itself is normal, the sample mean is normal for every \(n\).
 
 <img src="B08-sampling-distributions_files/figure-html/b08-clt-simulation-1.png" width="672" />
 
-The original pitch-level variable is strongly right-skewed. Its mean based on
-40 independent draws is nevertheless much more concentrated and closer to a
-normal shape than a mean based on 5 draws.
+Both panels use the **same horizontal and vertical scales**. The horizontal
+axis shows possible sample means in equity percentage points; the vertical
+axis is density. The bars are the simulated sampling distributions and the
+orange lines are the corresponding normal approximations. The original
+pitch-level variable is strongly right-skewed. Its mean based on 40 independent
+draws is nevertheless much more concentrated and closer to a normal shape than
+a mean based on 5 draws.
 
 ### Sample proportions are sample means
 

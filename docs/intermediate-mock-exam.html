@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Mock Exam: QM Intermediate | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Mock Exam: QM Intermediate | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mock Exam: QM Intermediate | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="i-ep02.html"/>
+<link rel="next" href="advanced-course.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>I QM Basic</b></span></li>
+<li class="chapter" data-level="" data-path="basic-course.html"><a href="basic-course.html"><i class="fa fa-check"></i>QM Basic: Course overview</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html"><i class="fa fa-check"></i>Lecture 6: Continuous distributions and the normal model</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html"><i class="fa fa-check"></i>Lecture 7: Samples, parameters, and estimators</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html"><i class="fa fa-check"></i>Lecture 8: Sampling distributions and the central limit theorem</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html"><i class="fa fa-check"></i>Tutorial 3: Sampling and standard errors</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html"><i class="fa fa-check"></i>Lecture 9: Confidence intervals and tests against zero</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html"><i class="fa fa-check"></i>Lecture 10: Hypothesis testing, errors, and power</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html"><i class="fa fa-check"></i>Tutorial 4: Inference and tests against zero</a></li>
+<li class="chapter" data-level="" data-path="formula-sheet.html"><a href="formula-sheet.html"><i class="fa fa-check"></i>QM Basic Formula Sheet</a></li>
+<li class="chapter" data-level="" data-path="basic-mock-exam.html"><a href="basic-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Basic</a></li>
+<li class="part"><span><b>II QM Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>QM Intermediate: Course overview</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html"><i class="fa fa-check"></i>Lecture 1: Simple linear regression</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html"><i class="fa fa-check"></i>Lecture 2: Regression assumptions and coefficient inference</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html"><i class="fa fa-check"></i>Lecture 3: Model fit and overall usefulness</a></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Simple regression and model usefulness</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html"><i class="fa fa-check"></i>Lecture 4: Multiple linear regression and controls</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html"><i class="fa fa-check"></i>Lecture 5: Dummy predictors and joint usefulness</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html"><i class="fa fa-check"></i>Lecture 6: Interactions and polynomial terms</a></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Multiple regression and extensions</a></li>
+<li class="chapter" data-level="" data-path="intermediate-mock-exam.html"><a href="intermediate-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Intermediate</a></li>
+<li class="part"><span><b>III QM Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>QM Advanced: Course overview</a></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html"><i class="fa fa-check"></i>Mathematics Refresher</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intermediate-mock-exam" class="section level1 hasAnchor">
+<h1>Mock Exam: QM Intermediate<a href="intermediate-mock-exam.html#intermediate-mock-exam" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This mock exam represents the full six-lecture course. It contains <strong>100
+points</strong>, so the exam grade is</p>
+<p><span class="math display">\[
+\text{grade} = \frac{\text{points earned}}{10}.
+\]</span></p>
+<p>The Intermediate exam is completed in TestVision with R available. Unless a
+question states otherwise, use a 5% significance level. Interpret every
+coefficient in the units and sample defined below; do not use causal language
+unless the design supports it.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Topic</th>
+<th align="right">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Simple regression and least squares</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Assumptions and diagnostics</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Model fit and the overall F-test</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Multiple regression and a dummy predictor</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Interactions, curvature, and a partial F-test</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td></td>
+<td align="right"><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<div id="dataset-used-throughout" class="section level2 hasAnchor">
+<h2>Dataset used throughout<a href="intermediate-mock-exam.html#dataset-used-throughout" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The downloadable simulated exam dataset represents a simple random sample of
+320 independent young ventures from a business registry. One row represents
+one venture. Treat the stated sampling story as the study context. The design
+is observational: none of the predictors was randomly assigned.</p>
+<ul>
+<li><code>growth_pct</code>: change in annual sales, in percentage points;</li>
+<li><code>marketing_10k</code>: annual marketing spending, in €10,000s;</li>
+<li><code>experience_years</code>: lead founder’s prior industry experience, in years;</li>
+<li><code>team_size</code>: number of current team members;</li>
+<li><code>digital</code>: <code>No</code> for a primarily physical offering and <code>Yes</code> for a primarily
+digital offering. <code>No</code> is the reference category;</li>
+<li><code>spend_c = marketing_10k - 4</code>: marketing spending centred at €40,000.</li>
+</ul>
+<p>The target population is the ventures covered by this registry and sampling
+frame. Later survival and market conditions are not measured.</p>
+<p><a href="data/qm-intermediate-mock-exam.csv">Download <code>qm-intermediate-mock-exam.csv</code></a>,
+save it in your R project, and load it with:</p>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="intermediate-mock-exam.html#cb196-1" tabindex="-1"></a>ventures <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;qm-intermediate-mock-exam.csv&quot;</span>)</span>
+<span id="cb196-2"><a href="intermediate-mock-exam.html#cb196-2" tabindex="-1"></a>ventures<span class="sc">$</span>digital <span class="ot">&lt;-</span> <span class="fu">factor</span>(ventures<span class="sc">$</span>digital, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>))</span></code></pre></div>
+<p>The printed results below allow you to continue if R is temporarily
+unavailable, but during timed practice you should reproduce them from the
+downloaded file.</p>
+</div>
+<div id="question-1-simple-regression-and-least-squares-20-points" class="section level2 hasAnchor">
+<h2>Question 1: Simple regression and least squares — 20 points<a href="intermediate-mock-exam.html#question-1-simple-regression-and-least-squares-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The first model is</p>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="intermediate-mock-exam.html#cb197-1" tabindex="-1"></a>simple_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(growth_pct <span class="sc">~</span> marketing_10k, <span class="at">data =</span> ventures)</span></code></pre></div>
+<p>and R reports</p>
+<pre class="text"><code>Coefficients:
+                Estimate  Std. Error  t value  Pr(&gt;|t|)
+(Intercept)        6.60       0.52      12.72   &lt;2e-16
+marketing_10k      1.38       0.11      12.35   &lt;2e-16
+
+Residual standard error: 4.57 on 318 degrees of freedom
+Multiple R-squared: 0.324</code></pre>
+<ol style="list-style-type: decimal">
+<li>Write the fitted regression equation with units. <strong>(3 points)</strong></li>
+<li>Interpret the slope and intercept in context. Comment on whether the
+intercept is substantively useful. <strong>(6 points)</strong></li>
+<li>Calculate the fitted growth for a venture spending €30,000 on marketing.
+If its observed growth is 15 percentage points, calculate its residual and
+interpret the sign. <strong>(5 points)</strong></li>
+<li>Explain what least squares minimises and why residuals are squared rather
+than simply summed. <strong>(4 points)</strong></li>
+<li>State the observational unit and why the fitted slope is not automatically
+causal. <strong>(2 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\widehat{growth\_pct}=6.60+1.38\,marketing\_10k\)</span>, where the outcome is
+in percentage points and the predictor in €10,000s (3 points).</li>
+<li>For each additional €10,000 of marketing spending, fitted annual sales
+growth is 1.38 percentage points higher among sampled ventures (3 points).
+At zero marketing spending, fitted growth is 6.60 percentage points
+(2 points). This intercept is useful only if zero lies in or near the
+observed spending range and defines a meaningful venture (1 point).</li>
+<li>€30,000 gives <code>marketing_10k = 3</code>, so the fitted value is
+<span class="math inline">\(6.60+1.38(3)=10.74\)</span> percentage points (3 points). The residual is
+<span class="math inline">\(15-10.74=4.26\)</span> percentage points; positive means observed growth exceeds
+the model’s fitted value (2 points).</li>
+<li>OLS chooses coefficients that minimise
+<span class="math inline">\(\sum_i(y_i-\hat y_i)^2\)</span> (2 points). Unsquared residuals can cancel
+because positive and negative residuals sum to zero with an intercept;
+squaring also penalises larger misses more strongly (2 points).</li>
+<li>The unit is one venture (1 point). Observational association can reflect
+confounding, reverse direction, selection, or measurement error (1 point).</li>
+</ol>
+</details>
+</div>
+<div id="question-2-assumptions-and-diagnostics-20-points" class="section level2 hasAnchor">
+<h2>Question 2: Assumptions and diagnostics — 20 points<a href="intermediate-mock-exam.html#question-2-assumptions-and-diagnostics-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R produced the following diagnostics for
+<code>lm(growth_pct ~ marketing_10k, data = ventures)</code>. In the left panel,
+each point has fitted growth on the horizontal axis and its residual on the
+vertical axis. In the right panel, observed standardised residuals are plotted
+against theoretical standard-normal quantiles; a normal pattern would follow
+the straight reference line.</p>
+<p><img src="mock-exam-intermediate_files/figure-html/intermediate-mock-diagnostics-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>Read both axes of the residual-versus-fitted panel and explain what a point
+above zero represents. <strong>(4 points)</strong></li>
+<li>What pattern do you see in that panel? Name the assumption it challenges.
+<strong>(4 points)</strong></li>
+<li>Explain how to read the Q–Q plot and assess normality here. <strong>(4 points)</strong></li>
+<li>Name two regression assumptions that these plots cannot establish, and
+state what information would help assess each. <strong>(4 points)</strong></li>
+<li>Would heteroskedasticity-robust standard errors repair a curved conditional
+mean or make the slope causal? Explain. <strong>(4 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li>The horizontal axis is model-fitted growth; the vertical axis is
+observed-minus-fitted growth, both in percentage points (2 points). A point
+above zero is a venture whose observed growth is higher than its fitted
+growth (2 points).</li>
+<li>Vertical spread increases with fitted growth, creating a fan shape
+(2 points). This challenges constant conditional variance
+(homoskedasticity) (2 points).</li>
+<li>The Q–Q plot compares ordered residuals with values expected under a
+normal distribution; agreement appears as points near the line (2 points).
+The middle is reasonably aligned but tail departures suggest imperfect
+normality and possible extreme residuals (2 points).</li>
+<li>Examples: independence requires knowledge of clustering, repeated
+observations, or sampling order; zero conditional mean/no omitted
+confounding requires substantive design knowledge and relevant variables;
+correct measurement requires information about how variables were recorded
+(2 points per valid assumption plus evidence source, maximum 4).</li>
+<li>Robust SEs can improve large-sample uncertainty estimates under
+heteroskedasticity (2 points). They do not change the fitted conditional
+mean, repair omitted curvature, remove confounding, or make an observational
+coefficient causal (2 points).</li>
+</ol>
+</details>
+</div>
+<div id="question-3-model-fit-and-the-overall-f-test-20-points" class="section level2 hasAnchor">
+<h2>Question 3: Model fit and the overall F-test — 20 points<a href="intermediate-mock-exam.html#question-3-model-fit-and-the-overall-f-test-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The researcher next fits</p>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="intermediate-mock-exam.html#cb199-1" tabindex="-1"></a>multiple_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb199-2"><a href="intermediate-mock-exam.html#cb199-2" tabindex="-1"></a>  growth_pct <span class="sc">~</span> marketing_10k <span class="sc">+</span> experience_years <span class="sc">+</span> team_size <span class="sc">+</span> digital,</span>
+<span id="cb199-3"><a href="intermediate-mock-exam.html#cb199-3" tabindex="-1"></a>  <span class="at">data =</span> ventures</span>
+<span id="cb199-4"><a href="intermediate-mock-exam.html#cb199-4" tabindex="-1"></a>)</span></code></pre></div>
+<p>R reports:</p>
+<pre class="text"><code>Residual standard error: 4.09 on 315 degrees of freedom
+Multiple R-squared: 0.464, Adjusted R-squared: 0.457
+F-statistic: 68.10 on 4 and 315 DF, p-value: &lt; 2.2e-16</code></pre>
+<p>For the intercept-only model, SST = 9,831.91. For <code>multiple_model</code>,
+SSE = 5,272.57.</p>
+<ol style="list-style-type: decimal">
+<li>Verify <span class="math inline">\(R^2\)</span> from SST and SSE. Interpret it precisely. <strong>(6 points)</strong></li>
+<li>Explain why adjusted <span class="math inline">\(R^2\)</span> is lower than <span class="math inline">\(R^2\)</span>, and when adjusted
+<span class="math inline">\(R^2\)</span> is useful. <strong>(4 points)</strong></li>
+<li>State the null and alternative hypotheses of the reported overall F-test.
+Give its conclusion. <strong>(6 points)</strong></li>
+<li>Explain why this F-test is not equivalent to four separate 5% t-tests.
+<strong>(2 points)</strong></li>
+<li>Does <span class="math inline">\(R^2=0.464\)</span> show that the model predicts future ventures well?
+Explain briefly. <strong>(2 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(R^2=1-5272.57/9831.91\approx0.464\)</span> (3 points). The fitted values explain
+46.4% of the observed sample variation in sales-growth percentage points;
+it is not a percentage of correct predictions (3 points).</li>
+<li>Adjusted <span class="math inline">\(R^2\)</span> penalises the addition of predictors relative to sample
+size and can fall when a term adds little fit (2 points). It helps compare
+models fitted to the same outcome and analysis rows, although it is not a
+substitute for validation or substantive reasoning (2 points).</li>
+<li><span class="math inline">\(H_0:\beta_{marketing}=\beta_{experience}=\beta_{team}=\beta_{digital}=0\)</span>
+against the alternative that at least one is non-zero (3 points). The tiny
+p-value leads to rejection: the complete model improves on an
+intercept-only model under the inferential conditions (3 points).</li>
+<li>The F-test is one joint test of a vector of coefficients and accounts for
+their covariance; separate t-tests answer four individual questions and
+create a multiple-testing problem (2 points).</li>
+<li>No. This is in-sample fit; future prediction requires an appropriate test
+set or cross-validation and a stable target population (2 points).</li>
+</ol>
+</details>
+</div>
+<div id="question-4-multiple-regression-and-a-dummy-predictor-20-points" class="section level2 hasAnchor">
+<h2>Question 4: Multiple regression and a dummy predictor — 20 points<a href="intermediate-mock-exam.html#question-4-multiple-regression-and-a-dummy-predictor-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The coefficient table below comes from
+<code>lm(growth_pct ~ marketing_10k + experience_years + team_size + digital, data = ventures)</code>.
+The reference category for <code>digital</code> is <code>No</code>.</p>
+<pre class="text"><code>                  Estimate  Std. Error  t value  Pr(&gt;|t|)
+(Intercept)          2.45       0.77       3.18     0.002
+marketing_10k        1.34       0.10      13.40    &lt;0.001
+experience_years     0.26       0.04       6.23    &lt;0.001
+team_size            0.17       0.10       1.63     0.104
+digitalYes           3.08       0.46       6.67    &lt;0.001</code></pre>
+<ol style="list-style-type: decimal">
+<li>Interpret <code>marketing_10k</code>, including the predictor step, outcome unit,
+held-fixed variables, and sample. <strong>(5 points)</strong></li>
+<li>Interpret <code>digitalYes</code> and name its reference category. <strong>(4 points)</strong></li>
+<li>Compare two otherwise identical ventures: A spends €20,000 on marketing,
+has 5 years of founder experience, a team of 4, and <code>digital = No</code>; B has
+the same values except it spends €40,000 and has <code>digital = Yes</code>. Calculate
+B’s fitted growth minus A’s. <strong>(5 points)</strong></li>
+<li>Test <span class="math inline">\(H_0:\beta_{team\_size}=0\)</span> against a two-sided alternative and give
+a careful conclusion. <strong>(3 points)</strong></li>
+<li>Explain why including controls does not by itself give the marketing or
+digital coefficients a causal interpretation. <strong>(3 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li>Among sampled registry ventures, an additional €10,000 in annual marketing
+spending is associated with 1.34 percentage points higher fitted sales
+growth, holding founder experience, team size, and offering type fixed
+(5 points).</li>
+<li>At equal marketing spending, experience, and team size, primarily digital
+ventures have fitted growth 3.08 percentage points higher than primarily
+physical ventures; <code>No</code> is the reference (4 points).</li>
+<li>The spending change is two units, contributing <span class="math inline">\(2(1.34)=2.68\)</span>; changing
+from <code>No</code> to <code>Yes</code> contributes 3.08. The fitted difference is
+<span class="math inline">\(2.68+3.08=5.76\)</span> percentage points (5 points).</li>
+<li><span class="math inline">\(t=1.63\)</span>, <span class="math inline">\(p=0.104&gt;0.05\)</span>, so do not reject <span class="math inline">\(H_0\)</span>. The model does not
+provide sufficiently precise evidence of a non-zero partial team-size
+association; it does not prove the coefficient equals zero (3 points).</li>
+<li>Controls only adjust for measured variables in the specified functional
+form. Unmeasured confounding, reverse direction, selection, and measurement
+error can remain in this observational study (3 points).</li>
+</ol>
+</details>
+</div>
+<div id="question-5-interactions-curvature-and-a-partial-f-test-20-points" class="section level2 hasAnchor">
+<h2>Question 5: Interactions, curvature, and a partial F-test — 20 points<a href="intermediate-mock-exam.html#question-5-interactions-curvature-and-a-partial-f-test-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The researcher fits the hierarchical model</p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="intermediate-mock-exam.html#cb202-1" tabindex="-1"></a>extended_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb202-2"><a href="intermediate-mock-exam.html#cb202-2" tabindex="-1"></a>  growth_pct <span class="sc">~</span> spend_c <span class="sc">*</span> digital <span class="sc">+</span> <span class="fu">I</span>(spend_c<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> experience_years,</span>
+<span id="cb202-3"><a href="intermediate-mock-exam.html#cb202-3" tabindex="-1"></a>  <span class="at">data =</span> ventures</span>
+<span id="cb202-4"><a href="intermediate-mock-exam.html#cb202-4" tabindex="-1"></a>)</span></code></pre></div>
+<p>with estimates:</p>
+<pre class="text"><code>                         Estimate
+(Intercept)                  9.20
+spend_c                      1.04
+digitalYes                   2.96
+I(spend_c^2)                -0.11
+experience_years             0.24
+spend_c:digitalYes           0.68</code></pre>
+<p>The partial comparison with the additive linear model reports:</p>
+<pre class="text"><code>Analysis of Variance Table
+
+Model 1: growth_pct ~ spend_c + digital + experience_years
+Model 2: growth_pct ~ spend_c * digital + I(spend_c^2) + experience_years
+  Res.Df    RSS  Df  Sum of Sq    F   Pr(&gt;F)
+1    316  5317.0
+2    314  5053.8   2     263.23  8.18  0.00035</code></pre>
+<ol style="list-style-type: decimal">
+<li>At €40,000 of marketing spending (<code>spend_c = 0</code>), give the fitted spending
+slope for each offering type and the fitted <code>Yes</code>–<code>No</code> difference.
+<strong>(6 points)</strong></li>
+<li>At €60,000 (<code>spend_c = 2</code>), calculate the fitted <code>Yes</code>–<code>No</code> difference.
+<strong>(3 points)</strong></li>
+<li>For a physical-offering venture, calculate the fitted change when spending
+rises from €60,000 (<code>spend_c = 2</code>) to €70,000 (<code>spend_c = 3</code>), holding
+experience fixed. Repeat for a digital venture. <strong>(5 points)</strong></li>
+<li>State the hypotheses and conclusion of the partial F-test. <strong>(4 points)</strong></li>
+<li>State the hierarchy rule and one reason not to extrapolate this quadratic
+far beyond the observed spending range. <strong>(2 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li>At <code>spend_c = 0</code>, the physical-offering slope is 1.04 percentage points per
+€10,000 and the digital slope is <span class="math inline">\(1.04+0.68=1.72\)</span> (2 points each). The
+fitted digital-minus-physical difference is 2.96 percentage points
+(2 points).</li>
+<li>The group difference is <span class="math inline">\(2.96+0.68(2)=4.32\)</span> percentage points
+(3 points).</li>
+<li>For physical offerings, the change from 2 to 3 is
+<span class="math inline">\(1.04(1)-0.11(3^2-2^2)=1.04-0.55=0.49\)</span> percentage points
+(2 points). For digital offerings, add the interaction change of 0.68, so
+the fitted change is 1.17 percentage points (2 points). Units and the
+held-fixed experience condition earn 1 point.</li>
+<li><span class="math inline">\(H_0:\beta_{spend\times digital}=\beta_{spend^2}=0\)</span> against at least one
+being non-zero (2 points). Since <span class="math inline">\(p=0.00035&lt;0.05\)</span>, reject: the two added
+terms are jointly useful beyond the additive linear model, under the model
+conditions (2 points).</li>
+<li>Retain the component lower-order terms when including an interaction or
+polynomial term (1 point). A polynomial can turn sharply and imply
+unrealistic values outside the observed range (1 point).</li>
+</ol>
+</details>
+<p>Your marks across the five questions should sum to 100. Complete the mock exam
+in R before expanding the answers. Use the marking guide to check not only
+calculations but also units, reference groups, held-fixed statements,
+uncertainty, and causal limits.</p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="i-ep02.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="advanced-course.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

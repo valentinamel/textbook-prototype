@@ -227,9 +227,11 @@ rows.
 
 <img src="I05-dummies-f-tests_files/figure-html/i05-adjusted-gender-plot-1.png" width="672" />
 
-The points compare fitted means at the same average season and request. The
-intervals express model-based uncertainty, not causal effects or uncertainty
-about how the categories were recorded.
+The horizontal axis names the source categories and the vertical axis gives
+fitted initial equity in percent. The points compare fitted means at the same
+average season and request; the vertical lines are 95% confidence intervals.
+They express model-based uncertainty, not causal effects or uncertainty about
+how the categories were recorded.
 
 :::
 

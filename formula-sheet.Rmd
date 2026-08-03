@@ -1,6 +1,6 @@
-# Basic Course Formula Sheet {#formula-sheet}
+# QM Basic Formula Sheet {#formula-sheet}
 
-This is the cumulative formula sheet for the Basic course. Each section is
+This is the cumulative formula sheet for QM Basic. Each section is
 labelled by the lecture in which its material is first introduced. Use only
 the sections reached so far:
 
@@ -17,7 +17,7 @@ conditions, units, and interpretation remain examinable even when a formula is
 provided.
 
 Download the print-ready
-[Basic Course Formula Sheet (PDF)](output/pdf/basic-course-formula-sheet.pdf).
+[QM Basic Formula Sheet (PDF)](output/pdf/basic-course-formula-sheet.pdf).
 
 ::: {.formula-sheet}
 
@@ -25,4 +25,3 @@ Download the print-ready
 ```
 
 :::
-

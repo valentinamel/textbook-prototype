@@ -229,8 +229,12 @@ the coefficients unidentified.
 
 <img src="I04-multiple-regression_files/figure-html/i04-coefficient-plot-1.png" width="672" />
 
-Each interval concerns a different one-unit change, so coefficient magnitudes
-are not directly comparable without considering units.
+The horizontal axis is the estimated change in initial equity, in percentage
+points, for the one-unit predictor step named on each row. A dot is the
+coefficient estimate; its horizontal line is the 95% confidence interval; the
+dashed vertical line marks zero. Each row uses a different predictor unit, so
+coefficient magnitudes are not directly comparable without considering those
+units.
 
 :::
 

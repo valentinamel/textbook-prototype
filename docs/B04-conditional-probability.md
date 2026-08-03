@@ -260,6 +260,9 @@ gender_deal_rates
 
 <img src="B04-conditional-probability_files/figure-html/b04-gender-deal-plot-1.png" width="672" />
 
+The horizontal axis identifies the source's presenter categories. The vertical
+axis is a within-category percentage, not a count: for example, the 63.6% bar
+means that 63.6% of the 385 all-women pitch records reached an on-air deal.
 These are conditional proportions within selected televised pitches. The
 classification describes presenters rather than every company member, seven
 pitches have an unknown classification, and the comparison does not isolate a

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Mock Exam: QM Basic | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Mock Exam: QM Basic | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mock Exam: QM Basic | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="formula-sheet.html"/>
+<link rel="next" href="intermediate-course.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>I QM Basic</b></span></li>
+<li class="chapter" data-level="" data-path="basic-course.html"><a href="basic-course.html"><i class="fa fa-check"></i>QM Basic: Course overview</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html"><i class="fa fa-check"></i>Lecture 6: Continuous distributions and the normal model</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html"><i class="fa fa-check"></i>Lecture 7: Samples, parameters, and estimators</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html"><i class="fa fa-check"></i>Lecture 8: Sampling distributions and the central limit theorem</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html"><i class="fa fa-check"></i>Tutorial 3: Sampling and standard errors</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html"><i class="fa fa-check"></i>Lecture 9: Confidence intervals and tests against zero</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html"><i class="fa fa-check"></i>Lecture 10: Hypothesis testing, errors, and power</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html"><i class="fa fa-check"></i>Tutorial 4: Inference and tests against zero</a></li>
+<li class="chapter" data-level="" data-path="formula-sheet.html"><a href="formula-sheet.html"><i class="fa fa-check"></i>QM Basic Formula Sheet</a></li>
+<li class="chapter" data-level="" data-path="basic-mock-exam.html"><a href="basic-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Basic</a></li>
+<li class="part"><span><b>II QM Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>QM Intermediate: Course overview</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html"><i class="fa fa-check"></i>Lecture 1: Simple linear regression</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html"><i class="fa fa-check"></i>Lecture 2: Regression assumptions and coefficient inference</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html"><i class="fa fa-check"></i>Lecture 3: Model fit and overall usefulness</a></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Simple regression and model usefulness</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html"><i class="fa fa-check"></i>Lecture 4: Multiple linear regression and controls</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html"><i class="fa fa-check"></i>Lecture 5: Dummy predictors and joint usefulness</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html"><i class="fa fa-check"></i>Lecture 6: Interactions and polynomial terms</a></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Multiple regression and extensions</a></li>
+<li class="chapter" data-level="" data-path="intermediate-mock-exam.html"><a href="intermediate-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Intermediate</a></li>
+<li class="part"><span><b>III QM Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>QM Advanced: Course overview</a></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html"><i class="fa fa-check"></i>Mathematics Refresher</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basic-mock-exam" class="section level1 hasAnchor">
+<h1>Mock Exam: QM Basic<a href="basic-mock-exam.html#basic-mock-exam" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This mock exam represents the full ten-lecture course. It contains <strong>100
+points</strong>, so the exam grade is</p>
+<p><span class="math display">\[
+\text{grade} = \frac{\text{points earned}}{10}.
+\]</span></p>
+<p>The real exam is closed book. The complete <a href="formula-sheet.html#formula-sheet">QM Basic Formula
+Sheet</a> will be attached. Unless a question states otherwise,
+use a 5% significance level, report units, and show enough work for your method
+to be checked.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Topic</th>
+<th align="right">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Data and a histogram</td>
+<td align="right">15</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Probability and a discrete random variable</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Continuous distributions</td>
+<td align="right">15</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Sampling, confidence intervals, and a mean test</td>
+<td align="right">25</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>A proportion test, errors, power, and R output</td>
+<td align="right">25</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td></td>
+<td align="right"><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<div id="question-1-data-and-a-histogram-15-points" class="section level2 hasAnchor">
+<h2>Question 1: Data and a histogram — 15 points<a href="basic-mock-exam.html#question-1-data-and-a-histogram-15-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An entrepreneurship centre received 240 applications for its accelerator. One
+row of its dataset represents one application. The variables are:</p>
+<ul>
+<li><code>funding_requested_k</code>: funding requested, in thousands of euros;</li>
+<li><code>team_size</code>: number of people named as current venture-team members;</li>
+<li><code>sector</code>: <code>Consumer</code>, <code>Manufacturing</code>, <code>Services</code>, or <code>Technology</code>;</li>
+<li><code>accepted</code>: 1 if the application was accepted and 0 otherwise.</li>
+</ul>
+<p>The histogram below groups the 240 values of <code>funding_requested_k</code> into
+equal-width intervals. The centre wants to describe these 240 applications;
+it does not claim that they are a random sample of all new ventures.</p>
+<p><img src="mock-exam-basic_files/figure-html/basic-mock-histogram-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>State the observational unit, the sample, and one population to which these
+data alone should <strong>not</strong> automatically be generalised. <strong>(4 points)</strong></li>
+<li>Classify each of the four variables as categorical or quantitative. For
+each quantitative variable, also state whether it is discrete or
+continuous as modelled here. <strong>(4 points)</strong></li>
+<li>Explain both axes and interpret the bar covering €20,000 up to but not
+including €40,000. <strong>(3 points)</strong></li>
+<li>Describe the distribution’s shape and identify the interval containing the
+median. Briefly justify both answers. <strong>(4 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li>The observational unit is one accelerator application (1 point). The
+sample is the 240 received applications (1 point). A defensible example of
+a population not automatically represented is all new ventures in the
+Netherlands, because applications were not randomly sampled from that
+population (2 points).</li>
+<li><code>funding_requested_k</code> is quantitative continuous; <code>team_size</code> is
+quantitative discrete; <code>sector</code> is categorical; <code>accepted</code> is categorical
+binary, even though it is coded 0/1 (1 point each).</li>
+<li>The horizontal axis gives requested funding in thousands of euros; the
+vertical axis gives application counts (1 point each). The bar says 88
+applications requested at least €20,000 but less than €40,000 (1 point).</li>
+<li>The distribution is right-skewed because most observations are in lower
+intervals and the counts taper toward larger requests (2 points). The
+median lies in €20,000–€40,000: 58 observations lie below €20,000, while
+<span class="math inline">\(58+88=146\)</span> lie below €40,000, so observations 120 and 121 are in that
+interval (2 points).</li>
+</ol>
+</details>
+</div>
+<div id="question-2-probability-and-a-discrete-random-variable-20-points" class="section level2 hasAnchor">
+<h2>Question 2: Probability and a discrete random variable — 20 points<a href="basic-mock-exam.html#question-2-probability-and-a-discrete-random-variable-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A separate archive contains 500 televised business pitches. Select one record
+uniformly at random. Let <span class="math inline">\(D\)</span> mean that the record shows an on-air deal and
+let <span class="math inline">\(W\)</span> mean that at least one woman is represented among the presenters.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Presenters</th>
+<th align="right">On-air deal</th>
+<th align="right">No on-air deal</th>
+<th align="right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Women represented</td>
+<td align="right">90</td>
+<td align="right">110</td>
+<td align="right">200</td>
+</tr>
+<tr class="even">
+<td>No women represented</td>
+<td align="right">120</td>
+<td align="right">180</td>
+<td align="right">300</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td align="right"><strong>210</strong></td>
+<td align="right"><strong>290</strong></td>
+<td align="right"><strong>500</strong></td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>Calculate <span class="math inline">\(P(D)\)</span>, <span class="math inline">\(P(W)\)</span>, and <span class="math inline">\(P(D\cap W)\)</span>. <strong>(6 points)</strong></li>
+<li>Calculate <span class="math inline">\(P(D\mid W)\)</span> and <span class="math inline">\(P(W\mid D)\)</span>, and explain why they answer
+different questions. <strong>(6 points)</strong></li>
+<li>Are <span class="math inline">\(D\)</span> and <span class="math inline">\(W\)</span> independent in this empirical probability model? Show
+a valid numerical check. <strong>(4 points)</strong></li>
+<li>Define <span class="math inline">\(X=1\)</span> for an on-air deal and <span class="math inline">\(X=0\)</span> otherwise. Give the PMF of
+<span class="math inline">\(X\)</span>, <span class="math inline">\(E[X]\)</span>, and <span class="math inline">\(\operatorname{Var}(X)\)</span>. <strong>(4 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(D)=210/500=0.42\)</span>, <span class="math inline">\(P(W)=200/500=0.40\)</span>, and
+<span class="math inline">\(P(D\cap W)=90/500=0.18\)</span> (2 points each).</li>
+<li><span class="math inline">\(P(D\mid W)=90/200=0.45\)</span> and
+<span class="math inline">\(P(W\mid D)=90/210\approx0.429\)</span> (2 points each). The first restricts the
+denominator to pitches with women represented; the second restricts it to
+pitches with a deal (2 points).</li>
+<li>They are not independent: for example,
+<span class="math inline">\(P(D\mid W)=0.45\ne P(D)=0.42\)</span> (4 points). Equivalently,
+<span class="math inline">\(P(D\cap W)=0.18\ne0.42\times0.40=0.168\)</span>.</li>
+<li><span class="math inline">\(p_X(1)=0.42\)</span>, <span class="math inline">\(p_X(0)=0.58\)</span> (2 points),
+<span class="math inline">\(E[X]=0.42\)</span>, and <span class="math inline">\(\operatorname{Var}(X)=0.42(0.58)=0.2436\)</span>
+(1 point each).</li>
+</ol>
+</details>
+</div>
+<div id="question-3-continuous-distributions-15-points" class="section level2 hasAnchor">
+<h2>Question 3: Continuous distributions — 15 points<a href="basic-mock-exam.html#question-3-continuous-distributions-15-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(X\sim U(10,30)\)</span> represent a waiting time in minutes. Separately, let
+<span class="math inline">\(Y\sim N(50,10^2)\)</span> represent a processing time in minutes. The following
+standard-normal probabilities are supplied:</p>
+<pre class="text"><code>P(Z &lt;=  1.5) = 0.9332
+P(Z &lt;=  1.0) = 0.8413
+P(Z &lt;= -1.0) = 0.1587</code></pre>
+<ol style="list-style-type: decimal">
+<li>State the PDF height of <span class="math inline">\(X\)</span>, including its value outside the support.
+<strong>(3 points)</strong></li>
+<li>Calculate <span class="math inline">\(P(14&lt;X&lt;20)\)</span>, <span class="math inline">\(E[X]\)</span>, and
+<span class="math inline">\(\operatorname{Var}(X)\)</span>. <strong>(5 points)</strong></li>
+<li>Standardise 65 minutes under the model for <span class="math inline">\(Y\)</span>, then calculate
+<span class="math inline">\(P(Y\le65)\)</span>. <strong>(3 points)</strong></li>
+<li>Calculate <span class="math inline">\(P(40&lt;Y&lt;60)\)</span>. <strong>(2 points)</strong></li>
+<li>Explain why a PDF height is not itself a probability. <strong>(2 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f_X(x)=1/(30-10)=0.05\)</span> for <span class="math inline">\(10\le x\le30\)</span>, and
+<span class="math inline">\(f_X(x)=0\)</span> outside that interval (3 points).</li>
+<li><span class="math inline">\(P(14&lt;X&lt;20)=(20-14)/(30-10)=0.30\)</span> (2 points),
+<span class="math inline">\(E[X]=(10+30)/2=20\)</span> (1 point), and
+<span class="math inline">\(\operatorname{Var}(X)=(30-10)^2/12=33.33\)</span> square minutes
+(2 points).</li>
+<li><span class="math inline">\(z=(65-50)/10=1.5\)</span>, so <span class="math inline">\(P(Y\le65)=0.9332\)</span> (3 points).</li>
+<li><span class="math inline">\(P(40&lt;Y&lt;60)=P(-1&lt;Z&lt;1)=0.8413-0.1587=0.6826\)</span>
+(2 points).</li>
+<li>Probability is area over an interval: approximately density times a small
+interval width. A point has zero width and hence zero probability for a
+continuous variable (2 points).</li>
+</ol>
+</details>
+</div>
+<div id="question-4-sampling-confidence-intervals-and-a-mean-test-25-points" class="section level2 hasAnchor">
+<h2>Question 4: Sampling, confidence intervals, and a mean test — 25 points<a href="basic-mock-exam.html#question-4-sampling-confidence-intervals-and-a-mean-test-25-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>From a frame of 1,000 accelerator applicants, a simple random sample of 64 was
+selected without replacement. For each sampled applicant, <code>prep_hours</code> is the
+number of hours spent preparing the application. Let <span class="math inline">\(\mu\)</span> be the mean
+preparation time among all 1,000 applicants. The sample has
+<span class="math inline">\(\bar x=18.4\)</span> hours and <span class="math inline">\(s=8.0\)</span> hours. R produced:</p>
+<pre class="text"><code>One Sample t-test
+
+data: prep_hours
+t = 2.400, df = 63, p-value = 0.0193
+alternative hypothesis: true mean is not equal to 16
+95 percent confidence interval:
+ 16.40 20.40
+sample estimate:
+mean of x = 18.40</code></pre>
+<ol style="list-style-type: decimal">
+<li>Identify the parameter, estimator, and realised estimate. <strong>(3 points)</strong></li>
+<li>Calculate the estimated standard error of the sample mean. <strong>(3 points)</strong></li>
+<li>State <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_1\)</span>, and verify the reported t statistic. <strong>(5 points)</strong></li>
+<li>Explain why <span class="math inline">\(df=63\)</span>. <strong>(3 points)</strong></li>
+<li>Interpret the p-value and give the test decision in context. <strong>(5 points)</strong></li>
+<li>Interpret the 95% confidence interval. <strong>(3 points)</strong></li>
+<li>Check the 10% condition and state what the sampling design supports. Do
+not make a causal claim. <strong>(3 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li>The parameter is <span class="math inline">\(\mu\)</span>, the frame’s population mean preparation time; the
+estimator is <span class="math inline">\(\bar X\)</span>; the realised estimate is 18.4 hours (1 point each).</li>
+<li><span class="math inline">\(\widehat{\operatorname{SE}}(\bar X)=S/\sqrt n=8/\sqrt{64}=1\)</span>
+hour (3 points).</li>
+<li><span class="math inline">\(H_0:\mu=16\)</span> against <span class="math inline">\(H_1:\mu\ne16\)</span> (2 points).
+<span class="math inline">\(t=(18.4-16)/1=2.4\)</span> (3 points).</li>
+<li>After the sample mean is estimated, 63 of the 64 deviations can vary
+freely; the last is fixed by their sum of zero, so <span class="math inline">\(df=n-1=63\)</span>
+(3 points).</li>
+<li>If the frame mean were 16 hours and the test conditions held, the
+probability of a t statistic at least as far from zero as 2.4 in either
+direction would be 0.0193 (3 points). Because <span class="math inline">\(0.0193&lt;0.05\)</span>, reject
+<span class="math inline">\(H_0\)</span>; the sample provides evidence that the frame mean differs from 16
+hours (2 points).</li>
+<li>Under repeated valid sampling, 95% of intervals constructed by this method
+would contain the frame mean. For this sample, plausible values run from
+16.40 to 20.40 hours (3 points).</li>
+<li><span class="math inline">\(64\le0.10(1000)=100\)</span>, so the course’s independence approximation is
+reasonable (1 point). The random sample supports generalisation to the
+1,000-applicant frame, subject to nonresponse and measurement quality; it
+does not identify a causal effect because nothing was randomly assigned
+(2 points).</li>
+</ol>
+</details>
+</div>
+<div id="question-5-a-proportion-test-errors-power-and-r-output-25-points" class="section level2 hasAnchor">
+<h2>Question 5: A proportion test, errors, power, and R output — 25 points<a href="basic-mock-exam.html#question-5-a-proportion-test-errors-power-and-r-output-25-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In a simple random sample of 400 former accelerator participants, 232 had
+launched a trading venture within one year. Let <span class="math inline">\(p\)</span> be the launch proportion
+among all former participants in the sampling frame. A two-sided test of
+<span class="math inline">\(H_0:p=0.50\)</span> is planned.</p>
+<p>The same study also fits a regression with monthly revenue measured in
+thousands of euros as the outcome and weekly mentoring hours as a predictor.
+One row of the supplied R output is:</p>
+<pre class="text"><code>                 Estimate  Std. Error  t value  Pr(&gt;|t|)  95% CI
+mentoring_hours     0.80       0.25       3.20     0.0016  [0.31, 1.29]</code></pre>
+<ol style="list-style-type: decimal">
+<li>Check the success–failure condition under <span class="math inline">\(H_0\)</span>. <strong>(3 points)</strong></li>
+<li>Calculate <span class="math inline">\(\hat p\)</span>, its null standard error, and the z statistic.
+<strong>(5 points)</strong></li>
+<li>The two-sided p-value is 0.0014. Interpret it and state the test conclusion.
+<strong>(4 points)</strong></li>
+<li>A large-sample 95% confidence interval for <span class="math inline">\(p\)</span> is <span class="math inline">\((0.532,0.628)\)</span>.
+Interpret it and explain why it agrees with the test decision. <strong>(4 points)</strong></li>
+<li>Define a Type I error in this test. State two changes that would increase
+power while holding the significance level fixed. <strong>(4 points)</strong></li>
+<li>Interpret the mentoring coefficient, its test against zero, and the limit
+on causal language. <strong>(5 points)</strong></li>
+</ol>
+<details>
+<summary>
+Model answer and marking guide
+</summary>
+<ol style="list-style-type: decimal">
+<li>Under <span class="math inline">\(H_0\)</span>, <span class="math inline">\(np_0=400(0.50)=200\)</span> and
+<span class="math inline">\(n(1-p_0)=200\)</span>, both at least 10 (3 points).</li>
+<li><span class="math inline">\(\hat p=232/400=0.58\)</span> (1 point), the null SE is
+<span class="math inline">\(\sqrt{0.50(0.50)/400}=0.025\)</span> (2 points), and
+<span class="math inline">\(z=(0.58-0.50)/0.025=3.20\)</span> (2 points).</li>
+<li>If <span class="math inline">\(p=0.50\)</span>, the probability of a z statistic at least as far from zero
+as 3.20 in either direction is about 0.0014 (2 points). Reject <span class="math inline">\(H_0\)</span>;
+there is evidence that the frame launch proportion differs from 0.50
+(2 points).</li>
+<li>Plausible values for the frame launch proportion range from 0.532 to 0.628
+under the method’s conditions (2 points). Zero is excluded from the
+equivalent interval for <span class="math inline">\(p-0.50\)</span>, so the interval and two-sided 5% test
+both reject the zero difference (2 points).</li>
+<li>A Type I error is concluding that the frame launch proportion differs from
+0.50 when it actually equals 0.50 (2 points). Any two of a larger sample, a
+larger true difference from 0.50, or less measurement noise earn 1 point
+each. Increasing <span class="math inline">\(\alpha\)</span> is not accepted because the question holds it
+fixed.</li>
+<li>Among the observed participants, one additional weekly mentoring hour is
+associated with 0.80 thousand euros (€800) higher fitted monthly revenue
+(2 points). The row tests <span class="math inline">\(H_0:\beta=0\)</span>; <span class="math inline">\(p=0.0016\)</span> and the interval
+excludes zero, so reject at 5% (2 points). Without random assignment or a
+defensible causal design, this is an association rather than the causal
+effect of adding an hour of mentoring (1 point).</li>
+</ol>
+</details>
+<p>Your marks across the five questions should sum to 100. When practising,
+complete the exam before expanding the model answers, then use the marking
+guide to identify whether lost points came from calculation, interpretation,
+units, conditions, or scope.</p>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="formula-sheet.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intermediate-course.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

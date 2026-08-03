@@ -337,7 +337,8 @@ identify a causal effect of gender or season.
 
 </details>
 
-The Intermediate course is complete. Return to the
+QM Intermediate is complete. Attempt the [QM Intermediate Mock
+Exam](#intermediate-mock-exam), then return to the
 [R Refresher](#r-refresher), [Mathematics Refresher](#math-refresher), or
 [External Video Guide](#videos) whenever you need a targeted review.
 

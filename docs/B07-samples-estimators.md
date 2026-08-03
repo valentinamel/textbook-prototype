@@ -202,6 +202,10 @@ For this realised sample, \(\bar x=12.76\) percentage points,
 
 <img src="B07-samples-estimators_files/figure-html/b07-population-sample-plot-1.png" width="672" />
 
+The horizontal axis gives equity intervals in percentage points. The vertical
+axis is density so the differently sized datasets can be compared by shape;
+area over an interval represents a proportion. The pale bars describe all
+1,441 records, while the connected points describe the realised sample of 100.
 The sample resembles the population but does not reproduce it exactly. A
 different random sample would give different estimates. This random
 sample-to-sample variation is the uncertainty that sampling distributions

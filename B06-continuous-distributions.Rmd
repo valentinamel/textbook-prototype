@@ -147,6 +147,9 @@ plot(
   ylim = c(0, 0.065),
   bty = "n",
   xaxt = "n",
+  yaxt = "n",
+  xaxs = "i",
+  yaxs = "i",
   xlab = "Possible value of X",
   ylab = "Density"
 )
@@ -154,8 +157,7 @@ polygon(
   c(a, a, b, b),
   c(0, density_height, density_height, 0),
   col = "#DCEAF3",
-  border = "#17324D",
-  lwd = 2
+  border = NA
 )
 polygon(
   c(c_cut, c_cut, d_cut, d_cut),
@@ -163,14 +165,25 @@ polygon(
   col = "#E69F00",
   border = NA
 )
+lines(
+  c(7, a, a, b, b, 33),
+  c(0, 0, density_height, density_height, 0, 0),
+  col = "#17324D",
+  lwd = 3
+)
 axis(1, at = c(a, c_cut, d_cut, b),
      labels = c("a = 10", "c = 14", "d = 20", "b = 30"))
+axis(2, at = c(0, 0.025, 0.05),
+     labels = c("0", "0.025", "0.05"), las = 1)
 text(20, 0.056, "density = 1 / (b - a) = 0.05", col = "#17324D")
 arrows(17, 0.018, 17, 0.003, length = 0.08, col = "#7A4A00")
 text(17, 0.023, "area = P(14 < X < 20) = 0.30", col = "#7A4A00")
 ```
 
-The orange probability is an **area**, not the height of the rectangle:
+Read the horizontal axis as possible values of \(X\) and the vertical axis as
+density, not probability. The navy density line is at 0 before \(a=10\), jumps
+to 0.05 on the support, and drops back to 0 after \(b=30\). The orange
+probability is an **area**, not the height of the rectangle:
 \(6\times0.05=0.30\). The numerical size of a density depends on the units.
 Changing minutes to seconds changes the density height but not the probability
 of the same time interval.
@@ -236,15 +249,18 @@ axis(1, at = c(-2, -1, 0, 1, 2),
 text(0, 0.16, "about 68%", col = "#17324D")
 ```
 
-The curve is centred at \(\mu\), and its inflection points occur at
-\(\mu-\sigma\) and \(\mu+\sigma\). Approximately 68% of the distribution lies
-within one standard deviation of the mean and approximately 95% lies within
-1.96 standard deviations. These percentages describe the mathematical normal
-model; they are not automatic facts about every bell-shaped dataset.
+The horizontal axis locates possible values relative to \(\mu\) and
+\(\sigma\); the vertical axis is density. Probability is again represented by
+area. The shaded central area lies between \(\mu-\sigma\) and
+\(\mu+\sigma\) and contains about 68% of a normal distribution. Approximately
+95% lies within 1.96 standard deviations. These percentages describe the
+mathematical normal model; they are not automatic facts about every dataset.
 
 The normal distribution is a model, not a label for every quantitative
 variable. Skewness, extreme outliers, bounds, or multiple peaks can make it a
-poor description.
+poor description. The next graph checks the model against the observed
+distribution of initial equity offers. The bars show the data; the orange
+curve is the normal density with the same sample mean and standard deviation.
 
 ```{r b06-equity-normal-check, echo=FALSE}
 x <- sharks$equity_offered_pct
@@ -266,12 +282,23 @@ curve(
   col = "#D55E00",
   lwd = 3
 )
+legend(
+  "topright",
+  c("Observed pitches", "Normal curve with same mean and SD"),
+  pch = c(15, NA), lty = c(0, 1), lwd = c(NA, 3),
+  col = c("#DCEAF3", "#D55E00"), pt.cex = 2,
+  bty = "n"
+)
 ```
 
-The offered-equity distribution is right-skewed and bounded between 0% and
-100%; the normal curve misses important features. Later, the normal model will
-often describe a **sampling distribution** even when the original variable is
-not normal.
+The horizontal axis records initial equity in percentage points. The vertical
+axis is density, so bar **areas**, rather than heights alone, represent
+proportions of pitches. The observed distribution is strongly right-skewed,
+has repeated common percentage values, and is bounded between 0% and 100%.
+The symmetric orange curve misses these important features, so a normal model
+is not convincing for individual offers. Later, the normal model will often
+describe a **sampling distribution** even when the original variable is not
+normal.
 
 ### Standardising normal values
 

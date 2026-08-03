@@ -188,24 +188,42 @@ means_5 <- replicate(B, mean(sample(sharks$equity_offered_pct, 5,
 means_40 <- replicate(B, mean(sample(sharks$equity_offered_pct, 40,
                                      replace = TRUE)))
 
+all_means <- c(means_5, means_40)
+shared_limits <- c(floor(min(all_means)), ceiling(max(all_means)))
+shared_breaks <- seq(shared_limits[1], shared_limits[2], length.out = 36)
+hist_5 <- hist(means_5, breaks = shared_breaks, plot = FALSE)
+hist_40 <- hist(means_40, breaks = shared_breaks, plot = FALSE)
+shared_ymax <- 1.08 * max(
+  hist_5$density,
+  hist_40$density,
+  dnorm(mu_equity, mu_equity, sigma_equity / sqrt(5)),
+  dnorm(mu_equity, mu_equity, sigma_equity / sqrt(40))
+)
+
 old_par <- par(no.readonly = TRUE)
 par(mfrow = c(1, 2), mar = c(4.4, 4.2, 1.4, 0.8), las = 1)
-hist(means_5, breaks = 35, probability = TRUE, col = "#DCEAF3",
+hist(means_5, breaks = shared_breaks, probability = TRUE, col = "#DCEAF3",
      border = "white", bty = "n", main = "n = 5",
-     xlab = "Sample mean equity offered (%)", ylab = "Density")
+     xlab = "Sample mean equity offered (%)", ylab = "Density",
+     xlim = shared_limits, ylim = c(0, shared_ymax))
 curve(dnorm(x, mu_equity, sigma_equity / sqrt(5)), add = TRUE,
       col = "#D55E00", lwd = 3)
-hist(means_40, breaks = 35, probability = TRUE, col = "#CDEBDD",
+hist(means_40, breaks = shared_breaks, probability = TRUE, col = "#CDEBDD",
      border = "white", bty = "n", main = "n = 40",
-     xlab = "Sample mean equity offered (%)", ylab = "Density")
+     xlab = "Sample mean equity offered (%)", ylab = "Density",
+     xlim = shared_limits, ylim = c(0, shared_ymax))
 curve(dnorm(x, mu_equity, sigma_equity / sqrt(40)), add = TRUE,
       col = "#D55E00", lwd = 3)
 par(old_par)
 ```
 
-The original pitch-level variable is strongly right-skewed. Its mean based on
-40 independent draws is nevertheless much more concentrated and closer to a
-normal shape than a mean based on 5 draws.
+Both panels use the **same horizontal and vertical scales**. The horizontal
+axis shows possible sample means in equity percentage points; the vertical
+axis is density. The bars are the simulated sampling distributions and the
+orange lines are the corresponding normal approximations. The original
+pitch-level variable is strongly right-skewed. Its mean based on 40 independent
+draws is nevertheless much more concentrated and closer to a normal shape than
+a mean based on 5 draws.
 
 ### Sample proportions are sample means
 

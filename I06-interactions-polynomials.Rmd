@@ -156,8 +156,12 @@ legend("topright", c("All-men", "Women represented"),
        pch = c(16, 17), bty = "n")
 ```
 
-Graph the model because neither \(\beta_1\) nor \(\beta_2\) is an overall effect
-when an interaction is present.
+The horizontal axis is season and the vertical axis is fitted initial equity
+at the same average requested amount. Each line represents one source-defined
+group; its slope is the fitted change per season for that group, and their
+vertical separation is the fitted group difference at a given season. Graph
+the model because neither \(\beta_1\) nor \(\beta_2\) is an overall effect when
+an interaction is present.
 
 ### The hierarchy principle
 

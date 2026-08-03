@@ -52,11 +52,15 @@ round(prop.table(season_counts), 3)
 ```{r b02-season-plot, echo=FALSE}
 barplot(
   season_counts,
-  col = "#2E74B5", border = NA,
+  col = "#0072B2", border = NA,
+  bty = "n", las = 1,
+  ylim = c(0, 1.08 * max(season_counts)),
   xlab = "Season", ylab = "Number of recorded pitches"
 )
 ```
 
+The horizontal axis lists the discrete season categories; each bar's height on
+the vertical count scale is the number of recorded pitches in that season.
 The later seasons contain more records, so an overall percentage gives those
 seasons more weight.
 
@@ -76,9 +80,11 @@ axis(1, at = 1:13)
 abline(v = median(sharks$description_words), col = "#007C83", lwd = 3)
 ```
 
-The distribution is mildly right-skewed: most descriptions contain 3--7 words,
-with a small number extending farther to the right. The median is 5 words; the
-first and third quartiles are 4 and 6 words.
+The horizontal axis measures description length in words and the vertical axis
+counts pitches in each one-word interval. The teal vertical line marks the
+median. The distribution is mildly right-skewed: most descriptions contain
+3--7 words, with a small number extending farther to the right. The median is
+5 words; the first and third quartiles are 4 and 6 words.
 
 If needed, review [summary statistics](https://walshc.github.io/ebi-prog/dataframes-summary-statistics.html)
 and [plots](https://walshc.github.io/ebi-prog/intro-to-plotting.html) from

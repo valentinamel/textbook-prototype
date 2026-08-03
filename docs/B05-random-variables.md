@@ -335,6 +335,13 @@ equally spaced time index:
 
 <img src="B05-random-variables_files/figure-html/b05-season-equity-plot-1.png" width="672" />
 
+Each point represents one pitch: season is read horizontally and initially
+offered equity in percentage points vertically. Horizontal jitter only reveals
+overlapping points; it does not change the recorded season. The orange line is
+the fitted linear summary. Its downward direction describes negative linear
+co-movement, while the large vertical spread shows why the line does not
+predict every pitch closely.
+
 
 ``` r
 c(

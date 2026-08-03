@@ -137,8 +137,12 @@ broad source-defined groups. It also does not prove the slopes are identical.
 
 <img src="I06-interactions-polynomials_files/figure-html/i06-interaction-plot-1.png" width="672" />
 
-Graph the model because neither \(\beta_1\) nor \(\beta_2\) is an overall effect
-when an interaction is present.
+The horizontal axis is season and the vertical axis is fitted initial equity
+at the same average requested amount. Each line represents one source-defined
+group; its slope is the fitted change per season for that group, and their
+vertical separation is the fitted group difference at a given season. Graph
+the model because neither \(\beta_1\) nor \(\beta_2\) is an overall effect when
+an interaction is present.
 
 ### The hierarchy principle
 

@@ -25,7 +25,7 @@ header-includes:
 \thispagestyle{plain}
 
 \begin{center}
-{\Large\bfseries Basic Quantitative Methods}\\[-1pt]
+{\Large\bfseries QM Basic}\\[-1pt]
 {\normalsize Formula Sheet - Closed-book Written Exam Attachment}
 \end{center}
 

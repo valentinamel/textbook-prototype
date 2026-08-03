@@ -238,8 +238,11 @@ abline(v = c(-abs(t_value), abs(t_value)),
        col = "#7A4A00", lty = 2, lwd = 2)
 ```
 
-The two orange tail areas sum to about 0.0046. This is not the probability
-that \(H_0\) is true and not the size of the mean gap.
+The horizontal axis gives possible t statistics if the null is true, and the
+vertical axis is density. The dashed lines mark statistics as far from zero as
+the observed value. The two orange tail areas beyond them sum to about 0.0046.
+This is not the probability that \(H_0\) is true and not the size of the mean
+gap.
 
 At \(\alpha=0.05\), reject \(H_0\) because \(p<0.05\). The random sample
 provides evidence that mean initial equity in the recorded-pitch frame differs

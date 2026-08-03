@@ -57,11 +57,14 @@ simplifies to a ratio.
 
 <img src="I01-simple-linear-regression_files/figure-html/i01-scatter-1.png" width="672" />
 
-The display shows 864 of the 882 deal records so that the dense region is
-readable. Eighteen records above $1 million on at least one axis are omitted
-from this display but retained when estimating the orange line. Always say
-when a graph is zoomed; otherwise readers may mistake the displayed range for
-the complete data.
+Each point is one pitch with an on-air deal. Read requested amount horizontally
+and agreed amount vertically; both axes use units of $100,000. The orange line
+gives the fitted conditional mean, not the outcome of every pitch. The display
+shows 864 of the 882 deal records so that the dense region is readable.
+Eighteen records above $1 million on at least one axis are omitted from this
+display but retained when estimating the orange line. Always say when a graph
+is zoomed; otherwise readers may mistake the displayed range for the complete
+data.
 
 ### The population model
 

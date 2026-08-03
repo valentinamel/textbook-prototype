@@ -1,5 +1,3 @@
-# (PART) Course 1 · Basic {-}
-
 # Lecture 1: Introduction to Data Analysis {#b01}
 
 
@@ -229,7 +227,7 @@ target populations include:
 
 - the responding students;
 - everyone attending this lecture;
-- all students enrolled in the Basic course;
+- all students enrolled in QM Basic;
 - all first-year business students in the Netherlands; or
 - all young adults in the Netherlands.
 

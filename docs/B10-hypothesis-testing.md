@@ -237,9 +237,13 @@ P(\text{reject }H_0\mid H_1\text{ true}).
 
 <img src="B10-hypothesis-testing_files/figure-html/b10-errors-power-plot-1.png" width="672" />
 
-In the left panel, the orange rejection regions have total probability
-\(\alpha=0.05\) when the null is true. In the right panel, green area is the
-probability of correctly rejecting when the displayed alternative is true.
+In both panels, the horizontal axis is the possible z statistic and the
+vertical axis is density; probability is area. The dashed vertical lines mark
+the same two-sided critical values. In the left panel, the two orange rejection
+regions have total probability \(\alpha=0.05\) when the null is true. In the
+right panel, the distribution has shifted because a particular positive
+alternative is true; the green area is the probability of correctly rejecting
+under that alternative, which is the power.
 
 Power increases with:
 

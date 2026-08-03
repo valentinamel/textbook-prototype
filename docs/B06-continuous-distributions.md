@@ -132,7 +132,10 @@ P(c<X<d)=\frac{d-c}{b-a}.
 
 <img src="B06-continuous-distributions_files/figure-html/b06-uniform-pdf-1.png" width="672" />
 
-The orange probability is an **area**, not the height of the rectangle:
+Read the horizontal axis as possible values of \(X\) and the vertical axis as
+density, not probability. The navy density line is at 0 before \(a=10\), jumps
+to 0.05 on the support, and drops back to 0 after \(b=30\). The orange
+probability is an **area**, not the height of the rectangle:
 \(6\times0.05=0.30\). The numerical size of a density depends on the units.
 Changing minutes to seconds changes the density height but not the probability
 of the same time interval.
@@ -168,22 +171,29 @@ E[X]=\mu,
 
 <img src="B06-continuous-distributions_files/figure-html/b06-normal-shape-1.png" width="672" />
 
-The curve is centred at \(\mu\), and its inflection points occur at
-\(\mu-\sigma\) and \(\mu+\sigma\). Approximately 68% of the distribution lies
-within one standard deviation of the mean and approximately 95% lies within
-1.96 standard deviations. These percentages describe the mathematical normal
-model; they are not automatic facts about every bell-shaped dataset.
+The horizontal axis locates possible values relative to \(\mu\) and
+\(\sigma\); the vertical axis is density. Probability is again represented by
+area. The shaded central area lies between \(\mu-\sigma\) and
+\(\mu+\sigma\) and contains about 68% of a normal distribution. Approximately
+95% lies within 1.96 standard deviations. These percentages describe the
+mathematical normal model; they are not automatic facts about every dataset.
 
 The normal distribution is a model, not a label for every quantitative
 variable. Skewness, extreme outliers, bounds, or multiple peaks can make it a
-poor description.
+poor description. The next graph checks the model against the observed
+distribution of initial equity offers. The bars show the data; the orange
+curve is the normal density with the same sample mean and standard deviation.
 
 <img src="B06-continuous-distributions_files/figure-html/b06-equity-normal-check-1.png" width="672" />
 
-The offered-equity distribution is right-skewed and bounded between 0% and
-100%; the normal curve misses important features. Later, the normal model will
-often describe a **sampling distribution** even when the original variable is
-not normal.
+The horizontal axis records initial equity in percentage points. The vertical
+axis is density, so bar **areas**, rather than heights alone, represent
+proportions of pitches. The observed distribution is strongly right-skewed,
+has repeated common percentage values, and is bounded between 0% and 100%.
+The symmetric orange curve misses these important features, so a normal model
+is not convincing for individual offers. Later, the normal model will often
+describe a **sampling distribution** even when the original variable is not
+normal.
 
 ### Standardising normal values
 

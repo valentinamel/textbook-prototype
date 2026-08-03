@@ -221,8 +221,12 @@ abline(v = 0, lty = 2, col = "#D55E00", lwd = 2)
 par(old_par)
 ```
 
-Each interval concerns a different one-unit change, so coefficient magnitudes
-are not directly comparable without considering units.
+The horizontal axis is the estimated change in initial equity, in percentage
+points, for the one-unit predictor step named on each row. A dot is the
+coefficient estimate; its horizontal line is the 95% confidence interval; the
+dashed vertical line marks zero. Each row uses a different predictor unit, so
+coefficient magnitudes are not directly comparable without considering those
+units.
 
 :::
 

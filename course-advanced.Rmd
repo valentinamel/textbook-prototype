@@ -1,13 +1,13 @@
-# (PART) Course 3 · Advanced {-}
+# (PART) QM Advanced {-}
 
-# Advanced quantitative methods {#advanced-course}
+# QM Advanced: Course overview {#advanced-course}
 
-The Advanced course brings statistical modelling and research design together.
+QM Advanced brings statistical modelling and research design together.
 You will choose methods that match the outcome, the structure of the data, and
 the strength of the claim you want to make.
 
 <div class="outcomes">
-<span class="label">By the end of the Advanced course, you can</span>
+<span class="label">By the end of QM Advanced, you can</span>
 <ul>
 <li>choose a model that matches a continuous or binary outcome;</li>
 <li>interpret moderation, mediation, and conditional effects;</li>

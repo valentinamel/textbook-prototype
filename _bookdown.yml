@@ -7,6 +7,7 @@ language:
     chapter_name: ""
 rmd_files:
   - index.Rmd
+  - part-basic.Rmd
   - B01-question-to-evidence.Rmd
   - B02-typical-pitch.Rmd
   - B03-relationships.Rmd
@@ -21,6 +22,8 @@ rmd_files:
   - B09-confidence-intervals.Rmd
   - B10-hypothesis-testing.Rmd
   - B-EP04.Rmd
+  - formula-sheet.Rmd
+  - mock-exam-basic.Rmd
   - course-intermediate.Rmd
   - I01-simple-linear-regression.Rmd
   - I02-regression-inference.Rmd
@@ -30,8 +33,8 @@ rmd_files:
   - I05-dummies-f-tests.Rmd
   - I06-interactions-polynomials.Rmd
   - I-EP02.Rmd
+  - mock-exam-intermediate.Rmd
   - course-advanced.Rmd
   - r-refresher.Rmd
   - math-refresher.Rmd
-  - formula-sheet.Rmd
   - video-guide.Rmd

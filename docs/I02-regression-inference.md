@@ -117,7 +117,11 @@ the fitted line and its uncertainty.
 
 <img src="I02-regression-inference_files/figure-html/i02-diagnostics-1.png" width="672" />
 
-Use residual plots to ask:
+In the left panel, fitted outcomes are horizontal and observed-minus-fitted
+residuals are vertical, in the outcome's original units. In the right panel,
+the horizontal axis gives theoretical normal quantiles and the vertical axis
+gives ordered standardised residuals; normal residuals should lie roughly on
+the reference line. Use the panels to ask:
 
 - Is there curvature around zero?
 - Does vertical spread change with the fitted value?

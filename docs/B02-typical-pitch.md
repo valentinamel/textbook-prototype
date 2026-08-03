@@ -63,6 +63,8 @@ round(prop.table(season_counts), 3)
 
 <img src="B02-typical-pitch_files/figure-html/b02-season-plot-1.png" width="672" />
 
+The horizontal axis lists the discrete season categories; each bar's height on
+the vertical count scale is the number of recorded pitches in that season.
 The later seasons contain more records, so an overall percentage gives those
 seasons more weight.
 
@@ -70,9 +72,11 @@ For a quantitative variable, a histogram groups nearby values into intervals.
 
 <img src="B02-typical-pitch_files/figure-html/b02-word-histogram-1.png" width="672" />
 
-The distribution is mildly right-skewed: most descriptions contain 3--7 words,
-with a small number extending farther to the right. The median is 5 words; the
-first and third quartiles are 4 and 6 words.
+The horizontal axis measures description length in words and the vertical axis
+counts pitches in each one-word interval. The teal vertical line marks the
+median. The distribution is mildly right-skewed: most descriptions contain
+3--7 words, with a small number extending farther to the right. The median is
+5 words; the first and third quartiles are 4 and 6 words.
 
 If needed, review [summary statistics](https://walshc.github.io/ebi-prog/dataframes-summary-statistics.html)
 and [plots](https://walshc.github.io/ebi-prog/intro-to-plotting.html) from

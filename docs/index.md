@@ -22,47 +22,47 @@ cannot establish.
 <div class="team-card">
 <img class="team-photo team-photo--valentina" src="images/lecturers/valentina.jpg" alt="Portrait of Dr Valentina Melentyeva">
 <div class="team-name">Dr Valentina Melentyeva</div>
-<div class="team-role">Basic and Intermediate courses</div>
+<div class="team-role">QM Basic and QM Intermediate</div>
 <div class="Email">V.Melentyeva@tilburguniversity.edu</div>
 <a href="https://www.tilburguniversity.edu/staff/v-melentyeva">University profile</a>
 </div>
 <div class="team-card">
 <img class="team-photo team-photo--gabriela" src="images/lecturers/gabriela.jpeg" alt="Portrait of Dr Gabriela Miyazato Szini">
 <div class="team-name">Dr Gabriela Miyazato Szini</div>
-<div class="team-role">Basic course</div>
+<div class="team-role">QM Basic</div>
 <div class="Email">G.M.MiyazatoSzini@tilburguniversity.edu</div>
 <a href="https://research.tilburguniversity.edu/en/persons/gabriela-miyazato-szini/">University profile</a>
 </div>
 <div class="team-card">
 <img class="team-photo team-photo--serhan" src="images/lecturers/serhan.webp" alt="Portrait of Dr Serhan Sadikoglu">
 <div class="team-name">Dr Serhan Sadikoglu</div>
-<div class="team-role">Advanced course</div>
+<div class="team-role">QM Advanced</div>
 <div class="Email"> S.Sadikoglu@tilburguniversity.edu</div>
 <a href="https://www.tilburguniversity.edu/staff/s-sadikoglu">University profile</a>
 </div>
 </div>
 
 We have designed the three courses as one connected journey. Concepts introduced
-in the Basic course are fundamental building blocks that Intermediate and Advanced build on.
+in QM Basic are fundamental building blocks that QM Intermediate and QM Advanced build on.
 
 <div class="course-grid">
 <div class="course-card">
 <span class="course-number">Course 1</span>
-<h3>Basic </h3>
+<h3>QM Basic</h3>
 <p>1st Semester</p>
 <p>10 Lectures, 4 tutorials</p>
 <p>Introduction to data analysis, probability theory and statistics.</p>
 </div>
 <div class="course-card">
 <span class="course-number">Course 2</span>
-<h3>Intermediate </h3>
+<h3>QM Intermediate</h3>
 <p>3d Semester</p>
 <p>6 Lectures, 2 tutorials</p>
 <p> Linear regression analysis.</p>
 </div>
 <div class="course-card">
 <span class="course-number">Course 3</span>
-<h3>Advanced </h3>
+<h3>QM Advanced</h3>
 <p>4th Semester</p>
 <p>6 Lectures, 2 tutorials</p>
 <p>More advanced models, methods, data structures for data analysis.</p>
@@ -79,8 +79,8 @@ By the end of the learning line, you should be able to:
 
 ## How to use this book
 
-The permanent menu on the left is organized into **Basic**, **Intermediate**,
-**Advanced**, and **Supplementary resources**. On a small (mobile) screen, open the menu
+The permanent menu on the left is organized into **QM Basic**, **QM Intermediate**,
+**QM Advanced**, and **Supplementary resources**. On a small (mobile) screen, open the menu
 with the button at the top of the page.
 
 Within each course, follow the chapters in order:
@@ -88,8 +88,10 @@ Within each course, follow the chapters in order:
 - **Lecture chapters** introduce you to a question and data and teach you how to conduct analysis in R and theory that allows to interpret and understand the output.
 - **Tutorial chapters** help you retrieve, combine, and apply what you have
   learned. Designed for guided practice and exam preparation.
-- **Supplementary resources** collect reusable help with R, mathematics, the
-  cumulative Basic formula sheet, and external videos.
+- **Course exam resources** include a cumulative formula sheet for QM Basic
+  and a 100-point mock exam at the end of QM Basic and QM Intermediate.
+- **Supplementary resources** collect reusable help with R, mathematics, and
+  external videos.
 
 IMPORTANT: Each lecture includes required pre-class preparation, in-class work, and follow-up practice. Always check and cover the material that is marked as pre-class preparation in the lecture chapter of this textbook. Be consistent with the cycle of pre-class prep, in-class joint work, after-class practice. 
 
@@ -125,8 +127,15 @@ causal effects.
 ## Tutorials and assessment
 
 All three courses end with an exam with open-ended questions that account for 100% of the grade.
-In the Basic course, the written exam can ask you to verify, interpret, and
-describe supplied R output and solve tasks related to learn concepts in probability theory and statistics. In the Intermediate and Advanced courses, you will be asked to work directly with data in R during an exam administered via TestVision platform. Tutorials in all courses are designed as exam preparation sessions and follow lectures to practice solving questions.
+In QM Basic, the written exam can ask you to verify, interpret, and describe
+supplied R output and solve probability and statistics tasks. In QM
+Intermediate and QM Advanced, you will work directly with data in R during an
+exam administered through TestVision. Tutorials in all courses are designed as
+exam preparation sessions.
+
+Go directly to the [QM Basic Formula Sheet](#formula-sheet), [QM Basic Mock
+Exam](#basic-mock-exam), or [QM Intermediate Mock
+Exam](#intermediate-mock-exam) when preparing for assessment.
 
 ## Working with  AI
 
@@ -139,4 +148,4 @@ When you use AI, follow **Attempt → Ask → Verify → Explain**:
 3. Verify the response against the data, course notation, and R output. Verification becomes the key skill when working with AI.
 4. Explain the result in your own words to internalize the knowledge. Ask AI for feedback on this explanation and/or bring it as a question to lectures/tutorials and your classmates.   
 
-[Start with Lecture 1: Introduction to Data Analysis](#b01).
+[Start with the QM Basic course overview](#basic-course).

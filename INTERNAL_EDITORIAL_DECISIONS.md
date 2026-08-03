@@ -9,8 +9,8 @@ This file is for the teaching team. It is intentionally excluded from
   pages contain instructions and explanations for students only.
 - Keep technical chapter codes in filenames, R chunk names, and stable anchors
   for continuity, but render chapters as `Lecture N: Topic` and `Tutorial N`.
-- Organize the permanent left navigation into Course 1 · Basic, Course 2 ·
-  Intermediate, Course 3 · Advanced, and Supplementary resources.
+- Organize the permanent left navigation into QM Basic, QM Intermediate, QM
+  Advanced, and Supplementary resources.
 - Use four Basic tutorials after Lectures 3, 5, 8, and 10. Use two tutorials in
   each of Intermediate and Advanced, positioned at mid-course and end-course.
 - Basic assessment is written and may ask students to verify, interpret, or
@@ -120,4 +120,23 @@ This file is for the teaching team. It is intentionally excluded from
   that point; the complete Lectures 1--10 version is attached to the closed-book
   written exam. Generate the online page and the two-page exam PDF from the same
   shared source so that they cannot drift apart.
+- Name the three course parts consistently as QM Basic, QM Intermediate, and QM
+  Advanced. Give each course a course-overview gateway before its lectures.
+- Place the QM Basic formula sheet inside the QM Basic navigation section and
+  link it from the welcome page, course gateway, lectures, and tutorials so it
+  remains easy to discover.
+- Keep the persistent sidebar at chapter depth. In-page headings remain in the
+  chapters, but do not crowd the main course navigation or push exam resources
+  out of view.
+- End QM Basic and QM Intermediate with separate 100-point mock exams. Make
+  every task self-contained by defining its context, observational unit,
+  variables, coding, units, sample, and target population; supply collapsed
+  model answers with point allocations.
+- Supply the Intermediate mock exam with a fixed-seed simulated CSV so students
+  can reproduce every printed regression result in R. Keep the generated data,
+  hard-coded output, questions, and marking guide numerically aligned.
+- Teach a stable graph-reading sequence: axes and units, meaning of marks,
+  scale and displayed sample, visible pattern, then inferential and causal
+  limits. Use common scales for direct panel comparisons and explicitly connect
+  every displayed plot to the surrounding explanation.
 - Defer slide revisions until the textbook content is settled.

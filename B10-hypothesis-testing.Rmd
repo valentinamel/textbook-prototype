@@ -243,7 +243,9 @@ polygon(c(-4, z_grid[left], -critical),
 polygon(c(critical, z_grid[right], 4),
         c(0, null_density[right], 0), col = "#E69F00", border = NA)
 abline(v = c(-critical, critical), lty = 2, col = "#7A4A00")
-text(0, 0.08, "middle area: correct non-rejection", col = "#17324D")
+text(0, 0.13, "do not reject", col = "#17324D")
+text(c(-2.5, 2.5), c(0.018, 0.018), c("alpha / 2", "alpha / 2"),
+     col = "#7A4A00", cex = 0.85)
 
 plot(z_grid, alternative_density, type = "l", lwd = 2.5, col = "#0072B2",
      bty = "n", xlim = c(-4, 6), xlab = "z statistic",
@@ -257,13 +259,17 @@ polygon(c(critical, z_grid[right_alt], 6),
         c(0, alternative_density[right_alt], 0),
         col = "#009E73", border = NA)
 abline(v = c(-critical, critical), lty = 2, col = "#176B52")
-text(3.6, 0.11, "power", col = "#17324D")
+text(3.6, 0.14, "power", col = "#17324D")
 par(old_par)
 ```
 
-In the left panel, the orange rejection regions have total probability
-\(\alpha=0.05\) when the null is true. In the right panel, green area is the
-probability of correctly rejecting when the displayed alternative is true.
+In both panels, the horizontal axis is the possible z statistic and the
+vertical axis is density; probability is area. The dashed vertical lines mark
+the same two-sided critical values. In the left panel, the two orange rejection
+regions have total probability \(\alpha=0.05\) when the null is true. In the
+right panel, the distribution has shifted because a particular positive
+alternative is true; the green area is the probability of correctly rejecting
+under that alternative, which is the power.
 
 Power increases with:
 
