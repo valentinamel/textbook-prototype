@@ -474,6 +474,8 @@ or a causal season effect.
 
 Next: [Lecture 5: Joint random variables, covariance, and correlation](#b05).
 
+Formula sheet: [Lecture 4 formulas](#formula-l4).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapters 7--8.

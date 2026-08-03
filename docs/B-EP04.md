@@ -21,6 +21,8 @@ Bring your after-class work from Lectures 9 and 10. Review
 [Mathematics Refresher: intervals, degrees of freedom, and
 standardisation](#math-refresher) if needed.
 
+Use the cumulative [formula sheet through Lecture 10](#formula-l10).
+
 Write from memory:
 
 1. the t confidence-interval form;

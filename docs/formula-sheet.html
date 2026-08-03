@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lecture 4: Variance, conditioning, and belief updating | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <title>Basic Course Formula Sheet | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
   <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
   <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lecture 4: Variance, conditioning, and belief updating | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:title" content="Basic Course Formula Sheet | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lecture 4: Variance, conditioning, and belief updating | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta name="twitter:title" content="Basic Course Formula Sheet | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
   
   <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="b-ep01.html"/>
-<link rel="next" href="b05.html"/>
+<link rel="prev" href="math-refresher.html"/>
+<link rel="next" href="videos.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -617,409 +617,366 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="b04" class="section level1 hasAnchor">
-<h1>Lecture 4: Variance, conditioning, and belief updating<a href="b04.html#b04" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="outcomes">
-<span class="label">By the end of Lecture 4, you can</span>
+<div id="formula-sheet" class="section level1 hasAnchor">
+<h1>Basic Course Formula Sheet<a href="formula-sheet.html#formula-sheet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This is the cumulative formula sheet for the Basic course. Each section is
+labelled by the lecture in which its material is first introduced. Use only
+the sections reached so far:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Session</th>
+<th>Formula-sheet sections</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tutorial 1</td>
+<td>Lectures 1–3</td>
+</tr>
+<tr class="even">
+<td>Tutorial 2</td>
+<td>Lectures 1–5</td>
+</tr>
+<tr class="odd">
+<td>Tutorial 3</td>
+<td>Lectures 1–8</td>
+</tr>
+<tr class="even">
+<td>Tutorial 4</td>
+<td>Lectures 1–10</td>
+</tr>
+<tr class="odd">
+<td>Closed-book written exam</td>
+<td>Lectures 1–10: the complete sheet</td>
+</tr>
+</tbody>
+</table>
+<p>The same complete version will be attached to the written exam. Definitions,
+conditions, units, and interpretation remain examinable even when a formula is
+provided.</p>
+<p>Download the print-ready
+<a href="output/pdf/basic-course-formula-sheet.pdf">Basic Course Formula Sheet (PDF)</a>.</p>
+<div class="formula-sheet">
+<div id="formula-notation" class="section level2 hasAnchor">
+<h2>Notation used throughout<a href="formula-sheet.html#formula-notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>
-calculate and interpret variance and standard deviation;
-</li>
-<li>
-distinguish distribution variance from the usual sample variance;
-</li>
-<li>
-calculate conditional probabilities and identify their reference classes;
-</li>
-<li>
-use total probability and Bayes’ rule.
-</li>
+<li><span class="math inline">\(\Omega\)</span>: sample space; <span class="math inline">\(A,B\)</span>: events; <span class="math inline">\(A^c\)</span>: complement.</li>
+<li><span class="math inline">\(X,Y\)</span>: random variables; <span class="math inline">\(x_i,y_i\)</span>: observed values for row <span class="math inline">\(i\)</span>.</li>
+<li><span class="math inline">\(n\)</span>: sample size; <span class="math inline">\(N\)</span>: population size.</li>
+<li><span class="math inline">\(\mu=E[X]\)</span>, <span class="math inline">\(\sigma^2=\operatorname{Var}(X)\)</span>, and <span class="math inline">\(p\)</span>: population
+parameters.</li>
+<li><span class="math inline">\(\bar X, S^2,\widehat P\)</span>: estimators; <span class="math inline">\(\bar x,s^2,\hat p\)</span>: realised
+estimates.</li>
+<li><span class="math inline">\(\alpha\)</span>: significance level; <span class="math inline">\(df\)</span>: degrees of freedom.</li>
 </ul>
+<p>Unless stated otherwise, tests on this sheet are <strong>two-sided</strong>.</p>
 </div>
-<div id="before-class-4" class="section level2 hasAnchor course-phase phase-before">
-<h2>Before class<a href="b04.html#before-class-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="video-prep">
-<p><span class="label">Video preparation</span><br>
-Watch <a href="https://www.youtube.com/watch?v=ZWo1XgAQE5k">Variance</a>,
-<a href="https://www.youtube.com/watch?v=MPRKc4UPoJk">Conditional
-Probabilities</a>, and <a href="https://www.youtube.com/watch?v=kz2tvO_ZAKI">Bayes’
-Rule</a>. Be ready to explain what variance averages, identify the reference
-class in a conditional probability, and explain why reversing a condition
-changes the denominator. All links are also listed in the
-<a href="videos.html#videos">External Video Guide</a>.</p>
+<div id="formula-l1" class="section level2 hasAnchor">
+<h2>Lecture 1 - Data summaries and units<a href="formula-sheet.html#formula-l1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a category with count <span class="math inline">\(n_A\)</span> among <span class="math inline">\(n\)</span> observations,</p>
+<p><span class="math display">\[
+\text{proportion}=\frac{n_A}{n},
+\qquad
+\text{percentage}=100\frac{n_A}{n}\%.
+\]</span></p>
+<p>For values <span class="math inline">\(x_1,\ldots,x_n\)</span>,</p>
+<p><span class="math display">\[
+\bar x=\frac{1}{n}\sum_{i=1}^{n}x_i,
+\qquad
+\text{range}=\max_i x_i-\min_i x_i.
+\]</span></p>
+<p>A change from <span class="math inline">\(a\%\)</span> to <span class="math inline">\(b\%\)</span> is <span class="math inline">\(b-a\)</span> <strong>percentage points</strong>. Its
+relative percentage change is</p>
+<p><span class="math display">\[
+100\frac{b-a}{a}\% \quad (a\ne0).
+\]</span></p>
+<p>Keep units throughout: a slope or rate has <strong>outcome units per predictor
+unit</strong>.</p>
 </div>
-<p>If fractions, powers, roots, or the conditioning bar are unfamiliar, review
-<a href="math-refresher.html#math-refresher">Mathematics Refresher: fractions, powers, and event notation</a>.</p>
-<p>Lecture 3 introduced expectation. For a random variable with mean
-<span class="math inline">\(\mu=E[X]\)</span>, variance is the expected squared distance from that mean:</p>
+<div id="formula-l2" class="section level2 hasAnchor">
+<h2>Lecture 2 - Probability foundations<a href="formula-sheet.html#formula-l2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
-\operatorname{Var}(X)=E[(X-\mu)^2].
+0\le P(A)\le1,
+\qquad P(\Omega)=1,
+\qquad P(A^c)=1-P(A).
 \]</span></p>
-<p>Before calculating it, explain why deviations are squared rather than simply
-averaged.</p>
-<details>
-<summary>
-Check your preparation
-</summary>
-<p>The probability-weighted deviations from the mean sum to zero. Squaring makes
-both positive and negative deviations contribute to spread.</p>
-</details>
-<p>Compare:</p>
-<ul>
-<li>“Among pitches in Seasons 9–16, what proportion reached an on-air deal?”</li>
-<li>“Among pitches that reached an on-air deal, what proportion came from
-Seasons 9–16?”</li>
-</ul>
-<p>Let <span class="math inline">\(D\)</span> be the deal event and <span class="math inline">\(L\)</span> the late-season event. The questions are
-<span class="math inline">\(P(D\mid L)\)</span> and <span class="math inline">\(P(L\mid D)\)</span>. The event after the vertical bar defines
-the restricted reference class and therefore the denominator.</p>
-<pre><code>##               Deal
-## Period         No on-air deal On-air deal
-##   Seasons 1-8             330         377
-##   Seasons 9-16            229         505</code></pre>
-<p>Before calculating, point to the numerator and denominator for:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(P(D)\)</span>;</li>
-<li><span class="math inline">\(P(L)\)</span>;</li>
-<li><span class="math inline">\(P(D\cap L)\)</span>;</li>
-<li><span class="math inline">\(P(D\mid L)\)</span>;</li>
-<li><span class="math inline">\(P(L\mid D)\)</span>.</li>
-</ol>
-<details>
-<summary>
-Check your denominators
-</summary>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(P(D)\)</span>: 882 deal records out of 1,441 records.</li>
-<li><span class="math inline">\(P(L)\)</span>: 734 late-season records out of 1,441 records.</li>
-<li><span class="math inline">\(P(D\cap L)\)</span>: 505 late-season deal records out of 1,441 records.</li>
-<li><span class="math inline">\(P(D\mid L)\)</span>: 505 late-season deal records out of 734 late-season records.</li>
-<li><span class="math inline">\(P(L\mid D)\)</span>: 505 late-season deal records out of 882 deal records.</li>
-</ol>
-</details>
+<p><span class="math display">\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B).
+\]</span></p>
+<p>If <span class="math inline">\(A\cap B=\varnothing\)</span>, then</p>
+<p><span class="math display">\[
+P(A\cup B)=P(A)+P(B).
+\]</span></p>
+<p>For a finite sample space with equally likely outcomes,</p>
+<p><span class="math display">\[
+P(A)=\frac{|A|}{|\Omega|}.
+\]</span></p>
+<p>A random variable is a function <span class="math inline">\(X:\Omega\rightarrow\mathbb R\)</span>. An event is
+a subset of <span class="math inline">\(\Omega\)</span>, not a numerical variable.</p>
 </div>
-<div id="in-class-4" class="section level2 hasAnchor course-phase phase-in-class">
-<h2>In class<a href="b04.html#in-class-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="variance-and-standard-deviation" class="section level3 hasAnchor">
-<h3>Variance and standard deviation<a href="b04.html#variance-and-standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p class="concept-video">
-<strong>MIT explanation (review):</strong>
-<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/variance/">06.2 Variance</a>.
-</p>
-<p>Expectation locates the centre of a distribution, but it does not describe how
-tightly values cluster around that centre. Two distributions can have the same
-expectation and very different spreads.</p>
-<p>To measure spread, start with the deviation <span class="math inline">\(X-\mu\)</span>, where
-<span class="math inline">\(\mu=E[X]\)</span>. Positive and negative deviations would cancel if they were
-averaged directly, so variance squares each deviation before taking its
-probability-weighted average. When <span class="math inline">\(E[X^2]&lt;\infty\)</span>,</p>
+<div id="formula-l3" class="section level2 hasAnchor">
+<h2>Lecture 3 - PMFs, CDFs, and expectation<a href="formula-sheet.html#formula-l3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a discrete random variable with support <span class="math inline">\(\mathcal X\)</span>,</p>
 <p><span class="math display">\[
-\operatorname{Var}(X)
-=E[(X-\mu)^2]
-=\sum_x (x-\mu)^2p_X(x).
+p_X(x)=P(X=x),
+\qquad p_X(x)\ge0,
+\qquad \sum_{x\in\mathcal X}p_X(x)=1.
 \]</span></p>
-<p>Read the calculation as four steps:</p>
-<ol style="list-style-type: decimal">
-<li>locate the centre, <span class="math inline">\(\mu=E[X]\)</span>;</li>
-<li>measure each possible deviation, <span class="math inline">\(x-\mu\)</span>;</li>
-<li>square the deviation, <span class="math inline">\((x-\mu)^2\)</span>;</li>
-<li>weight it by <span class="math inline">\(p_X(x)\)</span> and add across the support.</li>
-</ol>
-<p>Large deviations therefore contribute more than small deviations. Variance is
-zero only when all probability is concentrated at one value.</p>
-<p>The equivalent computational form is</p>
+<p>The cumulative distribution function (CDF) is</p>
 <p><span class="math display">\[
-\operatorname{Var}(X)=E[X^2]-\{E[X]\}^2.
+F_X(a)=P(X\le a)=\sum_{x\le a}p_X(x).
 \]</span></p>
-<p>It gives the same result, but the definition
-<span class="math inline">\(E[(X-\mu)^2]\)</span> is usually easier to interpret.</p>
-<p>The <strong>standard deviation</strong> is</p>
+<p>For any CDF,</p>
 <p><span class="math display">\[
+P(a&lt;X\le b)=F_X(b)-F_X(a).
+\]</span></p>
+<p>Expectation and transformed expectation are</p>
+<p><span class="math display">\[
+E[X]=\sum_{x\in\mathcal X}x\,p_X(x),
+\qquad
+E[g(X)]=\sum_{x\in\mathcal X}g(x)p_X(x).
+\]</span></p>
+<p>If <span class="math inline">\(X\sim\operatorname{Bernoulli}(p)\)</span>,</p>
+<p><span class="math display">\[
+P(X=1)=p,\quad P(X=0)=1-p,\quad E[X]=p.
+\]</span></p>
+</div>
+<div id="formula-l4" class="section level2 hasAnchor">
+<h2>Lecture 4 - Variance and conditioning<a href="formula-sheet.html#formula-l4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(\mu=E[X]\)</span>. Then</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)=E[(X-\mu)^2]
+=E[X^2]-\{E[X]\}^2,
+\qquad
 \operatorname{SD}(X)=\sqrt{\operatorname{Var}(X)}.
 \]</span></p>
-<p>Variance has squared units; standard deviation returns to the units of <span class="math inline">\(X\)</span>.
-For a Bernoulli variable, <span class="math inline">\(\operatorname{Var}(X)=p(1-p)\)</span>.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="b04.html#cb57-1" tabindex="-1"></a>mu_s <span class="ot">&lt;-</span> <span class="fu">sum</span>(s <span class="sc">*</span> p_s)</span>
-<span id="cb57-2"><a href="b04.html#cb57-2" tabindex="-1"></a>var_s <span class="ot">&lt;-</span> <span class="fu">sum</span>((s <span class="sc">-</span> mu_s)<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> p_s)</span>
-<span id="cb57-3"><a href="b04.html#cb57-3" tabindex="-1"></a></span>
-<span id="cb57-4"><a href="b04.html#cb57-4" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb57-5"><a href="b04.html#cb57-5" tabindex="-1"></a>  <span class="at">Var_X =</span> p_hat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p_hat),</span>
-<span id="cb57-6"><a href="b04.html#cb57-6" tabindex="-1"></a>  <span class="at">SD_X =</span> <span class="fu">sqrt</span>(p_hat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p_hat)),</span>
-<span id="cb57-7"><a href="b04.html#cb57-7" tabindex="-1"></a>  <span class="at">Var_S =</span> var_s,</span>
-<span id="cb57-8"><a href="b04.html#cb57-8" tabindex="-1"></a>  <span class="at">SD_S =</span> <span class="fu">sqrt</span>(var_s)</span>
-<span id="cb57-9"><a href="b04.html#cb57-9" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##      Var_X       SD_X      Var_S       SD_S 
-##  0.2374392  0.4872773 18.1360282  4.2586416</code></pre>
-<div id="distribution-variance-and-sample-variance" class="section level4 hasAnchor">
-<h4>Distribution variance and sample variance<a href="b04.html#distribution-variance-and-sample-variance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>For observed values <span class="math inline">\(x_1,\ldots,x_n\)</span>, the usual sample variance is</p>
+<p>For <span class="math inline">\(X\sim\operatorname{Bernoulli}(p)\)</span>,</p>
 <p><span class="math display">\[
-s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2.
+\operatorname{Var}(X)=p(1-p).
 \]</span></p>
-<p>If the empirical distribution assigns probability <span class="math inline">\(1/n\)</span> to each row, its
-variance divides by <span class="math inline">\(n\)</span>. R’s <code>var()</code> uses the conventional sample
-denominator <span class="math inline">\(n-1\)</span>.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="b04.html#cb59-1" tabindex="-1"></a>w <span class="ot">&lt;-</span> sharks<span class="sc">$</span>description_words</span>
-<span id="cb59-2"><a href="b04.html#cb59-2" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb59-3"><a href="b04.html#cb59-3" tabindex="-1"></a>  <span class="at">empirical_variance_divide_n =</span> <span class="fu">mean</span>((w <span class="sc">-</span> <span class="fu">mean</span>(w))<span class="sc">^</span><span class="dv">2</span>),</span>
-<span id="cb59-4"><a href="b04.html#cb59-4" tabindex="-1"></a>  <span class="at">sample_variance_divide_n_minus_1 =</span> <span class="fu">var</span>(w),</span>
-<span id="cb59-5"><a href="b04.html#cb59-5" tabindex="-1"></a>  <span class="at">sample_sd =</span> <span class="fu">sd</span>(w)</span>
-<span id="cb59-6"><a href="b04.html#cb59-6" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##      empirical_variance_divide_n sample_variance_divide_n_minus_1 
-##                         3.646749                         3.649282 
-##                        sample_sd 
-##                         1.910309</code></pre>
-<p>These are different summaries of the same 1,441 observations. Calling the sample
-variance an estimate of population variance additionally requires a sampling
-model.</p>
-</div>
-</div>
-<div id="conditional-probability" class="section level3 hasAnchor">
-<h3>Conditional probability<a href="b04.html#conditional-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p class="concept-video">
-<strong>MIT explanation (review):</strong>
-<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/conditional-probabilities/">02.2 Conditional Probabilities</a>.
-</p>
-<p>For events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(P(B)&gt;0\)</span>,</p>
+<p>The usual sample variance and SD are</p>
 <p><span class="math display">\[
-P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)^2,
+\qquad s=\sqrt{s^2}.
 \]</span></p>
-<p>Conditioning keeps only outcomes inside <span class="math inline">\(B\)</span>, rescales their total probability
-to 1, and then asks which of those outcomes are also in <span class="math inline">\(A\)</span>. For a fixed
-<span class="math inline">\(B\)</span>, <span class="math inline">\(P(\cdot\mid B)\)</span> is itself a probability law on the same sample space.</p>
-<p>From the table:</p>
+<p>For <span class="math inline">\(P(B)&gt;0\)</span>,</p>
 <p><span class="math display">\[
-P(D\mid L)=\frac{505}{734}\approx0.688,
+P(A\mid B)=\frac{P(A\cap B)}{P(B)},
 \qquad
-P(L\mid D)=\frac{505}{882}\approx0.573.
-\]</span></p>
-<p>The numerator is 505 in both calculations. The denominators—and therefore the
-questions—differ.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="b04.html#cb61-1" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb61-2"><a href="b04.html#cb61-2" tabindex="-1"></a>  <span class="at">P_deal_given_late =</span> <span class="fu">mean</span>(D[L]),</span>
-<span id="cb61-3"><a href="b04.html#cb61-3" tabindex="-1"></a>  <span class="at">P_late_given_deal =</span> <span class="fu">mean</span>(L[D])</span>
-<span id="cb61-4"><a href="b04.html#cb61-4" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## P_deal_given_late P_late_given_deal 
-##         0.6880109         0.5725624</code></pre>
-<p>A 57.3% figure refers to <span class="math inline">\(P(L\mid D)\)</span>, not <span class="math inline">\(P(D\mid L)\)</span>: 57.3% of deal
-records are from Seasons 9–16, while 68.8% of Seasons 9–16 records reached an
-on-air deal.</p>
-<div id="a-second-application-source-gender-composition" class="section level4 hasAnchor">
-<h4>A second application: source gender composition<a href="b04.html#a-second-application-source-gender-composition" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The dataset classifies pitching teams as <code>all_men</code>, <code>all_women</code>, <code>mixed</code>, or
-<code>unknown</code>. Restricting the calculation to the 1,434 pitches with a known source
-classification gives:</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="b04.html#cb63-1" tabindex="-1"></a>known_gender <span class="ot">&lt;-</span> sharks<span class="sc">$</span>pitcher_gender_group <span class="sc">!=</span> <span class="st">&quot;unknown&quot;</span></span>
-<span id="cb63-2"><a href="b04.html#cb63-2" tabindex="-1"></a>gender_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;all_men&quot;</span>, <span class="st">&quot;all_women&quot;</span>, <span class="st">&quot;mixed&quot;</span>)</span>
-<span id="cb63-3"><a href="b04.html#cb63-3" tabindex="-1"></a></span>
-<span id="cb63-4"><a href="b04.html#cb63-4" tabindex="-1"></a>gender_deal_rates <span class="ot">&lt;-</span> <span class="fu">tapply</span>(</span>
-<span id="cb63-5"><a href="b04.html#cb63-5" tabindex="-1"></a>  sharks<span class="sc">$</span>deal_on_show[known_gender],</span>
-<span id="cb63-6"><a href="b04.html#cb63-6" tabindex="-1"></a>  <span class="fu">factor</span>(sharks<span class="sc">$</span>pitcher_gender_group[known_gender], <span class="at">levels =</span> gender_labels),</span>
-<span id="cb63-7"><a href="b04.html#cb63-7" tabindex="-1"></a>  mean</span>
-<span id="cb63-8"><a href="b04.html#cb63-8" tabindex="-1"></a>)</span>
-<span id="cb63-9"><a href="b04.html#cb63-9" tabindex="-1"></a></span>
-<span id="cb63-10"><a href="b04.html#cb63-10" tabindex="-1"></a>gender_deal_rates</span></code></pre></div>
-<pre><code>##   all_men all_women     mixed 
-## 0.5808538 0.6363636 0.6630435</code></pre>
-<p><img src="B04-conditional-probability_files/figure-html/b04-gender-deal-plot-1.png" width="672" /></p>
-<p>These are conditional proportions within selected televised pitches. The
-classification describes presenters rather than every company member, seven
-pitches have an unknown classification, and the comparison does not isolate a
-causal effect of gender.</p>
-</div>
-</div>
-<div id="the-multiplication-rule" class="section level3 hasAnchor">
-<h3>The multiplication rule<a href="b04.html#the-multiplication-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p class="concept-video">
-<strong>MIT explanation (review):</strong>
-<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-multiplication-rule/">02.6 The Multiplication Rule</a>.
-</p>
-<p>Rearranging the definition gives</p>
-<p><span class="math display">\[
 P(A\cap B)=P(A\mid B)P(B).
 \]</span></p>
-<p>Reversing the roles of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> gives the same joint probability:</p>
-<p><span class="math display">\[
-P(A\cap B)=P(A\mid B)P(B)=P(B\mid A)P(A).
-\]</span></p>
-<p>For the late-season deal event:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="b04.html#cb65-1" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb65-2"><a href="b04.html#cb65-2" tabindex="-1"></a>  <span class="at">direct_joint =</span> <span class="fu">mean</span>(D <span class="sc">&amp;</span> L),</span>
-<span id="cb65-3"><a href="b04.html#cb65-3" tabindex="-1"></a>  <span class="at">conditional_times_base =</span> <span class="fu">mean</span>(D[L]) <span class="sc">*</span> <span class="fu">mean</span>(L),</span>
-<span id="cb65-4"><a href="b04.html#cb65-4" tabindex="-1"></a>  <span class="at">reverse_conditional_times_base =</span> <span class="fu">mean</span>(L[D]) <span class="sc">*</span> <span class="fu">mean</span>(D)</span>
-<span id="cb65-5"><a href="b04.html#cb65-5" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##                   direct_joint         conditional_times_base 
-##                      0.3504511                      0.3504511 
-## reverse_conditional_times_base 
-##                      0.3504511</code></pre>
-<p>This is the algebraic reason the two conditional probabilities can share a
-numerator while having different denominators.</p>
-</div>
-<div id="partitions-and-the-law-of-total-probability" class="section level3 hasAnchor">
-<h3>Partitions and the law of total probability<a href="b04.html#partitions-and-the-law-of-total-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p class="concept-video">
-<strong>MIT explanation (review):</strong>
-<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/total-probability-theorem/">02.7 Total Probability Theorem</a>.
-</p>
-<p>Events <span class="math inline">\(B_1,\ldots,B_k\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span> when they are
-mutually disjoint and their union is <span class="math inline">\(\Omega\)</span>. Every outcome belongs to
-exactly one part.</p>
-<p>If <span class="math inline">\(P(B_i)&gt;0\)</span>, then:</p>
+<p>If <span class="math inline">\(B_1,\ldots,B_k\)</span> partition <span class="math inline">\(\Omega\)</span>,</p>
 <p><span class="math display">\[
 P(A)=\sum_{i=1}^{k}P(A\mid B_i)P(B_i).
 \]</span></p>
-<p>The early/late events <span class="math inline">\(\{L^c,L\}\)</span> form a partition, so</p>
+<p>Bayes’ rule is</p>
 <p><span class="math display">\[
-P(D)=P(D\mid L^c)P(L^c)+P(D\mid L)P(L).
+P(B_i\mid A)
+=\frac{P(A\mid B_i)P(B_i)}
+{\sum_{j=1}^{k}P(A\mid B_j)P(B_j)}.
 \]</span></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="b04.html#cb67-1" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb67-2"><a href="b04.html#cb67-2" tabindex="-1"></a>  <span class="at">direct =</span> <span class="fu">mean</span>(D),</span>
-<span id="cb67-3"><a href="b04.html#cb67-3" tabindex="-1"></a>  <span class="at">from_periods =</span> <span class="fu">mean</span>(D[<span class="sc">!</span>L]) <span class="sc">*</span> <span class="fu">mean</span>(<span class="sc">!</span>L) <span class="sc">+</span> <span class="fu">mean</span>(D[L]) <span class="sc">*</span> <span class="fu">mean</span>(L)</span>
-<span id="cb67-4"><a href="b04.html#cb67-4" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##       direct from_periods 
-##    0.6120749    0.6120749</code></pre>
-<p>The overall deal probability is a weighted average of the period-specific deal
-probabilities. The group probabilities supply the weights.</p>
 </div>
-<div id="bayes-rule" class="section level3 hasAnchor">
-<h3>Bayes’ rule<a href="b04.html#bayes-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p class="concept-video">
-<strong>MIT explanation (review):</strong>
-<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/bayes-rule/">02.8 Bayes’ Rule</a>.
-</p>
-<p>From the multiplication rule,</p>
+<div id="formula-l5" class="section level2 hasAnchor">
+<h2>Lecture 5 - Joint PMFs and correlation<a href="formula-sheet.html#formula-l5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For discrete <span class="math inline">\(X,Y\)</span>,</p>
 <p><span class="math display">\[
-P(B_i\mid A)=\frac{P(A\mid B_i)P(B_i)}{P(A)}.
+p_{X,Y}(x,y)=P(X=x,Y=y).
 \]</span></p>
-<p>Using total probability to expand the denominator:</p>
+<p>Marginal and conditional PMFs are</p>
 <p><span class="math display">\[
-P(B_i\mid A)=
-\frac{P(A\mid B_i)P(B_i)}
-{\sum_jP(A\mid B_j)P(B_j)}.
+p_X(x)=\sum_y p_{X,Y}(x,y),
+\qquad
+p_{X\mid Y}(x\mid y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}.
 \]</span></p>
-<p>For the Shark Tank events:</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="b04.html#cb69-1" tabindex="-1"></a>bayes_late_given_deal <span class="ot">&lt;-</span> <span class="fu">mean</span>(D[L]) <span class="sc">*</span> <span class="fu">mean</span>(L) <span class="sc">/</span> <span class="fu">mean</span>(D)</span>
-<span id="cb69-2"><a href="b04.html#cb69-2" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb69-3"><a href="b04.html#cb69-3" tabindex="-1"></a>  <span class="at">from_bayes =</span> bayes_late_given_deal,</span>
-<span id="cb69-4"><a href="b04.html#cb69-4" tabindex="-1"></a>  <span class="at">from_table =</span> <span class="fu">mean</span>(L[D])</span>
-<span id="cb69-5"><a href="b04.html#cb69-5" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## from_bayes from_table 
-##  0.5725624  0.5725624</code></pre>
-<p>Bayes’ rule reverses the direction of conditioning. It does not reverse causal
-direction and does not make an observational comparison causal.</p>
-<div id="base-rates-and-classification" class="section level4 hasAnchor">
-<h4>Base rates and classification<a href="b04.html#base-rates-and-classification" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Suppose an AI classifier flags a pitch as likely to receive a deal. To find</p>
+<p>Discrete <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent when, for every <span class="math inline">\(x,y\)</span>,</p>
 <p><span class="math display">\[
-P(\text{deal}\mid\text{positive flag}),
+p_{X,Y}(x,y)=p_X(x)p_Y(y).
 \]</span></p>
-<p>we need:</p>
-<ul>
-<li>the deal base rate <span class="math inline">\(P(\text{deal})\)</span>;</li>
-<li>sensitivity <span class="math inline">\(P(\text{positive}\mid\text{deal})\)</span>;</li>
-<li>the false-positive rate
-<span class="math inline">\(P(\text{positive}\mid\text{no deal})\)</span>.</li>
-</ul>
-<p>High sensitivity alone is insufficient: the deal base rate and false-positive
-rate also determine the proportion of flagged pitches that receive a deal.</p>
+<p>For independent events <span class="math inline">\(A,B\)</span> with <span class="math inline">\(P(B)&gt;0\)</span>,
+<span class="math inline">\(P(A\mid B)=P(A)\)</span>.</p>
+<p><span class="math display">\[
+\operatorname{Cov}(X,Y)
+=E[(X-\mu_X)(Y-\mu_Y)]
+=E[XY]-E[X]E[Y].
+\]</span></p>
+<p><span class="math display">\[
+\rho_{XY}
+=\frac{\operatorname{Cov}(X,Y)}
+{\operatorname{SD}(X)\operatorname{SD}(Y)},
+\qquad -1\le\rho_{XY}\le1.
+\]</span></p>
+<p>Sample covariance and correlation are</p>
+<p><span class="math display">\[
+s_{XY}=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)(y_i-\bar y),
+\qquad
+r_{XY}=\frac{s_{XY}}{s_Xs_Y}.
+\]</span></p>
+<p>Independence implies zero covariance when the relevant expectations exist;
+zero covariance does not generally imply independence.</p>
+<div style="page-break-after: always;"></div>
 </div>
+<div id="formula-l6" class="section level2 hasAnchor">
+<h2>Lecture 6 - Continuous distributions<a href="formula-sheet.html#formula-l6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a continuous random variable with PDF <span class="math inline">\(f_X\)</span>,</p>
+<p><span class="math display">\[
+f_X(x)\ge0,
+\qquad \int_{-\infty}^{\infty}f_X(x)\,dx=1,
+\qquad P(X=x)=0.
+\]</span></p>
+<p><span class="math display">\[
+P(a&lt;X\le b)=\int_a^b f_X(x)\,dx=F_X(b)-F_X(a).
+\]</span></p>
+<p>If <span class="math inline">\(X\sim U(a,b)\)</span>,</p>
+<p><span class="math display">\[
+f_X(x)=\frac{1}{b-a}\quad(a\le x\le b),
+\qquad
+P(c&lt;X&lt;d)=\frac{d-c}{b-a},
+\]</span></p>
+<p><span class="math display">\[
+E[X]=\frac{a+b}{2},
+\qquad
+\operatorname{Var}(X)=\frac{(b-a)^2}{12}.
+\]</span></p>
+<p>If <span class="math inline">\(X\sim N(\mu,\sigma^2)\)</span>, then</p>
+<p><span class="math display">\[
+Z=\frac{X-\mu}{\sigma}\sim N(0,1).
+\]</span></p>
+<p>Approximately 68% lies within <span class="math inline">\(\mu\pm\sigma\)</span>, and 95% within
+<span class="math inline">\(\mu\pm1.96\sigma\)</span>.</p>
 </div>
+<div id="formula-l7" class="section level2 hasAnchor">
+<h2>Lecture 7 - Samples and estimators<a href="formula-sheet.html#formula-l7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+\bar X=\frac{1}{n}\sum_{i=1}^{n}X_i,
+\qquad
+\widehat P=\frac{1}{n}\sum_{i=1}^{n}X_i
+\quad\text{for a 0/1 variable}.
+\]</span></p>
+<p><span class="math display">\[
+S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar X)^2,
+\qquad df=n-1.
+\]</span></p>
+<p>The degrees of freedom follow from the constraint</p>
+<p><span class="math display">\[
+\sum_{i=1}^{n}(X_i-\bar X)=0.
+\]</span></p>
+<p>For sampling without replacement, the course’s independence approximation
+uses the 10% condition:</p>
+<p><span class="math display">\[
+n\le0.10N.
+\]</span></p>
+<p>Random sampling supports generalisation to the sampling frame; random
+assignment supports causal treatment comparisons.</p>
 </div>
-<div id="after-class-4" class="section level2 hasAnchor course-phase phase-after">
-<h2>After class<a href="b04.html#after-class-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="retrieval-2" class="section level3 hasAnchor">
-<h3>Retrieval<a href="b04.html#retrieval-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>What does variance average?</li>
-<li>Why do variance and standard deviation have different units?</li>
-<li>What is the denominator of <span class="math inline">\(P(A\mid B)\)</span>?</li>
-<li>Why is <span class="math inline">\(P(A\mid B)\)</span> generally different from <span class="math inline">\(P(B\mid A)\)</span>?</li>
-<li>What makes a collection of events a partition?</li>
-<li>What does the denominator in Bayes’ rule calculate?</li>
-</ol>
-<details>
-<summary>
-Check your answers
-</summary>
-<ol style="list-style-type: decimal">
-<li>Variance averages squared deviations from the distribution mean.</li>
-<li>Variance has squared units; standard deviation is its square root and has
-the variable’s original units.</li>
-<li><span class="math inline">\(P(B)\)</span>, the probability of the conditioning event.</li>
-<li>They condition on different reference classes and usually have different
-denominators.</li>
-<li>The parts are mutually disjoint and their union is <span class="math inline">\(\Omega\)</span>.</li>
-<li>It calculates the total probability of the observed evidence across all
-mutually exclusive cases in the partition.</li>
-</ol>
-</details>
+<div id="formula-l8" class="section level2 hasAnchor">
+<h2>Lecture 8 - Sampling distributions and SEs<a href="formula-sheet.html#formula-l8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For independent, identically distributed observations with mean <span class="math inline">\(\mu\)</span> and
+variance <span class="math inline">\(\sigma^2\)</span>,</p>
+<p><span class="math display">\[
+E[\bar X]=\mu,
+\qquad
+\operatorname{Var}(\bar X)=\frac{\sigma^2}{n},
+\qquad
+\operatorname{SE}(\bar X)=\frac{\sigma}{\sqrt n}
+\approx\frac{S}{\sqrt n}.
+\]</span></p>
+<p>The CLT gives, for sufficiently large <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[
+\frac{\bar X-\mu}{\sigma/\sqrt n}\ \dot\sim\ N(0,1),
+\qquad
+\bar X\ \dot\sim\ N\!\left(\mu,\frac{\sigma^2}{n}\right).
+\]</span></p>
+<p>For an independent normal sample with unknown <span class="math inline">\(\sigma\)</span>,</p>
+<p><span class="math display">\[
+T=\frac{\bar X-\mu}{S/\sqrt n}\sim t_{n-1}.
+\]</span></p>
+<p>For a sample proportion,</p>
+<p><span class="math display">\[
+E[\widehat P]=p,
+\qquad
+\operatorname{SE}(\widehat P)=\sqrt{\frac{p(1-p)}{n}}.
+\]</span></p>
+<p>Normal approximation working condition:</p>
+<p><span class="math display">\[
+np\ge10,
+\qquad n(1-p)\ge10.
+\]</span></p>
+<p>Multiplying <span class="math inline">\(n\)</span> by <span class="math inline">\(c^2\)</span> divides the SE by <span class="math inline">\(c\)</span>.</p>
 </div>
-<div id="practice-2" class="section level3 hasAnchor">
-<h3>Practice<a href="b04.html#practice-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>A variable <span class="math inline">\(Y\)</span> has PMF <span class="math inline">\(p_Y(0)=0.2\)</span>, <span class="math inline">\(p_Y(1)=0.5\)</span>, and
-<span class="math inline">\(p_Y(2)=0.3\)</span>. Use <span class="math inline">\(E[Y]=1.1\)</span> and <span class="math inline">\(E[Y^2]=1.7\)</span> to calculate
-<span class="math inline">\(\operatorname{Var}(Y)\)</span> and <span class="math inline">\(\operatorname{SD}(Y)\)</span>.</li>
-<li>Use the early/late partition to verify
-<span class="math inline">\(P(D)=P(D\mid L^c)P(L^c)+P(D\mid L)P(L)\)</span>.</li>
-<li>A classifier has a 10% deal base rate, 80% sensitivity, and a 20%
-false-positive rate. Calculate <span class="math inline">\(P(\text{deal}\mid\text{positive flag})\)</span>.</li>
-<li>Calculate and interpret <span class="math inline">\(P(L\mid D)\)</span>. Explain why it differs from
-<span class="math inline">\(P(D\mid L)\)</span>.</li>
-<li>R reports an empirical variance of 3.647 and a sample variance of
-3.649 for written-description length. Explain why the values differ.</li>
-<li>Among the 1,434 pitches with a known source gender group, 428 of 661
-pitches with women represented and 449 of 773 all-men pitches reached an
-on-air deal. Calculate both conditional deal proportions and interpret the
-difference.</li>
-</ol>
-<details>
-<summary>
-Check your answers
-</summary>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(\operatorname{Var}(Y)=1.7-1.1^2=0.49\)</span> and
-<span class="math inline">\(\operatorname{SD}(Y)=\sqrt{0.49}=0.7\)</span>.</li>
-<li><span class="math inline">\((377/707)(707/1441)+(505/734)(734/1441)=882/1441\approx0.612\)</span>.</li>
-<li>Bayes’ rule gives
-<span class="math display">\[
-\frac{0.80(0.10)}{0.80(0.10)+0.20(0.90)}
-=\frac{0.08}{0.26}\approx0.308.
-\]</span>
-About 30.8% of positively flagged cases are deals under this model.</li>
-<li><span class="math inline">\(P(L\mid D)=505/882\approx0.573\)</span>: among deal records, 57.3% came from
-Seasons 9–16. It differs from <span class="math inline">\(P(D\mid L)=505/734\approx0.688\)</span> because
-the conditioning event—and therefore the denominator—is different.</li>
-<li>The empirical-distribution variance weights every one of the 1,441 records
-by <span class="math inline">\(1/1441\)</span> and therefore divides by <span class="math inline">\(n\)</span>. The usual sample variance divides
-by <span class="math inline">\(n-1\)</span>, so it is slightly larger.</li>
-<li>The conditional proportions are <span class="math inline">\(428/661\approx0.648\)</span> and
-<span class="math inline">\(449/773\approx0.581\)</span>, a descriptive difference of about 6.7 percentage
-points. This comparison uses the dataset’s presenter-gender classification
-and selected televised pitches. It does not establish that gender caused
-the difference or describe pitches with an unknown classification.</li>
-</ol>
-</details>
+<div id="formula-l9" class="section level2 hasAnchor">
+<h2>Lecture 9 - Confidence intervals and zero tests<a href="formula-sheet.html#formula-l9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>General confidence-interval form:</p>
+<p><span class="math display">\[
+\text{estimate}\ \pm\ \text{critical value}\times\text{SE}.
+\]</span></p>
+<p>For a population mean with unknown <span class="math inline">\(\sigma\)</span>,</p>
+<p><span class="math display">\[
+\bar X\pm t_{1-\alpha/2,n-1}\frac{S}{\sqrt n}.
+\]</span></p>
+<p>For 95% procedures, <span class="math inline">\(z_{0.975}=1.960\)</span>. Selected critical values are</p>
+<p><span class="math display">\[
+\begin{array}{c|rrrrrr}
+df&amp;5&amp;10&amp;20&amp;30&amp;60&amp;\infty\\ \hline
+t_{0.975,df}&amp;2.571&amp;2.228&amp;2.086&amp;2.042&amp;2.000&amp;1.960
+\end{array}
+\]</span></p>
+<p>For a contrast <span class="math inline">\(\delta=\mu-\mu_0\)</span>,</p>
+<p><span class="math display">\[
+\widehat\delta=\bar X-\mu_0,
+\qquad
+T=\frac{\widehat\delta-0}{S/\sqrt n},
+\qquad df=n-1.
+\]</span></p>
+<p><span class="math display">\[
+H_0:\delta=0
+\qquad\text{versus}\qquad
+H_1:\delta\ne0.
+\]</span></p>
+<p>The two-sided p-value is</p>
+<p><span class="math display">\[
+p=P\!\left(|T_{df}|\ge|t_{obs}|\mid H_0\right).
+\]</span></p>
+<p>Decision at level <span class="math inline">\(\alpha\)</span>: reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(p\le\alpha\)</span>; otherwise do
+not reject. For the same two-sided t procedure, the level-<span class="math inline">\(\alpha\)</span> test
+rejects zero exactly when the <span class="math inline">\(100(1-\alpha)\%\)</span> interval excludes zero.</p>
 </div>
-<div id="worked-exam-interpretation-2" class="section level3 hasAnchor">
-<h3>Worked exam interpretation<a href="b04.html#worked-exam-interpretation-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Question.</strong> A student sees <span class="math inline">\(P(D\mid L)=0.688\)</span> and writes, “68.8% of deal
-pitches came from late seasons.”</p>
-<details>
-<summary>
-Check a model answer
-</summary>
-<p>The calculation conditions on <span class="math inline">\(L\)</span>, so the denominator is
-the 734 pitches in Seasons 9–16. The correct interpretation is that 68.8% of
-late-season records reached an on-air deal. The reverse conditional is
-<span class="math inline">\(P(L\mid D)=505/882=57.3\%\)</span>. Neither quantity measures completed investment
-or a causal season effect.</p>
-</details>
-<p>Next: <a href="b05.html#b05">Lecture 5: Joint random variables, covariance, and correlation</a>.</p>
-<p>Formula sheet: <a href="formula-sheet.html#formula-l4">Lecture 4 formulas</a>.</p>
-<p>For a more formal explanation, consult
-<a href="https://tilburguniversity.on.worldcat.org/oclc/317545871">Nieuwenhuis, <em>Statistical Methods for Business and Economics</em></a>,
-Chapters 7–8.</p>
+<div id="formula-l10" class="section level2 hasAnchor">
+<h2>Lecture 10 - Tests, errors, and power<a href="formula-sheet.html#formula-l10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For <span class="math inline">\(H_0:p=p_0\)</span> against <span class="math inline">\(H_1:p\ne p_0\)</span>, define
+<span class="math inline">\(\delta_p=p-p_0\)</span>. The null test statistic is</p>
+<p><span class="math display">\[
+Z=\frac{\hat p-p_0}{\sqrt{p_0(1-p_0)/n}},
+\qquad
+p\text{-value}=2P(Z\ge|z_{obs}|).
+\]</span></p>
+<p>Check <span class="math inline">\(np_0\ge10\)</span> and <span class="math inline">\(n(1-p_0)\ge10\)</span> for the test. A large-sample
+proportion interval is</p>
+<p><span class="math display">\[
+\hat p\pm z_{1-\alpha/2}
+\sqrt{\frac{\hat p(1-\hat p)}{n}}.
+\]</span></p>
+<p>The equivalent interval for <span class="math inline">\(p-p_0\)</span> subtracts <span class="math inline">\(p_0\)</span> from both endpoints.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{Type I error: }&amp;\text{reject }H_0\text{ when }H_0\text{ is true},\\
+P(\text{Type I error})&amp;=\alpha,\\
+\text{Type II error: }&amp;\text{do not reject }H_0\text{ when a specified }H_1
+\text{ is true},\\
+\text{Power}&amp;=P(\text{reject }H_0\mid H_1\text{ is true}).
+\end{aligned}
+\]</span></p>
+<p>For a regression coefficient row,</p>
+<p><span class="math display">\[
+t=\frac{b_j-0}{\operatorname{SE}(b_j)},
+\qquad
+b_j\pm t_{1-\alpha/2,df}\operatorname{SE}(b_j),
+\]</span></p>
+<p>tests <span class="math inline">\(H_0:\beta_j=0\)</span> against <span class="math inline">\(H_1:\beta_j\ne0\)</span>. In R output:
+<code>Estimate</code> is <span class="math inline">\(b_j\)</span>, <code>Std. Error</code> is <span class="math inline">\(\operatorname{SE}(b_j)\)</span>, <code>t value</code>
+is their ratio, and <code>Pr(&gt;|t|)</code> is the two-sided p-value.</p>
+<p>Always report the estimate and units, uncertainty, decision, population/model
+scope, practical importance, and causal limit.</p>
 </div>
 </div>
 
@@ -1029,8 +986,8 @@ Chapters 7–8.</p>
           </div>
         </div>
       </div>
-<a href="b-ep01.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="b05.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="math-refresher.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="videos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

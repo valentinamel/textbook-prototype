@@ -456,6 +456,8 @@ the probability for a future pitch.
 Practise now in [Tutorial 1](#b-ep01), then continue to
 [Lecture 4: Variance, conditioning, and belief updating](#b04).
 
+Formula sheet: [Lecture 3 formulas](#formula-l3).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapter 8.

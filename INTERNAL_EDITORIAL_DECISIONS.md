@@ -115,4 +115,9 @@ This file is for the teaching team. It is intentionally excluded from
 - Add a Mathematics Refresher under Supplementary resources with a chapter map
   covering every mathematical symbol and operation required in Basic and
   Intermediate.
+- Maintain one cumulative Basic formula sheet, organised by the lecture in
+  which each formula is introduced. Tutorials use only the sections reached at
+  that point; the complete Lectures 1--10 version is attached to the closed-book
+  written exam. Generate the online page and the two-page exam PDF from the same
+  shared source so that they cannot drift apart.
 - Defer slide revisions until the textbook content is settled.

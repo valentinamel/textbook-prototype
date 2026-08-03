@@ -275,6 +275,8 @@ For \(X\sim N(50,10^2)\), the value 70 has z-score
 
 Continue to [Lecture 7: Samples, parameters, and estimators](#b07).
 
+Formula sheet: [Lecture 6 formulas](#formula-l6).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapter 10.

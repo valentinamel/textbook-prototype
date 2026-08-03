@@ -1,0 +1,28 @@
+# Basic Course Formula Sheet {#formula-sheet}
+
+This is the cumulative formula sheet for the Basic course. Each section is
+labelled by the lecture in which its material is first introduced. Use only
+the sections reached so far:
+
+| Session | Formula-sheet sections |
+|---|---|
+| Tutorial 1 | Lectures 1--3 |
+| Tutorial 2 | Lectures 1--5 |
+| Tutorial 3 | Lectures 1--8 |
+| Tutorial 4 | Lectures 1--10 |
+| Closed-book written exam | Lectures 1--10: the complete sheet |
+
+The same complete version will be attached to the written exam. Definitions,
+conditions, units, and interpretation remain examinable even when a formula is
+provided.
+
+Download the print-ready
+[Basic Course Formula Sheet (PDF)](output/pdf/basic-course-formula-sheet.pdf).
+
+::: {.formula-sheet}
+
+```{r formula-sheet-content, child='formula-sheet-content.Rmd'}
+```
+
+:::
+

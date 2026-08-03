@@ -271,6 +271,8 @@ Increasing the mean sample size from 25 to 100 halves its standard error.
 
 Continue to [Tutorial 3: Sampling and standard errors](#b-ep03).
 
+Formula sheet: [Lecture 8 formulas](#formula-l8).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapters 13 and 14.

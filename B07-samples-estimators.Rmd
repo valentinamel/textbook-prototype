@@ -303,6 +303,8 @@ questions and should not be confused.
 
 Continue to [Lecture 8: Sampling distributions and the central limit theorem](#b08).
 
+Formula sheet: [Lecture 7 formulas](#formula-l7).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapter 12.

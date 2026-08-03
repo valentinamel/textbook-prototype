@@ -581,6 +581,8 @@ Before Lecture 2, open its **Before class** section and complete the marked
 preparation. Continue to
 [Lecture 2: Probability foundations and random variables](#b02).
 
+Formula sheet: [Lecture 1 formulas](#formula-l1).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapters 1--5.

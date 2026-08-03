@@ -450,6 +450,8 @@ the change or identify the effect of changing an offer.
 
 Continue to [Tutorial 2: Conditioning and relationships](#b-ep02).
 
+Formula sheet: [Lecture 5 formulas](#formula-l5).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapters 5 and 11.

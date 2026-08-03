@@ -365,6 +365,21 @@ details summary {
   font-weight: 600;
 }
 
+.formula-sheet h2 {
+  border-bottom: 1px solid var(--qm-line);
+  font-size: 1.25em;
+  margin-top: 1.6em;
+  padding-bottom: 0.25em;
+}
+
+.formula-sheet .math.display {
+  background: #fff;
+  border-left: 2px solid #9bb7b9;
+  margin: 0.75em 0;
+  overflow-x: auto;
+  padding: 0.45em 0.65em;
+}
+
 @media (max-width: 880px) {
   .team-grid,
   .course-grid {

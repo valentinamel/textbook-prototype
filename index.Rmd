@@ -102,7 +102,8 @@ Within each course, follow the chapters in order:
 - **Lecture chapters** introduce you to a question and data and teach you how to conduct analysis in R and theory that allows to interpret and understand the output.
 - **Tutorial chapters** help you retrieve, combine, and apply what you have
   learned. Designed for guided practice and exam preparation.
-- **Supplementary resources** collect reusable help with R and videos.
+- **Supplementary resources** collect reusable help with R, mathematics, the
+  cumulative Basic formula sheet, and external videos.
 
 IMPORTANT: Each lecture includes required pre-class preparation, in-class work, and follow-up practice. Always check and cover the material that is marked as pre-class preparation in the lecture chapter of this textbook. Be consistent with the cycle of pre-class prep, in-class joint work, after-class practice. 
 

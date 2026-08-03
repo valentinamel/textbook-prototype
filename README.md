@@ -12,7 +12,8 @@ Current contents include:
   and multiple linear regression, inference, model fit, dummy variables,
   interactions, and polynomial terms;
 - a targeted pointer to the preceding Programming for E&BI book;
-- a chapter-linked mathematics refresher and external video guide;
+- a chapter-linked mathematics refresher, cumulative Basic formula sheet with
+  a print-ready exam PDF, and external video guide;
 - the official CC0 Shark Tank source data for completed Seasons 1--16 and a
   reproducible 19-variable teaching view.
 

@@ -359,6 +359,8 @@ assumptions.
 
 Continue to [Lecture 3: Discrete distributions and expectation](#b03).
 
+Formula sheet: [Lecture 2 formulas](#formula-l2).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapters 2--4 for empirical distributions and Chapters 6--8 for probability

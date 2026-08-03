@@ -327,6 +327,8 @@ selection bias, dependence, measurement error, or a wrong model.
 
 Continue to [Lecture 10: Hypothesis testing, errors, and power](#b10).
 
+Formula sheet: [Lecture 9 formulas](#formula-l9).
+
 For a more formal explanation, consult
 [Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
 Chapters 15 and 16.

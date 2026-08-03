@@ -33,4 +33,5 @@ rmd_files:
   - course-advanced.Rmd
   - r-refresher.Rmd
   - math-refresher.Rmd
+  - formula-sheet.Rmd
   - video-guide.Rmd

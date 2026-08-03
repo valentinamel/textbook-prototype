@@ -21,6 +21,8 @@
 Bring your after-class work from Lectures 7 and 8. If the algebra is slowing
 you down, review [Mathematics Refresher: sums, fractions, and roots](#math-refresher).
 
+Use the cumulative [formula sheet through Lecture 8](#formula-l8).
+
 Complete from memory:
 
 1. A parameter describes ...

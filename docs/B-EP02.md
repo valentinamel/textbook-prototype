@@ -20,6 +20,8 @@
 Bring your after-class work from Lectures 4 and 5. Complete these statements
 without reopening the chapters:
 
+Use the cumulative [formula sheet through Lecture 5](#formula-l5).
+
 Review [Mathematics Refresher: fractions, products, and sums](#math-refresher)
 if needed.
 
