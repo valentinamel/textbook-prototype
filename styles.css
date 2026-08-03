@@ -84,6 +84,81 @@ a {
   color: var(--qm-accent);
 }
 
+.ls-lab {
+  background: #fff;
+  border: 1px solid var(--qm-line);
+  border-radius: 8px;
+  margin: 1.2em 0 1.5em;
+  padding: 1em;
+}
+
+.ls-lab-heading,
+.ls-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em 1.2em;
+  justify-content: space-between;
+}
+
+.ls-lab svg {
+  display: block;
+  height: auto;
+  margin: 0.5em auto;
+  max-width: 700px;
+  touch-action: none;
+  width: 100%;
+}
+
+.ls-controls {
+  display: grid;
+  gap: 0.8em 1.4em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0.6em 0 1em;
+}
+
+.ls-controls label {
+  color: var(--qm-navy);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.ls-controls input {
+  display: block;
+  margin-top: 0.3em;
+  width: 100%;
+}
+
+.ls-actions button {
+  background: var(--qm-navy);
+  border: 1px solid var(--qm-navy);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.45em 0.8em;
+}
+
+.ls-actions button + button {
+  background: #fff;
+  color: var(--qm-navy);
+}
+
+.ls-caption {
+  color: var(--qm-muted);
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+.ls-axis { stroke: #65727e; stroke-width: 1.2; }
+.ls-tick { fill: #53606b; font-size: 13px; }
+.ls-label { fill: #263b4b; font-size: 15px; }
+.ls-point { fill: #0072b2; stroke: #17324d; stroke-width: 1; }
+.ls-fit-line { stroke: #d55e00; stroke-width: 3; }
+.ls-residual { stroke: #755f93; stroke-width: 2; stroke-dasharray: 4 3; }
+.ls-handle { fill: #f0e442; stroke: #17324d; stroke-width: 2; cursor: ns-resize; }
+.ls-handle:focus { outline: 3px solid #56b4e9; outline-offset: 2px; }
+
 .data-caveat,
 .exam-bridge {
   background: var(--qm-warm);
@@ -312,6 +387,10 @@ details summary {
 }
 
 @media (max-width: 767px) {
+  .ls-controls {
+    grid-template-columns: 1fr;
+  }
+
   .label {
     overflow-wrap: anywhere;
     white-space: normal;

@@ -1,0 +1,310 @@
+# Lecture 4: Multiple linear regression and controls {#i04}
+
+```{r i04-setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.width = 7, fig.height = 4.5)
+sharks <- read.csv("data/shark_tank_teaching.csv", stringsAsFactors = FALSE)
+sharks$ask_100k <- sharks$ask_amount_usd / 100000
+equity_model <- lm(
+  equity_offered_pct ~ season + ask_100k + description_words,
+  data = sharks
+)
+```
+
+<div class="outcomes">
+<span class="label">By the end of Lecture 4, you can</span>
+<ul>
+<li>state a multiple linear regression model;</li>
+<li>interpret a coefficient while holding the other included predictors fixed;</li>
+<li>explain why simple and multiple-regression coefficients can differ;</li>
+<li>fit and compare multiple-regression specifications in R;</li>
+<li>distinguish statistical control from causal identification.</li>
+</ul>
+</div>
+
+::: {.course-phase .phase-before}
+
+## Before class
+
+<div class="video-prep">
+<span class="label">Video preparation</span><br>
+Watch Stanford Statistical Learning
+<a href="https://www.youtube.com/watch?v=o9hoLdylWKo&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=11">3.3
+Multiple Linear Regression</a>. Focus on the conditional interpretation of one
+coefficient and the reason several predictors may be included together.
+</div>
+
+Review [Mathematics Refresher: subscripts and multivariable equations](#math-refresher)
+if needed.
+
+Why might the simple slope from `equity_offered_pct ~ season` differ after
+amount requested is added to the model?
+
+<details>
+<summary>Check your preparation</summary>
+
+If requested amount is associated with both season and offered equity, the
+simple slope mixes their relationships. Multiple regression compares seasons
+at the same included request amount, so its coefficient can differ.
+
+</details>
+
+:::
+
+::: {.course-phase .phase-in-class}
+
+## In class
+
+<p class="concept-video"><strong>Stanford explanation (review):</strong>
+<a href="https://www.youtube.com/watch?v=o9hoLdylWKo">3.3 Multiple Linear Regression</a>.</p>
+
+### More than one predictor
+
+For predictors \(X_{i1},\ldots,X_{ik}\), the model is
+
+\[
+Y_i=\beta_0+\beta_1X_{i1}+\cdots+\beta_kX_{ik}+\varepsilon_i,
+\]
+
+with conditional mean
+
+\[
+E[Y_i\mid X_{i1}=x_1,\ldots,X_{ik}=x_k]
+=\beta_0+\beta_1x_1+\cdots+\beta_kx_k.
+\]
+
+The coefficient \(\beta_j\) is the expected change in \(Y\) for a one-unit
+increase in \(X_j\), **holding the other included predictors fixed**.
+
+This is a model-based comparison. It does not require that two real pitches
+are identical on every feature; it compares fitted conditional means at fixed
+values of the included variables.
+
+### A Shark Tank model
+
+Let the outcome be initial equity offered, in percentage points. Include:
+
+- `season`;
+- `ask_100k`, requested dollars divided by 100,000;
+- `description_words`, the number of words in the source's short description.
+
+```{r i04-fit}
+equity_model <- lm(
+  equity_offered_pct ~ season + ask_100k + description_words,
+  data = sharks
+)
+summary(equity_model)
+```
+
+The fitted equation is approximately
+
+\[
+\widehat{equity}
+=22.025-0.836\,season-0.290\,ask_{100k}
+-0.128\,description\_words.
+\]
+
+Interpret each slope conditionally:
+
+- At the same requested amount and description length, one later season is
+  associated with 0.836 percentage points less initial equity offered.
+- At the same season and description length, an additional $100,000 requested
+  is associated with 0.290 percentage points less initial equity offered.
+- At the same season and request, one additional description word is
+  associated with 0.128 percentage points less initial equity offered.
+
+The last estimate is not statistically distinguishable from zero at 5% in the
+classical summary. Its point estimate should still be reported; “not
+significant” is not the same as “exactly zero.”
+
+### A coefficient-interpretation protocol
+
+Use the same five checks every time you interpret a slope:
+
+1. **Estimate and direction:** state the fitted change and its sign.
+2. **Predictor step and unit:** say what a one-unit increase means.
+3. **Outcome unit:** state the unit in which the outcome changes.
+4. **Conditioning:** name the other included predictors being held fixed.
+5. **Scope:** identify the analysed records and say “associated with” unless a
+   research design justifies a causal claim.
+
+The variables in this model use deliberately different units:
+
+| Term | A one-unit increase means | Coefficient unit |
+|---|---|---|
+| `season` | one later season | equity percentage points per season |
+| `ask_100k` | $100,000 more requested | equity percentage points per $100,000 |
+| `description_words` | one additional word | equity percentage points per word |
+
+Scale the coefficient to the comparison readers care about. Holding the other
+included predictors fixed:
+
+- five later seasons correspond to
+  \(5(-0.836)=-4.18\) fitted equity percentage points;
+- $500,000 more requested is five `ask_100k` units, corresponding to
+  \(5(-0.290)=-1.45\) percentage points;
+- ten additional description words correspond to
+  \(10(-0.128)=-1.28\) percentage points.
+
+Rescaling a predictor changes the numerical coefficient and its SE but not the
+fitted values, t statistic, or substantive relationship. Reporting a tiny
+“per dollar” coefficient would be correct but hard to read; $100,000 units make
+the same model interpretable.
+
+### Why coefficients change
+
+Compare the season slope across specifications:
+
+```{r i04-compare-slopes}
+m_simple <- lm(equity_offered_pct ~ season, data = sharks)
+m_adjusted <- lm(equity_offered_pct ~ season + ask_100k,
+                 data = sharks)
+m_full <- equity_model
+
+c(
+  simple = coef(m_simple)["season"],
+  adjusted_for_ask = coef(m_adjusted)["season"],
+  adjusted_for_ask_and_words = coef(m_full)["season"]
+)
+```
+
+A coefficient changes when added predictors account for variation that was
+previously absorbed into the simpler association. The change is informative,
+but it does not prove that the larger model is causal or “correct.”
+
+### Control variables: useful but not magical
+
+Including a control can:
+
+- make a comparison more like-for-like on measured dimensions;
+- reduce residual variation;
+- reveal that a simple association was partly compositional;
+- increase uncertainty when predictors overlap strongly.
+
+It cannot automatically control for unmeasured factors, reverse causality,
+selection into the sample, or measurement error. A “control variable” is just
+an included predictor unless the research design and assumptions justify a
+causal role.
+
+### Assumptions extend to the full predictor set
+
+For multiple regression, check:
+
+1. the conditional mean is linear in included terms;
+2. \(E[\varepsilon_i\mid X_{i1},\ldots,X_{ik}]=0\);
+3. observations are independent under the design;
+4. no predictor is an exact linear combination of the others;
+5. classical SEs require constant conditional error variance;
+6. exact small-sample t/F inference uses conditional normality.
+
+High correlation among predictors does not bias OLS by itself, but it can make
+individual coefficients unstable and imprecise. Exact linear dependence makes
+the coefficients unidentified.
+
+### A coefficient plot keeps units visible
+
+```{r i04-coefficient-plot, echo=FALSE}
+ci <- confint(equity_model)[-1, , drop = FALSE]
+est <- coef(equity_model)[-1]
+labels <- c("Season", "Amount requested ($100,000s)",
+            "Description length (words)")
+old_par <- par(no.readonly = TRUE)
+par(mar = c(4.5, 12.5, 1, 1), las = 1)
+plot(est, seq_along(est), xlim = range(ci), yaxt = "n", bty = "n",
+     pch = 21, bg = "#0072B2", col = "#17324D",
+     xlab = "Estimated change in equity offered (percentage points)",
+     ylab = "")
+segments(ci[, 1], seq_along(est), ci[, 2], seq_along(est),
+         col = "#17324D", lwd = 2)
+axis(2, at = seq_along(est), labels = labels, las = 1)
+abline(v = 0, lty = 2, col = "#D55E00", lwd = 2)
+par(old_par)
+```
+
+Each interval concerns a different one-unit change, so coefficient magnitudes
+are not directly comparable without considering units.
+
+:::
+
+::: {.course-phase .phase-after}
+
+## After class
+
+### Retrieval
+
+1. What phrase must appear in a multiple-regression slope interpretation?
+2. Why can a coefficient change after another predictor is added?
+3. What is the zero conditional mean assumption?
+4. Why do controls not automatically identify causality?
+5. What problem can strongly overlapping predictors create?
+6. What five elements belong in a slope interpretation?
+
+<details>
+<summary>Check your answers</summary>
+
+1. “Holding the other included predictors fixed.”
+2. The simpler slope may combine relationships involving omitted correlated
+   predictors.
+3. The error has mean zero at every combination of included predictor values.
+4. Unmeasured confounding, selection, reverse causality, and measurement error
+   can remain.
+5. Unstable, imprecise individual coefficient estimates; exact overlap makes
+   the model unidentified.
+6. Estimate and direction, predictor step and unit, outcome unit, held-fixed
+   predictors, and the sample/causal scope.
+
+</details>
+
+### Practice
+
+1. Interpret all three slopes from `equity_model` with units and conditioning.
+2. Calculate 95% confidence intervals with `confint(equity_model)`.
+3. Test each coefficient against zero and distinguish three individual tests
+   from one joint model test.
+4. Remove `description_words`. Compare the season and request coefficients.
+5. Name one plausible omitted variable and explain which model assumption it
+   could threaten.
+6. Interpret a five-season difference using the fitted season coefficient.
+7. Interpret a $500,000 difference in requested amount.
+8. Interpret a ten-word difference in description length and use its 95%
+   interval to assess \(H_0:\beta=0\).
+9. Compare two otherwise identical fitted pitches when one is three seasons
+   later and requests $200,000 more. Calculate the combined fitted difference.
+
+<details>
+<summary>Check your answers</summary>
+
+1. Holding the other two predictors fixed: one later season is associated with
+   0.836 percentage points less equity; another $100,000 requested with 0.290
+   percentage points less equity; and one additional description word with
+   0.128 percentage points less equity.
+2. The season interval is approximately \((-0.936, -0.736)\), the request interval
+   \((-0.403, -0.177)\), and the description interval \((-0.351, 0.095)\).
+3. Individual t-tests evaluate one \(\beta_j=0\); the overall F-test evaluates
+   all slope coefficients jointly.
+4. Without `description_words`, the season coefficient is about \(-0.814\) and
+   the request coefficient about \(-0.287\). They change only slightly here;
+   that empirical stability does not prove absence of omitted-variable bias.
+5. Examples include venture maturity, revenue, founder experience, or editing
+   decisions; if related to both an included predictor and offered equity, it
+   threatens zero conditional mean.
+6. Holding request and description length fixed, a pitch five seasons later is
+   fitted to offer about \(5(-0.836)=-4.18\) equity percentage points.
+7. $500,000 equals five predictor units. Holding season and description length
+   fixed, the fitted difference is \(5(-0.290)=-1.45\) percentage points.
+8. Ten words correspond to about \(-1.28\) fitted percentage points, holding
+   season and request fixed. Multiplying its interval by 10 gives approximately
+   \((-3.51,0.95)\); because zero remains plausible, the two-sided 5% test does
+   not reject a zero coefficient.
+9. The fitted difference is
+   \(3(-0.836)+2(-0.290)\approx-3.09\) percentage points, holding description
+   length fixed. Add coefficient contributions because the model is additive.
+
+</details>
+
+Continue to [Lecture 5: Dummy predictors and joint usefulness](#i05).
+
+For a more formal treatment, see James et al., *An Introduction to Statistical
+Learning*, 2nd ed., Sections 3.2 and 3.3.3.
+
+:::

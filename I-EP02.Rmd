@@ -1,0 +1,224 @@
+# Tutorial 2: Multiple regression and extensions {#i-ep02}
+
+```{r iep02-setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.width = 7, fig.height = 4.2)
+sharks <- read.csv("data/shark_tank_teaching.csv", stringsAsFactors = FALSE)
+sharks$ask_100k <- sharks$ask_amount_usd / 100000
+known_gender <- subset(sharks, pitcher_gender_group != "unknown")
+known_gender$gender <- relevel(factor(known_gender$pitcher_gender_group),
+                               ref = "all_men")
+known_gender$women <- as.integer(
+  known_gender$pitcher_gender_group %in% c("all_women", "mixed")
+)
+known_gender$season_c <- known_gender$season - mean(known_gender$season)
+```
+
+<div class="outcomes">
+<span class="label">By the end of Tutorial 2, you can</span>
+<ul>
+<li>fit and interpret multiple regression in R;</li>
+<li>test individual and grouped coefficients against zero;</li>
+<li>interpret dummy, interaction, and polynomial terms correctly;</li>
+<li>compare nested models;</li>
+<li>write a complete TestVision-ready analysis with design limits.</li>
+</ul>
+</div>
+
+::: {.course-phase .phase-before}
+
+## Before class
+
+Complete the after-class practice from Intermediate Lectures 4--6. Review
+[Mathematics Refresher: multivariable equations, indicators, products, and powers](#math-refresher)
+if needed.
+
+Complete from memory:
+
+1. A multiple-regression slope is interpreted while ...
+2. A dummy coefficient compares ...
+3. An interaction coefficient is a difference in ...
+4. A partial F-test compares ...
+
+<details>
+<summary>Check your preparation</summary>
+
+1. Holding the other included predictors fixed.
+2. A category with the reference category.
+3. Slopes.
+4. A reduced nested model with a complete model on the same observations.
+
+</details>
+
+:::
+
+::: {.course-phase .phase-in-class}
+
+## In class
+
+Attempt each task in R before opening the answer.
+
+### Task 1 — Multiple-regression coefficients
+
+Fit:
+
+```{r iep02-base-model}
+m1 <- lm(
+  equity_offered_pct ~ season + ask_100k + description_words,
+  data = sharks
+)
+summary(m1)
+```
+
+1. Interpret all three slopes.
+2. Identify which 95% coefficient interval includes zero.
+3. Interpret adjusted \(R^2\) and the overall F-test.
+4. State two threats to causal interpretation.
+
+<details>
+<summary>Check your answer</summary>
+
+At fixed values of the other included predictors, one later season is
+associated with about 0.836 percentage points less initial equity; an extra
+$100,000 requested with about 0.290 percentage points less equity; and one
+additional description word with about 0.128 percentage points less equity.
+The description-word interval includes zero. Adjusted \(R^2\approx0.186\), and
+the overall F-test rejects the joint zero-slope null. Selection into the show,
+unmeasured venture quality, reverse relationships, and measurement choices are
+possible causal threats.
+
+</details>
+
+### Task 2 — Dummy variables and a partial F-test
+
+```{r iep02-gender-models}
+reduced <- lm(equity_offered_pct ~ season + ask_100k,
+              data = known_gender)
+complete <- lm(equity_offered_pct ~ season + ask_100k + gender,
+               data = known_gender)
+summary(complete)
+anova(reduced, complete)
+```
+
+1. Name the reference category.
+2. Interpret both dummy coefficients.
+3. State and decide the partial F-test.
+4. Explain why the partial test and individual t-tests answer different
+   questions.
+
+<details>
+<summary>Check your answer</summary>
+
+The reference is all-men. At fixed season and request, all-women teams are
+fitted about 1.28 percentage points higher and mixed teams about 0.12 points
+higher than all-men teams. The partial null is that both dummy coefficients
+equal zero; \(p\approx0.023\), so reject at 5%. The F-test asks whether the two
+terms are jointly useful; each t-test asks about one reference-group contrast.
+The source coding and observational design prohibit a causal gender claim.
+
+</details>
+
+### Task 3 — Interaction
+
+```{r iep02-interaction}
+m_interaction <- lm(
+  equity_offered_pct ~ season_c * women + ask_100k,
+  data = known_gender
+)
+summary(m_interaction)
+```
+
+1. Write the fitted line for `women = 0` and `women = 1` at a fixed request.
+2. Calculate both season slopes.
+3. Interpret the interaction estimate and p-value.
+4. Explain the role of centering.
+
+<details>
+<summary>Check your answer</summary>
+
+For all-men teams, the season slope is about \(-0.799\). For teams with women
+represented, it is \(-0.799-0.061=-0.861\). The estimated slope difference is
+\(-0.061\) percentage points per season, with \(p\approx0.520\); this model does
+not provide evidence of different season trends. Centering makes the lower-order
+group coefficient compare groups at the average season instead of Season 0.
+
+</details>
+
+### Task 4 — Polynomial term
+
+```{r iep02-polynomial}
+m_linear <- lm(equity_offered_pct ~ season + ask_100k, data = sharks)
+m_quadratic <- lm(
+  equity_offered_pct ~ season + I(season^2) + ask_100k,
+  data = sharks
+)
+summary(m_quadratic)
+anova(m_linear, m_quadratic)
+```
+
+1. Why must `I(season^2)` be used in the R formula?
+2. Decide whether the quadratic term adds fit under the classical test.
+3. Calculate the fitted change from Season 10 to 11.
+4. State why the curve should not be extrapolated beyond Season 16.
+
+<details>
+<summary>Check your answer</summary>
+
+`I()` tells R to treat the expression arithmetically rather than as formula
+syntax. The partial F-test has \(p<0.001\), so the quadratic term adds detectable
+fit. With \(b_1\approx-1.713\) and \(b_2\approx0.0510\), the change from 10 to
+11 is \(b_1+b_2(21)\approx-0.642\) percentage points. Quadratics can turn
+sharply outside the observed range and have no data support there.
+
+</details>
+
+:::
+
+::: {.course-phase .phase-after}
+
+## After class
+
+### Timed integrated task — 30 minutes
+
+Develop one model of `equity_offered_pct` using season, requested amount, the
+three known source gender groups, and one justified extension.
+
+Your submission must include:
+
+1. a precise research question;
+2. reproducible data preparation;
+3. one pre-model visual;
+4. the R formula and model summary;
+5. coefficient interpretations with units and reference groups;
+6. an individual t-test and an overall or partial F-test;
+7. \(R^2\), adjusted \(R^2\), and residual diagnostics;
+8. one graph of fitted conditional predictions;
+9. a 150-word conclusion separating association, uncertainty, and causal
+   limits.
+
+<details>
+<summary>Check a model structure</summary>
+
+A defensible solution could fit
+
+```r
+m <- lm(
+  equity_offered_pct ~ season * gender + ask_100k,
+  data = known_gender
+)
+```
+
+or a quadratic-season model with group dummies. Keep lower-order terms, name
+the reference group, interpret combined slopes or fitted contrasts, compare a
+nested reduced model with `anova(reduced, complete)`, inspect residuals, and
+plot predictions within Seasons 1--16. The conclusion must state that the
+source's broad presenter classification and selected televised records do not
+identify a causal effect of gender or season.
+
+</details>
+
+The Intermediate course is complete. Return to the
+[R Refresher](#r-refresher), [Mathematics Refresher](#math-refresher), or
+[External Video Guide](#videos) whenever you need a targeted review.
+
+:::

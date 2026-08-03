@@ -1,707 +1,1442 @@
-"pitch_id","deal_on_show","season","episode","description_words"
-1,1,8,26,58
-2,0,8,26,31
-3,0,8,26,71
-4,1,8,26,37
-5,1,8,24,43
-6,1,8,24,34
-7,1,8,24,40
-8,1,8,24,35
-9,0,8,23,14
-10,1,8,23,52
-11,1,8,23,33
-12,0,8,23,43
-13,1,8,22,38
-14,0,8,22,35
-15,1,8,22,63
-16,1,8,22,37
-17,1,8,20,38
-18,1,8,20,41
-19,1,8,20,25
-20,0,8,20,42
-21,1,8,19,84
-22,0,8,19,41
-23,1,8,19,31
-24,1,8,19,48
-25,1,8,18,42
-26,0,8,18,35
-27,1,8,18,59
-28,1,8,18,39
-29,0,8,17,37
-30,0,8,17,56
-31,0,8,17,30
-32,1,8,17,60
-33,1,8,16,29
-34,1,8,16,20
-35,0,8,16,25
-36,1,8,16,49
-37,1,8,15,39
-38,0,8,15,42
-39,1,8,15,46
-40,0,8,15,42
-41,1,8,14,36
-42,0,8,14,34
-43,1,8,14,42
-44,1,8,14,48
-45,0,8,13,30
-46,1,8,13,36
-47,0,8,13,23
-48,0,8,13,42
-49,1,8,12,20
-50,1,8,12,50
-51,0,8,12,37
-52,1,8,12,53
-53,1,8,11,34
-54,0,8,11,37
-55,0,8,11,28
-56,1,8,11,24
-57,0,8,10,6
-58,0,8,10,29
-59,1,8,10,41
-60,1,8,10,37
-61,1,8,9,7
-62,1,8,9,36
-63,1,8,9,46
-64,1,8,9,58
-65,0,8,8,49
-66,1,8,8,35
-67,0,8,8,37
-68,1,8,8,48
-69,1,8,7,30
-70,1,8,7,51
-71,0,8,7,35
-72,0,8,7,39
-73,0,8,6,59
-74,1,8,6,47
-75,0,8,6,36
-76,1,8,6,62
-77,0,8,5,41
-78,1,8,5,37
-79,1,8,5,44
-80,0,8,5,46
-81,1,8,4,45
-82,1,8,4,35
-83,1,8,4,67
-84,0,8,4,54
-85,1,8,3,9
-86,0,8,3,46
-87,1,8,3,12
-88,1,8,3,45
-89,1,8,2,51
-90,0,8,2,50
-91,1,8,2,50
-92,1,8,2,38
-93,1,8,1,49
-94,0,8,1,30
-95,1,8,1,64
-96,0,8,1,35
-97,1,7,29,27
-98,1,7,29,16
-99,1,7,29,30
-100,0,7,29,33
-101,1,7,28,42
-102,0,7,28,43
-103,1,7,28,26
-104,1,7,28,38
-105,0,7,27,30
-106,1,7,27,55
-107,1,7,27,20
-108,0,7,27,47
-109,1,7,26,40
-110,0,7,26,25
-111,1,7,26,22
-112,0,7,26,26
-113,1,7,25,43
-114,0,7,25,38
-115,1,7,25,36
-116,1,7,25,30
-117,0,7,24,20
-118,1,7,24,46
-119,0,7,24,24
-120,0,7,24,33
-121,0,7,23,31
-122,0,7,23,31
-123,0,7,23,21
-124,1,7,23,31
-125,0,7,22,34
-126,1,7,22,28
-127,0,7,22,14
-128,1,7,22,24
-129,1,7,21,23
-130,0,7,21,35
-131,0,7,21,26
-132,0,7,21,29
-133,1,7,20,31
-134,1,7,20,30
-135,0,7,20,29
-136,0,7,20,26
-137,1,7,19,40
-138,1,7,19,38
-139,0,7,19,27
-140,1,7,19,29
-141,0,7,18,20
-142,1,7,18,36
-143,1,7,18,34
-144,1,7,18,29
-145,0,7,17,32
-146,1,7,17,48
-147,1,7,17,33
-148,0,7,17,34
-149,1,7,16,46
-150,0,7,16,31
-151,0,7,16,29
-152,1,7,16,21
-153,1,7,15,30
-154,1,7,15,44
-155,1,7,15,36
-156,1,7,15,45
-157,1,7,14,46
-158,0,7,14,31
-159,1,7,14,27
-160,1,7,14,23
-161,1,7,13,32
-162,1,7,13,27
-163,1,7,13,32
-164,0,7,13,42
-165,0,7,12,35
-166,1,7,12,36
-167,1,7,12,30
-168,1,7,12,20
-169,0,7,11,32
-170,1,7,11,29
-171,1,7,11,42
-172,1,7,11,35
-173,0,7,10,26
-174,1,7,10,31
-175,0,7,10,51
-176,1,7,10,34
-177,0,7,9,42
-178,1,7,9,33
-179,1,7,9,31
-180,1,7,9,33
-181,0,7,8,40
-182,1,7,8,49
-183,1,7,8,46
-184,0,7,8,45
-185,1,7,7,45
-186,1,7,7,56
-187,1,7,7,54
-188,0,7,7,29
-189,1,7,6,28
-190,0,7,6,37
-191,0,7,6,40
-192,1,7,6,32
-193,0,7,5,35
-194,0,7,5,39
-195,1,7,5,42
-196,1,7,5,60
-197,0,7,4,40
-198,1,7,4,63
-199,1,7,4,31
-200,1,7,4,42
-201,1,7,3,36
-202,0,7,3,33
-203,1,7,3,36
-204,0,7,3,24
-205,1,7,2,6
-206,0,7,2,40
-207,1,7,2,46
-208,0,7,2,53
-209,0,7,1,35
-210,0,7,1,47
-211,1,7,1,56
-212,1,7,1,36
-213,0,6,29,39
-214,0,6,29,11
-215,0,6,29,4
-216,1,6,29,66
-217,1,6,28,4
-218,0,6,28,9
-219,0,6,28,72
-220,0,6,28,107
-221,0,6,27,59
-222,1,6,27,7
-223,1,6,27,50
-224,1,6,27,45
-225,0,6,26,52
-226,0,6,26,61
-227,1,6,26,68
-228,1,6,26,76
-229,0,6,25,72
-230,1,6,25,72
-231,1,6,25,4
-232,1,6,25,46
-233,0,6,24,67
-234,1,6,24,46
-235,0,6,24,52
-236,1,6,24,54
-237,0,6,23,73
-238,1,6,23,52
-239,1,6,23,71
-240,1,6,23,64
-241,1,6,22,8
-242,1,6,22,62
-243,0,6,22,82
-244,0,6,22,57
-245,1,6,21,16
-246,1,6,21,123
-247,1,6,21,104
-248,0,6,21,159
-249,1,6,20,95
-250,1,6,20,129
-251,0,6,20,43
-252,0,6,20,59
-253,0,6,19,6
-254,1,6,19,115
-255,0,6,19,28
-256,1,6,19,71
-257,0,6,18,25
-258,1,6,18,30
-259,1,6,18,26
-260,1,6,18,116
-261,1,6,17,13
-262,1,6,17,6
-263,1,6,17,8
-264,0,6,17,8
-265,0,6,16,15
-266,0,6,16,103
-267,1,6,16,81
-268,1,6,16,81
-269,1,6,15,7
-270,1,6,15,91
-271,0,6,15,60
-272,0,6,15,29
-273,0,6,14,90
-274,1,6,14,90
-275,1,6,14,71
-276,1,6,14,67
-277,1,6,13,63
-278,1,6,13,52
-279,0,6,13,51
-280,1,6,13,75
-281,1,6,12,13
-282,1,6,12,76
-283,1,6,12,64
-284,0,6,12,23
-285,1,6,11,80
-286,0,6,11,100
-287,1,6,11,59
-288,0,6,11,85
-289,1,6,10,61
-290,1,6,10,65
-291,1,6,10,71
-292,0,6,10,46
-293,0,6,9,52
-294,1,6,9,17
-295,0,6,9,67
-296,1,6,9,47
-297,1,6,8,53
-298,0,6,8,64
-299,0,6,8,39
-300,1,6,8,62
-301,1,6,7,11
-302,1,6,7,83
-303,1,6,7,87
-304,0,6,7,86
-305,0,6,6,7
-306,1,6,6,61
-307,1,6,6,59
-308,0,6,6,13
-309,0,6,5,64
-310,1,6,5,37
-311,0,6,5,15
-312,1,6,5,17
-313,1,6,4,58
-314,0,6,4,13
-315,1,6,4,39
-316,0,6,4,15
-317,0,6,3,70
-318,1,6,3,65
-319,0,6,3,55
-320,0,6,3,61
-321,1,6,2,66
-322,1,6,2,50
-323,0,6,2,68
-324,0,6,2,17
-325,0,6,1,9
-326,1,6,1,54
-327,0,6,1,9
-328,1,6,1,71
-329,0,5,29,5
-330,1,5,29,8
-331,1,5,29,19
-332,0,5,29,14
-333,1,5,28,9
-334,1,5,28,9
-335,0,5,28,27
-336,1,5,28,65
-337,1,5,27,7
-338,1,5,27,11
-339,0,5,27,7
-340,0,5,27,7
-341,1,5,26,23
-342,0,5,26,14
-343,0,5,26,5
-344,1,5,26,9
-345,0,5,25,11
-346,1,5,25,67
-347,0,5,25,28
-348,1,5,25,12
-349,1,5,24,13
-350,1,5,24,23
-351,0,5,24,23
-352,0,5,24,15
-353,1,5,23,70
-354,1,5,23,11
-355,0,5,23,5
-356,1,5,23,9
-357,0,5,22,15
-358,1,5,22,11
-359,1,5,22,25
-360,1,5,22,17
-361,1,5,21,13
-362,1,5,21,11
-363,0,5,21,15
-364,1,5,21,11
-365,1,5,20,11
-366,0,5,20,21
-367,1,5,20,7
-368,1,5,20,8
-369,1,5,19,63
-370,0,5,19,21
-371,0,5,19,21
-372,1,5,19,29
-373,1,5,18,17
-374,0,5,18,31
-375,0,5,18,4
-376,0,5,18,27
-377,0,5,17,29
-378,0,5,17,13
-379,1,5,17,11
-380,1,5,17,21
-381,0,5,16,30
-382,1,5,16,26
-383,0,5,16,10
-384,1,5,16,25
-385,0,5,15,11
-386,1,5,15,7
-387,0,5,15,7
-388,1,5,15,13
-389,0,5,14,17
-390,0,5,14,35
-391,1,5,14,17
-392,1,5,14,11
-393,0,5,13,25
-394,0,5,13,13
-395,1,5,13,19
-396,1,5,13,17
-397,0,5,12,59
-398,0,5,12,54
-399,1,5,12,7
-400,1,5,12,56
-401,1,5,11,33
-402,0,5,11,19
-403,0,5,11,11
-404,0,5,11,17
-405,0,5,10,7
-406,1,5,10,7
-407,1,5,10,28
-408,1,5,10,15
-409,0,5,9,25
-410,0,5,9,31
-411,0,5,9,17
-412,0,5,9,19
-413,0,5,8,60
-414,1,5,8,22
-415,0,5,8,58
-416,0,5,8,7
-417,1,5,7,18
-418,1,5,7,9
-419,0,5,7,9
-420,1,5,7,15
-421,0,5,6,18
-422,1,5,6,62
-423,1,5,6,14
-424,1,5,6,15
-425,0,5,5,13
-426,0,5,5,29
-427,1,5,5,8
-428,1,5,5,19
-429,1,5,4,13
-430,0,5,4,9
-431,1,5,4,9
-432,0,5,4,11
-433,0,5,3,9
-434,0,5,3,25
-435,1,5,3,17
-436,1,5,3,10
-437,1,5,2,7
-438,1,5,2,11
-439,0,5,2,11
-440,0,5,2,5
-441,0,5,1,5
-442,1,5,1,13
-443,0,5,1,21
-444,1,5,1,5
-445,1,4,26,3
-446,0,4,26,8
-447,1,4,26,14
-448,1,4,26,7
-449,0,4,25,10
-450,1,4,25,59
-451,1,4,25,5
-452,0,4,25,15
-453,1,4,24,4
-454,1,4,24,21
-455,0,4,24,9
-456,0,4,24,9
-457,1,4,23,72
-458,1,4,23,72
-459,0,4,23,11
-460,1,4,23,61
-461,1,4,22,7
-462,0,4,22,7
-463,0,4,22,11
-464,1,4,22,7
-465,1,4,21,116
-466,1,4,21,9
-467,1,4,21,13
-468,0,4,21,7
-469,1,4,20,62
-470,1,4,20,77
-471,1,4,20,4
-472,0,4,20,37
-473,0,4,19,7
-474,0,4,19,23
-475,1,4,19,20
-476,1,4,19,25
-477,1,4,18,15
-478,0,4,18,13
-479,1,4,18,3
-480,0,4,18,15
-481,0,4,17,7
-482,0,4,17,7
-483,0,4,17,13
-484,0,4,17,51
-485,0,4,16,3
-486,1,4,16,9
-487,0,4,16,7
-488,1,4,16,8
-489,1,4,15,57
-490,1,4,15,57
-491,0,4,15,15
-492,0,4,15,9
-493,0,4,14,8
-494,0,4,14,15
-495,1,4,14,71
-496,0,4,14,74
-497,1,4,13,99
-498,0,4,13,33
-499,1,4,13,21
-500,1,4,13,13
-501,0,4,12,21
-502,0,4,12,9
-503,1,4,12,10
-504,1,4,12,7
-505,0,4,11,9
-506,0,4,11,37
-507,1,4,11,9
-508,1,4,11,11
-509,0,4,10,9
-510,0,4,10,21
-511,1,4,10,91
-512,0,4,10,13
-513,1,4,9,7
-514,1,4,9,67
-515,0,4,9,15
-516,0,4,9,11
-517,1,4,8,23
-518,0,4,8,19
-519,1,4,8,7
-520,1,4,7,9
-521,1,4,7,59
-522,0,4,7,5
-523,0,4,7,7
-524,1,4,6,11
-525,0,4,6,11
-526,0,4,6,5
-527,1,4,6,8
-528,1,4,5,13
-529,1,4,5,7
-530,0,4,5,21
-531,0,4,5,7
-532,1,4,4,8
-533,1,4,4,19
-534,0,4,4,27
-535,0,4,4,62
-536,0,4,3,53
-537,0,4,3,9
-538,1,4,3,72
-539,1,4,3,14
-540,0,4,2,17
-541,1,4,2,19
-542,0,4,2,81
-543,1,4,2,7
-544,1,4,1,19
-545,0,4,1,20
-546,1,4,1,9
-547,0,4,1,11
-548,0,3,15,11
-549,1,3,15,13
-550,0,3,15,9
-551,1,3,15,17
-552,1,3,14,18
-553,0,3,14,7
-554,1,3,14,9
-555,1,3,14,12
-556,0,3,13,11
-557,1,3,13,15
-558,0,3,13,10
-559,1,3,13,5
-560,0,3,12,5
-561,1,3,12,68
-562,1,3,12,15
-563,0,3,12,10
-564,0,3,11,3
-565,0,3,11,26
-566,0,3,11,14
-567,0,3,11,21
-568,0,3,10,4
-569,0,3,10,4
-570,1,3,10,15
-571,0,3,10,7
-572,0,3,9,19
-573,1,3,9,6
-574,1,3,9,4
-575,0,3,9,8
-576,1,3,8,5
-577,1,3,8,6
-578,0,3,8,10
-579,0,3,8,9
-580,1,3,7,4
-581,0,3,7,5
-582,0,3,7,11
-583,1,3,7,6
-584,0,3,6,13
-585,0,3,6,9
-586,1,3,6,17
-587,1,3,6,9
-588,0,3,5,18
-589,1,3,5,18
-590,1,3,5,5
-591,1,3,5,11
-592,0,3,4,11
-593,1,3,4,27
-594,0,3,4,11
-595,1,3,4,17
-596,1,3,3,85
-597,0,3,3,13
-598,0,3,3,11
-599,1,3,3,11
-600,1,3,2,21
-601,0,3,2,58
-602,0,3,2,23
-603,0,3,2,9
-604,0,3,1,9
-605,1,3,1,8
-606,0,3,1,8
-607,1,3,1,5
-608,1,2,8,13
-609,1,2,8,6
-610,1,2,8,4
-611,0,2,8,9
-612,0,2,7,7
-613,1,2,7,5
-614,0,2,7,7
-615,1,2,7,6
-616,0,2,6,6
-617,1,2,6,11
-618,1,2,6,7
-619,0,2,6,11
-620,0,2,5,2
-621,0,2,5,26
-622,1,2,5,11
-623,1,2,5,5
-624,1,2,4,13
-625,0,2,4,3
-626,1,2,4,7
-627,0,2,4,15
-628,1,2,3,8
-629,1,2,3,14
-630,1,2,3,6
-631,0,2,3,5
-632,1,2,2,10
-633,1,2,2,8
-634,0,2,2,3
-635,0,2,2,10
-636,0,2,1,5
-637,0,2,1,10
-638,0,2,1,4
-639,1,2,1,6
-640,1,1,15,11
-641,1,1,15,8
-642,0,1,15,14
-643,0,1,15,8
-644,1,1,14,19
-645,0,1,14,11
-646,0,1,14,15
-647,1,1,14,23
-648,1,1,13,15
-649,0,1,13,7
-650,0,1,13,11
-651,0,1,13,11
-652,1,1,12,12
-653,0,1,12,13
-654,0,1,12,5
-655,1,1,12,5
-656,1,1,11,23
-657,0,1,11,23
-658,0,1,11,13
-659,1,1,11,13
-660,0,1,10,7
-661,1,1,10,10
-662,0,1,10,11
-663,1,1,10,8
-664,0,1,10,6
-665,1,1,9,3
-666,0,1,9,13
-667,1,1,9,17
-668,0,1,9,31
-669,1,1,8,25
-670,0,1,8,19
-671,1,1,8,19
-672,0,1,8,13
-673,0,1,7,17
-674,0,1,7,8
-675,1,1,7,31
-676,1,1,7,25
-677,1,1,6,69
-678,0,1,6,5
-679,1,1,6,20
-680,0,1,6,25
-681,0,1,6,9
-682,1,1,5,15
-683,0,1,5,15
-684,0,1,5,9
-685,0,1,5,19
-686,1,1,5,33
-687,0,1,4,14
-688,1,1,4,8
-689,1,1,4,21
-690,0,1,4,5
-691,0,1,4,8
-692,0,1,3,22
-693,0,1,3,6
-694,1,1,3,29
-695,1,1,3,5
-696,0,1,3,21
-697,1,1,2,9
-698,1,1,2,50
-699,0,1,2,13
-700,0,1,2,29
-701,0,1,2,13
-702,1,1,1,45
-703,0,1,1,39
-704,0,1,1,24
-705,1,1,1,3
-706,0,1,1,15
+"pitch_id","startup_name","season","episode","industry","business_description","description_words","pitcher_gender_group","women_represented","multiple_entrepreneurs","pitcher_state","ask_amount_usd","equity_offered_pct","requested_valuation_usd","deal_on_show","deal_amount_usd","deal_equity_pct","deal_valuation_usd","number_sharks_in_deal"
+1,"AvaTheElephant",1,1,"Health/Wellness","Ava The Elephant - Baby and Child Care",8,"all_women",1,0,"GA",50000,15,333333,1,50000,55,90909,1
+2,"MrTod'sPieFactory",1,1,"Food and Beverage","Mr. Tod's Pie Factory - Specialty Food",7,"all_men",0,0,"NJ",460000,10,4600000,1,460000,50,920000,2
+3,"Wispots",1,1,"Business Services","Wispots - Consumer Services",4,"all_men",0,0,"NC",1200000,10,1.2e+07,0,,,,
+4,"CollegeFoxesPackingBoxes",1,1,"Lifestyle/Home","College Foxes Packing Boxes - Consumer Services",7,"all_men",0,0,"FL",250000,25,1e+06,0,,,,
+5,"IonicEar",1,1,"Technology/Software","Ionic Ear - Novelties",4,"all_men",0,0,"MN",1e+06,15,6666667,0,,,,
+6,"APerfectPear",1,2,"Food and Beverage","A Perfect Pear - Specialty Food",6,"all_women",1,0,"CA",5e+05,15,3333333,1,5e+05,50,1e+06,2
+7,"ClassroomJams",1,2,"Children/Education","Classroom Jams - Education",4,"all_men",0,0,"IL",250000,10,2500000,1,250000,100,250000,5
+8,"Lifebelt",1,2,"Automotive","Lifebelt - Automotive",3,"all_men",0,0,"NV",5e+05,10,5e+06,0,,,,
+9,"CrookedJaw",1,2,"Fashion/Beauty","Crooked Jaw - Men and Women's Apparel",7,"all_men",0,0,"CA",2e+05,20,1e+06,0,,,,
+10,"StickyNoteHolder",1,2,"Lifestyle/Home","Sticky Note Holder - Productivity Tools",6,"all_women",1,0,"CA",1e+05,20,5e+05,0,,,,
+11,"TurboBaster",1,3,"Food and Beverage","TurboBaster - Kitchen Tools",4,"all_women",1,0,"CA",35000,35,1e+05,1,35000,100,35000,1
+12,"StressFreeKids",1,3,"Children/Education","Stress Free Kids - Baby and Child Care",8,"all_women",1,0,"GA",250000,20,1250000,1,250000,50,5e+05,1
+13,"KwyztaChopstickArt",1,3,"Children/Education","Kwyzta Chopstick Art - Kitchen Tools",6,"all_men",0,0,"OR",1e+05,10,1e+06,0,,,,
+14,"50StateCapitalsin50Minutes",1,3,"Children/Education","50 State Capitals in 50 Minutes - Education",8,"all_men",0,0,"TX",155000,10,1550000,0,,,,
+15,"VoyageAirGuitar",1,3,"Media/Entertainment","Voyage Air Guitar - Music",5,"all_men",0,1,"CA",5e+05,5,1e+07,0,,,,
+16,"GiftCardRescue",1,4,"Technology/Software","Gift Card Rescue - Online Services",6,"all_men",0,0,"MD",150000,30,5e+05,1,2e+05,50,4e+05,2
+17,"Coverplay",1,4,"Children/Education","Coverplay - Baby and Child Care",6,"all_women",1,1,"CA",350000,15,2333333,1,35000,40,87500,1
+18,"GraffitiRemovalServices",1,4,"Business Services","Graffiti Removal Services - Professional Services",6,"all_men",0,0,"OR",350000,15,2333333,0,,,,
+19,"SoulsCalling",1,4,"Fashion/Beauty","Soul's Calling, Inc. - Women's Accessories",6,"all_women",1,0,"TX",150000,25,6e+05,0,,,,
+20,"CoffeeBrandGifts",1,4,"Food and Beverage","Coffee Brand Gifts - Novelties",5,"all_men",0,0,"OH",3e+05,40,750000,0,,,,
+21,"MyTherapyJournal",1,5,"Health/Wellness","My Therapy Journal - Online Services",6,"all_men",0,1,"FL",80000,20,4e+05,1,80000,51,156863,2
+22,"BodyJac",1,5,"Fitness/Sports/Outdoors","Body Jac - Fitness Equipment",5,"all_men",0,0,"IA",180000,20,9e+05,1,180000,50,360000,1
+23,"GoodGriefCelebrations",1,5,"Business Services","Good Grief Celebrations - Consumer Services",6,"all_women",1,0,"PA",50000,25,2e+05,0,,,,
+24,"GranolaGourmet",1,5,"Food and Beverage","Granola Gourmet - Specialty Food",5,"all_men",0,0,"CA",175000,25,7e+05,0,,,,
+25,"FaceBlok",1,5,"Health/Wellness","Face Blok - Novelties",4,"all_women",1,0,"CA",50000,30,166667,0,,,,
+26,"PorkBarrelBBQSauce",1,6,"Food and Beverage","Pork Barrel BBQ Sauce - Specialty Food",7,"all_men",0,1,"VA",50000,10,5e+05,1,50000,50,1e+05,1
+27,"ElementBars",1,6,"Fitness/Sports/Outdoors","Element Bars - Specialty Food",5,"all_men",0,0,"IL",150000,15,1e+06,1,150000,30,5e+05,1
+28,"UndereaseUnderwear",1,6,"Fashion/Beauty","Underease Underwear - Undergarments and Basics",6,"mixed",1,1,"CO",55000,25,220000,0,,,,
+29,"KalyxTechnologies",1,6,"Fashion/Beauty","Kalyx Technologies - Undergarments and Basics",6,"all_women",1,0,"NC",125000,20,625000,0,,,,
+30,"TheFizz",1,6,"Food and Beverage","The Fizz - Non-Alcoholic Beverages",5,"all_men",0,0,"CA",150000,25,6e+05,0,,,,
+31,"Soy-Yer-Dough",1,7,"Food and Beverage","Soy-Yer-Dough - Toys and Games",5,"all_men",0,0,"IN",125000,25,5e+05,1,3e+05,51,588235,3
+32,"GrillCharmsSet",1,7,"Fashion/Beauty","Grill Charms Set - Kitchen Tools",6,"all_women",1,0,"SC",50000,25,2e+05,1,50000,20,250000,1
+33,"BoogieBoxFitness",1,7,"Fitness/Sports/Outdoors","Boogie Box Fitness - Fitness Programs",6,"all_women",1,1,"CA",7e+05,70,1e+06,0,,,,
+34,"TheFunhouseProject",1,7,"Media/Entertainment","The Fun house Project - Entertainment",6,"all_men",0,1,"NY",3e+05,20,1500000,0,,,,
+35,"TreasureChestPets",1,8,"Pet Products","Treasure Chest Pets - Toys and Games",7,"all_women",1,0,"CA",150000,20,750000,1,1e+05,60,166667,2
+36,"Notehall",1,8,"Technology/Software","Notehall - Online Services",4,"all_men",0,1,"CA",90000,10,9e+05,1,90000,25,360000,1
+37,"Throx",1,8,"Fashion/Beauty","Throx - Undergarments and Basics",5,"all_men",0,0,"CA",50000,25,2e+05,0,,,,
+38,"WashedUpHollywood",1,8,"Fashion/Beauty","Washed Up Hollywood - Fashion Accessories",6,"all_men",0,0,"CA",5e+05,25,2e+06,0,,,,
+39,"GaylaBentleyFashion",1,9,"Fashion/Beauty","Gayla Bentley Fashion - Women's Apparel",6,"all_women",1,0,"TX",250000,20,1250000,1,250000,50,5e+05,2
+40,"ChillSoda",1,9,"Food and Beverage","Chill Soda - Non-Alcoholic Beverages",5,"all_men",0,0,"CA",50000,10,5e+05,1,50000,20,250000,1
+41,"CornucopiaExpress",1,9,"Pet Products","Cornucopia Express - Pet Products",5,"all_men",0,1,"NY",3e+05,15,2e+06,0,,,,
+42,"VirtuSphere",1,9,"Electronics","Virtusphere - Electronics",3,"all_men",0,1,"NY",1500000,10,1.5e+07,0,,,,
+43,"TheUROClub",1,10,"Fitness/Sports/Outdoors","The UROClub - Golf Products",5,"all_men",0,0,"FL",25000,51,49020,1,25000,70,35714,1
+44,"JumpForward",1,10,"Children/Education","Jump Forward - Online Services",5,"all_men",0,1,"IL",150000,10,1500000,1,6e+05,50,1200000,2
+45,"TheBobblePlace",1,10,"Children/Education","The Bobble Place - Toys and Games",7,"all_men",0,0,"FL",75000,18,416667,0,,,,
+46,"MrPoncho",1,10,"Electronics","Mr. Poncho - Electronics",4,"mixed",1,1,"NY",50000,25,2e+05,0,,,,
+47,"HellsBellsHelmets",1,11,"Fitness/Sports/Outdoors","Hells Bells Helmets - Outdoor Recreation",6,"mixed",1,1,"PA",5e+05,20,2500000,1,5e+05,50,1e+06,1
+48,"ChefInBlack",1,11,"Food and Beverage","Chef In Black - Specialty Food",6,"all_women",1,0,"CA",50000,10,5e+05,1,50000,40,125000,1
+49,"InkFlip",1,11,"Electronics","Ink Flip - Electronics",4,"all_men",0,0,"TN",150000,20,750000,0,,,,
+50,"RompN'Roll",1,11,"Children/Education","Romp n' Roll - Baby and Children's Entertainment",8,"mixed",1,1,"VA",3e+05,10,3e+06,0,,,,
+51,"TheTwister",1,11,"Fitness/Sports/Outdoors","The Twister - Golf Products",5,"all_men",0,0,"GA",85000,40,212500,0,,,,
+52,"GreaseMonkeyWipes",1,12,"Lifestyle/Home","Grease Monkey Wipes - Outdoor Recreation",6,"mixed",1,1,"TX",40000,40,1e+05,1,40000,40,1e+05,2
+53,"WeeCanShop",1,12,"Children/Education","Wee Can Shop - Baby and Children's Entertainment",8,"mixed",1,1,"NJ",2e+05,30,666667,0,,,,
+54,"Podillow",1,12,"Lifestyle/Home","The Podillow - Novelties",4,"mixed",1,1,"CA",250000,33,757576,0,,,,
+55,"TheFactionist",1,12,"Fashion/Beauty","The Factionist - Men and Women's Apparel",7,"all_men",0,0,"NY",30000,20,150000,0,,,,
+56,"Caffeindicator",1,13,"Food and Beverage","Caffeindicator - Novelties",3,"all_men",0,0,"PA",2e+05,25,8e+05,1,2e+05,50,4e+05,1
+57,"LipstickRemix",1,13,"Fashion/Beauty","Lipstick Remix - Personal Care and Cosmetics",7,"all_women",1,0,"TN",105000,30,350000,1,105000,50,210000,2
+58,"LegalGrind",1,13,"Business Services","Legal Grind - Professional Services",5,"mixed",1,1,"CA",2e+05,15,1333333,0,,,,
+59,"CaptainIceCream",1,13,"Food and Beverage","Captain Ice Cream - Specialty Food",6,"all_men",0,0,"CA",48000,25,192000,0,,,,
+60,"Nubrella",1,14,"Fashion/Beauty","Nubrella - Novelties",3,"all_men",0,0,"MA",2e+05,25,8e+05,1,2e+05,51,392157,1
+61,"Qubits",1,14,"Children/Education","Qubits - Toys and Games",5,"all_men",0,0,"FL",90000,51,176471,1,90000,51,176471,1
+62,"SendABall",1,14,"Children/Education","Send A Ball - Novelties",5,"all_women",1,1,"IL",86000,20,430000,0,,,,
+63,"PillarsOfSlippers",1,14,"Fashion/Beauty","Pillars of Slippers - Women's Shoes",6,"all_women",1,0,"IL",150000,15,1e+06,0,,,,
+64,"LlamaBrew",1,14,"Green/CleanTech","Llama Brew - Gardening",4,"mixed",1,1,"CA",125000,10,1250000,0,,,,
+65,"WurkinStiffs",2,1,"Fashion/Beauty","Wurkin Stiffs - Men's Accessories",5,"all_men",0,0,"FL",85000,10,850000,1,1e+05,40,250000,2
+66,"TippiToes",2,1,"Fitness/Sports/Outdoors","Tippi Toes - Baby and Children's Entertainment",7,"all_women",1,1,"TX",30000,5,6e+05,1,1e+05,30,333333,2
+67,"CBSFoods",2,1,"Food and Beverage","CBS Foods - Specialty Food",5,"all_men",0,0,"TN",2e+05,25,8e+05,0,,,,
+68,"CopadiVino",2,1,"Food and Beverage","Copa di Vino - Alcoholic Beverages",6,"all_men",0,0,"OR",3e+05,5,6e+06,0,,,,
+69,"Toygaroo",2,2,"Children/Education","Toygaroo - Toys and Games",5,"all_women",1,0,"CA",1e+05,10,1e+06,1,2e+05,35,571429,2
+70,"FirstDefenseNasalScreen",2,2,"Health/Wellness","First Defense Nasal Screen - Health and Well-Being",8,"all_men",0,0,"FL",5e+05,10,5e+06,1,750000,30,2500000,3
+71,"Vurtego",2,2,"Fitness/Sports/Outdoors","Vurtego - Toys and Games",5,"all_men",0,0,"CA",5e+05,20,2500000,0,,,,
+72,"Waken'Bacon",2,2,"Food and Beverage","Wake n' Bacon - Novelties",5,"all_men",0,0,"CA",40000,20,2e+05,0,,,,
+73,"ModMomFurniture",2,3,"Lifestyle/Home","Mod Mom Furniture - Furniture",5,"all_women",1,0,"AZ",90000,25,360000,1,90000,33,272727,1
+74,"Flipoutz",2,3,"Fashion/Beauty","Flipoutz - Toys and Games coins",6,"mixed",1,1,"NC",1e+05,20,5e+05,1,1e+05,25,4e+05,1
+75,"FitnessStride",2,3,"Fitness/Sports/Outdoors","Fitness Stride - Fitness Apparel and Accessories",7,"all_men",0,0,"KS",140000,15,933333,0,,,,
+76,"PureAyre",2,3,"Lifestyle/Home","Pure Ayre - Storage and Cleaning Products",7,"all_men",0,0,"WA",150000,10,1500000,0,,,,
+77,"BroccoliWad",2,4,"Food and Beverage","Broccoli Wad - Novelties",4,"all_men",0,0,"NY",50000,20,250000,1,50000,40,125000,1
+78,"HillbillyBrand",2,4,"Fashion/Beauty","Hillbilly Brand - Men and Women's Apparel",7,"all_men",0,0,"FL",50000,25,2e+05,1,75000,25,3e+05,2
+79,"Ride-OnCarry-On",2,4,"Travel","Ride-On Carry-On - Baby and Child Care",7,"mixed",1,1,"GA",50000,25,2e+05,1,50000,25,2e+05,1
+80,"UncleZip'sBeefJerky",2,4,"Food and Beverage","Uncle Zip's Beef Jerky - Specialty Food",7,"all_men",0,0,"NC",25000,20,125000,0,,,,
+81,"Lightfilm",2,5,"Automotive","Lightfilm - Automotive  for car windows",6,"all_men",0,1,"IL",1e+05,5,2e+06,1,10000,70,14286,2
+82,"FridgeFronts",2,5,"Lifestyle/Home","Fridge Fronts - Home Improvement",5,"all_women",1,0,"OH",1e+05,30,333333,1,1e+05,50,2e+05,2
+83,"NewEraBrands",2,5,"Fashion/Beauty","New Era Brands - Novelties contact lens cases",8,"all_men",0,0,"IL",5e+05,30,1666667,0,,,,
+84,"ThinGloss",2,5,"Fashion/Beauty","Thin Gloss - Personal Care and Cosmetics",7,"all_women",1,0,"IN",80000,20,4e+05,0,,,,
+85,"SweepEasy",2,6,"Lifestyle/Home","Sweep Easy - Storage and Cleaning Products",7,"all_men",0,0,"AZ",40000,25,160000,1,75000,33,227273,1
+86,"DaisyCakes",2,6,"Food and Beverage","Daisy Cakes - Specialty Food",5,"all_women",1,0,"SC",50000,25,2e+05,1,50000,25,2e+05,1
+87,"HotMamaGowns",2,6,"Fashion/Beauty","Hot Mama Gowns - Maternity gowns",6,"all_women",1,0,"MD",30000,20,150000,0,,,,
+88,"CaddySwag",2,6,"Fitness/Sports/Outdoors","Caddy Swag - Golf Products",5,"mixed",1,1,"MN",60000,20,3e+05,0,,,,
+89,"Hydromax",2,7,"Fitness/Sports/Outdoors","Hydromax - Fitness Apparel and Accessories",6,"all_men",0,0,"TX",50000,25,2e+05,1,50000,50,1e+05,1
+90,"CarsikBib",2,7,"Children/Education","Carsik Bib - Baby and Child Care",7,"all_men",0,0,"CA",30000,15,2e+05,0,,,,
+91,"Ecomowers",2,7,"Green/CleanTech","Ecomowers - Gardening mower",4,"all_men",0,0,"MD",90000,20,450000,0,,,,
+92,"Games2U",2,7,"Media/Entertainment","Games2U - Entertainment",3,"all_men",0,1,"TX",5e+05,10,5e+06,0,,,,
+93,"HyConn",2,8,"Uncertain/Other","HyConn - Productivity Tools fire hydrant",6,"all_men",0,0,"AR",5e+05,40,1250000,1,1250000,100,1250000,1
+94,"Origaudio",2,8,"Electronics","Origaudio - Electronics portable speakers",5,"all_men",0,1,"CA",150000,15,1e+06,1,150000,15,1e+06,1
+95,"ManCandle",2,8,"Lifestyle/Home","Man Candle - Home Accessories",5,"all_men",0,0,"OK",50000,25,2e+05,0,,,,
+96,"OriginalRunnerCompany",2,8,"Lifestyle/Home","Original Runner Company - Weddings",5,"all_women",1,0,"NJ",250000,15,1666667,0,,,,
+97,"AldoOrtaJewelry",2,9,"Fashion/Beauty","Aldo Orta Jewelry - Women's Accessories",6,"all_men",0,0,"IL",180000,45,4e+05,1,180000,45,4e+05,1
+98,"OneSole",2,9,"Fashion/Beauty","One Sole - Women's Shoes",5,"all_women",1,0,"FL",5e+05,20,2500000,1,5e+05,35,1428571,1
+99,"CitiKitty",2,9,"Pet Products","CitiKitty - cat Products",4,"all_women",1,0,"PA",1e+05,15,666667,1,1e+05,20,333333,1
+100,"SamsonMartin",2,9,"Fashion/Beauty","Samson Martin - Women's Apparel",5,"all_women",1,0,"IL",50000,15,333333,0,,,,
+101,"EZVIP",3,1,"Media/Entertainment","EZ VIP - Entertainment",4,"all_men",0,0,"FL",150000,15,1e+06,1,150000,30,5e+05,2
+102,"TheCleanBottle",3,1,"Food and Beverage","The Clean Bottle - Water Bottles",6,"all_men",0,0,"CA",60000,5,1200000,1,60000,8,750000,1
+103,"MyWonderfulLife",3,1,"Business Services","My Wonderful Life - Consumer Services",6,"all_women",1,1,"MN",1e+05,10,1e+06,0,,,,
+104,"BusinessGhost",3,1,"Business Services","Business Ghost - Professional Services",5,"all_men",0,0,"CA",2e+05,10,2e+06,0,,,,
+105,"IWantToDrawACatForYou",3,2,"Technology/Software","I Want To Draw A Cat For You - Online Services",11,"all_men",0,0,"IL",10000,25,40000,1,25000,33,75758,1
+106,"Salespreneur",3,2,"Business Services","Salespreneur - Professional Services",4,"all_men",0,0,"CT",90000,40,225000,0,,,,
+107,"Invis-A-Rack",3,2,"Automotive","Invis-A-Rack - Automotive",3,"all_men",0,0,"NC",1e+05,10,1e+06,0,,,,
+108,"VegasMagicShow",3,2,"Media/Entertainment","Vegas Magic Show - Entertainment",5,"all_men",0,0,"OH",1500000,20,7500000,0,,,,
+109,"YouSmellSoap",3,3,"Fashion/Beauty","You Smell Soap - Personal Care and Cosmetics",8,"all_women",1,0,"TX",55000,20,275000,1,50000,50,1e+05,1
+110,"ChordBuddy",3,3,"Media/Entertainment","Chord Buddy - Music",4,"all_men",0,0,"AL",125000,10,1250000,1,175000,20,875000,1
+111,"LiquidMoney",3,3,"Fashion/Beauty","Liquid Money - Novelties",4,"all_men",0,0,"FL",1e+05,5,2e+06,0,,,,
+112,"TailLightz",3,3,"Electronics","Tail Lightz - Electronics",4,"all_men",0,0,"CA",50000,50,1e+05,0,,,,
+113,"WineBalloon",3,4,"Food and Beverage","Wine Balloon - Wine Accessories",5,"all_men",0,0,"OH",40000,30,133333,1,4e+05,100,4e+05,1
+114,"ShowNo",3,4,"Fashion/Beauty","Show No - Baby and Children's Apparel and Accessories",9,"all_women",1,0,"CA",50000,25,2e+05,1,75000,25,3e+05,1
+115,"TheSwilt",3,4,"Fashion/Beauty","The Swilt - Undergarments and Basics",6,"all_women",1,0,"CA",30000,35,85714,0,,,,
+116,"PuppyCake",3,4,"Pet Products","Puppy Cake - Pet Products",5,"all_women",1,0,"PA",50000,25,2e+05,0,,,,
+117,"TheLastLid",3,5,"Lifestyle/Home","The Last Lid - Storage and Cleaning Products",8,"mixed",1,1,"RI",40000,20,2e+05,1,40000,60,66667,1
+118,"TalbottTeas",3,5,"Food and Beverage","Talbott Teas - Specialty Food",5,"all_men",0,1,"CA",250000,20,1250000,1,250000,35,714286,1
+119,"M3GirlDesigns",3,5,"Fashion/Beauty","M3 Girl Designs - Baby and Children's Apparel and Accessories",10,"all_women",1,1,"TX",3e+05,15,2e+06,1,3e+05,30,1e+06,3
+120,"LedgePillow",3,5,"Lifestyle/Home","Ledge Pillow - Novelties",4,"all_women",1,0,"FL",30000,25,120000,0,,,,
+121,"ReaderestSpecsecure",3,6,"Lifestyle/Home","Readerest Specsecure - Novelties",4,"all_men",0,0,"TX",150000,15,1e+06,1,150000,65,230769,1
+122,"ThePaintedPretzel",3,6,"Food and Beverage","The Painted Pretzel - Specialty Food",6,"all_women",1,0,"AZ",1e+05,25,4e+05,1,1e+05,25,4e+05,1
+123,"EssoWatches",3,6,"Fashion/Beauty","Esso Watches - Homeopathic Remedies",5,"all_men",0,0,"AZ",35000,20,175000,0,,,,
+124,"FiveMinuteFurniture",3,6,"Lifestyle/Home","Five Minute Furniture - Furniture",5,"all_men",0,0,"MT",250000,25,1e+06,0,,,,
+125,"Kisstixx",3,7,"Fashion/Beauty","Kisstixx - Personal Care and Cosmetics",6,"all_men",0,1,"UT",2e+05,20,1e+06,1,2e+05,40,5e+05,1
+126,"TheSmartBaker",3,7,"Food and Beverage","The Smart Baker - Kitchen Tools",6,"mixed",1,1,"FL",75000,25,3e+05,1,75000,40,187500,1
+127,"ScotteVest",3,7,"Fashion/Beauty","ScotteVest - Men and Women's Apparel",6,"all_men",0,0,"ID",5e+05,15,3333333,0,,,,
+128,"TheHeatHelper",3,7,"Lifestyle/Home","The Heat Helper - Home Accessories",6,"all_men",0,0,"KS",1e+05,50,2e+05,0,,,,
+129,"Litter",3,8,"Fashion/Beauty","Litter - Women's Accessories",4,"all_women",1,1,"CA",80000,51,156863,1,80000,51,156863,2
+130,"Nardo'sNatural",3,8,"Fashion/Beauty","Nardo's Natural - Personal Care and Cosmetics",7,"all_men",0,1,"FL",75000,12,625000,1,75000,50,150000,1
+131,"TheOriginalProfender",3,8,"Fitness/Sports/Outdoors","The Original Profender - Fitness Equipment",6,"all_men",0,0,"PA",75000,15,5e+05,0,,,,
+132,"Rent-A-Grandma",3,8,"Lifestyle/Home","Rent-A-Grandma - Consumer Services",4,"all_men",0,0,"CA",150000,20,750000,0,,,,
+133,"TowerPaddleBoards",3,9,"Fitness/Sports/Outdoors","Tower Paddle Boards - Outdoor Recreation",6,"all_men",0,0,"CA",150000,10,1500000,1,150000,30,5e+05,1
+134,"MisoMedia",3,9,"Media/Entertainment","Miso Media - Music",4,"all_men",0,0,"CA",3e+05,5,6e+06,1,3e+05,8,3750000,1
+135,"InstantLifts",3,9,"Fashion/Beauty","Instant Lifts - Personal Care and Cosmetics",7,"mixed",1,1,"FL",1e+05,25,4e+05,0,,,,
+136,"Vinamor",3,9,"Food and Beverage","Vinamor - Wine Accessories",4,"all_men",0,0,"CO",75000,30,250000,0,,,,
+137,"GoGoGear",3,10,"Fitness/Sports/Outdoors","GoGo Gear - Men and Women's Apparel",7,"all_women",1,1,"CA",3e+05,15,2e+06,1,3e+05,50,6e+05,1
+138,"TheAveVenice",3,10,"Fashion/Beauty","The Ave Venice - Men and Women's Shoes",8,"all_men",0,0,"CA",125000,15,833333,0,,,,
+139,"Brewer'sCow",3,10,"Food and Beverage","Brewer‚Äôs Cow - Specialty Food",5,"all_men",0,1,"CT",125000,15,833333,0,,,,
+140,"Bark'em'sToGo",3,10,"Pet Products","Bark‚Äôem‚Äôs To Go - Pet Products",6,"all_men",0,0,"CA",1e+05,51,196078,0,,,,
+141,"ViewSport",3,11,"Fitness/Sports/Outdoors","ViewSport - Fitness Apparel and Accessories",6,"all_men",0,0,"NY",5e+05,20,2500000,0,,,,
+142,"BlondiesCookies",3,11,"Food and Beverage","Blondies Cookies - Specialty Food",5,"all_women",1,0,"IN",2e+05,3,6666667,0,,,,
+143,"CopadiVino",3,11,"Food and Beverage","Copa di Vino - Alcoholic Beverages",6,"all_men",0,0,"OR",3e+05,5,6e+06,0,,,,
+144,"TheSullivanGenerator",3,11,"Green/CleanTech","The Sullivan Generator - Novelties",5,"all_men",0,0,"TX",1e+06,10,1e+07,0,,,,
+145,"Lollacup",3,12,"Children/Education","Lollacup - Baby and Child Care",6,"mixed",1,1,"CA",1e+05,15,666667,1,1e+05,40,250000,2
+146,"NailPak",3,12,"Fashion/Beauty","Nail Pak - Personal Care and Cosmetics",7,"all_women",1,0,"CT",50000,20,250000,1,50000,40,125000,1
+147,"DebbieBrooksHandbags",3,12,"Fashion/Beauty","Debbie Brooks Handbags - Women's Accessories",6,"mixed",1,1,"NY",540000,20,2700000,0,,,,
+148,"TrimiTank",3,12,"Fashion/Beauty","Trimi Tank - Women's Apparel",5,"all_women",1,1,"PA",57000,30,190000,0,,,,
+149,"VillyCustoms",3,13,"Fitness/Sports/Outdoors","Villy Customs - Cycling",4,"all_men",0,0,"TX",5e+05,33,1515152,1,5e+05,42,1190476,2
+150,"BootIllusions",3,13,"Fashion/Beauty","Boot Illusions - Women's Shoes",5,"mixed",1,1,"GA",1e+05,30,333333,1,5e+05,40,1250000,2
+151,"AirBedz",3,13,"Travel","AirBedz - Furniture",3,"all_men",0,0,"CA",250000,15,1666667,0,,,,
+152,"Skyride",3,13,"Fitness/Sports/Outdoors","Skyride - Outdoor Recreation",4,"all_men",0,0,"NY",3e+06,20,1.5e+07,0,,,,
+153,"DanceWithMe",3,14,"Fitness/Sports/Outdoors","Dance With Me - Fitness Programs",6,"all_men",0,0,"CA",1e+05,20,5e+05,1,1e+05,50,2e+05,2
+154,"WildSquirrelNutButter",3,14,"Food and Beverage","Wild Squirrel Nut Butter - Specialty Food",7,"all_women",1,1,"OR",50000,10,5e+05,1,50000,40,125000,1
+155,"MixBikini",3,14,"Fashion/Beauty","Mix Bikini - Women's Apparel",5,"all_men",0,1,"NY",50000,5,1e+06,1,50000,25,2e+05,1
+156,"Cab20RockBand",3,14,"Media/Entertainment","Cab20 Rock Band - Entertainment",5,"all_men",0,0,"CA",2e+05,20,1e+06,0,,,,
+157,"RemyxxReKixxSneakers",3,15,"Fashion/Beauty","Remyxx ReKixx Sneakers - Men and Women's Shoes",8,"all_men",0,0,"NC",50000,10,5e+05,1,50000,80,62500,1
+158,"UniKeyTechnologies",3,15,"Technology/Software","UniKey Technologies - Electronics",4,"all_men",0,0,"FL",5e+05,33,1515152,1,5e+05,40,1250000,2
+159,"TheNitroForceTitan1000",3,15,"Fitness/Sports/Outdoors","The NitroForce Titan 1000 - Fitness Equipment",7,"mixed",1,1,"OH",250000,10,2500000,0,,,,
+160,"CougarLimited",3,15,"Food and Beverage","Cougar Limited - Non-Alcoholic Beverages",5,"all_men",0,0,"TX",150000,30,5e+05,0,,,,
+161,"BevBuckle",4,1,"Liquor/Alcohol","Bev Buckle - Novelties",4,"all_men",0,0,"CO",50000,10,5e+05,1,50000,51,98039,1
+162,"BuggyBeds",4,1,"Lifestyle/Home","Buggy Beds - Pest Control",5,"all_women",1,1,"MA",125000,7,1785714,1,250000,25,1e+06,5
+163,"CoatChex",4,1,"Business Services","Coat Chex - Consumer Services",5,"all_men",0,0,"NY",2e+05,10,2e+06,0,,,,
+164,"BodyWalking",4,1,"Fashion/Beauty","Body Walking - Fitness Programs",5,"all_men",0,0,"AZ",1e+05,10,1e+06,0,,,,
+165,"SurfSetFitness",4,2,"Fitness/Sports/Outdoors","SurfSet Fitness - Fitness Programs",5,"mixed",1,1,"NH",150000,10,1500000,1,3e+05,30,1e+06,1
+166,"CATEapp",4,2,"Technology/Software","CateApp - Mobile Apps",4,"all_men",0,0,"CA",50000,5,1e+06,1,75000,30,250000,2
+167,"AlphaM",4,2,"Business Services","Alpha M - Consumer Services",5,"all_men",0,0,"GA",50000,10,5e+05,0,,,,
+168,"eCreamery",4,2,"Food and Beverage","eCreamery - Specialty Food",4,"all_women",1,1,"NE",250000,33,757576,0,,,,
+169,"RockBands",4,3,"Fashion/Beauty","Rock Bands - Men and Women's Accessories",7,"all_men",0,0,"FL",1e+05,20,5e+05,1,1e+05,40,250000,2
+170,"PostureNow",4,3,"Health/Wellness","Posture Now - Health and Well-Being",6,"all_men",0,1,"OR",1e+05,15,666667,1,1e+05,30,333333,1
+171,"FuzziBunz",4,3,"Children/Education","FuzziBunz - Baby and Child Care",6,"all_women",1,0,"LA",5e+05,15,3333333,0,,,,
+172,"LizLovelyCookies",4,3,"Food and Beverage","Liz Lovely Cookies - Specialty Food",6,"mixed",1,1,"VT",2e+05,10,2e+06,0,,,,
+173,"BagBowl",4,4,"Lifestyle/Home","Bag Bowl - Kitchen Tools",5,"all_men",0,1,"MO",40000,33,121212,1,40000,33,121212,1
+174,"Back9Dips",4,4,"Food and Beverage","Back 9 Dips - Specialty Food",6,"mixed",1,1,"FL",150000,15,1e+06,1,150000,25,6e+05,2
+175,"LifterHamper",4,4,"Lifestyle/Home","Lifter Hamper - Productivity Tools",5,"all_men",0,0,"UT",85000,12,708333,0,,,,
+176,"Zomm",4,4,"Lifestyle/Home","Zomm - Mobile Apps",4,"all_men",0,0,"OK",2e+06,10,2e+07,0,,,,
+177,"CozyBug",4,5,"Fashion/Beauty","Cozy Bug - Baby and Children's Apparel and Accessories",9,"all_women",1,0,"CA",50000,25,2e+05,1,50000,30,166667,1
+178,"MarzSprays",4,5,"Health/Wellness","Marz Sprays - Homeopathic Remedies",5,"all_men",0,1,"CA",2e+05,10,2e+06,1,2e+05,25,8e+05,1
+179,"WiredWaffles",4,5,"Food and Beverage","Wired Waffles - Specialty Food",5,"all_men",0,0,"WA",75000,25,3e+05,0,,,,
+180,"TheSpatty",4,5,"Food and Beverage","The Spatty and The Spaddy Dadd - Personal Care and Cosmetics",11,"all_women",1,0,"SC",50000,40,125000,0,,,,
+181,"PRO-NRG",4,6,"Food and Beverage","PRO-NRG - Non-Alcoholic Beverages",4,"mixed",1,1,"NJ",250000,15,1666667,1,250000,30,833333,1
+182,"CousinsMaineLobster",4,6,"Food and Beverage","Cousins Maine Lobster - Specialty Food",6,"all_men",0,1,"CA",55000,5,1100000,1,55000,15,366667,1
+183,"FreakerUSA",4,6,"Food and Beverage","Freaker USA - Novelties",4,"all_men",0,0,"NC",2e+05,10,2e+06,0,,,,
+184,"EcoNutsSoap",4,6,"Lifestyle/Home","EcoNutsSoap - Storage and Cleaning Products",6,"mixed",1,1,"CA",175000,15,1166667,0,,,,
+185,"SBU",4,7,"Fitness/Sports/Outdoors","SBU - Cycling",3,"all_men",0,1,"WA",3e+05,10,3e+06,1,3e+05,33,909091,2
+186,"ScrubDaddy",4,7,"Lifestyle/Home","Scrub Daddy - Kitchen Tools",5,"all_men",0,0,"PA",1e+05,10,1e+06,1,2e+05,20,1e+06,1
+187,"TheShemie",4,7,"Fashion/Beauty","The Shemie - Undergarments and Basics",6,"all_men",0,0,"CA",60000,20,3e+05,0,,,,
+188,"TheBear&TheRat",4,7,"Pet Products","The Bear & The Rat - Pet Products",8,"mixed",1,1,"CO",125000,20,625000,0,,,,
+189,"TheCoolWazoo",4,8,"Children/Education","The Cool Wazoo - Baby and Child Care",8,"all_women",1,0,"CA",65000,25,260000,1,65000,35,185714,1
+190,"PlateTopper",4,8,"Food and Beverage","Plate Topper - Kitchen Tools",5,"all_men",0,0,"CA",90000,5,1800000,1,90000,8,1125000,1
+191,"NoFlyCone",4,8,"Pet Products","No Fly Cone - Pest Control",6,"all_men",0,0,"CA",25000,15,166667,0,,,,
+192,"DriveSuits",4,9,"Uncertain/Other","Drive Suits - Costumes",4,"all_men",0,0,"CA",150000,20,750000,1,150000,30,5e+05,1
+193,"IceChipsCandy",4,9,"Food and Beverage","Ice Chips Candy - Specialty Food",6,"all_women",1,1,"WA",250000,15,1666667,1,125000,20,625000,2
+194,"ReVestor",4,9,"Technology/Software","ReVestor - Online Services",4,"all_men",0,0,"CA",250000,10,2500000,0,,,,
+195,"PCClassesOnline",4,9,"Technology/Software","PC Classes Online - Online Services",6,"all_men",0,0,"MA",150000,15,1e+06,0,,,,
+196,"RuckPack",4,10,"Fashion/Beauty","Ruck Pack Combat Nutrition - Specialty Food",7,"all_men",0,0,"CA",75000,10,750000,1,150000,20,750000,2
+197,"NearlyNewlywed",4,10,"Fashion/Beauty","Nearly Newlywed - Weddings",4,"all_women",1,0,"NY",35000,10,350000,0,,,,
+198,"TieTry",4,10,"Fashion/Beauty","Tie Try - Men's Accessories",5,"all_men",0,1,"NY",1e+05,25,4e+05,0,,,,
+199,"CorksAway",4,10,"Food and Beverage","Corks Away - Entertainment",4,"all_men",0,1,"CA",105000,20,525000,0,,,,
+200,"TheLivingChristmasCompany",4,11,"Lifestyle/Home","The Living Christmas Company - Holiday Cheer",7,"all_men",0,0,"CA",150000,30,5e+05,1,150000,40,375000,1
+201,"TheCoop",4,11,"Children/Education","The Coop - Baby and Children's Entertainment",7,"all_women",1,1,"CA",150000,15,1e+06,1,150000,15,1e+06,1
+202,"PartiePoche",4,11,"Fashion/Beauty","Partie Poche - Women's Accessories",5,"mixed",1,1,"CA",1e+05,20,5e+05,0,,,,
+203,"FatAssFudge",4,11,"Food and Beverage","Fat Ass Fudge - Specialty Food",6,"all_women",1,0,"NY",250000,5,5e+06,0,,,,
+204,"HotTot",4,12,"Children/Education","Hot Tot - Baby and Child Care",7,"all_women",1,0,"CO",50000,15,333333,1,75000,40,187500,1
+205,"TheGameFaceCompany",4,12,"Fashion/Beauty","The GameFace Company - Novelties",5,"all_men",0,0,"TX",450000,25,1800000,1,450000,35,1285714,2
+206,"DuraTent",4,12,"Food and Beverage","Dura Tent - Outdoor Recreation",5,"all_men",0,0,"CA",50000,30,166667,0,,,,
+207,"ARKEG",4,12,"Lifestyle/Home","ARKEG - Party Supplies",4,"all_men",0,1,"CA",1e+05,33,303030,0,,,,
+208,"CoffeeJoulies",4,13,"Food and Beverage","Coffee Joulies - Novelties",4,"all_men",0,1,"NJ",150000,5,3e+06,1,150000,0,0,4
+209,"TeddyNeedsABath",4,13,"Children/Education","Teddy Needs A Bath- Storage and Cleaning Products",8,"all_women",1,0,"CA",50000,10,5e+05,1,1e+05,30,333333,1
+210,"Urbio",4,13,"Lifestyle/Home","Urbio - Gardening",3,"all_men",0,1,"CA",3e+05,12,2500000,1,3e+05,15,2e+06,1
+211,"SubZeroIceCream",4,13,"Food and Beverage","Sub Zero Ice Cream - Specialty Food",7,"mixed",1,1,"UT",3e+05,12,2500000,0,,,,
+212,"SoundBender",4,14,"Electronics","Sound Bender - Electronics",4,"all_men",0,0,"MN",54000,26,207692,1,54000,40,135000,1
+213,"Bibitec",4,14,"Children/Education","Bibitec Bibs - Baby and Child Care",7,"mixed",1,1,"FL",40000,14,285714,0,,,,
+214,"CuddleTunes",4,14,"Children/Education","Cuddle Story Telling Bear - Toys and Games",8,"all_men",0,0,"CA",4e+05,20,2e+06,0,,,,
+215,"XeroShoes",4,14,"Fitness/Sports/Outdoors","Invisible Xero Shoes - Men and Women's Shoes",8,"mixed",1,1,"CO",4e+05,8,5e+06,0,,,,
+216,"HoodiePillow",4,15,"Lifestyle/Home","Hoodie Pillow - Novelties",4,"mixed",1,1,"NJ",90000,15,6e+05,1,90000,20,450000,1
+217,"GetGrinds",4,15,"Food and Beverage","Get Grinds - Specialty Food",5,"all_men",0,1,"CA",75000,10,750000,1,75000,15,5e+05,2
+218,"GreenGarmento",4,15,"Fashion/Beauty","Green Garmento - Storage and Cleaning Products",7,"all_women",1,0,"CA",3e+05,20,1500000,0,,,,
+219,"MyColdSnap",4,15,"Food and Beverage","My Cold Snap - Novelties",5,"all_men",0,1,"TX",50000,100,50000,0,,,,
+220,"SmartWheel",4,16,"Automotive","The Smart Wheel - Automotive",5,"mixed",1,1,"NJ",1e+05,15,666667,1,1e+05,30,333333,2
+221,"HowDoYouRoll?",4,16,"Food and Beverage","HDYR Sushi Bars - Specialty Food",6,"all_men",0,1,"TX",1e+06,12,8333333,1,1e+06,20,5e+06,1
+222,"GottaHaveS'More",4,16,"Food and Beverage","Gotta Have S'More - Specialty Food",6,"all_women",1,0,"CA",75000,25,3e+05,0,,,,
+223,"PrettyPaddedRoom",4,16,"Health/Wellness","Pretty Padded Room - Online Services",6,"all_women",1,0,"NY",1e+05,30,333333,0,,,,
+224,"Addison'sWonderland",4,17,"Children/Education","Addison's Wonderland - Baby and Children's Bedding",7,"all_women",1,1,"GA",90000,20,450000,0,,,,
+225,"HipChixs",4,17,"Fashion/Beauty","Hip Chixs - Women's Apparel",5,"all_women",1,1,"TX",150000,35,428571,0,,,,
+226,"ProofEyeWear",4,17,"Fashion/Beauty","Proof Eye Wear - Men and Women's Accessories",8,"all_men",0,1,"ID",150000,10,1500000,0,,,,
+227,"MuddyWaterCamo",4,17,"Fitness/Sports/Outdoors","Muddy Water Camo - Outdoor Recreation",6,"all_men",0,1,"MS",150000,5,3e+06,0,,,,
+228,"JeskaShoeCompany",4,18,"Fashion/Beauty","Jeska Shoe Company - Women's Shoes",6,"all_women",1,0,"AR",70000,30,233333,1,70000,70,1e+05,1
+229,"Nuts'nMore",4,18,"Food and Beverage","Nuts n More - Specialty Food",6,"all_men",0,1,"RI",250000,20,1250000,1,250000,30,833333,2
+230,"NeoInnovations",4,18,"Health/Wellness","Neo Innovations - Homeopathic Remedies",5,"all_men",0,1,"CO",80000,20,4e+05,0,,,,
+231,"PSIBands",4,18,"Health/Wellness","PSI Bands - Homeopathic Remedies",5,"all_women",1,0,"CA",250000,10,2500000,0,,,,
+232,"CordaRoy's",4,19,"Lifestyle/Home","CordaRoy's Bean Bag Beds - Furniture",6,"all_men",0,0,"FL",2e+05,20,1e+06,1,2e+05,58,344828,1
+233,"Lose12Inches",4,19,"Fitness/Sports/Outdoors","Lose 12 - Fitness Programs",5,"all_men",0,0,"CO",120000,25,480000,1,125000,25,5e+05,1
+234,"BabyLovesDisco",4,19,"Children/Education","Baby Loves Disco - Baby and Children's Entertainment",8,"mixed",1,1,"OR",150000,10,1500000,0,,,,
+235,"CellHelmet",4,19,"Electronics","Cell Helmet - Electronics",4,"all_men",0,1,"PA",160000,20,8e+05,0,,,,
+236,"CoolWraps",4,20,"Lifestyle/Home","CoolWraps - Holiday Cheer",4,"all_men",0,0,"FL",1e+05,40,250000,1,250000,100,250000,1
+237,"SimpleSugarScrubs",4,20,"Fashion/Beauty","Simple Sugar Scrubs - Personal Care and Cosmetics",8,"all_women",1,0,"PA",1e+05,10,1e+06,1,1e+05,33,303030,1
+238,"DropStop",4,20,"Automotive","Drop Stop - Automotive",4,"all_men",0,1,"CA",3e+05,15,2e+06,1,3e+05,20,1500000,1
+239,"TraditionalFisheries",4,20,"Food and Beverage","Traditional Fisheries - Specialty Food",5,"all_men",0,1,"MN",225000,25,9e+05,0,,,,
+240,"GobieH20",4,21,"Travel","GOBIE H20 - Water Bottles",5,"all_men",0,0,"CA",3e+05,10,3e+06,1,3e+05,40,750000,1
+241,"LiddUp",4,21,"Food and Beverage","LiddUp Coolers - Novelties",4,"all_men",0,1,"NV",1e+05,10,1e+06,1,1e+05,33,303030,1
+242,"Rootsuit",4,21,"Fashion/Beauty","Rootsuit - Costumes",3,"all_men",0,0,"LA",1e+05,15,666667,0,,,,
+243,"EchoValleyMeats",4,21,"Food and Beverage","Echo Valley Meats - Specialty Food",6,"all_men",0,0,"IL",150000,20,750000,0,,,,
+244,"WickedGoodCupCakes",4,22,"Food and Beverage","Wicked Good Cup Cakes - Specialty Food",7,"all_women",1,1,"MA",75000,20,375000,1,75000,0,0,1
+245,"TheMissionBelt",4,22,"Fashion/Beauty","The Mission Belt - Men's Accessories",6,"all_men",0,0,"UT",50000,20,250000,1,50000,37.5,133333,1
+246,"ShellBobbers",4,22,"Fitness/Sports/Outdoors","Shell Bobbers - Outdoor Recreation",5,"all_men",0,1,"FL",80000,20,4e+05,1,80000,33,242424,1
+247,"TremontElectric",4,22,"Green/CleanTech","Tremont Electric - Outdoor Recreation",5,"all_men",0,0,"OH",2e+06,22,9090909,0,,,,
+248,"Mee-Ma'sGumbo",4,23,"Food and Beverage","Me-Ma's Gumbo Bricks - Specialty Food",6,"all_women",1,0,"CA",2e+05,20,1e+06,1,2e+05,50,4e+05,2
+249,"MistoBox",4,23,"Food and Beverage","Misto Box Coffee Club - Specialty Food",7,"mixed",1,1,"AZ",75000,15,5e+05,1,75000,30,250000,1
+250,"VermontButcherBlock",4,23,"Lifestyle/Home","Vermont Butcher Block and Board- Kitchen Tools",7,"all_men",0,0,"VT",4e+05,25,1600000,0,,,,
+251,"SquirrelBoss",4,23,"Pet Products","Squirrel Boss Bird Feeder - Pest Control",7,"all_men",0,0,"PA",130000,40,325000,0,,,,
+252,"PinkShutterPhotoBooths",4,24,"Media/Entertainment","Pink Shutter Photo Booths - Entertainment",6,"all_men",0,1,"CA",3e+05,10,3e+06,1,3e+05,33,909091,1
+253,"KaZAM",4,24,"Fitness/Sports/Outdoors","KaZam Balancing Bike's - Toys and Games",7,"all_women",1,0,"VA",3e+05,20,1500000,1,3e+05,32,937500,2
+254,"Baby'sBadassBurgers",4,24,"Food and Beverage","Baby's Badass Burgers - Specialty Food",6,"all_women",1,1,"FL",250000,30,833333,0,,,,
+255,"TrackDays",4,24,"Media/Entertainment","Track Days - Entertainment",4,"all_men",0,1,"CA",5e+06,34,14705882,0,,,,
+256,"StellaValle",4,25,"Fashion/Beauty","Stella Valle Jewelry - Women's Accessories",6,"all_women",1,1,"NJ",150000,25,6e+05,1,150000,35,428571,2
+257,"GeekChic",4,25,"Fashion/Beauty","Geek Chic - Furniture",4,"all_men",0,0,"WA",1e+05,5,2e+06,1,3e+05,25,1200000,1
+258,"LugLess",4,25,"Travel","LugLess - Consumer Services",4,"all_men",0,0,"NY",1e+05,10,1e+06,0,,,,
+259,"JonesScones",4,25,"Food and Beverage","Jones Scones - Specialty Food",5,"all_men",0,0,"CO",1e+05,25,4e+05,0,,,,
+260,"Ryan'sBarkery",4,26,"Pet Products","Ryan's Barkery Ry’s Ruffery - Pet Products",7,"all_men",0,1,"CT",25000,25,1e+05,1,25000,25,1e+05,1
+261,"VerbalizeIt",4,26,"Business Services","Verbalize It App - Online Services",6,"all_men",0,1,"NY",250000,15,1666667,1,250000,20,1250000,1
+262,"TomnChee",4,26,"Food and Beverage","Tom n Chee - Specialty Food",6,"all_men",0,1,"OH",6e+05,10,6e+06,1,6e+05,15,4e+06,2
+263,"ThreeDayRule",4,26,"Technology/Software","Three Day Rule - Online Services",6,"all_women",1,0,"CA",2e+05,10,2e+06,0,,,,
+264,"SweetBallz",5,1,"Food and Beverage","Sweet Ballz - Specialty Food",5,"all_men",0,0,"TX",250000,10,2500000,1,250000,25,1e+06,2
+265,"PostcardOnTheRun",5,1,"Technology/Software","Postcard on the Run - Online Services",7,"all_men",0,0,"CA",3e+05,5,6e+06,1,3e+05,7.5,4e+06,1
+266,"Lynnae'sGourmetPickles",5,1,"Food and Beverage","Lynnaes Gourmet Pickles - Specialty Food",6,"all_women",1,0,"WA",125000,20,625000,0,,,,
+267,"RoloDoc",5,1,"Health/Wellness","RoloDoc - Online Services",4,"all_men",0,1,"AZ",50000,20,250000,0,,,,
+268,"Kane&Couture",5,2,"Pet Products","Kane & Couture Dog Clothes - Pet Products",8,"all_women",1,0,"NY",150000,33,454545,1,150000,40,375000,2
+269,"Breathometer",5,2,"Health/Wellness","Breathometer - Automotive",3,"all_men",0,0,"CA",250000,10,2500000,1,1e+06,30,3333333,5
+270,"MangoMango",5,2,"Food and Beverage","Mango Mango Preserve - Specialty Food",6,"all_women",1,1,"VA",75000,20,375000,0,,,,
+271,"ManMedals",5,2,"Uncertain/Other","Man Medals - Novelties",4,"all_men",0,0,"MI",10000,10,1e+05,0,,,,
+272,"Freeloader",5,3,"Travel","Freeloader Child Carrier - Baby and Child Care",8,"all_men",0,0,"TX",2e+05,15,1333333,1,2e+05,33,606061,1
+273,"RapidRamenCooker",5,3,"Food and Beverage","Rapid Ramen Cooker - Kitchen Tools",6,"all_men",0,0,"CA",3e+05,10,3e+06,1,150000,15,2e+06,1
+274,"FairyTaleWishes",5,3,"Children/Education","Fairy Tale Wishes - Baby and Child Care",8,"all_women",1,0,"IL",35000,33,106061,0,,,,
+275,"KooknKap",5,3,"Food and Beverage","Kook n' Kap - Kitchen Tools",6,"all_women",1,1,"CA",50000,20,250000,0,,,,
+276,"ScreenMend",5,4,"Lifestyle/Home","Screen Mend - Home Improvement",5,"mixed",1,1,"NY",30000,25,120000,1,30000,50,60000,1
+277,"Hamboards",5,4,"Fitness/Sports/Outdoors","Hamboards Skateboard/Surfboard - Outdoor Recreation",5,"all_men",0,0,"CA",1e+05,15,666667,1,3e+05,30,1e+06,1
+278,"SundayNightSlowJams",5,4,"Lifestyle/Home","R Dubs Sunday Night Slow Jams - Entertainment",8,"all_men",0,0,"CA",75000,10,750000,0,,,,
+279,"Scan",5,4,"Technology/Software","Scan. Me App - Mobile Apps",6,"all_men",0,0,"CA",1e+06,5,2e+07,0,,,,
+280,"VeggieMamaGardenPops",5,5,"Food and Beverage","Veggie Mama Garden Pops - Baby and Children's Food",9,"mixed",1,1,"CA",75000,15,5e+05,1,75000,20,250000,2
+281,"RuffleButts",5,5,"Fashion/Beauty","Ruffle Butts - Rugged Butts - Baby and Children's Apparel and Accessories",12,"mixed",1,1,"TX",6e+05,7,8571429,1,6e+05,9,6666667,1
+282,"BareEase",5,5,"Lifestyle/Home","Bare Ease Bikini Waxing - Personal Care and Cosmetics",9,"all_women",1,0,"CA",50000,20,250000,0,,,,
+283,"RentAGoat",5,5,"Pet Products","Rent A Goat - Professional Services",6,"all_men",0,1,"CA",150000,25,6e+05,0,,,,
+284,"TotalMerchantResources",5,6,"Business Services","Total Merchant Resources - Professional Services",6,"mixed",1,1,"NJ",2e+05,20,1e+06,1,2e+05,50,4e+05,1
+285,"TenThirtyOneProductions",5,6,"Media/Entertainment","Ten Thirty One Haunted Hayrides - Entertainment",7,"all_women",1,0,"CA",2e+06,10,2e+07,1,2e+06,20,1e+07,1
+286,"FiberFix",5,6,"Lifestyle/Home","Fiber Fix Tape - Home Improvement",6,"all_men",0,0,"UT",90000,10,9e+05,1,250000,12,2083333,1
+287,"ElephantChat",5,6,"Uncertain/Other","Elephant Chat - Novelties",4,"mixed",1,1,"TX",50000,20,250000,0,,,,
+288,"180Cup",5,7,"Lifestyle/Home","180 Party Cup - Party Supplies",6,"all_men",0,0,"NY",3e+05,15,2e+06,1,3e+05,25,1200000,1
+289,"Tree-T-Pee",5,7,"Green/CleanTech","Tree-T-Pee - Gardening",3,"all_men",0,0,"FL",150000,20,750000,1,150000,20,750000,1
+290,"BetterLife",5,7,"Green/CleanTech","Better Life Cleaning Products - Storage and Cleaning Products",9,"all_men",0,1,"MO",4e+05,7,5714286,1,4e+05,17,2352941,1
+291,"KymeraBodyBoard",5,7,"Fitness/Sports/Outdoors","Kymera Electric Surfboards - Outdoor Recreation",6,"all_men",0,0,"CA",250000,20,1250000,0,,,,
+292,"PaparazziProposals",5,8,"Lifestyle/Home","Paparazzi Proposals - Weddings",4,"all_men",0,0,"NY",250000,20,1250000,1,250000,33,757576,2
+293,"SchulziesBreadPudding",5,8,"Food and Beverage","Schulzies Bread Pudding - Specialty Food",6,"all_women",1,0,"CA",160000,20,8e+05,0,,,,
+294,"BellyBuds",5,8,"Health/Wellness","BellyBuds - Maternity",3,"all_men",0,0,"CA",5e+05,12.5,4e+06,0,,,,
+295,"PetPaint",5,8,"Pet Products","PetPaint - Pet Products",4,"all_men",0,0,"CA",2e+05,20,1e+06,0,,,,
+296,"SurpriseRide",5,9,"Children/Education","Surprise Ride - Toys and Games",6,"all_women",1,0,"DC",110000,10,1100000,0,,,,
+297,"Slawsa",5,9,"Food and Beverage","Slawsa - Specialty Food",4,"all_women",1,0,"NC",150000,15,1e+06,0,,,,
+298,"DoorBot",5,9,"Lifestyle/Home","DoorBot - Home Security Solutions",5,"all_men",0,0,"CA",7e+05,10,7e+06,0,,,,
+299,"MagicMoments",5,9,"Technology/Software","Magic Moments - Online Services",5,"all_men",0,0,"MI",5e+05,15,3333333,0,,,,
+300,"Grace&Lace",5,10,"Fashion/Beauty","Grace & Lace Knitted Boot Socks - Women's Accessories",9,"mixed",1,1,"TX",175000,10,1750000,1,87500,10,1750000,1
+301,"Yubo",5,10,"Children/Education","Yubo Customized Lunch Boxes - Toys and Games",8,"mixed",1,1,"CA",150000,15,1e+06,1,150000,20,750000,2
+302,"PurseCase",5,10,"Fashion/Beauty","PurseCase - Women's Accessories",4,"all_women",1,1,"CA",55000,12,458333,1,55000,15,366667,1
+303,"Chocomize",5,10,"Food and Beverage","Chocomize Chocolate Bars - Specialty Food",6,"all_men",0,0,"NY",5e+05,20,2500000,0,,,,
+304,"Bubba’s-QBBQ",5,11,"Food and Beverage","boneless baby back ribs",4,"mixed",1,1,"OH",3e+05,15,2e+06,1,3e+05,30,1e+06,1
+305,"SpiritHoods",5,11,"Fashion/Beauty","SpiritHoods - Fashion Accessories",4,"mixed",1,1,"CA",450000,15,3e+06,0,,,,
+306,"FoHawx",5,11,"Fitness/Sports/Outdoors","FoHawx - Baby and Child Care",6,"all_women",1,0,"NY",150000,30,5e+05,0,,,,
+307,"VirtuixOmni",5,11,"Electronics","Virtuix Omni - Electronics",4,"all_men",0,0,"TX",2e+06,10,2e+07,0,,,,
+308,"TipsyElves",5,12,"Fashion/Beauty","Tipsy Elves - Holiday Cheer",5,"all_men",0,0,"CA",1e+05,5,2e+06,1,1e+05,10,1e+06,1
+309,"OneLifeProducts",5,12,"Lifestyle/Home","One Life Products - Holiday Cheer",6,"all_men",0,0,"CA",50000,15,333333,1,50000,35,142857,1
+310,"CashmereHair",5,12,"Fashion/Beauty","Cashmere Hair - Personal Care and Cosmetics",7,"all_women",1,1,"CA",45000,15,3e+05,0,,,,
+311,"Lite-Netics",5,12,"Lifestyle/Home","Lite-Netics - Holiday Cheer",4,"all_men",0,0,"TX",125000,20,625000,0,,,,
+312,"GrooveBook",5,13,"Technology/Software","GrooveBook - Consumer Services",4,"mixed",1,1,"CA",150000,20,750000,1,150000,80,187500,2
+313,"TheWallDoctoRX",5,13,"Lifestyle/Home","The Wall DoctoRX - Home Improvement",6,"all_men",0,0,"DE",150000,10,1500000,1,150000,0,0,1
+314,"BounceBootCamp",5,13,"Children/Education","Bounce Boot Camp - Baby and Children's Entertainment",8,"all_men",0,0,"AZ",30000,20,150000,0,,,,
+315,"EyeBloc",5,13,"Technology/Software","EyeBloc - Novelties",3,"all_men",0,0,"DC",50000,10,5e+05,0,,,,
+316,"LockerBones",5,14,"Children/Education","LockerBones - Storage and Cleaning Products",6,"all_men",0,1,"MS",175000,10,1750000,1,175000,50,350000,2
+317,"InvisiPlug",5,14,"Technology/Software","InvisiPlug - Home Accessories",4,"all_men",0,1,"CA",125000,10,1250000,1,125000,10,1250000,1
+318,"BalloonDistractions",5,14,"Children/Education","Balloon Distractions - Baby and Children's Entertainment",7,"all_men",0,0,"FL",250000,30,833333,0,,,,
+319,"AlaskaGlacialMudCo.",5,14,"Fashion/Beauty","Alaska Glacial Mud Co. - Personal Care and Cosmetics",9,"all_women",1,0,"AK",1e+05,20,5e+05,0,,,,
+320,"SwimZip",5,15,"Children/Education","SwimZip - Baby and Child Care",6,"mixed",1,1,"KS",60000,5,1200000,1,60000,20,3e+05,1
+321,"FreshlyPicked",5,15,"Children/Education","Freshly Picked - Baby and Children's Apparel and Accessories",9,"all_women",1,0,"UT",150000,10,1500000,1,150000,25,6e+05,1
+322,"FitDeck",5,15,"Fitness/Sports/Outdoors","FitDeck - Fitness Programs",4,"all_men",0,0,"CA",3e+05,20,1500000,0,,,,
+323,"LifeCaps",5,15,"Health/Wellness","LifeCaps - Homeopathic Remedies",4,"all_men",0,0,"UT",2e+05,30,666667,0,,,,
+324,"TheCookieDoughCafe",5,16,"Food and Beverage","The Cookie Dough Cafe - Specialty Food",7,"all_women",1,0,"IL",50000,20,250000,1,1e+05,30,333333,2
+325,"Cycloramic",5,16,"Technology/Software","Cycloramic - Mobile Apps",4,"all_men",0,0,"GA",90000,5,1800000,1,5e+05,15,3333333,2
+326,"Nexersys",5,16,"Fitness/Sports/Outdoors","Nexersys - Fitness Equipment",4,"all_men",0,0,"TX",2e+06,10,2e+07,0,,,,
+327,"CowWowCerealMilk",5,16,"Food and Beverage","Cow Wow Cereal Milk - Baby and Children's Food",9,"mixed",1,1,"CA",250000,10,2500000,0,,,,
+328,"SpyEscapeAndEvasion",5,17,"Children/Education","Spy Escape and Evasion - Professional Services",7,"all_men",0,0,"UT",1e+05,15,666667,1,150000,45,333333,1
+329,"SouthernCultureArtisanFoods",5,17,"Food and Beverage","Southern Culture Artisan Foods - Specialty Food",7,"all_women",1,0,"GA",1e+05,25,4e+05,1,1e+05,38,263158,1
+330,"DDPYoga",5,17,"Fitness/Sports/Outdoors","DDP Yoga - Fitness Programs",5,"all_men",0,0,"GA",2e+05,5,4e+06,0,,,,
+331,"Moberi",5,17,"Food and Beverage","Moberi - Specialty Food",4,"all_men",0,0,"OR",50000,15,333333,0,,,,
+332,"Bambooee",5,18,"Lifestyle/Home","Bambooee - Storage and Cleaning Products",6,"mixed",1,1,"CA",2e+05,10,2e+06,1,2e+05,10,2e+06,1
+333,"Buzzy4Shots",5,18,"Health/Wellness","Buzzy4Shots - Baby and Child Care",6,"all_women",1,0,"GA",5e+05,5,1e+07,0,,,,
+334,"ZipIt",5,18,"Lifestyle/Home","ZipIt - Baby and Children's Bedding",6,"all_women",1,0,"CA",75000,20,375000,0,,,,
+335,"Cheek'd",5,18,"Technology/Software","Cheek'd - Consumer Services",4,"all_women",1,0,"NY",1e+05,10,1e+06,0,,,,
+336,"U-Lace",5,19,"Fashion/Beauty","U-Lace - Baby and Children's Apparel and Accessories",8,"all_men",0,0,"NY",2e+05,25,8e+05,1,2e+05,35,571429,1
+337,"RevoLights",5,19,"Fitness/Sports/Outdoors","RevoLights - Cycling",3,"all_men",0,0,"CA",150000,10,1500000,1,3e+05,10,3e+06,1
+338,"SqueekyKnees",5,19,"Children/Education","Squeeky Knees - Baby and Children's Apparel and Accessories",9,"mixed",1,1,"CA",80000,20,4e+05,0,,,,
+339,"TheBufferBit",5,19,"Fashion/Beauty","The Buffer Bit - Automotive",5,"all_men",0,0,"IL",75000,25,3e+05,0,,,,
+340,"Henry'sHumdingers",5,20,"Food and Beverage","Henry's Humdingers - Specialty Food",5,"all_men",0,0,"WA",150000,25,6e+05,1,3e+05,75,4e+05,2
+341,"BooBooGoo",5,20,"Health/Wellness","Boo Boo Goo - Baby and Child Care",8,"mixed",1,1,"CA",1e+05,17.5,571429,1,1e+05,25,4e+05,1
+342,"iReTron",5,20,"Technology/Software","iReTron - Consumer Services",4,"all_men",0,0,"CA",1e+05,20,5e+05,1,1e+05,20,5e+05,2
+343,"DefineBottle",5,20,"Food and Beverage","Define Bottle - Water Bottles",5,"all_men",0,0,"VA",1e+05,20,5e+05,0,,,,
+344,"PackbackBooks",5,21,"Children/Education","Packback Books - Education",4,"mixed",1,1,"IL",2e+05,10,2e+06,0,,,,
+345,"Chapul",5,21,"Food and Beverage","Chapul - Specialty Food",4,"all_men",0,0,"UT",50000,5,1e+06,1,50000,15,333333,1
+346,"GarageDoorLock",5,21,"Lifestyle/Home","Garage Door Lock - Home Security Solutions",7,"all_men",0,0,"CA",275000,30,916667,1,275000,35,785714,1
+347,"MorningHead",5,21,"Lifestyle/Home","MorningHead - Personal Care and Cosmetics",6,"all_men",0,0,"MA",25000,20,125000,0,,,,
+348,"Plated",5,22,"Food and Beverage","Plated - Specialty Food",4,"all_men",0,0,"NY",5e+05,4,12500000,1,5e+05,5.6,8992806,1
+349,"MonkeyMat",5,22,"Lifestyle/Home","Monkey Mat - Baby and Child Care",7,"all_women",1,0,"TX",1e+05,30,333333,1,1e+05,35,285714,2
+350,"ThePaintBrushCover",5,22,"Lifestyle/Home","The Paint Brush Cover - Home Improvement",7,"all_men",0,0,"NJ",50000,10,5e+05,1,1e+05,20,5e+05,1
+351,"KodiakCakes",5,22,"Food and Beverage","Kodiak Cakes - Specialty Food",5,"all_men",0,0,"UT",5e+05,10,5e+06,0,,,,
+352,"VelocitySigns",5,23,"Business Services","Velocity Signs - Novelties",4,"all_men",0,1,"CA",225000,15,1500000,1,225000,30,750000,3
+353,"HappyFeet",5,23,"Fashion/Beauty","Happy Feet - Novelties",4,"all_men",0,0,"KY",375000,15,2500000,1,375000,25,1500000,1
+354,"HoldYourHaunches",5,23,"Fashion/Beauty","Hold Your Haunches - Undergarments and Basics",7,"all_women",1,1,"GA",75000,20,375000,1,1e+05,40,250000,2
+355,"LordNutLevington",5,23,"Food and Beverage","Lord Nut Levington - Specialty Food",6,"all_men",0,0,"TX",5e+05,30,1666667,0,,,,
+356,"FunTimeExpress",5,24,"Children/Education","Fun Time Express - Baby and Children's Entertainment",8,"all_men",0,1,"IL",125000,20,625000,1,125000,20,625000,2
+357,"PowerPot",5,24,"Food and Beverage","PowerPot - Outdoor Recreation",4,"all_men",0,0,"UT",250000,10,2500000,1,250000,12,2083333,1
+358,"QuickstopFireSprinklerTools",5,24,"Lifestyle/Home","Quickstop Fire Sprinkler Tools - Productivity Tools",7,"all_men",0,0,"CA",150000,10,1500000,0,,,,
+359,"TaylorRobinsonMusic",5,24,"Technology/Software","Taylor Robinson Music - Online Services",6,"all_men",0,0,"TX",1e+05,10,1e+06,0,,,,
+360,"ZooBean",5,25,"Children/Education","ZooBean - Baby and Children's Entertainment",6,"mixed",1,1,"DC",250000,15,1666667,1,250000,30,833333,1
+361,"iLumi",5,25,"Electronics","iLumi - Electronics LED smart light bulbs",7,"all_men",0,1,"TX",350000,15,2333333,1,350000,25,1400000,1
+362,"FortMagic",5,25,"Children/Education","Fort Magic - Toys and Games",6,"all_women",1,0,"FL",75000,15,5e+05,0,,,,
+363,"Intelli-StopperTechnology",5,25,"Food and Beverage","Intelli-Stopper Technology - Wine Accessories",5,"all_men",0,0,"NV",250000,10,2500000,0,,,,
+364,"RuggedManiac",5,26,"Fitness/Sports/Outdoors","Rugged Maniac - Entertainment",4,"all_men",0,1,"MA",1e+06,10,1e+07,1,1750000,25,7e+06,1
+365,"CerebralSuccess",5,26,"Health/Wellness","Cerebral Success - Homeopathic Remedies",5,"all_men",0,0,"UT",75000,20,375000,1,75000,40,187500,1
+366,"Mo'sBows",5,26,"Fashion/Beauty","Mo's Bows - Men's Accessories",5,"all_men",0,0,"TN",50000,20,250000,0,,,,
+367,"Crio",5,26,"Food and Beverage","Crio - Specialty Food",4,"all_men",0,0,"UT",1e+06,10,1e+07,0,,,,
+368,"Angellift",5,27,"Fashion/Beauty","Angellift - Personal Care and Cosmetics",6,"all_men",0,0,"CA",5e+05,10,5e+06,1,5e+05,15,3333333,1
+369,"HangEase",5,27,"Lifestyle/Home","HangEase - Storage and Cleaning Products",6,"all_men",0,0,"TX",80000,30,266667,1,80000,30,266667,2
+370,"TheBouqsCompany",5,27,"Lifestyle/Home","The Bouqs Company - Consumer Services",6,"all_men",0,0,"CA",258000,3,8600000,0,,,,
+371,"SustyParty",5,27,"Lifestyle/Home","Susty Party - Party Supplies",5,"all_women",1,0,"NY",250000,10,2500000,0,,,,
+372,"OruKayak",5,28,"Fitness/Sports/Outdoors","Oru Kayak - Outdoor Recreation",5,"all_men",0,0,"CA",5e+05,12,4166667,1,5e+05,25,2e+06,1
+373,"BonAffair",5,28,"Food and Beverage","Bon Affair - Alcoholic Beverages",5,"all_women",1,0,"CA",150000,35,428571,1,150000,35,428571,1
+374,"Cinnaholic",5,28,"Food and Beverage","Cinnaholic - Specialty Food",4,"mixed",1,1,"CA",2e+05,20,1e+06,1,2e+05,40,5e+05,1
+375,"HargittMarineServices",5,28,"Fitness/Sports/Outdoors","Hargitt Marine Services - Professional Services",6,"all_men",0,0,"WA",250000,25,1e+06,0,,,,
+376,"FootFairy",5,29,"Technology/Software","Foot Fairy - Online Services",5,"all_women",1,1,"CA",75000,15,5e+05,1,1e+05,40,250000,1
+377,"BZbox",5,29,"Lifestyle/Home","BZbox - Productivity Tools",4,"all_women",1,0,"IL",50000,20,250000,1,50000,40,125000,1
+378,"Tie-Not",5,29,"Children/Education","Tie-Not - Toys and Games",5,"all_men",0,0,"IL",125000,10,1250000,0,,,,
+379,"Baker'sEdge",5,29,"Food and Beverage","Baker's Edge - Kitchen Tools",5,"mixed",1,1,"IN",4e+05,20,2e+06,0,,,,
+380,"SleepingBaby",6,1,"Children/Education","Sleeping Baby - Baby and Child Care",7,"mixed",1,1,"TX",2e+05,10,2e+06,1,2e+05,20,1e+06,1
+381,"Bombas",6,1,"Fashion/Beauty","Bombas - Undergarments and Basics",5,"all_men",0,0,"NY",2e+05,5,4e+06,1,2e+05,17.5,1142857,1
+382,"Hammer&Nails",6,1,"Fashion/Beauty","Hammer & Nails - Personal Care and Cosmetics",8,"all_men",0,0,"CA",2e+05,20,1e+06,0,,,,
+383,"Amber",6,1,"Electronics","Amber - Electronics",3,"all_men",0,0,"DC",2e+05,20,1e+06,0,,,,
+384,"Kronos",6,2,"Fitness/Sports/Outdoors","Kronos - Golf Products",4,"all_men",0,0,"CA",150000,15,1e+06,1,150000,30,5e+05,1
+385,"Roominate",6,2,"Children/Education","Roominate - Toys and Games",5,"all_women",1,0,"CA",5e+05,5,1e+07,1,5e+05,5,1e+07,2
+386,"TheFloatingMugCo.",6,2,"Lifestyle/Home","The Floating Mug Co. - Novelties",6,"all_men",0,0,"NC",75000,15,5e+05,0,,,,
+387,"WeddingWagon",6,2,"Lifestyle/Home","Wedding Wagon - Weddings",4,"all_men",0,0,"NV",125000,20,625000,0,,,,
+388,"HeartPup",6,3,"Pet Products","Heart Pup - Pet Products",5,"all_women",1,0,"CA",25000,10,250000,1,50000,40,125000,1
+389,"SoapSox",6,3,"Children/Education","SoapSox - Baby and Child Care",6,"all_men",0,1,"CA",260000,10,2600000,0,,,,
+390,"NinjaCards",6,3,"Children/Education","Ninja Cards - Toys and Games",6,"all_men",0,0,"IL",60000,30,2e+05,0,,,,
+391,"DrumPants",6,3,"Fashion/Beauty","DrumPants - Music",3,"mixed",1,1,"CA",150000,5,3e+06,0,,,,
+392,"PaperBoxPilots",6,4,"Children/Education","Paper Box Pilots - Toys and Games",7,"all_men",0,0,"UT",35000,25,140000,1,35000,50,70000,1
+393,"Reviver",6,4,"Lifestyle/Home","Reviver - Personal Care and Cosmetics",6,"all_men",0,1,"TX",150000,5,3e+06,1,150000,15,1e+06,1
+394,"FunCakesRental",6,4,"Food and Beverage","FunCakes Rental - Weddings",4,"all_women",1,0,"MI",285000,25,1140000,0,,,,
+395,"TableJacks",6,4,"Lifestyle/Home","Table Jacks - Novelties",4,"all_men",0,0,"TX",1e+05,25,4e+05,0,,,,
+396,"TheRedDressBoutique",6,5,"Fashion/Beauty","The Red Dress Boutique - Women's Apparel",7,"mixed",1,1,"GA",6e+05,5,1.2e+07,1,1200000,20,6e+06,2
+397,"SunStaches",6,5,"Fashion/Beauty","SunStaches - Novelties",3,"all_men",0,1,"CA",3e+05,5,6e+06,1,3e+05,20,1500000,1
+398,"JungleJumpaRoo",6,5,"Children/Education","Jungle JumpaRoo - Toys and Games",6,"mixed",1,1,"UT",1e+05,20,5e+05,0,,,,
+399,"TheCaddyGirls",6,5,"Fitness/Sports/Outdoors","The Caddy Girls - Entertainment",5,"all_women",1,0,"NC",1e+05,20,5e+05,0,,,,
+400,"Honeyfund",6,6,"Technology/Software","Honeyfund - Weddings",3,"mixed",1,1,"CA",4e+05,10,4e+06,1,4e+05,0,0,1
+401,"BeatBoxBeverages",6,6,"Food and Beverage","BeatBox Beverages - Alcoholic Beverages",5,"mixed",1,1,"TX",2e+05,10,2e+06,1,1e+06,33,3030303,1
+402,"OilerieUSA",6,6,"Food and Beverage","Oilerie USA - Specialty Food",5,"all_men",0,1,"WI",5e+05,35,1428571,0,,,,
+403,"EmergenSee",6,6,"Technology/Software","EmergenSee - Home Security Solutions",5,"all_men",0,1,"CA",250000,10,2500000,0,,,,
+404,"MyselfBelts",6,7,"Children/Education","Myself Belts - Baby and Children's Apparel and Accessories",9,"all_women",1,0,"MO",60000,10,6e+05,1,75000,25,3e+05,1
+405,"Titin",6,7,"Fitness/Sports/Outdoors","Titin - Fitness Apparel and Accessories",6,"all_men",0,0,"GA",5e+05,5,1e+07,1,5e+05,20,2500000,1
+406,"SingTrix",6,7,"Children/Education","SingTrix - Electronics",3,"all_men",0,1,"NY",1500000,5,3e+07,0,,,,
+407,"Beardbrand",6,7,"Fashion/Beauty","Beardbrand - Personal Care and Cosmetics",6,"all_men",0,0,"CA",4e+05,15,2666667,0,,,,
+408,"TheNaturalGrip",6,8,"Fitness/Sports/Outdoors","The Natural Grip - Fitness Apparel and Accessories",8,"all_women",1,0,"KY",1e+05,20,5e+05,1,125000,25,5e+05,1
+409,"BottleBreacher",6,8,"Food and Beverage","Bottle Breacher - Novelties",4,"all_men",0,1,"AZ",150000,10,1500000,1,150000,20,750000,2
+410,"Man-Pack",6,8,"Fashion/Beauty","Man-Pack - Men's Accessories",4,"all_men",0,0,"VA",2e+05,29,689655,0,,,,
+411,"PriorityOneCanine",6,8,"Pet Products","Priority One Canine - Professional Services",6,"mixed",1,1,"OH",75000,15,5e+05,0,,,,
+412,"HeidiHo",6,9,"Food and Beverage","Heidi Ho - Specialty Food",5,"all_women",1,0,"OR",125000,20,625000,1,125000,30,416667,1
+413,"SquattyPotty",6,9,"Lifestyle/Home","Squatty Potty - Health and Well-Being",6,"mixed",1,1,"UT",350000,5,7e+06,1,350000,10,3500000,1
+414,"Pipsnacks",6,9,"Food and Beverage","Pipsnacks - Specialty Food",4,"mixed",1,1,"NY",2e+05,10,2e+06,1,2e+05,10,2e+06,1
+415,"StormStoppers",6,9,"Lifestyle/Home","Storm Stoppers - Novelties",4,"all_men",0,0,"FL",1e+05,10,1e+06,0,,,,
+416,"MagicCook",6,10,"Food and Beverage","MagicCook - Outdoor Recreation",4,"all_women",1,0,"CA",1e+05,20,5e+05,1,1e+05,33,303030,1
+417,"EarthLog",6,10,"Lifestyle/Home","Earth Log - Home Accessories",5,"all_men",0,0,"CA",160000,20,8e+05,1,160000,30,533333,1
+418,"KitchenSafe",6,10,"Food and Beverage","Kitchen Safe - Storage and Cleaning Products",7,"all_men",0,1,"CA",1e+05,5,2e+06,1,1e+05,20,5e+05,2
+419,"OffTheCob",6,10,"Food and Beverage","Off the Cob - Specialty Food",6,"all_men",0,0,"NY",1e+05,15,666667,0,,,,
+420,"Biaggi",6,11,"Lifestyle/Home","Biaggi - Storage and Cleaning Products",6,"all_men",0,0,"NY",5e+05,30,1666667,1,5e+05,33,1515152,1
+421,"GamedayCouture",6,11,"Fashion/Beauty","Gameday Couture - Men and Women's Apparel",7,"mixed",1,1,"OK",5e+05,20,2500000,1,5e+05,30,1666667,1
+422,"Zipz",6,11,"Food and Beverage","Zipz - Alcoholic Beverages",4,"all_men",0,0,"CA",2500000,10,2.5e+07,1,2500000,10,2.5e+07,1
+423,"SoapsWashesAndGroomingEssentials",6,11,"Fashion/Beauty","Soaps Washes and Grooming Essentials (aka S.W.A.G. Essentials) - Personal Care and Cosmetics",13,"all_women",1,0,"TX",125000,20,625000,0,,,,
+424,"HoppyPaws",6,12,"Lifestyle/Home","Hoppy Paws - Holiday Cheer",5,"all_women",1,0,"CA",50000,10,5e+05,1,1e+05,49,204082,1
+425,"Q-Flex",6,12,"Health/Wellness","Q-Flex - Health and Well-Being",5,"all_women",1,1,"CA",20000,20,1e+05,1,25000,25,1e+05,2
+426,"TheMenschOnABench",6,12,"Lifestyle/Home","The Mensch on a Bench - Holiday Cheer",8,"all_men",0,0,"OH",150000,10,1500000,1,150000,15,1e+06,2
+427,"EveDrop",6,12,"Lifestyle/Home","Eve Drop - Holiday Cheer",5,"all_men",0,0,"NV",75000,20,375000,0,,,,
+428,"BantamBagels",6,13,"Food and Beverage","Bantam Bagels - Specialty Food",5,"mixed",1,1,"NY",275000,11,2500000,1,275000,25,1100000,1
+429,"Doorman",6,13,"Lifestyle/Home","Doorman - Consumer Services",4,"all_men",0,0,"CA",250000,10,2500000,1,250000,12,2083333,1
+430,"SkinnyShirt",6,13,"Fashion/Beauty","SkinnyShirt - Women's Apparel",4,"all_women",1,0,"NY",1e+05,20,5e+05,0,,,,
+431,"CoffeeMeetsBagel",6,13,"Technology/Software","Coffee Meets Bagel - Online Services",6,"all_women",1,1,"CA",5e+05,5,1e+07,0,,,,
+432,"Evrewares",6,14,"Fashion/Beauty","Evrewares - Party Supplies",4,"all_women",1,1,"NC",1e+05,30,333333,1,2e+05,100,2e+05,1
+433,"BottleBright",6,14,"Lifestyle/Home","Bottle Bright - Storage and Cleaning Products",7,"all_men",0,1,"VA",75000,15,5e+05,1,75000,33,227273,1
+434,"Scratch&GrainBakingCo",6,14,"Food and Beverage","Scratch & Grain Baking Co - Specialty Food",8,"all_women",1,1,"OR",150000,20,750000,1,150000,20,750000,1
+435,"Vestpakz",6,14,"Children/Education","Vestpakz - Baby and Child Care",6,"all_men",0,1,"GA",50000,10,5e+05,0,,,,
+436,"TurboPUP",6,15,"Pet Products","TurboPUP - Pet Products",4,"all_women",1,0,"OR",1e+05,20,5e+05,1,1e+05,35,285714,1
+437,"Lumio",6,15,"Lifestyle/Home","Lumio - Home Accessories",4,"all_men",0,0,"CA",250000,8,3125000,1,350000,10,3500000,1
+438,"BelloVerde",6,15,"Fashion/Beauty","Bello Verde - Men and Women's Apparel",7,"all_men",0,0,"OH",360000,6,6e+06,0,,,,
+439,"Napwell",6,15,"Lifestyle/Home","Napwell - Health and Well-Being",5,"all_men",0,1,"MA",1e+05,10,1e+06,0,,,,
+440,"GreenBox",6,16,"Food and Beverage","GreenBox - Storage and Cleaning Products",6,"mixed",1,1,"NY",3e+05,10,3e+06,1,3e+05,10,3e+06,1
+441,"Phonesoap",6,16,"Technology/Software","Phonesoap - Storage and Cleaning Products",6,"all_men",0,1,"UT",3e+05,7.5,4e+06,1,3e+05,10,3e+06,1
+442,"Victoria'sKitchen",6,16,"Food and Beverage","Victoria's Kitchen - Specialty Food",5,"mixed",1,1,"CA",2e+05,20,1e+06,0,,,,
+443,"TycoonRealEstate",6,16,"Technology/Software","Tycoon Real Estate - Online Services",6,"all_men",0,0,"CA",50000,5,1e+06,0,,,,
+444,"FreshPatch",6,17,"Pet Products","Fresh Patch - Pet Products",5,"all_men",0,0,"FL",150000,10,1500000,1,150000,20,750000,2
+445,"DrainStrain",6,17,"Lifestyle/Home","Drain Strain - Storage and Cleaning Products",7,"all_men",0,0,"MO",110000,15,733333,1,110000,10,1100000,1
+446,"BalmChickyBalmBalm",6,17,"Fashion/Beauty","Balm Chicky Balm Balm - Personal Care and Cosmetics",9,"all_women",1,1,"OR",75000,20,375000,0,,,,
+447,"BedJet",6,17,"Lifestyle/Home","BedJet - Home Accessories",4,"all_men",0,0,"RI",250000,10,2500000,0,,,,
+448,"BeverageBoy",6,18,"Food and Beverage","BeverageBoy - Novelties",3,"all_men",0,0,"SC",50000,15,333333,1,50000,35,142857,1
+449,"FunBites",6,18,"Children/Education","FunBites - Baby and Child Care",6,"all_women",1,0,"NY",75000,20,375000,1,75000,25,3e+05,1
+450,"TheLipBar",6,18,"Fashion/Beauty","The Lip Bar - Personal Care and Cosmetics",8,"all_women",1,1,"NY",125000,20,625000,0,,,,
+451,"HimalayanDogChew",6,18,"Pet Products","Himalayan Dog Chew - Pet Products",6,"all_men",0,1,"WA",750000,5,1.5e+07,0,,,,
+452,"Boobypack",6,19,"Fashion/Beauty","Boobypack - Women's Apparel",4,"all_women",1,0,"CA",80000,20,4e+05,1,80000,25,320000,1
+453,"GoldRushNuggetBucket",6,19,"Children/Education","Gold Rush Nugget Bucket - Novelties",6,"all_men",0,0,"OR",60000,15,4e+05,1,60000,25,240000,1
+454,"SsekoDesigns",6,19,"Fashion/Beauty","Sseko Designs - Men and Women's Shoes",7,"mixed",1,1,"OR",3e+05,10,3e+06,0,,,,
+455,"Lumi",6,19,"Fashion/Beauty","Lumi - Novelties",3,"all_women",1,0,"CA",250000,5,5e+06,0,,,,
+456,"LuminAid",6,20,"Travel","LuminAid - Electronics",3,"all_women",1,1,"MI",2e+05,10,2e+06,1,3e+05,15,2e+06,1
+457,"Scholly",6,20,"Children/Education","Scholly - Online Services",4,"all_men",0,0,"PA",40000,15,266667,1,40000,15,266667,2
+458,"KeenHome",6,20,"Lifestyle/Home","Keen Home - Home Accessories",5,"all_men",0,1,"NY",750000,10,7500000,1,750000,13,5769231,1
+459,"TaalumaTotes",6,20,"Fashion/Beauty","Taaluma Totes - Men and Women's Accessories",7,"mixed",1,1,"VA",110000,15,733333,0,,,,
+460,"CocoJack",6,21,"Food and Beverage","Coco Jack - Kitchen Tools",5,"all_men",0,0,"TX",125000,10,1250000,1,125000,25,5e+05,1
+461,"BedRyder",6,21,"Automotive","BedRyder - Automotive",3,"all_men",0,0,"GA",2e+05,15,1333333,0,,,,
+462,"FrillClothing",6,21,"Fashion/Beauty","Frill - Women's Apparel",4,"all_women",1,1,"NC",1e+05,20,5e+05,1,1e+05,20,5e+05,2
+463,"TwinZPillow",6,21,"Children/Education","Twin Z Pillow - Baby and Child Care",8,"mixed",1,1,"GA",75000,10,750000,1,75000,20,375000,1
+464,"EchoValleyMeats",6,22,"Food and Beverage","Echo Valley Meats - Specialty Food",6,"all_men",0,0,"IL",150000,20,750000,1,150000,25,6e+05,1
+465,"EmazingLights",6,22,"Media/Entertainment","Emazing Lights - Party Supplies",5,"all_men",0,0,"CA",650000,5,1.3e+07,1,650000,5,1.3e+07,2
+466,"AquaVault",6,22,"Lifestyle/Home","Aqua Vault - Storage and Cleaning Products",7,"all_men",0,1,"FL",75000,12,625000,1,75000,25,3e+05,1
+467,"Naja",6,22,"Fashion/Beauty","Naja - Women's Apparel",4,"all_women",1,0,"CA",5e+05,5,1e+07,0,,,,
+468,"BeeSweetLemonade",6,23,"Food and Beverage","Bee Sweet Lemonade - Non-Alcoholic Beverages",6,"mixed",1,1,"TX",60000,10,6e+05,1,60000,25,240000,1
+469,"BrandYourself",6,23,"Technology/Software","Brand Yourself - Online Services",5,"all_men",0,0,"NY",2e+06,13.5,14814815,0,,,,
+470,"iCPooch",6,23,"Pet Products","iC Pooch - Pet Products",5,"mixed",1,1,"WA",150000,20,750000,0,,,,
+471,"TheHomeT",6,23,"Fashion/Beauty","The Home T - Men and Women's Apparel",8,"all_men",0,0,"NY",250000,5,5e+06,0,,,,
+472,"Budsies",6,24,"Children/Education","Budsies - Toys and Games",5,"all_men",0,0,"FL",1e+05,5,2e+06,0,,,,
+473,"BeeThinking",6,24,"Lifestyle/Home","Bee Thinking - Professional Services",5,"all_men",0,0,"OR",4e+05,10,4e+06,0,,,,
+474,"PullyPalz",6,24,"Children/Education","PullyPalz - Baby and Child Care",6,"all_women",1,0,"GA",1e+05,20,5e+05,1,1e+05,28,357143,1
+475,"Forus",6,24,"Fitness/Sports/Outdoors","Forus - Men and Women's Shoes",6,"all_men",0,1,"IN",2e+05,15,1333333,0,,,,
+476,"NeatCheeks",6,25,"Children/Education","NeatCheeks - Baby and Child Care",6,"all_women",1,1,"CO",150000,20,750000,1,150000,25,6e+05,1
+477,"MelniConnectors",6,25,"Electronics","Melni Connectors - Electronics",4,"all_men",0,1,"ID",5e+05,5,1e+07,1,5e+05,12,4166667,1
+478,"BeneathTheInk",6,25,"Technology/Software","Beneath the Ink - Online Services",6,"mixed",1,1,"CO",350000,10,3500000,0,,,,
+479,"PittMoss",6,25,"Green/CleanTech","PittMoss - Gardening",3,"all_men",0,0,"PA",6e+05,25,2400000,1,6e+05,35,1714286,3
+480,"ZinePak",6,26,"Media/Entertainment","ZinePak - Music",3,"all_women",1,1,"NY",725000,10,7250000,1,725000,17.5,4142857,2
+481,"SnagaStool",6,26,"Technology/Software","SnagaStool - Online Services",4,"all_men",0,1,"MA",120000,18,666667,0,,,,
+482,"BuckMason",6,26,"Fashion/Beauty","Buck Mason - Men and Women's Apparel",7,"all_men",0,1,"CA",2e+05,8,2500000,0,,,,
+483,"Noene",6,26,"Fashion/Beauty","Noene - Fitness Apparel and Accessories",6,"all_men",0,0,"GA",1e+05,10,1e+06,1,2e+05,30,666667,2
+484,"AirCar",6,27,"Travel","AirCar Zero Pollution Motors - Automotive",6,"all_men",0,1,"NY",5e+06,50,1e+07,1,5e+06,50,1e+07,1
+485,"PaleoDietFoods",6,27,"Food and Beverage","Paleo Diet Foods - Specialty Food",6,"all_women",1,0,"CO",150000,20,750000,0,,,,
+486,"WorldRecordStriperCompany",6,27,"Fitness/Sports/Outdoors","World Record Striper Company - Outdoor Recreation",7,"all_men",0,0,"CT",75000,20,375000,1,50000,33,151515,1
+487,"Frameri",6,27,"Fashion/Beauty","Frameri - Men and Women's Accessories",6,"all_men",0,1,"OH",150000,3.5,4285714,0,,,,
+488,"ZoomInteriors",6,28,"Lifestyle/Home","Zoom - Online Services",4,"all_women",1,0,"PA",1e+05,20,5e+05,1,1e+05,33,303030,1
+489,"SunscreenMist",6,28,"Lifestyle/Home","Sunscreen Mist - Outdoor Recreation",5,"all_men",0,1,"MI",4e+05,15,2666667,0,,,,
+490,"SynDaverLabs",6,28,"Health/Wellness","SynDaver Labs - Education",4,"all_men",0,0,"FL",3e+06,10,3e+07,1,3e+06,25,1.2e+07,1
+491,"YouKickAss",6,28,"Children/Education","You Kick Ass - Novelties",5,"all_women",1,1,"WA",1e+05,10,1e+06,1,1e+05,10,1e+06,1
+492,"SharkWheel",6,29,"Fitness/Sports/Outdoors","Shark Wheel - Outdoor Recreation",5,"all_men",0,1,"CA",1e+05,5,2e+06,1,225000,7.5,3e+06,3
+493,"GatoCafe",6,29,"Pet Products","Gato Cafe - Entertainment",4,"all_women",1,0,"FL",1e+05,20,5e+05,0,,,,
+494,"SwayMotorsports",6,29,"Green/CleanTech","Sway Motorsports - Automotive",4,"all_men",0,0,"CA",3e+05,10,3e+06,1,3e+05,20,1500000,1
+495,"Spikeball",6,29,"Fitness/Sports/Outdoors","Spikeball - Toys and Games",5,"all_men",0,0,"IL",5e+05,10,5e+06,1,5e+05,20,2500000,1
+496,"TheBeebo",7,1,"Children/Education","baby bottle holder",3,"all_men",0,,"FL",2e+05,20,1e+06,1,2e+05,30,666667,2
+497,"Acton",7,1,"Fitness/Sports/Outdoors","motorized roller skates",3,"all_men",0,,"NE",1e+06,3.5,28571429,0,,,,
+498,"McClaryBrothersDrinkingVinegars",7,1,"Food and Beverage","vinegars to be used in cocktails and soda",8,"all_women",1,,"MI",1e+05,15,666667,0,,,,
+499,"SignalVault",7,1,"Technology/Software","protector for credit cards",4,"all_men",0,,"FL",2e+05,12.5,1600000,1,2e+05,25,8e+05,2
+500,"O'DangHummus",7,2,"Food and Beverage","flavored hummuses and hummus-based salad dressing",6,"all_men",0,,"FL",50000,10,5e+05,1,50000,20,250000,2
+501,"Splikity",7,2,"Technology/Software","password manager software",3,"all_men",0,,,2e+05,10,2e+06,0,,,,
+502,"MikkiBey",7,2,"Fashion/Beauty","Eyelash Extensions",2,"all_women",1,,,3e+05,20,1500000,0,,,,
+503,"Loliware",7,2,"Food and Beverage","edible disposable cups",3,"all_women",1,,"CA",150000,10,1500000,1,6e+05,25,2400000,2
+504,"FootCardigan",7,3,"Fashion/Beauty","subscription service for fun and unique socks",7,"all_men",0,,"CA",250000,10,2500000,1,250000,20,1250000,2
+505,"ValPark",7,3,"Technology/Software","valet and garage parking",4,"all_men",0,,,3e+05,20,1500000,0,,,,
+506,"TheTwoGuysBowtieCompany",7,3,"Fashion/Beauty","wooden bowties, hats, and accessories",5,"all_men",0,,,150000,10,1500000,1,150000,17.5,857143,2
+507,"Nerdwax",7,3,"Fashion/Beauty","product to prevent eyeglasses and sunglasses",6,"mixed",1,,,80000,20,4e+05,0,,,,
+508,"Table87",7,4,"Food and Beverage","flash-frozen New York-style pizza",4,"all_men",0,,,2e+05,10,2e+06,1,250000,20,1250000,1
+509,"EZPeeZ",7,4,"Children/Education","EZ-Pee-Z - toilet seat and potty training seat",8,"all_men",0,,,50000,15,333333,0,,,,
+510,"Milk+Brookies",7,4,"Food and Beverage","brownies and cookies",3,"mixed",1,,,1e+05,20,5e+05,0,,,,
+511,"DudeWipes",7,4,"Lifestyle/Home","disposable toilet wipes",3,"all_men",0,,"IL",3e+05,10,3e+06,1,3e+05,25,1200000,1
+512,"ThreeJerksJerky",7,5,"Food and Beverage","premium beef jerky",3,"all_men",0,,,1e+05,15,666667,1,1e+05,15,666667,1
+513,"TheSkinnyMirror",7,5,"Fashion/Beauty","mirror that reflects a slightly slimmer reflection",7,"all_women",1,,,2e+05,20,1e+06,0,,,,
+514,"SwitchWitch",7,5,"Children/Education","children's book and doll",4,"mixed",1,,,55000,25,220000,0,,,,
+515,"XCraft",7,5,"Technology/Software","personal use drone",3,"all_men",0,,,5e+05,20,2500000,1,1500000,25,6e+06,5
+516,"RentLikeAChampion",7,6,"Technology/Software","service to rent homes",4,"all_men",0,,,2e+05,10,2e+06,1,2e+05,10,2e+06,2
+517,"Hotshot",7,6,"Food and Beverage","eady-to-drink, canned hot coffee",4,"all_men",0,,,3e+05,10,3e+06,0,,,,
+518,"Windcatcher",7,6,"Lifestyle/Home","valve that allows for quicker inflation of objects",8,"all_men",0,,,2e+05,8,2500000,1,2e+05,5,4e+06,1
+519,"StemCenterUSA",7,6,"Children/Education","learning center for science, technology, engineering, and math",8,"all_women",1,,,150000,15,1e+06,1,2e+05,20,1e+06,1
+520,"WinkFrozenDesserts",7,7,"Food and Beverage","alternative to ice cream",4,"mixed",1,,,3e+05,15,2e+06,0,,,,
+521,"SavvyNaturals",7,7,"Lifestyle/Home","beauty bars and lotions",4,"mixed",1,1,,2e+05,10,2e+06,1,2e+05,40,5e+05,1
+522,"CleanCube",7,7,"Lifestyle/Home","digital doorman storage system",4,"all_men",0,,"NY",3e+05,10,3e+06,0,,,,
+523,"SimplyFitBoard",7,7,"Fitness/Sports/Outdoors","balance board for better workouts",5,"all_women",1,,,125000,15,833333,1,125000,20,625000,2
+524,"AFreshSheet",7,8,"Lifestyle/Home","bedsheet with removable disposable layers",5,"all_men",0,,,1e+05,20,5e+05,0,,,,
+525,"Unshrinkit",7,8,"Lifestyle/Home","product to help unshrink wool garments",6,"mixed",1,,,150000,10,1500000,1,150000,15,1e+06,1
+526,"GripClean",7,8,"Fitness/Sports/Outdoors","natural hand soap",3,"all_men",0,,"OR",85000,20,425000,1,85000,35,242857,1
+527,"PolarPro",7,8,"Technology/Software","accessories and filters for digital photography and drones",8,"all_men",0,,,5e+05,10,5e+06,1,1e+06,20,5e+06,2
+528,"AdvancedSportsTechnology",7,9,"Fitness/Sports/Outdoors","league and licensing group",4,"all_men",0,,,160000,10,1600000,0,,,,
+529,"BraziBites",7,9,"Food and Beverage","Brazilian cheese bread",3,"mixed",1,,"OR",2e+05,10,2e+06,1,2e+05,16.5,1212121,1
+530,"Umano",7,9,"Fashion/Beauty","clothing featuring art by children",5,"all_men",0,,,150000,15,1e+06,1,150000,20,750000,2
+531,"SockTabs",7,9,"Lifestyle/Home","connector to keep socks together",5,"mixed",1,,,50000,20,250000,1,50000,30,166667,1
+532,"LeauxRacingTrikes",7,10,"Fitness/Sports/Outdoors","recumbent tricycle",2,"all_men",0,,,120000,20,6e+05,0,,,,
+533,"GlowRecipe",7,10,"Fashion/Beauty","skin treatment products",3,"all_women",1,,"NY",425000,10,4250000,1,425000,25,1700000,1
+534,"SarahOliverHandbags",7,10,"Fashion/Beauty","designer handbags hand-knitted",3,"all_women",1,,,250000,20,1250000,1,250000,30,833333,3
+535,"Trunkster",7,10,"Lifestyle/Home","high-tech travel suitcase",3,"all_men",0,,,1400000,5,2.8e+07,1,1400000,5,2.8e+07,2
+536,"GeekMyTree",7,11,"Lifestyle/Home","Christmas tree lights with smart technology",6,"all_men",0,,,225000,25,9e+05,1,225000,50,450000,1
+537,"BeardHead",7,11,"Fashion/Beauty","novelty hats and beanies with detachable face masks",8,"all_men",0,,"CA",250000,25,1e+06,0,,,,
+538,"Lovepop",7,11,"Lifestyle/Home","stationery and greeting cards",4,"all_men",0,,,3e+05,10,3e+06,1,3e+05,15,2e+06,1
+539,"PiperWai",7,11,"Fashion/Beauty","natural deodorant without chemicals",4,"all_women",1,,,50000,10,5e+05,1,50000,25,2e+05,1
+540,"AbsProteinPancakes",7,12,"Food and Beverage","line of pancake mixes",4,"mixed",1,,"FL",120000,40,3e+05,1,120000,42,285714,1
+541,"ExtremeSandbox",7,12,"Children/Education","heavy-duty construction equipment",3,"all_men",0,,"MN",150000,15,1e+06,1,150000,20,750000,2
+542,"TotalTieKeep",7,12,"Fashion/Beauty","necktie accessory",2,"all_men",0,,,50000,25,2e+05,0,,,,
+543,"FireAvert",7,12,"Lifestyle/Home","device which shuts off power",5,"all_men",0,0,"UT",3e+05,7,4285714,1,3e+05,10,3e+06,1
+544,"Spretz",7,13,"Lifestyle/Home","2-in-1 breath and hand freshener and odor remover",8,"all_men",0,,,1e+05,20,5e+05,0,,,,
+545,"HungryHarvest",7,13,"Food and Beverage","service delivering less-appealing surplus produce",5,"all_men",0,,,50000,5,1e+06,1,1e+05,10,1e+06,1
+546,"ControlledChaos",7,13,"Fashion/Beauty","hair care products for very curly hair",7,"all_women",1,,,50000,20,250000,1,60000,50,120000,1
+547,"EZPZ",7,13,"Food and Beverage","all-in-one placemat and plate with suction cups",7,"all_women",1,,,1e+06,5,2e+07,0,,,,
+548,"Fixed",7,14,"Technology/Software","app that helps overturn invalid parking and traffic violation tickets",10,"all_men",0,,,7e+05,5,1.4e+07,1,7e+05,7,1e+07,1
+549,"HatchBaby",7,14,"Children/Education","smart changing pad that syncs information",6,"mixed",1,,"CA",250000,2.5,1e+07,1,250000,3.3,7500000,1
+550,"VillageScholarships",7,14,"Children/Education","crowdfunding approach to college scholarships",5,"mixed",1,,,125000,10,1250000,0,,,,
+551,"BeardKing",7,14,"Fashion/Beauty","bib used while shaving to catch cut facial hairs",9,"mixed",1,,"MA",1e+05,20,5e+05,1,1e+05,45,222222,1
+552,"Shefit",7,15,"Fitness/Sports/Outdoors","adjustable sports bra",3,"mixed",1,,,250000,20,1250000,1,250000,33.3,750000,1
+553,"Co.alition",7,15,"Technology/Software","backpack with an integrated wireless hard drive",7,"all_men",0,,,2e+05,20,1e+06,0,,,,
+554,"icybreeze",7,15,"Travel","portable air conditioner built into a cooler",7,"all_men",0,,,50000,5,1e+06,0,,,,
+555,"2400Expert",7,15,"Children/Education","test prep resource for mastering the SAT test",8,"all_men",0,,"NV",250000,10,2500000,1,250000,20,1250000,1
+556,"R.Riveter",7,16,"Fashion/Beauty","handbags made from upcycled military materials",6,"all_women",1,,"NC",1e+05,20,5e+05,1,1e+05,20,5e+05,1
+557,"Beartek",7,16,"Media/Entertainment","gloves that are capable of remotely controlling smartphones",8,"all_men",0,,,5e+05,5,1e+07,0,,,,
+558,"MajorMom",7,16,"Lifestyle/Home","professionally organize cluttered rooms",4,"all_women",1,,,150000,20,750000,0,,,,
+559,"CombatFlipFlops",7,16,"Fashion/Beauty","flip-flops, belts, and other accessories",5,"all_men",0,,"WA",150000,10,1500000,1,3e+05,30,1e+06,3
+560,"SmartPlate",7,17,"Health/Wellness","plate with technology that analyzes meals",6,"all_men",0,,,1e+06,15,6666667,0,,,,
+561,"BeeFreeHonee",7,17,"Food and Beverage","apple-based vegan alternative to honey",5,"all_women",1,,"MN",1e+05,10,1e+06,1,210000,30,7e+05,3
+562,"FloatBaby",7,17,"Children/Education","flotation and massage facility for babies",6,"all_women",1,,,150000,20,750000,0,,,,
+563,"MTAILOR",7,17,"Fashion/Beauty","app that takes body measurements",5,"all_men",0,,"CA",2500000,10,2.5e+07,0,,,,
+564,"Sworkit",7,18,"Fitness/Sports/Outdoors","personalized customizeable workout app",4,"all_men",0,1,"MD",1500000,8,18750000,1,1500000,10,1.5e+07,1
+565,"CleanSleep",7,18,"Lifestyle/Home","service to clean mattresses and associated bedding",7,"all_men",0,,,1500000,15,1e+07,0,,,,
+566,"TUTUblue",7,18,"Fitness/Sports/Outdoors","full-body swimsuits to prevent sun damage",6,"all_women",1,,,2e+05,25,8e+05,0,,,,
+567,"Nohbo",7,18,"Green/CleanTech","concentrated balls of shampoo and conditioner",6,"all_men",0,,"FL",1e+05,20,5e+05,1,1e+05,25,4e+05,1
+568,"Insta-Fire",7,19,"Lifestyle/Home","fire starter product with less chemicals",6,"all_men",0,,,3e+05,10,3e+06,1,3e+05,30,1e+06,2
+569,"CustardStandFoodProducts",7,19,"Food and Beverage","hot dog chili",3,"mixed",1,,"WV",4e+05,10,4e+06,0,,,,
+570,"PRx",7,19,"Fitness/Sports/Outdoors","weightlifting and gym equipment",4,"all_men",0,,"ND",80000,10,8e+05,1,80000,20,4e+05,1
+571,"RagsToRaches",7,19,"Fashion/Beauty","one-piece rompers for children",4,"all_women",1,,"UT",2e+05,10,2e+06,1,2e+05,15,1333333,1
+572,"BetterBack",7,20,"Health/Wellness","back supporter which improves posture",5,"all_women",1,0,"CA",750000,7.5,1e+07,1,750000,8,1e+07,1
+573,"GlaceCryotherapy",7,20,"Health/Wellness","whole-body cryotherapy device",3,"mixed",1,,"CA",1e+05,15,666667,1,1e+05,30,333333,1
+574,"Linka",7,20,"Fitness/Sports/Outdoors","bicycle lock and alarm with smart technology",7,"all_men",0,,,250000,10,2500000,0,,,,
+575,"Teaspresso",7,20,"Food and Beverage","concentrated tea shots made like espresso",6,"all_women",1,,,50000,10,5e+05,0,,,,
+576,"MobCraftBeer",7,21,"Liquor/Alcohol","craft brewery that uses crowdsourcing",5,"all_men",0,,"WI",4e+05,16,2500000,0,,,,
+577,"BelovedShirts",7,21,"Fashion/Beauty","humorous print clothing",3,"all_men",0,,,175000,5,3500000,0,,,,
+578,"IlumiBowl",7,21,"Lifestyle/Home","toilet seat light for nighttime bathroom use",7,"all_men",0,,"UT",1e+05,15,666667,1,1e+05,25,4e+05,1
+579,"InnovationPet",7,21,"Pet Products","line of pet toys, houses, and accessories",7,"mixed",1,,"OR",250000,5,5e+06,1,250000,12.5,2e+06,1
+580,"BeerBlizzard",7,22,"Liquor/Alcohol","device that attaches to the domed underside of canned beverages",10,"all_men",0,,"PA",1e+05,10,1e+06,1,1e+05,25,4e+05,1
+581,"Vengo",7,22,"Food and Beverage","slim digital vending machine",4,"all_men",0,1,"NY",2e+06,12.5,1.6e+07,1,2e+06,10,2e+07,2
+582,"TheGoodPromise",7,22,"Food and Beverage","fruit and vegetable smoothies and sauces",6,"all_women",1,,,1e+05,20,5e+05,0,,,,
+583,"Wondercide",7,22,"Pet Products","natural and organic pesticide ",4,"all_women",1,,"TX",5e+05,5,1e+07,1,5e+05,3,16666667,1
+584,"PrideBites",7,23,"Pet Products","customizable accessories for pets",4,"all_men",0,,,2e+05,10,2e+06,1,2e+05,20,1e+06,2
+585,"Trobo",7,23,"Children/Education","interactive story-telling plush robot",4,"all_men",0,,,1e+05,10,1e+06,1,166666,33.3,499998,1
+586,"NoPhone",7,23,"Uncertain/Other","NoPhone - fake phones",4,"all_men",0,,"NY",25000,15,166667,0,,,,
+587,"Coolbox",7,23,"Lifestyle/Home","toolbox with innovative features and integrated technology",7,"all_men",0,1,,5e+05,10,5e+06,1,5e+05,15,3333333,1
+588,"Petnostics",7,24,"Pet Products","chemical testing kit designed to test pet's urine",8,"all_men",0,,"NY",3e+05,10,3e+06,1,3e+05,20,1500000,2
+589,"Frends",7,24,"Fashion/Beauty","designer brand of headphones with changeable styles",7,"all_men",0,,,1e+06,7.6,13157895,0,,,,
+590,"popSLATE",7,24,"Technology/Software","smartphone case that adds a rear second screen",8,"all_men",0,,,5e+05,5,1e+07,0,,,,
+591,"SlydeHandboards",7,24,"Fitness/Sports/Outdoors","small waveriding board that straps to the user's hand",9,"mixed",1,,"CA",2e+05,15,1333333,1,2e+05,22,909091,2
+592,"TheDripDrop",7,25,"Food and Beverage","edible ring designed to catch drips",6,"all_men",0,,"CO",50000,20,250000,1,50000,33.3,150150,1
+593,"Jarrett&RajaProductions",7,25,"Media/Entertainment","magic and music act",4,"all_men",0,,"NV",750000,40,1875000,0,,,,
+594,"KidRunner",7,25,"Fitness/Sports/Outdoors","stroller designed to be towed while jogging",7,"all_men",0,,"OR",5e+05,20,2500000,0,,,,
+595,"InchBug",7,25,"Children/Education","products for young children ",4,"all_women",1,,"TX",4e+05,10,4e+06,0,,,,
+596,"FashionTap",7,26,"Fashion/Beauty","social networking app to help sell fashion and beauty products",10,"all_women",1,,"CA",1e+05,10,1e+06,0,,,,
+597,"brellabox",7,26,"Uncertain/Other","brellabox - umbrella rentals",4,"mixed",1,,"NY",4e+05,20,2e+06,0,,,,
+598,"MyFruityFaces",7,26,"Food and Beverage","edible stickers for fruits and vegetables",6,"all_men",0,,"CA",2e+05,10,2e+06,0,,,,
+599,"Brightwheel",7,26,"Children/Education","app geared toward early education of toddlers",7,"all_men",0,,"CA",4e+05,4,1e+07,1,6e+05,6.7,8995502,2
+600,"DollopGourmet",7,27,"Food and Beverage","non-GMO, vegan, and gluten-free frosting",5,"all_women",1,,"NY",75000,20,375000,1,75000,25,3e+05,1
+601,"Creaproducts",7,27,"Fashion/Beauty","hair cutting guide and associated beauty products",7,"all_women",1,,"HI",2e+05,10,2e+06,1,2e+05,22.5,888889,1
+602,"YourselfExpression",7,27,"Fashion/Beauty","interchangeable accessories company",3,"mixed",1,,"FL",50000,20,250000,0,,,,
+603,"TheSpooner",7,27,"Fitness/Sports/Outdoors","device that simulates surfing, skateboarding, and snowboarding",7,"all_men",0,,"CA",4e+05,16,2500000,1,4e+05,16,2500000,2
+604,"CampNoCounselors",7,28,"Fitness/Sports/Outdoors","sleep away camp for adults",5,"all_men",0,,"NY",3e+05,7.5,4e+06,0,,,,
+605,"EVPExtremeVehicleProtection",7,28,"Automotive","EVP Extreme Vehicle Protection - ",5,"all_men",0,,"NY",50000,20,250000,1,50000,33.3,150000,1
+606,"GladiatorLacrosse",7,28,"Fitness/Sports/Outdoors","practice equipment for lacrosse",4,"all_women",1,,"FL",1e+05,15,666667,0,,,,
+607,"VPCABS",7,28,"Media/Entertainment","digital pinball machine",3,"all_men",0,,"OH",2e+05,10,2e+06,1,2e+05,25,8e+05,1
+608,"PeteAndPedro",7,29,"Fashion/Beauty","men's hair styling products",4,"all_men",0,,"GA",1e+05,10,1e+06,1,1e+05,10,1e+06,1
+609,"PMSBites",7,29,"Food and Beverage","bite-sized snacks",2,"all_women",1,,"MA",50000,20,250000,0,,,,
+610,"Felt",7,29,"Lifestyle/Home","app that lets a user hand-write a message",8,"all_men",0,,"CA",2e+05,6,3333333,1,225000,10,2250000,1
+611,"Pavlok",7,29,"Liquor/Alcohol","uses operant conditioning through haptic feedback to modify behavior",9,"all_men",0,,"MA",5e+05,3.1,15923567,0,,,,
+612,"Fizzics",8,1,"Liquor/Alcohol","device to enhance the head and the flavor of bottled or canned beers",13,"all_men",0,,"NJ",5e+05,4,12500000,1,2e+06,16.7,11997600,2
+613,"SpoonfulofComfort",8,1,"Food and Beverage","soup and sides for sick people",6,"mixed",1,,"UT",4e+05,10,4e+06,0,,,,
+614,"iSlide",8,1,"Fashion/Beauty","fully customizable slide sandals",4,"all_men",0,,"MA",5e+05,5,1e+07,0,,,,
+615,"Rethink",8,1,"Technology/Software","content-filtering software that delays sending potentially cyberbullying",7,"all_women",1,,"IL",1e+05,20,5e+05,1,1e+05,20,5e+05,2
+616,"TheLapelProject",8,2,"Fashion/Beauty","stick-on false lapels for jackets",5,"all_men",0,,"FL",150000,20,750000,1,150000,30,5e+05,1
+617,"GoodHangups",8,2,"Lifestyle/Home","magnetic device for hanging decorations on walls",7,"all_women",1,,"WA",1e+05,10,1e+06,1,1e+05,15,666667,1
+618,"IceAgeMeals",8,2,"Food and Beverage","delivery service of pre-made meals",5,"all_men",0,,"NV",1e+06,10,1e+07,0,,,,
+619,"TactiBite",8,2,"Fitness/Sports/Outdoors","floating lure that creates sounds to attract fish",8,"all_men",0,,"TX",150000,10,1500000,1,150000,10,1500000,1
+620,"RaisingWild",8,3,"Fashion/Beauty","fashionable bathing suits",3,"all_women",1,,"CA",1e+05,20,5e+05,1,1e+05,50,2e+05,1
+621,"TheCookieKahuna",8,3,"Food and Beverage","new line of cookies",4,"all_men",0,,"HI",50000,20,250000,0,,,,
+622,"TekDry",8,3,"Technology/Software","machine to dry out water-damaged electronic devices",7,"all_men",0,1,"CO",5e+05,5,1e+07,1,5e+05,5,1e+07,1
+623,"NightRunner270",8,3,"Fitness/Sports/Outdoors","lights for shoes to be used by runners at night",10,"mixed",1,1,"FL",2e+05,10,2500000,1,2e+05,15,1333333,1
+624,"Solemates",8,4,"Fashion/Beauty","cap for shoes to prevent them from sinking into grass",10,"all_women",1,,"NY",5e+05,10,5e+06,1,5e+05,20,2500000,1
+625,"AtlanticCandyCompany",8,4,"Food and Beverage","chocolate candy with a toy inside",6,"all_men",0,,"IN",1e+06,10,1e+07,0,,,,
+626,"Biem",8,4,"Food and Beverage","device that converts a stick of butter into a butter spray",11,"all_men",0,,"TX",5e+05,5,1e+07,1,5e+05,14,3571429,1
+627,"AngelsandTomboys",8,4,"Fashion/Beauty","scented body sprays and lotions marketed to tween girls",9,"all_women",1,,"NC",55000,20,275000,1,60000,33.3,180000,2
+628,"SandiLakeClothing",8,5,"Children/Education","clothing line for children",4,"all_women",1,,"FL",1e+05,10,1e+06,0,,,,
+629,"Parker'sMaple",8,5,"Food and Beverage","maple syrup, maple butter, and other associated products",8,"all_men",0,,"NY",2e+05,20,1e+06,0,,,,
+630,"SafeGrabs",8,5,"Lifestyle/Home","silicone mats for multi-purpose kitchen use",6,"all_women",1,,"CA",75000,12,625000,1,75000,25,3e+05,1
+631,"SiliDogs",8,5,"Pet Products","pet identification tags made out of silicone",7,"all_men",0,,"FL",1e+05,15,666667,1,1e+05,30,333333,1
+632,"LuluBang",8,6,"Food and Beverage","gourmet marmalade and sauces",4,"all_women",1,,"PA",150000,10,1500000,0,,,,
+633,"unPack",8,6,"Travel","service for travelers that delivers pre-packed clothing to hotels",9,"all_men",0,,"CA",5e+05,40,1250000,0,,,,
+634,"Sunscreeenr",8,6,"Health/Wellness","device to view the effectiveness of sunscreen",7,"all_men",0,,"NC",8e+05,10,8e+06,1,8e+05,33.3,2400000,1
+635,"PotatoParcel",8,6,"Media/Entertainment","gag gift delivery service of a message written on a potato ",11,"all_men",0,,"TX",50000,10,5e+05,1,50000,10,5e+05,1
+636,"EcoFlower",8,7,"Lifestyle/Home","artificial flowers made from recycled materials",6,"all_women",1,,"UT",4e+05,10,4e+06,1,4e+05,20,2e+06,1
+637,"StyleClub",8,7,"Fashion/Beauty","women's fashions marketed through videos and social media",8,"all_women",1,0,"CA",5e+05,20,2500000,1,5e+05,22,2272727,1
+638,"SafeCatch",8,7,"Food and Beverage","machine that can test the mercury content in tuna",9,"all_men",0,,"CA",6e+05,3,2e+07,0,,,,
+639,"#besomebody",8,7,"Technology/Software","app to facilitate experiential learning by booking live experiences",9,"all_men",0,,"TX",1e+06,10,1e+07,0,,,,
+640,"MilkSnob",8,8,"Children/Education","baby stroller and car seat cover that doubles as a nursing cover",12,"all_women",1,,"TX",125000,5,2500000,1,150000,10,1500000,1
+641,"Jack'sStands&Marketplaces",8,8,"Children/Education","Jack's Stands & Marketplaces - lemondate, iced tea, hot chocolate, apple cider",12,"all_men",0,0,"CO",50000,10,5e+05,1,50000,0,0,1
+642,"Chi'lantro",8,8,"Food and Beverage","BBQ food truck and restaurant",5,"all_men",0,,"TX",6e+05,15,4e+06,1,6e+05,20,3e+06,1
+643,"Toor",8,8,"Lifestyle/Home","lockbox connected to an app",5,"all_men",0,0,"CO",5e+05,10,5e+06,1,5e+05,10,5e+06,2
+644,"PupBox",8,9,"Pet Products","subscription box service for puppy owners",6,"mixed",1,,"CA",250000,10,2500000,1,250000,15,1666667,1
+645,"BarbellApparel",8,9,"Fashion/Beauty","men's clothing tailored for active wear",6,"all_men",0,,"NV",5e+05,5,1e+07,0,,,,
+646,"ENERGYbits",8,9,"Food and Beverage","algae tablets to increase energy and focus",7,"all_women",1,,"MA",5e+05,5,1e+07,0,,,,
+647,"LineCutterz",8,9,"Fitness/Sports/Outdoors","finger ring with a cutter for fishing line",8,"all_men",0,,"TX",120000,20,6e+05,1,120000,33,363636,1
+648,"Inboard",8,10,"Fitness/Sports/Outdoors","electric skateboard company",3,"all_men",0,1,"CA",750000,4,18750000,1,750000,4,18750000,2
+649,"PetPlate",8,10,"Pet Products","delivery service of freshly cooked pet food",7,"all_men",0,,"NY",1e+05,10,1e+06,0,,,,
+650,"Nootrobox",8,10,"Food and Beverage","chewable coffee cubes",3,"all_men",0,,"CA",2e+06,5,4e+07,0,,,,
+651,"Nomiku",8,10,"Food and Beverage","home version of a sous-vide cooker",6,"mixed",1,,"CA",250000,5,5e+06,1,250000,10,2500000,1
+652,"SealedbySanta",8,11,"Children/Education","service to send letters and packages to kids",8,"all_women",1,0,"NV",150000,20,750000,1,150000,20,750000,1
+653,"PolyGlide",8,11,"Fitness/Sports/Outdoors","synthetic ice material for skating at home",7,"all_men",0,,"NY",150000,20,750000,0,,,,
+654,"Digiwrap",8,11,"Lifestyle/Home","gift wrap and gift bags",5,"all_men",0,,"IA",150000,10,1500000,1,150000,20,750000,1
+655,"HandOutGloves",8,11,"Fitness/Sports/Outdoors","gloves with a removable finger portion",6,"all_men",0,,"UT",150000,20,750000,1,3e+05,25,1200000,1
+656,"PDXPetDesign",8,12,"Pet Products","cat toys and care products",5,"mixed",1,,"OR",3e+05,15,2e+06,0,,,,
+657,"BasicOutfitters",8,12,"Fashion/Beauty","drawers of men's clothing basics",5,"mixed",1,,"NY",125000,10,1250000,0,,,,
+658,"VictoryCoffees",8,12,"Food and Beverage","organic, fair trade coffee",4,"all_men",0,,"NC",250000,20,1250000,0,,,,
+659,"NaturallyPerfectDolls",8,12,"Children/Education","dolls with features representing diverse cultures and ethnicities",8,"mixed",1,,"CA",2e+05,20,1e+06,1,2e+05,30,666667,1
+660,"GreaseBags",8,13,"Lifestyle/Home","disposable, compostable bags",3,"all_women",1,,"TX",75000,25,3e+05,1,75000,50,150000,1
+661,"Pinblock",8,13,"Children/Education","building blocks that are flexible",5,"all_men",0,,"NY",1e+05,20,5e+05,1,1e+05,50,2e+05,1
+662,"Mama'sMilkBox",8,13,"Fashion/Beauty","subscription box service of women's clothing",6,"all_women",1,,"AZ",2e+05,20,1e+06,0,,,,
+663,"NicePipes",8,13,"Fashion/Beauty","arm and legwarmers made from yoga workout material",8,"all_women",1,,"PA",1e+05,10,1e+06,0,,,,
+664,"Chirps",8,14,"Food and Beverage","chips enhanced with cricket protein",5,"all_women",1,,"CA",1e+05,7,1428571,1,1e+05,15,666667,1
+665,"Vibes",8,14,"Media/Entertainment","high-fidelity earplugs specially designed for use at concerts",8,"all_men",0,,"TN",1e+05,20,5e+05,0,,,,
+666,"PopUpPlay",8,14,"Children/Education","play sets custom designed by children",6,"mixed",1,,"TX",250000,6,4166667,1,250000,8.3,3e+06,1
+667,"Getaway",8,14,"Fitness/Sports/Outdoors","rental service of camping sites with tiny houses",8,"all_men",0,,"NY",5e+05,5,1e+07,0,,,,
+668,"Kooler",8,15,"Fitness/Sports/Outdoors","insulated water cooler with containers",5,"all_men",0,,"NV",50000,15,333333,1,50000,33.3,150000,1
+669,"LittleNomad",8,15,"Lifestyle/Home","stylish foam children's play mats",5,"all_women",1,,"CT",80000,15,533333,0,,,,
+670,"RinseKit",8,15,"Fitness/Sports/Outdoors","portable shower system",3,"all_men",0,,"CA",250000,5,5e+06,1,250000,7.5,3333333,1
+671,"DBestProducts",8,15,"Lifestyle/Home","carriers and portable carts",4,"all_men",0,0,"CA",350000,5,7e+06,1,2350000,20,1750000,2
+672,"Tranquilo",8,16,"Children/Education","vibrating mat for calming crying babies",6,"all_women",1,,"CO",1e+05,10,1e+06,1,2e+05,15,1333333,1
+673,"DocSpartan",8,16,"Health/Wellness","all natural first aid ointment",5,"mixed",1,,"OH",75000,15,5e+05,1,75000,25,3e+05,1
+674,"PeacefulFruits",8,16,"Food and Beverage","natural fruit snacks made with açai",6,"all_men",0,,"OH",75000,20,375000,0,,,,
+675,"FireFighterTurnOutBags",8,16,"Fashion/Beauty","bags made from used gear worn by firefighters ",8,"mixed",1,1,"CA",250000,33,757576,1,250000,50,5e+05,1
+676,"Toymail",8,17,"Children/Education","plush toy that allows children to send voice messages",9,"all_women",1,,"NY",250000,2.5,1e+07,1,6e+05,5,1.2e+07,2
+677,"EDNWallGarden",8,17,"Green/CleanTech","indoor planter that uses smart technology",6,"all_men",0,,"MA",150000,10,1500000,0,,,,
+678,"HotelsByDay",8,17,"Travel","app for booking day-use hotel rooms",6,"all_men",0,,"NY",750000,10,7500000,0,,,,
+679,"Bitsbox",8,17,"Children/Education","service that teaches kids computer coding",6,"all_men",0,,"CO",250000,3,8333333,0,,,,
+680,"SandCloud",8,18,"Fitness/Sports/Outdoors","beach towels supporting ocean sustainability",5,"all_men",0,,"CA",2e+05,8,2500000,1,2e+05,15,1333333,1
+681,"OraOrganics",8,18,"Health/Wellness","plant-based nutritional supplements",3,"all_men",0,,"CA",375000,5,7500000,0,,,,
+682,"DartDrones",8,18,"Technology/Software","drone pilot training courses",4,"all_women",1,,"UT",3e+05,10,3e+06,1,3e+05,10,3e+06,1
+683,"ElephantPants",8,18,"Fashion/Beauty","clothing line supporting elephant preservation",5,"all_men",0,,"CA",5e+05,10,5e+06,1,5e+05,17.5,2857143,1
+684,"TheSleepStyler",8,19,"Fashion/Beauty","hair rollers that dry and style overnight",7,"all_women",1,,"GA",75000,20,375000,1,75000,25,3e+05,1
+685,"BlendtiqueWineCompany",8,19,"Food and Beverage","create personalized wine blends",4,"all_men",0,0,"CA",250000,10,2500000,1,250000,10,2500000,1
+686,"MealEnders",8,19,"Food and Beverage","natural lozenges designed to help with weight management",8,"all_men",0,,"CA",350000,8,4375000,0,,,,
+687,"Rareform",8,19,"Fashion/Beauty","backpacks and bags made from recycled billboards",7,"all_men",0,1,"CA",3e+05,10,3e+06,1,3e+05,10,3e+06,1
+688,"ApolloPeak",8,20,"Pet Products","wine-like beverage for cats and dogs",6,"all_men",0,,"CO",1e+05,10,1e+06,1,1e+05,20,5e+05,1
+689,"Seedsheet",8,20,"Lifestyle/Home","sheet of weed-blocking fabric embedded with dissolvable pouches",8,"all_men",0,,"VT",5e+05,10,5e+06,1,5e+05,20,2500000,1
+690,"CropSticks",8,20,"Lifestyle/Home","bamboo chopsticks with a built-in rest",6,"all_women",1,,"CA",75000,12.5,6e+05,0,,,,
+691,"UnderTheWeather",8,20,"Fitness/Sports/Outdoors","weatherproof pop-up pods",3,"all_men",0,,"OH",6e+05,10,6e+06,1,6e+05,15,4e+06,1
+692,"GuardLlama",8,21,"Technology/Software","remote that activates a personal emergency service",7,"all_men",0,,"IL",1e+05,5,2e+06,1,1e+05,18,555556,1
+693,"Flag",8,21,"Lifestyle/Home","free photo printing service",4,"mixed",1,,"CA",375000,5,7500000,0,,,,
+694,"Validated",8,21,"Technology/Software","app that earns credit toward covering transportation costs",8,"all_men",0,,"OR",250000,8,3125000,0,,,,
+695,"GuardianBikes",8,21,"Fitness/Sports/Outdoors","children's bicycles with an improved braking system",7,"all_men",0,,"IN",5e+05,10,5e+06,1,5e+05,15,3333333,1
+696,"Goverre",8,22,"Lifestyle/Home","spill-proof portable wine glass",4,"all_women",1,,"CA",2e+05,13,1538462,1,2e+05,33.3,600601,3
+697,"SeeRescueStreamer",8,22,"Fitness/Sports/Outdoors","large streamer used as an emergency signal device",8,"all_men",0,,"FL",2e+05,20,1e+06,0,,,,
+698,"BootyQueenApparel",8,22,"Fashion/Beauty","fitness fashion line that accents a woman's rear end",9,"mixed",1,,"TX",250000,20,1250000,1,250000,33.3,750075,1
+699,"LoctoteIndustrialBag",8,22,"Fashion/Beauty","drawstring pack that is cut-resistant",5,"all_men",0,,"OH",150000,5,3e+06,1,150000,10,1500000,1
+700,"ThompsonTee",8,23,"Fashion/Beauty","undershirts designed to block underarm sweat ",6,"all_men",0,,"CA",7e+05,7,1e+07,1,7e+05,25,2800000,1
+701,"WalletBuckle",8,23,"Fashion/Beauty","buckle that holds credit cards",5,"all_men",0,,"GA",5e+05,10,5e+06,0,,,,
+702,"RumiSpice",8,23,"Food and Beverage","saffron imported from Afghanistan",4,"mixed",1,,"IL",250000,5,5e+06,1,250000,15,1666667,1
+703,"PeoplesDesign",8,23,"Lifestyle/Home","mixing bowl with a built-in scoop",6,"all_men",0,,"NY",75000,25,3e+05,1,75000,33.3,225002,1
+704,"Wine&Design",8,24,"Media/Entertainment","painting classes with wine served",5,"mixed",1,1,"NC",5e+05,10,5e+06,1,5e+05,10,5e+06,1
+705,"RocketBook",8,24,"Technology/Software","notebook that can scan contents to cloud services",8,"all_men",0,,"MA",4e+05,10,4e+06,0,,,,
+706,"LaidBrand",8,24,"Fashion/Beauty","hair-care products made with pheromones",5,"all_men",0,,"FL",30000,30,1e+05,0,,,,
+707,"BridalBuddy",8,24,"Fashion/Beauty","functional slip worn under a wedding gown",7,"all_women",1,,"PA",75000,10,750000,1,75000,30,250000,2
+708,"LockerBoard",9,1,"Fitness/Sports/Outdoors","skateboard that can fit inside a locker",7,"mixed",1,,"CA",60000,15,4e+05,1,65000,20,325000,1
+709,"WypAviation",9,1,"Fitness/Sports/Outdoors","wakeboard style vehicle",3,"all_men",0,,"CA",5e+05,20,2500000,0,,,,
+710,"SierraMadreResearch",9,1,"Fitness/Sports/Outdoors","hammock tent",2,"mixed",1,,"UT",175000,15,1166667,1,175000,15,1166667,1
+711,"SimpleHabit",9,1,"Health/Wellness","meditation app",2,"all_women",1,,"CA",6e+05,5,1.2e+07,0,,,,
+712,"Seventy2",9,2,"Lifestyle/Home","bag of tools and equipment for emergencies",7,"all_men",0,,"CA",1e+05,5,2e+06,1,2e+05,10,2e+06,1
+713,"Jackson'sHonest",9,2,"Food and Beverage","snack foods made with coconut oil",6,"mixed",1,,"WI",1250000,5,2.5e+07,1,1250000,15,8333333,1
+714,"QBall",9,2,"Media/Entertainment","wireless microphone inside a bal",5,"all_men",0,,"CA",2e+05,15,1333333,1,3e+05,30,1e+06,3
+715,"Trippie",9,2,"Travel","app for navigating large airports",5,"all_men",0,,"CA",1e+05,10,1e+06,0,,,,
+716,"Firdgetland",9,3,"Lifestyle/Home","fidget spinners and rings",4,"all_men",0,,"AZ",50000,10,5e+05,1,50000,20,250000,1
+717,"Enso",9,3,"Fashion/Beauty","flexible silicone wedding bands",4,"all_men",0,,"UT",5e+05,7.5,6666667,1,5e+05,15,3333333,1
+718,"ThirdWaveWater",9,3,"Food and Beverage","mineral concoction for better coffee brewing quality",7,"all_men",0,,"OH",1e+05,10,1e+06,1,1e+05,25,4e+05,1
+719,"TanglePets",9,3,"Children/Education","kid-friendly hairbrush",2,"all_women",1,,"WA",75000,30,250000,1,75000,45,166667,1
+720,"DelightedBy",9,4,"Food and Beverage","dessert hummus",2,"all_women",1,,"AZ",6e+05,12,5e+06,1,6e+05,12,5e+06,1
+721,"Solemender",9,4,"Health/Wellness","stainless steel foot massage roller",5,"all_men",0,,"IL",75000,10,750000,0,,,,
+722,"IceShaker",9,4,"Fitness/Sports/Outdoors","stainless steel insulated protein shake bottle",6,"all_men",0,,"CO",1e+05,15,666667,1,150000,15,1e+06,2
+723,"Benjilock",9,4,"Fitness/Sports/Outdoors","fingerprint-technology padlocks",2,"all_men",0,,"CA",2e+05,10,2e+06,1,2e+05,10,2e+06,1
+724,"Ash&Anvil",9,5,"Fashion/Beauty","shirts for short people",4,"all_men",0,,"MI",1e+05,12.5,8e+05,1,150000,25,6e+05,1
+725,"Mirmir",9,5,"Media/Entertainment","portable photo booth",3,"all_men",0,,"CA",350000,10,3500000,1,7e+05,20,3500000,1
+726,"Kwik-hang",9,5,"Lifestyle/Home","curtain rod brackets",3,"all_men",0,,"CO",80000,20,4e+05,0,,,,
+727,"HumanBobber",9,5,"Fitness/Sports/Outdoors","multi-functional personal flotation device",4,"all_men",0,,"FL",120000,15,8e+05,1,120000,33.3,360000,1
+728,"NovelEffect",9,6,"Children/Education","Novel Effect - storybook app with voice effects",8,"mixed",1,,"WA",5e+05,10,5e+06,1,5e+05,15,3333333,1
+729,"FatherFigure",9,6,"Children/Education","Father Figure - paternity clothing for dads",7,"all_men",0,,"NY",80000,15,533333,0,,,,
+730,"DrainWig",9,6,"Lifestyle/Home","DrainWig - hair catcher for shower drains",7,"mixed",1,,"UT",3e+05,5,6e+06,1,3e+05,15,2e+06,1
+731,"BrazynLife",9,6,"Fitness/Sports/Outdoors","Brazyn Life - collapsible foam roller",6,"all_men",0,,"NV",225000,10,2250000,1,250000,20,1250000,2
+732,"GeoOrbital",9,7,"Fitness/Sports/Outdoors","GeoOrbital - converts regular bikes into electric bikes",8,"all_men",0,,"MA",5e+05,5,1e+07,0,,,,
+733,"Qeepsake",9,7,"Children/Education","Qeepsake - text message service that tracks baby milestones",9,"all_men",0,,"MA",350000,10,3500000,0,,,,
+734,"WaiveCar",9,7,"Automotive","WaiveCar - an all-electric, free car-sharing service",7,"all_men",0,1,"CA",5e+05,2,2.5e+07,1,5e+05,2,2.5e+07,1
+735,"Pearachute",9,7,"Children/Education","Pearachute - kid-activity subscription service",5,"all_women",1,,"IL",5e+05,6,8333333,1,5e+05,15,3333333,1
+736,"NoMo-Stach",9,8,"Fashion/Beauty","No Mo-Stach - portable mustache removal kit",7,"all_women",1,,"TX",1e+05,25,4e+05,1,1e+05,25,4e+05,2
+737,"SnoofyBee",9,8,"Children/Education","Snoofybee - baby changing pad",5,"mixed",1,,"WA",85000,10,850000,1,120000,20,6e+05,1
+738,"DreamPad",9,8,"Lifestyle/Home","DreamPad - sound-emitting pillows for better sleep",7,"all_men",0,,"CO",8e+05,10,8e+06,0,,,,
+739,"SnarkyTea",9,8,"Food and Beverage","Snarky Tea - tea blends for specific moods",8,"all_women",1,,"NY",150000,25,6e+05,1,150000,50,3e+05,2
+740,"BrilliantPad",9,9,"Pet Products","BrilliantPad - self-cleaning puppy pad and dog potty",8,"all_men",0,,"IL",5e+05,5,1e+07,1,5e+05,5,1e+07,1
+741,"Bravo",9,9,"Technology/Software","Bravo - tipping app",4,"mixed",1,,"AZ",150000,5,3e+06,1,150000,14,1071429,2
+742,"HoopMaps",9,9,"Fitness/Sports/Outdoors","HoopMaps - finds the nearest basketball games",7,"all_men",0,,"CA",1e+05,5,2e+06,0,,,,
+743,"GloveStix",9,9,"Fitness/Sports/Outdoors","Glovestix - athletic gear deodorizer",5,"all_women",1,,"PA",150000,10,1500000,1,150000,15,1e+06,2
+744,"Grypmat",9,10,"Automotive","Grypmat - tray that will keep your tools in place",10,"all_men",0,,"OH",2e+05,10,2e+06,1,360000,30,1200000,3
+745,"DNASimple",9,10,"Health/Wellness","DNA Simple - saliva donor service for science research",9,"all_men",0,,"NY",1e+05,12.5,8e+05,1,2e+05,15,1333333,1
+746,"Robin",9,10,"Fitness/Sports/Outdoors","Robin - robotic lawn mower service",6,"all_men",0,,"TX",5e+05,5,1e+07,0,,,,
+747,"SmartGurlz",9,10,"Technology/Software","SmartGurlz - coding dolls for girls",6,"all_women",1,,"MD",2e+05,5,4e+06,1,2e+05,5,4e+06,1
+748,"ReelyHookedFishCo.",9,11,"Food and Beverage","Reely Hooked Fish Co. - healthy smoked fish dip",9,"all_men",0,,"FL",75000,25,3e+05,1,75000,25,3e+05,1
+749,"CutBuddy",9,11,"Fashion/Beauty","The Cut Buddy - multi-curve hair trimming guide tool",9,"all_men",0,,"FL",3e+05,10,3e+06,1,3e+05,20,1500000,1
+750,"Slumberkins",9,11,"Children/Education","Slumberkins - stuffed animals for sensory stimulation",7,"all_women",1,,"Non-US",175000,5,3500000,0,,,,
+751,"ProntoBev",9,11,"Lifestyle/Home","ProntoBev - instant wine chiller",5,"all_men",0,,"CA",1e+05,5,2e+06,1,1e+05,25,4e+05,1
+752,"Hater",9,12,"Technology/Software","Hater - dating app",4,"all_men",0,,"NY",2e+05,5,4e+06,1,2e+05,10,2e+06,1
+753,"CocoTaps",9,12,"Lifestyle/Home","Coco Taps - coconut drill tools for drinking straight out of the fruit",13,"all_men",0,,"CA",150000,10,1500000,0,,,,
+754,"EverlyWell",9,12,"Health/Wellness","EverlyWell - at-home lab testing",5,"all_women",1,0,"TX",1e+06,5,2e+07,1,1e+06,5,2e+07,1
+755,"Mush",9,12,"Food and Beverage","Mush - ready to eat oatmeal",6,"all_women",1,1,"CA",3e+05,10,3e+06,1,3e+05,10,3e+06,1
+756,"TheOriginalComfy",9,13,"Fashion/Beauty","The Original Comfy - sweater blanket",6,"all_men",0,,"AZ",50000,20,250000,1,50000,20,250000,1
+757,"ChristmasTreeHugger",9,13,"Lifestyle/Home","Christmas Tree Hugger - bark-looking trunk cover for fake trees",10,"all_men",0,,"NY",1e+05,20,5e+05,0,,,,
+758,"RokBlok",9,13,"Media/Entertainment","RokBlok - portable record player",5,"all_men",0,,"CA",3e+05,15,2e+06,1,5e+05,100,5e+05,1
+759,"ModernChristmasTrees",9,13,"Lifestyle/Home","Modern Christmas Trees - artificial tree that is collapsible",9,"all_men",0,,"CO",1e+05,10,1e+06,1,1e+05,18,555556,1
+760,"Frywall",9,14,"Lifestyle/Home","Frywall - spltter protection for frying pans",7,"all_men",0,0,"NY",1e+05,10,1e+06,1,1e+05,10,1e+06,2
+761,"EllipticalStroller",9,14,"Fitness/Sports/Outdoors","Elliptical Stroller - eliptical stroller",5,"all_men",0,,"FL",5e+05,40,1250000,0,,,,
+762,"Inirv",9,14,"Lifestyle/Home","Inirv - smart stove sensors",5,"mixed",1,,"CA",8e+05,8,1e+07,0,,,,
+763,"Birddogs",9,14,"Fashion/Beauty","birddogs - gym shorts",4,"all_men",0,,"NY",250000,1.5,16666667,0,,,,
+764,"iFork",9,15,"Lifestyle/Home","iFork - picnic product line",5,"all_men",0,,"NY",1e+05,5,2e+06,1,1e+05,20,5e+05,1
+765,"Stasher",9,15,"Green/CleanTech","Stasher - eco-friendly ziplock bags",5,"all_women",1,0,"CA",4e+05,5,8e+06,1,4e+05,15,2666667,1
+766,"Recharj",9,15,"Business Services","Recharj - nap studios",4,"all_men",0,,"DC",75000,15,5e+05,0,,,,
+767,"Detrapel",9,15,"Lifestyle/Home","Detrapel - liquid repellant spray",5,"all_men",0,,"PA",2e+05,20,1e+06,1,2e+05,25,8e+05,2
+768,"FishFry",9,16,"Food and Beverage","Joe's Gourmet Fish Fry - fish fry batter",8,"mixed",1,,"GA",150000,15,1e+06,1,150000,25,6e+05,1
+769,"GoatPetProducts",9,16,"Pet Products","Goat Pet Products - gadget for pet collar",8,"all_women",1,,"MI",499000,9,5544444,1,499000,33.3,1497000,1
+770,"DudeRobe",9,16,"Fashion/Beauty","Dude Robe - robes for men",6,"all_men",0,,"NY",150000,18,833333,0,,,,
+771,"TheLongHairs",9,16,"Fashion/Beauty","The Long Hairs - hair products for long-haired men",9,"all_men",0,,"CA",95000,10,950000,1,1e+05,20,5e+05,1
+772,"Alice'sTable",9,17,"Business Services","Alice's Table - business-in-a-box platform for women",7,"all_women",1,,"MA",250000,6.3,4e+06,1,250000,10,2500000,2
+773,"Zup",9,17,"Fitness/Sports/Outdoors","Zup - all-in-one kneeboard, wakesurf, and water ski",8,"all_men",0,,"VA",3e+05,10,3e+06,0,,,,
+774,"BoobieBar",9,17,"Food and Beverage","Boobie Bar - lactation bars for breastfeeding",7,"all_women",1,,"CA",150000,10,1500000,1,150000,20,750000,1
+775,"Pandaloon",9,17,"Pet Products","Pandaloon - animal costumes",4,"all_women",1,,"CA",60000,20,3e+05,1,60000,35,171429,1
+776,"RounderBum",9,18,"Fashion/Beauty","RounderBum - padded men's undergarments",5,"all_men",0,,"CA",150000,10,1500000,1,150000,5,3e+06,1
+777,"BrushHero",9,18,"Lifestyle/Home","Brush Hero - water-pressure powered oscillating brush",7,"all_men",0,,"CA",5e+05,10,5e+06,0,,,,
+778,"Savy",9,18,"Fashion/Beauty","Savy - online service that allows customers to negotiate prices with vendors",12,"all_women",1,,"CA",1e+05,10,1e+06,0,,,,
+779,"GuzzleBuddy",9,18,"Food and Beverage","Guzzle Buddy - wine glass attachable to bottles",8,"mixed",1,,"CA",4e+05,10,4e+06,1,4e+05,25,1600000,1
+780,"ThePop",9,19,"Children/Education","The Pop - pacifier",4,"all_women",1,,"NY",250000,5,5e+06,1,250000,10,2500000,1
+781,"BouquetBar",9,19,"Lifestyle/Home","Bouquet Bar - custom gift boxes",6,"all_men",0,,"CA",150000,10,1500000,1,150000,25,6e+05,1
+782,"TheWingman",9,19,"Fitness/Sports/Outdoors","The Wingman - life jackets",5,"all_men",0,,"WI",2e+05,12.5,1600000,0,,,,
+783,"Zuvaa",9,19,"Fashion/Beauty","Zuvaa - marketplace for African fashion",6,"all_women",1,,"GA",460000,10,4600000,0,,,,
+784,"TheDoughBar",9,20,"Food and Beverage","The Dough Bar - protein donuts",6,"mixed",1,,"CA",3e+05,15,2e+06,1,3e+05,20,1500000,1
+785,"ShowerPill",9,20,"Health/Wellness","ShowerPill - body wipes",4,"all_men",0,,"MD",3e+05,10,3e+06,0,,,,
+786,"ChangEd",9,20,"Children/Education","ChangEd - app that rounds up transactions to pay for student loan",12,"all_men",0,,"IL",250000,15,1666667,1,250000,25,1e+06,1
+787,"SnapClips",9,20,"Fitness/Sports/Outdoors","SnapClips - silicone weight collars",5,"all_men",0,,"IL",150000,15,1e+06,1,150000,30,5e+05,3
+788,"Sap!",9,21,"Food and Beverage","Sap! - canned maple beverages",5,"all_men",0,,"VT",6e+05,12,5e+06,0,,,,
+789,"Radiate",9,21,"Fitness/Sports/Outdoors","Radiate - portable campfire",4,"all_men",0,,"CA",50000,20,250000,1,1e+05,25,4e+05,1
+790,"Petrol",9,21,"Pet Products","Petrol - vitamin water for dogs",6,"mixed",1,,"NC",150000,20,750000,0,,,,
+791,"EveryTable",9,21,"Food and Beverage","Everytable - take-out packaged food",5,"all_men",0,,"CA",1e+06,5,2e+07,1,1e+06,10,1e+07,1
+792,"GunnarOptiks",9,22,"Lifestyle/Home","Gunnar Optiks - glasses for looking at computers",8,"all_men",0,0,"CA",750000,5,1.5e+07,1,750000,5,1.5e+07,1
+793,"Avocaderia",9,22,"Food and Beverage","Avocaderia - avocado-based food chain",5,"all_men",0,,"WA",3e+05,10,3e+06,1,4e+05,20,2e+06,2
+794,"Solsource",9,22,"Lifestyle/Home","Solsource - solar powered grill",5,"all_women",1,,"CA",5e+05,3,16666667,1,5e+05,4,12500000,1
+795,"Sunniva",9,22,"Food and Beverage","Sunniva - super coffee",4,"all_men",0,1,"NY",5e+05,4.5,11111111,0,,,,
+796,"EggMazing",9,23,"Lifestyle/Home","Egg Mazing - easter egg decorator",6,"all_men",0,,"TX",350000,7,5e+06,1,150000,10,1500000,1
+797,"Hugo'sAmazingTape",9,23,"Lifestyle/Home","Hugo's Amazing Tape - tape that sticks to itself",9,"all_women",1,,"CA",50000,50,1e+05,1,1e+05,100,1e+05,2
+798,"Coolpeds",9,23,"Fitness/Sports/Outdoors","Coolpeds - Electric scooters",4,"all_men",0,,"CA",250000,5,5e+06,0,,,,
+799,"CoinOut",9,23,"Technology/Software","Coinout - digital cash wallet",5,"all_men",0,,"NY",250000,7.5,3333333,1,250000,15,1666667,1
+800,"Bermie's",9,24,"Fitness/Sports/Outdoors","Bermie's - men's swimwear",4,"all_men",0,,"FL",2e+05,20,1e+06,0,,,,
+801,"Dermovia",9,24,"Fashion/Beauty","Dermovia Lace Your Face - beauty face mask",8,"all_women",1,1,"CA",350000,10,3500000,1,350000,15,2333333,1
+802,"Palmini",9,24,"Food and Beverage","Palmini - pasta made from hearts of palm",8,"all_men",0,0,"FL",3e+05,10,3e+06,1,3e+05,25,1200000,2
+803,"Thrive+",9,24,"Health/Wellness","Thrive+ - pill to cure hangovers",6,"all_men",0,,"NJ",4e+05,10,4e+06,0,,,,
+804,"FinalStraw",10,1,"Lifestyle/Home","Final Straw - collapsable drinking straw",6,"mixed",1,,"CA",625000,5,12500000,0,,,,
+805,"BearBowl",10,1,"Lifestyle/Home","Bear Bowl - folding outdoor cook pot",7,"mixed",1,,"UT",1e+05,20,5e+05,1,1e+05,25,4e+05,1
+806,"Le-Glue",10,1,"Children/Education","Le-Glue - glue for legos",5,"all_men",0,,"CA",80000,15,533333,1,80000,20,4e+05,1
+807,"Boxlock",10,1,"Lifestyle/Home","Boxlock - smart padlock for deliveries",6,"all_men",0,,"GA",1e+06,5,2e+07,0,,,,
+808,"sanaía",10,2,"Food and Beverage","sanaía - apple sauce",4,"all_women",1,0,,150000,15,1e+06,1,150000,25,6e+05,1
+809,"LugBug",10,2,"Children/Education","Lug Bug - baby carrier handle",6,"all_men",0,,"PA",3e+05,10,3e+06,0,,,,
+810,"Ta-TaTowels",10,2,"Fashion/Beauty","Ta-Ta Towels - stop boob sweat",6,"all_women",1,,"CA",2e+05,10,2e+06,1,2e+05,40,5e+05,1
+811,"ShedDefender",10,2,"Pet Products","Shed Defender - onesie for dogs",6,"all_men",0,,"CA",250000,10,2500000,1,250000,25,1e+06,1
+812,"Soupergirl",10,3,"Food and Beverage","Soupergirl - healthier soups",4,"all_women",1,,"DC",5e+05,10,5e+06,0,,,,
+813,"Bundil",10,3,"Technology/Software","bundil - cryptocurrency investing app",5,"all_men",0,,"TX",1e+05,10,1e+06,1,1e+05,50,2e+05,1
+814,"BeyondSushi",10,3,"Food and Beverage","Beyond Sushi - vegan sushi",5,"all_men",0,,"NY",1500000,30,5e+06,1,1500000,45,3333333,2
+815,"CupBoardPro",10,3,"Lifestyle/Home","Cup Board Pro - cutting board",6,"mixed",1,,"NY",1e+05,10,1e+06,1,1e+05,20,5e+05,5
+816,"Manscaped",10,4,"Health/Wellness","Manscaped - men's grooming products",5,"all_men",0,,"CA",5e+05,7,7142857,1,5e+05,25,2e+06,2
+817,"BoomBoom",10,4,"Health/Wellness","BoomBoom - all-natural nasal inhaler",5,"mixed",1,,"CA",3e+05,10,3e+06,0,,,,
+818,"CaveShake",10,4,"Food and Beverage","Cave Shake - keto, paleo shake",6,"all_women",1,,"CA",250000,10,2500000,1,250000,20,1250000,1
+819,"ButterCloth",10,4,"Fashion/Beauty","Butter Cloth - men's shirts",5,"all_men",0,,"CA",250000,10,2500000,1,250000,25,1e+06,1
+820,"HandbagRaincoat",10,5,"Fashion/Beauty","Handbag Raincoat - handbag raincoat",5,"all_women",1,,"NY",3e+05,25,1200000,0,,,,
+821,"RewardStock",10,5,"Technology/Software","Rewardstock - travel site to use reward points",8,"all_men",0,,"NC",2e+05,5,4e+06,1,320000,10,3200000,1
+822,"Wisp",10,5,"Lifestyle/Home","Wisp - more efficient broom",5,"all_men",0,,,5e+05,10,5e+06,0,,,,
+823,"TheKombuchaShop",10,5,"Food and Beverage","The Kombucha Shop - DIY kombucha",6,"all_women",1,,"WI",350000,10,3500000,1,2e+05,10,2e+06,2
+824,"Lockstraps",10,6,"Lifestyle/Home","Lockstraps - locking tie downs",5,"all_men",0,,,2e+05,20,1e+06,0,,,,
+825,"VadeNutrition",10,6,"Food and Beverage","Vade Nutrition - protein shakes",5,"mixed",1,,,250000,10,2500000,1,7e+05,40,1750000,2
+826,"Nui",10,6,"Food and Beverage","Nui - low-sugar diet cookies",5,"all_men",0,,,3e+05,10,3e+06,1,3e+05,25,1200000,1
+827,"Bottlekeeper",10,6,"Liquor/Alcohol","Bottlekeeper - insulated beer bottle holder",6,"all_men",0,,,1e+06,5,2e+07,1,1e+06,5,2e+07,2
+828,"Prank-O",10,7,"Uncertain/Other","Prank-O - fake product gift boxes",6,"all_men",0,,,640000,8,8e+06,1,640000,25,2560000,1
+829,"Ski-Z",10,7,"Fitness/Sports/Outdoors","Ski-Z - rolling ski carrier",5,"all_men",0,,,50000,15,333333,1,50000,15,333333,1
+830,"OatMeals",10,7,"Food and Beverage","Oatmeals - oatmeal cafe",4,"all_women",1,,,5e+05,20,2500000,1,5e+05,33.3,1.5e+07,1
+831,"HireSanta",10,7,"Business Services","Hire Santa - santa network",5,"all_men",0,,,2e+05,10,2e+06,1,2e+05,10,2e+06,1
+832,"PopItPal",10,8,"Uncertain/Other","Pop It Pal - pimple popping simulator",7,"mixed",1,,,250000,10,2500000,1,250000,5,5e+06,1
+833,"Yumble",10,8,"Food and Beverage","Yumble - children's meal delivery service",6,"mixed",1,,"NJ",5e+05,4,12500000,1,5e+05,6,8333333,1
+834,"BollyX",10,8,"Fitness/Sports/Outdoors","BollyX - bollywood dance workouts",5,"all_men",0,,,375000,8,4687500,0,,,,
+835,"Mother/Poppi",10,8,"Food and Beverage","Mother - apple cider vinegar drink",6,"mixed",1,1,"TX",4e+05,10,4e+06,1,4e+05,25,1600000,1
+836,"MokiDoorstep",10,9,"Automotive","Moki Doorstep - step to reach roof of car",9,"mixed",1,,"CT",150000,5,3e+06,1,3e+06,100,3e+06,1
+837,"SproingFitness",10,9,"Fitness/Sports/Outdoors","Sproing Fitness - redesigned treadmill",5,"all_men",0,,"IL",5e+05,8,6250000,0,,,,
+838,"Bruw",10,9,"Food and Beverage","Bruw - DIY cold brew coffee",6,"all_men",0,,"MI",50000,25,2e+05,1,50000,30,166667,1
+839,"TushBaby",10,9,"Children/Education","TushBaby - carrier for babies",5,"all_women",1,,"CA",2e+05,10,2e+06,1,2e+05,20,1e+06,1
+840,"AdventureHunt",10,10,"Fitness/Sports/Outdoors","Adventure Hunt - modern-day treasure hunt",6,"all_men",0,,"UT",150000,10,1500000,1,150000,20,750000,1
+841,"Uniform",10,10,"Fashion/Beauty","Uniform - minimalist clothing",4,"all_men",0,,,3e+05,10,3e+06,0,,,,
+842,"Pristine",10,10,"Health/Wellness","Pristine - cleansing sprays",4,"mixed",1,1,"TX",50000,20,250000,1,50000,25,2e+05,1
+843,"Aquapaw",10,10,"Pet Products","Aquapaw - dog bathing tool",5,"all_men",0,,"CA",2e+05,7.5,2666667,0,,,,
+844,"SonnetJames",10,11,"Fashion/Beauty","Sonnet James - flexible dresses for moms",7,"all_women",1,,"CA",350000,25,1400000,1,350000,25,1400000,1
+845,"KittyKasas",10,11,"Pet Products","Kitty Kasas - cat houses",5,"mixed",1,1,,2e+05,20,1e+06,1,2e+05,30,666667,1
+846,"MakeupJunkieBags",10,11,"Fashion/Beauty","Makeup Junkie Bags - makeup bags",6,"all_women",1,0,,2e+05,15,1333333,1,2e+05,5,4e+06,1
+847,"AngelShaveClub",10,11,"Fashion/Beauty","Angel Shave Club - shave club for women",8,"mixed",1,,,3e+05,10,3e+06,0,,,,
+848,"ObviousWines",10,12,"Food and Beverage","Obvious Wines - wine",4,"all_men",0,,"CA",150000,5,3e+06,1,160000,12.5,1280000,1
+849,"ZuGoPet",10,12,"Pet Products","ZuGoPet - travel products for pets",6,"all_women",1,,"TX",1e+05,10,1e+06,0,,,,
+850,"MontiKids",10,12,"Children/Education","Monti Kids - montessori toys",5,"all_women",1,,"CA",2e+05,2.5,8e+06,1,2e+05,2.5,8e+06,1
+851,"TwistItUpCombs",10,12,"Fashion/Beauty","Twist It Up Combs - hair comb",7,"all_men",0,,"CA",225000,15,1500000,1,225000,25,9e+05,2
+852,"FreshBellies",10,13,"Food and Beverage","Fresh Bellies - baby food",5,"all_women",1,,"NY",275000,5,5500000,0,,,,
+853,"SubSafe",10,13,"Lifestyle/Home","SubSafe - sandwich container",4,"mixed",1,,,50000,13,384615,1,1e+05,25,4e+05,2
+854,"Zorpads",10,13,"Fashion/Beauty","Zorpads - shoe odor inserts",5,"mixed",1,,"CA",150000,8,1875000,1,150000,22.5,666667,2
+855,"LifeLiftSystems",10,13,"Lifestyle/Home","Life Lift Systems - tornado shelter",6,"all_men",0,,"OK",550000,15,3666667,1,550000,25,2200000,1
+856,"CulrMix",10,14,"Fashion/Beauty","CulrMix - hair product",4,"mixed",1,,"IL",4e+05,10,4e+06,0,,,,
+857,"Zookies",10,14,"Pet Products","Zookies - dog treats",4,"all_men",0,,"NC",50000,20,250000,1,50000,30,166667,1
+858,"GOGA",10,14,"Health/Wellness","GOGA - goat yoga",4,"mixed",1,,"TX",50000,15,333333,0,,,,
+859,"ShowerToga",10,14,"Lifestyle/Home","Shower Toga - portable shower",5,"all_women",1,,,80000,33,242424,1,80000,40,2e+05,2
+860,"ToyBox",10,15,"Technology/Software","ToyBox - 3d printer",4,"mixed",1,,,150000,5,3e+06,1,150000,13,1153846,1
+861,"Moink",10,15,"Food and Beverage","Moink Meat - subscription box",5,"all_women",1,,"MO",250000,10,2500000,1,4e+05,20,2e+06,1
+862,"Goalsetter",10,15,"Technology/Software","Goalsetter - savings app",4,"all_women",1,,,2e+05,4,5e+06,0,,,,
+863,"JollyRoger",10,15,"Technology/Software","Jolly Roger - robocall bot",5,"all_men",0,,,4e+05,10,4e+06,0,,,,
+864,"UrbanFloat",10,16,"Health/Wellness","Urban Float - sensory deprivation therapy",6,"all_men",0,,,5e+05,5,1e+07,1,5e+05,12.5,4e+06,1
+865,"KudoBanz",10,16,"Children/Education","Kudo Banz - wrist bands for kids",7,"mixed",1,,,150000,10,1500000,0,,,,
+866,"PoochSelfie",10,16,"Pet Products","Pooch Selfie - Selfie tool for dogs",7,"all_men",0,,,1e+05,20,5e+05,1,1e+05,33.3,300300,1
+867,"WildEarth",10,16,"Pet Products","Wild Earth - dog treats",5,"all_men",0,,,550000,5,1.1e+07,1,550000,10,5500000,1
+868,"SilkRoll",10,17,"Fashion/Beauty","SilkRoll - fashion trading platform",5,"mixed",1,,,250000,3,8333333,0,,,,
+869,"PressWaffleCo.",10,17,"Food and Beverage","Press Waffle Co. - waffle franchise",6,"all_men",0,,,2e+05,8,2500000,1,3e+05,15,2e+06,1
+870,"PickUpPools",10,17,"Automotive","Pickup Pools - pools for truck bed",7,"all_men",0,,,1e+05,25,4e+05,1,1e+05,33.3,300300,1
+871,"Dare-U-Go",10,17,"Children/Education","Dare-U-Go Bib - bib food container",6,"all_women",1,,,350000,10,3500000,1,350000,35,1e+06,1
+872,"Nuchas",10,18,"Food and Beverage","Nuchas Empanada - empanada franchise",5,"all_men",0,,"NY",2e+06,8,2.5e+07,0,,,,
+873,"HavenLock",10,18,"Lifestyle/Home","HAVEN Lock - door locks",5,"all_men",0,1,,5e+05,6,8333333,0,,,,
+874,"Kanga",10,18,"Lifestyle/Home","Kanga Koozie - cooler for cases",6,"all_men",0,1,,1e+05,10,1e+06,1,1e+05,20,5e+05,1
+875,"CertifiKID",10,18,"Children/Education","CertifiKID - discount comany for family activities",7,"mixed",1,1,,6e+05,8,7500000,1,6e+05,19,3157895,1
+876,"Pricetitution",10,19,"Media/Entertainment","Pricetitution - card game",4,"all_men",0,,,1e+05,20,5e+05,1,1e+05,40,250000,2
+877,"LumaSoda",10,19,"Food and Beverage","Luma Soda - soda",4,"all_men",0,,,5e+05,20,2500000,0,,,,
+878,"Hydroviv",10,19,"Lifestyle/Home","Hydroviv - water filters",4,"all_men",0,,,4e+05,10,4e+06,1,4e+05,20,2e+06,1
+879,"Flip-It",10,19,"Lifestyle/Home","Flip-It - caps for food products",6,"all_men",0,,,5e+05,10,5e+06,0,,,,
+880,"Maven'sCreamery",10,20,"Food and Beverage","Maven's Creamery - macaron ice cream sandwiches",7,"all_women",1,,,4e+05,10,4e+06,1,4e+05,25,1600000,1
+881,"Sapre",10,20,"Business Services","Sapre - mobile ATM",4,"all_men",0,,,5e+05,3.5,14285714,1,5e+05,14,3571429,1
+882,"Swoveralls",10,20,"Fashion/Beauty","Swoveralls - sweat pants + overalls",6,"all_men",0,,,150000,15,1e+06,0,,,,
+883,"Somnifix",10,20,"Health/Wellness","Somnifix - mouth tape",4,"all_men",0,,,5e+05,10,5e+06,1,5e+05,20,2500000,1
+884,"TheBestPocketSqaureHolder",10,21,"Fashion/Beauty","The Best Pocket Sqaure Holder - pocket square holder",9,"all_men",0,0,"MO",250000,15,1666667,1,2e+05,0,0,1
+885,"Basepaws",10,21,"Pet Products","Basepaws - cat DNA test",5,"all_women",1,,,250000,5,5e+06,1,250000,10,2500000,2
+886,"TheBangShack",10,21,"Food and Beverage","The Bang Shack - chicken dip",6,"all_men",0,,,80000,20,4e+05,0,,,,
+887,"Kymera",10,21,"Fitness/Sports/Outdoors","Kymera - electric body board",5,"all_men",0,,,250000,5,5e+06,1,5e+05,10,5e+06,1
+888,"DeskView",10,22,"Lifestyle/Home","DeskView - window-mounted standing desk",5,"all_men",0,,,150000,7.5,2e+06,1,150000,20,750000,1
+889,"Saucemoto",10,22,"Automotive","Saucemoto - car sauce holder",5,"all_men",0,,,45000,15,3e+05,1,45000,25,180000,1
+890,"DoughP",10,22,"Food and Beverage","DoughP - cookie dough",4,"all_women",1,,"CA",450000,10,4500000,0,,,,
+891,"Cubicall",10,22,"Lifestyle/Home","Cubicall - office privacy booth",5,"all_men",0,,,350000,10,3500000,1,350000,25,1400000,1
+892,"FatShack",10,23,"Food and Beverage","Fat Shack - lat night food franchise",7,"all_men",0,,,250000,7.5,3333333,1,250000,15,1666667,1
+893,"Quickflip",10,23,"Fashion/Beauty","Quickflip - hoodie backpack",4,"all_men",0,,"CA",5e+05,5,1e+07,1,5e+05,10,5e+06,1
+894,"BatBnB",10,23,"Lifestyle/Home","BatBnB - bat houses",4,"all_men",0,,,1e+05,16,625000,1,1e+05,33.3,300300,1
+895,"CoyoteVest",10,23,"Pet Products","CoyoteVest - body armor for pets",6,"mixed",1,,,250000,10,2500000,0,,,,
+896,"Blueland",11,1,"Lifestyle/Home","Blueland - ",2,"mixed",1,,,270000,2,13500000,1,270000,3,9e+06,1
+897,"TaDah!",11,1,"Food and Beverage","TaDah Foods East Mediterranean frozen foods",6,"all_men",0,0,,3e+05,10,3e+06,1,5e+05,25,2e+06,1
+898,"Minuscal",11,1,"Health/Wellness","Minuscal - ",2,"all_men",0,,,5e+05,20,2500000,0,,,,
+899,"BabyToon",11,1,"Children/Education","BabyToon - ",2,"all_women",1,,,50000,50,1e+05,1,50000,50,1e+05,1
+900,"BoostOxygen",11,2,"Health/Wellness","Aromatherapy flavored supplemental oxygen",4,"all_men",0,1,,1e+06,5,2e+07,1,1e+06,6.25,1.6e+07,1
+901,"AtlasMonroe",11,2,"Food and Beverage","Atlas Monroe - ",3,"mixed",1,,,5e+05,10,5e+06,0,,,,
+902,"CircadianOptics",11,2,"Health/Wellness","Circadian Optics - ",3,"all_women",1,,,750000,10,7500000,1,750000,20,3750000,2
+903,"FaceYogaWithKoko",11,2,"Health/Wellness","Face Yoga With Koko - ",5,"all_women",1,,,2e+05,20,1e+06,0,,,,
+904,"Eterneva",11,3,"Business Services","Eterneva - converting ashes into diamonds",6,"mixed",1,1,,6e+05,5,1.2e+07,1,6e+05,9,1e+07,1
+905,"Aira",11,3,"Technology/Software","Aira - ",2,"all_men",0,,,5e+05,7,7142857,1,5e+05,15,3333333,3
+906,"Baobab",11,3,"Fashion/Beauty","Baobab - ",2,"all_men",0,,,150000,10,1500000,0,,,,
+907,"SquidSocks",11,3,"Children/Education","Squid Socks - ",3,"mixed",1,,,125000,20,625000,1,125000,33,378788,1
+908,"Snacklins",11,4,"Food and Beverage","Snacklins - ",2,"all_men",0,,,250000,2.5,1e+07,1,250000,5,5e+06,1
+909,"BugBiteThing",11,4,"Health/Wellness","Bug Bite Thing - ",4,"all_women",1,,,150000,10,1500000,1,150000,10,1500000,1
+910,"PlopStar",11,4,"Lifestyle/Home","Plop Star - ",3,"all_men",0,,,150000,10,1500000,0,,,,
+911,"KnifeAid",11,4,"Business Services","Knife Aid - ",3,"all_men",0,1,,4e+05,15,2666667,1,5e+05,20,2500000,2
+912,"Golfkicks",11,5,"Fashion/Beauty","Golfkicks - ",2,"all_men",0,,,3e+05,8,3750000,1,3e+05,13,2307692,1
+913,"MyoStorm",11,5,"Health/Wellness","Myostorm - ",2,"all_men",0,,,150000,10,1500000,1,150000,5,3e+06,1
+914,"TailgateNGo",11,5,"Fitness/Sports/Outdoors","Tailgate N Go - ",4,"mixed",1,1,,250000,10,2500000,1,250000,20,1250000,1
+915,"NerditNow",11,5,"Business Services","Nerdit Now - ",3,"all_men",0,,,150000,20,750000,0,,,,
+916,"EZCPak",11,6,"Health/Wellness","EZC Pak - ",3,"all_men",0,,,125000,5,2500000,1,125000,5,2500000,1
+917,"PiliHunters",11,6,"Food and Beverage","Pili Hunters - ",3,"all_men",0,,,325000,10,3250000,0,,,,
+918,"Supply",11,6,"Lifestyle/Home","Supply - ",2,"all_men",0,,,3e+05,10,3e+06,1,3e+05,15,2e+06,1
+919,"TheMeasuringShovel",11,6,"Lifestyle/Home","The Measuring Shovel - ",4,"mixed",1,,,40000,15,266667,1,40000,30,133333,2
+920,"TheYard",11,7,"Food and Beverage","The Yard Milkshake Bar - ",5,"mixed",1,,,4e+05,10,4e+06,1,4e+05,22,1818182,1
+921,"Baubles+Soles",11,7,"Fashion/Beauty","Baubles + Soles - ",4,"mixed",1,,,150000,15,1e+06,1,150000,25,6e+05,1
+922,"PeanutButterPump",11,7,"Lifestyle/Home","Peanut Butter Pump - ",4,"all_men",0,,,2e+05,15,1333333,0,,,,
+923,"DogThreads",11,7,"Pet Products","Dog Threads - ",3,"mixed",1,,,250000,17,1470588,1,250000,25,1e+06,1
+924,"Gallant",11,8,"Pet Products","Stem cell banking for pets",5,"all_men",0,0,,5e+05,2,2.5e+07,1,5e+05,5,1e+07,2
+925,"Outer",11,8,"Lifestyle/Home","eco-friendly outdoor furniture",3,"all_men",0,1,,750000,4,18750000,1,750000,5,1.5e+07,1
+926,"Mrs.Goldfarb'sUnrealDeli",11,8,"Food and Beverage","Mrs. Goldfarb's Unreal Deli - ",5,"all_women",1,,,1e+05,10,1e+06,1,250000,20,1250000,1
+927,"Terra-Core",11,8,"Fitness/Sports/Outdoors","Terra-Core Fitness - ",3,"mixed",1,,,3e+05,15,2e+06,1,3e+05,22.5,1333333,1
+928,"KitLender",11,9,"Business Services","Kit Lender - ",3,"all_men",0,,,2e+05,7,2857143,0,,,,
+929,"Beardaments",11,9,"Business Services","Beardaments - ",2,"all_men",0,,,150000,10,1500000,1,150000,25,6e+05,1
+930,"EasyTreezy",11,9,"Lifestyle/Home","Easy Treezy - ",3,"all_men",0,,,4e+05,10,4e+06,0,,,,
+931,"LittleElf",11,9,"Lifestyle/Home","Little Elf Gift Wrap Cutter - ",6,"all_men",0,,,150000,15,1e+06,1,150000,20,750000,1
+932,"Flexscreen",11,10,"Lifestyle/Home","Flexible window screens for home",5,"all_men",0,0,,8e+05,6,13333333,1,4e+05,10,4e+06,1
+933,"Fortress",11,10,"Fashion/Beauty","Fortress Clothing - ",3,"all_men",0,,,6e+05,15,4e+06,0,,,,
+934,"SlumberPod",11,10,"Children/Education","SlumberPod - ",2,"all_women",1,,,4e+05,20,2e+06,1,4e+05,20,2e+06,1
+935,"ZUUM",11,10,"Fitness/Sports/Outdoors","ZUUM - ",2,"all_men",0,,,125000,20,625000,0,,,,
+936,"KreyòlEssence",11,11,"Health/Wellness","Kreyòl Essence - ",3,"mixed",1,,,4e+05,10,4e+06,1,4e+05,5,8e+06,1
+937,"LoveSync",11,11,"Business Services","LoveSync - ",2,"mixed",1,,,1e+05,10,1e+06,0,,,,
+938,"WisePocketProducts",11,11,"Fashion/Beauty","Wise Pocket Products - ",4,"all_women",1,,,30000,15,2e+05,1,35000,25,140000,2
+939,"WannaDate?",11,11,"Food and Beverage","Wanna Date? - ",3,"all_women",1,,,1e+05,20,5e+05,1,1e+05,33,303030,1
+940,"Ka-Pop!",11,12,"Food and Beverage","Ka-Pop! - ",2,"all_men",0,,,350000,5,7e+06,0,,,,
+941,"GeniusJuice",11,12,"Food and Beverage","Genius Juice - ",3,"all_men",0,,,250000,7,3571429,1,5e+05,25,2e+06,2
+942,"Ready,Set,Food!",11,12,"Children/Education","Ready, Set, Food! - ",4,"mixed",1,,,350000,7,5e+06,1,350000,10,3500000,1
+943,"RapidRope",11,12,"Fitness/Sports/Outdoors","Rapid Rope - ",3,"mixed",1,,,2e+05,20,1e+06,1,2e+05,30,666667,1
+944,"Fur",11,13,"Fashion/Beauty","Fur - ",2,"all_women",1,,,5e+05,2.5,2e+07,1,5e+05,8,6250000,1
+945,"BalaBangles",11,13,"Fitness/Sports/Outdoors","Wearable wrist and ankle weights",5,"mixed",1,1,,4e+05,10,4e+06,1,9e+05,30,3e+06,2
+946,"Pips&Bounce",11,13,"Food and Beverage","Pips & Bounce - ",4,"all_men",0,,,5e+05,10,5e+06,0,,,,
+947,"ShakeItPup",11,13,"Food and Beverage","Shake it Pup - ",4,"all_men",0,,,1e+05,20,5e+05,1,1e+05,25,4e+05,1
+948,"BabyQuip",11,14,"Business Services","BabyQuip - ",2,"mixed",1,,,5e+05,5,1e+07,0,,,,
+949,"BiteToothpasteBits",11,14,"Health/Wellness","Bite Toothpaste Bits - ",4,"mixed",1,,,325000,5,6500000,0,,,,
+950,"PairEyewear",11,14,"Health/Wellness","Customizable children’s glasses",3,"mixed",1,1,,4e+05,10,4e+06,1,4e+05,10,4e+05,2
+951,"CoconutGirl",11,14,"Food and Beverage","Coconut Girl - ",3,"all_women",1,,,180000,18,1e+06,1,180000,20,9e+05,1
+952,"Swimply",11,15,"Fitness/Sports/Outdoors","Swimply - ",2,"all_men",0,,,3e+05,5,6e+06,0,,,,
+953,"KidsLuv",11,15,"Food and Beverage","KidsLuv - ",2,"all_women",1,,,2e+05,8,2500000,0,,,,
+954,"Bertello",11,15,"Lifestyle/Home","Bertello - ",2,"all_men",0,,,120000,10,1200000,1,120000,25,480000,1
+955,"SpaceTraveler",11,15,"Children/Education","The Space Traveler - ",4,"all_women",1,,,1e+05,33.3,300300,1,1e+05,33.3,300300,1
+956,"Bohana",11,16,"Food and Beverage","Popped water lily seed snacks",5,"all_women",1,0,,2e+05,10,2e+06,1,2e+05,8,1840000,1
+957,"Boho",11,16,"Fitness/Sports/Outdoors","Boho Camper Vans",3,"all_men",0,1,,3e+05,10,3e+06,1,150000,10,1500000,1
+958,"Grouphug",11,16,"Lifestyle/Home","Grouphug - ",2,"all_women",1,,,150000,10,1500000,1,150000,25,6e+05,1
+959,"SafetyNailer",11,16,"Lifestyle/Home","Nail guide and finger protector",5,"all_men",0,0,,1e+05,14,714286,1,1e+05,33,303030,3
+960,"Goumi",11,17,"Children/Education","Baby mittens and boots that stay on",7,"all_women",1,1,,1e+06,8,12500000,1,1e+06,10,11250000,1
+961,"PastabyHudson",11,17,"Business Services","Pasta by Hudson - ",4,"all_men",0,,,150000,10,1500000,1,150000,30,5e+05,2
+962,"CritterPricker",11,17,"Lifestyle/Home","Critter Pricker - ",3,"all_men",0,,,115000,15,766667,1,115000,15,766667,1
+963,"TheFrozenFarmer",11,17,"Food and Beverage","The Frozen Farmer - ",4,"all_women",1,,,125000,20,625000,1,125000,30,416667,1
+964,"BadBirdie",11,18,"Fashion/Beauty","Bad Birdie - ",3,"all_men",0,,,3e+05,10,3e+06,1,3e+05,20,1500000,1
+965,"Beddley",11,18,"Lifestyle/Home","Beddley - ",2,"all_women",1,,,150000,10,1500000,0,,,,
+966,"Muvez",11,18,"Fashion/Beauty","Muvez - ",2,"all_men",0,,,2e+05,15,1333333,1,2e+05,25,8e+05,1
+967,"PrepWellAcademy",11,18,"Business Services","PrepWell Academy - ",3,"all_men",0,,,1e+05,20,5e+05,0,,,,
+968,"JustTheCheese",11,19,"Food and Beverage","Just The Cheese - ",4,"all_men",0,,,5e+05,5,1e+07,0,,,,
+969,"Neuro",11,19,"Food and Beverage","Neuro - ",2,"all_men",0,,,750000,5,1.5e+07,0,,,,
+970,"FirstSaturdayLime",11,19,"Lifestyle/Home","First Saturday Lime - ",4,"mixed",1,,,1e+05,10,1e+06,1,1e+05,25,4e+05,1
+971,"SeriouslySlime",11,19,"Children/Education","Seriously Slime - ",3,"all_women",1,,,90000,15,6e+05,0,,,,
+972,"LittleBurros",11,20,"Lifestyle/Home","Little Burros - ",3,"mixed",1,1,"VA",250000,10,2500000,0,,,,
+973,"Jiggaerobics",11,20,"Fitness/Sports/Outdoors","Jiggaerobics - ",2,"all_men",0,0,"LA",50000,12,416667,0,,,,
+974,"FriedGreenTomatoes",11,20,"Food and Beverage","Fried Green Tomatoes - ",4,"all_women",1,0,"TN",2e+05,15,1333333,1,2e+05,30,666667,1
+975,"MuralPainter",11,20,"Business Services","Hand-painted signs and promo agency",5,"all_women",1,0,"NY",3e+05,15,2e+06,1,3e+05,15,666667,1
+976,"Proven",11,21,"Health/Wellness","Proven - ",2,"all_women",1,,,5e+05,5,1e+07,0,,,,
+977,"Tanoshi",11,21,"Technology/Software","Tablet with preloaded education app for children",7,"mixed",1,1,,5e+05,8,6250000,1,5e+05,20,2500000,1
+978,"UnbuckleMe",11,21,"Lifestyle/Home","car seat buckle release tool",5,"all_women",1,1,,1e+05,10,1e+06,1,1e+05,20,5e+05,2
+979,"VanRobotics",11,21,"Technology/Software","Robotic math tutors for kids",5,"all_women",1,0,,3e+05,10,3e+06,0,,,,
+980,"LordVonSchmitt",11,22,"Fashion/Beauty","Crocheted clothing made from repurposed afghans",6,"all_men",0,0,,1e+05,10,1e+06,0,,,,
+981,"PottySafe",11,22,"Children/Education","Locking potty chair for potty training",6,"mixed",1,1,,50000,15,333333,1,50000,20,250000,1
+982,"ToughTie",11,22,"Fashion/Beauty","Kid- and life-proof ties",4,"all_men",0,1,,1e+05,15,666667,1,1e+05,35,285714,1
+983,"DadWare",11,22,"Fashion/Beauty","Skin-to-skin bonding shirts for new dads",6,"all_men",0,0,,1e+05,20,5e+05,0,,,,
+984,"Salted",11,23,"Business Services","Delivery-first restaurant service brands",4,"all_men",0,0,,5e+05,5,1e+07,0,,,,
+985,"MCSquares",11,23,"Lifestyle/Home","Modular dry-erase products to replace sticky notes",7,"all_men",0,0,,3e+05,10,3e+06,1,3e+05,25,1200000,1
+986,"Slate",11,23,"Food and Beverage","Slate Chocolate Milk",3,"all_men",0,1,,4e+05,10,4e+06,0,,,,
+987,"RescueReady",11,23,"Lifestyle/Home","Fire safety ladder embedded in window frames",7,"all_men",0,1,,75000,15,5e+05,0,,,,
+988,"YellowLeafHammocks",11,24,"Fitness/Sports/Outdoors","Soft, weather-safe hammocks made by women",6,"mixed",1,1,,4e+05,7,5714286,1,1e+06,25,4e+06,1
+989,"DreamlandBaby",11,24,"Children/Education","baby weighted sleep sack blanket",5,"all_women",1,0,,1e+05,10,1e+06,1,1e+05,22.5,444444,1
+990,"RollinGreens",11,24,"Food and Beverage","Plant and grain-based frozen snacks",5,"mixed",1,1,,5e+05,10,5e+06,1,5e+05,20,2500000,1
+991,"TheMadOptimist",11,24,"Health/Wellness","Customizable vegan soap and body care products",7,"all_men",0,1,,60000,10,6e+05,1,60000,20,3e+05,1
+992,"TouchUpCup",12,1,"Business Services","paint storage cup",3,"all_men",0,1,,150000,17.5,857143,1,2e+05,25,8e+05,1
+993,"SparkCharge",12,1,"Business Services","portable electric car charger",4,"mixed",1,1,,1e+06,6,16666667,1,1e+06,10,1e+07,2
+994,"GarmaGuard",12,1,"Lifestyle/Home","germ killing spray",3,"mixed",1,1,,3e+05,10,3e+06,0,,,,
+995,"Rumpl",12,1,"Lifestyle/Home","high performance blankets",3,"unknown",,0,"OR",6e+05,4,1.5e+07,0,,,,
+996,"BootayBag",12,2,"Lifestyle/Home","Subscription underwear service for women",5,"all_women",1,0,,5e+05,5,1e+07,1,5e+05,10,5e+06,1
+997,"GoOats",12,2,"Food and Beverage","Oatmeal in a ball",4,"all_men",0,0,,150000,10,1500000,1,150000,20,750000,1
+998,"PoochPaper",12,2,"Lifestyle/Home","biodegradable, compostable, paper alternative to plastic",6,"all_women",1,0,,250000,12,2083333,1,250000,0,0,1
+999,"PNuffCrunch",12,2,"Food and Beverage","non-gmo, plant-based, puffed peanut snack",5,"unknown",,0,,3e+05,10,3e+06,1,4e+05,25,1600000,1
+1000,"HugSleep",12,3,"Lifestyle/Home","wearable blanket",2,"mixed",1,1,,150000,10,1500000,1,3e+05,20,1500000,2
+1001,"AnimatedLure",12,3,"Lifestyle/Home","Rechargeable robotic lure",3,"unknown",,1,,325000,10,3250000,1,325000,10,3250000,1
+1002,"TheCerealKillerzKitchen",12,3,"Food and Beverage","Retail focused cereal-bar",3,"mixed",1,1,,125000,10,1250000,0,,,,
+1003,"Chirp",12,3,"Fitness/Sports/Outdoors","Exercise wheel for back pain relief",6,"all_men",0,0,,9e+05,2,4.5e+07,1,9e+05,2.5,3.6e+07,1
+1004,"JadaSpices",12,4,"Food and Beverage","plant-based, vegan chicken salt and spices",6,"all_men",0,1,,250000,20,1250000,1,250000,33,757576,1
+1005,"SurpriseCake",12,4,"Food and Beverage","Surprise gifts inside of a cake",6,"unknown",,1,,2e+05,8,2500000,0,,,,
+1006,"TheMightyCarver",12,4,"Lifestyle/Home","Carving knife that looks like a chainsaw",7,"mixed",1,1,,1e+05,20,5e+05,1,1e+05,25,4e+05,1
+1007,"Flipstik",12,4,"Electronics","Stick your phone anywhere",4,"all_men",0,0,,1e+05,20,5e+05,1,1e+05,25,4e+05,1
+1008,"Fitfighter",12,5,"Fitness/Sports/Outdoors","Weighted exercise hose",3,"all_women",1,0,,250000,15,1666667,1,250000,25,1e+06,1
+1009,"LiftidNeurostimulation",12,5,"Health/Wellness","Transcranial neuro-stimulation device for improving focus",6,"mixed",1,1,,2e+05,10,2e+06,0,,,,
+1010,"FoamPartyHats",12,5,"Fashion/Beauty","Custom-designed foam hats",3,"mixed",1,1,,1e+05,15,666667,1,1e+05,25,4e+05,2
+1011,"BeeD'Vine",12,5,"Food and Beverage","sustainably produced, barrel-aged honey wine",5,"all_men",0,0,,750000,20,3750000,1,750000,40,1875000,4
+1012,"Pan'sMushroomJerky",12,6,"Food and Beverage","Mushroom-based jerky",2,"all_men",0,0,,3e+05,10,3e+06,1,3e+05,18,1666667,1
+1013,"K9Mask",12,6,"Pet Products","Face mask for your dog",5,"all_men",0,1,,2e+05,20,1e+06,1,2e+05,40,5e+05,1
+1014,"Moment",12,6,"Food and Beverage","Meditation Drink",2,"mixed",1,1,,2e+05,10,2e+06,0,,,,
+1015,"Prime6",12,6,"Lifestyle/Home","Hardwood based grilling logs",4,"mixed",1,1,,2e+05,10,2e+06,1,2e+05,25,8e+05,1
+1016,"TheHoliball",12,7,"Fashion/Beauty","Giant inflatable ornaments",3,"all_women",1,1,,150000,10,1500000,1,150000,25,6e+05,2
+1017,"ToiletTimer",12,7,"Lifestyle/Home","Toilet timer gag gift",4,"mixed",1,1,,2e+05,10,2e+06,1,2e+05,25,8e+05,1
+1018,"ODRSkis",12,7,"Fitness/Sports/Outdoors","Skates for skiing",3,"all_men",0,0,,2e+05,10,2e+06,0,,,,
+1019,"BuckleMeBabyCoats",12,7,"Lifestyle/Home","Car seat-friendly coats",3,"all_women",1,0,,1e+05,10,1e+06,1,1e+05,20,5e+05,1
+1020,"Peekaboo",12,8,"Food and Beverage","Ice cream with hidden vegetables",5,"all_women",1,0,,8e+05,8,1e+07,0,,,,
+1021,"BrakeFree",12,8,"Automotive","safety brake light attachment for motorcycle helmets",7,"all_men",0,1,,2e+05,10,2e+06,1,2e+05,20,1e+06,2
+1022,"Click&Carry",12,8,"Lifestyle/Home","Hands-free bag carrier",3,"all_women",1,0,,225000,15,1500000,1,225000,40,562500,2
+1023,"CodibyPillarLearning",12,8,"Children/Education","Educational robot for kids",4,"all_men",0,1,,5e+05,10,5e+06,1,5e+05,25,2e+06,1
+1024,"Electra",12,9,"Food and Beverage","Sports hydration drink",3,"all_women",1,0,,350000,20,1750000,1,350000,30,1166667,1
+1025,"ALL33",12,9,"Lifestyle/Home","Desk chairs to promote back health",6,"all_men",0,0,,5e+05,2.5,2e+07,0,,,,
+1026,"HisandHerBar",12,9,"Food and Beverage","Aphrodisiac snack bar",3,"mixed",1,1,,50000,10,5e+05,0,,,,
+1027,"TrophySmack",12,9,"Fitness/Sports/Outdoors","Custom trophies for fantasy sports",5,"all_men",0,1,,6e+05,8,7500000,1,6e+05,17,3529412,1
+1028,"SliceofSauce",12,10,"Food and Beverage","Dehydrated and sliced condiments",4,"mixed",1,1,,2e+05,10,2e+06,1,2e+05,15,1333333,1
+1029,"LoveisProject",12,10,"Fashion/Beauty","Handmade bracelets",2,"all_women",1,1,,250000,5,5e+06,0,,,,
+1030,"LunaMagic",12,10,"Fashion/Beauty","Makeup for Latino women",4,"all_women",1,1,,2e+05,10,2e+06,1,250000,30,833333,1
+1031,"BubblyBlaster",12,10,"Lifestyle/Home","Champagne water gun",3,"all_men",0,1,,120000,20,6e+05,1,180000,30,6e+05,2
+1032,"Quevos",12,11,"Food and Beverage","Healthy chips made from egg whites",6,"all_men",0,1,,2e+05,5,4e+06,1,2e+05,10,2e+06,1
+1033,"Brumachen",12,11,"Food and Beverage","Portable coffee maker",3,"all_men",0,1,,1e+06,10,1e+07,0,,,,
+1034,"AuraBora",12,11,"Food and Beverage","Herbal sparkling water",3,"mixed",1,1,,150000,5,3e+06,1,2e+05,15,1333333,1
+1035,"SwipeNSnap",12,11,"Children/Education","One hand diaper cream applicator",5,"all_women",1,0,,120000,10,1200000,1,120000,50,240000,2
+1036,"YonoClip",12,12,"Lifestyle/Home","Clip to keep personal items off of the ground",9,"all_men",0,1,,150000,15,1e+06,1,150000,30,5e+05,1
+1037,"NightCap",12,12,"Food and Beverage","hair scrunchie turned drink cover",5,"mixed",1,1,,60000,20,3e+05,1,60000,25,240000,1
+1038,"RuleBreaker",12,12,"Food and Beverage","snack made from chickpeas",4,"all_women",1,0,,4e+05,10,4e+06,0,,,,
+1039,"MountainFlowEco-Wax",12,12,"Health/Wellness","Eco-friendly ski wax",3,"all_men",0,0,,250000,10,2500000,1,3e+05,20,1500000,2
+1040,"JaxSheets",12,13,"Lifestyle/Home","Stench-free bedsheets and clothes",4,"all_men",0,0,,212000,10,2120000,0,,,,
+1041,"ThePizzaCupcake",12,13,"Food and Beverage","Bagel shaped pizza",3,"mixed",1,1,,125000,5,2500000,1,125000,12.5,1e+06,1
+1042,"IceBeanie",12,13,"Food and Beverage","beanie with ice packs",4,"all_men",0,0,,50000,20,250000,1,50000,25,2e+05,1
+1043,"DraftTop",12,13,"Food and Beverage","Easily remove the top of an aluminum can",8,"all_men",0,1,,3e+05,10,3e+06,1,3e+05,20,1500000,1
+1044,"PashionFootwear",12,14,"Fashion/Beauty","High heels that can be turned into flats",8,"all_women",1,0,,5e+05,5,1e+07,0,,,,
+1045,"SouperCubes",12,14,"Food and Beverage","Cubes to freeze leftovers",4,"mixed",1,1,,4e+05,5,8e+06,1,4e+05,5,8e+06,1
+1046,"ByootCompany",12,14,"Fitness/Sports/Outdoors","Button-up swimwear for women",4,"mixed",1,1,,50000,30,166667,1,50000,5,1e+06,1
+1047,"SiennaSauce",12,14,"Food and Beverage","Wing sauce",2,"all_women",1,0,,1e+05,10,1e+06,1,1e+05,20,5e+05,1
+1048,"BetterBedder",12,15,"Lifestyle/Home","Headband for your mattress",4,"all_women",1,1,,150000,10,1500000,1,150000,18,833333,1
+1049,"EverythingLegendary",12,15,"Food and Beverage","Vegan-friendly meat-free burger",3,"mixed",1,1,,3e+05,10,3e+06,1,3e+05,22,1363636,1
+1050,"WalkeePaws",12,15,"Pet Products","Leggings for dogs",3,"all_women",1,0,,150000,5,3e+06,0,,,,
+1051,"Hopscotch",12,15,"Technology/Software","Coding app that allows kids to create games",8,"all_women",1,0,,4e+05,4,1e+07,1,550000,11,5e+06,1
+1052,"SimplyGoodJars",12,16,"Food and Beverage","Salads in a jar",4,"all_men",0,0,,5e+05,7,7142857,1,5e+05,10,5e+06,2
+1053,"PinchMeTherapyDough",12,16,"Health/Wellness","Stress relieving therapy dough",4,"all_women",1,0,,3e+05,7,4285714,1,3e+05,20,1500000,1
+1054,"MuffWaders",12,16,"Food and Beverage","Overalls that store beet",4,"all_men",0,1,,25000,25,1e+05,0,,,,
+1055,"BusyBabyMat",12,16,"Children/Education","Silicone placemat for babies",4,"all_women",1,0,,250000,5,5e+06,0,,,,
+1056,"MisfitFoods",12,17,"Food and Beverage","Half meat half vegetable sausages",5,"all_men",0,0,,250000,5,5e+06,1,3e+05,10,3e+06,2
+1057,"ChillSystems",12,17,"Food and Beverage","Lightweight, ice-free drink cooler",4,"all_men",0,1,,150000,15,1e+06,0,,,,
+1058,"TandemBoogie",12,17,"Fitness/Sports/Outdoors","Boogie board for two",4,"mixed",1,1,,1e+05,10,1e+06,1,1e+05,35,285714,2
+1059,"TotesBabies",12,17,"Uncertain/Other","Car seat holder for a shopping cart",7,"mixed",1,1,,1e+05,10,1e+06,1,1e+05,25,4e+05,1
+1060,"NuMilk",12,18,"Food and Beverage","Plant-based milk machine",3,"all_men",0,1,,1e+06,5,2e+07,1,1e+06,7,14285714,1
+1061,"HairyGrabster",12,18,"Fashion/Beauty","Loose hair remover",3,"mixed",1,1,,75000,20,375000,0,,,,
+1062,"MadRabbit",12,18,"Fashion/Beauty","Tattoo aftercare",2,"all_men",0,1,,5e+05,5,1e+07,1,5e+05,12,4166667,1
+1063,"BunchBikes",12,18,"Automotive","Electric cargo bike",3,"all_men",0,0,,250000,10,2500000,1,250000,15,1666667,1
+1064,"StepNPull",12,19,"Lifestyle/Home","Hands free door opener",4,"all_men",0,0,,3e+05,3,1e+07,1,3e+05,6,5e+06,1
+1065,"DynoSafe",12,19,"Uncertain/Other","Temperature-controlled porch safe",3,"mixed",1,1,,150000,15,1e+06,1,150000,25,6e+05,1
+1066,"ProbioticMaker",12,19,"Food and Beverage","A product that lets homeowners culture and create yogurt overnight",10,"all_men",0,0,,150000,7,2142857,0,,,,
+1067,"Phoozy",12,19,"Electronics","Thermal and drop-safe cover for mobile devices",7,"all_men",0,1,,5e+05,10,5e+06,1,5e+05,8,6250000,2
+1068,"OpulenceMDBeauty",12,20,"Fashion/Beauty","Safe and glue-free magnetic eyelashes",5,"all_women",1,0,,75000,5,1500000,1,1e+05,20,5e+05,1
+1069,"TheCheeseChopper",12,20,"Lifestyle/Home","Multi-purpose cheese storage container, slicer, and shredder",7,"all_men",0,0,,75000,10,750000,0,,,,
+1070,"TheMatte",12,20,"Fashion/Beauty","Compact and foldable working area for makeup",7,"all_women",1,0,,1e+05,20,5e+05,1,1e+05,33.3,300300,1
+1071,"FurZapper",12,20,"Pet Products","product that helps remove pet hair from clothes",8,"unknown",,1,"NJ",6e+05,10,6e+06,1,6e+05,15,4e+06,1
+1072,"TruffleShuffle",12,21,"Food and Beverage","truffle supplier for restaurants",4,"all_men",0,1,,5e+05,5,1e+07,1,501000,18,2783333,1
+1073,"Suds2Go",12,21,"Lifestyle/Home","Portable handwashing device",3,"mixed",1,1,,2e+05,10,2e+06,1,2e+05,15,1333333,1
+1074,"SaladSling",12,21,"Food and Beverage","lightweight and cost-effective salad spinner alternative",6,"all_women",1,0,,1e+05,20,5e+05,0,,,,
+1075,"Larq",12,21,"Health/Wellness","Self-cleaning and purifying water bottle",5,"all_men",0,0,,5e+05,1,5e+07,1,1e+06,4,2.5e+07,2
+1076,"JiggyPuzzles",12,22,"Uncertain/Other","Unique jigsaw puzzles with a social cause",7,"all_women",1,0,"NY",5e+05,5,1e+07,1,5e+05,15,3333333,1
+1077,"TheScrubbie",12,22,"Lifestyle/Home","Universal cleaning attachment",3,"all_men",0,1,,1e+05,10,1e+06,0,,,,
+1078,"TheBumblingBee",12,22,"Food and Beverage","Vegan fast-food restaurant",3,"all_women",1,1,,150000,10,1500000,0,,,,
+1079,"XTorch",12,22,"Lifestyle/Home","Solar-powered flashlight",2,"mixed",1,1,,150000,10,1500000,0,,,,
+1080,"GrindBasketball",12,23,"Business Services","Portable, collapsible, and affordable rebounding machine",6,"all_men",0,0,,250000,5,5e+06,1,250000,25,1e+06,2
+1081,"CreationNation",12,23,"Food and Beverage","Protein mixes for no-bake treats",5,"all_women",1,0,,3e+05,12,2500000,0,,,,
+1082,"SneakERASERS",12,23,"Fashion/Beauty","dual-sided cleaning sponge for shoes",5,"all_men",0,1,,2e+05,8,2500000,1,2e+05,20,1e+06,2
+1083,"BEERMKR",12,23,"Liquor/Alcohol","Connected, all-in-one home beer brewing system",6,"all_men",0,1,,5e+05,2,2.5e+07,0,,,,
+1084,"Pluto",12,24,"Lifestyle/Home","pillow for different sleeping styles",5,"mixed",1,1,,4e+05,5,8e+06,0,,,,
+1085,"FlingGolf",12,24,"Fitness/Sports/Outdoors","Golf-lacrosse hybrid sport",3,"all_men",0,1,,3e+05,10,3e+06,1,3e+05,25,1200000,1
+1086,"FloatNGrill",12,24,"Food and Beverage","Floating grill",2,"all_men",0,1,,2e+05,20,1e+06,1,1e+05,22.5,444444,1
+1087,"TheOriginalStretchlace",12,24,"Lifestyle/Home","Product that turns any laced shoe into a slip-on",9,"mixed",1,1,,1e+05,15,666667,1,1e+05,30,333333,1
+1088,"DinoDon",12,25,"Uncertain/Other","Life-sized dinosaur animatronics",3,"mixed",1,1,,5e+05,10,5e+06,1,5e+05,25,2e+06,1
+1089,"CopperCowCoffee",12,25,"Food and Beverage","Vietnamese coffee business",3,"all_women",1,0,,6e+05,4,1.5e+07,1,6e+05,5.5,10909091,1
+1090,"LitHandlers",12,25,"Lifestyle/Home","Drink koozies with a handle",5,"all_women",1,0,,2e+05,10,2e+06,1,2e+05,20,1e+06,1
+1091,"SuperPottyTrainer",12,25,"Uncertain/Other","Creative potty training tool",4,"mixed",1,1,,3e+05,10,3e+06,1,3e+05,50,6e+05,1
+1092,"KinApparel",13,1,"Fashion/Beauty","Satin Lined Hoodies Hats",4,"all_women",1,0,,2e+05,10,2e+06,1,2e+05,30,666667,2
+1093,"UprisingBread",13,1,"Food and Beverage","Low Carb gluten-free breads",4,"mixed",1,1,,5e+05,3,16666667,0,,,,
+1094,"LionLatch",13,1,"Lifestyle/Home","Portable jewelry box",3,"all_women",1,0,,150000,15,1e+06,0,,,,
+1095,"Pashko",13,1,"Fashion/Beauty","Community-made apparels",2,"all_men",0,0,,5e+05,2.5,2e+07,0,,,,
+1096,"Songlorious",13,2,"Lifestyle/Home","Personalized songs for any occasion",5,"mixed",1,1,,4e+05,10,4e+06,1,5e+05,40,1250000,4
+1097,"MuteMe",13,2,"Electronics","Illuminated mute buttons for conference calls",6,"all_men",0,1,,2e+05,10,2e+06,0,,,,
+1098,"ProperGood",13,2,"Food and Beverage","Meal order service with natural, healthy soups",7,"mixed",1,1,,4e+05,10,4e+06,1,4e+05,20,2e+06,1
+1099,"LongWharf",13,2,"Fashion/Beauty","Recycled oyster shell sweaters",4,"mixed",1,1,,375000,15,2500000,0,,,,
+1100,"Sparketh",13,3,"Children/Education","Online art education for kids and teens",7,"unknown",,1,,1e+05,8,1250000,1,1e+05,20,5e+05,2
+1101,"OatHaus",13,3,"Food and Beverage","Oat butter spreads",3,"mixed",1,1,,375000,5,7500000,0,,,,
+1102,"FlaskyFlowers",13,3,"Lifestyle/Home","Flower bouquets with flasks inside",5,"mixed",1,1,,50000,10,5e+05,1,75000,30,250000,3
+1103,"IncredibleEats",13,3,"Food and Beverage","IncrEdible Spoons Edible straws and utensils",6,"all_men",0,0,,5e+05,7,7142857,1,5e+05,15,3333333,1
+1104,"Magic5",13,4,"Fitness/Sports/Outdoors","Custom swim goggles",3,"all_men",0,1,,5e+05,2.5,2e+07,1,1e+06,6.5,15384615,1
+1105,"Tabby",13,4,"Technology/Software","Dating app for cat people",5,"mixed",1,1,,3e+05,20,1500000,1,3e+05,30,1e+06,1
+1106,"SoaPen",13,4,"Lifestyle/Home","Soap pen",2,"all_women",1,1,,1e+05,10,1e+06,1,1e+05,10,1e+06,1
+1107,"54Thrones",13,4,"Fashion/Beauty","African shea butter",3,"all_women",1,0,,250000,10,2500000,1,250000,17.5,1428571,2
+1108,"Wedfuly",13,5,"Technology/Software","virtual weddings app",3,"all_women",1,0,,2e+05,5,4e+06,1,2e+05,10,2e+06,1
+1109,"Wad-Free",13,5,"Lifestyle/Home","wad preventer for washing machines",5,"all_women",1,0,,2e+05,5,4e+06,1,2e+05,10,2e+06,1
+1110,"Beulr",13,5,"Technology/Software","Bot that attends and records Zoom meetings",7,"all_men",0,0,,150000,20,750000,0,,,,
+1111,"Spergo",13,5,"Fashion/Beauty","Inspirational clothing line",3,"mixed",1,1,,3e+05,10,3e+06,1,3e+05,20,1500000,1
+1112,"FishFixe",13,6,"Food and Beverage","Seafood delivery service",3,"all_women",1,1,,2e+05,15,1333333,1,2e+05,25,8e+05,1
+1113,"HelloPrenup",13,6,"Lifestyle/Home","quick, inexpensive prenuptial agreement service",5,"all_women",1,1,,150000,10,1500000,1,150000,30,5e+05,2
+1114,"Deux",13,6,"Food and Beverage","Edible, vegan cookie dough",4,"all_women",1,0,,3e+05,10,3e+06,0,,,,
+1115,"Hidrent",13,6,"Lifestyle/Home","Firefighter contractor service for home projects",6,"all_men",0,0,,3e+05,8,3750000,1,3e+05,33.33,900090,2
+1116,"SheetsLaundryClub",13,7,"Lifestyle/Home","Plastic-free dissolvable laundry detergent sheets",5,"all_men",0,1,,5e+05,5,1e+07,1,5e+05,8,6250000,1
+1117,"PinkPicasso",13,7,"Lifestyle/Home","paint by numbers paint kit",5,"all_women",1,1,,4e+05,5,8e+06,1,5e+05,15,3333333,2
+1118,"Love&Pebble",13,7,"Fashion/Beauty","diy beauty pop face masks",5,"mixed",1,1,,150000,10,1500000,0,,,,
+1119,"ZachZoeSweetBeeFarm",13,7,"Food and Beverage","home grown raw honey blended with superfruits",7,"mixed",1,1,,150000,10,1500000,1,150000,15,1e+06,1
+1120,"Wendy'sGnomeShop",13,8,"Lifestyle/Home","Decorative gnomes for the holidays",5,"all_women",1,0,,2e+05,20,1e+06,1,2e+05,30,666667,1
+1121,"OrnamentAnchor",13,8,"Fashion/Beauty","Secure ornament hangers",3,"mixed",1,1,,90000,5,1800000,0,,,,
+1122,"TheRealElf",13,8,"Lifestyle/Home","personal digital messages",3,"unknown",,0,,125000,25,5e+05,1,125000,35,357143,1
+1123,"Santa'sEnchantedMailbox",13,8,"Lifestyle/Home","Magical mailbox for sending letters to Santa",7,"mixed",1,1,,150000,30,5e+05,0,,,,
+1124,"MaxproFitness",13,9,"Health/Wellness","Portable resistant band machine",4,"all_men",0,0,,5e+05,2.5,2e+07,1,5e+05,3,16666667,1
+1125,"BananaLoca",13,9,"Food and Beverage","Banana coring and filling tool",5,"mixed",1,1,,250000,25,1e+06,1,250000,25,0,2
+1126,"LiberateStudio",13,9,"Health/Wellness","Mental health fitness classes",4,"all_women",1,0,,2e+05,10,2e+06,0,,,,
+1127,"Tenikle",13,9,"Lifestyle/Home","Suction tripod and mount",4,"all_men",0,0,,2e+05,10,2e+06,1,2e+05,30,666667,1
+1128,"Snactiv",13,10,"Lifestyle/Home","Mess-free snacking tool",3,"all_men",0,1,,2e+05,10,2e+06,1,2e+05,20,1e+06,2
+1129,"SmartTireCompany",13,10,"Automotive","High-performance airless tires",3,"all_men",0,1,,5e+05,2.5,2e+07,0,,,,
+1130,"Candi",13,10,"Technology/Software","Personal celebrity video chats",4,"mixed",1,1,,5e+05,15,3333333,0,,,,
+1131,"BlackSandsEntertainment",13,10,"Media/Entertainment","Culturally diverse comics, animations, and other media",7,"mixed",1,1,,5e+05,5,1e+07,1,5e+05,30,1666667,2
+1132,"VaBroom",13,11,"Lifestyle/Home","Broom that is also a vacuum",6,"all_men",0,1,,350000,2.5,1.4e+07,1,350000,2.5,1.4e+07,1
+1133,"MustLove",13,11,"Food and Beverage","Plant-based vegan ice cream alternative",5,"all_women",1,1,,6e+05,7.5,8e+06,0,,,,
+1134,"Romperjack",13,11,"Fashion/Beauty","Men’s rompers",2,"all_men",0,1,,2e+05,5,4e+06,0,,,,
+1135,"RoqInnovation",13,11,"Lifestyle/Home","Innovative hats with lights",4,"all_women",1,0,,2e+05,15,1333333,1,2e+05,20,1e+06,2
+1136,"TaniaSpeaks",13,12,"Fashion/Beauty","Organic skin and brow solutions",5,"all_women",1,0,,4e+05,10,4e+06,1,4e+05,15,2666667,1
+1137,"TA3Swimwear",13,12,"Fitness/Sports/Outdoors","Shaping swimwear for women",4,"all_women",1,0,,5e+05,10,5e+06,0,,,,
+1138,"HiccAway",13,12,"Health/Wellness","Hiccup treatment straw",3,"mixed",1,1,,250000,10,2500000,1,250000,20,1250000,1
+1139,"TristenIkaika",13,12,"Lifestyle/Home","rings made from spoons and other recycled materials",8,"all_men",0,0,,250000,5,5e+06,1,250000,15,1666667,1
+1140,"KettleGryp",13,13,"Lifestyle/Home","Grip that turns dumbbells into kettlebells",6,"all_men",0,1,,3e+05,10,3e+06,1,3e+05,15,2e+06,1
+1141,"CalmStrips",13,13,"Health/Wellness","Textured strips to calm anxiety",5,"mixed",1,1,,250000,10,2500000,1,250000,0,0,1
+1142,"TheBlowzee",13,13,"Health/Wellness","Device to reduce germs while blowing out candles",8,"all_men",0,1,,1e+05,20,5e+05,0,,,,
+1143,"OverEZChickenCoop",13,13,"Uncertain/Other","Custom, easy-assemble chicken coops",4,"all_men",0,0,,1e+06,1,1e+08,0,,,,
+1144,"RangeBeauty",13,14,"Fashion/Beauty","Inclusive makeup and skincare products",5,"all_women",1,1,,150000,6,2500000,1,150000,20,750000,2
+1145,"DiaperDust",13,14,"Health/Wellness","Powder that controls diaper odors",5,"all_women",1,0,,75000,40,187500,1,75000,40,187500,1
+1146,"PinoleBlue",13,14,"Food and Beverage","Foods made with blue corn",5,"mixed",1,1,,3e+05,10,3e+06,0,,,,
+1147,"Junobie",13,14,"Food and Beverage","Reusable breast milk storage bags",5,"all_women",1,0,,1e+05,10,1e+06,1,1e+05,22.5,444444,1
+1148,"Curie",13,15,"Fashion/Beauty","Aluminum-free deodorants and hand sanitizers",5,"all_women",1,0,,3e+05,5,6e+06,1,3e+05,12,2500000,2
+1149,"NogginBoss",13,15,"Fitness/Sports/Outdoors","Large promotional hats for sports teams",6,"all_men",0,1,,50000,25,2e+05,1,50000,30,166667,1
+1150,"BehaveBras",13,15,"Fashion/Beauty","Supportive bras for larger breasts",5,"all_women",1,0,,150000,15,1e+06,1,150000,20,750000,1
+1151,"Ade+Ayo",13,15,"Fashion/Beauty","African print clothing for children",5,"mixed",1,1,,175000,10,1750000,1,7e+05,33.3,2102102,1
+1152,"Sunflow",13,16,"Business Services","Easy-fold beach chairs with accessory options",6,"mixed",1,1,,1e+06,6,16666667,1,1e+06,5,2e+07,1
+1153,"Prepdeck",13,16,"Lifestyle/Home","Kitchen organization tool system",4,"all_men",0,0,,750000,7.5,1e+07,0,,,,
+1154,"Ootbox",13,16,"Business Services","Portable, temporary outdoor offices made from shipping containers",8,"mixed",1,1,,3e+05,5,6e+06,1,3e+05,10,3e+06,1
+1155,"DoAmore",13,16,"Business Services","Sustainable, ethically-sourced engagement rings that provide clean water",8,"all_men",0,0,,6e+05,6,1e+07,1,6e+05,15,4e+06,1
+1156,"YoungKingHairCare",13,17,"Fashion/Beauty","Haircare products for men of color",6,"mixed",1,1,,225000,2.5,9e+06,0,,,,
+1157,"Pawnix",13,17,"Pet Products","Noise-cancelling headphones for nervous dogs",5,"all_women",1,0,,150000,10,1500000,0,,,,
+1158,"MagicDates",13,17,"Food and Beverage","Date-based snack bites",3,"all_women",1,0,,150000,10,1500000,1,150000,33.3,450450,1
+1159,"Round21",13,17,"Fitness/Sports/Outdoors","Artistic sports gear and NFTs",5,"all_women",1,0,,250000,3,8333333,1,250000,10,2500000,1
+1160,"ApollaPerformance",13,18,"Lifestyle/Home","Supportive compression socks with dancers in mind",7,"all_women",1,1,,3e+05,15,2e+06,1,3e+05,20,1500000,1
+1161,"UMARO",13,18,"Food and Beverage","Bacon made from seaweed",4,"all_women",1,1,,5e+05,2,2.5e+07,1,1e+06,7,14285714,1
+1162,"FortMagic",13,18,"Children/Education","Fort-building kits for kids",4,"all_women",1,0,,75000,15,5e+05,0,,,,
+1163,"NoLimbits",13,18,"Fashion/Beauty","Adaptive clothing for people with disabilities",6,"all_women",1,0,,1e+05,6,1666667,1,1e+05,10,1e+06,2
+1164,"LUCIDArt",13,19,"Uncertain/Other","camera lucida drawing tool",4,"all_men",0,0,,3e+05,10,3e+06,1,3e+05,15,2e+06,1
+1165,"SwiftPaws",13,19,"Pet Products","Professional and home lure coursing equipment for dogs",8,"all_women",1,0,,240000,6,4e+06,1,240000,6,4e+06,1
+1166,"BusyBox",13,19,"Business Services","Smart illuminated status signs",4,"all_men",0,1,,2e+05,15,1333333,0,,,,
+1167,"DirtyCookie",13,19,"Food and Beverage","Cookie shot glasses for all beverages",6,"all_women",1,0,,5e+05,5,1e+07,1,5e+05,25,2e+06,1
+1168,"CatAmazing",13,20,"Pet Products","Feeding puzzle toys for cats",5,"all_men",0,0,,2e+05,10,2e+06,1,2e+05,22,909091,1
+1169,"LilAdvents",13,20,"Children/Education","Potty training chart and advent game",6,"mixed",1,1,,3e+05,15,2e+06,0,,,,
+1170,"HairFin",13,20,"Fashion/Beauty","measuring tool for home haircuts",5,"all_men",0,0,,25000,20,125000,1,25000,30,83333,1
+1171,"Browndages",13,20,"Children/Education","Inclusive flesh-tone and character bandages",5,"mixed",1,1,,75000,7.5,1e+06,1,1e+05,25,4e+05,3
+1172,"CupBop",13,21,"Food and Beverage","Quick-service Korean barbecue in a cup",6,"all_men",0,1,,1e+06,3,33333333,1,1e+06,5,2e+07,1
+1173,"Plunge",13,21,"Health/Wellness","Cold plunge tubs",3,"all_men",0,1,,1200000,5,2.4e+07,1,1200000,12,1e+07,1
+1174,"HandyPan",13,21,"Food and Beverage","pan with a built-in strainer",5,"all_men",0,1,,1e+05,20,5e+05,1,1e+05,20,5e+05,1
+1175,"HamptonAdams",13,21,"Fitness/Sports/Outdoors","Sports and athletic tapes",4,"all_men",0,0,,5e+05,10,5e+06,0,,,,
+1176,"PulpPantry",13,22,"Food and Beverage","Vegan snacks made from discarded produce pulp",7,"all_women",1,0,,5e+05,10,5e+06,1,5e+05,17,2941176,1
+1177,"KawaiiLightning",13,22,"Business Services","ring lights for influencers and content creators",7,"mixed",1,1,,88000,22,4e+05,1,1e+05,22,454545,1
+1178,"Pricklee",13,22,"Food and Beverage","Cactus water beverage",3,"all_men",0,1,,2e+05,5,4e+06,1,2e+05,20,1e+06,1
+1179,"Ooakshell",13,22,"Fashion/Beauty","Hand-painted headbands with adjustable rings",5,"all_women",1,0,,150000,10,1500000,1,150000,20,750000,1
+1180,"Stryx",13,23,"Fashion/Beauty","Cosmetics and skincare for men",5,"all_men",0,1,,6e+05,5,1.2e+07,1,6e+05,10,6e+06,1
+1181,"Driftline",13,23,"Business Services","Board shorts lined with wetsuit material",6,"all_men",0,1,,1e+05,10,1e+06,0,,,,
+1182,"Springer",13,23,"Pet Products","Travel water bottle/bowl for dogs",5,"mixed",1,1,,4e+05,6,6666667,1,4e+05,10,4e+06,1
+1183,"Chill-N-Reel",13,23,"Liquor/Alcohol","Beer koozie with a built-in fishing reel",7,"all_men",0,1,,3e+05,10,3e+06,0,,,,
+1184,"TheTransformationFactory",13,24,"Food and Beverage","Nutritious sea moss jelly",4,"all_men",0,0,,5e+05,5,1e+07,1,6e+05,20,3e+06,2
+1185,"ThePlayer’sTrunk",13,24,"Fitness/Sports/Outdoors","Marketplace for player-licensed college sports gear",6,"all_men",0,1,,650000,5,1.3e+07,0,,,,
+1186,"AquaBoxingGloves",13,24,"Fitness/Sports/Outdoors","Portable training gloves for boxers",5,"all_men",0,0,,1e+05,10,1e+06,0,,,,
+1187,"ProjectPollo",13,24,"Food and Beverage","Plant-based meat fast food restaurants",5,"all_men",0,0,,2500000,5,5e+07,0,,,,
+1188,"KENT",14,1,"Lifestyle/Home","Environmentally friendly dissolvable clothes",4,"mixed",1,1,,2e+05,5,4e+06,1,2e+05,15,1333333,1
+1189,"Oogiebear",14,1,"Children/Education","Baby Accessory",2,"mixed",1,1,,4e+05,5,8e+06,1,6e+05,10,6e+06,2
+1190,"PizzaPack",14,1,"Food and Beverage","Food Storage / Pizza Containers",5,"all_men",0,0,,1e+05,10,1e+06,1,1e+05,13,769231,1
+1191,"StaktMat",14,1,"Lifestyle/Home","Foldable Yoga Mats",3,"all_women",1,1,,1e+05,10,1e+06,1,1e+05,15,666667,1
+1192,"BananaPhone",14,2,"Electronics","Bluetooth Banana Phone",3,"all_men",0,1,,250000,10,2500000,0,,,,
+1193,"StealthBros",14,2,"Lifestyle/Home","Dopp kits",2,"all_men",0,0,,2e+05,15,1333333,1,2e+05,20,1e+06,2
+1194,"TheWoobles",14,2,"Lifestyle/Home","Crochet Kits",2,"mixed",1,1,,250000,5,5e+06,1,450000,6,7500000,2
+1195,"TurboTrusser",14,2,"Food and Beverage","Trusser for poultry",3,"all_men",0,1,,1e+05,10,1e+06,1,1e+05,33,303030,1
+1196,"CreateACastle",14,3,"Children/Education","Castle Building Kit for Kids",5,"mixed",1,1,,350000,10,3500000,1,350000,20,1750000,1
+1197,"HalloweenMoments",14,3,"Lifestyle/Home","Pumpkin Scraper",2,"all_men",0,0,,3e+05,10,3e+06,0,,,,
+1198,"MamaO'sKimchi",14,3,"Food and Beverage","Kimchi",1,"mixed",1,1,,2e+05,10,2e+06,0,,,,
+1199,"Woosh",14,4,"Lifestyle/Home","Smart Air Filters ",3,"all_men",0,0,,5e+05,10,5e+06,1,5e+05,10,5e+06,1
+1200,"ExpeditionSubsahara",14,4,"Lifestyle/Home","Decorative Baskets",2,"all_women",1,0,,5e+05,10,5e+06,0,,,,
+1201,"Ghia",14,4,"Food and Beverage","Non alcoholic drink",3,"all_women",1,0,,250000,5,5e+06,0,,,,
+1202,"StorageScholars",14,4,"Children/Education","Storage and Moving for Students",5,"all_men",0,1,,250000,5,5e+06,1,250000,10,2500000,1
+1203,"PrettyRugged",14,5,"Fashion/Beauty","Lifestyle Brand",2,"all_women",1,0,,2e+05,10,2e+06,1,2e+05,25,8e+05,2
+1204,"BigBeeLittleBee",14,5,"Children/Education","Kids Accessories / Toys",4,"all_women",1,1,,1e+05,20,5e+05,0,,,,
+1205,"Plufl",14,5,"Lifestyle/Home","Human Portable Beds",3,"all_men",0,1,,2e+05,10,2e+06,1,2e+05,15,1333333,2
+1206,"BridalBabes",14,5,"Fashion/Beauty","Fashion / Dresses",3,"mixed",1,1,,250000,10,2500000,1,250000,20,1250000,1
+1207,"NanaHats",14,6,"Food and Beverage","Banana Preservation",2,"all_men",0,0,,150000,10,1500000,1,150000,20,750000,2
+1208,"TheSquareKeg",14,6,"Food and Beverage","Beverage / Keg ",3,"all_men",0,0,,3e+05,10,3e+06,1,3e+05,20,1500000,1
+1209,"Collars&Co",14,6,"Fashion/Beauty","Men’s Fashion",2,"all_men",0,0,,3e+05,4,7500000,1,1e+06,10,1e+07,2
+1210,"Wondry",14,6,"Food and Beverage","Cocktail Wines",2,"mixed",1,1,,185000,8,2312500,1,225000,15,1500000,1
+1211,"Frsh",14,7,"Fashion/Beauty","Air Fresheners Subscription Service",4,"all_men",0,1,,2e+05,5,4e+06,1,2e+05,20,1e+06,1
+1212,"Actionglow",14,7,"Fitness/Sports/Outdoors","LED Lighting for Sporting Equipment",5,"all_men",0,1,,2e+05,15,1333333,1,2e+05,30,666667,1
+1213,"LegacyShave",14,7,"Lifestyle/Home","Grooming / Shaving Brush",4,"all_men",0,0,,3e+05,10,3e+06,1,7e+05,95,736842,1
+1214,"Boarderie",14,7,"Food and Beverage","Online Edible Gifting",3,"mixed",1,1,,3e+05,5,6e+06,1,3e+05,9,3333333,1
+1215,"HummViewer",14,8,"Lifestyle/Home","Wearable Hummingbird Feeder",3,"mixed",1,1,,75000,10,750000,1,75000,35,214286,1
+1216,"FireFighter1",14,8,"Uncertain/Other","Fire fighting systems",3,"all_women",1,0,"CA",150000,15,1e+06,1,150000,25,6e+05,2
+1217,"ShredSkinz",14,8,"Lifestyle/Home","Fitness/Workout Sauna Suit",3,"all_men",0,0,,60000,20,3e+05,1,60000,20,3e+05,1
+1218,"SliimeyHoney",14,8,"Lifestyle/Home","Slime",1,"all_men",0,0,,150000,10,1500000,1,150000,20,750000,1
+1219,"ChessUp",14,9,"Technology/Software","Chess Game with AI Technology",5,"all_men",0,1,,3e+05,5,6e+06,1,3e+05,5,6e+06,1
+1220,"ZipString",14,9,"Children/Education","String Toy",2,"all_men",0,1,,1e+05,10,1e+06,1,1e+05,20,5e+05,2
+1221,"GarageCelebrations",14,9,"Lifestyle/Home","Festive Garage Door Covers",4,"all_men",0,1,,2e+05,20,1e+06,1,2e+05,30,666667,1
+1222,"ReadyFestive",14,9,"Lifestyle/Home","Festive Home Décor",3,"all_women",1,1,,250000,10,2500000,1,250000,18,1388889,1
+1223,"LongTablePanCakes",14,10,"Food and Beverage","Whole heirloom grain pancake and waffle mix",7,"all_men",0,0,,14000,15,93333,0,,,,
+1224,"JicaFoods",14,10,"Food and Beverage","Jica-based foods",2,"mixed",1,1,,3e+05,3,1e+07,1,3e+05,6,5e+06,1
+1225,"Kudos",14,10,"Children/Education","Premium Disposable Baby Diapers",4,"all_women",1,0,,250000,5,5e+06,1,250000,12,2083333,2
+1226,"Vochill",14,10,"Lifestyle/Home","Portable wine glass cooler",4,"mixed",1,1,,3e+05,5,6e+06,0,,,,
+1227,"Kinfield",14,11,"Lifestyle/Home","Sunscreen and Clean Bug Sprays",5,"all_women",1,0,,250000,5,5e+06,1,250000,10,2500000,2
+1228,"MetricMate",14,11,"Health/Wellness","Smart fitness device",3,"all_men",0,1,,1e+05,5,2e+06,0,,,,
+1229,"WildWonder",14,11,"Food and Beverage","Probiotic sparkling beverage",3,"all_women",1,0,,5e+05,5,1e+07,1,5e+05,6,8333333,1
+1230,"CabinetHealth",14,11,"Health/Wellness","Accessible and sustainable healthcare",4,"all_men",0,1,,5e+05,2.5,2e+07,1,5e+05,7,7142857,2
+1231,"Nutr",14,12,"Lifestyle/Home","Nut milk",2,"mixed",1,1,,5e+05,5,1e+07,0,,,,
+1232,"Frescos",14,12,"Food and Beverage","Latin American-inspired sparkling water",4,"all_men",0,0,,130000,8,1625000,1,130000,25,520000,1
+1233,"BrassRoots",14,12,"Food and Beverage","Snacks made from sacha inchi seeds",6,"all_men",0,0,,4e+05,7,5714286,0,,,,
+1234,"Nopalera",14,12,"Health/Wellness","Mexican-inspired botanicals for bath and body",6,"all_women",1,0,,3e+05,5,6e+06,0,,,,
+1235,"FryAway",14,13,"Lifestyle/Home","Cooking oil solidifier",3,"all_women",1,0,,250000,10,2500000,1,250000,22,1136364,2
+1236,"Anytongs",14,13,"Lifestyle/Home","Kitchen tongs accessory",3,"all_men",0,0,,150000,20,750000,1,150000,49,306122,1
+1237,"CopyKeyboard",14,13,"Technology/Software","Copy and paste keyboard, USB accessory",6,"all_men",0,0,,40000,25,160000,0,,,,
+1238,"SlickBarrier",14,13,"Lifestyle/Home","Pest barrier for home exterior",5,"all_men",0,1,,5e+05,10,5e+06,1,5e+05,15,3333333,1
+1239,"Kahawa1893",14,14,"Food and Beverage","Kenyan coffee with a mission to compensate women farmers",9,"all_women",1,0,,350000,5,7e+06,1,350000,8,4375000,1
+1240,"FunkkOFF",14,14,"Health/Wellness","Teeth refreshers ",2,"all_women",1,1,,250000,5,5e+06,1,250000,12,2083333,1
+1241,"Retold",14,14,"Fashion/Beauty","Textile mail-in recycling service",4,"mixed",1,1,,3e+05,15,2e+06,1,3e+05,25,1200000,1
+1242,"TheChubRubPatch",14,14,"Health/Wellness","Patch for inner-thigh chafing",4,"all_women",1,0,,2e+05,30,666667,0,,,,
+1243,"SurfBandPro",14,15,"Fashion/Beauty","On-the-go sunscreen dispenser",3,"all_men",0,0,,150000,20,750000,0,,,,
+1244,"BigMouthToothbrush",14,15,"Health/Wellness","Big Bristle Toothbrush",3,"all_women",1,0,,150000,10,1500000,1,150000,20,750000,1
+1245,"YouthForia",14,15,"Fashion/Beauty","Plant-based makeup",2,"all_women",1,0,,4e+05,5,8e+06,1,4e+05,8,5e+06,1
+1246,"EatYourFlowers",14,15,"Lifestyle/Home","Baked goods with edible flowers",5,"all_women",1,0,"CA",250000,12,2083333,1,250000,15,1666667,1
+1247,"Woof",14,16,"Pet Products","Pet safety & rescue app",5,"all_men",0,0,,1e+05,10,1e+06,0,,,,
+1248,"Sweetkiwi",14,16,"Food and Beverage","Healthy frozen yogurt",3,"mixed",1,1,,250000,5,5e+06,1,250000,16,1562500,1
+1249,"Pluie",14,16,"Children/Education","Diaper changing table",3,"all_women",1,1,,5e+05,5,1e+07,0,,,,
+1250,"Flated",14,16,"Automotive","Inflatable automotive accessories",3,"mixed",1,1,,350000,5,7e+06,1,350000,8,4375000,1
+1251,"CrispyCones",14,17,"Food and Beverage","Ice cream cones",3,"mixed",1,1,,2e+05,10,2e+06,1,2e+05,20,1e+06,1
+1252,"ChubbyButtons",14,17,"Technology/Software","Smartphone bluetooth device",3,"all_men",0,1,,250000,8,3125000,0,,,,
+1253,"TngntSkiBikes",14,17,"Automotive","Ski Bikes",2,"all_men",0,1,,2e+05,20,1e+06,1,2e+05,40,5e+05,1
+1254,"Autio",14,17,"Technology/Software","Mobile audio travel app",4,"all_men",0,0,,1e+06,5,2e+07,0,,,,
+1255,"HappiFloss",14,18,"Uncertain/Other","Compostable flossers",2,"all_women",1,0,,2e+05,10,2e+06,0,,,,
+1256,"Lavabox",14,18,"Lifestyle/Home","Portable campfires",2,"all_men",0,0,"CO",2e+05,10,2e+06,1,2e+05,12.5,1600000,1
+1257,"Bleni",14,18,"Food and Beverage","Smoothie kiosk, vending machine",4,"all_men",0,1,,250000,6,4166667,1,750000,35,2142857,2
+1258,"TheIceCreamCanteen",14,18,"Food and Beverage","Container for ice cream",4,"all_men",0,0,,1e+05,5,2e+06,1,1e+05,20,5e+05,2
+1259,"PartingStone",14,19,"Uncertain/Other","Cremation Alternative",2,"all_men",0,0,,4e+05,5,8e+06,1,4e+05,10,4e+06,2
+1260,"Milkify",14,19,"Children/Education","Storage for Breast Milk for Babies",6,"mixed",1,1,,4e+05,10,4e+06,1,4e+05,20,2e+06,2
+1261,"Cincha",14,19,"Lifestyle/Home","Travel Belts",2,"mixed",1,1,,2e+05,15,1333333,1,1e+05,25,4e+05,1
+1262,"Burlap&Barrel",14,19,"Food and Beverage","Spice Company",2,"all_men",0,1,,5e+05,5,1e+07,0,,,,
+1263,"HoneyBunchies",14,20,"Food and Beverage","Energy Snack Bars",3,"all_women",1,0,"CO",2e+05,10,2e+06,0,,,,
+1264,"PlayMaysie",14,20,"Children/Education","Portable doll house",3,"all_women",1,0,,150000,10,1500000,1,150000,20,750000,1
+1265,"TiaLupita",14,20,"Food and Beverage","Mexican-inspired health food brand",4,"all_men",0,0,"CA",5e+05,5,1e+07,1,5e+05,5,1e+07,1
+1266,"DapperBoi",14,20,"Fashion/Beauty","Gender-neutral clothing line ",3,"all_women",1,1,,250000,5,5e+06,0,,,,
+1267,"NaturesWildBerry",14,21,"Food and Beverage","Berries",1,"all_men",0,1,,80000,15,533333,1,80000,20,4e+05,2
+1268,"YouGoNatural",14,21,"Fashion/Beauty","Head Wraps for Hair",4,"mixed",1,1,,4e+05,5,8e+06,1,4e+05,10,4e+06,1
+1269,"SeeTheWayISee",14,21,"Fashion/Beauty","Clothing brand",2,"all_women",1,0,,250000,10,2500000,0,,,,
+1270,"NoshiFood",14,21,"Food and Beverage","Food paint",2,"all_men",0,0,,250000,17,1470588,1,250000,25,1e+06,1
+1271,"Tucky",14,22,"Fashion/Beauty","Turn any shirt into a crop top",7,"all_women",1,0,,70000,30,233333,1,70000,39,179487,1
+1272,"InfluencersInTheWild",14,22,"Lifestyle/Home","Board game that requires you to act as a social media influencer",12,"all_men",0,0,,5e+05,10,5e+06,0,,,,
+1273,"Eyewris",14,22,"Lifestyle/Home","Reading glasses",2,"all_men",0,1,,25000,5,5e+05,1,125000,20,625000,5
+1274,"TonesOfMelanin",14,22,"Fashion/Beauty","Collegiate fashion for minority communities",5,"all_women",1,0,,3e+05,15,2e+06,1,3e+05,12,2500000,1
+1275,"GatsbyChocolate",15,1,"Food and Beverage","Chocolates with less sugar and calories",6,"all_men",0,1,,5e+05,5,1e+07,1,5e+05,20,2500000,2
+1276,"GentlySoap",15,1,"Lifestyle/Home","Soap for sensitive skin",4,"all_women",1,0,"GA",75000,10,750000,1,75000,25,3e+05,1
+1277,"WorthyBrands",15,1,"Health/Wellness","Medical patches for eyes",4,"all_women",1,0,,250000,10,2500000,0,,,,
+1278,"PieWine",15,1,"Food and Beverage","Wine for pizzas",3,"all_men",0,1,,2e+05,7.5,2666667,0,,,,
+1279,"StormBag",15,2,"Uncertain/Other","Sandless sandbags",2,"all_men",0,1,"CA",2e+05,10,2e+06,1,2e+05,30,666667,2
+1280,"Matador",15,2,"Fashion/Beauty","Meggings",1,"all_men",0,0,,250000,10,2500000,0,,,,
+1281,"ReturnHome",15,2,"Business Services","Funeral service",2,"mixed",1,1,,2e+06,5,2e+06,0,,,,
+1282,"ToastIt",15,2,"Food and Beverage","Arepas Guilt-free, Latin foods",4,"all_women",1,1,,1e+05,5,2e+06,1,150000,20,750000,1
+1283,"Bot-It",15,3,"Technology/Software","AI website and mobile app",5,"all_men",0,1,"OH",150000,10,1500000,1,3e+05,30,1e+06,2
+1284,"Wellingtons",15,3,"Food and Beverage","Frozen Beef Wellingtons",3,"mixed",1,1,"CA",2e+05,10,2e+06,0,,,,
+1285,"GloveWrap",15,3,"Fitness/Sports/Outdoors","Baseball/softball Glove wraps",3,"mixed",1,1,"CA",50000,20,250000,1,50000,22,227273,2
+1286,"DatingByBlaine",15,3,"Business Services","Dating coach services for men",5,"all_women",1,0,"AZ",1e+05,2,5e+06,1,1e+05,10,1e+06,1
+1287,"BuenaPapa",15,4,"Food and Beverage","Loaded french fry dishes",4,"mixed",1,1,,4e+05,7,5714286,1,4e+05,19,2105263,1
+1288,"Paddlesmash",15,4,"Fitness/Sports/Outdoors","Outdoor paddle game",3,"all_men",0,1,,250000,10,2500000,1,250000,20,1250000,2
+1289,"Monosuit",15,4,"Fitness/Sports/Outdoors","Women’s jumpsuit that unzips at the waist",7,"all_women",1,0,"NY",150000,5,3e+06,0,,,,
+1290,"FairyTail",15,4,"Pet Products","Pet care for weddings",4,"all_women",1,1,,75000,10,750000,1,75000,22,340909,1
+1291,"Maniac",15,5,"Uncertain/Other","Pumpkin Carvers",2,"all_men",0,1,"NY",150000,8,1875000,0,,,,
+1292,"ThrillBuilders",15,5,"Fitness/Sports/Outdoors","Thrill-seeking entertainment",2,"all_men",0,0,,250000,20,1250000,1,3e+05,30,1e+06,3
+1293,"AmericanGhostWalks",15,5,"Fitness/Sports/Outdoors","Guided ghost walks",3,"mixed",1,1,"WI",250000,15,1666667,0,,,,
+1294,"ILoveChamoy",15,5,"Food and Beverage","Mexican sweet sauce",3,"all_women",1,0,"Non-US",3e+05,5,6e+06,0,,,,
+1295,"KrappStrapp",15,6,"Fitness/Sports/Outdoors","Tool that helps with going to the bathroom outdoors",9,"all_men",0,1,"TX",65000,10,650000,1,65000,33.3,195195,2
+1296,"TIKPIK",15,6,"Media/Entertainment","Guitar picks that stick to the guitar",7,"all_men",0,1,"PA",75000,10,750000,1,75000,16,468750,1
+1297,"SupermixStudio",15,6,"Fashion/Beauty","Interactive kid’s clothing brand",4,"all_women",1,0,"NY",250000,10,2500000,1,250000,20,1250000,2
+1298,"MiniMaterials",15,6,"Uncertain/Other","Miniatures for dollhouses, dioramas, and 2-scale recreations",7,"all_men",0,0,"OR",1e+05,20,5e+05,0,,,,
+1299,"Rekkie",15,7,"Fitness/Sports/Outdoors","Smart snow goggles",3,"all_men",0,1,,3e+05,10,3e+06,1,3e+05,12.5,2400000,1
+1300,"TheFidgetGame",15,7,"Children/Education","Educational game for kids",4,"all_women",1,0,,5e+05,10,5e+06,1,5e+05,15,3333333,1
+1301,"BunnyEyez",15,7,"Fashion/Beauty","Tilt-able and flippable reading glasses",5,"all_women",1,1,,2e+05,10,2e+06,1,2e+05,20,1e+06,1
+1302,"YumCrumbs",15,7,"Food and Beverage","Dessert crumb toppings",3,"all_men",0,1,"FL",1e+05,10,1e+06,1,1e+05,20,5e+05,2
+1303,"TheTomteCake",15,8,"Food and Beverage","Alternative to gingerbread houses",4,"all_women",1,0,,2e+05,10,2e+06,1,2e+05,15,1333333,1
+1304,"SnowinSeconds",15,8,"Media/Entertainment","Artificial snow solution",3,"all_men",0,0,"MN",50000,10,5e+05,1,50000,33.3,150150,1
+1305,"PickUpBricks",15,8,"Children/Education","Vacuum for kids to clean up their building bricks",9,"mixed",1,1,,2e+05,10,2e+06,1,2e+05,16,1250000,2
+1306,"BlackPaperParty",15,8,"Uncertain/Other","Products for Black representation",4,"all_women",1,1,"VI",250000,5,5e+06,1,250000,10,2500000,1
+1307,"FlyWithWine",15,9,"Liquor/Alcohol","Luggage for wine transport",4,"all_men",0,1,"CA",5e+05,8,6250000,0,,,,
+1308,"RebelCheese",15,9,"Food and Beverage","Gourmet vegan cheese",3,"mixed",1,1,"TX",750000,5,1.5e+07,1,750000,10,7500000,2
+1309,"ThePocketPanty",15,9,"Fashion/Beauty","Emergency underwear",2,"all_women",1,0,,80000,10,8e+05,0,,,,
+1310,"CAKESBody",15,9,"Fashion/Beauty","Bra alternative",2,"all_women",1,1,"NY",3e+05,5,6e+06,1,3e+05,10,3e+06,1
+1311,"VibeRide",15,10,"Fitness/Sports/Outdoors","Skateboard with brakes",3,"all_men",0,1,"UT",250000,10,2500000,1,250000,12,2083333,1
+1312,"DingleDangle",15,10,"Children/Education","Baby toy",2,"all_men",0,0,"FL",75000,20,375000,1,75000,20,375000,1
+1313,"Fishwife",15,10,"Food and Beverage","Canned fish",2,"all_women",1,0,"LA",350000,4,8750000,1,350000,6,5833333,2
+1314,"Heather'sChoice",15,10,"Food and Beverage","Adventure food",2,"all_women",1,0,,250000,10,2500000,0,,,,
+1315,"LikeAir",15,11,"Food and Beverage","Snack food",2,"mixed",1,1,"NJ",3e+05,3.5,8571429,1,3e+05,10,3e+06,2
+1316,"Poplight",15,11,"Lifestyle/Home","Renter friendly lighting",3,"all_women",1,1,"CO",150000,8,1875000,1,150000,8,1875000,1
+1317,"TheDuo",15,11,"Lifestyle/Home","Sharable Umbrella",2,"all_men",0,0,"CA",1e+05,10,1e+06,1,1e+05,18,555556,1
+1318,"TheTableTyke",15,11,"Lifestyle/Home","Silicone placemat for babies and kids",6,"all_women",1,0,"CA",1e+05,10,1e+06,0,,,,
+1319,"Jay'sPetButter",15,12,"Pet Products","Peanut butter for dogs",4,"all_men",0,1,,50000,10,5e+05,0,,,,
+1320,"MamaSingMySong",15,12,"Children/Education","Custom songs for kids",4,"mixed",1,1,"IN",125000,10,1250000,1,150000,33.3,450450,3
+1321,"BarBees",15,12,"Liquor/Alcohol","Mobile cocktail class",3,"all_women",1,1,"TN",75000,10,750000,1,75000,20,375000,1
+1322,"MeattheMushroom",15,12,"Food and Beverage","Bacon alternative",2,"mixed",1,1,"MD",150000,7.5,2e+06,1,150000,33.3,450450,2
+1323,"AuBaby",15,13,"Lifestyle/Home","Baby blankets",2,"all_women",1,0,,80000,25,320000,1,80000,35,228571,1
+1324,"GeniusLitter",15,13,"Pet Products","Cat litter",2,"all_men",0,0,"CA",250000,4,6250000,1,250000,8,3125000,3
+1325,"ModernPicnic",15,13,"Lifestyle/Home","Fashionable lunchboxes",2,"all_women",1,0,"NY",4e+05,6.5,6153846,0,,,,
+1326,"HowToBeARedhead",15,14,"Lifestyle/Home","Products for redheads",3,"all_women",1,1,,350000,10,3500000,1,350000,15,2333333,1
+1327,"Flora",15,14,"Technology/Software","Smart plant monitor",3,"all_men",0,0,"IL",3e+05,10,3e+06,1,3e+05,15,2e+06,1
+1328,"Splashzen",15,14,"Lifestyle/Home","Bathtub splash guard",3,"mixed",1,1,,1e+05,10,1e+06,1,1e+05,14,714286,1
+1329,"ThePeepShow",15,14,"Pet Products","Birdhouses with a camera inside",5,"all_men",0,0,"WA",250000,20,1250000,0,,,,
+1330,"Dogue",15,15,"Pet Products","Artisanal raw dog food",4,"mixed",1,1,"CA",1e+05,20,5e+05,0,,,,
+1331,"CupABug",15,15,"Lifestyle/Home","Bug catcher",2,"all_men",0,0,,50000,10,5e+05,1,75000,20,375000,1
+1332,"Psyonic",15,15,"Health/Wellness","Bionic hand",2,"all_men",0,0,"IL",1e+06,2,2e+06,1,1e+06,6,2e+06,3
+1333,"Coldest",15,15,"Lifestyle/Home","Cooling products",2,"all_men",0,1,"FL",6e+05,2,3e+07,0,,,,
+1334,"Mella",15,16,"Pet Products","Connected pet care devices",4,"mixed",1,1,"CA",250000,2.5,1e+07,1,250000,6,4166667,1
+1335,"FilaManila",15,16,"Food and Beverage","Packaged Filipino food",3,"all_men",0,0,"Non-US",250000,5,5e+06,1,250000,20,1250000,1
+1336,"FunkyMello",15,16,"Food and Beverage","Marshmallow creme",2,"mixed",1,1,"TX",50000,15,333333,1,50000,15,333333,1
+1337,"DaVinciEyeApp",15,16,"Technology/Software","App for artists",3,"all_men",0,0,,350000,5,7e+06,0,,,,
+1338,"Boona",15,17,"Lifestyle/Home","Tandem Showerhead",2,"all_men",0,1,"WA",4e+05,10,4e+06,0,,,,
+1339,"LetThemEatCandles",15,17,"Lifestyle/Home","Edible birthday candles",3,"mixed",1,1,"IL",250000,10,2500000,1,250000,18,1388889,1
+1340,"ChefeeRobotics",15,17,"Electronics","Robotic chef",2,"all_men",0,0,"CA",5e+05,4,12500000,1,5e+05,15,3333333,1
+1341,"LadyAlpha",15,17,"Lifestyle/Home","Nursing cover",2,"mixed",1,1,,1e+05,10,1e+06,1,1e+05,10,1e+06,1
+1342,"NowhereBakery",15,18,"Food and Beverage","Healthy bakery",2,"mixed",1,1,,2e+05,10,2e+06,1,1e+05,12.5,8e+05,1
+1343,"TheMurderMysteryCo",15,18,"Uncertain/Other","Murder mystery parties",3,"all_men",0,0,,350000,5,7e+06,1,350000,10,3500000,1
+1344,"Overplay",15,18,"Technology/Software","App for video game creation",5,"mixed",1,1,,5e+05,2.5,2e+07,1,5e+05,4,12500000,1
+1345,"Nourish+Bloom",15,18,"Lifestyle/Home","Autonomous grocery store",3,"mixed",1,1,,4e+05,5,8e+06,0,,,,
+1346,"Splash",15,19,"Fitness/Sports/Outdoors","Swim Goggles",2,"all_women",1,1,"AZ",2e+05,5,4e+06,1,2e+05,10,2e+06,1
+1347,"Hibear",15,19,"Lifestyle/Home","Insulated Flask",2,"all_men",0,0,"NV",150000,5,3e+06,0,,,,
+1348,"Veba",15,19,"Children/Education","Baby Bottle monitor",3,"mixed",1,1,,150000,15,1e+06,0,,,,
+1349,"Richaulist",15,19,"Fashion/Beauty","Curly Hair Tool",3,"all_women",1,0,,150000,10,1500000,1,150000,15,1e+06,2
+1350,"VSEAT",15,20,"Fitness/Sports/Outdoors","Bicycle seat",2,"mixed",1,1,"CA",150000,5,3e+06,1,2e+05,25,8e+05,2
+1351,"SorSoap",15,20,"Fitness/Sports/Outdoors","Muscle soap",2,"all_men",0,1,"NJ",1e+05,10,1e+06,1,1e+05,20,5e+05,1
+1352,"Wedy",15,20,"Business Services","Wedding Planning App",3,"mixed",1,1,,3e+05,5,6e+06,0,,,,
+1353,"Blinger",15,20,"Fashion/Beauty","Hair tool gems",3,"all_women",1,1,,2e+05,5,4e+06,1,2e+05,25,8e+05,1
+1354,"Hood",15,21,"Fitness/Sports/Outdoors","Baseball caps",2,"all_men",0,0,"NY",5e+05,5,1e+07,0,,,,
+1355,"HYPD",15,21,"Fashion/Beauty","Footwear and apparel",3,"all_men",0,1,"CA",125000,5,2500000,1,350000,25,1400000,1
+1356,"K3",15,21,"Fitness/Sports/Outdoors","Shooting bands",2,"all_men",0,0,,1e+05,20,5e+05,1,1e+05,40,250000,2
+1357,"RoboBurger",15,21,"Food and Beverage","Burger Chef In a Vending Format",6,"all_men",0,1,,1500000,5,3e+07,1,1500000,9,16666667,2
+1358,"SipHerbals",15,22,"Food and Beverage","Coffee alternatives",2,"all_women",1,0,"OR",1e+05,10,1e+06,0,,,,
+1359,"mosh",15,22,"Food and Beverage","Protein Bars",2,"mixed",1,1,,5e+05,2,2.5e+07,1,5e+05,3.5,14285714,1
+1360,"ARBER",15,22,"Lifestyle/Home","Plant care",2,"all_women",1,0,,5e+05,4,12500000,0,,,,
+1361,"flaus",15,22,"Lifestyle/Home","Electric flosser oral hygiene solution",5,"all_women",1,0,,250000,5,5e+06,1,250000,8,3125000,1
+1362,"LittleSaints",16,1,"Food and Beverage","Non alcoholic mocktails cocktails spirits",5,"all_women",1,0,,5e+05,5,1e+07,0,,,,
+1363,"1587Sneakers",16,1,"Fashion/Beauty","footwear brand empowering Asian Americans to be unapologetically",8,"all_men",0,1,"MA",1e+05,15.87,630120,0,,,,
+1364,"Card.io",16,1,"Fitness/Sports/Outdoors","gamified cardio fitness app",4,"all_men",0,0,"KY",150000,5,3e+06,1,150000,15,1e+06,2
+1365,"TRUFIT",16,1,"Fitness/Sports/Outdoors","Custom fit sports mouthguards",4,"all_men",0,0,"CA",750000,5,1.5e+07,1,750000,10,7500000,1
+1366,"RigStrips",16,2,"Children/Education","Lightweight, portable vibrating mat designed to calm crying babies",9,"all_men",0,1,"CO",3e+05,7.5,4e+06,1,3e+05,15,2e+06,1
+1367,"TopsailSteamer",16,2,"Lifestyle/Home","Seafood Meal Kit",3,"all_women",1,0,"NC",350000,8,4375000,1,350000,18,1944444,2
+1368,"BucketGolf",16,2,"Fitness/Sports/Outdoors","Portable backyard golf game",4,"mixed",1,1,"CA",1e+06,10,1e+07,1,1e+06,12.5,8e+06,1
+1369,"LifeRaftTreats",16,2,"Food and Beverage","Dessert business, frozen treats inspired by artwork",7,"mixed",1,1,"SC",250000,5,5e+06,0,,,,
+1370,"Kobee's",16,3,"Fashion/Beauty","Eco-conscious, Clean beauty",3,"all_men",0,0,"IL",3e+05,6,5e+06,0,,,,
+1371,"Sugardoh",16,3,"Fashion/Beauty","Hair removal product",3,"all_women",1,0,"TX",5e+05,5,1e+07,0,,,,
+1372,"Doatnut",16,3,"Food and Beverage","Health-focused, Clean-label Snack",3,"all_women",1,0,"SC",1e+05,10,1e+06,1,2e+05,30,666667,2
+1373,"Yardsale",16,3,"Fitness/Sports/Outdoors","Ski accessories brand",3,"mixed",1,1,"CA",2e+05,10,2e+06,1,250000,10,2500000,1
+1374,"FyshFoods",16,4,"Food and Beverage","Plant-based seafood",2,"all_women",1,1,"CA",150000,10,1500000,1,150000,30,5e+05,1
+1375,"terrashroom",16,4,"Food and Beverage","Automated mushroom-growing device",3,"all_men",0,0,"TX",175000,2.5,7e+06,0,,,,
+1376,"Moonies",16,4,"Fitness/Sports/Outdoors","Unique men’s swimwear",3,"mixed",1,1,"UT",150000,35,428571,0,,,,
+1377,"1920Convertible",16,4,"Fashion/Beauty","Convertible fashion brand",3,"mixed",1,1,"AZ",250000,10,2500000,1,250000,25,1e+06,1
+1378,"ChompShop",16,5,"Children/Education","Creative Kid-Safe Tooling",3,"mixed",1,1,"PA",250000,5,5e+06,1,250000,15,1666667,2
+1379,"Chalkless",16,5,"Fitness/Sports/Outdoors","Grip enhancer",2,"all_men",0,1,"DE",4e+05,4,1e+07,1,4e+05,4,1e+07,2
+1380,"CreatorCamp",16,5,"Children/Education","Hands-on and collaborative education company",5,"all_men",0,1,"TX",350000,5,7e+06,1,350000,18,1944444,1
+1381,"Y'allSweetTea",16,5,"Food and Beverage","Sweet tea beverages",3,"all_men",0,1,"AL",5e+05,5,1e+07,1,5e+05,15,3333333,2
+1382,"PepperPong",16,6,"Fitness/Sports/Outdoors","Portable Ping Pong game",4,"all_men",0,0,"CO",150000,10,1500000,1,150000,19,789474,1
+1383,"Taverns",16,6,"Liquor/Alcohol","Backyard bar manufacturing and delivery",5,"all_men",0,1,"NY",4e+05,10,4e+06,1,4e+05,15,2666667,1
+1384,"KaansDesigns",16,6,"Fashion/Beauty","Parenthood lifestyle cloths for family",5,"mixed",1,1,"IN",75000,15,5e+05,1,75000,10,750000,1
+1385,"FOAMCoolers",16,6,"Business Services","Lightweight foam cooler",3,"all_men",0,1,"AR",150000,10,1500000,1,150000,30,5e+05,1
+1386,"Wildcoat",16,7,"Lifestyle/Home","Winter Apparel",2,"all_men",0,0,"CO",350000,10,3500000,1,350000,23,1521739,1
+1387,"SnowScholars",16,7,"Business Services","Snow Removal Services",3,"all_men",0,1,"WI",75000,10,750000,1,150000,20,750000,1
+1388,"GnomeAdventCalendar",16,7,"Lifestyle/Home","Festive Holiday Countdown Calendars",4,"all_women",1,0,,45000,10,450000,0,,,,
+1389,"Coordinates",16,7,"Fashion/Beauty","Lifestyle Apparel Brand",3,"mixed",1,1,,1e+05,10,1e+06,1,1e+05,20,5e+05,1
+1390,"Hiccup",16,8,"Green/CleanTech","Silicone Cups",2,"all_women",1,0,"FL",2e+05,10,2e+06,0,,,,
+1391,"PhoLicious",16,8,"Food and Beverage","Pre-packaged authentic Vietnamese soup",4,"mixed",1,1,"TX",5e+05,10,5e+06,1,5e+05,15,3333333,1
+1392,"BroGlo",16,8,"Fashion/Beauty","Self-tanner for men",3,"all_men",0,1,"PA",2e+05,5,4e+06,1,2e+05,10,2e+06,1
+1393,"TripleLite",16,8,"Lifestyle/Home","180-degree flashlight",2,"mixed",1,1,"CA",4e+05,10,4e+06,1,4e+05,25,1600000,2
+1394,"PetiteKeep",16,9,"Lifestyle/Home","Personalized storage trunk",3,"all_women",1,0,"MO",4e+05,5,8e+06,1,4e+05,15,2666667,3
+1395,"LegitKits",16,9,"Lifestyle/Home","Quilt kits",2,"all_men",0,0,,150000,5,3e+06,1,150000,5,3e+06,1
+1396,"Onewith",16,9,"Fitness/Sports/Outdoors","Seamless swimwear line",3,"all_women",1,0,"CT",2e+05,5,4e+06,1,2e+05,20,1e+06,2
+1397,"ToughCutie",16,9,"Fitness/Sports/Outdoors","Outdoor gear and apparel",4,"all_women",1,0,"NV",1e+05,5,2e+06,1,1e+05,25,4e+05,1
+1398,"CharCharms",16,10,"Fashion/Beauty","Water bottle accessories",3,"all_women",1,0,"IL",3e+05,10,3e+06,0,,,,
+1399,"Nameberry",16,10,"Children/Education","Baby name website",3,"all_women",1,0,"CA",350000,5,7e+06,1,350000,24.9,1405622,1
+1400,"Tabeeze",16,10,"Children/Education","Baby onesies",2,"all_women",1,0,"CA",1e+05,10,1e+06,1,1e+05,33.3,300300,1
+1401,"Rinseroo",16,10,"Lifestyle/Home","Slip-on tub hose shower and sink hose",7,"mixed",1,1,"NJ",343000,5,6860000,1,343000,5,6860000,1
+1402,"Bumpeez",16,11,"Children/Education","Children’s toy and entertainment",4,"all_men",0,1,,1e+05,10,1e+06,1,1e+05,15,666667,2
+1403,"FlaminGO",16,11,"Lifestyle/Home","Portable phone charger",3,"all_men",0,0,"GA",1e+05,20,5e+05,1,1e+05,22,454545,1
+1404,"Lectec",16,11,"Children/Education","Educational technology",2,"all_men",0,1,"NY",1e+05,10,1e+06,1,1e+05,15,666667,1
+1405,"Joyebells",16,11,"Food and Beverage","Premium refrigerated pie",3,"all_women",1,0,"TX",6e+05,10,6e+06,0,,,,
+1406,"TheHappyBirdwatcher",16,12,"Pet Products","Direct-to-consumer (DTC) e-commerce",3,"all_women",1,0,"TN",150000,10,1500000,0,,,,
+1407,"GoodLoveFoods",16,12,"Food and Beverage","Gluten-free baked goods",3,"all_women",1,0,"CO",150000,5,3e+06,1,150000,18,833333,1
+1408,"KiidCoffee",16,12,"Children/Education","Healthy coffee for kids",4,"all_men",0,1,"GA",50000,5,1e+06,1,50000,15,333333,1
+1409,"Remento",16,12,"Lifestyle/Home","Technology-driven memory preservation service",4,"all_men",0,0,"CA",3e+05,5,6e+06,1,3e+05,10,3e+06,1
+1410,"HellaAwkward",16,13,"Lifestyle/Home","Card game",2,"all_women",1,0,"NY",2e+05,10,2e+06,1,2e+05,10,2e+06,1
+1411,"DomeDock",16,13,"Fashion/Beauty","Hat storage accessory",3,"mixed",1,1,"TX",1e+05,5,2e+06,1,1e+05,15,666667,1
+1412,"Riverbend",16,13,"Business Services","Chicken feeder",2,"all_men",0,0,"MA",3e+05,10,3e+06,1,3e+05,20,1500000,1
+1413,"DigWorld",16,13,"Fitness/Sports/Outdoors","Construction-themed park for families",4,"all_men",0,0,"TX",2e+05,10,2e+06,1,2e+05,10,2e+06,1
+1414,"Firefly",16,14,"Fitness/Sports/Outdoors","Portable athlete recovery device",4,"mixed",1,1,"CA",5e+05,2.5,2e+07,1,5e+05,5,1e+07,2
+1415,"Blackdot",16,14,"Fashion/Beauty","Automated tattoo machine",3,"all_men",0,0,"TX",1500000,5,3e+07,0,,,,
+1416,"BAMBuckwheat",16,14,"Food and Beverage","Eco-friendly buckwheat milk",3,"all_women",1,0,"CA",250000,10,2500000,0,,,,
+1417,"DuzterHockey",16,14,"Fitness/Sports/Outdoors","Protective clothing for hockey players",5,"all_men",0,1,"MD",2e+05,10,2e+06,1,2e+05,20,1e+06,1
+1418,"HistoryByMail",16,15,"Media/Entertainment","American history replica subscription service",5,"all_men",0,0,"IL",250000,10,2500000,1,250000,20,1250000,2
+1419,"CowPots",16,15,"Green/CleanTech","Eco-friendly plantable pots",3,"all_women",1,0,"CT",2e+05,10,2e+06,1,2e+05,20,1e+06,1
+1420,"FutureCircus",16,15,"Media/Entertainment","Virtual Theme Park Experience",4,"all_men",0,0,"CA",5e+05,5,1e+07,0,,,,
+1421,"PaperTacos",16,15,"Lifestyle/Home","Greeting card company",3,"all_men",0,0,"CA",120000,10,1200000,1,120000,25,480000,1
+1422,"AirTulip",16,16,"Green/CleanTech","state-of-the-art air purifier",3,"all_men",0,0,"NY",4e+05,4,1e+07,0,,,,
+1423,"JaneFoodie",16,16,"Food and Beverage","Flash-frozen food company",3,"all_women",1,0,"NY",3e+05,15,2e+06,1,3e+05,25,1200000,1
+1424,"RuffLiners",16,16,"Pet Products","Car liners for pets",4,"all_men",0,0,"TX",2e+05,5,4e+06,1,2e+05,10,2e+06,1
+1425,"SockCandy",16,16,"Fashion/Beauty","Sheer socks",2,"all_women",1,0,"CA",150000,5,3e+06,1,150000,10,1500000,1
+1426,"FrameYourFeline",16,17,"Pet Products","Luxury pet furniture",3,"mixed",1,1,"CA",1e+05,10,1e+06,0,,,,
+1427,"GoNutz",16,17,"Fashion/Beauty","Personal grooming device",3,"all_men",0,0,"CA",1e+05,15,666667,1,120000,30,4e+05,2
+1428,"MadMutz",16,17,"Food and Beverage","Gourmet mozzarella sticks",3,"all_men",0,0,"NJ",150000,5,3e+06,1,150000,20,750000,1
+1429,"Essence",16,17,"Lifestyle/Home","Aromatherapy and odor management",4,"mixed",1,1,"UT",250000,10,2500000,1,250000,20,1250000,1
+1430,"Permaplug",16,18,"Electronics","Charger lock",2,"all_men",0,0,"TX",350000,15,2333333,1,350000,20,1750000,1
+1431,"Fanion",16,18,"Lifestyle/Home","Fan for chopping onions",4,"mixed",1,1,,90000,15,6e+05,0,,,,
+1432,"Rocco",16,18,"Electronics","Premium smart beverage fridge",4,"mixed",1,1,"NY",6e+05,3,2e+07,1,6e+05,4,1.5e+07,1
+1433,"JajuPierogi",16,18,"Food and Beverage","Authentic Frozen Food",3,"all_women",1,1,"MA",3e+05,8,3750000,0,,,,
+1434,"Mirai",16,19,"Fashion/Beauty","Japanese persimmon-based soap",3,"all_women",1,0,"CA",5e+05,5,1e+07,0,,,,
+1435,"ESAI",16,19,"Children/Education","AI-powered college admissions tool",4,"all_women",1,0,"MI",250000,5,5e+06,1,250000,5,5e+06,1
+1436,"Cricket’sCandy",16,19,"Children/Education","Edible candy crafts for kids",5,"all_women",1,0,"NY",275000,10,2750000,0,,,,
+1437,"MorrisonOutdoors",16,19,"Fitness/Sports/Outdoors","Specialty outdoor gear for kids",5,"all_men",0,0,"NM",3e+05,10,3e+06,1,3e+05,20,1500000,2
+1438,"BigAssLuxuries",16,20,"Lifestyle/Home","Beautiful Oversized & luxurious candles",5,"mixed",1,1,"TX",5e+05,5,1e+07,1,250000,15,1666667,1
+1439,"TickMitt",16,20,"Pet Products","Reusable tick-removal mitt",3,"mixed",1,1,"CT",250000,10,2500000,0,,,,
+1440,"DeviledEggCo",16,20,"Food and Beverage","Gourmet deviled eggs",3,"all_women",1,1,"TX",150000,5,3e+06,1,250000,20,1250000,2
+1441,"Stringys",16,20,"Fitness/Sports/Outdoors","Invisible undergarments",2,"all_women",1,1,"CA",3e+05,5,6e+06,1,3e+05,3,1e+07,2

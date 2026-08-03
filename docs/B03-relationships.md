@@ -28,6 +28,9 @@ value need not be a possible realised value. All links are also listed in the
 <a href="videos.html#videos">External Video Guide</a>.
 </div>
 
+If functions, support, or summation notation are unfamiliar, review
+[Mathematics Refresher: functions and sums](#math-refresher).
+
 Lecture 2 ended with random variables. Suppose one pitch record is selected
 uniformly from the dataset. Define \(X=1\) if it reached an on-air deal and
 \(X=0\) otherwise. Define \(S\) as its season number.
@@ -41,7 +44,7 @@ After watching, answer:
 <summary>Check your preparation</summary>
 
 1. \(X\) can take the values 0 and 1. \(S\) can take the values
-   \(1,2,\ldots,8\).
+   \(1,2,\ldots,16\).
 2. No. The support lists the possible values. A probability distribution must
    also assign probability to them.
 
@@ -92,9 +95,9 @@ probability. The second says that one of the possible values must occur.
 For the deal indicator, \(X\in\{0,1\}\):
 
 \[
-p_X(0)=\frac{323}{706},
+p_X(0)=\frac{559}{1441},
 \qquad
-p_X(1)=\frac{383}{706}.
+p_X(1)=\frac{882}{1441}.
 \]
 
 
@@ -108,7 +111,7 @@ deal_pmf
 
 ```
 ## 0: no on-air deal    1: on-air deal 
-##         0.4575071         0.5424929
+##         0.3879251         0.6120749
 ```
 
 ``` r
@@ -130,9 +133,11 @@ season_pmf
 ```
 ## 
 ##          1          2          3          4          5          6          7 
-## 0.09490085 0.04532578 0.08498584 0.14589235 0.16430595 0.16430595 0.16430595 
-##          8 
-## 0.13597734
+## 0.04441360 0.02498265 0.04163775 0.07147814 0.08049965 0.08049965 0.08049965 
+##          8          9         10         11         12         13         14 
+## 0.06662040 0.06662040 0.06384455 0.06662040 0.06939625 0.06662040 0.06037474 
+##         15         16 
+## 0.06037474 0.05551700
 ```
 
 ``` r
@@ -146,7 +151,7 @@ sum(season_pmf)
 <img src="B03-relationships_files/figure-html/b03-season-pmf-plot-1.png" width="672" />
 
 The bar above season 5 has height
-\(p_S(5)=P(S=5)=116/706\approx0.164\). A PMF is represented by separated
+\(p_S(5)=P(S=5)=116/1441\approx0.080\). A PMF is represented by separated
 probability masses because \(S\) can take only the listed discrete values.
 The term **probability density function (PDF)** is reserved for continuous
 random variables and is introduced later in the course.
@@ -190,15 +195,23 @@ season_distribution
 ```
 
 ```
-##   season        pmf        cdf
-## 1      1 0.09490085 0.09490085
-## 2      2 0.04532578 0.14022663
-## 3      3 0.08498584 0.22521246
-## 4      4 0.14589235 0.37110482
-## 5      5 0.16430595 0.53541076
-## 6      6 0.16430595 0.69971671
-## 7      7 0.16430595 0.86402266
-## 8      8 0.13597734 1.00000000
+##    season        pmf        cdf
+## 1       1 0.04441360 0.04441360
+## 2       2 0.02498265 0.06939625
+## 3       3 0.04163775 0.11103400
+## 4       4 0.07147814 0.18251214
+## 5       5 0.08049965 0.26301180
+## 6       6 0.08049965 0.34351145
+## 7       7 0.08049965 0.42401110
+## 8       8 0.06662040 0.49063151
+## 9       9 0.06662040 0.55725191
+## 10     10 0.06384455 0.62109646
+## 11     11 0.06662040 0.68771686
+## 12     12 0.06939625 0.75711312
+## 13     13 0.06662040 0.82373352
+## 14     14 0.06037474 0.88410826
+## 15     15 0.06037474 0.94448300
+## 16     16 0.05551700 1.00000000
 ```
 
 For example,
@@ -206,7 +219,7 @@ For example,
 \[
 F_S(3)=P(S\le3)
 =p_S(1)+p_S(2)+p_S(3)
-=\frac{159}{706}\approx0.225.
+=\frac{160}{1441}\approx0.111.
 \]
 
 <img src="B03-relationships_files/figure-html/b03-season-cdf-1.png" width="672" />
@@ -266,8 +279,8 @@ It can also be viewed as the balance point of the probability distribution.
 
 Expectation is a property of the specified distribution, not a prediction
 that one observation will equal that number. It need not belong to the
-support. An expected season of 5.3, for example, describes the centre of the
-season distribution; there is no Season 5.3.
+support. The empirical expected season is about 8.8, for example, but there is
+no Season 8.8.
 
 For the deal indicator,
 
@@ -292,7 +305,7 @@ c(
 
 ```
 ##                  E_X         E_S_from_pmf observed_mean_season 
-##            0.5424929            5.0694051            5.0694051
+##            0.6120749            8.7959750            8.7959750
 ```
 
 Under independent repetitions of the same distribution, provided
@@ -326,7 +339,7 @@ c(
 
 ```
 ##         E_S E_S_squared 
-##    5.069405   30.151558
+##    8.795975   95.505205
 ```
 
 Lecture 4 uses this rule to measure spread around \(E[X]\).
@@ -361,10 +374,10 @@ c(
 
 ```
 ##            mean_words empirical_expectation 
-##              29.75779              29.75779
+##              4.995142              4.995142
 ```
 
-Both calculations give about 29.8 words for these 706 records. Treating this
+Both calculations give about 5.0 words for these 1,441 records. Treating this
 as the expected description length for future pitches requires additional
 population and stability assumptions.
 
@@ -407,7 +420,7 @@ Let \(Y\) have support \(\{0,1,2\}\) and PMF
 1. Verify that this is a valid PMF.
 2. Calculate \(F_Y(0.5)\) and \(F_Y(1)\).
 3. Calculate \(E[Y]\) and \(E[Y^2]\).
-4. For the deal indicator with \(p=383/706\), calculate \(F_X(0.4)\).
+4. For the deal indicator with \(p=882/1441\), calculate \(F_X(0.4)\).
 5. Use the season CDF to calculate \(P(3<S\le6)\).
 
 <details>
@@ -419,23 +432,23 @@ Let \(Y\) have support \(\{0,1,2\}\) and PMF
 3. \(E[Y]=0(0.2)+1(0.5)+2(0.3)=1.1\), and
    \(E[Y^2]=0^2(0.2)+1^2(0.5)+2^2(0.3)=1.7\).
 4. Because \(0\le0.4<1\),
-   \(F_X(0.4)=P(X=0)=323/706\approx0.458\).
-5. \(P(3<S\le6)=F_S(6)-F_S(3)=335/706\approx0.475\).
+   \(F_X(0.4)=P(X=0)=559/1441\approx0.388\).
+5. \(P(3<S\le6)=F_S(6)-F_S(3)=335/1441\approx0.232\).
 
 </details>
 
 ### Worked exam interpretation
 
-**Question.** R reports `mean(deal_on_show) = 0.542`. Explain this
+**Question.** R reports `mean(deal_on_show) = 0.612`. Explain this
 number as both a sample mean and an empirical expectation.
 
 <details>
 <summary>Check a model answer</summary>
 
 Because the indicator equals 1 for an on-air agreement, its sample mean is the
-observed deal proportion: 54.2% of the 706 records. If the empirical
-distribution assigns mass \(1/706\) to each record, its expectation is the same
-weighted average, 0.542. This does not show later venture success or guarantee
+observed deal proportion: 61.2% of the 1,441 records. If the empirical
+distribution assigns mass \(1/1441\) to each record, its expectation is the same
+weighted average, 0.612. This does not show later venture success or guarantee
 the probability for a future pitch.
 
 </details>

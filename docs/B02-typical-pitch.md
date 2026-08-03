@@ -30,6 +30,9 @@ listed in the
 <a href="videos.html#videos">External Video Guide</a>.
 </div>
 
+If set notation, complements, unions, or intersections are unfamiliar, review
+[Mathematics Refresher: sets and events](#math-refresher).
+
 An **empirical distribution** records how often values occur in a dataset.
 For a categorical variable, a frequency table gives counts and a
 relative-frequency table gives proportions.
@@ -42,8 +45,8 @@ season_counts
 
 ```
 ## 
-##   1   2   3   4   5   6   7   8 
-##  67  32  60 103 116 116 116  96
+##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16 
+##  64  36  60 103 116 116 116  96  96  92  96 100  96  87  87  80
 ```
 
 ``` r
@@ -52,8 +55,10 @@ round(prop.table(season_counts), 3)
 
 ```
 ## 
-##     1     2     3     4     5     6     7     8 
-## 0.095 0.045 0.085 0.146 0.164 0.164 0.164 0.136
+##     1     2     3     4     5     6     7     8     9    10    11    12    13 
+## 0.044 0.025 0.042 0.071 0.080 0.080 0.080 0.067 0.067 0.064 0.067 0.069 0.067 
+##    14    15    16 
+## 0.060 0.060 0.056
 ```
 
 <img src="B02-typical-pitch_files/figure-html/b02-season-plot-1.png" width="672" />
@@ -65,9 +70,9 @@ For a quantitative variable, a histogram groups nearby values into intervals.
 
 <img src="B02-typical-pitch_files/figure-html/b02-word-histogram-1.png" width="672" />
 
-The distribution is right-skewed: most descriptions are relatively short, but
-a small number extend far to the right. The median is 23 words; the first and
-third quartiles are 11 and 42 words.
+The distribution is mildly right-skewed: most descriptions contain 3--7 words,
+with a small number extending farther to the right. The median is 5 words; the
+first and third quartiles are 4 and 6 words.
 
 If needed, review [summary statistics](https://walshc.github.io/ebi-prog/dataframes-summary-statistics.html)
 and [plots](https://walshc.github.io/ebi-prog/intro-to-plotting.html) from
@@ -101,9 +106,9 @@ The distinction is easiest to read from the whole-to-part structure:
 
 | Object | Question it answers | Shark Tank example |
 |---|---|---|
-| experiment | What is done? | Select one of the 706 records uniformly |
+| experiment | What is done? | Select one of the 1,441 records uniformly |
 | outcome \(\omega\) | Which complete result occurred? | One complete selected pitch record |
-| sample space \(\Omega\) | Which complete results were possible? | The set of all 706 records |
+| sample space \(\Omega\) | Which complete results were possible? | The set of all 1,441 records |
 | event \(A\) | Which outcomes count as “yes” for this question? | The subset of records with an on-air deal |
 
 For a single roll of a fair six-sided die,
@@ -118,13 +123,13 @@ the singleton set \(\{4\}\) is an event.
 
 #### An empirical selection experiment
 
-Define the experiment as **select one of the 706 recorded pitches uniformly at
-random**. The sample space is the set of 706 pitch records. Define:
+Define the experiment as **select one of the 1,441 recorded pitches uniformly
+at random**. The sample space is the set of 1,441 pitch records. Define:
 
 - \(D\): the selected pitch reached an on-air deal;
-- \(L\): the selected pitch appeared in Seasons 5-8.
+- \(L\): the selected pitch appeared in Seasons 9--16.
 
-Making the selection uniform means every record has probability \(1/706\).
+Making the selection uniform means every record has probability \(1/1441\).
 Consequently, event probabilities equal relative frequencies in this fixed
 dataset. This does not imply the same probabilities for future entrepreneurs.
 
@@ -208,12 +213,12 @@ c(
 
 ```
 ##             P_D             P_L       P_D_and_L         P_not_D P_D_or_L_direct 
-##       0.5424929       0.6288952       0.3626062       0.4575071       0.8087819 
+##       0.6120749       0.5093685       0.3504511       0.3879251       0.7709924 
 ##   P_D_or_L_rule 
-##       0.8087819
+##       0.7709924
 ```
 
-For example, \(P(D)=383/706\approx0.542\) in the uniform record-selection
+For example, \(P(D)=882/1441\approx0.612\) in the uniform record-selection
 experiment.
 
 For example, “no on-air deal” is \(D^c\), “late-season and deal” is
@@ -225,7 +230,7 @@ For example, “no on-air deal” is \(D^c\), “late-season and deal” is
 <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/interpretations-uses-of-probabilities/">01.10 Interpretations and Uses of Probabilities</a>.</p>
 
 The symbol \(P(D)\) is meaningful only after the probability model is defined.
-For uniform selection from the file, it is exactly 383/706. Calling it the
+For uniform selection from the file, it is exactly 882/1441. Calling it the
 probability that a future televised pitch reaches an on-air agreement adds
 assumptions:
 
@@ -309,8 +314,8 @@ these possible values.
 ### Practice
 
 In the uniform selection experiment, use
-\(P(D)=383/706\), \(P(L)=444/706\), and
-\(P(D\cap L)=256/706\).
+\(P(D)=882/1441\), \(P(L)=734/1441\), and
+\(P(D\cap L)=505/1441\).
 
 1. Calculate and interpret \(P(D^c)\).
 2. Calculate and interpret \(P(D\cup L)\).
@@ -323,14 +328,15 @@ In the uniform selection experiment, use
 <details>
 <summary>Check your answers</summary>
 
-1. \(P(D^c)=1-383/706=323/706\approx0.458\): 45.8% of the records did not
+1. \(P(D^c)=1-882/1441=559/1441\approx0.388\): 38.8% of the records did not
    reach an on-air agreement.
-2. \(P(D\cup L)=(383+444-256)/706=571/706\approx0.809\): 80.9% of the records
-   are from Seasons 5--8, reached an on-air deal, or satisfy both conditions.
+2. \(P(D\cup L)=(882+734-505)/1441=1111/1441\approx0.771\): 77.1% of the
+   records are from Seasons 9--16, reached an on-air deal, or satisfy both
+   conditions.
 3. They are disjoint because a record cannot simultaneously have and not have
    an on-air deal.
 4. Define \(S(\omega)\) as the season number of pitch record \(\omega\).
-   Its possible values are \(\{1,2,\ldots,8\}\).
+   Its possible values are \(\{1,2,\ldots,16\}\).
 5. Define \(X(\omega)=1\) when \(\omega\in D\) and \(X(\omega)=0\) otherwise.
    \(D\) is a set of outcomes; \(X\) is a function that assigns a number to
    every outcome. They are related by \(D=\{\omega:X(\omega)=1\}\).
@@ -339,15 +345,15 @@ In the uniform selection experiment, use
 
 ### Worked exam interpretation
 
-**Question.** R reports `mean(sharks$deal_on_show) = 0.542`. Is this an
+**Question.** R reports `mean(sharks$deal_on_show) = 0.612`. Is this an
 empirical proportion or a universal probability?
 
 <details>
 <summary>Check a model answer</summary>
 
-It is first an empirical proportion: 383 of the 706 recorded
+It is first an empirical proportion: 882 of the 1,441 recorded
 pitches reached an on-air agreement. It is also the event probability in a
-model that selects one of those 706 records uniformly. Applying it to a future
+model that selects one of those 1,441 records uniformly. Applying it to a future
 entrepreneur requires additional population, selection, stability, and outcome
 assumptions.
 

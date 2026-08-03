@@ -19,6 +19,9 @@
 Bring your after-class work from Lectures 1--3. Without reopening the chapters,
 complete these definitions:
 
+Review [Mathematics Refresher: sets, fractions, and sums](#math-refresher) if
+the notation is slowing you down.
+
 1. An observational unit is ...
 2. An event is ...
 3. A random variable is ...
@@ -52,22 +55,22 @@ R reports:
 
 ```
 ##                     rows                  columns                    deals 
-##              706.0000000                5.0000000              383.0000000 
+##             1441.0000000               19.0000000              882.0000000 
 ##          deal_proportion median_description_words 
-##                0.5424929               23.0000000
+##                0.6120749                5.0000000
 ```
 
 1. What is the observational unit?
-2. Verify the deal proportion from 383 deals and 323 non-deals.
+2. Verify the deal proportion from 882 deals and 559 non-deals.
 3. Explain why the mean of `deal_on_show` is a proportion.
-4. Evaluate: “The data contain 706 successful companies.”
+4. Evaluate: “The data contain 1,441 successful companies.”
 5. What exactly does `description_words` measure?
 
 <details>
 <summary>Check your answer</summary>
 
-One row is one recorded televised pitch. There are \(383+323=706\) records and
-\(383/706=0.5425\), so 54.2% reached an on-air agreement. The mean of a 0/1
+One row is one recorded televised pitch. There are \(882+559=1441\) records and
+\(882/1441\approx0.612\), so 61.2% reached an on-air agreement. The mean of a 0/1
 indicator equals the share coded 1 because its sum counts the 1s. “Successful
 companies” is incorrect: the outcome is an agreement made on the show, not
 completed funding or later venture performance. Word count describes the
@@ -77,17 +80,17 @@ written text in the source dataset, not the spoken pitch.
 
 ### Task 2 — Events and probability rules
 
-The experiment selects one of the 706 records uniformly. Let:
+The experiment selects one of the 1,441 records uniformly. Let:
 
 - \(D\): the selected record has an on-air deal;
-- \(L\): the selected record is from Seasons 5-8.
+- \(L\): the selected record is from Seasons 9--16.
 
 R reports:
 
 
 ```
 ##       P_D       P_L P_D_and_L 
-## 0.5424929 0.6288952 0.3626062
+## 0.6120749 0.5093685 0.3504511
 ```
 
 1. Define \(\Omega\), and distinguish an outcome from event \(D\).
@@ -100,11 +103,11 @@ R reports:
 <details>
 <summary>Check your answer</summary>
 
-The sample space is the set of 706 complete pitch records; one selected record
-is an outcome, while \(D\) is the subset of 383 deal records. The complement is
+The sample space is the set of 1,441 complete pitch records; one selected record
+is an outcome, while \(D\) is the subset of 882 deal records. The complement is
 no on-air deal, the intersection is a late-season deal, and the union is
-late-season, deal, or both. \(P(D^c)=1-383/706=323/706\approx0.458\).
-The union is \(P(D)+P(L)-P(D\cap L)\approx0.809\). Future use requires a
+late-season, deal, or both. \(P(D^c)=1-882/1441=559/1441\approx0.388\).
+The union is \(P(D)+P(L)-P(D\cap L)\approx0.771\). Future use requires a
 defined target population and comparable selection, time period, and outcome.
 
 </details>
@@ -112,7 +115,7 @@ defined target population and comparable selection, time period, and outcome.
 ### Task 3 — PMF, CDF, and expectation
 
 Let \(X=1\) for an on-air deal and \(X=0\) otherwise. Use
-\(p=383/706\).
+\(p=882/1441\).
 
 1. Write the PMF and verify that its masses sum to 1.
 2. Write the full piecewise CDF \(F_X(a)\).
@@ -139,8 +142,8 @@ F_X(a)=
 \end{cases}
 \]
 
-The expectation is \(E[X]=0(1-p)+1p=p\approx0.542\). Because the indicator
-contains 383 ones among 706 observations, its mean is also \(383/706\).
+The expectation is \(E[X]=0(1-p)+1p=p\approx0.612\). Because the indicator
+contains 882 ones among 1,441 observations, its mean is also \(882/1441\).
 \(X\) is the mapping defined before selection; \(x=1\) is one possible
 realised value.
 
@@ -159,22 +162,22 @@ An output block describes word count:
 
 ```
 ##      mean    median   minimum        q1        q3   maximum 
-##  29.75779  23.00000   2.00000  11.00000  42.00000 159.00000
+##  4.995142  5.000000  1.000000  4.000000  6.000000 13.000000
 ```
 
 Write no more than 100 words. Compare mean and median, calculate the IQR,
 calculate the range, and state the measurement boundary. Then explain
 which value equals the expectation if the empirical distribution gives mass
-\(1/706\) to each record.
+\(1/1441\) to each record.
 
 <details>
 <summary>Check a model answer</summary>
 
-The written descriptions have a mean length of about 29.8 words and a median
-of 23 words. Their IQR is \(42-11=31\) words, and their range is
-\(159-2=157\) words. The mean above the median is consistent with the
+The written descriptions have a mean length of about 5.0 words and a median
+of 5 words. Their IQR is \(6-4=2\) words, and their range is
+\(13-1=12\) words. The thin upper tail is consistent with the mildly
 right-skewed histogram seen in Lecture 2. If each record receives probability
-\(1/706\), the empirical expectation is the mean, 29.8 words. These values
+\(1/1441\), the empirical expectation is the mean, about 5.0 words. These values
 describe written dataset text, not spoken-pitch length or quality.
 
 </details>

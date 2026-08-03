@@ -41,6 +41,9 @@ bias;</li>
 
 Allow about 30 minutes for this preparation.
 
+If percentages, units, or graph axes are unfamiliar, review
+[Mathematics Refresher: numbers, percentages, and graphs](#math-refresher).
+
 1. Read [How to use this book](#how-to-use-this-book) and locate the sections
    called **Before class**, **In class**, and **After class**.
 2. Open RStudio through an R project. Create a new script and save it before
@@ -56,7 +59,13 @@ sharks <- read.csv("data/shark_tank_teaching.csv",
 
 dim(sharks)
 names(sharks)
-head(sharks, 3)
+head(
+  sharks[c(
+    "pitch_id", "startup_name", "season", "industry",
+    "pitcher_gender_group", "deal_on_show"
+  )],
+  3
+)
 ```
 
 Write one sentence answering: **What do you think one row in the dataset represents?** It is
@@ -65,7 +74,7 @@ fine if your answer changes during the lecture.
 <details>
 <summary>Check your answer</summary>
 
-One row represents one recorded televised pitch from Seasons 1--8 of
+One row represents one recorded televised pitch from Seasons 1--16 of
 *Shark Tank US*.
 
 </details>
@@ -237,19 +246,32 @@ negotiate, and may announce a deal during the episode.
 The recorded outcome is an **on-air agreement**. It does not establish that an
 investment was completed or that the venture later succeeded.
 
-The teaching file contains 706 televised pitches from Seasons 1--8 and five
-variables:
+The teaching file contains 1,441 televised pitches from completed Seasons
+1--16 and 19 variables. The table below introduces the variables used most
+often in this course.
 
 | Variable | Meaning | Type |
 |---|---|---|
 | `pitch_id` | row identifier | identifier |
+| `startup_name` | venture or product name | categorical label |
 | `deal_on_show` | 1 for an on-air agreement; 0 otherwise | binary categorical, stored as 0/1 |
-| `season` | television season, 1-8 | ordered discrete/time index |
+| `season` | television season, 1-16 | ordered discrete/time index |
 | `episode` | episode number within season | discrete identifier within season |
+| `industry` | source industry category | categorical |
 | `description_words` | words in the written dataset description | discrete quantitative count |
+| `pitcher_gender_group` | `all_women`, `all_men`, `mixed`, or `unknown`, based on the source classification | categorical |
+| `women_represented` | 1 for `all_women` or `mixed`; 0 for `all_men`; missing for `unknown` | binary categorical, stored as 0/1 |
+| `multiple_entrepreneurs` | source indicator for more than one entrepreneur | binary categorical, with missing values |
+| `ask_amount_usd` | amount requested | quantitative, USD |
+| `equity_offered_pct` | ownership percentage initially offered | quantitative, percentage points |
+| `requested_valuation_usd` | valuation implied by the initial ask | quantitative, USD |
+| `deal_amount_usd`, `deal_equity_pct`, `deal_valuation_usd` | recorded deal terms | quantitative; structurally missing without a deal |
 
-The table records selected features of each pitch. It does not measure the
-spoken pitch, completed investment, or later venture performance.
+Gender describes the people presenting the pitch, not necessarily every founder
+or employee. `women_represented` is not the share of women: the source does not
+report the presenter counts needed to calculate that share for mixed teams.
+Names were not used to infer gender. The file does not measure the spoken pitch,
+completed investment, or later venture performance.
 
 #### Inspect and validate
 
@@ -264,18 +286,23 @@ There are `r nrow(sharks)` rows and `r ncol(sharks)` columns. One row represents
 one recorded televised pitch.
 
 ```{r b01-validate}
-sum(is.na(sharks))
+colSums(is.na(sharks))
 sort(unique(sharks$deal_on_show))
 range(sharks$season)
 range(sharks$episode)
 range(sharks$description_words)
+table(sharks$pitcher_gender_group, useNA = "ifany")
+anyDuplicated(sharks$pitch_id)
 ```
 
-The teaching variables contain no missing values. Deal status contains only 0
-and 1; seasons run from 1 to 8; and written descriptions contain from
+Pitch identifiers are unique, deal status contains only 0 and 1, and seasons
+run from 1 to 16. Written descriptions contain from
 `r min(sharks$description_words)` to `r max(sharks$description_words)` words.
-These checks establish internal plausibility. They cannot establish that the
-source captured every pitch or measured every concept well.
+Missing deal terms are expected for pitches without a deal; seven records have
+an unknown source gender classification, and the source does not report
+`multiple_entrepreneurs` consistently. Missing does not mean zero. These checks
+establish internal plausibility, not that the source captured every pitch or
+measured every concept well.
 
 #### Summarise in context
 
@@ -308,27 +335,30 @@ par(mar = c(4.7, 4.7, 2.2, 1), las = 1, col.axis = qm_ink,
     col.lab = qm_ink, family = "sans")
 
 hist(
-  sharks$description_words,
-  breaks = seq(0, 170, by = 10),
+  sharks$equity_offered_pct,
+  breaks = seq(0, 100, by = 5),
   col = qm_teal_light,
   border = "white",
   axes = FALSE,
-  xlab = "Words in the written dataset description",
-  ylab = "Number of pitches"
+  main = "",
+  xlab = "Equity initially offered (%)",
+  ylab = "Number of recorded pitches"
 )
 axis(1, col = qm_grey, col.axis = qm_ink)
 axis(2, col = qm_grey, col.axis = qm_ink)
-abline(v = median(sharks$description_words), col = qm_teal, lwd = 3)
-mtext("Vertical line: median = 23 words", side = 3, line = 0.35,
+equity_median <- median(sharks$equity_offered_pct)
+abline(v = equity_median, col = qm_teal, lwd = 3)
+mtext(paste("Vertical line: median =", equity_median, "%"),
+      side = 3, line = 0.35,
       adj = 0, cex = 0.82, col = qm_teal)
 box(col = "white")
 par(old_par)
 ```
 
-Each bar counts descriptions within a word-count interval. The long right tail
-means a small number of descriptions are much longer than most. Changing the
-interval width can reveal or conceal patterns, so a histogram is an analytical
-choice rather than decoration.
+Each bar counts pitches within an offered-equity interval. Most initial offers
+are below 20%, while a small number are much larger. Changing the interval width
+can reveal or conceal patterns, so a histogram is an analytical choice rather
+than decoration.
 
 #### Compare raw observations and group means
 
@@ -344,18 +374,19 @@ point_col <- ifelse(
 point_pch <- ifelse(sharks$deal_on_show == 1, 17, 16)
 
 set.seed(2026)
+season_values <- sort(unique(sharks$season))
 plot(
   jitter(sharks$season, amount = 0.16),
-  sharks$description_words,
+  sharks$equity_offered_pct,
   pch = point_pch,
   col = point_col,
   xaxt = "n",
   bty = "n",
   xlab = "Season",
-  ylab = "Words in the written dataset description"
+  ylab = "Equity initially offered (%)"
 )
-axis(1, at = 1:8)
-abline(h = pretty(sharks$description_words), col = "#EEF1F4", lwd = 1)
+axis(1, at = c(seq(1, 15, by = 2), 16))
+abline(h = pretty(sharks$equity_offered_pct), col = "#EEF1F4", lwd = 1)
 legend(
   "topleft",
   legend = c("No on-air deal", "On-air deal"),
@@ -373,15 +404,15 @@ us that a group mean will not describe every pitch.
 
 ```{r b01-season-means, echo=FALSE}
 season_means <- aggregate(
-  description_words ~ season + deal_on_show,
+  equity_offered_pct ~ season + deal_on_show,
   data = sharks,
   FUN = mean
 )
 
-no_deal_means <- season_means$description_words[
+no_deal_means <- season_means$equity_offered_pct[
   season_means$deal_on_show == 0
 ]
-deal_means <- season_means$description_words[
+deal_means <- season_means$equity_offered_pct[
   season_means$deal_on_show == 1
 ]
 
@@ -389,34 +420,39 @@ old_par <- par(no.readonly = TRUE)
 par(mar = c(4.7, 4.7, 1.3, 1), las = 1, family = "sans")
 
 plot(
-  1:8,
+  season_values,
   no_deal_means,
   type = "o",
   pch = 16,
   lwd = 3,
   col = qm_blue,
-  xlim = c(1, 9.65),
+  xlim = range(season_values),
   ylim = c(0, 1.08 * max(c(no_deal_means, deal_means))),
   xaxt = "n",
   bty = "n",
   xlab = "Season",
-  ylab = "Mean description word count"
+  ylab = "Mean equity initially offered (%)"
 )
-axis(1, at = 1:8)
+axis(1, at = season_values)
 abline(h = pretty(c(no_deal_means, deal_means)), col = "#EEF1F4", lwd = 1)
-lines(1:8, deal_means, type = "o", pch = 17, lwd = 3, lty = 2,
+lines(season_values, deal_means, type = "o", pch = 17, lwd = 3, lty = 2,
       col = qm_orange)
-text(8.05, no_deal_means[8], "No on-air deal", pos = 4,
-     col = qm_blue, cex = 0.85)
-text(8.05, deal_means[8], "On-air deal", pos = 4,
-     col = qm_orange, cex = 0.85)
+legend(
+  "topright",
+  legend = c("No on-air deal", "On-air deal"),
+  col = c(qm_blue, qm_orange),
+  pch = c(16, 17),
+  lty = c(1, 2),
+  lwd = 3,
+  bty = "n"
+)
 par(old_par)
 ```
 
-Mean written-description length is generally higher in Seasons 6--8 than in
-Seasons 1--5 for both deal groups. This does not show that entrepreneurs learned
-to make longer pitches: the variable describes dataset text, not the spoken
-pitch.
+Mean initially offered equity is lower in later seasons for both deal groups.
+The graph describes selected televised pitches; it does not establish why the
+offers changed or what would happen if an entrepreneur changed only the offered
+equity.
 
 A clear graph matches the variable types, labels its axes and groups, and makes
 the claim inspectable. Colour is reinforced here by point shape and line type,
@@ -438,8 +474,8 @@ graph without relying on commands run earlier at the Console.
 <details>
 <summary>Check the result</summary>
 
-A successful clean run reports 706 rows and five variables, a recorded on-air
-deal rate of 383/706 (54.2%), the stated ranges, and recreates the graph without
+A successful clean run reports 1,441 rows and 19 variables, a recorded on-air
+deal rate of 882/1,441 (61.2%), the stated ranges, and recreates the graph without
 an “object not found” error.
 
 </details>
@@ -451,21 +487,24 @@ Answer without reopening the chapter, then check your answers.
 1. What does one row represent, and which population can it describe directly?
 2. Why is `pitch_id` an identifier rather than a quantitative measurement?
 3. What is the difference between sampling variability and selection bias?
-4. What exactly does `description_words` measure?
-5. Why can the group-mean graph not establish that longer pitches cause deals?
+4. What exactly does `equity_offered_pct` measure?
+5. Why can the group-mean graph not establish that offering less equity causes
+   a deal?
 
 <details>
 <summary>Check your answers</summary>
 
 1. One row is one recorded televised pitch; the file directly describes these
-   706 records.
+   1,441 records from completed Seasons 1--16.
 2. `pitch_id` labels a record. Arithmetic differences between its values have
    no substantive meaning.
 3. Sampling variability is chance variation across random samples; selection
    bias is systematic distortion from how units enter the sample.
-4. `description_words` counts words in the written dataset description.
+4. `equity_offered_pct` records the percentage ownership initially offered in
+   exchange for the requested amount; it is not necessarily the final deal
+   equity.
 5. The graph compares observational group means and does not isolate a causal
-   effect. It also does not measure spoken pitch length.
+   effect. Other pitch characteristics and selection into seasons may differ.
 
 </details>
 
@@ -482,11 +521,11 @@ Write four sentences about either Shark Tank graph:
 <summary>Check a model answer</summary>
 
 Each point in the raw-data graph represents one recorded pitch, with season on
-the horizontal axis and written-description word count on the vertical axis.
-Word counts vary widely within every season and tend to be higher in later
-seasons. This is evidence of an association between season and the recorded
-description length. It does not show that spoken pitches became longer; the
-dataset documentation process may have changed.
+the horizontal axis and initially offered equity on the vertical axis. Offers
+vary within every season and are generally lower in later seasons. This is
+evidence of an association between season and the recorded initial offer. It
+does not show why offers changed or identify the causal effect of changing an
+offer.
 
 </details>
 
@@ -495,9 +534,11 @@ dataset documentation process may have changed.
 Answer these questions without running R:
 
 1. Why is `amount_at_risk` discrete rather than continuous?
-2. Which graph would you use first for `description_words` alone?
+2. Which graph would you use first for `equity_offered_pct` alone?
 3. Which graph would you use for risk willingness and founder probability?
 4. Why should `pitch_id` not be averaged?
+5. Why is `pitcher_gender_group` categorical, and why is
+   `women_represented` not a share?
 
 <details>
 <summary>Check your answers</summary>
@@ -507,6 +548,10 @@ Answer these questions without running R:
 3. A scatterplot shows how two quantitative variables vary together.
 4. `pitch_id` is a label. Its numerical magnitude and mean have no substantive
    interpretation.
+5. The gender-group values are labels rather than numerical magnitudes.
+   `women_represented` records whether the source category includes women; a
+   mixed team may contain different numbers of women, so the indicator is not a
+   team share.
 
 </details>
 
@@ -514,8 +559,8 @@ Answer these questions without running R:
 
 An AI assistant writes:
 
-> "The dataset contains 706 successful companies and proves that longer
-> pitches make investors fund startups."
+> "The dataset contains 1,441 successful companies and proves that offering
+> less equity makes investors fund startups."
 
 Use **Attempt -> Ask -> Verify -> Explain** to correct it. Your final response
 must use the observed count or percentage, name the measured outcome, and state
@@ -524,11 +569,11 @@ why the causal claim is unsupported.
 <details>
 <summary>Check a model correction after writing your own</summary>
 
-The file contains 706 recorded televised pitches, of which 383 reached an
+The file contains 1,441 recorded televised pitches, of which 882 reached an
 on-air agreement. It does not measure completed investment or later company
-success. `description_words` counts words in a written dataset description,
-not the spoken pitch, and the observational records do not establish that
-changing description length would cause an investor decision.
+success. `equity_offered_pct` records the initial ownership percentage offered,
+not a randomly assigned treatment, and the observational records do not
+establish that changing only this offer would cause an investor decision.
 
 </details>
 

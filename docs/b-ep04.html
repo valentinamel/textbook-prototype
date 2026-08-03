@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Tutorial 4: Inference and tests against zero | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Tutorial 4: Inference and tests against zero | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tutorial 4: Inference and tests against zero | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="b10.html"/>
+<link rel="next" href="intermediate-course.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecture-preparation-and-external-videos"><i class="fa fa-check"></i>Lecture preparation and external videos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-and-main-dataset"><i class="fa fa-check"></i>R and main dataset</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tutorials-and-assessment"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#working-with-ai"><i class="fa fa-check"></i>Working with AI</a></li>
+</ul></li>
+<li class="part"><span><b>I Course 1 · Basic</b></span></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#before-class"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#how-the-course-works"><i class="fa fa-check"></i>1. How the course works</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#data-analysis-with-r-and-ai"><i class="fa fa-check"></i>2. Data analysis with R and AI</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#in-class-data-collection-exercise"><i class="fa fa-check"></i>3. In-class data collection exercise</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#analyse-the-shark-tank-data"><i class="fa fa-check"></i>4. Analyse the Shark Tank data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#after-class"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#reproduce-the-workflow"><i class="fa fa-check"></i>1. Reproduce the workflow</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#retrieve-the-ideas"><i class="fa fa-check"></i>2. Retrieve the ideas</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#explain-one-graph"><i class="fa fa-check"></i>3. Explain one graph</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#practise-variable-and-graph-choices"><i class="fa fa-check"></i>4. Practise variable and graph choices</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html#audit-an-ai-answer"><i class="fa fa-check"></i>5. Audit an AI answer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#before-class-1"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#in-class-1"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#a-probability-model-begins-with-possible-outcomes"><i class="fa fa-check"></i>A probability model begins with possible outcomes</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#probability-laws-and-their-axioms"><i class="fa fa-check"></i>Probability laws and their axioms</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#empirical-proportion-or-future-probability"><i class="fa fa-check"></i>Empirical proportion or future probability?</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#from-complete-outcomes-to-numerical-measurements"><i class="fa fa-check"></i>From complete outcomes to numerical measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#after-class-1"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#retrieval"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#practice"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html#worked-exam-interpretation"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#before-class-2"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#in-class-2"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-pmf-assigns-probability-to-each-possible-value"><i class="fa fa-check"></i>A PMF assigns probability to each possible value</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#a-cdf-accumulates-probability-up-to-a-threshold"><i class="fa fa-check"></i>A CDF accumulates probability up to a threshold</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-is-the-distributions-weighted-centre"><i class="fa fa-check"></i>Expectation is the distribution’s weighted centre</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#expectation-after-transforming-a-variable"><i class="fa fa-check"></i>Expectation after transforming a variable</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#model-expectation-and-the-sample-mean"><i class="fa fa-check"></i>Model expectation and the sample mean</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#after-class-2"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#retrieval-1"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#practice-1"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html#worked-exam-interpretation-1"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#before-class-3"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#in-class-3"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-1-data-and-measurement"><i class="fa fa-check"></i>Task 1 — Data and measurement</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-2-events-and-probability-rules"><i class="fa fa-check"></i>Task 2 — Events and probability rules</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#task-3-pmf-cdf-and-expectation"><i class="fa fa-check"></i>Task 3 — PMF, CDF, and expectation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#after-class-3"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#timed-individual-practice-10-minutes"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html#check-your-understanding"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#before-class-4"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#in-class-4"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#variance-and-standard-deviation"><i class="fa fa-check"></i>Variance and standard deviation</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#conditional-probability"><i class="fa fa-check"></i>Conditional probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#the-multiplication-rule"><i class="fa fa-check"></i>The multiplication rule</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#partitions-and-the-law-of-total-probability"><i class="fa fa-check"></i>Partitions and the law of total probability</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#bayes-rule"><i class="fa fa-check"></i>Bayes’ rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#after-class-4"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#retrieval-2"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#practice-2"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html#worked-exam-interpretation-2"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#before-class-5"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#in-class-5"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#the-joint-probability-mass-function"><i class="fa fa-check"></i>The joint probability mass function</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#independence-in-a-joint-distribution"><i class="fa fa-check"></i>Independence in a joint distribution</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#covariance-comes-from-expectation"><i class="fa fa-check"></i>Covariance comes from expectation</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#correlation-standardises-covariance"><i class="fa fa-check"></i>Correlation standardises covariance</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#inspect-first-summarise-second"><i class="fa fa-check"></i>Inspect first, summarise second</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#after-class-5"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#retrieval-3"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#practice-3"><i class="fa fa-check"></i>Practice</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html#worked-exam-interpretation-3"><i class="fa fa-check"></i>Worked exam interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#before-class-6"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#in-class-6"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-1-conditional-probability-and-bayes"><i class="fa fa-check"></i>Task 1 — Conditional probability and Bayes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-2-independence"><i class="fa fa-check"></i>Task 2 — Independence</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#task-3-joint-pmf-covariance-and-correlation"><i class="fa fa-check"></i>Task 3 — Joint PMF, covariance, and correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#after-class-6"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#timed-individual-practice-10-minutes-1"><i class="fa fa-check"></i>Timed individual practice — 10 minutes</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html#check-your-understanding-1"><i class="fa fa-check"></i>Check your understanding</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html"><i class="fa fa-check"></i>Lecture 6: Continuous distributions and the normal model</a>
+<ul>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#before-class-7"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#in-class-7"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#from-probability-mass-to-probability-density"><i class="fa fa-check"></i>From probability mass to probability density</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#the-cdf-works-for-every-random-variable"><i class="fa fa-check"></i>The CDF works for every random variable</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#the-uniform-distribution"><i class="fa fa-check"></i>The uniform distribution</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#the-normal-distribution"><i class="fa fa-check"></i>The normal distribution</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#standardising-normal-values"><i class="fa fa-check"></i>Standardising normal values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#after-class-7"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#retrieval-4"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html#practice-4"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html"><i class="fa fa-check"></i>Lecture 7: Samples, parameters, and estimators</a>
+<ul>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#before-class-8"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#in-class-8"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#define-the-population-before-calculating"><i class="fa fa-check"></i>Define the population before calculating</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#simple-random-sampling"><i class="fa fa-check"></i>Simple random sampling</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#sampling-method-determines-the-evidence-boundary"><i class="fa fa-check"></i>Sampling method determines the evidence boundary</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#parameters-estimators-and-estimates"><i class="fa fa-check"></i>Parameters, estimators, and estimates</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#why-the-sample-variance-has-n-1-degrees-of-freedom"><i class="fa fa-check"></i>Why the sample variance has <span class="math inline">\(n-1\)</span> degrees of freedom</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#sampling-variability-is-visible"><i class="fa fa-check"></i>Sampling variability is visible</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#what-random-sampling-can-and-cannot-do"><i class="fa fa-check"></i>What random sampling can and cannot do</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#after-class-8"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#retrieval-5"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html#practice-5"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html"><i class="fa fa-check"></i>Lecture 8: Sampling distributions and the central limit theorem</a>
+<ul>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#before-class-9"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#in-class-9"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#a-statistic-has-a-distribution"><i class="fa fa-check"></i>A statistic has a distribution</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#from-the-standard-normal-to-the-t-distribution"><i class="fa fa-check"></i>From the standard normal to the t distribution</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#why-averaging-reduces-variation"><i class="fa fa-check"></i>Why averaging reduces variation</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#the-central-limit-theorem"><i class="fa fa-check"></i>The central limit theorem</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#sample-proportions-are-sample-means"><i class="fa fa-check"></i>Sample proportions are sample means</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#law-of-large-numbers-and-clt-answer-different-questions"><i class="fa fa-check"></i>Law of large numbers and CLT answer different questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#after-class-9"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#retrieval-6"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html#practice-6"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html"><i class="fa fa-check"></i>Tutorial 3: Sampling and standard errors</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#before-class-10"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#in-class-10"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#task-1-population-frame-and-claim"><i class="fa fa-check"></i>Task 1 — Population, frame, and claim</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#task-2-reproduce-the-realised-sample"><i class="fa fa-check"></i>Task 2 — Reproduce the realised sample</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#task-3-standard-errors-and-sample-size"><i class="fa fa-check"></i>Task 3 — Standard errors and sample size</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#task-4-read-a-sampling-distribution-statement"><i class="fa fa-check"></i>Task 4 — Read a sampling-distribution statement</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#task-5-degrees-of-freedom-and-the-t-reference"><i class="fa fa-check"></i>Task 5 — Degrees of freedom and the t reference</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#after-class-10"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html#timed-individual-practice-12-minutes"><i class="fa fa-check"></i>Timed individual practice — 12 minutes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html"><i class="fa fa-check"></i>Lecture 9: Confidence intervals and tests against zero</a>
+<ul>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#before-class-11"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#in-class-11"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#confidence-intervals-combine-estimate-and-uncertainty"><i class="fa fa-check"></i>Confidence intervals combine estimate and uncertainty</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#check-conditions-before-calculating"><i class="fa fa-check"></i>Check conditions before calculating</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#estimate-a-difference-from-a-benchmark"><i class="fa fa-check"></i>Estimate a difference from a benchmark</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#a-hypothesis-test-starts-with-a-null-model"><i class="fa fa-check"></i>A hypothesis test starts with a null model</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#a-two-sided-p-value-uses-both-tails"><i class="fa fa-check"></i>A two-sided p-value uses both tails</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#the-confidence-interval-and-test-tell-the-same-story"><i class="fa fa-check"></i>The confidence interval and test tell the same story</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#interpret-95-confidence-correctly"><i class="fa fa-check"></i>Interpret 95% confidence correctly</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#after-class-11"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#retrieval-7"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html#practice-7"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html"><i class="fa fa-check"></i>Lecture 10: Hypothesis testing, errors, and power</a>
+<ul>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#before-class-12"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#in-class-12"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#why-zero-is-the-central-benchmark"><i class="fa fa-check"></i>Why zero is the central benchmark</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#a-complete-two-sided-testing-workflow"><i class="fa fa-check"></i>A complete two-sided testing workflow</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#example-a-deal-proportion-contrast"><i class="fa fa-check"></i>Example: a deal-proportion contrast</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#interval-and-test-report-both"><i class="fa fa-check"></i>Interval and test: report both</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#what-a-p-value-does-and-does-not-mean"><i class="fa fa-check"></i>What a p-value does and does not mean</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#type-i-error-type-ii-error-and-power"><i class="fa fa-check"></i>Type I error, Type II error, and power</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#statistical-significance-is-not-substantive-importance"><i class="fa fa-check"></i>Statistical significance is not substantive importance</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#preview-the-test-attached-to-a-regression-slope"><i class="fa fa-check"></i>Preview: the test attached to a regression slope</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#after-class-12"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#retrieval-8"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html#practice-8"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html"><i class="fa fa-check"></i>Tutorial 4: Inference and tests against zero</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#before-class-13"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#in-class-13"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#task-1-mean-contrast"><i class="fa fa-check"></i>Task 1 — Mean contrast</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#task-2-proportion-contrast"><i class="fa fa-check"></i>Task 2 — Proportion contrast</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#task-3-read-a-regression-coefficient-row"><i class="fa fa-check"></i>Task 3 — Read a regression coefficient row</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#task-4-errors-and-power"><i class="fa fa-check"></i>Task 4 — Errors and power</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#task-5-repair-the-conclusion"><i class="fa fa-check"></i>Task 5 — Repair the conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#after-class-13"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html#timed-individual-practice-25-minutes"><i class="fa fa-check"></i>Timed individual practice — 25 minutes</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Course 2 · Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>Intermediate quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#how-this-course-connects"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#course-sequence"><i class="fa fa-check"></i>Course sequence</a></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html#tutorials-and-assessment-1"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html"><i class="fa fa-check"></i>Lecture 1: Simple linear regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#before-class-14"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#in-class-14"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#begin-with-the-data"><i class="fa fa-check"></i>Begin with the data</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#the-population-model"><i class="fa fa-check"></i>The population model</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#least-squares-estimation"><i class="fa fa-check"></i>Least-squares estimation</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#fit-and-read-the-model-in-r"><i class="fa fa-check"></i>Fit and read the model in R</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#prediction-stays-inside-the-evidence-boundary"><i class="fa fa-check"></i>Prediction stays inside the evidence boundary</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#after-class-14"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#retrieval-9"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html#practice-9"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html"><i class="fa fa-check"></i>Lecture 2: Regression assumptions and coefficient inference</a>
+<ul>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#before-class-15"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#in-class-15"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#what-each-assumption-supports"><i class="fa fa-check"></i>What each assumption supports</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#diagnose-with-residuals"><i class="fa fa-check"></i>Diagnose with residuals</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#standard-errors-and-confidence-intervals"><i class="fa fa-check"></i>Standard errors and confidence intervals</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#testing-a-coefficient-against-zero"><i class="fa fa-check"></i>Testing a coefficient against zero</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#robust-standard-errors"><i class="fa fa-check"></i>Robust standard errors</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#assumptions-belong-in-the-conclusion"><i class="fa fa-check"></i>Assumptions belong in the conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#after-class-15"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#retrieval-10"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html#practice-10"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html"><i class="fa fa-check"></i>Lecture 3: Model fit and overall usefulness</a>
+<ul>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#before-class-16"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#in-class-16"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#three-sums-of-squares"><i class="fa fa-check"></i>Three sums of squares</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#the-coefficient-of-determination"><i class="fa fa-check"></i>The coefficient of determination</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#the-overall-f-test"><i class="fa fa-check"></i>The overall F-test</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#in-simple-regression-f-and-t-answer-the-same-slope-question"><i class="fa fa-check"></i>In simple regression, F and t answer the same slope question</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#usefulness-has-more-than-one-meaning"><i class="fa fa-check"></i>Usefulness has more than one meaning</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#read-the-complete-r-summary"><i class="fa fa-check"></i>Read the complete R summary</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#after-class-16"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#retrieval-11"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html#practice-11"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Simple regression and model usefulness</a>
+<ul>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#before-class-17"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#in-class-17"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#task-1-fit-and-interpret"><i class="fa fa-check"></i>Task 1 — Fit and interpret</a></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#task-2-fitted-value-and-residual"><i class="fa fa-check"></i>Task 2 — Fitted value and residual</a></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#task-3-inference-and-diagnostics"><i class="fa fa-check"></i>Task 3 — Inference and diagnostics</a></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#task-4-r2-and-f"><i class="fa fa-check"></i>Task 4 — <span class="math inline">\(R^2\)</span> and F</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#after-class-17"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html#timed-individual-practice-20-minutes"><i class="fa fa-check"></i>Timed individual practice — 20 minutes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html"><i class="fa fa-check"></i>Lecture 4: Multiple linear regression and controls</a>
+<ul>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#before-class-18"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#in-class-18"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#more-than-one-predictor"><i class="fa fa-check"></i>More than one predictor</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#a-shark-tank-model"><i class="fa fa-check"></i>A Shark Tank model</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#a-coefficient-interpretation-protocol"><i class="fa fa-check"></i>A coefficient-interpretation protocol</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#why-coefficients-change"><i class="fa fa-check"></i>Why coefficients change</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#control-variables-useful-but-not-magical"><i class="fa fa-check"></i>Control variables: useful but not magical</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#assumptions-extend-to-the-full-predictor-set"><i class="fa fa-check"></i>Assumptions extend to the full predictor set</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#a-coefficient-plot-keeps-units-visible"><i class="fa fa-check"></i>A coefficient plot keeps units visible</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#after-class-18"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#retrieval-12"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html#practice-12"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html"><i class="fa fa-check"></i>Lecture 5: Dummy predictors and joint usefulness</a>
+<ul>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#before-class-19"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#in-class-19"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#a-two-level-indicator"><i class="fa fa-check"></i>A two-level indicator</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#more-than-two-categories"><i class="fa fa-check"></i>More than two categories</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#fit-an-adjusted-category-comparison"><i class="fa fa-check"></i>Fit an adjusted category comparison</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#the-overall-f-test-1"><i class="fa fa-check"></i>The overall F-test</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#a-partial-f-test-for-a-group-of-terms"><i class="fa fa-check"></i>A partial F-test for a group of terms</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#visualise-adjusted-comparisons"><i class="fa fa-check"></i>Visualise adjusted comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#after-class-19"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#retrieval-13"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html#practice-13"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html"><i class="fa fa-check"></i>Lecture 6: Interactions and polynomial terms</a>
+<ul>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#before-class-20"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#in-class-20"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#interaction-means-it-depends"><i class="fa fa-check"></i>Interaction means “it depends”</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#a-binary-interaction"><i class="fa fa-check"></i>A binary interaction</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#the-hierarchy-principle"><i class="fa fa-check"></i>The hierarchy principle</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#polynomial-terms-model-curvature"><i class="fa fa-check"></i>Polynomial terms model curvature</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#extensions-do-not-replace-assumptions"><i class="fa fa-check"></i>Extensions do not replace assumptions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#after-class-20"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#retrieval-14"><i class="fa fa-check"></i>Retrieval</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html#practice-14"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Multiple regression and extensions</a>
+<ul>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#before-class-21"><i class="fa fa-check"></i>Before class</a></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#in-class-21"><i class="fa fa-check"></i>In class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#task-1-multiple-regression-coefficients"><i class="fa fa-check"></i>Task 1 — Multiple-regression coefficients</a></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#task-2-dummy-variables-and-a-partial-f-test"><i class="fa fa-check"></i>Task 2 — Dummy variables and a partial F-test</a></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#task-3-interaction"><i class="fa fa-check"></i>Task 3 — Interaction</a></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#task-4-polynomial-term"><i class="fa fa-check"></i>Task 4 — Polynomial term</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#after-class-21"><i class="fa fa-check"></i>After class</a>
+<ul>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html#timed-integrated-task-30-minutes"><i class="fa fa-check"></i>Timed integrated task — 30 minutes</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III Course 3 · Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>Advanced quantitative methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#how-this-course-connects-1"><i class="fa fa-check"></i>How this course connects</a></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html#tutorials-and-assessment-2"><i class="fa fa-check"></i>Tutorials and assessment</a></li>
+</ul></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a>
+<ul>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-r-or-rstudio-is-not-ready"><i class="fa fa-check"></i>If R or RStudio is not ready</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-cannot-reproduce-your-work"><i class="fa fa-check"></i>If you cannot reproduce your work</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-the-data-will-not-load"><i class="fa fa-check"></i>If the data will not load</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-you-forgot-summaries-or-plots"><i class="fa fa-check"></i>If you forgot summaries or plots</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#if-regression-commands-are-unfamiliar"><i class="fa fa-check"></i>If regression commands are unfamiliar</a></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html#a-five-minute-return-to-r-check"><i class="fa fa-check"></i>A five-minute return-to-R check</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html"><i class="fa fa-check"></i>Mathematics Refresher</a>
+<ul>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#what-each-chapter-needs"><i class="fa fa-check"></i>What each chapter needs</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#numbers-proportions-percentages-and-units"><i class="fa fa-check"></i>Numbers, proportions, percentages, and units</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#order-of-operations"><i class="fa fa-check"></i>Order of operations</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#equality-approximation-and-inequalities"><i class="fa fa-check"></i>Equality, approximation, and inequalities</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#variables-functions-and-graphs"><i class="fa fa-check"></i>Variables, functions, and graphs</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#straight-lines-slopes-and-intercepts"><i class="fa fa-check"></i>Straight lines, slopes, and intercepts</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#subscripts-and-indices"><i class="fa fa-check"></i>Subscripts and indices</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#summation-notation"><i class="fa fa-check"></i>Summation notation</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#powers-roots-and-squared-deviations"><i class="fa fa-check"></i>Powers, roots, and squared deviations</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#degrees-of-freedom-and-t-critical-values"><i class="fa fa-check"></i>Degrees of freedom and t critical values</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#sets-and-event-notation"><i class="fa fa-check"></i>Sets and event notation</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#fractions-and-rearranging-equations"><i class="fa fa-check"></i>Fractions and rearranging equations</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#indicators-and-reference-categories"><i class="fa fa-check"></i>Indicators and reference categories</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#products-interactions-and-combined-effects"><i class="fa fa-check"></i>Products, interactions, and combined effects</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#polynomial-terms"><i class="fa fa-check"></i>Polynomial terms</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html#references-and-further-practice"><i class="fa fa-check"></i>References and further practice</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a>
+<ul>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#required-preparation-at-a-glance"><i class="fa fa-check"></i>Required preparation at a glance</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#supplementary-probability-reading"><i class="fa fa-check"></i>Supplementary probability reading</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-1-introduction-to-data-analysis"><i class="fa fa-check"></i>Basic Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-2-probability-foundations-and-random-variables"><i class="fa fa-check"></i>Basic Lecture 2: Probability Foundations and Random Variables</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-3-discrete-distributions-and-expectation"><i class="fa fa-check"></i>Basic Lecture 3: Discrete Distributions and Expectation</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-4-variance-conditioning-and-belief-updating"><i class="fa fa-check"></i>Basic Lecture 4: Variance, Conditioning, and Belief Updating</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-5-joint-random-variables-covariance-and-correlation"><i class="fa fa-check"></i>Basic Lecture 5: Joint Random Variables, Covariance, and Correlation</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-6-continuous-distributions-and-the-normal-model"><i class="fa fa-check"></i>Basic Lecture 6: Continuous Distributions and the Normal Model</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-7-samples-parameters-and-estimators"><i class="fa fa-check"></i>Basic Lecture 7: Samples, Parameters, and Estimators</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-8-sampling-distributions-and-the-clt"><i class="fa fa-check"></i>Basic Lecture 8: Sampling Distributions and the CLT</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-9-confidence-intervals-and-tests-against-zero"><i class="fa fa-check"></i>Basic Lecture 9: Confidence Intervals and Tests Against Zero</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#basic-lecture-10-hypothesis-testing-errors-and-power"><i class="fa fa-check"></i>Basic Lecture 10: Hypothesis Testing, Errors, and Power</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#intermediate-videos"><i class="fa fa-check"></i>Intermediate videos</a>
+<ul>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#intermediate-lecture-1-simple-linear-regression"><i class="fa fa-check"></i>Intermediate Lecture 1: Simple Linear Regression</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#intermediate-lecture-2-regression-assumptions-and-inference"><i class="fa fa-check"></i>Intermediate Lecture 2: Regression Assumptions and Inference</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#intermediate-lecture-3-model-fit-and-overall-usefulness"><i class="fa fa-check"></i>Intermediate Lecture 3: Model Fit and Overall Usefulness</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#intermediate-lecture-4-multiple-linear-regression"><i class="fa fa-check"></i>Intermediate Lecture 4: Multiple Linear Regression</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#intermediate-lecture-5-dummy-predictors-and-joint-usefulness"><i class="fa fa-check"></i>Intermediate Lecture 5: Dummy Predictors and Joint Usefulness</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html#intermediate-lecture-6-interactions-and-polynomial-terms"><i class="fa fa-check"></i>Intermediate Lecture 6: Interactions and Polynomial Terms</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="b-ep04" class="section level1 hasAnchor">
+<h1>Tutorial 4: Inference and tests against zero<a href="b-ep04.html#b-ep04" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="outcomes">
+<span class="label">By the end of Tutorial 4, you can</span>
+<ul>
+<li>
+construct and interpret intervals for a mean and proportion;
+</li>
+<li>
+complete two-sided tests of zero-valued contrasts;
+</li>
+<li>
+connect a test decision with its confidence interval;
+</li>
+<li>
+interpret degrees of freedom, errors, and power;
+</li>
+<li>
+read a regression coefficient test without overclaiming.
+</li>
+</ul>
+</div>
+<div id="before-class-13" class="section level2 hasAnchor course-phase phase-before">
+<h2>Before class<a href="b-ep04.html#before-class-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bring your after-class work from Lectures 9 and 10. Review
+<a href="math-refresher.html#math-refresher">Mathematics Refresher: intervals, degrees of freedom, and
+standardisation</a> if needed.</p>
+<p>Write from memory:</p>
+<ol style="list-style-type: decimal">
+<li>the t confidence-interval form;</li>
+<li>the t statistic for testing a mean contrast against zero;</li>
+<li>the meaning of <span class="math inline">\(df=n-1\)</span>;</li>
+<li>the definition of a two-sided p-value;</li>
+<li>the 95%-interval/5%-test decision link.</li>
+</ol>
+<details>
+<summary>
+Check your preparation
+</summary>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\widehat\delta\pm t_{0.975,n-1}
+\operatorname{SE}(\widehat\delta)\)</span>.</li>
+<li><span class="math inline">\(T=\widehat\delta/\operatorname{SE}(\widehat\delta)\)</span>.</li>
+<li>Estimating the sample mean leaves <span class="math inline">\(n-1\)</span> freely varying deviations for
+estimating spread.</li>
+<li>Under <span class="math inline">\(H_0\)</span>, the probability of a statistic at least as far from zero as
+the observed statistic in either direction.</li>
+<li>For matched two-sided t procedures, reject zero exactly when the 95%
+interval excludes zero.</li>
+</ol>
+</details>
+</div>
+<div id="in-class-13" class="section level2 hasAnchor course-phase phase-in-class">
+<h2>In class<a href="b-ep04.html#in-class-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Attempt every task before opening its answer. Every conclusion must name the
+parameter, units, population, direction, and evidence limit.</p>
+<div id="task-1-mean-contrast" class="section level3 hasAnchor">
+<h3>Task 1 — Mean contrast<a href="b-ep04.html#task-1-mean-contrast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For the reproducible sample, define</p>
+<p><span class="math display">\[
+D=\text{initial equity offered}-15.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Calculate <span class="math inline">\(\bar d\)</span>, <span class="math inline">\(s_d\)</span>, the SE, and degrees of freedom.</li>
+<li>Construct a 95% interval for <span class="math inline">\(\delta=E[D]\)</span>.</li>
+<li>Test <span class="math inline">\(H_0:\delta=0\)</span> against <span class="math inline">\(H_1:\delta\ne0\)</span>.</li>
+<li>Explain why the interval and test agree.</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="b-ep04.html#cb126-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> pitch_sample<span class="sc">$</span>equity_gap_pp</span>
+<span id="cb126-2"><a href="b-ep04.html#cb126-2" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(d)</span>
+<span id="cb126-3"><a href="b-ep04.html#cb126-3" tabindex="-1"></a>d_bar <span class="ot">&lt;-</span> <span class="fu">mean</span>(d)</span>
+<span id="cb126-4"><a href="b-ep04.html#cb126-4" tabindex="-1"></a>s_d <span class="ot">&lt;-</span> <span class="fu">sd</span>(d)</span>
+<span id="cb126-5"><a href="b-ep04.html#cb126-5" tabindex="-1"></a>se_d <span class="ot">&lt;-</span> s_d <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
+<span id="cb126-6"><a href="b-ep04.html#cb126-6" tabindex="-1"></a>critical <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb126-7"><a href="b-ep04.html#cb126-7" tabindex="-1"></a>ci_d <span class="ot">&lt;-</span> d_bar <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> critical <span class="sc">*</span> se_d</span>
+<span id="cb126-8"><a href="b-ep04.html#cb126-8" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> d_bar <span class="sc">/</span> se_d</span>
+<span id="cb126-9"><a href="b-ep04.html#cb126-9" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb126-10"><a href="b-ep04.html#cb126-10" tabindex="-1"></a></span>
+<span id="cb126-11"><a href="b-ep04.html#cb126-11" tabindex="-1"></a><span class="fu">c</span>(<span class="at">estimate =</span> d_bar, <span class="at">sd =</span> s_d, <span class="at">se =</span> se_d, <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>,</span>
+<span id="cb126-12"><a href="b-ep04.html#cb126-12" tabindex="-1"></a>  <span class="at">lower =</span> ci_d[<span class="dv">1</span>], <span class="at">upper =</span> ci_d[<span class="dv">2</span>],</span>
+<span id="cb126-13"><a href="b-ep04.html#cb126-13" tabindex="-1"></a>  <span class="at">t =</span> t_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
+<pre><code>##     estimate           sd           se           df        lower        upper 
+## -2.240000000  7.707886555  0.770788656 99.000000000 -3.769411916 -0.710588084 
+##            t      p_value 
+## -2.906114385  0.004515396</code></pre>
+<p><span class="math inline">\(\bar d=-2.24\)</span>, <span class="math inline">\(s_d=7.7079\)</span>, <span class="math inline">\(SE=0.7708\)</span>, and <span class="math inline">\(df=99\)</span>.
+The 95% interval is approximately <span class="math inline">\((-3.77,-0.71)\)</span>. The statistic is
+<span class="math inline">\(t=-2.906\)</span> and the two-sided p-value about 0.0046, so reject the zero-gap
+null. The interval excludes zero because it uses the same t model and SE as
+the test.</p>
+</details>
+</div>
+<div id="task-2-proportion-contrast" class="section level3 hasAnchor">
+<h3>Task 2 — Proportion contrast<a href="b-ep04.html#task-2-proportion-contrast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Define <span class="math inline">\(\delta_p=p-0.50\)</span>, where <span class="math inline">\(p\)</span> is the finite-frame deal proportion.</p>
+<ol style="list-style-type: decimal">
+<li>Estimate <span class="math inline">\(\delta_p\)</span>.</li>
+<li>Perform a two-sided large-sample z-test against zero.</li>
+<li>Construct the course’s large-sample 95% interval for <span class="math inline">\(p\)</span> and translate it
+into an interval for <span class="math inline">\(\delta_p\)</span>.</li>
+<li>State why test and interval SEs differ.</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="b-ep04.html#cb128-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(pitch_sample)</span>
+<span id="cb128-2"><a href="b-ep04.html#cb128-2" tabindex="-1"></a>phat <span class="ot">&lt;-</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>deal_on_show)</span>
+<span id="cb128-3"><a href="b-ep04.html#cb128-3" tabindex="-1"></a>p0 <span class="ot">&lt;-</span> <span class="fl">0.50</span></span>
+<span id="cb128-4"><a href="b-ep04.html#cb128-4" tabindex="-1"></a>delta_hat <span class="ot">&lt;-</span> phat <span class="sc">-</span> p0</span>
+<span id="cb128-5"><a href="b-ep04.html#cb128-5" tabindex="-1"></a></span>
+<span id="cb128-6"><a href="b-ep04.html#cb128-6" tabindex="-1"></a>null_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0 <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0) <span class="sc">/</span> n)</span>
+<span id="cb128-7"><a href="b-ep04.html#cb128-7" tabindex="-1"></a>z_value <span class="ot">&lt;-</span> delta_hat <span class="sc">/</span> null_se</span>
+<span id="cb128-8"><a href="b-ep04.html#cb128-8" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(z_value))</span>
+<span id="cb128-9"><a href="b-ep04.html#cb128-9" tabindex="-1"></a></span>
+<span id="cb128-10"><a href="b-ep04.html#cb128-10" tabindex="-1"></a>estimated_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(phat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> phat) <span class="sc">/</span> n)</span>
+<span id="cb128-11"><a href="b-ep04.html#cb128-11" tabindex="-1"></a>ci_p <span class="ot">&lt;-</span> phat <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">*</span> estimated_se</span>
+<span id="cb128-12"><a href="b-ep04.html#cb128-12" tabindex="-1"></a>ci_delta <span class="ot">&lt;-</span> ci_p <span class="sc">-</span> p0</span>
+<span id="cb128-13"><a href="b-ep04.html#cb128-13" tabindex="-1"></a></span>
+<span id="cb128-14"><a href="b-ep04.html#cb128-14" tabindex="-1"></a><span class="fu">c</span>(<span class="at">phat =</span> phat, <span class="at">estimated_gap =</span> delta_hat,</span>
+<span id="cb128-15"><a href="b-ep04.html#cb128-15" tabindex="-1"></a>  <span class="at">z =</span> z_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
+<pre><code>##          phat estimated_gap             z       p_value 
+##   0.640000000   0.140000000   2.800000000   0.005110261</code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="b-ep04.html#cb130-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">proportion_lower =</span> ci_p[<span class="dv">1</span>], <span class="at">proportion_upper =</span> ci_p[<span class="dv">2</span>],</span>
+<span id="cb130-2"><a href="b-ep04.html#cb130-2" tabindex="-1"></a>  <span class="at">gap_lower =</span> ci_delta[<span class="dv">1</span>], <span class="at">gap_upper =</span> ci_delta[<span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## proportion_lower proportion_upper        gap_lower        gap_upper 
+##          0.54592          0.73408          0.04592          0.23408</code></pre>
+<p><span class="math inline">\(\hat p=0.64\)</span>, so <span class="math inline">\(\widehat\delta_p=0.14\)</span>. Under the null,
+<span class="math inline">\(SE_0=0.05\)</span>, <span class="math inline">\(z=2.80\)</span>, and the two-sided p-value is about 0.0051.
+Reject the zero-gap null. The proportion interval is approximately
+<span class="math inline">\((0.546,0.734)\)</span>, corresponding to a gap interval <span class="math inline">\((0.046,0.234)\)</span>.
+The test calculates variation under <span class="math inline">\(p_0\)</span>; the manual interval estimates it
+with <span class="math inline">\(\hat p\)</span>.</p>
+</details>
+</div>
+<div id="task-3-read-a-regression-coefficient-row" class="section level3 hasAnchor">
+<h3>Task 3 — Read a regression coefficient row<a href="b-ep04.html#task-3-read-a-regression-coefficient-row" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose a model of initial equity offered reports:</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th align="right">Estimate</th>
+<th align="right">SE</th>
+<th align="right">t</th>
+<th align="right">p-value</th>
+<th align="right">95% interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Amount requested, per $100,000</td>
+<td align="right">-0.290</td>
+<td align="right">0.058</td>
+<td align="right">-5.00</td>
+<td align="right">&lt;0.001</td>
+<td align="right">(-0.403, -0.177)</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>State the tested hypotheses.</li>
+<li>Explain every number in units.</li>
+<li>Give the statistical conclusion at 5%.</li>
+<li>State two claims the row cannot justify.</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>The test is <span class="math inline">\(H_0:\beta_{ask}=0\)</span> against <span class="math inline">\(H_1:\beta_{ask}\ne0\)</span>.
+The estimate says that another $100,000 requested is associated with 0.290
+percentage points less fitted initial equity, holding the model’s other
+predictors fixed. The SE measures sampling uncertainty in the same coefficient
+units. The statistic is <span class="math inline">\(-0.290/0.058=-5.00\)</span>. The p-value is below 0.001,
+and the 95% interval excludes zero, so reject the zero-coefficient null. The
+row alone does not establish causality or show that model assumptions hold.</p>
+</details>
+</div>
+<div id="task-4-errors-and-power" class="section level3 hasAnchor">
+<h3>Task 4 — Errors and power<a href="b-ep04.html#task-4-errors-and-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For Task 3:</p>
+<ol style="list-style-type: decimal">
+<li>describe a Type I error;</li>
+<li>describe a Type II error;</li>
+<li>state how a larger sample affects SE and power;</li>
+<li>explain why raising <span class="math inline">\(\alpha\)</span> is a trade-off rather than a free gain.</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>A Type I error is concluding that the population-model ask coefficient differs
+from zero when it equals zero. A Type II error is failing to reject zero when a
+specified non-zero coefficient is true. A larger independent sample usually
+reduces SE and raises power. Raising <span class="math inline">\(\alpha\)</span> also raises power, but it
+increases the Type I error probability.</p>
+</details>
+</div>
+<div id="task-5-repair-the-conclusion" class="section level3 hasAnchor">
+<h3>Task 5 — Repair the conclusion<a href="b-ep04.html#task-5-repair-the-conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Critique:</p>
+<blockquote>
+<p>The coefficient is significant, so asking for more money causes founders to
+offer less equity, and there is less than a 0.1% chance that the null is true.</p>
+</blockquote>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>The p-value is not the probability that the null is true, and significance
+does not establish causality. A defensible conclusion reports a negative
+adjusted association, its magnitude and interval, the evidence against a zero
+coefficient under the model, and the observational design and assumption
+limits.</p>
+</details>
+</div>
+</div>
+<div id="after-class-13" class="section level2 hasAnchor course-phase phase-after">
+<h2>After class<a href="b-ep04.html#after-class-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="timed-individual-practice-25-minutes" class="section level3 hasAnchor">
+<h3>Timed individual practice — 25 minutes<a href="b-ep04.html#timed-individual-practice-25-minutes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A random sample of 81 customers gives mean spending 42 euros, sample SD 9
+euros, and 54 renewals.</p>
+<ol style="list-style-type: decimal">
+<li>Define <span class="math inline">\(\delta_\mu=\mu-40\)</span>, construct its 95% interval, and test a
+two-sided zero null.</li>
+<li>Define <span class="math inline">\(\delta_p=p-0.60\)</span>, construct the course’s 95% interval, and test a
+two-sided zero null.</li>
+<li>State the Type I error for each test.</li>
+<li>Explain why the mean result is only just significant while the estimated
+mean difference is still 2 euros.</li>
+<li>Write a six-sentence report separating estimate, uncertainty, decision,
+practical importance, population, and causality.</li>
+</ol>
+<details>
+<summary>
+Check a model answer
+</summary>
+<p>For the mean, <span class="math inline">\(\widehat\delta_\mu=2\)</span>, <span class="math inline">\(SE=9/\sqrt{81}=1\)</span>, and
+<span class="math inline">\(df=80\)</span>. With <span class="math inline">\(t_{0.975,80}\approx1.990\)</span>, the gap interval is
+approximately <span class="math inline">\((0.01,3.99)\)</span>, equivalent to a mean interval
+<span class="math inline">\((40.01,43.99)\)</span>. The statistic is <span class="math inline">\(t=2.00\)</span> and the two-sided p-value is
+about 0.049, so reject the zero mean-gap null just narrowly.</p>
+<p>For renewal, <span class="math inline">\(\hat p=54/81=0.667\)</span>. The estimated gap is 0.067. The
+large-sample proportion interval is approximately <span class="math inline">\((0.564,0.769)\)</span>, so the
+gap interval is <span class="math inline">\((-0.036,0.169)\)</span>. Under <span class="math inline">\(H_0:p=0.60\)</span>,
+<span class="math inline">\(SE_0\approx0.0544\)</span>, <span class="math inline">\(z\approx1.225\)</span>, and the two-sided p-value is about
+0.221; do not reject.</p>
+<p>A Type I error would be claiming a non-zero mean spending gap when
+<span class="math inline">\(\mu=40\)</span>, or a non-zero renewal gap when <span class="math inline">\(p=0.60\)</span>. The observed estimate
+does not change when <span class="math inline">\(\alpha\)</span> changes; only the decision threshold does. A
+complete report must still evaluate whether a 2-euro difference matters and
+whether the sampling design supports the intended population claim. Neither
+test identifies a causal explanation.</p>
+</details>
+<p>The Basic course is complete. Continue to
+<a href="intermediate-course.html#intermediate-course">Intermediate quantitative methods</a> when that course
+begins.</p>
+</div>
+</div>
+
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="b10.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intermediate-course.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

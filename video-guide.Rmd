@@ -13,20 +13,33 @@ three purposes:
 
 Only clips labelled **Required before class** are compulsory preparation.
 Review and extension clips do not add examinable content; the scope and
-notation in this textbook remain authoritative. Links below open MIT
-OpenCourseWare pages that include the video and its transcript. The same videos
-are also available in the
-[MIT probability playlist](https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6).
+notation in this textbook remain authoritative. Basic primarily uses MIT
+OpenCourseWare pages, which include videos and transcripts. Intermediate uses
+Stanford's Statistical Learning series. The complete collections are the
+[MIT probability playlist](https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6)
+and the
+[Stanford Statistical Learning playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e).
 
 ## Required preparation at a glance
 
-| Lecture | Required before class |
+| Chapter | Required before class |
 |---|---|
-| Lecture 1: Introduction to Data Analysis | None |
-| Lecture 2: Probability Foundations and Random Variables | 01.2 Sample Space; 01.4 Probability Axioms; 05.2 Definition of Random Variables |
-| Lecture 3: Discrete Distributions and Expectation | 05.3 Probability Mass Functions; 08.7 Cumulative Distribution Functions; 05.8 Expectation |
-| Lecture 4: Variance, Conditioning, and Belief Updating | 06.2 Variance; 02.2 Conditional Probabilities; 02.8 Bayes' Rule |
-| Lecture 5: Joint Random Variables, Covariance, and Correlation | 06.7 Joint PMFs and the Expected Value Rule; 12.5 Covariance; 12.8 The Correlation Coefficient |
+| Basic Lecture 1 | None |
+| Basic Lecture 2 | MIT 01.2 Sample Space; 01.4 Probability Axioms; 05.2 Definition of Random Variables |
+| Basic Lecture 3 | MIT 05.3 Probability Mass Functions; 08.7 Cumulative Distribution Functions; 05.8 Expectation |
+| Basic Lecture 4 | MIT 06.2 Variance; 02.2 Conditional Probabilities; 02.8 Bayes' Rule |
+| Basic Lecture 5 | MIT 06.7 Joint PMFs; 12.5 Covariance; 12.8 Correlation |
+| Basic Lecture 6 | MIT 08.2 PDFs; 05.5 Uniform Random Variables; 08.8 Normal Random Variables |
+| Basic Lecture 7 | MIT 20.3 Sample Mean and Terminology |
+| Basic Lecture 8 | MIT 18.4 Weak Law of Large Numbers; 19.2 CLT |
+| Basic Lecture 9 | MIT 20.5--20.7 Confidence Intervals; Introduction to Hypothesis Testing |
+| Basic Lecture 10 | Introduction to Hypothesis Testing; Khan Academy Type I/II Errors |
+| Intermediate Lecture 1 | Stanford 3.1 Simple Linear Regression |
+| Intermediate Lecture 2 | Stanford 3.2 Hypothesis Testing and Confidence Intervals |
+| Intermediate Lecture 3 | Stanford 3.4 Some Important Questions |
+| Intermediate Lecture 4 | Stanford 3.3 Multiple Linear Regression |
+| Intermediate Lecture 5 | Stanford 3.5 Extensions of the Linear Model |
+| Intermediate Lecture 6 | Stanford 3.5 Extensions; 7.1 Polynomials and Step Functions |
 
 This table matches the **Video preparation** boxes in the lecture chapters.
 
@@ -39,11 +52,11 @@ The official page includes the
 This is a reference, not a required 77-page reading. Read only a section that a
 lecture explicitly assigns or that you need for review.
 
-## Lecture 1: Introduction to Data Analysis
+## Basic Lecture 1: Introduction to Data Analysis
 
 No external video is assigned. Preparation is listed in the lecture chapter.
 
-## Lecture 2: Probability Foundations and Random Variables
+## Basic Lecture 2: Probability Foundations and Random Variables
 
 **Required before class**
 
@@ -68,7 +81,7 @@ No external video is assigned. Preparation is listed in the lecture chapter.
 - [01.7 A Discrete Example](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/a-discrete-example/)
   — a worked discrete probability model.
 
-## Lecture 3: Discrete Distributions and Expectation
+## Basic Lecture 3: Discrete Distributions and Expectation
 
 **Required before class**
 
@@ -84,7 +97,7 @@ No external video is assigned. Preparation is listed in the lecture chapter.
 - [05.4 Bernoulli and Indicator Random Variables](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/bernoulli-indicator-random-variables/)
   — coding an event as 1 and its complement as 0.
 
-## Lecture 4: Variance, Conditioning, and Belief Updating
+## Basic Lecture 4: Variance, Conditioning, and Belief Updating
 
 **Required before class**
 
@@ -107,7 +120,7 @@ No external video is assigned. Preparation is listed in the lecture chapter.
 - [02.3 A Die Roll Example](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/a-die-roll-example/)
   — a worked conditioning example.
 
-## Lecture 5: Joint Random Variables, Covariance, and Correlation
+## Basic Lecture 5: Joint Random Variables, Covariance, and Correlation
 
 **Required before class**
 
@@ -133,6 +146,114 @@ No external video is assigned. Preparation is listed in the lecture chapter.
 
 - [12.6 Covariance Properties](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/covariance-properties/)
   — additional algebraic properties of covariance.
+
+## Basic Lecture 6: Continuous Distributions and the Normal Model
+
+**Required before class**
+
+- [08.2 Probability Density Functions](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/probability-density-functions/)
+  — density, area, and interval probability.
+- [05.5 Uniform Random Variables](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/uniform-random-variables/)
+  — constant density over an interval.
+- [08.8 Normal Random Variables](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/normal-random-variables/)
+  — normal shape and parameters.
+
+**Review when needed**
+
+- [08.9 Calculation of Normal Probabilities](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/calculation-of-normal-probabilities/)
+  — standardisation and normal interval probabilities.
+
+## Basic Lecture 7: Samples, Parameters, and Estimators
+
+**Required before class**
+
+- [20.3 The Sample Mean and Some Terminology](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-sample-mean-and-some-terminology/)
+  — parameters, estimators, estimates, and the sample mean.
+
+## Basic Lecture 8: Sampling Distributions and the CLT
+
+**Required before class**
+
+- [18.4 The Weak Law of Large Numbers](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-weak-law-of-large-numbers/)
+  — convergence of a sample mean.
+- [19.2 The Central Limit Theorem](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-central-limit-theorem/)
+  — the normal approximation for standardised sums and means.
+
+## Basic Lecture 9: Confidence Intervals and Tests Against Zero
+
+**Required before class**
+
+- [20.5 Confidence Intervals](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/confidence-intervals/)
+  — repeated-sampling coverage.
+- [20.6 Confidence Intervals for the Estimation of the Mean](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/confidence-intervals-for-the-estimation-of-the-mean/)
+  — the known-variance mean interval.
+- [20.7 Confidence Intervals for the Mean When the Variance Is Unknown](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/confidence-intervals-for-the-mean-when-the-variance-is-unknown/)
+  — estimating the SE and using a t reference distribution.
+- [Introduction to Hypothesis Testing](https://www.youtube.com/watch?v=ti9NFdjf3sM)
+  — the null model, a two-sided alternative, and the p-value.
+
+## Basic Lecture 10: Hypothesis Testing, Errors, and Power
+
+**Required before class**
+
+- [Introduction to Hypothesis Testing](https://www.youtube.com/watch?v=ti9NFdjf3sM)
+  — review the null model, two-sided alternatives, and p-values.
+- [Examples Identifying Type I and Type II Errors](https://www.youtube.com/watch?v=JNOWWJeZBTc)
+  — decision errors in context.
+
+## Intermediate videos
+
+All required Intermediate clips come from Stanford's Statistical Learning
+series and accompany Chapter 3 of *An Introduction to Statistical Learning*.
+
+### Intermediate Lecture 1: Simple Linear Regression
+
+**Required before class**
+
+- [3.1 Simple Linear Regression](https://www.youtube.com/watch?v=vCHtY6Me5FI)
+  — population and fitted lines, least squares, coefficients.
+
+### Intermediate Lecture 2: Regression Assumptions and Inference
+
+**Required before class**
+
+- [3.2 Hypothesis Testing and Confidence Intervals](https://www.youtube.com/watch?v=3GiWpRfkSjc)
+  — coefficient SEs, intervals, and tests against zero.
+
+### Intermediate Lecture 3: Model Fit and Overall Usefulness
+
+**Required before class**
+
+- [3.4 Some Important Questions](https://www.youtube.com/watch?v=50sv4UTjE90)
+  — relationship, fit, and prediction questions.
+
+### Intermediate Lecture 4: Multiple Linear Regression
+
+**Required before class**
+
+- [3.3 Multiple Linear Regression](https://www.youtube.com/watch?v=o9hoLdylWKo)
+  — several predictors and conditional coefficients.
+
+### Intermediate Lecture 5: Dummy Predictors and Joint Usefulness
+
+**Required before class**
+
+- [3.5 Extensions of the Linear Model](https://www.youtube.com/watch?v=dEBQmiXv9fk)
+  — qualitative predictors and model extensions.
+
+### Intermediate Lecture 6: Interactions and Polynomial Terms
+
+**Required before class**
+
+- [3.5 Extensions of the Linear Model](https://www.youtube.com/watch?v=dEBQmiXv9fk)
+  — interactions and qualitative predictors.
+- [7.1 Polynomials and Step Functions](https://www.youtube.com/watch?v=F-D3lZzYn50)
+  — polynomial terms and non-linear fitted relationships.
+
+**Optional extension for Intermediate**
+
+- [3.R Regression in R](https://www.youtube.com/watch?v=gNZfqHhq_B4)
+  — a longer Stanford R lab covering Chapter 3.
 
 External sources may use different notation or cover more material. Follow this
 textbook, the formula sheet, and the exam instructions for the course scope.

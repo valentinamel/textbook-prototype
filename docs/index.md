@@ -95,11 +95,12 @@ IMPORTANT: Each lecture includes required pre-class preparation, in-class work, 
 ## Lecture preparation and external videos
 
 "Before class" sections include a clearly marked "Video Preparation"
-box. Watch the listed required clips - recorded at MIT - before the lecture and make brief notes on
-the indicated concepts. The [External Video Guide](#videos) separates
+box. Watch the listed required clips before the lecture and make brief notes on
+the indicated concepts. Basic primarily uses MIT OpenCourseWare; Intermediate
+uses Stanford's Statistical Learning series. The [External Video Guide](#videos) separates
 required preparation, review when needed, and optional extension
 clips. Only the first category is compulsory. In-class theory sections also
-link directly to MIT explanations that you can replay after a lecture or an
+link directly to external explanations that you can replay after a lecture or an
 absence. External sources may use different notation or cover more material
 than this course; follow the notation and scope stated in this textbook.
 
@@ -111,13 +112,14 @@ workflow has become rusty, use the [R Refresher](#r-refresher) and the earlier
 course as references.
 
 Most chapters use a teaching view derived from
-[All Shark Tank US Pitches & Deals](https://www.kaggle.com/datasets/neiljs/all-shark-tank-us-pitches-deals).
-One row represents one recorded televised pitch. The source records the
-season/episode, business identifier, written business description, on-air deal
-status, and sharks associated with a deal. The current teaching view does not
-contain entrepreneur gender, team gender composition, completed investment, or
-later venture performance. Selected additional datasets will be introduced when
-a question requires variables that this dataset does not contain.
+[Shark Tank US Dataset](https://www.kaggle.com/datasets/thirumani/shark-tank-us-dataset).
+One row represents one recorded televised pitch. We use the 1,441 pitches from
+completed Seasons 1--16 and omit the incomplete Season 17. The teaching file
+contains pitch and episode identifiers, industry and description, the initial
+ask, the outcome of the televised negotiation, and the source's broad pitcher
+gender composition category. These variables describe what was recorded on the
+show. They do not establish completed investment, later venture performance, or
+causal effects.
 
 ## Tutorials and assessment
 

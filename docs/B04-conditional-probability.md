@@ -27,6 +27,9 @@ changes the denominator. All links are also listed in the
 <a href="videos.html#videos">External Video Guide</a>.
 </div>
 
+If fractions, powers, roots, or the conditioning bar are unfamiliar, review
+[Mathematics Refresher: fractions, powers, and event notation](#math-refresher).
+
 Lecture 3 introduced expectation. For a random variable with mean
 \(\mu=E[X]\), variance is the expected squared distance from that mean:
 
@@ -47,9 +50,9 @@ both positive and negative deviations contribute to spread.
 
 Compare:
 
-- “Among pitches in Seasons 5-8, what proportion reached an on-air deal?”
+- “Among pitches in Seasons 9--16, what proportion reached an on-air deal?”
 - “Among pitches that reached an on-air deal, what proportion came from
-  Seasons 5-8?”
+  Seasons 9--16?”
 
 Let \(D\) be the deal event and \(L\) the late-season event. The questions are
 \(P(D\mid L)\) and \(P(L\mid D)\). The event after the vertical bar defines
@@ -57,10 +60,10 @@ the restricted reference class and therefore the denominator.
 
 
 ```
-##              Deal
-## Period        No on-air deal On-air deal
-##   Seasons 1-4            135         127
-##   Seasons 5-8            188         256
+##               Deal
+## Period         No on-air deal On-air deal
+##   Seasons 1-8             330         377
+##   Seasons 9-16            229         505
 ```
 
 Before calculating, point to the numerator and denominator for:
@@ -74,11 +77,11 @@ Before calculating, point to the numerator and denominator for:
 <details>
 <summary>Check your denominators</summary>
 
-1. \(P(D)\): 383 deal records out of 706 records.
-2. \(P(L)\): 444 late-season records out of 706 records.
-3. \(P(D\cap L)\): 256 late-season deal records out of 706 records.
-4. \(P(D\mid L)\): 256 late-season deal records out of 444 late-season records.
-5. \(P(L\mid D)\): 256 late-season deal records out of 383 deal records.
+1. \(P(D)\): 882 deal records out of 1,441 records.
+2. \(P(L)\): 734 late-season records out of 1,441 records.
+3. \(P(D\cap L)\): 505 late-season deal records out of 1,441 records.
+4. \(P(D\mid L)\): 505 late-season deal records out of 734 late-season records.
+5. \(P(L\mid D)\): 505 late-season deal records out of 882 deal records.
 
 </details>
 
@@ -150,8 +153,8 @@ c(
 ```
 
 ```
-##     Var_X      SD_X     Var_S      SD_S 
-## 0.2481944 0.4981911 4.4526900 2.1101398
+##      Var_X       SD_X      Var_S       SD_S 
+##  0.2374392  0.4872773 18.1360282  4.2586416
 ```
 
 #### Distribution variance and sample variance
@@ -178,12 +181,12 @@ c(
 
 ```
 ##      empirical_variance_divide_n sample_variance_divide_n_minus_1 
-##                        556.36485                        557.15402 
+##                         3.646749                         3.649282 
 ##                        sample_sd 
-##                         23.60411
+##                         1.910309
 ```
 
-These are different summaries of the same 706 observations. Calling the sample
+These are different summaries of the same 1,441 observations. Calling the sample
 variance an estimate of population variance additionally requires a sampling
 model.
 
@@ -205,12 +208,12 @@ to 1, and then asks which of those outcomes are also in \(A\). For a fixed
 From the table:
 
 \[
-P(D\mid L)=\frac{256}{444}\approx0.577,
+P(D\mid L)=\frac{505}{734}\approx0.688,
 \qquad
-P(L\mid D)=\frac{256}{383}\approx0.668.
+P(L\mid D)=\frac{505}{882}\approx0.573.
 \]
 
-The numerator is 256 in both calculations. The denominators—and therefore the
+The numerator is 505 in both calculations. The denominators—and therefore the
 questions—differ.
 
 
@@ -223,12 +226,44 @@ c(
 
 ```
 ## P_deal_given_late P_late_given_deal 
-##         0.5765766         0.6684073
+##         0.6880109         0.5725624
 ```
 
-A 66.8% figure refers to \(P(L\mid D)\), not \(P(D\mid L)\): 66.8% of deal
-records are from Seasons 5--8, while 57.7% of Seasons 5--8 records reached an
+A 57.3% figure refers to \(P(L\mid D)\), not \(P(D\mid L)\): 57.3% of deal
+records are from Seasons 9--16, while 68.8% of Seasons 9--16 records reached an
 on-air deal.
+
+#### A second application: source gender composition
+
+The dataset classifies pitching teams as `all_men`, `all_women`, `mixed`, or
+`unknown`. Restricting the calculation to the 1,434 pitches with a known source
+classification gives:
+
+
+``` r
+known_gender <- sharks$pitcher_gender_group != "unknown"
+gender_labels <- c("all_men", "all_women", "mixed")
+
+gender_deal_rates <- tapply(
+  sharks$deal_on_show[known_gender],
+  factor(sharks$pitcher_gender_group[known_gender], levels = gender_labels),
+  mean
+)
+
+gender_deal_rates
+```
+
+```
+##   all_men all_women     mixed 
+## 0.5808538 0.6363636 0.6630435
+```
+
+<img src="B04-conditional-probability_files/figure-html/b04-gender-deal-plot-1.png" width="672" />
+
+These are conditional proportions within selected televised pitches. The
+classification describes presenters rather than every company member, seven
+pitches have an unknown classification, and the comparison does not isolate a
+causal effect of gender.
 
 ### The multiplication rule
 
@@ -260,9 +295,9 @@ c(
 
 ```
 ##                   direct_joint         conditional_times_base 
-##                      0.3626062                      0.3626062 
+##                      0.3504511                      0.3504511 
 ## reverse_conditional_times_base 
-##                      0.3626062
+##                      0.3504511
 ```
 
 This is the algebraic reason the two conditional probabilities can share a
@@ -299,7 +334,7 @@ c(
 
 ```
 ##       direct from_periods 
-##    0.5424929    0.5424929
+##    0.6120749    0.6120749
 ```
 
 The overall deal probability is a weighted average of the period-specific deal
@@ -337,7 +372,7 @@ c(
 
 ```
 ## from_bayes from_table 
-##  0.6684073  0.6684073
+##  0.5725624  0.5725624
 ```
 
 Bayes' rule reverses the direction of conditioning. It does not reverse causal
@@ -402,42 +437,51 @@ rate also determine the proportion of flagged pitches that receive a deal.
    false-positive rate. Calculate \(P(\text{deal}\mid\text{positive flag})\).
 4. Calculate and interpret \(P(L\mid D)\). Explain why it differs from
    \(P(D\mid L)\).
-5. R reports an empirical variance of 556.365 and a sample variance of
-   557.154 for written-description length. Explain why the values differ.
+5. R reports an empirical variance of 3.647 and a sample variance of
+   3.649 for written-description length. Explain why the values differ.
+6. Among the 1,434 pitches with a known source gender group, 428 of 661
+   pitches with women represented and 449 of 773 all-men pitches reached an
+   on-air deal. Calculate both conditional deal proportions and interpret the
+   difference.
 
 <details>
 <summary>Check your answers</summary>
 
 1. \(\operatorname{Var}(Y)=1.7-1.1^2=0.49\) and
    \(\operatorname{SD}(Y)=\sqrt{0.49}=0.7\).
-2. \((127/262)(262/706)+(256/444)(444/706)=383/706\approx0.542\).
+2. \((377/707)(707/1441)+(505/734)(734/1441)=882/1441\approx0.612\).
 3. Bayes' rule gives
    \[
    \frac{0.80(0.10)}{0.80(0.10)+0.20(0.90)}
    =\frac{0.08}{0.26}\approx0.308.
    \]
    About 30.8% of positively flagged cases are deals under this model.
-4. \(P(L\mid D)=256/383\approx0.668\): among deal records, 66.8% came from
-   Seasons 5--8. It differs from \(P(D\mid L)=256/444\approx0.577\) because
+4. \(P(L\mid D)=505/882\approx0.573\): among deal records, 57.3% came from
+   Seasons 9--16. It differs from \(P(D\mid L)=505/734\approx0.688\) because
    the conditioning event—and therefore the denominator—is different.
-5. The empirical-distribution variance weights every one of the 706 records by
-   \(1/706\) and therefore divides by \(n\). The usual sample variance divides
+5. The empirical-distribution variance weights every one of the 1,441 records
+   by \(1/1441\) and therefore divides by \(n\). The usual sample variance divides
    by \(n-1\), so it is slightly larger.
+6. The conditional proportions are \(428/661\approx0.648\) and
+   \(449/773\approx0.581\), a descriptive difference of about 6.7 percentage
+   points. This comparison uses the dataset's presenter-gender classification
+   and selected televised pitches. It does not establish that gender caused
+   the difference or describe pitches with an unknown classification.
 
 </details>
 
 ### Worked exam interpretation
 
-**Question.** A student sees \(P(D\mid L)=0.577\) and writes, “57.7% of deal
+**Question.** A student sees \(P(D\mid L)=0.688\) and writes, “68.8% of deal
 pitches came from late seasons.”
 
 <details>
 <summary>Check a model answer</summary>
 
 The calculation conditions on \(L\), so the denominator is
-the 444 pitches in Seasons 5-8. The correct interpretation is that 57.7% of
+the 734 pitches in Seasons 9--16. The correct interpretation is that 68.8% of
 late-season records reached an on-air deal. The reverse conditional is
-\(P(L\mid D)=256/383=66.8\%\). Neither quantity measures completed investment
+\(P(L\mid D)=505/882=57.3\%\). Neither quantity measures completed investment
 or a causal season effect.
 
 </details>

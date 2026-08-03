@@ -47,6 +47,31 @@ names(sharks)
 - [Data Visualization with ggplot](https://walshc.github.io/ebi-prog/plotting-with-ggplot.html)
 - [Aggregating by Group](https://walshc.github.io/ebi-prog/aggregating.html)
 
+## If regression commands are unfamiliar
+
+Use the same object-first workflow throughout Intermediate:
+
+```r
+model <- lm(y ~ x1 + x2, data = my_data)
+summary(model)
+confint(model)
+fitted(model)
+residuals(model)
+plot(model)
+```
+
+- `lm()` fits the model specified to the right of `~` and uses the outcome on
+  the left.
+- `summary()` reports coefficients, their classical tests, model fit, and the
+  overall F-test.
+- `confint()` reports coefficient confidence intervals.
+- `fitted()` and `residuals()` return one value for each analysis row.
+- `plot(model)` opens the standard diagnostic plots.
+
+Write the fitted object to a meaningful name and inspect the analysis sample
+before interpreting output. R silently omits rows containing missing values in
+variables used by `lm()` unless instructed otherwise.
+
 ## A five-minute return-to-R check
 
 Run this without copying the displayed answer:

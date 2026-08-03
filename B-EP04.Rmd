@@ -1,0 +1,259 @@
+# Tutorial 4: Inference and tests against zero {#b-ep04}
+
+```{r bep04-setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.width = 7, fig.height = 4.2)
+sharks <- read.csv("data/shark_tank_teaching.csv", stringsAsFactors = FALSE)
+set.seed(123)
+pitch_sample <- sharks[sample(seq_len(nrow(sharks)), 100), ]
+pitch_sample$equity_gap_pp <-
+  pitch_sample$equity_offered_pct - 15
+```
+
+<div class="outcomes">
+<span class="label">By the end of Tutorial 4, you can</span>
+<ul>
+<li>construct and interpret intervals for a mean and proportion;</li>
+<li>complete two-sided tests of zero-valued contrasts;</li>
+<li>connect a test decision with its confidence interval;</li>
+<li>interpret degrees of freedom, errors, and power;</li>
+<li>read a regression coefficient test without overclaiming.</li>
+</ul>
+</div>
+
+::: {.course-phase .phase-before}
+
+## Before class
+
+Bring your after-class work from Lectures 9 and 10. Review
+[Mathematics Refresher: intervals, degrees of freedom, and
+standardisation](#math-refresher) if needed.
+
+Write from memory:
+
+1. the t confidence-interval form;
+2. the t statistic for testing a mean contrast against zero;
+3. the meaning of \(df=n-1\);
+4. the definition of a two-sided p-value;
+5. the 95%-interval/5%-test decision link.
+
+<details>
+<summary>Check your preparation</summary>
+
+1. \(\widehat\delta\pm t_{0.975,n-1}
+   \operatorname{SE}(\widehat\delta)\).
+2. \(T=\widehat\delta/\operatorname{SE}(\widehat\delta)\).
+3. Estimating the sample mean leaves \(n-1\) freely varying deviations for
+   estimating spread.
+4. Under \(H_0\), the probability of a statistic at least as far from zero as
+   the observed statistic in either direction.
+5. For matched two-sided t procedures, reject zero exactly when the 95%
+   interval excludes zero.
+
+</details>
+
+:::
+
+::: {.course-phase .phase-in-class}
+
+## In class
+
+Attempt every task before opening its answer. Every conclusion must name the
+parameter, units, population, direction, and evidence limit.
+
+### Task 1 — Mean contrast
+
+For the reproducible sample, define
+
+\[
+D=\text{initial equity offered}-15.
+\]
+
+1. Calculate \(\bar d\), \(s_d\), the SE, and degrees of freedom.
+2. Construct a 95% interval for \(\delta=E[D]\).
+3. Test \(H_0:\delta=0\) against \(H_1:\delta\ne0\).
+4. Explain why the interval and test agree.
+
+<details>
+<summary>Check your answer</summary>
+
+```{r bep04-mean-gap}
+d <- pitch_sample$equity_gap_pp
+n <- length(d)
+d_bar <- mean(d)
+s_d <- sd(d)
+se_d <- s_d / sqrt(n)
+critical <- qt(0.975, df = n - 1)
+ci_d <- d_bar + c(-1, 1) * critical * se_d
+t_value <- d_bar / se_d
+p_value <- 2 * pt(-abs(t_value), df = n - 1)
+
+c(estimate = d_bar, sd = s_d, se = se_d, df = n - 1,
+  lower = ci_d[1], upper = ci_d[2],
+  t = t_value, p_value = p_value)
+```
+
+\(\bar d=-2.24\), \(s_d=7.7079\), \(SE=0.7708\), and \(df=99\).
+The 95% interval is approximately \((-3.77,-0.71)\). The statistic is
+\(t=-2.906\) and the two-sided p-value about 0.0046, so reject the zero-gap
+null. The interval excludes zero because it uses the same t model and SE as
+the test.
+
+</details>
+
+### Task 2 — Proportion contrast
+
+Define \(\delta_p=p-0.50\), where \(p\) is the finite-frame deal proportion.
+
+1. Estimate \(\delta_p\).
+2. Perform a two-sided large-sample z-test against zero.
+3. Construct the course's large-sample 95% interval for \(p\) and translate it
+   into an interval for \(\delta_p\).
+4. State why test and interval SEs differ.
+
+<details>
+<summary>Check your answer</summary>
+
+```{r bep04-proportion-gap}
+n <- nrow(pitch_sample)
+phat <- mean(pitch_sample$deal_on_show)
+p0 <- 0.50
+delta_hat <- phat - p0
+
+null_se <- sqrt(p0 * (1 - p0) / n)
+z_value <- delta_hat / null_se
+p_value <- 2 * pnorm(-abs(z_value))
+
+estimated_se <- sqrt(phat * (1 - phat) / n)
+ci_p <- phat + c(-1, 1) * 1.96 * estimated_se
+ci_delta <- ci_p - p0
+
+c(phat = phat, estimated_gap = delta_hat,
+  z = z_value, p_value = p_value)
+c(proportion_lower = ci_p[1], proportion_upper = ci_p[2],
+  gap_lower = ci_delta[1], gap_upper = ci_delta[2])
+```
+
+\(\hat p=0.64\), so \(\widehat\delta_p=0.14\). Under the null,
+\(SE_0=0.05\), \(z=2.80\), and the two-sided p-value is about 0.0051.
+Reject the zero-gap null. The proportion interval is approximately
+\((0.546,0.734)\), corresponding to a gap interval \((0.046,0.234)\).
+The test calculates variation under \(p_0\); the manual interval estimates it
+with \(\hat p\).
+
+</details>
+
+### Task 3 — Read a regression coefficient row
+
+Suppose a model of initial equity offered reports:
+
+| Predictor | Estimate | SE | t | p-value | 95% interval |
+|---|---:|---:|---:|---:|---:|
+| Amount requested, per $100,000 | -0.290 | 0.058 | -5.00 | <0.001 | (-0.403, -0.177) |
+
+1. State the tested hypotheses.
+2. Explain every number in units.
+3. Give the statistical conclusion at 5%.
+4. State two claims the row cannot justify.
+
+<details>
+<summary>Check your answer</summary>
+
+The test is \(H_0:\beta_{ask}=0\) against \(H_1:\beta_{ask}\ne0\).
+The estimate says that another $100,000 requested is associated with 0.290
+percentage points less fitted initial equity, holding the model's other
+predictors fixed. The SE measures sampling uncertainty in the same coefficient
+units. The statistic is \(-0.290/0.058=-5.00\). The p-value is below 0.001,
+and the 95% interval excludes zero, so reject the zero-coefficient null. The
+row alone does not establish causality or show that model assumptions hold.
+
+</details>
+
+### Task 4 — Errors and power
+
+For Task 3:
+
+1. describe a Type I error;
+2. describe a Type II error;
+3. state how a larger sample affects SE and power;
+4. explain why raising \(\alpha\) is a trade-off rather than a free gain.
+
+<details>
+<summary>Check your answer</summary>
+
+A Type I error is concluding that the population-model ask coefficient differs
+from zero when it equals zero. A Type II error is failing to reject zero when a
+specified non-zero coefficient is true. A larger independent sample usually
+reduces SE and raises power. Raising \(\alpha\) also raises power, but it
+increases the Type I error probability.
+
+</details>
+
+### Task 5 — Repair the conclusion
+
+Critique:
+
+> The coefficient is significant, so asking for more money causes founders to
+> offer less equity, and there is less than a 0.1% chance that the null is true.
+
+<details>
+<summary>Check your answer</summary>
+
+The p-value is not the probability that the null is true, and significance
+does not establish causality. A defensible conclusion reports a negative
+adjusted association, its magnitude and interval, the evidence against a zero
+coefficient under the model, and the observational design and assumption
+limits.
+
+</details>
+
+:::
+
+::: {.course-phase .phase-after}
+
+## After class
+
+### Timed individual practice — 25 minutes
+
+A random sample of 81 customers gives mean spending 42 euros, sample SD 9
+euros, and 54 renewals.
+
+1. Define \(\delta_\mu=\mu-40\), construct its 95% interval, and test a
+   two-sided zero null.
+2. Define \(\delta_p=p-0.60\), construct the course's 95% interval, and test a
+   two-sided zero null.
+3. State the Type I error for each test.
+4. Explain why the mean result is only just significant while the estimated
+   mean difference is still 2 euros.
+5. Write a six-sentence report separating estimate, uncertainty, decision,
+   practical importance, population, and causality.
+
+<details>
+<summary>Check a model answer</summary>
+
+For the mean, \(\widehat\delta_\mu=2\), \(SE=9/\sqrt{81}=1\), and
+\(df=80\). With \(t_{0.975,80}\approx1.990\), the gap interval is
+approximately \((0.01,3.99)\), equivalent to a mean interval
+\((40.01,43.99)\). The statistic is \(t=2.00\) and the two-sided p-value is
+about 0.049, so reject the zero mean-gap null just narrowly.
+
+For renewal, \(\hat p=54/81=0.667\). The estimated gap is 0.067. The
+large-sample proportion interval is approximately \((0.564,0.769)\), so the
+gap interval is \((-0.036,0.169)\). Under \(H_0:p=0.60\),
+\(SE_0\approx0.0544\), \(z\approx1.225\), and the two-sided p-value is about
+0.221; do not reject.
+
+A Type I error would be claiming a non-zero mean spending gap when
+\(\mu=40\), or a non-zero renewal gap when \(p=0.60\). The observed estimate
+does not change when \(\alpha\) changes; only the decision threshold does. A
+complete report must still evaluate whether a 2-euro difference matters and
+whether the sampling design supports the intended population claim. Neither
+test identifies a causal explanation.
+
+</details>
+
+The Basic course is complete. Continue to
+[Intermediate quantitative methods](#intermediate-course) when that course
+begins.
+
+:::

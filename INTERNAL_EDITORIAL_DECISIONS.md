@@ -47,11 +47,11 @@ This file is for the teaching team. It is intentionally excluded from
 - Use R throughout the learning line and return mainly to the same Shark Tank
   anchor dataset. Add satellite datasets only when the method or design needs
   variables the anchor data cannot provide.
-- The current 706-row teaching file is derived from the five-variable NeilJS
-  Kaggle dataset, not from the earlier 495-row `Shark Tank Companies.csv` file.
-  Neither source contains a verified entrepreneur-gender or team-gender
-  variable. Do not infer gender from names; add a documented external source or
-  transparent validated coding process before teaching gender comparisons.
+- The current 1,441-row teaching file is derived from the 53-variable
+  `Shark Tank US dataset.csv` source and freezes completed Seasons 1--16.
+  Incomplete Season 17 is excluded. Use the source's broad `Pitchers Gender`
+  category (`Male`, `Female`, or `Mixed Team`) as a team-composition category;
+  do not infer individual genders from names or call it a proportion of women.
 - Keep the previous Programming for E&BI textbook and the R refresher visible
   in all three courses.
 - Add a mathematics refresher under Supplementary resources after the course
@@ -82,3 +82,37 @@ This file is for the teaching team. It is intentionally excluded from
 - End Lecture 1 by returning to the textbook cycle and showing students exactly
   what to prepare before Lecture 2, what to practise afterward, and how to use
   the exam preparation sessions.
+
+## 2026-08-03
+
+- Complete Basic with Lecture 6 on continuous distributions, Lecture 7 on
+  sampling and estimators, and Lecture 8 on sampling distributions. Begin
+  two-sided tests against zero together with confidence intervals in Lecture
+  9; consolidate the testing workflow, errors, power, and the regression bridge
+  in Lecture 10.
+- Place Basic Tutorial 3 after Lecture 8 and Tutorial 4 after Lecture 10. Keep
+  each tutorial in the same Before class / In class / After class structure as
+  the lectures and supply collapsed model answers for every task.
+- Use positive quantiles such as \(z_{1-\alpha/2}\) and
+  \(t_{1-\alpha/2,n-1}\) for two-sided confidence intervals so notation maps
+  directly to `qnorm()` and `qt()`.
+- Build the first Intermediate course as six lectures: simple regression;
+  assumptions and coefficient inference; fit and the overall F-test; multiple
+  regression; dummy variables and partial F-tests; and interactions plus
+  polynomial terms. Position tutorials after Lectures 3 and 6.
+- Make Intermediate chapters self-contained rather than referring students to
+  the Statistics 2 textbook from another programme. Use Stanford Statistical
+  Learning videos and James et al., *An Introduction to Statistical Learning*
+  as supporting sources. Retain common regression notation and explain R
+  formula conventions at first use.
+- Teach regression coefficient interpretation as a repeated protocol: estimate
+  and direction, predictor step and unit, outcome unit, held-fixed variables,
+  and sample/causal scope. Require scaled and combined-change practice.
+- Use the larger Shark Tank teaching file across Intermediate examples. Treat
+  source gender as a broad team-composition category, derive only an explicit
+  women-represented indicator where needed, and never interpret it as a share
+  or infer gender from names.
+- Add a Mathematics Refresher under Supplementary resources with a chapter map
+  covering every mathematical symbol and operation required in Basic and
+  Intermediate.
+- Defer slide revisions until the textbook content is settled.

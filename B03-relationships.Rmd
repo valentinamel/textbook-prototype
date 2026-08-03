@@ -34,6 +34,9 @@ value need not be a possible realised value. All links are also listed in the
 <a href="videos.html#videos">External Video Guide</a>.
 </div>
 
+If functions, support, or summation notation are unfamiliar, review
+[Mathematics Refresher: functions and sums](#math-refresher).
+
 Lecture 2 ended with random variables. Suppose one pitch record is selected
 uniformly from the dataset. Define \(X=1\) if it reached an on-air deal and
 \(X=0\) otherwise. Define \(S\) as its season number.
@@ -47,7 +50,7 @@ After watching, answer:
 <summary>Check your preparation</summary>
 
 1. \(X\) can take the values 0 and 1. \(S\) can take the values
-   \(1,2,\ldots,8\).
+   \(1,2,\ldots,16\).
 2. No. The support lists the possible values. A probability distribution must
    also assign probability to them.
 
@@ -98,9 +101,9 @@ probability. The second says that one of the possible values must occur.
 For the deal indicator, \(X\in\{0,1\}\):
 
 \[
-p_X(0)=\frac{323}{706},
+p_X(0)=\frac{559}{1441},
 \qquad
-p_X(1)=\frac{383}{706}.
+p_X(1)=\frac{882}{1441}.
 \]
 
 ```{r b03-deal-pmf}
@@ -125,12 +128,12 @@ barplot(
   season_pmf,
   col = "#0072B2", border = NA,
   xlab = "Season s", ylab = expression(p[S](s)),
-  ylim = c(0, 0.20)
+  ylim = c(0, 1.18 * max(season_pmf))
 )
 ```
 
 The bar above season 5 has height
-\(p_S(5)=P(S=5)=116/706\approx0.164\). A PMF is represented by separated
+\(p_S(5)=P(S=5)=116/1441\approx0.080\). A PMF is represented by separated
 probability masses because \(S\) can take only the listed discrete values.
 The term **probability density function (PDF)** is reserved for continuous
 random variables and is introduced later in the course.
@@ -177,7 +180,7 @@ For example,
 \[
 F_S(3)=P(S\le3)
 =p_S(1)+p_S(2)+p_S(3)
-=\frac{159}{706}\approx0.225.
+=\frac{160}{1441}\approx0.111.
 \]
 
 ```{r b03-season-cdf, echo=FALSE}
@@ -248,8 +251,8 @@ It can also be viewed as the balance point of the probability distribution.
 
 Expectation is a property of the specified distribution, not a prediction
 that one observation will equal that number. It need not belong to the
-support. An expected season of 5.3, for example, describes the centre of the
-season distribution; there is no Season 5.3.
+support. The empirical expected season is about 8.8, for example, but there is
+no Season 8.8.
 
 For the deal indicator,
 
@@ -328,7 +331,7 @@ c(
 )
 ```
 
-Both calculations give about 29.8 words for these 706 records. Treating this
+Both calculations give about 5.0 words for these 1,441 records. Treating this
 as the expected description length for future pitches requires additional
 population and stability assumptions.
 
@@ -371,7 +374,7 @@ Let \(Y\) have support \(\{0,1,2\}\) and PMF
 1. Verify that this is a valid PMF.
 2. Calculate \(F_Y(0.5)\) and \(F_Y(1)\).
 3. Calculate \(E[Y]\) and \(E[Y^2]\).
-4. For the deal indicator with \(p=383/706\), calculate \(F_X(0.4)\).
+4. For the deal indicator with \(p=882/1441\), calculate \(F_X(0.4)\).
 5. Use the season CDF to calculate \(P(3<S\le6)\).
 
 <details>
@@ -383,23 +386,23 @@ Let \(Y\) have support \(\{0,1,2\}\) and PMF
 3. \(E[Y]=0(0.2)+1(0.5)+2(0.3)=1.1\), and
    \(E[Y^2]=0^2(0.2)+1^2(0.5)+2^2(0.3)=1.7\).
 4. Because \(0\le0.4<1\),
-   \(F_X(0.4)=P(X=0)=323/706\approx0.458\).
-5. \(P(3<S\le6)=F_S(6)-F_S(3)=335/706\approx0.475\).
+   \(F_X(0.4)=P(X=0)=559/1441\approx0.388\).
+5. \(P(3<S\le6)=F_S(6)-F_S(3)=335/1441\approx0.232\).
 
 </details>
 
 ### Worked exam interpretation
 
-**Question.** R reports `mean(deal_on_show) = 0.542`. Explain this
+**Question.** R reports `mean(deal_on_show) = 0.612`. Explain this
 number as both a sample mean and an empirical expectation.
 
 <details>
 <summary>Check a model answer</summary>
 
 Because the indicator equals 1 for an on-air agreement, its sample mean is the
-observed deal proportion: 54.2% of the 706 records. If the empirical
-distribution assigns mass \(1/706\) to each record, its expectation is the same
-weighted average, 0.542. This does not show later venture success or guarantee
+observed deal proportion: 61.2% of the 1,441 records. If the empirical
+distribution assigns mass \(1/1441\) to each record, its expectation is the same
+weighted average, 0.612. This does not show later venture success or guarantee
 the probability for a future pitch.
 
 </details>

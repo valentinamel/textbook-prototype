@@ -21,6 +21,9 @@ bias;</li>
 
 Allow about 30 minutes for this preparation.
 
+If percentages, units, or graph axes are unfamiliar, review
+[Mathematics Refresher: numbers, percentages, and graphs](#math-refresher).
+
 1. Read [How to use this book](#how-to-use-this-book) and locate the sections
    called **Before class**, **In class**, and **After class**.
 2. Open RStudio through an R project. Create a new script and save it before
@@ -39,7 +42,7 @@ dim(sharks)
 ```
 
 ```
-## [1] 706   5
+## [1] 1441   19
 ```
 
 ``` r
@@ -47,19 +50,37 @@ names(sharks)
 ```
 
 ```
-## [1] "pitch_id"          "deal_on_show"      "season"           
-## [4] "episode"           "description_words"
+##  [1] "pitch_id"                "startup_name"           
+##  [3] "season"                  "episode"                
+##  [5] "industry"                "business_description"   
+##  [7] "description_words"       "pitcher_gender_group"   
+##  [9] "women_represented"       "multiple_entrepreneurs" 
+## [11] "pitcher_state"           "ask_amount_usd"         
+## [13] "equity_offered_pct"      "requested_valuation_usd"
+## [15] "deal_on_show"            "deal_amount_usd"        
+## [17] "deal_equity_pct"         "deal_valuation_usd"     
+## [19] "number_sharks_in_deal"
 ```
 
 ``` r
-head(sharks, 3)
+head(
+  sharks[c(
+    "pitch_id", "startup_name", "season", "industry",
+    "pitcher_gender_group", "deal_on_show"
+  )],
+  3
+)
 ```
 
 ```
-##   pitch_id deal_on_show season episode description_words
-## 1        1            1      8      26                58
-## 2        2            0      8      26                31
-## 3        3            0      8      26                71
+##   pitch_id      startup_name season          industry pitcher_gender_group
+## 1        1    AvaTheElephant      1   Health/Wellness            all_women
+## 2        2 MrTod'sPieFactory      1 Food and Beverage              all_men
+## 3        3           Wispots      1 Business Services              all_men
+##   deal_on_show
+## 1            1
+## 2            1
+## 3            0
 ```
 
 Write one sentence answering: **What do you think one row in the dataset represents?** It is
@@ -68,7 +89,7 @@ fine if your answer changes during the lecture.
 <details>
 <summary>Check your answer</summary>
 
-One row represents one recorded televised pitch from Seasons 1--8 of
+One row represents one recorded televised pitch from Seasons 1--16 of
 *Shark Tank US*.
 
 </details>
@@ -240,19 +261,32 @@ negotiate, and may announce a deal during the episode.
 The recorded outcome is an **on-air agreement**. It does not establish that an
 investment was completed or that the venture later succeeded.
 
-The teaching file contains 706 televised pitches from Seasons 1--8 and five
-variables:
+The teaching file contains 1,441 televised pitches from completed Seasons
+1--16 and 19 variables. The table below introduces the variables used most
+often in this course.
 
 | Variable | Meaning | Type |
 |---|---|---|
 | `pitch_id` | row identifier | identifier |
+| `startup_name` | venture or product name | categorical label |
 | `deal_on_show` | 1 for an on-air agreement; 0 otherwise | binary categorical, stored as 0/1 |
-| `season` | television season, 1-8 | ordered discrete/time index |
+| `season` | television season, 1-16 | ordered discrete/time index |
 | `episode` | episode number within season | discrete identifier within season |
+| `industry` | source industry category | categorical |
 | `description_words` | words in the written dataset description | discrete quantitative count |
+| `pitcher_gender_group` | `all_women`, `all_men`, `mixed`, or `unknown`, based on the source classification | categorical |
+| `women_represented` | 1 for `all_women` or `mixed`; 0 for `all_men`; missing for `unknown` | binary categorical, stored as 0/1 |
+| `multiple_entrepreneurs` | source indicator for more than one entrepreneur | binary categorical, with missing values |
+| `ask_amount_usd` | amount requested | quantitative, USD |
+| `equity_offered_pct` | ownership percentage initially offered | quantitative, percentage points |
+| `requested_valuation_usd` | valuation implied by the initial ask | quantitative, USD |
+| `deal_amount_usd`, `deal_equity_pct`, `deal_valuation_usd` | recorded deal terms | quantitative; structurally missing without a deal |
 
-The table records selected features of each pitch. It does not measure the
-spoken pitch, completed investment, or later venture performance.
+Gender describes the people presenting the pitch, not necessarily every founder
+or employee. `women_represented` is not the share of women: the source does not
+report the presenter counts needed to calculate that share for mixed teams.
+Names were not used to infer gender. The file does not measure the spoken pitch,
+completed investment, or later venture performance.
 
 #### Inspect and validate
 
@@ -262,7 +296,7 @@ dim(sharks)
 ```
 
 ```
-## [1] 706   5
+## [1] 1441   19
 ```
 
 ``` r
@@ -270,8 +304,16 @@ names(sharks)
 ```
 
 ```
-## [1] "pitch_id"          "deal_on_show"      "season"           
-## [4] "episode"           "description_words"
+##  [1] "pitch_id"                "startup_name"           
+##  [3] "season"                  "episode"                
+##  [5] "industry"                "business_description"   
+##  [7] "description_words"       "pitcher_gender_group"   
+##  [9] "women_represented"       "multiple_entrepreneurs" 
+## [11] "pitcher_state"           "ask_amount_usd"         
+## [13] "equity_offered_pct"      "requested_valuation_usd"
+## [15] "deal_on_show"            "deal_amount_usd"        
+## [17] "deal_equity_pct"         "deal_valuation_usd"     
+## [19] "number_sharks_in_deal"
 ```
 
 ``` r
@@ -279,11 +321,31 @@ head(sharks, 4)
 ```
 
 ```
-##   pitch_id deal_on_show season episode description_words
-## 1        1            1      8      26                58
-## 2        2            0      8      26                31
-## 3        3            0      8      26                71
-## 4        4            1      8      26                37
+##   pitch_id             startup_name season episode          industry
+## 1        1           AvaTheElephant      1       1   Health/Wellness
+## 2        2        MrTod'sPieFactory      1       1 Food and Beverage
+## 3        3                  Wispots      1       1 Business Services
+## 4        4 CollegeFoxesPackingBoxes      1       1    Lifestyle/Home
+##                              business_description description_words
+## 1          Ava The Elephant - Baby and Child Care                 8
+## 2          Mr. Tod's Pie Factory - Specialty Food                 7
+## 3                     Wispots - Consumer Services                 4
+## 4 College Foxes Packing Boxes - Consumer Services                 7
+##   pitcher_gender_group women_represented multiple_entrepreneurs pitcher_state
+## 1            all_women                 1                      0            GA
+## 2              all_men                 0                      0            NJ
+## 3              all_men                 0                      0            NC
+## 4              all_men                 0                      0            FL
+##   ask_amount_usd equity_offered_pct requested_valuation_usd deal_on_show
+## 1          50000                 15                  333333            1
+## 2         460000                 10                 4600000            1
+## 3        1200000                 10                12000000            0
+## 4         250000                 25                 1000000            0
+##   deal_amount_usd deal_equity_pct deal_valuation_usd number_sharks_in_deal
+## 1           50000              55              90909                     1
+## 2          460000              50             920000                     2
+## 3              NA              NA                 NA                    NA
+## 4              NA              NA                 NA                    NA
 ```
 
 ``` r
@@ -291,24 +353,51 @@ str(sharks)
 ```
 
 ```
-## 'data.frame':	706 obs. of  5 variables:
-##  $ pitch_id         : int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ deal_on_show     : int  1 0 0 1 1 1 1 1 0 1 ...
-##  $ season           : int  8 8 8 8 8 8 8 8 8 8 ...
-##  $ episode          : int  26 26 26 26 24 24 24 24 23 23 ...
-##  $ description_words: int  58 31 71 37 43 34 40 35 14 52 ...
+## 'data.frame':	1441 obs. of  19 variables:
+##  $ pitch_id               : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ startup_name           : chr  "AvaTheElephant" "MrTod'sPieFactory" "Wispots" "CollegeFoxesPackingBoxes" ...
+##  $ season                 : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ episode                : int  1 1 1 1 1 2 2 2 2 2 ...
+##  $ industry               : chr  "Health/Wellness" "Food and Beverage" "Business Services" "Lifestyle/Home" ...
+##  $ business_description   : chr  "Ava The Elephant - Baby and Child Care" "Mr. Tod's Pie Factory - Specialty Food" "Wispots - Consumer Services" "College Foxes Packing Boxes - Consumer Services" ...
+##  $ description_words      : int  8 7 4 7 4 6 4 3 7 6 ...
+##  $ pitcher_gender_group   : chr  "all_women" "all_men" "all_men" "all_men" ...
+##  $ women_represented      : int  1 0 0 0 0 1 0 0 0 1 ...
+##  $ multiple_entrepreneurs : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ pitcher_state          : chr  "GA" "NJ" "NC" "FL" ...
+##  $ ask_amount_usd         : num  50000 460000 1200000 250000 1000000 500000 250000 500000 200000 100000 ...
+##  $ equity_offered_pct     : num  15 10 10 25 15 15 10 10 20 20 ...
+##  $ requested_valuation_usd: num  333333 4600000 12000000 1000000 6666667 ...
+##  $ deal_on_show           : int  1 1 0 0 0 1 1 0 0 0 ...
+##  $ deal_amount_usd        : num  50000 460000 NA NA NA 500000 250000 NA NA NA ...
+##  $ deal_equity_pct        : num  55 50 NA NA NA 50 100 NA NA NA ...
+##  $ deal_valuation_usd     : num  90909 920000 NA NA NA ...
+##  $ number_sharks_in_deal  : int  1 2 NA NA NA 2 5 NA NA NA ...
 ```
 
-There are 706 rows and 5 columns. One row represents
+There are 1441 rows and 19 columns. One row represents
 one recorded televised pitch.
 
 
 ``` r
-sum(is.na(sharks))
+colSums(is.na(sharks))
 ```
 
 ```
-## [1] 0
+##                pitch_id            startup_name                  season 
+##                       0                       0                       0 
+##                 episode                industry    business_description 
+##                       0                       0                       0 
+##       description_words    pitcher_gender_group       women_represented 
+##                       0                       0                       7 
+##  multiple_entrepreneurs           pitcher_state          ask_amount_usd 
+##                     427                       0                       0 
+##      equity_offered_pct requested_valuation_usd            deal_on_show 
+##                       0                       0                       0 
+##         deal_amount_usd         deal_equity_pct      deal_valuation_usd 
+##                     559                     559                     559 
+##   number_sharks_in_deal 
+##                     559
 ```
 
 ``` r
@@ -324,7 +413,7 @@ range(sharks$season)
 ```
 
 ```
-## [1] 1 8
+## [1]  1 16
 ```
 
 ``` r
@@ -340,14 +429,35 @@ range(sharks$description_words)
 ```
 
 ```
-## [1]   2 159
+## [1]  1 13
 ```
 
-The teaching variables contain no missing values. Deal status contains only 0
-and 1; seasons run from 1 to 8; and written descriptions contain from
-2 to 159 words.
-These checks establish internal plausibility. They cannot establish that the
-source captured every pitch or measured every concept well.
+``` r
+table(sharks$pitcher_gender_group, useNA = "ifany")
+```
+
+```
+## 
+##   all_men all_women     mixed   unknown 
+##       773       385       276         7
+```
+
+``` r
+anyDuplicated(sharks$pitch_id)
+```
+
+```
+## [1] 0
+```
+
+Pitch identifiers are unique, deal status contains only 0 and 1, and seasons
+run from 1 to 16. Written descriptions contain from
+1 to 13 words.
+Missing deal terms are expected for pitches without a deal; seven records have
+an unknown source gender classification, and the source does not report
+`multiple_entrepreneurs` consistently. Missing does not mean zero. These checks
+establish internal plausibility, not that the source captured every pitch or
+measured every concept well.
 
 #### Summarise in context
 
@@ -366,14 +476,14 @@ c(
 
 ```
 ##       on_air_deals   recorded_pitches recorded_deal_rate 
-##        383.0000000        706.0000000          0.5424929
+##        882.0000000       1441.0000000          0.6120749
 ```
 
 Because a 0/1 variable has mean equal to its proportion of 1s,
-`mean(deal_on_show)` is 54.2%. A defensible sentence is:
+`mean(deal_on_show)` is 61.2%. A defensible sentence is:
 
-> In this dataset, 383 of 706 recorded pitches
-> (54.2%) reached an on-air agreement.
+> In this dataset, 882 of 1441 recorded pitches
+> (61.2%) reached an on-air agreement.
 
 This sentence names the dataset and outcome. It does not claim that a randomly
 selected entrepreneur has the same chance of completed investment.
@@ -382,10 +492,10 @@ selected entrepreneur has the same chance of completed investment.
 
 <img src="B01-question-to-evidence_files/figure-html/b01-histogram-1.png" width="672" style="display: block; margin: auto;" />
 
-Each bar counts descriptions within a word-count interval. The long right tail
-means a small number of descriptions are much longer than most. Changing the
-interval width can reveal or conceal patterns, so a histogram is an analytical
-choice rather than decoration.
+Each bar counts pitches within an offered-equity interval. Most initial offers
+are below 20%, while a small number are much larger. Changing the interval width
+can reveal or conceal patterns, so a histogram is an analytical choice rather
+than decoration.
 
 #### Compare raw observations and group means
 
@@ -397,10 +507,10 @@ us that a group mean will not describe every pitch.
 
 <img src="B01-question-to-evidence_files/figure-html/b01-season-means-1.png" width="672" style="display: block; margin: auto;" />
 
-Mean written-description length is generally higher in Seasons 6--8 than in
-Seasons 1--5 for both deal groups. This does not show that entrepreneurs learned
-to make longer pitches: the variable describes dataset text, not the spoken
-pitch.
+Mean initially offered equity is lower in later seasons for both deal groups.
+The graph describes selected televised pitches; it does not establish why the
+offers changed or what would happen if an entrepreneur changed only the offered
+equity.
 
 A clear graph matches the variable types, labels its axes and groups, and makes
 the claim inspectable. Colour is reinforced here by point shape and line type,
@@ -422,8 +532,8 @@ graph without relying on commands run earlier at the Console.
 <details>
 <summary>Check the result</summary>
 
-A successful clean run reports 706 rows and five variables, a recorded on-air
-deal rate of 383/706 (54.2%), the stated ranges, and recreates the graph without
+A successful clean run reports 1,441 rows and 19 variables, a recorded on-air
+deal rate of 882/1,441 (61.2%), the stated ranges, and recreates the graph without
 an “object not found” error.
 
 </details>
@@ -435,21 +545,24 @@ Answer without reopening the chapter, then check your answers.
 1. What does one row represent, and which population can it describe directly?
 2. Why is `pitch_id` an identifier rather than a quantitative measurement?
 3. What is the difference between sampling variability and selection bias?
-4. What exactly does `description_words` measure?
-5. Why can the group-mean graph not establish that longer pitches cause deals?
+4. What exactly does `equity_offered_pct` measure?
+5. Why can the group-mean graph not establish that offering less equity causes
+   a deal?
 
 <details>
 <summary>Check your answers</summary>
 
 1. One row is one recorded televised pitch; the file directly describes these
-   706 records.
+   1,441 records from completed Seasons 1--16.
 2. `pitch_id` labels a record. Arithmetic differences between its values have
    no substantive meaning.
 3. Sampling variability is chance variation across random samples; selection
    bias is systematic distortion from how units enter the sample.
-4. `description_words` counts words in the written dataset description.
+4. `equity_offered_pct` records the percentage ownership initially offered in
+   exchange for the requested amount; it is not necessarily the final deal
+   equity.
 5. The graph compares observational group means and does not isolate a causal
-   effect. It also does not measure spoken pitch length.
+   effect. Other pitch characteristics and selection into seasons may differ.
 
 </details>
 
@@ -466,11 +579,11 @@ Write four sentences about either Shark Tank graph:
 <summary>Check a model answer</summary>
 
 Each point in the raw-data graph represents one recorded pitch, with season on
-the horizontal axis and written-description word count on the vertical axis.
-Word counts vary widely within every season and tend to be higher in later
-seasons. This is evidence of an association between season and the recorded
-description length. It does not show that spoken pitches became longer; the
-dataset documentation process may have changed.
+the horizontal axis and initially offered equity on the vertical axis. Offers
+vary within every season and are generally lower in later seasons. This is
+evidence of an association between season and the recorded initial offer. It
+does not show why offers changed or identify the causal effect of changing an
+offer.
 
 </details>
 
@@ -479,9 +592,11 @@ dataset documentation process may have changed.
 Answer these questions without running R:
 
 1. Why is `amount_at_risk` discrete rather than continuous?
-2. Which graph would you use first for `description_words` alone?
+2. Which graph would you use first for `equity_offered_pct` alone?
 3. Which graph would you use for risk willingness and founder probability?
 4. Why should `pitch_id` not be averaged?
+5. Why is `pitcher_gender_group` categorical, and why is
+   `women_represented` not a share?
 
 <details>
 <summary>Check your answers</summary>
@@ -491,6 +606,10 @@ Answer these questions without running R:
 3. A scatterplot shows how two quantitative variables vary together.
 4. `pitch_id` is a label. Its numerical magnitude and mean have no substantive
    interpretation.
+5. The gender-group values are labels rather than numerical magnitudes.
+   `women_represented` records whether the source category includes women; a
+   mixed team may contain different numbers of women, so the indicator is not a
+   team share.
 
 </details>
 
@@ -498,8 +617,8 @@ Answer these questions without running R:
 
 An AI assistant writes:
 
-> "The dataset contains 706 successful companies and proves that longer
-> pitches make investors fund startups."
+> "The dataset contains 1,441 successful companies and proves that offering
+> less equity makes investors fund startups."
 
 Use **Attempt -> Ask -> Verify -> Explain** to correct it. Your final response
 must use the observed count or percentage, name the measured outcome, and state
@@ -508,11 +627,11 @@ why the causal claim is unsupported.
 <details>
 <summary>Check a model correction after writing your own</summary>
 
-The file contains 706 recorded televised pitches, of which 383 reached an
+The file contains 1,441 recorded televised pitches, of which 882 reached an
 on-air agreement. It does not measure completed investment or later company
-success. `description_words` counts words in a written dataset description,
-not the spoken pitch, and the observational records do not establish that
-changing description length would cause an investor decision.
+success. `equity_offered_pct` records the initial ownership percentage offered,
+not a randomly assigned treatment, and the observational records do not
+establish that changing only this offer would cause an investor decision.
 
 </details>
 

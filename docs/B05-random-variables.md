@@ -29,6 +29,9 @@ averages, and how correlation standardises covariance. All links are also
 listed in the <a href="videos.html#videos">External Video Guide</a>.
 </div>
 
+If ordered pairs, products, or standardisation are unfamiliar, review
+[Mathematics Refresher: products, indices, and z-scores](#math-refresher).
+
 In the uniform record-selection experiment, one realised outcome \(\omega\) is
 a complete pitch record. Define:
 
@@ -41,8 +44,8 @@ X(\omega)=
 \qquad
 Y(\omega)=
 \begin{cases}
-1,&\text{Season 5-8},\\
-0,&\text{Season 1-4}.
+1,&\text{Season 9--16},\\
+0,&\text{Season 1--8}.
 \end{cases}
 \]
 
@@ -85,8 +88,8 @@ joint_counts
 ```
 ##     Late_period
 ## Deal   0   1
-##    0 135 188
-##    1 127 256
+##    0 330 229
+##    1 377 505
 ```
 
 ``` r
@@ -96,8 +99,8 @@ round(joint_pmf, 3)
 ```
 ##     Late_period
 ## Deal     0     1
-##    0 0.191 0.266
-##    1 0.180 0.363
+##    0 0.229 0.159
+##    1 0.262 0.350
 ```
 
 ``` r
@@ -125,7 +128,7 @@ rowSums(joint_pmf)
 
 ```
 ##         0         1 
-## 0.4575071 0.5424929
+## 0.3879251 0.6120749
 ```
 
 ``` r
@@ -134,7 +137,7 @@ colSums(joint_pmf)
 
 ```
 ##         0         1 
-## 0.3711048 0.6288952
+## 0.4906315 0.5093685
 ```
 
 #### Recovering conditional PMFs
@@ -150,7 +153,7 @@ p_{X\mid Y}(x\mid y)=
 \]
 
 The probability \(p_{X\mid Y}(1\mid1)\) is the late-season deal proportion
-\(P(X=1\mid Y=1)=256/444\).
+\(P(X=1\mid Y=1)=505/734\).
 
 
 ``` r
@@ -160,8 +163,8 @@ round(prop.table(joint_counts, margin = 2), 3)
 ```
 ##     Late_period
 ## Deal     0     1
-##    0 0.515 0.423
-##    1 0.485 0.577
+##    0 0.467 0.312
+##    1 0.533 0.688
 ```
 
 The columns each sum to 1 because each column is a conditional PMF of \(X\)
@@ -197,7 +200,7 @@ c(observed_joint_11 = observed_joint_11,
 
 ```
 ##    observed_joint_11 independent_joint_11 
-##            0.3626062            0.3411712
+##            0.3504511            0.3117717
 ```
 
 The mismatch in the \((1,1)\) cell already shows that the empirical variables
@@ -251,9 +254,9 @@ c(
 
 ```
 ##                     E_X                     E_Y                    E_XY 
-##              0.54249292              0.62889518              0.36260623 
+##              0.61207495              0.50936849              0.35045108 
 ## covariance_from_moments 
-##              0.02143505
+##              0.03867938
 ```
 
 Covariance has product units. If \(X\) is measured in dollars and \(Y\) in
@@ -300,7 +303,7 @@ c(from_definition = rho_xy,
 
 ```
 ## from_definition          from_R 
-##      0.08906172      0.08906172
+##        0.158785        0.158785
 ```
 
 A correlation near zero can coexist with a strong curved relationship.
@@ -330,26 +333,26 @@ used to estimate population quantities \(\operatorname{Cov}(X,Y)\) and
 For two quantitative variables, begin with a scatterplot. Treating season as an
 equally spaced time index:
 
-<img src="B05-random-variables_files/figure-html/b05-season-words-plot-1.png" width="672" />
+<img src="B05-random-variables_files/figure-html/b05-season-equity-plot-1.png" width="672" />
 
 
 ``` r
 c(
-  season_with_description_words =
-    cor(sharks$season, sharks$description_words),
-  description_words_with_deal =
-    cor(sharks$description_words, sharks$deal_on_show)
+  season_with_equity_offered =
+    cor(sharks$season, sharks$equity_offered_pct),
+  equity_offered_with_deal =
+    cor(sharks$equity_offered_pct, sharks$deal_on_show)
 )
 ```
 
 ```
-## season_with_description_words   description_words_with_deal 
-##                     0.4270369                     0.1402766
+## season_with_equity_offered   equity_offered_with_deal 
+##                 -0.4157650                 -0.1128703
 ```
 
-Season and word count have a moderate positive linear association
-(\(r\approx0.43\)). Description length and the 0/1 deal indicator have a weak
-positive association (\(r\approx0.14\)). With a binary variable, ordinary
+Season and initially offered equity have a moderate negative linear association
+(\(r\approx-0.42\)). Offered equity and the 0/1 deal indicator have a weak
+negative association (\(r\approx-0.11\)). With a binary variable, ordinary
 Pearson correlation is also called point-biserial correlation.
 
 #### Why the association may mislead
@@ -357,12 +360,12 @@ Pearson correlation is also called point-biserial correlation.
 Three patterns coexist:
 
 1. later seasons have higher recorded deal proportions;
-2. later seasons have longer written descriptions;
-3. deal records have longer written descriptions on average.
+2. later seasons have lower initial equity offers;
+3. deal records have slightly lower initial equity offers on average.
 
-The marginal word-count/deal association may therefore partly reflect
-differences between seasons. The file does not document a causal intervention
-or make written-description length equivalent to spoken pitch length.
+The marginal offered-equity/deal association may therefore partly reflect
+differences between seasons. Offered equity was not randomly assigned, and the
+file does not document a causal intervention.
 Correlation alone does not establish causation, independence, or practical
 importance.
 
@@ -432,16 +435,16 @@ Consider this joint PMF:
 ### Worked exam interpretation
 
 **Question.** R reports
-`cor(sharks$season, sharks$description_words) = 0.427`.
+`cor(sharks$season, sharks$equity_offered_pct) = -0.416`.
 
 <details>
 <summary>Check a model answer</summary>
 
-Among the 706 records, season and written-description length
-have a moderate positive linear association: descriptions tend to be longer in
-later seasons. The coefficient is dimensionless and summarises linear
-co-movement. It does not show that time caused longer pitches: the variable
-measures dataset text, and the analysis does not identify a causal effect.
+Among the 1,441 records, season and initially offered equity have a moderate
+negative linear association: later-season pitches tend to offer a smaller
+ownership percentage initially. The coefficient is dimensionless and
+summarises linear co-movement. It does not show that the passage of time caused
+the change or identify the effect of changing an offer.
 
 </details>
 

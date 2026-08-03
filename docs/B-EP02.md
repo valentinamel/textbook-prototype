@@ -20,6 +20,9 @@
 Bring your after-class work from Lectures 4 and 5. Complete these statements
 without reopening the chapters:
 
+Review [Mathematics Refresher: fractions, products, and sums](#math-refresher)
+if needed.
+
 1. In \(P(A\mid B)\), the reference class is ...
 2. Variance averages ...
 3. Events \(A\) and \(B\) are independent when ...
@@ -50,10 +53,10 @@ class, verify the value, interpret it in context, and qualify the claim.
 
 
 ```
-##              Deal
-## Period        No on-air deal On-air deal
-##   Seasons 1-4            135         127
-##   Seasons 5-8            188         256
+##               Deal
+## Period         No on-air deal On-air deal
+##   Seasons 1-8             330         377
+##   Seasons 9-16            229         505
 ```
 
 1. Calculate and interpret \(P(D\mid L)\).
@@ -65,22 +68,22 @@ class, verify the value, interpret it in context, and qualify the claim.
 <details>
 <summary>Check your answer</summary>
 
-\(P(D\mid L)=256/444=0.577\): among late-season records, 57.7% reached an
-on-air deal. \(P(L\mid D)=256/383=0.668\): among deal records, 66.8% came from
+\(P(D\mid L)=505/734=0.688\): among late-season records, 68.8% reached an
+on-air deal. \(P(L\mid D)=505/882=0.573\): among deal records, 57.3% came from
 late seasons. The joint probability is
-\((256/444)(444/706)=256/706\).
+\((505/734)(734/1441)=505/1441\).
 
 \[
-P(D)=\frac{127}{262}\frac{262}{706}
-     +\frac{256}{444}\frac{444}{706}
-     =\frac{383}{706}.
+P(D)=\frac{377}{707}\frac{707}{1441}
+     +\frac{505}{734}\frac{734}{1441}
+     =\frac{882}{1441}.
 \]
 
 Bayes gives
 \[
 P(L\mid D)=\frac{P(D\mid L)P(L)}{P(D)}
-=\frac{(256/444)(444/706)}{383/706}
-=\frac{256}{383}.
+=\frac{(505/734)(734/1441)}{882/1441}
+=\frac{505}{882}.
 \]
 
 </details>
@@ -92,7 +95,7 @@ R reports:
 
 ```
 ##           P_D   P_D_given_L     P_D_and_L P_D_times_P_L 
-##     0.5424929     0.5765766     0.3626062     0.3411712
+##     0.6120749     0.6880109     0.3504511     0.3117717
 ```
 
 1. Use the conditional definition to assess empirical independence.
@@ -103,9 +106,9 @@ R reports:
 <details>
 <summary>Check your answer</summary>
 
-The deal probability is about 0.542 overall and 0.577 within late seasons, so
+The deal probability is about 0.612 overall and 0.688 within late seasons, so
 conditioning changes it. Likewise, the observed joint probability is about
-0.363 rather than the independent product of about 0.341. Thus the empirical
+0.350 rather than the independent product of about 0.312. Thus the empirical
 events are not independent. This is association in selected observational
 records; a time-linked cause is not isolated. Early and late are disjoint
 because they cannot occur together. Observing one makes the other impossible,
@@ -121,15 +124,15 @@ Let \(X\) be the 0/1 deal indicator and \(Y\) the 0/1 late-period indicator.
 ```
 ##    Y
 ## X           0         1
-##   0 0.1912181 0.2662890
-##   1 0.1798867 0.3626062
+##   0 0.2290076 0.1589174
+##   1 0.2616239 0.3504511
 ```
 
 ```
 ##         E_X         E_Y       Var_X       Var_Y        E_XY  covariance 
-##  0.54249292  0.62889518  0.24819435  0.23338603  0.36260623  0.02143505 
+##  0.61207495  0.50936849  0.23743921  0.24991223  0.35045108  0.03867938 
 ## correlation 
-##  0.08906172
+##  0.15878503
 ```
 
 1. Verify that the joint PMF sums to 1.
@@ -144,10 +147,10 @@ Let \(X\) be the 0/1 deal indicator and \(Y\) the 0/1 late-period indicator.
 <summary>Check your answer</summary>
 
 The four joint masses sum to 1. Summing across the two \(Y\) columns gives
-\(P(X=0)=323/706\) and \(P(X=1)=383/706\). Because \(X\) is binary,
+\(P(X=0)=559/1441\) and \(P(X=1)=882/1441\). Because \(X\) is binary,
 \(E[X^2]=E[X]\), so \(\operatorname{Var}(X)=E[X]-E[X]^2\). Here
-\(E[XY]=P(X=1,Y=1)=256/706\); subtracting
-\((383/706)(444/706)\) gives a positive covariance. Positive covariance means
+\(E[XY]=P(X=1,Y=1)=505/1441\); subtracting
+\((882/1441)(734/1441)\) gives a positive covariance. Positive covariance means
 the two 1-coded values co-occur slightly more than under the product of their
 marginal means. Correlation divides covariance by both SDs, making the result
 unitless. A zero correlation would not establish independence; correlation
@@ -165,8 +168,8 @@ does not establish causality or practical importance.
 
 
 ```
-##  early_deal_rate   late_deal_rate cor_season_words   cor_words_deal 
-##        0.4847328        0.5765766        0.4270369        0.1402766
+##   early_deal_rate    late_deal_rate cor_season_equity   cor_equity_deal 
+##         0.5332390         0.6880109        -0.4157650        -0.1128703
 ```
 
 Write no more than 120 words interpreting all four values. Include denominators,
@@ -175,13 +178,13 @@ direction and rough strength, measurement, and the causal boundary.
 <details>
 <summary>Check a model answer</summary>
 
-Among Seasons 1--4, 48.5% of records reached an on-air deal; among Seasons
-5--8, 57.7% did so. The 9.2-percentage-point difference is descriptive and does
-not identify a causal effect of season. Season and written-description length
-have a moderate positive linear association (\(r\approx0.43\)); description
-length and the deal indicator have a weak positive linear association
-(\(r\approx0.14\)). Word count measures dataset text, and the outcome is an
-on-air agreement rather than completed investment.
+Among Seasons 1--8, 53.3% of records reached an on-air deal; among Seasons
+9--16, 68.8% did so. The 15.5-percentage-point difference is descriptive and
+does not identify a causal effect of season. Season and initially offered
+equity have a moderate negative linear association (\(r\approx-0.42\)); offered
+equity and the deal indicator have a weak negative linear association
+(\(r\approx-0.11\)). Offered equity was not randomly assigned, and the outcome
+is an on-air agreement rather than completed investment.
 
 </details>
 

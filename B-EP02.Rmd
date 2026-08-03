@@ -5,7 +5,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
                       fig.width = 7, fig.height = 4.2)
 sharks <- read.csv("data/shark_tank_teaching.csv", stringsAsFactors = FALSE)
 D <- sharks$deal_on_show == 1
-L <- sharks$season >= 5
+L <- sharks$season >= 9
 ```
 
 <div class="outcomes">
@@ -25,6 +25,9 @@ L <- sharks$season >= 5
 
 Bring your after-class work from Lectures 4 and 5. Complete these statements
 without reopening the chapters:
+
+Review [Mathematics Refresher: fractions, products, and sums](#math-refresher)
+if needed.
 
 1. In \(P(A\mid B)\), the reference class is ...
 2. Variance averages ...
@@ -57,7 +60,7 @@ class, verify the value, interpret it in context, and qualify the claim.
 ```{r bep02-table, echo=FALSE}
 tab <- table(
   Period = factor(L, levels = c(FALSE, TRUE),
-                  labels = c("Seasons 1-4", "Seasons 5-8")),
+                  labels = c("Seasons 1-8", "Seasons 9-16")),
   Deal = factor(D, levels = c(FALSE, TRUE),
                 labels = c("No on-air deal", "On-air deal"))
 )
@@ -73,22 +76,22 @@ tab
 <details>
 <summary>Check your answer</summary>
 
-\(P(D\mid L)=256/444=0.577\): among late-season records, 57.7% reached an
-on-air deal. \(P(L\mid D)=256/383=0.668\): among deal records, 66.8% came from
+\(P(D\mid L)=505/734=0.688\): among late-season records, 68.8% reached an
+on-air deal. \(P(L\mid D)=505/882=0.573\): among deal records, 57.3% came from
 late seasons. The joint probability is
-\((256/444)(444/706)=256/706\).
+\((505/734)(734/1441)=505/1441\).
 
 \[
-P(D)=\frac{127}{262}\frac{262}{706}
-     +\frac{256}{444}\frac{444}{706}
-     =\frac{383}{706}.
+P(D)=\frac{377}{707}\frac{707}{1441}
+     +\frac{505}{734}\frac{734}{1441}
+     =\frac{882}{1441}.
 \]
 
 Bayes gives
 \[
 P(L\mid D)=\frac{P(D\mid L)P(L)}{P(D)}
-=\frac{(256/444)(444/706)}{383/706}
-=\frac{256}{383}.
+=\frac{(505/734)(734/1441)}{882/1441}
+=\frac{505}{882}.
 \]
 
 </details>
@@ -114,9 +117,9 @@ c(
 <details>
 <summary>Check your answer</summary>
 
-The deal probability is about 0.542 overall and 0.577 within late seasons, so
+The deal probability is about 0.612 overall and 0.688 within late seasons, so
 conditioning changes it. Likewise, the observed joint probability is about
-0.363 rather than the independent product of about 0.341. Thus the empirical
+0.350 rather than the independent product of about 0.312. Thus the empirical
 events are not independent. This is association in selected observational
 records; a time-linked cause is not isolated. Early and late are disjoint
 because they cannot occur together. Observing one makes the other impossible,
@@ -157,10 +160,10 @@ c(
 <summary>Check your answer</summary>
 
 The four joint masses sum to 1. Summing across the two \(Y\) columns gives
-\(P(X=0)=323/706\) and \(P(X=1)=383/706\). Because \(X\) is binary,
+\(P(X=0)=559/1441\) and \(P(X=1)=882/1441\). Because \(X\) is binary,
 \(E[X^2]=E[X]\), so \(\operatorname{Var}(X)=E[X]-E[X]^2\). Here
-\(E[XY]=P(X=1,Y=1)=256/706\); subtracting
-\((383/706)(444/706)\) gives a positive covariance. Positive covariance means
+\(E[XY]=P(X=1,Y=1)=505/1441\); subtracting
+\((882/1441)(734/1441)\) gives a positive covariance. Positive covariance means
 the two 1-coded values co-occur slightly more than under the product of their
 marginal means. Correlation divides covariance by both SDs, making the result
 unitless. A zero correlation would not establish independence; correlation
@@ -180,8 +183,8 @@ does not establish causality or practical importance.
 c(
   early_deal_rate = mean(D[!L]),
   late_deal_rate = mean(D[L]),
-  cor_season_words = cor(sharks$season, sharks$description_words),
-  cor_words_deal = cor(sharks$description_words, sharks$deal_on_show)
+  cor_season_equity = cor(sharks$season, sharks$equity_offered_pct),
+  cor_equity_deal = cor(sharks$equity_offered_pct, sharks$deal_on_show)
 )
 ```
 
@@ -191,13 +194,13 @@ direction and rough strength, measurement, and the causal boundary.
 <details>
 <summary>Check a model answer</summary>
 
-Among Seasons 1--4, 48.5% of records reached an on-air deal; among Seasons
-5--8, 57.7% did so. The 9.2-percentage-point difference is descriptive and does
-not identify a causal effect of season. Season and written-description length
-have a moderate positive linear association (\(r\approx0.43\)); description
-length and the deal indicator have a weak positive linear association
-(\(r\approx0.14\)). Word count measures dataset text, and the outcome is an
-on-air agreement rather than completed investment.
+Among Seasons 1--8, 53.3% of records reached an on-air deal; among Seasons
+9--16, 68.8% did so. The 15.5-percentage-point difference is descriptive and
+does not identify a causal effect of season. Season and initially offered
+equity have a moderate negative linear association (\(r\approx-0.42\)); offered
+equity and the deal indicator have a weak negative linear association
+(\(r\approx-0.11\)). Offered equity was not randomly assigned, and the outcome
+is an on-air agreement rather than completed investment.
 
 </details>
 

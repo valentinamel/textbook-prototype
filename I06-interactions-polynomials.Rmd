@@ -1,0 +1,311 @@
+# Lecture 6: Interactions and polynomial terms {#i06}
+
+```{r i06-setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.width = 7, fig.height = 4.5)
+sharks <- read.csv("data/shark_tank_teaching.csv", stringsAsFactors = FALSE)
+sharks$ask_100k <- sharks$ask_amount_usd / 100000
+linear_season <- lm(equity_offered_pct ~ season + ask_100k, data = sharks)
+poly_season <- lm(equity_offered_pct ~ season + I(season^2) + ask_100k,
+                  data = sharks)
+
+known_gender <- subset(sharks, pitcher_gender_group != "unknown")
+known_gender$women <- as.integer(
+  known_gender$pitcher_gender_group %in% c("all_women", "mixed")
+)
+known_gender$season_c <- known_gender$season - mean(known_gender$season)
+interaction_model <- lm(
+  equity_offered_pct ~ season_c * women + ask_100k,
+  data = known_gender
+)
+```
+
+<div class="outcomes">
+<span class="label">By the end of Lecture 6, you can</span>
+<ul>
+<li>explain an interaction as a slope that depends on another variable;</li>
+<li>interpret main effects in a model containing an interaction;</li>
+<li>use centering to make lower-order terms more meaningful;</li>
+<li>fit and interpret a quadratic term without reading its coefficients separately;</li>
+<li>apply the hierarchy principle and communicate conditional predictions graphically.</li>
+</ul>
+</div>
+
+::: {.course-phase .phase-before}
+
+## Before class
+
+<div class="video-prep">
+<span class="label">Video preparation</span><br>
+Watch Stanford Statistical Learning
+<a href="https://www.youtube.com/watch?v=dEBQmiXv9fk&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=13">3.5
+Extensions of the Linear Model</a> and
+<a href="https://www.youtube.com/watch?v=F-D3lZzYn50&list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e&index=48">7.1
+Polynomials and Step Functions</a>. Focus on why an interaction changes a
+slope and why a polynomial remains a linear regression model in its
+coefficients.
+</div>
+
+Review [Mathematics Refresher: products, powers, and centering](#math-refresher)
+if needed.
+
+In the model \(Y=\beta_0+\beta_1X+\beta_2D+\beta_3XD+\varepsilon\), write the
+line for \(D=0\) and for \(D=1\).
+
+<details>
+<summary>Check your preparation</summary>
+
+For \(D=0\), \(E[Y\mid X,D=0]=\beta_0+\beta_1X\). For \(D=1\),
+\(E[Y\mid X,D=1]=(\beta_0+\beta_2)+(\beta_1+\beta_3)X\).
+
+</details>
+
+:::
+
+::: {.course-phase .phase-in-class}
+
+## In class
+
+<p class="concept-video"><strong>Stanford explanations (review):</strong>
+<a href="https://www.youtube.com/watch?v=dEBQmiXv9fk">3.5 Extensions of the Linear Model</a> and
+<a href="https://www.youtube.com/watch?v=F-D3lZzYn50">7.1 Polynomials and Step Functions</a>.</p>
+
+### Interaction means “it depends”
+
+An additive model assumes the slope of \(X\) is the same at every value of
+\(Z\):
+
+\[
+E[Y\mid X,Z]=\beta_0+\beta_1X+\beta_2Z.
+\]
+
+Adding a product allows that slope to vary:
+
+\[
+E[Y\mid X,Z]
+=\beta_0+\beta_1X+\beta_2Z+\beta_3XZ.
+\]
+
+The change in the conditional mean for a one-unit increase in \(X\) is
+
+\[
+\beta_1+\beta_3Z.
+\]
+
+Thus \(\beta_3\) is a **difference in slopes**, not a standalone effect.
+Its units combine the variables. If \(X\) is measured in seasons and \(Z\) is
+an indicator, \(\beta_3\) is the difference in outcome units per season
+between the indicator groups.
+
+### A binary interaction
+
+For this example only, `women = 1` means the source classifies the presenting
+team as all-women or mixed; `women = 0` means all-men. It does not measure a
+share of women or the full venture team. Seven unknown records are excluded.
+
+Centre season at its sample mean:
+
+\[
+season\_c=season-\overline{season}.
+\]
+
+Then the lower-order `women` coefficient compares groups at the average season
+rather than at the unobserved Season 0.
+
+```{r i06-interaction-fit}
+summary(interaction_model)
+```
+
+For all-men teams (`women = 0`), the fitted season slope is about \(-0.799\)
+percentage points per season. For teams with women represented, it is
+
+\[
+-0.799+(-0.061)=-0.861.
+\]
+
+The interaction estimate is \(-0.061\), with p-value about 0.520. This model
+does not provide evidence that the season trend differs between these two
+broad source-defined groups. It also does not prove the slopes are identical.
+
+```{r i06-interaction-plot, echo=FALSE}
+season_grid <- 1:16
+ask_bar <- mean(known_gender$ask_100k)
+newdat <- expand.grid(season = season_grid, women = c(0, 1))
+newdat$season_c <- newdat$season - mean(known_gender$season)
+newdat$ask_100k <- ask_bar
+newdat$fit <- predict(interaction_model, newdata = newdat)
+
+plot(NA, xlim = c(1, 16), ylim = range(newdat$fit), bty = "n",
+     xlab = "Season", ylab = "Fitted initial equity offered (%)")
+lines(newdat$season[newdat$women == 0], newdat$fit[newdat$women == 0],
+      col = "#0072B2", lwd = 3, lty = 1)
+lines(newdat$season[newdat$women == 1], newdat$fit[newdat$women == 1],
+      col = "#D55E00", lwd = 3, lty = 2)
+points(c(1, 16), predict(interaction_model,
+       newdata = data.frame(
+         season_c = c(1, 16) - mean(known_gender$season),
+         women = c(0, 0), ask_100k = ask_bar)),
+       pch = 16, col = "#0072B2")
+points(c(1, 16), predict(interaction_model,
+       newdata = data.frame(
+         season_c = c(1, 16) - mean(known_gender$season),
+         women = c(1, 1), ask_100k = ask_bar)),
+       pch = 17, col = "#D55E00")
+legend("topright", c("All-men", "Women represented"),
+       col = c("#0072B2", "#D55E00"), lwd = 3, lty = c(1, 2),
+       pch = c(16, 17), bty = "n")
+```
+
+Graph the model because neither \(\beta_1\) nor \(\beta_2\) is an overall effect
+when an interaction is present.
+
+### The hierarchy principle
+
+If a model contains \(XZ\), ordinarily retain both \(X\) and \(Z\), even when
+one lower-order term is not individually significant. The lower-order terms
+define the lines whose difference the interaction describes.
+
+In R:
+
+```{r i06-interaction-formula, eval=FALSE}
+lm(y ~ x * z, data = df)  # expands to x + z + x:z
+```
+
+### Polynomial terms model curvature
+
+A quadratic conditional mean is
+
+\[
+E[Y\mid X=x]=\beta_0+\beta_1x+\beta_2x^2.
+\]
+
+It remains a linear regression model because it is linear in the unknown
+coefficients \(\beta_0,\beta_1,\beta_2\).
+
+The slope is not constant. A one-unit change from \(x\) to \(x+1\) changes the
+fitted mean by
+
+\[
+\beta_1+\beta_2(2x+1).
+\]
+
+Therefore do not interpret \(\beta_1\) as the overall slope while \(x^2\) is in
+the model. Compare fitted values or graph the curve.
+
+```{r i06-polynomial-fit}
+summary(poly_season)
+anova(linear_season, poly_season)
+```
+
+The partial F-test for adding `season^2` has p-value below 0.001 in the
+classical model. The fitted curvature is statistically detectable, but the
+gain in adjusted \(R^2\) and the substantive shape should also be assessed.
+
+```{r i06-polynomial-plot, echo=FALSE}
+season_means <- aggregate(equity_offered_pct ~ season, data = sharks, mean)
+curve_data <- data.frame(season = seq(1, 16, length.out = 200),
+                         ask_100k = mean(sharks$ask_100k))
+curve_data$fit <- predict(poly_season, newdata = curve_data)
+
+plot(season_means$season, season_means$equity_offered_pct,
+     pch = 21, bg = "#009E73", col = "#17324D", cex = 1.2,
+     bty = "n", xlab = "Season",
+     ylab = "Initial equity offered (%)",
+     ylim = range(c(season_means$equity_offered_pct, curve_data$fit)))
+lines(curve_data$season, curve_data$fit, col = "#D55E00", lwd = 3)
+```
+
+The points are raw season means; the curve holds requested amount at its sample
+mean. Do not extrapolate the quadratic beyond Seasons 1--16: polynomials can
+turn sharply outside the observed range.
+
+### Extensions do not replace assumptions
+
+Interactions and polynomials make the conditional mean more flexible. They do
+not solve dependence, selection, measurement error, heteroskedasticity, or
+unmeasured confounding. Choose terms from a substantive question, inspect the
+implied predictions, and report the relevant combined effects.
+
+:::
+
+::: {.course-phase .phase-after}
+
+## After class
+
+### Retrieval
+
+1. What does an interaction coefficient measure?
+2. Why centre a predictor before interacting it?
+3. State the hierarchy principle.
+4. Why is a quadratic model still a linear regression model?
+5. Why should a polynomial be graphed and not extrapolated casually?
+
+<details>
+<summary>Check your answers</summary>
+
+1. How one predictor's slope changes with the other predictor.
+2. To make lower-order terms refer to a meaningful reference value such as the
+   sample mean.
+3. Retain the component lower-order terms when including their interaction or
+   higher-order term.
+4. It is linear in the unknown coefficients, even though it is curved in \(x\).
+5. Component coefficients do not equal one constant slope, and polynomial
+   curves can behave unrealistically outside the data range.
+
+</details>
+
+### Practice
+
+1. In \(Y=10+2X+3D-0.5XD\), write both group lines and interpret the
+   interaction.
+2. Fit `season * women` with and without centering season. Verify that fitted
+   values and the interaction coefficient remain unchanged.
+3. Fit the linear and quadratic season models and compare adjusted \(R^2\).
+4. Calculate the fitted change from Season 5 to 6 in the quadratic model.
+5. Explain why the non-significant interaction is not evidence that source
+   gender composition never matters.
+6. State the units of the interaction coefficient in this model and interpret
+   its estimate without using causal language.
+
+<details>
+<summary>Check your answers</summary>
+
+1. For \(D=0\), the line is \(10+2X\). For \(D=1\), it is \(13+1.5X\).
+   The \(D=1\) slope is 0.5 units smaller.
+2. For example:
+
+   ```r
+   uncentered <- lm(equity_offered_pct ~ season * women + ask_100k,
+                    data = known_gender)
+   centered <- lm(equity_offered_pct ~ season_c * women + ask_100k,
+                  data = known_gender)
+   all.equal(fitted(uncentered), fitted(centered))
+   coef(uncentered)["season:women"]
+   coef(centered)["season_c:women"]
+   ```
+
+   The fitted values agree and both interaction estimates are about
+   \(-0.0615\). Centering changes the intercept and lower-order group
+   coefficient, not fitted values, the interaction estimate, or model fit.
+3. Extract with `summary(model)$adj.r.squared`; adjusted \(R^2\) is about
+   0.186 for the linear model and 0.196 for the quadratic model.
+4. With estimates \(\beta_1\approx-1.713\) and
+   \(\beta_2\approx0.0510\), the change is
+   \(\beta_1+\beta_2(2\cdot5+1)\approx-1.15\) percentage points.
+5. The test concerns one operationalisation, sample, model, and interaction;
+   limited precision or misspecification can remain, and the source category
+   is broad.
+6. The unit is equity percentage points per season as a difference between
+   groups. Holding requested amount fixed, the fitted seasonal slope for teams
+   with women represented is 0.0615 percentage points per season more negative
+   than for all-men teams; the two-sided test does not distinguish this
+   difference from zero at 5%.
+
+</details>
+
+Continue to [Tutorial 2: Multiple regression and extensions](#i-ep02).
+
+For a more formal treatment, see James et al., *An Introduction to Statistical
+Learning*, 2nd ed., Section 3.3.2 and Sections 3.6.4--3.6.6.
+
+:::

@@ -5,7 +5,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
                       fig.width = 7, fig.height = 4.5)
 sharks <- read.csv("data/shark_tank_teaching.csv", stringsAsFactors = FALSE)
 X <- sharks$deal_on_show
-Y <- as.integer(sharks$season >= 5)
+Y <- as.integer(sharks$season >= 9)
 ```
 
 <div class="outcomes">
@@ -35,6 +35,9 @@ averages, and how correlation standardises covariance. All links are also
 listed in the <a href="videos.html#videos">External Video Guide</a>.
 </div>
 
+If ordered pairs, products, or standardisation are unfamiliar, review
+[Mathematics Refresher: products, indices, and z-scores](#math-refresher).
+
 In the uniform record-selection experiment, one realised outcome \(\omega\) is
 a complete pitch record. Define:
 
@@ -47,8 +50,8 @@ X(\omega)=
 \qquad
 Y(\omega)=
 \begin{cases}
-1,&\text{Season 5-8},\\
-0,&\text{Season 1-4}.
+1,&\text{Season 9--16},\\
+0,&\text{Season 1--8}.
 \end{cases}
 \]
 
@@ -117,7 +120,7 @@ p_{X\mid Y}(x\mid y)=
 \]
 
 The probability \(p_{X\mid Y}(1\mid1)\) is the late-season deal proportion
-\(P(X=1\mid Y=1)=256/444\).
+\(P(X=1\mid Y=1)=505/734\).
 
 ```{r b05-conditional-pmf}
 round(prop.table(joint_counts, margin = 2), 3)
@@ -269,33 +272,42 @@ used to estimate population quantities \(\operatorname{Cov}(X,Y)\) and
 For two quantitative variables, begin with a scatterplot. Treating season as an
 equally spaced time index:
 
-```{r b05-season-words-plot, echo=FALSE}
+```{r b05-season-equity-plot, echo=FALSE}
+old_par <- par(no.readonly = TRUE)
+par(mar = c(4.7, 4.7, 1.3, 1), las = 1, family = "sans")
+
+season_values <- sort(unique(sharks$season))
 plot(
-  jitter(sharks$season, amount = 0.08),
-  sharks$description_words,
-  pch = 19,
-  col = rgb(46/255, 116/255, 181/255, 0.28),
+  jitter(sharks$season, amount = 0.14),
+  sharks$equity_offered_pct,
+  pch = 16,
+  col = grDevices::adjustcolor("#0072B2", alpha.f = 0.25),
+  xaxt = "n",
+  bty = "n",
   xlab = "Season",
-  ylab = "Words in the written dataset description"
+  ylab = "Equity initially offered (%)"
 )
+axis(1, at = c(seq(1, 15, by = 2), 16))
+abline(h = pretty(sharks$equity_offered_pct), col = "#EEF1F4", lwd = 1)
 abline(
-  lm(description_words ~ season, data = sharks),
-  col = "#604878", lwd = 3
+  lm(equity_offered_pct ~ season, data = sharks),
+  col = "#D55E00", lwd = 3
 )
+par(old_par)
 ```
 
 ```{r b05-observed-correlations}
 c(
-  season_with_description_words =
-    cor(sharks$season, sharks$description_words),
-  description_words_with_deal =
-    cor(sharks$description_words, sharks$deal_on_show)
+  season_with_equity_offered =
+    cor(sharks$season, sharks$equity_offered_pct),
+  equity_offered_with_deal =
+    cor(sharks$equity_offered_pct, sharks$deal_on_show)
 )
 ```
 
-Season and word count have a moderate positive linear association
-(\(r\approx0.43\)). Description length and the 0/1 deal indicator have a weak
-positive association (\(r\approx0.14\)). With a binary variable, ordinary
+Season and initially offered equity have a moderate negative linear association
+(\(r\approx-0.42\)). Offered equity and the 0/1 deal indicator have a weak
+negative association (\(r\approx-0.11\)). With a binary variable, ordinary
 Pearson correlation is also called point-biserial correlation.
 
 #### Why the association may mislead
@@ -303,12 +315,12 @@ Pearson correlation is also called point-biserial correlation.
 Three patterns coexist:
 
 1. later seasons have higher recorded deal proportions;
-2. later seasons have longer written descriptions;
-3. deal records have longer written descriptions on average.
+2. later seasons have lower initial equity offers;
+3. deal records have slightly lower initial equity offers on average.
 
-The marginal word-count/deal association may therefore partly reflect
-differences between seasons. The file does not document a causal intervention
-or make written-description length equivalent to spoken pitch length.
+The marginal offered-equity/deal association may therefore partly reflect
+differences between seasons. Offered equity was not randomly assigned, and the
+file does not document a causal intervention.
 Correlation alone does not establish causation, independence, or practical
 importance.
 
@@ -378,16 +390,16 @@ Consider this joint PMF:
 ### Worked exam interpretation
 
 **Question.** R reports
-`cor(sharks$season, sharks$description_words) = 0.427`.
+`cor(sharks$season, sharks$equity_offered_pct) = -0.416`.
 
 <details>
 <summary>Check a model answer</summary>
 
-Among the 706 records, season and written-description length
-have a moderate positive linear association: descriptions tend to be longer in
-later seasons. The coefficient is dimensionless and summarises linear
-co-movement. It does not show that time caused longer pitches: the variable
-measures dataset text, and the analysis does not identify a causal effect.
+Among the 1,441 records, season and initially offered equity have a moderate
+negative linear association: later-season pitches tend to offer a smaller
+ownership percentage initially. The coefficient is dimensionless and
+summarises linear co-movement. It does not show that the passage of time caused
+the change or identify the effect of changing an offer.
 
 </details>
 

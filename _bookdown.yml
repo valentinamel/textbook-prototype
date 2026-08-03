@@ -14,7 +14,23 @@ rmd_files:
   - B04-conditional-probability.Rmd
   - B05-random-variables.Rmd
   - B-EP02.Rmd
+  - B06-continuous-distributions.Rmd
+  - B07-samples-estimators.Rmd
+  - B08-sampling-distributions.Rmd
+  - B-EP03.Rmd
+  - B09-confidence-intervals.Rmd
+  - B10-hypothesis-testing.Rmd
+  - B-EP04.Rmd
   - course-intermediate.Rmd
+  - I01-simple-linear-regression.Rmd
+  - I02-regression-inference.Rmd
+  - I03-model-usefulness.Rmd
+  - I-EP01.Rmd
+  - I04-multiple-regression.Rmd
+  - I05-dummies-f-tests.Rmd
+  - I06-interactions-polynomials.Rmd
+  - I-EP02.Rmd
   - course-advanced.Rmd
   - r-refresher.Rmd
+  - math-refresher.Rmd
   - video-guide.Rmd

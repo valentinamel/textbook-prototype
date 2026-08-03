@@ -1,0 +1,278 @@
+# Lecture 8: Sampling distributions and the central limit theorem {#b08}
+
+
+
+<div class="outcomes">
+<span class="label">By the end of Lecture 8, you can</span>
+<ul>
+<li>distinguish a population distribution from a sampling distribution;</li>
+<li>derive the mean and variance of a sample mean;</li>
+<li>calculate and interpret a standard error;</li>
+<li>explain why estimating population spread leads to a t distribution with \(n-1\) degrees of freedom;</li>
+<li>apply the central limit theorem to means and proportions;</li>
+<li>explain how sample size changes precision.</li>
+</ul>
+</div>
+
+::: {.course-phase .phase-before}
+
+## Before class
+
+<div class="video-prep">
+<span class="label">Video preparation</span><br>
+Watch <a href="https://www.youtube.com/watch?v=Yh5bR7X3ch8">The Weak Law
+of Large Numbers</a> and <a href="https://www.youtube.com/watch?v=IrKUM3nNXJE">The
+Central Limit Theorem</a>. Focus on what converges as sample size grows and on
+which distribution becomes approximately normal.
+</div>
+
+If square roots, sums, degrees of freedom, or standardisation are not secure,
+review [Mathematics Refresher](#math-refresher).
+
+Classify each object:
+
+1. the distribution of equity offered across individual pitches;
+2. the distribution of \(\bar X\) across all possible samples of 40 pitches;
+3. the single mean calculated from one observed sample.
+
+<details>
+<summary>Check your preparation</summary>
+
+The first is a population distribution, the second is a sampling distribution,
+and the third is a realised estimate.
+
+</details>
+
+:::
+
+::: {.course-phase .phase-in-class}
+
+## In class
+
+<p class="concept-video"><strong>MIT explanations (review):</strong>
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-weak-law-of-large-numbers/">18.4 The Weak Law of Large Numbers</a> and
+<a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-central-limit-theorem/">19.2 The Central Limit Theorem</a>.</p>
+
+### A statistic has a distribution
+
+Imagine repeatedly drawing random samples of the same size and calculating the
+sample mean each time. The resulting distribution of possible values of
+\(\bar X\) is its **sampling distribution**. It describes uncertainty in an
+estimator, not variation among individual pitches.
+
+For independent, identically distributed variables
+\(X_1,\ldots,X_n\) with population mean \(\mu\) and variance \(\sigma^2\),
+
+\[
+E[\bar X]=\mu,
+\qquad
+\operatorname{Var}(\bar X)=\frac{\sigma^2}{n},
+\qquad
+\operatorname{SD}(\bar X)=\frac{\sigma}{\sqrt n}.
+\]
+
+The first equality says that \(\bar X\) is **unbiased** for \(\mu\). The third
+quantity is the standard deviation of the estimator across repeated samples.
+It is called its **standard error** when it is known or estimated from data.
+
+In practice \(\sigma\) is usually unknown, so we estimate it with the sample
+SD \(S\):
+
+\[
+\operatorname{SE}(\bar X)=\frac{S}{\sqrt n}.
+\]
+
+The population SD \(\sigma\) is a fixed parameter. The sample SD \(S\) changes
+from sample to sample. Substituting \(S\) therefore adds uncertainty that a
+normal reference curve does not fully represent in a small sample.
+
+### From the standard normal to the t distribution
+
+For independent observations from a normal population,
+
+\[
+T=\frac{\bar X-\mu}{S/\sqrt n}
+\sim t_{n-1}.
+\]
+
+The t distribution is symmetric around zero like the standard normal, but it
+has heavier tails. Its **degrees of freedom** determine how much additional
+tail area is needed:
+
+- few degrees of freedom mean that \(S\) is estimated imprecisely, so the
+  tails are heavier;
+- more degrees of freedom mean more information about spread;
+- as degrees of freedom increase, the t distribution approaches \(N(0,1)\).
+
+For a one-sample mean, \(df=n-1\) because estimating the sample mean uses one
+degree of freedom before the sample variance is calculated.
+
+<img src="B08-sampling-distributions_files/figure-html/b08-t-distributions-1.png" width="672" />
+
+The difference is most visible in the tails. This is why a 95% t critical
+value is larger than 1.96 when \(df\) is small.
+
+### Why averaging reduces variation
+
+For independent observations,
+
+\[
+\operatorname{Var}\!\left(\frac{X_1+\cdots+X_n}{n}\right)
+=\frac{1}{n^2}\sum_{i=1}^{n}\operatorname{Var}(X_i)
+=\frac{\sigma^2}{n}.
+\]
+
+Independent positive and negative deviations partly cancel in an average.
+Doubling \(n\) does not halve the SE: because of the square root, four times as
+many observations are needed to halve it.
+
+### The central limit theorem
+
+The central limit theorem (CLT) says that, under independent sampling with
+finite variance, the standardised sample mean
+
+\[
+Z=\frac{\bar X-\mu}{\sigma/\sqrt n}
+\]
+
+approaches a standard normal distribution as \(n\) grows. Equivalently,
+
+\[
+\bar X\ \dot\sim\ N\!\left(\mu,\frac{\sigma^2}{n}\right)
+\]
+
+for a sufficiently large sample. The dot above \(\sim\) signals an
+approximation.
+
+There is no universal rule that \(n=30\) is always enough. Strong skewness,
+extreme outliers, or dependence may require much more data. If the population
+itself is normal, the sample mean is normal for every \(n\).
+
+<img src="B08-sampling-distributions_files/figure-html/b08-clt-simulation-1.png" width="672" />
+
+The original pitch-level variable is strongly right-skewed. Its mean based on
+40 independent draws is nevertheless much more concentrated and closer to a
+normal shape than a mean based on 5 draws.
+
+### Sample proportions are sample means
+
+For a Bernoulli variable \(X\) with \(P(X=1)=p\),
+
+\[
+E[X]=p,
+\qquad
+\operatorname{Var}(X)=p(1-p).
+\]
+
+Therefore the sample proportion \(\widehat P=\bar X\) satisfies
+
+\[
+E[\widehat P]=p,
+\qquad
+\operatorname{SE}(\widehat P)
+=\sqrt{\frac{p(1-p)}{n}}.
+\]
+
+Its sampling distribution is approximately normal when the expected numbers
+of successes and failures are sufficiently large. This course uses
+\(np\ge10\) and \(n(1-p)\ge10\) as the working rule.
+
+### Law of large numbers and CLT answer different questions
+
+- The law of large numbers says \(\bar X\) becomes close to \(\mu\) as \(n\)
+  grows.
+- The CLT describes the approximate shape and scale of the sampling
+  distribution after standardisation.
+
+Neither result repairs selection bias or dependence. More observations reduce
+random sampling error; they do not automatically make the data representative.
+
+
+``` r
+c(
+  SE_mean_n_25 = sigma_equity / sqrt(25),
+  SE_mean_n_100 = sigma_equity / sqrt(100),
+  SE_deal_proportion_n_100 = sqrt(p_deal * (1 - p_deal) / 100)
+)
+```
+
+```
+##             SE_mean_n_25            SE_mean_n_100 SE_deal_proportion_n_100 
+##               1.68828494               0.84414247               0.04872773
+```
+
+Increasing the mean sample size from 25 to 100 halves its standard error.
+
+:::
+
+::: {.course-phase .phase-after}
+
+## After class
+
+### Retrieval
+
+1. What varies in a sampling distribution?
+2. Why is \(E[\bar X]=\mu\) called unbiasedness?
+3. What is the difference between an SD and an SE?
+4. Why does estimating \(\sigma\) lead to a t rather than normal reference
+   distribution?
+5. What does the CLT say becomes approximately normal?
+6. Why does a larger sample not remove selection bias?
+
+<details>
+<summary>Check your answers</summary>
+
+1. The statistic varies across possible repeated samples.
+2. Its long-run average equals the population parameter.
+3. An SD describes variation among observations; an SE describes variation of
+   an estimator across samples.
+4. Replacing \(\sigma\) with the sample SD \(S\) adds sampling uncertainty.
+   The t distribution represents that extra uncertainty.
+5. The standardised sample mean, and therefore approximately the sampling
+   distribution of the mean—not necessarily the original observations.
+6. Sample size reduces random error but does not change how units entered the
+   sampling frame or sample.
+
+</details>
+
+### Practice
+
+1. If \(\sigma=12\) and \(n=36\), find
+   \(E[\bar X]\), \(\operatorname{Var}(\bar X)\), and
+   \(\operatorname{SE}(\bar X)\).
+2. How large must \(n\) become to reduce an SE from 4 to 1?
+3. For \(p=0.30\) and \(n=100\), calculate
+   \(\operatorname{SE}(\widehat P)\) and check the success-failure condition.
+4. Explain why the normal approximation is more convincing in the right-hand
+   simulation panel.
+5. State one threat to the CLT-based approximation that a large \(n\) alone
+   does not solve.
+6. A one-sample mean is based on \(n=25\). State its degrees of freedom and
+   explain why the corresponding t critical value exceeds 1.96.
+
+<details>
+<summary>Check your answers</summary>
+
+1. \(E[\bar X]=\mu\),
+   \(\operatorname{Var}(\bar X)=12^2/36=4\), and
+   \(\operatorname{SE}(\bar X)=2\).
+2. The SE must fall by a factor of 4, so the sample size must increase by
+   \(4^2=16\).
+3. \(\sqrt{0.30(0.70)/100}\approx0.0458\). The expected counts are 30 and 70,
+   so both exceed 10.
+4. Averaging 40 observations reduces skewness and sampling variation more than
+   averaging 5 observations.
+5. Dependence or a non-representative sampling process.
+6. \(df=25-1=24\). The sample SD is estimated after the sample mean has used
+   one degree of freedom. The t distribution therefore has heavier tails than
+   the standard normal and needs a larger 95% critical value.
+
+</details>
+
+Continue to [Tutorial 3: Sampling and standard errors](#b-ep03).
+
+For a more formal explanation, consult
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapters 13 and 14.
+
+:::
