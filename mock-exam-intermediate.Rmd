@@ -58,6 +58,9 @@ question states otherwise, use a 5% significance level. Interpret every
 coefficient in the units and sample defined below; do not use causal language
 unless the design supports it.
 
+Use the [QM Intermediate Code Sheet](#intermediate-code-sheet) to review the R
+commands and corresponding formulas before attempting the exam.
+
 | Question | Topic | Points |
 |---|---|---:|
 | 1 | Simple regression and least squares | 20 |

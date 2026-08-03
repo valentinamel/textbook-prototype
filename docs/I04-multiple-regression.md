@@ -317,6 +317,8 @@ units.
 Continue to [Lecture 5: Dummy predictors and joint usefulness](#i05).
 
 For a more formal treatment, see James et al., *An Introduction to Statistical
-Learning*, 2nd ed., Sections 3.2 and 3.3.3.
+Learning*, 2nd ed., Sections 3.2 and 3.3.3, and
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapter 20.
 
 :::

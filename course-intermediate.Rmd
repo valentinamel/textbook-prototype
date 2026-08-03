@@ -41,12 +41,16 @@ are not required for the core sequence.
 | Lecture 5 | How do categories enter a model, and are terms jointly useful? |
 | Lecture 6 | When does a slope depend on another variable or change across \(x\)? |
 | Tutorial 2 | Can you build and defend a multiple-regression specification? |
+| Code sheet | Which R commands and formulas are required for the assessment? |
 | Mock exam | Can you integrate the complete course in a 100-point assessment? |
 
 External video explanations come from Stanford's
 [Statistical Learning series](https://www.youtube.com/playlist?list=PLoROMvodv4rOzrYsAxzQyHb8n_RWNuS1e).
 The supporting print text is James, Witten, Hastie, and Tibshirani,
 *An Introduction to Statistical Learning*, 2nd edition, especially Chapter 3.
+For a more formal treatment, consult
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+especially Chapters 19--22.
 Each lecture chapter contains the definitions, notation, examples, and
 practice required for this course.
 
@@ -58,5 +62,7 @@ during the TestVision assessment. If an R workflow has become rusty, return to
 the [R Refresher](#r-refresher) or the earlier
 [Programming for E&BI](https://walshc.github.io/ebi-prog/) textbook.
 
-After completing Tutorial 2, attempt the [QM Intermediate Mock
+Use the cumulative [QM Intermediate Code Sheet](#intermediate-code-sheet)
+throughout the tutorials and when preparing for the final exam. After
+completing Tutorial 2, attempt the [QM Intermediate Mock
 Exam](#intermediate-mock-exam) in R under timed conditions.

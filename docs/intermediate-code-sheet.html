@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>QM Intermediate Code Sheet | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</title>
+  <meta name="description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="QM Intermediate Code Sheet | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="QM Intermediate Code Sheet | Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”" />
+  
+  <meta name="twitter:description" content="An online textbook for the learning line Quantitative Methods within Entrepreneurship and Business Innovation Bachelor Program at Tilburg University." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="i-ep02.html"/>
+<link rel="next" href="intermediate-mock-exam.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="book-title"><a href="./">QM to Understand E&amp;BI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>I QM Basic</b></span></li>
+<li class="chapter" data-level="" data-path="basic-course.html"><a href="basic-course.html"><i class="fa fa-check"></i>QM Basic: Course overview</a></li>
+<li class="chapter" data-level="" data-path="b01.html"><a href="b01.html"><i class="fa fa-check"></i>Lecture 1: Introduction to Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="b02.html"><a href="b02.html"><i class="fa fa-check"></i>Lecture 2: Probability foundations and random variables</a></li>
+<li class="chapter" data-level="" data-path="b03.html"><a href="b03.html"><i class="fa fa-check"></i>Lecture 3: Discrete distributions and expectation</a></li>
+<li class="chapter" data-level="" data-path="b-ep01.html"><a href="b-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Evidence and probability foundations</a></li>
+<li class="chapter" data-level="" data-path="b04.html"><a href="b04.html"><i class="fa fa-check"></i>Lecture 4: Variance, conditioning, and belief updating</a></li>
+<li class="chapter" data-level="" data-path="b05.html"><a href="b05.html"><i class="fa fa-check"></i>Lecture 5: Joint random variables, covariance, and correlation</a></li>
+<li class="chapter" data-level="" data-path="b-ep02.html"><a href="b-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Conditioning and relationships</a></li>
+<li class="chapter" data-level="" data-path="b06.html"><a href="b06.html"><i class="fa fa-check"></i>Lecture 6: Continuous distributions and the normal model</a></li>
+<li class="chapter" data-level="" data-path="b07.html"><a href="b07.html"><i class="fa fa-check"></i>Lecture 7: Samples, parameters, and estimators</a></li>
+<li class="chapter" data-level="" data-path="b08.html"><a href="b08.html"><i class="fa fa-check"></i>Lecture 8: Sampling distributions and the central limit theorem</a></li>
+<li class="chapter" data-level="" data-path="b-ep03.html"><a href="b-ep03.html"><i class="fa fa-check"></i>Tutorial 3: Sampling and standard errors</a></li>
+<li class="chapter" data-level="" data-path="b09.html"><a href="b09.html"><i class="fa fa-check"></i>Lecture 9: Confidence intervals and tests against zero</a></li>
+<li class="chapter" data-level="" data-path="b10.html"><a href="b10.html"><i class="fa fa-check"></i>Lecture 10: Hypothesis testing, errors, and power</a></li>
+<li class="chapter" data-level="" data-path="b-ep04.html"><a href="b-ep04.html"><i class="fa fa-check"></i>Tutorial 4: Inference and tests against zero</a></li>
+<li class="chapter" data-level="" data-path="formula-sheet.html"><a href="formula-sheet.html"><i class="fa fa-check"></i>QM Basic Formula Sheet</a></li>
+<li class="chapter" data-level="" data-path="basic-mock-exam.html"><a href="basic-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Basic</a></li>
+<li class="part"><span><b>II QM Intermediate</b></span></li>
+<li class="chapter" data-level="" data-path="intermediate-course.html"><a href="intermediate-course.html"><i class="fa fa-check"></i>QM Intermediate: Course overview</a></li>
+<li class="chapter" data-level="" data-path="i01.html"><a href="i01.html"><i class="fa fa-check"></i>Lecture 1: Simple linear regression</a></li>
+<li class="chapter" data-level="" data-path="i02.html"><a href="i02.html"><i class="fa fa-check"></i>Lecture 2: Regression assumptions and coefficient inference</a></li>
+<li class="chapter" data-level="" data-path="i03.html"><a href="i03.html"><i class="fa fa-check"></i>Lecture 3: Model fit and overall usefulness</a></li>
+<li class="chapter" data-level="" data-path="i-ep01.html"><a href="i-ep01.html"><i class="fa fa-check"></i>Tutorial 1: Simple regression and model usefulness</a></li>
+<li class="chapter" data-level="" data-path="i04.html"><a href="i04.html"><i class="fa fa-check"></i>Lecture 4: Multiple linear regression and controls</a></li>
+<li class="chapter" data-level="" data-path="i05.html"><a href="i05.html"><i class="fa fa-check"></i>Lecture 5: Dummy predictors and joint usefulness</a></li>
+<li class="chapter" data-level="" data-path="i06.html"><a href="i06.html"><i class="fa fa-check"></i>Lecture 6: Interactions and polynomial terms</a></li>
+<li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Multiple regression and extensions</a></li>
+<li class="chapter" data-level="" data-path="intermediate-code-sheet.html"><a href="intermediate-code-sheet.html"><i class="fa fa-check"></i>QM Intermediate Code Sheet</a></li>
+<li class="chapter" data-level="" data-path="intermediate-mock-exam.html"><a href="intermediate-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Intermediate</a></li>
+<li class="part"><span><b>III QM Advanced</b></span></li>
+<li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>QM Advanced: Course overview</a></li>
+<li class="part"><span><b>IV Supplementary resources</b></span></li>
+<li class="chapter" data-level="" data-path="r-refresher.html"><a href="r-refresher.html"><i class="fa fa-check"></i>R Refresher</a></li>
+<li class="chapter" data-level="" data-path="math-refresher.html"><a href="math-refresher.html"><i class="fa fa-check"></i>Mathematics Refresher</a></li>
+<li class="chapter" data-level="" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i>External Video Guide</a></li>
+<li class="divider"></li>
+<li class="book-footer">Quantitative Methods learning line</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Online Textbook for the Learning Line “Quantitative Methods to Understand E&amp;BI”</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intermediate-code-sheet" class="section level1 hasAnchor">
+<h1>QM Intermediate Code Sheet<a href="intermediate-code-sheet.html#intermediate-code-sheet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This cumulative sheet collects the R commands and formulas used in QM
+Intermediate. Adapt the placeholder names—such as <code>y</code>, <code>x</code>, <code>group</code>, and
+<code>df</code>—to the variables and dataset defined in the exam question.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Session</th>
+<th>Sections to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tutorial 1</td>
+<td>Workflow and Lectures 1–3</td>
+</tr>
+<tr class="even">
+<td>Tutorial 2</td>
+<td>Complete sheet, Lectures 1–6</td>
+</tr>
+<tr class="odd">
+<td>Final TestVision exam</td>
+<td>Complete sheet, Lectures 1–6</td>
+</tr>
+</tbody>
+</table>
+<p>The sheet supports syntax and calculation. You must still define the sample,
+check assumptions, interpret units and reference categories, and distinguish
+association from causation.</p>
+<div class="formula-sheet">
+<div id="workflow-and-data-checks" class="section level2 hasAnchor">
+<h2>Workflow and data checks<a href="intermediate-code-sheet.html#workflow-and-data-checks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="intermediate-code-sheet.html#cb196-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data.csv&quot;</span>)</span>
+<span id="cb196-2"><a href="intermediate-code-sheet.html#cb196-2" tabindex="-1"></a></span>
+<span id="cb196-3"><a href="intermediate-code-sheet.html#cb196-3" tabindex="-1"></a><span class="fu">dim</span>(df)</span>
+<span id="cb196-4"><a href="intermediate-code-sheet.html#cb196-4" tabindex="-1"></a><span class="fu">names</span>(df)</span>
+<span id="cb196-5"><a href="intermediate-code-sheet.html#cb196-5" tabindex="-1"></a><span class="fu">head</span>(df)</span>
+<span id="cb196-6"><a href="intermediate-code-sheet.html#cb196-6" tabindex="-1"></a><span class="fu">str</span>(df)</span>
+<span id="cb196-7"><a href="intermediate-code-sheet.html#cb196-7" tabindex="-1"></a><span class="fu">summary</span>(df)</span>
+<span id="cb196-8"><a href="intermediate-code-sheet.html#cb196-8" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(df))</span>
+<span id="cb196-9"><a href="intermediate-code-sheet.html#cb196-9" tabindex="-1"></a><span class="fu">table</span>(df<span class="sc">$</span>group, <span class="at">useNA =</span> <span class="st">&quot;ifany&quot;</span>)</span></code></pre></div>
+<p>Create variables explicitly and retain a common analysis sample when comparing
+models:</p>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="intermediate-code-sheet.html#cb197-1" tabindex="-1"></a>df<span class="sc">$</span>x_10k <span class="ot">&lt;-</span> df<span class="sc">$</span>x_euros <span class="sc">/</span> <span class="dv">10000</span></span>
+<span id="cb197-2"><a href="intermediate-code-sheet.html#cb197-2" tabindex="-1"></a>df<span class="sc">$</span>group <span class="ot">&lt;-</span> <span class="fu">factor</span>(df<span class="sc">$</span>group)</span>
+<span id="cb197-3"><a href="intermediate-code-sheet.html#cb197-3" tabindex="-1"></a>df<span class="sc">$</span>group <span class="ot">&lt;-</span> <span class="fu">relevel</span>(df<span class="sc">$</span>group, <span class="at">ref =</span> <span class="st">&quot;reference&quot;</span>)</span>
+<span id="cb197-4"><a href="intermediate-code-sheet.html#cb197-4" tabindex="-1"></a></span>
+<span id="cb197-5"><a href="intermediate-code-sheet.html#cb197-5" tabindex="-1"></a>needed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;x1&quot;</span>, <span class="st">&quot;x2&quot;</span>, <span class="st">&quot;group&quot;</span>)</span>
+<span id="cb197-6"><a href="intermediate-code-sheet.html#cb197-6" tabindex="-1"></a>analysis <span class="ot">&lt;-</span> df[<span class="fu">complete.cases</span>(df[needed]), ]</span></code></pre></div>
+<p>For every exam analysis:</p>
+<ol style="list-style-type: decimal">
+<li>identify the observational unit, outcome, predictors, units, and sample;</li>
+<li>inspect values and missingness;</li>
+<li>make a graph appropriate to the variables;</li>
+<li>fit and diagnose the model;</li>
+<li>report estimates, uncertainty, fit, and the relevant test;</li>
+<li>interpret in context and state sampling and causal limits.</li>
+</ol>
+</div>
+<div id="lecture-1-simple-linear-regression" class="section level2 hasAnchor">
+<h2>Lecture 1: Simple linear regression<a href="intermediate-code-sheet.html#lecture-1-simple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The population model and fitted line are</p>
+<p><span class="math display">\[
+Y_i=\beta_0+\beta_1X_i+\varepsilon_i,
+\qquad
+\widehat Y_i=b_0+b_1X_i.
+\]</span></p>
+<p>For simple OLS,</p>
+<p><span class="math display">\[
+b_1=
+\frac{\sum_i(X_i-\bar X)(Y_i-\bar Y)}
+{\sum_i(X_i-\bar X)^2}
+=\frac{s_{XY}}{s_X^2},
+\qquad
+b_0=\bar Y-b_1\bar X.
+\]</span></p>
+<p>The residual and least-squares criterion are</p>
+<p><span class="math display">\[
+e_i=Y_i-\widehat Y_i,
+\qquad
+\operatorname{SSE}=\sum_{i=1}^{n}e_i^2.
+\]</span></p>
+<p>Fit and inspect a simple regression:</p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="intermediate-code-sheet.html#cb198-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> df)</span>
+<span id="cb198-2"><a href="intermediate-code-sheet.html#cb198-2" tabindex="-1"></a><span class="fu">coef</span>(m)</span>
+<span id="cb198-3"><a href="intermediate-code-sheet.html#cb198-3" tabindex="-1"></a><span class="fu">summary</span>(m)</span>
+<span id="cb198-4"><a href="intermediate-code-sheet.html#cb198-4" tabindex="-1"></a></span>
+<span id="cb198-5"><a href="intermediate-code-sheet.html#cb198-5" tabindex="-1"></a><span class="fu">fitted</span>(m)</span>
+<span id="cb198-6"><a href="intermediate-code-sheet.html#cb198-6" tabindex="-1"></a><span class="fu">residuals</span>(m)</span></code></pre></div>
+<p>Plot the observations and fitted line:</p>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="intermediate-code-sheet.html#cb199-1" tabindex="-1"></a><span class="fu">plot</span>(y <span class="sc">~</span> x, <span class="at">data =</span> df,</span>
+<span id="cb199-2"><a href="intermediate-code-sheet.html#cb199-2" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Predictor (unit)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Outcome (unit)&quot;</span>)</span>
+<span id="cb199-3"><a href="intermediate-code-sheet.html#cb199-3" tabindex="-1"></a><span class="fu">abline</span>(m, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p>Calculate a fitted value or ask R for fitted conditional means:</p>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="intermediate-code-sheet.html#cb200-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">coef</span>(m)</span>
+<span id="cb200-2"><a href="intermediate-code-sheet.html#cb200-2" tabindex="-1"></a>b[<span class="dv">1</span>] <span class="sc">+</span> b[<span class="dv">2</span>] <span class="sc">*</span> x0</span>
+<span id="cb200-3"><a href="intermediate-code-sheet.html#cb200-3" tabindex="-1"></a></span>
+<span id="cb200-4"><a href="intermediate-code-sheet.html#cb200-4" tabindex="-1"></a>new_cases <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(x0, x1))</span>
+<span id="cb200-5"><a href="intermediate-code-sheet.html#cb200-5" tabindex="-1"></a><span class="fu">predict</span>(m, <span class="at">newdata =</span> new_cases)</span>
+<span id="cb200-6"><a href="intermediate-code-sheet.html#cb200-6" tabindex="-1"></a><span class="fu">predict</span>(m, <span class="at">newdata =</span> new_cases, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)</span></code></pre></div>
+<p>Interpret <span class="math inline">\(b_1\)</span> as the fitted change in the outcome for a one-unit increase
+in the predictor. State both units and use associational language unless the
+design supports a causal claim.</p>
+</div>
+<div id="lecture-2-coefficient-inference-and-diagnostics" class="section level2 hasAnchor">
+<h2>Lecture 2: Coefficient inference and diagnostics<a href="intermediate-code-sheet.html#lecture-2-coefficient-inference-and-diagnostics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a two-sided test against zero,</p>
+<p><span class="math display">\[
+H_0:\beta_j=0,
+\qquad
+H_1:\beta_j\ne0,
+\qquad
+t=\frac{b_j}{\operatorname{SE}(b_j)}.
+\]</span></p>
+<p>With <span class="math inline">\(k\)</span> slopes and an intercept,</p>
+<p><span class="math display">\[
+df_{\text{residual}}=n-k-1,
+\qquad
+b_j\pm t_{1-\alpha/2,df}\operatorname{SE}(b_j)
+\]</span></p>
+<p>is the classical <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval.</p>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="intermediate-code-sheet.html#cb201-1" tabindex="-1"></a><span class="fu">summary</span>(m)                 <span class="co"># estimates, SEs, t tests, p-values, fit</span></span>
+<span id="cb201-2"><a href="intermediate-code-sheet.html#cb201-2" tabindex="-1"></a><span class="fu">confint</span>(m, <span class="at">level =</span> <span class="fl">0.95</span>)   <span class="co"># coefficient confidence intervals</span></span>
+<span id="cb201-3"><a href="intermediate-code-sheet.html#cb201-3" tabindex="-1"></a><span class="fu">df.residual</span>(m)</span>
+<span id="cb201-4"><a href="intermediate-code-sheet.html#cb201-4" tabindex="-1"></a><span class="fu">nobs</span>(m)</span></code></pre></div>
+<p>To verify R’s two-sided test against zero:</p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="intermediate-code-sheet.html#cb202-1" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">summary</span>(m)<span class="sc">$</span>coefficients</span>
+<span id="cb202-2"><a href="intermediate-code-sheet.html#cb202-2" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> tab[<span class="st">&quot;x&quot;</span>, <span class="st">&quot;Estimate&quot;</span>] <span class="sc">/</span> tab[<span class="st">&quot;x&quot;</span>, <span class="st">&quot;Std. Error&quot;</span>]</span>
+<span id="cb202-3"><a href="intermediate-code-sheet.html#cb202-3" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> <span class="fu">df.residual</span>(m))</span></code></pre></div>
+<p>Make the two central diagnostic plots:</p>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="intermediate-code-sheet.html#cb203-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">fitted</span>(m), <span class="fu">residuals</span>(m),</span>
+<span id="cb203-2"><a href="intermediate-code-sheet.html#cb203-2" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Fitted value&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residual&quot;</span>)</span>
+<span id="cb203-3"><a href="intermediate-code-sheet.html#cb203-3" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span>
+<span id="cb203-4"><a href="intermediate-code-sheet.html#cb203-4" tabindex="-1"></a></span>
+<span id="cb203-5"><a href="intermediate-code-sheet.html#cb203-5" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">rstandard</span>(m))</span>
+<span id="cb203-6"><a href="intermediate-code-sheet.html#cb203-6" tabindex="-1"></a><span class="fu">qqline</span>(<span class="fu">rstandard</span>(m))</span></code></pre></div>
+<ul>
+<li>Curvature challenges a linear conditional mean.</li>
+<li>A fan shape challenges constant conditional variance.</li>
+<li>Large standardised residuals or Cook’s distances flag observations requiring
+investigation.</li>
+<li>Independence, zero conditional mean, measurement quality, and causality
+require design and subject-matter information; plots cannot establish them.</li>
+</ul>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="intermediate-code-sheet.html#cb204-1" tabindex="-1"></a><span class="fu">rstandard</span>(m)</span>
+<span id="cb204-2"><a href="intermediate-code-sheet.html#cb204-2" tabindex="-1"></a><span class="fu">cooks.distance</span>(m)</span>
+<span id="cb204-3"><a href="intermediate-code-sheet.html#cb204-3" tabindex="-1"></a><span class="fu">plot</span>(m, <span class="at">which =</span> <span class="dv">1</span>)  <span class="co"># residuals versus fitted</span></span>
+<span id="cb204-4"><a href="intermediate-code-sheet.html#cb204-4" tabindex="-1"></a><span class="fu">plot</span>(m, <span class="at">which =</span> <span class="dv">2</span>)  <span class="co"># normal Q--Q</span></span>
+<span id="cb204-5"><a href="intermediate-code-sheet.html#cb204-5" tabindex="-1"></a><span class="fu">plot</span>(m, <span class="at">which =</span> <span class="dv">4</span>)  <span class="co"># Cook&#39;s distance</span></span></code></pre></div>
+<p>If robust standard errors are requested and the packages are available:</p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="intermediate-code-sheet.html#cb205-1" tabindex="-1"></a>lmtest<span class="sc">::</span><span class="fu">coeftest</span>(</span>
+<span id="cb205-2"><a href="intermediate-code-sheet.html#cb205-2" tabindex="-1"></a>  m,</span>
+<span id="cb205-3"><a href="intermediate-code-sheet.html#cb205-3" tabindex="-1"></a>  <span class="at">vcov. =</span> sandwich<span class="sc">::</span><span class="fu">vcovHC</span>(m, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>)</span>
+<span id="cb205-4"><a href="intermediate-code-sheet.html#cb205-4" tabindex="-1"></a>)</span></code></pre></div>
+<p>Robust standard errors address heteroskedasticity in uncertainty estimation;
+they do not repair a wrong functional form, remove confounding, or make a
+coefficient causal.</p>
+</div>
+<div id="lecture-3-variation-r2-and-the-overall-f-test" class="section level2 hasAnchor">
+<h2>Lecture 3: Variation, <span class="math inline">\(R^2\)</span>, and the overall F-test<a href="intermediate-code-sheet.html#lecture-3-variation-r2-and-the-overall-f-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+\text{SST}=\sum_i(y_i-\bar y)^2,\qquad
+\text{SSE}=\sum_i(y_i-\hat y_i)^2,\qquad
+\text{SSR}=\sum_i(\hat y_i-\bar y)^2,
+\]</span></p>
+<p><span class="math display">\[
+\text{SST}=\text{SSR}+\text{SSE},
+\qquad
+R^2=1-\frac{\text{SSE}}{\text{SST}}
+=\frac{\text{SSR}}{\text{SST}}.
+\]</span></p>
+<p>Calculate the components:</p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="intermediate-code-sheet.html#cb206-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">model.response</span>(<span class="fu">model.frame</span>(m))</span>
+<span id="cb206-2"><a href="intermediate-code-sheet.html#cb206-2" tabindex="-1"></a>yhat <span class="ot">&lt;-</span> <span class="fu">fitted</span>(m)</span>
+<span id="cb206-3"><a href="intermediate-code-sheet.html#cb206-3" tabindex="-1"></a></span>
+<span id="cb206-4"><a href="intermediate-code-sheet.html#cb206-4" tabindex="-1"></a>SST <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb206-5"><a href="intermediate-code-sheet.html#cb206-5" tabindex="-1"></a>SSE <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">residuals</span>(m)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb206-6"><a href="intermediate-code-sheet.html#cb206-6" tabindex="-1"></a>SSR <span class="ot">&lt;-</span> SST <span class="sc">-</span> SSE</span>
+<span id="cb206-7"><a href="intermediate-code-sheet.html#cb206-7" tabindex="-1"></a>R2 <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> SSE <span class="sc">/</span> SST</span></code></pre></div>
+<p>Extract fit statistics:</p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="intermediate-code-sheet.html#cb207-1" tabindex="-1"></a><span class="fu">summary</span>(m)<span class="sc">$</span>r.squared</span>
+<span id="cb207-2"><a href="intermediate-code-sheet.html#cb207-2" tabindex="-1"></a><span class="fu">summary</span>(m)<span class="sc">$</span>adj.r.squared</span>
+<span id="cb207-3"><a href="intermediate-code-sheet.html#cb207-3" tabindex="-1"></a><span class="fu">summary</span>(m)<span class="sc">$</span>fstatistic</span>
+<span id="cb207-4"><a href="intermediate-code-sheet.html#cb207-4" tabindex="-1"></a><span class="fu">sigma</span>(m)                    <span class="co"># residual standard error</span></span></code></pre></div>
+<p>The residual standard error and adjusted <span class="math inline">\(R^2\)</span> are</p>
+<p><span class="math display">\[
+s=\sqrt{\frac{\text{SSE}}{n-k-1}},
+\qquad
+R^2_{\text{adjusted}}
+=1-(1-R^2)\frac{n-1}{n-k-1}.
+\]</span></p>
+<p>For <span class="math inline">\(k\)</span> slopes,</p>
+<p><span class="math display">\[
+F=\frac{\text{SSR}/k}{\text{SSE}/(n-k-1)}
+\]</span></p>
+<p>tests</p>
+<p><span class="math display">\[
+H_0:\beta_1=\cdots=\beta_k=0
+\]</span></p>
+<p>against the alternative that at least one slope is non-zero. In simple
+regression, the overall <span class="math inline">\(F\)</span> statistic equals the squared slope t statistic.
+<span class="math inline">\(R^2\)</span> describes in-sample variation explained; it is not causal evidence or
+out-of-sample validation.</p>
+</div>
+<div id="lecture-4-multiple-linear-regression" class="section level2 hasAnchor">
+<h2>Lecture 4: Multiple linear regression<a href="intermediate-code-sheet.html#lecture-4-multiple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+Y_i=\beta_0+\beta_1X_{i1}+\cdots+\beta_kX_{ik}+\varepsilon_i.
+\]</span></p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="intermediate-code-sheet.html#cb208-1" tabindex="-1"></a>m_multi <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> x3, <span class="at">data =</span> analysis)</span>
+<span id="cb208-2"><a href="intermediate-code-sheet.html#cb208-2" tabindex="-1"></a><span class="fu">summary</span>(m_multi)</span>
+<span id="cb208-3"><a href="intermediate-code-sheet.html#cb208-3" tabindex="-1"></a><span class="fu">confint</span>(m_multi)</span></code></pre></div>
+<p>Interpret <span class="math inline">\(b_j\)</span> as the fitted outcome change for a one-unit increase in
+<span class="math inline">\(X_j\)</span>, holding the other included predictors fixed. Include:</p>
+<ul>
+<li>estimate and direction;</li>
+<li>predictor step and unit;</li>
+<li>outcome unit;</li>
+<li>held-fixed predictors;</li>
+<li>analysed sample and causal boundary.</li>
+</ul>
+<p>For changes <span class="math inline">\(\Delta x_1,\ldots,\Delta x_k\)</span>, the additive fitted difference is</p>
+<p><span class="math display">\[
+\Delta\widehat Y=b_1\Delta x_1+\cdots+b_k\Delta x_k.
+\]</span></p>
+<p>Use <code>predict()</code> to combine terms without manual arithmetic:</p>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="intermediate-code-sheet.html#cb209-1" tabindex="-1"></a>cases <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb209-2"><a href="intermediate-code-sheet.html#cb209-2" tabindex="-1"></a>  <span class="at">x1 =</span> <span class="fu">c</span>(x1_A, x1_B),</span>
+<span id="cb209-3"><a href="intermediate-code-sheet.html#cb209-3" tabindex="-1"></a>  <span class="at">x2 =</span> <span class="fu">c</span>(x2_A, x2_B),</span>
+<span id="cb209-4"><a href="intermediate-code-sheet.html#cb209-4" tabindex="-1"></a>  <span class="at">x3 =</span> <span class="fu">c</span>(x3_A, x3_B)</span>
+<span id="cb209-5"><a href="intermediate-code-sheet.html#cb209-5" tabindex="-1"></a>)</span>
+<span id="cb209-6"><a href="intermediate-code-sheet.html#cb209-6" tabindex="-1"></a>fits <span class="ot">&lt;-</span> <span class="fu">predict</span>(m_multi, <span class="at">newdata =</span> cases)</span>
+<span id="cb209-7"><a href="intermediate-code-sheet.html#cb209-7" tabindex="-1"></a>fits[<span class="dv">2</span>] <span class="sc">-</span> fits[<span class="dv">1</span>]</span></code></pre></div>
+</div>
+<div id="lecture-5-factors-reference-categories-and-partial-f-tests" class="section level2 hasAnchor">
+<h2>Lecture 5: Factors, reference categories, and partial F-tests<a href="intermediate-code-sheet.html#lecture-5-factors-reference-categories-and-partial-f-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Set a reference category before fitting:</p>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="intermediate-code-sheet.html#cb210-1" tabindex="-1"></a>analysis<span class="sc">$</span>group <span class="ot">&lt;-</span> <span class="fu">relevel</span>(<span class="fu">factor</span>(analysis<span class="sc">$</span>group), <span class="at">ref =</span> <span class="st">&quot;reference&quot;</span>)</span>
+<span id="cb210-2"><a href="intermediate-code-sheet.html#cb210-2" tabindex="-1"></a></span>
+<span id="cb210-3"><a href="intermediate-code-sheet.html#cb210-3" tabindex="-1"></a>m_group <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> group, <span class="at">data =</span> analysis)</span>
+<span id="cb210-4"><a href="intermediate-code-sheet.html#cb210-4" tabindex="-1"></a><span class="fu">summary</span>(m_group)</span>
+<span id="cb210-5"><a href="intermediate-code-sheet.html#cb210-5" tabindex="-1"></a><span class="fu">coef</span>(m_group)</span>
+<span id="cb210-6"><a href="intermediate-code-sheet.html#cb210-6" tabindex="-1"></a><span class="fu">confint</span>(m_group)</span></code></pre></div>
+<p>Each printed group coefficient compares that category with the reference
+category, holding the other included predictors fixed. Releveling changes the
+reported contrasts, not the fitted values:</p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="intermediate-code-sheet.html#cb211-1" tabindex="-1"></a>analysis<span class="sc">$</span>group_alt <span class="ot">&lt;-</span> <span class="fu">relevel</span>(analysis<span class="sc">$</span>group, <span class="at">ref =</span> <span class="st">&quot;other&quot;</span>)</span>
+<span id="cb211-2"><a href="intermediate-code-sheet.html#cb211-2" tabindex="-1"></a>m_alt <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> group_alt, <span class="at">data =</span> analysis)</span>
+<span id="cb211-3"><a href="intermediate-code-sheet.html#cb211-3" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fu">fitted</span>(m_group), <span class="fu">fitted</span>(m_alt))</span></code></pre></div>
+<p>Compare nested models fitted to the same observations:</p>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="intermediate-code-sheet.html#cb212-1" tabindex="-1"></a>reduced <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2, <span class="at">data =</span> analysis)</span>
+<span id="cb212-2"><a href="intermediate-code-sheet.html#cb212-2" tabindex="-1"></a>complete <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> group, <span class="at">data =</span> analysis)</span>
+<span id="cb212-3"><a href="intermediate-code-sheet.html#cb212-3" tabindex="-1"></a><span class="fu">anova</span>(reduced, complete)</span></code></pre></div>
+<p>The partial F-test asks whether all terms removed from the complete model equal
+zero jointly. The reduced model must be obtainable by deleting terms from the
+complete model, and both models must use the same outcome and rows.</p>
+<p>If the complete model has <span class="math inline">\(k_C\)</span> slopes and removes <span class="math inline">\(q\)</span> terms to form the
+reduced model,</p>
+<p><span class="math display">\[
+F=
+\frac{(\text{SSE}_{R}-\text{SSE}_{C})/q}
+{\text{SSE}_{C}/(n-k_C-1)}.
+\]</span></p>
+</div>
+<div id="lecture-6-interactions-and-polynomial-terms" class="section level2 hasAnchor">
+<h2>Lecture 6: Interactions and polynomial terms<a href="intermediate-code-sheet.html#lecture-6-interactions-and-polynomial-terms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For an interaction between quantitative <span class="math inline">\(X\)</span> and indicator <span class="math inline">\(D\)</span>,</p>
+<p><span class="math display">\[
+\widehat Y=b_0+b_1X+b_2D+b_3XD.
+\]</span></p>
+<ul>
+<li><span class="math inline">\(D=0\)</span>: intercept <span class="math inline">\(b_0\)</span>, slope <span class="math inline">\(b_1\)</span>;</li>
+<li><span class="math inline">\(D=1\)</span>: intercept <span class="math inline">\(b_0+b_2\)</span>, slope <span class="math inline">\(b_1+b_3\)</span>;</li>
+<li><span class="math inline">\(b_3\)</span>: difference in slopes.</li>
+</ul>
+<p>Use <code>*</code> to include both lower-order terms and the interaction:</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="intermediate-code-sheet.html#cb213-1" tabindex="-1"></a>m_interaction <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x <span class="sc">*</span> group <span class="sc">+</span> z, <span class="at">data =</span> analysis)</span>
+<span id="cb213-2"><a href="intermediate-code-sheet.html#cb213-2" tabindex="-1"></a><span class="co"># x * group expands to x + group + x:group</span></span>
+<span id="cb213-3"><a href="intermediate-code-sheet.html#cb213-3" tabindex="-1"></a><span class="fu">summary</span>(m_interaction)</span></code></pre></div>
+<p>Centering changes the interpretation of lower-order terms without changing
+fitted values:</p>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="intermediate-code-sheet.html#cb214-1" tabindex="-1"></a>analysis<span class="sc">$</span>x_c <span class="ot">&lt;-</span> analysis<span class="sc">$</span>x <span class="sc">-</span> <span class="fu">mean</span>(analysis<span class="sc">$</span>x)</span>
+<span id="cb214-2"><a href="intermediate-code-sheet.html#cb214-2" tabindex="-1"></a>m_centered <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x_c <span class="sc">*</span> group <span class="sc">+</span> z, <span class="at">data =</span> analysis)</span></code></pre></div>
+<p>For a quadratic model,</p>
+<p><span class="math display">\[
+\widehat Y=b_0+b_1X+b_2X^2,
+\]</span></p>
+<p>and the fitted change from <span class="math inline">\(x_A\)</span> to <span class="math inline">\(x_B\)</span> is</p>
+<p><span class="math display">\[
+\Delta\widehat Y
+=b_1(x_B-x_A)+b_2(x_B^2-x_A^2).
+\]</span></p>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="intermediate-code-sheet.html#cb215-1" tabindex="-1"></a>m_linear <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x <span class="sc">+</span> z, <span class="at">data =</span> analysis)</span>
+<span id="cb215-2"><a href="intermediate-code-sheet.html#cb215-2" tabindex="-1"></a>m_quadratic <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x <span class="sc">+</span> <span class="fu">I</span>(x<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> z, <span class="at">data =</span> analysis)</span>
+<span id="cb215-3"><a href="intermediate-code-sheet.html#cb215-3" tabindex="-1"></a></span>
+<span id="cb215-4"><a href="intermediate-code-sheet.html#cb215-4" tabindex="-1"></a><span class="fu">summary</span>(m_quadratic)</span>
+<span id="cb215-5"><a href="intermediate-code-sheet.html#cb215-5" tabindex="-1"></a><span class="fu">anova</span>(m_linear, m_quadratic)</span></code></pre></div>
+<p><code>I(x^2)</code> tells R to include the arithmetic square. Retain the lower-order
+term <span class="math inline">\(x\)</span>, interpret changes using all relevant coefficients, and do not
+extrapolate a polynomial beyond the observed range.</p>
+<p>Create fitted conditional values for a graph:</p>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="intermediate-code-sheet.html#cb216-1" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb216-2"><a href="intermediate-code-sheet.html#cb216-2" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">seq</span>(<span class="fu">min</span>(analysis<span class="sc">$</span>x), <span class="fu">max</span>(analysis<span class="sc">$</span>x), <span class="at">length.out =</span> <span class="dv">100</span>),</span>
+<span id="cb216-3"><a href="intermediate-code-sheet.html#cb216-3" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">levels</span>(analysis<span class="sc">$</span>group),</span>
+<span id="cb216-4"><a href="intermediate-code-sheet.html#cb216-4" tabindex="-1"></a>  <span class="at">z =</span> <span class="fu">mean</span>(analysis<span class="sc">$</span>z)</span>
+<span id="cb216-5"><a href="intermediate-code-sheet.html#cb216-5" tabindex="-1"></a>)</span>
+<span id="cb216-6"><a href="intermediate-code-sheet.html#cb216-6" tabindex="-1"></a></span>
+<span id="cb216-7"><a href="intermediate-code-sheet.html#cb216-7" tabindex="-1"></a>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(m_interaction, <span class="at">newdata =</span> grid, <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>)</span>
+<span id="cb216-8"><a href="intermediate-code-sheet.html#cb216-8" tabindex="-1"></a>plot_data <span class="ot">&lt;-</span> <span class="fu">cbind</span>(grid, pred)</span></code></pre></div>
+</div>
+<div id="commands-by-purpose" class="section level2 hasAnchor">
+<h2>Commands by purpose<a href="intermediate-code-sheet.html#commands-by-purpose" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>R command</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fit a model</td>
+<td><code>lm(y ~ predictors, data = df)</code></td>
+</tr>
+<tr class="even">
+<td>Full model output</td>
+<td><code>summary(m)</code></td>
+</tr>
+<tr class="odd">
+<td>Coefficients only</td>
+<td><code>coef(m)</code></td>
+</tr>
+<tr class="even">
+<td>95% coefficient intervals</td>
+<td><code>confint(m)</code></td>
+</tr>
+<tr class="odd">
+<td>Fitted values and residuals</td>
+<td><code>fitted(m)</code>, <code>residuals(m)</code></td>
+</tr>
+<tr class="even">
+<td>Standardised residuals</td>
+<td><code>rstandard(m)</code></td>
+</tr>
+<tr class="odd">
+<td>Influence</td>
+<td><code>cooks.distance(m)</code></td>
+</tr>
+<tr class="even">
+<td>Conditional fitted values</td>
+<td><code>predict(m, newdata = ..., interval = "confidence")</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(R^2\)</span>, adjusted <span class="math inline">\(R^2\)</span>, overall F</td>
+<td><code>summary(m)</code></td>
+</tr>
+<tr class="even">
+<td>Residual degrees of freedom</td>
+<td><code>df.residual(m)</code></td>
+</tr>
+<tr class="odd">
+<td>Nested-model partial F-test</td>
+<td><code>anova(reduced, complete)</code></td>
+</tr>
+<tr class="even">
+<td>Set a factor reference</td>
+<td><code>relevel(factor(x), ref = "category")</code></td>
+</tr>
+<tr class="odd">
+<td>Interaction</td>
+<td><code>x * z</code></td>
+</tr>
+<tr class="even">
+<td>Arithmetic square in a formula</td>
+<td><code>I(x^2)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>For a more formal explanation of regression, inference, extensions, and model
+violations, consult
+<a href="https://tilburguniversity.on.worldcat.org/oclc/317545871">Nieuwenhuis, <em>Statistical Methods for Business and Economics</em></a>,
+Chapters 19–22.</p>
+<p>Continue to the <a href="intermediate-mock-exam.html#intermediate-mock-exam">QM Intermediate Mock Exam</a>.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="i-ep02.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intermediate-mock-exam.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

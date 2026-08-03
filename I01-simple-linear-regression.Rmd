@@ -396,6 +396,8 @@ line.
 Continue to [Lecture 2: Regression assumptions and coefficient inference](#i02).
 
 For a more formal treatment, see James et al., *An Introduction to Statistical
-Learning*, 2nd ed., Sections 3.1 and 3.6.2.
+Learning*, 2nd ed., Sections 3.1 and 3.6.2, and
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapter 19.
 
 :::

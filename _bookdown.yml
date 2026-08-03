@@ -33,6 +33,7 @@ rmd_files:
   - I05-dummies-f-tests.Rmd
   - I06-interactions-polynomials.Rmd
   - I-EP02.Rmd
+  - intermediate-code-sheet.Rmd
   - mock-exam-intermediate.Rmd
   - course-advanced.Rmd
   - r-refresher.Rmd

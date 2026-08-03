@@ -19,7 +19,8 @@
 
 Complete the after-class practice from Intermediate Lectures 4--6. Review
 [Mathematics Refresher: multivariable equations, indicators, products, and powers](#math-refresher)
-if needed.
+if needed. Use the complete
+[QM Intermediate Code Sheet](#intermediate-code-sheet) while working.
 
 Complete from memory:
 
@@ -337,8 +338,9 @@ identify a causal effect of gender or season.
 
 </details>
 
-QM Intermediate is complete. Attempt the [QM Intermediate Mock
-Exam](#intermediate-mock-exam), then return to the
+QM Intermediate is complete. Review the
+[QM Intermediate Code Sheet](#intermediate-code-sheet), attempt the
+[QM Intermediate Mock Exam](#intermediate-mock-exam), then return to the
 [R Refresher](#r-refresher), [Mathematics Refresher](#math-refresher), or
 [External Video Guide](#videos) whenever you need a targeted review.
 

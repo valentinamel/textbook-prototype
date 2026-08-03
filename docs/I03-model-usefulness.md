@@ -296,6 +296,8 @@ Read it in this order:
 Continue to [Tutorial 1: Simple regression and model usefulness](#i-ep01).
 
 For a more formal treatment, see James et al., *An Introduction to Statistical
-Learning*, 2nd ed., Section 3.1.3.
+Learning*, 2nd ed., Section 3.1.3, and
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapters 19--20.
 
 :::

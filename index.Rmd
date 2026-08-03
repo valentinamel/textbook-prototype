@@ -102,8 +102,9 @@ Within each course, follow the chapters in order:
 - **Lecture chapters** introduce you to a question and data and teach you how to conduct analysis in R and theory that allows to interpret and understand the output.
 - **Tutorial chapters** help you retrieve, combine, and apply what you have
   learned. Designed for guided practice and exam preparation.
-- **Course exam resources** include a cumulative formula sheet for QM Basic
-  and a 100-point mock exam at the end of QM Basic and QM Intermediate.
+- **Course exam resources** include a cumulative formula sheet for QM Basic, a
+  code-and-formula sheet for QM Intermediate, and a 100-point mock exam at the
+  end of each of those courses.
 - **Supplementary resources** collect reusable help with R, mathematics, and
   external videos.
 
@@ -128,15 +129,26 @@ You will work with R throughout all three courses. You already met R in
 workflow has become rusty, use the [R Refresher](#r-refresher) and the earlier
 course as references.
 
-Most chapters use a teaching view derived from
+Our shared dataset records pitches shown on the US television programme
+*Shark Tank*. In a televised pitch, entrepreneurs present a venture or product
+to a panel of investors known as sharks. They may ask for money in exchange
+for an ownership share; the investors question them, negotiate, and may
+announce an agreement during the episode.
+
+Most chapters use a 19-variable teaching view derived from the
 [Shark Tank US Dataset](https://www.kaggle.com/datasets/thirumani/shark-tank-us-dataset).
-One row represents one recorded televised pitch. We use the 1,441 pitches from
-completed Seasons 1--16 and omit the incomplete Season 17. The teaching file
-contains pitch and episode identifiers, industry and description, the initial
-ask, the outcome of the televised negotiation, and the source's broad pitcher
-gender composition category. These variables describe what was recorded on the
-show. They do not establish completed investment, later venture performance, or
-causal effects.
+One row represents one recorded televised pitch. The file contains 1,441
+pitches from completed Seasons 1--16; incomplete Season 17 is excluded. Its
+variables include pitch and episode identifiers, venture industry and written
+description, the initial amount and equity requested, whether an agreement was
+announced on air, recorded deal terms, and the source's broad
+presenter-gender-composition category.
+
+This is an observational record of selected, edited television pitches—not a
+random sample of all entrepreneurs or ventures. An on-air agreement is not
+evidence that the investment was completed or that the venture later
+succeeded. The data can describe recorded pitches and associations among their
+variables, but they do not by themselves identify causal effects.
 
 ## Tutorials and assessment
 
@@ -148,7 +160,8 @@ exam administered through TestVision. Tutorials in all courses are designed as
 exam preparation sessions.
 
 Go directly to the [QM Basic Formula Sheet](#formula-sheet), [QM Basic Mock
-Exam](#basic-mock-exam), or [QM Intermediate Mock
+Exam](#basic-mock-exam), [QM Intermediate Code
+Sheet](#intermediate-code-sheet), or [QM Intermediate Mock
 Exam](#intermediate-mock-exam) when preparing for assessment.
 
 ## Working with  AI

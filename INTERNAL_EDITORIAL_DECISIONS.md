@@ -135,6 +135,10 @@ This file is for the teaching team. It is intentionally excluded from
 - Supply the Intermediate mock exam with a fixed-seed simulated CSV so students
   can reproduce every printed regression result in R. Keep the generated data,
   hard-coded output, questions, and marking guide numerically aligned.
+- Maintain a cumulative QM Intermediate Code Sheet organised by lecture. Pair
+  the key R commands with the formulas they implement, use Lectures 1--3 in
+  Tutorial 1, and use the complete Lectures 1--6 sheet in Tutorial 2 and final
+  exam preparation.
 - Teach a stable graph-reading sequence: axes and units, meaning of marks,
   scale and displayed sample, visible pattern, then inferential and causal
   limits. Use common scales for direct panel comparisons and explicitly connect

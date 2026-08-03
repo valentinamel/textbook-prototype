@@ -12,7 +12,8 @@ Current contents include:
   100-point mock exam;
 - six Intermediate lectures and two exam-preparation tutorials covering simple
   and multiple linear regression, inference, model fit, dummy variables,
-  interactions, and polynomial terms, followed by a 100-point mock exam;
+  interactions, and polynomial terms, followed by a cumulative code sheet and
+  a 100-point mock exam;
 - a targeted pointer to the preceding Programming for E&BI book;
 - a chapter-linked mathematics refresher, print-ready formula-sheet PDF, and
   external video guide;

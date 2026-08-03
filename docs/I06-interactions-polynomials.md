@@ -320,6 +320,8 @@ implied predictions, and report the relevant combined effects.
 Continue to [Tutorial 2: Multiple regression and extensions](#i-ep02).
 
 For a more formal treatment, see James et al., *An Introduction to Statistical
-Learning*, 2nd ed., Section 3.3.2 and Sections 3.6.4--3.6.6.
+Learning*, 2nd ed., Section 3.3.2 and Sections 3.6.4--3.6.6, and
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapter 21.
 
 :::

@@ -320,6 +320,8 @@ and model conditions.
 Continue to [Lecture 3: Model fit and overall usefulness](#i03).
 
 For a more formal treatment, see James et al., *An Introduction to Statistical
-Learning*, 2nd ed., Sections 3.1.2 and 3.3.3.
+Learning*, 2nd ed., Sections 3.1.2 and 3.3.3, and
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapters 19 and 22.
 
 :::

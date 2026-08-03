@@ -310,6 +310,8 @@ how the categories were recorded.
 Continue to [Lecture 6: Interactions and polynomial terms](#i06).
 
 For a more formal treatment, see James et al., *An Introduction to Statistical
-Learning*, 2nd ed., Sections 3.2.2 and 3.3.1.
+Learning*, 2nd ed., Sections 3.2.2 and 3.3.1, and
+[Nieuwenhuis, *Statistical Methods for Business and Economics*](https://tilburguniversity.on.worldcat.org/oclc/317545871),
+Chapters 20--21.
 
 :::

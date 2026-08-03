@@ -168,6 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="i05.html"><a href="i05.html"><i class="fa fa-check"></i>Lecture 5: Dummy predictors and joint usefulness</a></li>
 <li class="chapter" data-level="" data-path="i06.html"><a href="i06.html"><i class="fa fa-check"></i>Lecture 6: Interactions and polynomial terms</a></li>
 <li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Multiple regression and extensions</a></li>
+<li class="chapter" data-level="" data-path="intermediate-code-sheet.html"><a href="intermediate-code-sheet.html"><i class="fa fa-check"></i>QM Intermediate Code Sheet</a></li>
 <li class="chapter" data-level="" data-path="intermediate-mock-exam.html"><a href="intermediate-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Intermediate</a></li>
 <li class="part"><span><b>III QM Advanced</b></span></li>
 <li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>QM Advanced: Course overview</a></li>
@@ -315,8 +316,9 @@ with the button at the top of the page.</p>
 <li><strong>Lecture chapters</strong> introduce you to a question and data and teach you how to conduct analysis in R and theory that allows to interpret and understand the output.</li>
 <li><strong>Tutorial chapters</strong> help you retrieve, combine, and apply what you have
 learned. Designed for guided practice and exam preparation.</li>
-<li><strong>Course exam resources</strong> include a cumulative formula sheet for QM Basic
-and a 100-point mock exam at the end of QM Basic and QM Intermediate.</li>
+<li><strong>Course exam resources</strong> include a cumulative formula sheet for QM Basic, a
+code-and-formula sheet for QM Intermediate, and a 100-point mock exam at the
+end of each of those courses.</li>
 <li><strong>Supplementary resources</strong> collect reusable help with R, mathematics, and
 external videos.</li>
 </ul>
@@ -340,15 +342,24 @@ than this course; follow the notation and scope stated in this textbook.</p>
 <a href="https://walshc.github.io/ebi-prog/">Programming for E&amp;BI</a>. If a command or
 workflow has become rusty, use the <a href="r-refresher.html#r-refresher">R Refresher</a> and the earlier
 course as references.</p>
-<p>Most chapters use a teaching view derived from
+<p>Our shared dataset records pitches shown on the US television programme
+<em>Shark Tank</em>. In a televised pitch, entrepreneurs present a venture or product
+to a panel of investors known as sharks. They may ask for money in exchange
+for an ownership share; the investors question them, negotiate, and may
+announce an agreement during the episode.</p>
+<p>Most chapters use a 19-variable teaching view derived from the
 <a href="https://www.kaggle.com/datasets/thirumani/shark-tank-us-dataset">Shark Tank US Dataset</a>.
-One row represents one recorded televised pitch. We use the 1,441 pitches from
-completed Seasons 1–16 and omit the incomplete Season 17. The teaching file
-contains pitch and episode identifiers, industry and description, the initial
-ask, the outcome of the televised negotiation, and the source’s broad pitcher
-gender composition category. These variables describe what was recorded on the
-show. They do not establish completed investment, later venture performance, or
-causal effects.</p>
+One row represents one recorded televised pitch. The file contains 1,441
+pitches from completed Seasons 1–16; incomplete Season 17 is excluded. Its
+variables include pitch and episode identifiers, venture industry and written
+description, the initial amount and equity requested, whether an agreement was
+announced on air, recorded deal terms, and the source’s broad
+presenter-gender-composition category.</p>
+<p>This is an observational record of selected, edited television pitches—not a
+random sample of all entrepreneurs or ventures. An on-air agreement is not
+evidence that the investment was completed or that the venture later
+succeeded. The data can describe recorded pitches and associations among their
+variables, but they do not by themselves identify causal effects.</p>
 </div>
 <div id="tutorials-and-assessment" class="section level2 hasAnchor">
 <h2>Tutorials and assessment<a href="index.html#tutorials-and-assessment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -359,7 +370,8 @@ Intermediate and QM Advanced, you will work directly with data in R during an
 exam administered through TestVision. Tutorials in all courses are designed as
 exam preparation sessions.</p>
 <p>Go directly to the <a href="formula-sheet.html#formula-sheet">QM Basic Formula Sheet</a>, <a href="basic-mock-exam.html#basic-mock-exam">QM Basic Mock
-Exam</a>, or <a href="intermediate-mock-exam.html#intermediate-mock-exam">QM Intermediate Mock
+Exam</a>, <a href="intermediate-code-sheet.html#intermediate-code-sheet">QM Intermediate Code
+Sheet</a>, or <a href="intermediate-mock-exam.html#intermediate-mock-exam">QM Intermediate Mock
 Exam</a> when preparing for assessment.</p>
 </div>
 <div id="working-with-ai" class="section level2 hasAnchor">

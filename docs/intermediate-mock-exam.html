@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="i-ep02.html"/>
+<link rel="prev" href="intermediate-code-sheet.html"/>
 <link rel="next" href="advanced-course.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -168,6 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="i05.html"><a href="i05.html"><i class="fa fa-check"></i>Lecture 5: Dummy predictors and joint usefulness</a></li>
 <li class="chapter" data-level="" data-path="i06.html"><a href="i06.html"><i class="fa fa-check"></i>Lecture 6: Interactions and polynomial terms</a></li>
 <li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Multiple regression and extensions</a></li>
+<li class="chapter" data-level="" data-path="intermediate-code-sheet.html"><a href="intermediate-code-sheet.html"><i class="fa fa-check"></i>QM Intermediate Code Sheet</a></li>
 <li class="chapter" data-level="" data-path="intermediate-mock-exam.html"><a href="intermediate-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Intermediate</a></li>
 <li class="part"><span><b>III QM Advanced</b></span></li>
 <li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>QM Advanced: Course overview</a></li>
@@ -206,6 +207,8 @@ points</strong>, so the exam grade is</p>
 question states otherwise, use a 5% significance level. Interpret every
 coefficient in the units and sample defined below; do not use causal language
 unless the design supports it.</p>
+<p>Use the <a href="intermediate-code-sheet.html#intermediate-code-sheet">QM Intermediate Code Sheet</a> to review the R
+commands and corresponding formulas before attempting the exam.</p>
 <table>
 <thead>
 <tr class="header">
@@ -266,8 +269,8 @@ digital offering. <code>No</code> is the reference category;</li>
 frame. Later survival and market conditions are not measured.</p>
 <p><a href="data/qm-intermediate-mock-exam.csv">Download <code>qm-intermediate-mock-exam.csv</code></a>,
 save it in your R project, and load it with:</p>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="intermediate-mock-exam.html#cb196-1" tabindex="-1"></a>ventures <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;qm-intermediate-mock-exam.csv&quot;</span>)</span>
-<span id="cb196-2"><a href="intermediate-mock-exam.html#cb196-2" tabindex="-1"></a>ventures<span class="sc">$</span>digital <span class="ot">&lt;-</span> <span class="fu">factor</span>(ventures<span class="sc">$</span>digital, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="intermediate-mock-exam.html#cb217-1" tabindex="-1"></a>ventures <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;qm-intermediate-mock-exam.csv&quot;</span>)</span>
+<span id="cb217-2"><a href="intermediate-mock-exam.html#cb217-2" tabindex="-1"></a>ventures<span class="sc">$</span>digital <span class="ot">&lt;-</span> <span class="fu">factor</span>(ventures<span class="sc">$</span>digital, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>))</span></code></pre></div>
 <p>The printed results below allow you to continue if R is temporarily
 unavailable, but during timed practice you should reproduce them from the
 downloaded file.</p>
@@ -275,7 +278,7 @@ downloaded file.</p>
 <div id="question-1-simple-regression-and-least-squares-20-points" class="section level2 hasAnchor">
 <h2>Question 1: Simple regression and least squares — 20 points<a href="intermediate-mock-exam.html#question-1-simple-regression-and-least-squares-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The first model is</p>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="intermediate-mock-exam.html#cb197-1" tabindex="-1"></a>simple_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(growth_pct <span class="sc">~</span> marketing_10k, <span class="at">data =</span> ventures)</span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="intermediate-mock-exam.html#cb218-1" tabindex="-1"></a>simple_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(growth_pct <span class="sc">~</span> marketing_10k, <span class="at">data =</span> ventures)</span></code></pre></div>
 <p>and R reports</p>
 <pre class="text"><code>Coefficients:
                 Estimate  Std. Error  t value  Pr(&gt;|t|)
@@ -372,10 +375,10 @@ coefficient causal (2 points).</li>
 <div id="question-3-model-fit-and-the-overall-f-test-20-points" class="section level2 hasAnchor">
 <h2>Question 3: Model fit and the overall F-test — 20 points<a href="intermediate-mock-exam.html#question-3-model-fit-and-the-overall-f-test-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The researcher next fits</p>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="intermediate-mock-exam.html#cb199-1" tabindex="-1"></a>multiple_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb199-2"><a href="intermediate-mock-exam.html#cb199-2" tabindex="-1"></a>  growth_pct <span class="sc">~</span> marketing_10k <span class="sc">+</span> experience_years <span class="sc">+</span> team_size <span class="sc">+</span> digital,</span>
-<span id="cb199-3"><a href="intermediate-mock-exam.html#cb199-3" tabindex="-1"></a>  <span class="at">data =</span> ventures</span>
-<span id="cb199-4"><a href="intermediate-mock-exam.html#cb199-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="intermediate-mock-exam.html#cb220-1" tabindex="-1"></a>multiple_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb220-2"><a href="intermediate-mock-exam.html#cb220-2" tabindex="-1"></a>  growth_pct <span class="sc">~</span> marketing_10k <span class="sc">+</span> experience_years <span class="sc">+</span> team_size <span class="sc">+</span> digital,</span>
+<span id="cb220-3"><a href="intermediate-mock-exam.html#cb220-3" tabindex="-1"></a>  <span class="at">data =</span> ventures</span>
+<span id="cb220-4"><a href="intermediate-mock-exam.html#cb220-4" tabindex="-1"></a>)</span></code></pre></div>
 <p>R reports:</p>
 <pre class="text"><code>Residual standard error: 4.09 on 315 degrees of freedom
 Multiple R-squared: 0.464, Adjusted R-squared: 0.457
@@ -468,10 +471,10 @@ error can remain in this observational study (3 points).</li>
 <div id="question-5-interactions-curvature-and-a-partial-f-test-20-points" class="section level2 hasAnchor">
 <h2>Question 5: Interactions, curvature, and a partial F-test — 20 points<a href="intermediate-mock-exam.html#question-5-interactions-curvature-and-a-partial-f-test-20-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The researcher fits the hierarchical model</p>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="intermediate-mock-exam.html#cb202-1" tabindex="-1"></a>extended_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb202-2"><a href="intermediate-mock-exam.html#cb202-2" tabindex="-1"></a>  growth_pct <span class="sc">~</span> spend_c <span class="sc">*</span> digital <span class="sc">+</span> <span class="fu">I</span>(spend_c<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> experience_years,</span>
-<span id="cb202-3"><a href="intermediate-mock-exam.html#cb202-3" tabindex="-1"></a>  <span class="at">data =</span> ventures</span>
-<span id="cb202-4"><a href="intermediate-mock-exam.html#cb202-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="intermediate-mock-exam.html#cb223-1" tabindex="-1"></a>extended_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb223-2"><a href="intermediate-mock-exam.html#cb223-2" tabindex="-1"></a>  growth_pct <span class="sc">~</span> spend_c <span class="sc">*</span> digital <span class="sc">+</span> <span class="fu">I</span>(spend_c<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> experience_years,</span>
+<span id="cb223-3"><a href="intermediate-mock-exam.html#cb223-3" tabindex="-1"></a>  <span class="at">data =</span> ventures</span>
+<span id="cb223-4"><a href="intermediate-mock-exam.html#cb223-4" tabindex="-1"></a>)</span></code></pre></div>
 <p>with estimates:</p>
 <pre class="text"><code>                         Estimate
 (Intercept)                  9.20
@@ -541,7 +544,7 @@ uncertainty, and causal limits.</p>
           </div>
         </div>
       </div>
-<a href="i-ep02.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intermediate-code-sheet.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="advanced-course.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

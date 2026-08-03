@@ -168,6 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="i05.html"><a href="i05.html"><i class="fa fa-check"></i>Lecture 5: Dummy predictors and joint usefulness</a></li>
 <li class="chapter" data-level="" data-path="i06.html"><a href="i06.html"><i class="fa fa-check"></i>Lecture 6: Interactions and polynomial terms</a></li>
 <li class="chapter" data-level="" data-path="i-ep02.html"><a href="i-ep02.html"><i class="fa fa-check"></i>Tutorial 2: Multiple regression and extensions</a></li>
+<li class="chapter" data-level="" data-path="intermediate-code-sheet.html"><a href="intermediate-code-sheet.html"><i class="fa fa-check"></i>QM Intermediate Code Sheet</a></li>
 <li class="chapter" data-level="" data-path="intermediate-mock-exam.html"><a href="intermediate-mock-exam.html"><i class="fa fa-check"></i>Mock Exam: QM Intermediate</a></li>
 <li class="part"><span><b>III QM Advanced</b></span></li>
 <li class="chapter" data-level="" data-path="advanced-course.html"><a href="advanced-course.html"><i class="fa fa-check"></i>QM Advanced: Course overview</a></li>
@@ -331,7 +332,7 @@ underlying fitted relationship.</p>
 \frac{12-8}{\sqrt{16}}=\frac{4}{4}=1.
 \]</span></p>
 <p>In R:</p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="math-refresher.html#cb208-1" tabindex="-1"></a>(<span class="dv">12</span> <span class="sc">-</span> <span class="dv">8</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">16</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="math-refresher.html#cb229-1" tabindex="-1"></a>(<span class="dv">12</span> <span class="sc">-</span> <span class="dv">8</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">16</span>)</span></code></pre></div>
 <p>Use parentheses generously in code when they make the intended calculation
 clear.</p>
 </div>
@@ -483,7 +484,7 @@ df=n-1.
 <p>The notation <span class="math inline">\(t_{0.975,df}\)</span> means the value with 97.5% of a t distribution
 to its left. It leaves 2.5% in the right tail, so <span class="math inline">\(\pm t_{0.975,df}\)</span> are the
 critical values for a 95% two-sided procedure. In R:</p>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="math-refresher.html#cb209-1" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> <span class="dv">24</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="math-refresher.html#cb230-1" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> <span class="dv">24</span>)</span></code></pre></div>
 <p>With few degrees of freedom, the t distribution has heavier tails and the
 critical value is larger. It approaches the standard normal distribution as
 the degrees of freedom increase.</p>
