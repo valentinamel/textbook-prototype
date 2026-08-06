@@ -571,17 +571,28 @@ correlation unchanged.</li>
 </div>
 <div id="worked-exam-interpretation-3" class="section level3 hasAnchor">
 <h3>Worked exam interpretation<a href="b05.html#worked-exam-interpretation-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The dataset contains 1,441 televised pitches from Seasons 1–16. The variable
+<code>season</code> records the season number, and <code>equity_offered_pct</code> records the
+percentage of the business initially offered to the sharks.</p>
 <p><strong>Question.</strong> R reports
-<code>cor(sharks$season, sharks$equity_offered_pct) = -0.416</code>.</p>
+<code>cor(sharks$season, sharks$equity_offered_pct) = -0.416</code>. Interpret this
+result in context. State:</p>
+<ol style="list-style-type: decimal">
+<li>the direction and approximate strength of the linear association;</li>
+<li>what the association means for pitches in earlier and later seasons;</li>
+<li>whether the correlation has units; and</li>
+<li>one conclusion that cannot be justified from this result.</li>
+</ol>
 <details>
 <summary>
 Check a model answer
 </summary>
 <p>Among the 1,441 records, season and initially offered equity have a moderate
 negative linear association: later-season pitches tend to offer a smaller
-ownership percentage initially. The coefficient is dimensionless and
-summarises linear co-movement. It does not show that the passage of time caused
-the change or identify the effect of changing an offer.</p>
+ownership percentage initially, although this is not true of every individual
+pitch. The correlation is dimensionless: it has no units. It summarises only
+linear co-movement and does not show that the passage of time caused offers to
+change.</p>
 </details>
 <p>Continue to <a href="b-ep02.html#b-ep02">Tutorial 2: Conditioning and relationships</a>.</p>
 <p>Formula sheet: <a href="formula-sheet.html#formula-l5">Lecture 5 formulas</a>.</p>

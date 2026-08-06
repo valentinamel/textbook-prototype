@@ -431,17 +431,28 @@ Consider this joint PMF:
 
 ### Worked exam interpretation
 
+The dataset contains 1,441 televised pitches from Seasons 1--16. The variable
+`season` records the season number, and `equity_offered_pct` records the
+percentage of the business initially offered to the sharks.
+
 **Question.** R reports
-`cor(sharks$season, sharks$equity_offered_pct) = -0.416`.
+`cor(sharks$season, sharks$equity_offered_pct) = -0.416`. Interpret this
+result in context. State:
+
+1. the direction and approximate strength of the linear association;
+2. what the association means for pitches in earlier and later seasons;
+3. whether the correlation has units; and
+4. one conclusion that cannot be justified from this result.
 
 <details>
 <summary>Check a model answer</summary>
 
 Among the 1,441 records, season and initially offered equity have a moderate
 negative linear association: later-season pitches tend to offer a smaller
-ownership percentage initially. The coefficient is dimensionless and
-summarises linear co-movement. It does not show that the passage of time caused
-the change or identify the effect of changing an offer.
+ownership percentage initially, although this is not true of every individual
+pitch. The correlation is dimensionless: it has no units. It summarises only
+linear co-movement and does not show that the passage of time caused offers to
+change.
 
 </details>
 

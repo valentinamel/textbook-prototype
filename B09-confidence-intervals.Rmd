@@ -250,19 +250,119 @@ from 15 percentage points. The negative estimate indicates that it is lower.
 
 ### One-sided alternatives: overview
 
-A one-sided alternative specifies a direction:
+A two-sided test asks whether a parameter differs from zero in **either**
+direction. A one-sided test asks a directional question chosen before the
+sample is examined.
 
-\[
-H_1:\delta>0
-\qquad\text{or}\qquad
-H_1:\delta<0.
-\]
+| Research question | Alternative | Relevant tail(s) |
+|---|---|---|
+| Does the mean gap differ from zero? | \(H_1:\delta\ne0\) | both tails |
+| Is the mean gap below zero? | \(H_1:\delta<0\) | left tail |
+| Is the mean gap above zero? | \(H_1:\delta>0\) | right tail |
 
-Its p-value uses only the corresponding tail. The direction must follow from
-the research question and be chosen before the data are inspected; it is not
-valid to choose a tail because the observed estimate happens to point that
-way. Course practice and exams use two-sided tests, because a difference in
-either direction is usually relevant in business research.
+In all three cases, the test statistic is compared with its distribution under
+the zero boundary \(H_0:\delta=0\). What changes is which values count as
+evidence for the stated alternative.
+
+```{r b09-one-two-sided-comparison, echo=FALSE, fig.width=7, fig.height=3.25}
+alpha_tail <- 0.05
+tail_df <- df
+tail_grid <- seq(-4, 4, length.out = 1400)
+tail_density <- dt(tail_grid, df = tail_df)
+critical_two <- qt(c(alpha_tail / 2, 1 - alpha_tail / 2), df = tail_df)
+critical_left <- qt(alpha_tail, df = tail_df)
+critical_right <- qt(1 - alpha_tail, df = tail_df)
+
+shade_tail <- function(mask, colour = "#E69F00") {
+  polygon(
+    c(tail_grid[mask][1], tail_grid[mask],
+      tail_grid[mask][length(tail_grid[mask])]),
+    c(0, tail_density[mask], 0),
+    col = grDevices::adjustcolor(colour, alpha.f = 0.58),
+    border = NA
+  )
+}
+
+panel_titles <- c("Two-sided", "Left-sided", "Right-sided")
+panel_alternatives <- list(
+  expression(H[1] : delta != 0),
+  expression(H[1] : delta < 0),
+  expression(H[1] : delta > 0)
+)
+
+old_par <- par(no.readonly = TRUE)
+par(
+  mfrow = c(1, 3),
+  mar = c(4.0, 4.0, 3.2, 0.5),
+  las = 1,
+  family = "sans"
+)
+
+for (i in 1:3) {
+  plot(
+    NA,
+    xlim = c(-4, 4), ylim = c(0, 0.43),
+    axes = FALSE, bty = "n",
+    xlab = "t statistic",
+    ylab = if (i == 1) "Density" else "",
+    main = "",
+    cex.lab = 0.82
+  )
+  mtext(panel_titles[i], side = 3, line = 1.65,
+        cex = 0.90, font = 2)
+  mtext(panel_alternatives[[i]], side = 3, line = 0.30, cex = 0.72)
+  axis(1, at = c(-3, 0, 3), cex.axis = 0.75)
+  if (i == 1) {
+    axis(2, at = c(0, 0.2, 0.4), cex.axis = 0.75)
+  }
+  abline(v = 0, col = "#B8C0C8", lty = 3, lwd = 1)
+
+  if (i == 1) {
+    shade_tail(tail_grid <= critical_two[1])
+    shade_tail(tail_grid >= critical_two[2])
+    abline(v = critical_two, col = "#A64B00", lty = 2, lwd = 1.5)
+    text(c(-2.8, 2.8), c(0.035, 0.035),
+         labels = c("2.5%", "2.5%"), cex = 0.67, col = "#6B3A00")
+  } else if (i == 2) {
+    shade_tail(tail_grid <= critical_left)
+    abline(v = critical_left, col = "#A64B00", lty = 2, lwd = 1.5)
+    text(-2.8, 0.035, "5%", cex = 0.67, col = "#6B3A00")
+  } else {
+    shade_tail(tail_grid >= critical_right)
+    abline(v = critical_right, col = "#A64B00", lty = 2, lwd = 1.5)
+    text(2.8, 0.035, "5%", cex = 0.67, col = "#6B3A00")
+  }
+
+  lines(tail_grid, tail_density, col = "#17324D", lwd = 2.2)
+}
+par(old_par)
+```
+
+All three panels show the same t distribution under \(H_0\) and use
+\(\alpha=0.05\); the orange areas are the rejection regions. In the two-sided
+test, 2.5% lies in each rejection tail. In a one-sided test, the full 5% lies
+in the direction named by \(H_1\). Its critical value is therefore closer to
+zero in that direction.
+
+This makes a one-sided test more able to detect an effect in the chosen
+direction, but results in the opposite direction do not support that
+alternative. The direction must follow from the research question and be fixed
+before the data are inspected. It is not valid to choose the tail because the
+observed estimate happens to point that way, or simply to obtain a smaller
+p-value.
+
+For the equity-gap example, the observed statistic is \(t=-2.91\):
+
+- the two-sided p-value is about \(0.0046\);
+- for a **pre-specified** left-sided alternative \(H_1:\delta<0\), the p-value
+  is about `r sprintf("%.4f", pt(t_value, df = df))`;
+- for a **pre-specified** right-sided alternative \(H_1:\delta>0\), the p-value
+  is about `r sprintf("%.4f", 1 - pt(t_value, df = df))`.
+
+The negative estimate agrees with the left-sided alternative and points away
+from the right-sided alternative. Course practice and exams use two-sided
+tests, because a difference in either direction is usually relevant in
+business research.
 
 ### The confidence interval and test tell the same story
 

@@ -240,19 +240,47 @@ from 15 percentage points. The negative estimate indicates that it is lower.
 
 ### One-sided alternatives: overview
 
-A one-sided alternative specifies a direction:
+A two-sided test asks whether a parameter differs from zero in **either**
+direction. A one-sided test asks a directional question chosen before the
+sample is examined.
 
-\[
-H_1:\delta>0
-\qquad\text{or}\qquad
-H_1:\delta<0.
-\]
+| Research question | Alternative | Relevant tail(s) |
+|---|---|---|
+| Does the mean gap differ from zero? | \(H_1:\delta\ne0\) | both tails |
+| Is the mean gap below zero? | \(H_1:\delta<0\) | left tail |
+| Is the mean gap above zero? | \(H_1:\delta>0\) | right tail |
 
-Its p-value uses only the corresponding tail. The direction must follow from
-the research question and be chosen before the data are inspected; it is not
-valid to choose a tail because the observed estimate happens to point that
-way. Course practice and exams use two-sided tests, because a difference in
-either direction is usually relevant in business research.
+In all three cases, the test statistic is compared with its distribution under
+the zero boundary \(H_0:\delta=0\). What changes is which values count as
+evidence for the stated alternative.
+
+<img src="B09-confidence-intervals_files/figure-html/b09-one-two-sided-comparison-1.png" width="672" />
+
+All three panels show the same t distribution under \(H_0\) and use
+\(\alpha=0.05\); the orange areas are the rejection regions. In the two-sided
+test, 2.5% lies in each rejection tail. In a one-sided test, the full 5% lies
+in the direction named by \(H_1\). Its critical value is therefore closer to
+zero in that direction.
+
+This makes a one-sided test more able to detect an effect in the chosen
+direction, but results in the opposite direction do not support that
+alternative. The direction must follow from the research question and be fixed
+before the data are inspected. It is not valid to choose the tail because the
+observed estimate happens to point that way, or simply to obtain a smaller
+p-value.
+
+For the equity-gap example, the observed statistic is \(t=-2.91\):
+
+- the two-sided p-value is about \(0.0046\);
+- for a **pre-specified** left-sided alternative \(H_1:\delta<0\), the p-value
+  is about 0.0023;
+- for a **pre-specified** right-sided alternative \(H_1:\delta>0\), the p-value
+  is about 0.9977.
+
+The negative estimate agrees with the left-sided alternative and points away
+from the right-sided alternative. Course practice and exams use two-sided
+tests, because a difference in either direction is usually relevant in
+business research.
 
 ### The confidence interval and test tell the same story
 

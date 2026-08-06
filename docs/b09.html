@@ -390,17 +390,67 @@ from 15 percentage points. The negative estimate indicates that it is lower.</p>
 </div>
 <div id="one-sided-alternatives-overview" class="section level3 hasAnchor">
 <h3>One-sided alternatives: overview<a href="b09.html#one-sided-alternatives-overview" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A one-sided alternative specifies a direction:</p>
-<p><span class="math display">\[
-H_1:\delta&gt;0
-\qquad\text{or}\qquad
-H_1:\delta&lt;0.
-\]</span></p>
-<p>Its p-value uses only the corresponding tail. The direction must follow from
-the research question and be chosen before the data are inspected; it is not
-valid to choose a tail because the observed estimate happens to point that
-way. Course practice and exams use two-sided tests, because a difference in
-either direction is usually relevant in business research.</p>
+<p>A two-sided test asks whether a parameter differs from zero in <strong>either</strong>
+direction. A one-sided test asks a directional question chosen before the
+sample is examined.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Research question</th>
+<th>Alternative</th>
+<th>Relevant tail(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Does the mean gap differ from zero?</td>
+<td><span class="math inline">\(H_1:\delta\ne0\)</span></td>
+<td>both tails</td>
+</tr>
+<tr class="even">
+<td>Is the mean gap below zero?</td>
+<td><span class="math inline">\(H_1:\delta&lt;0\)</span></td>
+<td>left tail</td>
+</tr>
+<tr class="odd">
+<td>Is the mean gap above zero?</td>
+<td><span class="math inline">\(H_1:\delta&gt;0\)</span></td>
+<td>right tail</td>
+</tr>
+</tbody>
+</table>
+<p>In all three cases, the test statistic is compared with its distribution under
+the zero boundary <span class="math inline">\(H_0:\delta=0\)</span>. What changes is which values count as
+evidence for the stated alternative.</p>
+<p><img src="B09-confidence-intervals_files/figure-html/b09-one-two-sided-comparison-1.png" width="672" /></p>
+<p>All three panels show the same t distribution under <span class="math inline">\(H_0\)</span> and use
+<span class="math inline">\(\alpha=0.05\)</span>; the orange areas are the rejection regions. In the two-sided
+test, 2.5% lies in each rejection tail. In a one-sided test, the full 5% lies
+in the direction named by <span class="math inline">\(H_1\)</span>. Its critical value is therefore closer to
+zero in that direction.</p>
+<p>This makes a one-sided test more able to detect an effect in the chosen
+direction, but results in the opposite direction do not support that
+alternative. The direction must follow from the research question and be fixed
+before the data are inspected. It is not valid to choose the tail because the
+observed estimate happens to point that way, or simply to obtain a smaller
+p-value.</p>
+<p>For the equity-gap example, the observed statistic is <span class="math inline">\(t=-2.91\)</span>:</p>
+<ul>
+<li>the two-sided p-value is about <span class="math inline">\(0.0046\)</span>;</li>
+<li>for a <strong>pre-specified</strong> left-sided alternative <span class="math inline">\(H_1:\delta&lt;0\)</span>, the p-value
+is about 0.0023;</li>
+<li>for a <strong>pre-specified</strong> right-sided alternative <span class="math inline">\(H_1:\delta&gt;0\)</span>, the p-value
+is about 0.9977.</li>
+</ul>
+<p>The negative estimate agrees with the left-sided alternative and points away
+from the right-sided alternative. Course practice and exams use two-sided
+tests, because a difference in either direction is usually relevant in
+business research.</p>
 </div>
 <div id="the-confidence-interval-and-test-tell-the-same-story" class="section level3 hasAnchor">
 <h3>The confidence interval and test tell the same story<a href="b09.html#the-confidence-interval-and-test-tell-the-same-story" class="anchor-section" aria-label="Anchor link to header"></a></h3>
