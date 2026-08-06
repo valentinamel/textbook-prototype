@@ -325,17 +325,17 @@ Z=
 \frac{\hat p-0.50}
 {\sqrt{0.50(0.50)/n}}.
 \]</span></p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="b10.html#cb116-1" tabindex="-1"></a>null_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0 <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0) <span class="sc">/</span> n)</span>
-<span id="cb116-2"><a href="b10.html#cb116-2" tabindex="-1"></a>z_value <span class="ot">&lt;-</span> deal_gap <span class="sc">/</span> null_se</span>
-<span id="cb116-3"><a href="b10.html#cb116-3" tabindex="-1"></a>two_sided_p <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(z_value))</span>
-<span id="cb116-4"><a href="b10.html#cb116-4" tabindex="-1"></a></span>
-<span id="cb116-5"><a href="b10.html#cb116-5" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb116-6"><a href="b10.html#cb116-6" tabindex="-1"></a>  <span class="at">sample_proportion =</span> phat,</span>
-<span id="cb116-7"><a href="b10.html#cb116-7" tabindex="-1"></a>  <span class="at">estimated_gap =</span> deal_gap,</span>
-<span id="cb116-8"><a href="b10.html#cb116-8" tabindex="-1"></a>  <span class="at">null_standard_error =</span> null_se,</span>
-<span id="cb116-9"><a href="b10.html#cb116-9" tabindex="-1"></a>  <span class="at">z_statistic =</span> z_value,</span>
-<span id="cb116-10"><a href="b10.html#cb116-10" tabindex="-1"></a>  <span class="at">two_sided_p_value =</span> two_sided_p</span>
-<span id="cb116-11"><a href="b10.html#cb116-11" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="b10.html#cb120-1" tabindex="-1"></a>null_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0 <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0) <span class="sc">/</span> n)</span>
+<span id="cb120-2"><a href="b10.html#cb120-2" tabindex="-1"></a>z_value <span class="ot">&lt;-</span> deal_gap <span class="sc">/</span> null_se</span>
+<span id="cb120-3"><a href="b10.html#cb120-3" tabindex="-1"></a>two_sided_p <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(z_value))</span>
+<span id="cb120-4"><a href="b10.html#cb120-4" tabindex="-1"></a></span>
+<span id="cb120-5"><a href="b10.html#cb120-5" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb120-6"><a href="b10.html#cb120-6" tabindex="-1"></a>  <span class="at">sample_proportion =</span> phat,</span>
+<span id="cb120-7"><a href="b10.html#cb120-7" tabindex="-1"></a>  <span class="at">estimated_gap =</span> deal_gap,</span>
+<span id="cb120-8"><a href="b10.html#cb120-8" tabindex="-1"></a>  <span class="at">null_standard_error =</span> null_se,</span>
+<span id="cb120-9"><a href="b10.html#cb120-9" tabindex="-1"></a>  <span class="at">z_statistic =</span> z_value,</span>
+<span id="cb120-10"><a href="b10.html#cb120-10" tabindex="-1"></a>  <span class="at">two_sided_p_value =</span> two_sided_p</span>
+<span id="cb120-11"><a href="b10.html#cb120-11" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##   sample_proportion       estimated_gap null_standard_error         z_statistic 
 ##         0.640000000         0.140000000         0.050000000         2.800000000 
 ##   two_sided_p_value 
@@ -355,15 +355,15 @@ places it above 50%.</p>
 \hat p\pm1.96
 \sqrt{\frac{\hat p(1-\hat p)}{n}}.
 \]</span></p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="b10.html#cb118-1" tabindex="-1"></a>estimated_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(phat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> phat) <span class="sc">/</span> n)</span>
-<span id="cb118-2"><a href="b10.html#cb118-2" tabindex="-1"></a>proportion_ci <span class="ot">&lt;-</span> phat <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">*</span> estimated_se</span>
-<span id="cb118-3"><a href="b10.html#cb118-3" tabindex="-1"></a>gap_ci <span class="ot">&lt;-</span> proportion_ci <span class="sc">-</span> p0</span>
-<span id="cb118-4"><a href="b10.html#cb118-4" tabindex="-1"></a></span>
-<span id="cb118-5"><a href="b10.html#cb118-5" tabindex="-1"></a><span class="fu">c</span>(<span class="at">proportion_lower =</span> proportion_ci[<span class="dv">1</span>],</span>
-<span id="cb118-6"><a href="b10.html#cb118-6" tabindex="-1"></a>  <span class="at">proportion_upper =</span> proportion_ci[<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="b10.html#cb122-1" tabindex="-1"></a>estimated_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(phat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> phat) <span class="sc">/</span> n)</span>
+<span id="cb122-2"><a href="b10.html#cb122-2" tabindex="-1"></a>proportion_ci <span class="ot">&lt;-</span> phat <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">*</span> estimated_se</span>
+<span id="cb122-3"><a href="b10.html#cb122-3" tabindex="-1"></a>gap_ci <span class="ot">&lt;-</span> proportion_ci <span class="sc">-</span> p0</span>
+<span id="cb122-4"><a href="b10.html#cb122-4" tabindex="-1"></a></span>
+<span id="cb122-5"><a href="b10.html#cb122-5" tabindex="-1"></a><span class="fu">c</span>(<span class="at">proportion_lower =</span> proportion_ci[<span class="dv">1</span>],</span>
+<span id="cb122-6"><a href="b10.html#cb122-6" tabindex="-1"></a>  <span class="at">proportion_upper =</span> proportion_ci[<span class="dv">2</span>])</span></code></pre></div>
 <pre><code>## proportion_lower proportion_upper 
 ##          0.54592          0.73408</code></pre>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="b10.html#cb120-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">gap_lower =</span> gap_ci[<span class="dv">1</span>], <span class="at">gap_upper =</span> gap_ci[<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="b10.html#cb124-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">gap_lower =</span> gap_ci[<span class="dv">1</span>], <span class="at">gap_upper =</span> gap_ci[<span class="dv">2</span>])</span></code></pre></div>
 <pre><code>## gap_lower gap_upper 
 ##   0.04592   0.23408</code></pre>
 <p>The proportion interval is approximately <span class="math inline">\((0.546,0.734)\)</span>; the equivalent
@@ -455,12 +455,12 @@ effect can be non-significant in a small or noisy sample. Always report:</p>
 <h3>Preview: the test attached to a regression slope<a href="b10.html#preview-the-test-attached-to-a-regression-slope" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>R applies the same zero-null logic to every regression coefficient. Consider
 the simple model of initial equity offered on season:</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="b10.html#cb122-1" tabindex="-1"></a>preview_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season, <span class="at">data =</span> sharks)</span>
-<span id="cb122-2"><a href="b10.html#cb122-2" tabindex="-1"></a><span class="fu">summary</span>(preview_model)<span class="sc">$</span>coefficients</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="b10.html#cb126-1" tabindex="-1"></a>preview_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season, <span class="at">data =</span> sharks)</span>
+<span id="cb126-2"><a href="b10.html#cb126-2" tabindex="-1"></a><span class="fu">summary</span>(preview_model)<span class="sc">$</span>coefficients</span></code></pre></div>
 <pre><code>##               Estimate Std. Error   t value      Pr(&gt;|t|)
 ## (Intercept) 20.4565874 0.46442667  44.04697 4.922706e-269
 ## season      -0.8241241 0.04752298 -17.34159  2.514546e-61</code></pre>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="b10.html#cb124-1" tabindex="-1"></a><span class="fu">confint</span>(preview_model)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="b10.html#cb128-1" tabindex="-1"></a><span class="fu">confint</span>(preview_model)</span></code></pre></div>
 <pre><code>##                  2.5 %     97.5 %
 ## (Intercept) 19.5455616 21.3676132
 ## season      -0.9173458 -0.7309023</code></pre>

@@ -388,19 +388,12 @@ F_S(3)=P(S\le3)
 =\frac{160}{1441}\approx0.111.
 \]</span></p>
 <p><img src="B03-relationships_files/figure-html/b03-season-cdf-1.png" width="672" /></p>
-<p>Every CDF is non-decreasing and right-continuous, with</p>
-<p><span class="math display">\[
-\lim_{a\to-\infty}F_X(a)=0
-\qquad\text{and}\qquad
-\lim_{a\to\infty}F_X(a)=1.
-\]</span></p>
-<p>For a discrete variable, the CDF is a step function. It stays flat between
-possible values and jumps whenever probability mass is encountered.</p>
-<p>The size of the jump at <span class="math inline">\(x\)</span> recovers the PMF. If
-<span class="math inline">\(F_X(x^-)\)</span> denotes the CDF value immediately before <span class="math inline">\(x\)</span>, then</p>
-<p><span class="math display">\[
-p_X(x)=F_X(x)-F_X(x^-).
-\]</span></p>
+<p>A CDF accumulates probability as the threshold moves from left to right. It
+can stay flat or rise, but it cannot fall. It begins near 0 before any possible
+values and reaches 1 after all possible values have been included.</p>
+<p>For a discrete variable, the CDF is a step graph. It stays flat between
+possible values and jumps at each value that has positive probability. A
+larger jump means that more probability is attached to that value.</p>
 <p>For the deal indicator:</p>
 <p><span class="math display">\[
 F_X(a)=

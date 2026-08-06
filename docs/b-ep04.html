@@ -269,19 +269,19 @@ D=\text{initial equity offered}-15.
 <summary>
 Check your answer
 </summary>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="b-ep04.html#cb126-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> pitch_sample<span class="sc">$</span>equity_gap_pp</span>
-<span id="cb126-2"><a href="b-ep04.html#cb126-2" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(d)</span>
-<span id="cb126-3"><a href="b-ep04.html#cb126-3" tabindex="-1"></a>d_bar <span class="ot">&lt;-</span> <span class="fu">mean</span>(d)</span>
-<span id="cb126-4"><a href="b-ep04.html#cb126-4" tabindex="-1"></a>s_d <span class="ot">&lt;-</span> <span class="fu">sd</span>(d)</span>
-<span id="cb126-5"><a href="b-ep04.html#cb126-5" tabindex="-1"></a>se_d <span class="ot">&lt;-</span> s_d <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
-<span id="cb126-6"><a href="b-ep04.html#cb126-6" tabindex="-1"></a>critical <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
-<span id="cb126-7"><a href="b-ep04.html#cb126-7" tabindex="-1"></a>ci_d <span class="ot">&lt;-</span> d_bar <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> critical <span class="sc">*</span> se_d</span>
-<span id="cb126-8"><a href="b-ep04.html#cb126-8" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> d_bar <span class="sc">/</span> se_d</span>
-<span id="cb126-9"><a href="b-ep04.html#cb126-9" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
-<span id="cb126-10"><a href="b-ep04.html#cb126-10" tabindex="-1"></a></span>
-<span id="cb126-11"><a href="b-ep04.html#cb126-11" tabindex="-1"></a><span class="fu">c</span>(<span class="at">estimate =</span> d_bar, <span class="at">sd =</span> s_d, <span class="at">se =</span> se_d, <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>,</span>
-<span id="cb126-12"><a href="b-ep04.html#cb126-12" tabindex="-1"></a>  <span class="at">lower =</span> ci_d[<span class="dv">1</span>], <span class="at">upper =</span> ci_d[<span class="dv">2</span>],</span>
-<span id="cb126-13"><a href="b-ep04.html#cb126-13" tabindex="-1"></a>  <span class="at">t =</span> t_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="b-ep04.html#cb130-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> pitch_sample<span class="sc">$</span>equity_gap_pp</span>
+<span id="cb130-2"><a href="b-ep04.html#cb130-2" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(d)</span>
+<span id="cb130-3"><a href="b-ep04.html#cb130-3" tabindex="-1"></a>d_bar <span class="ot">&lt;-</span> <span class="fu">mean</span>(d)</span>
+<span id="cb130-4"><a href="b-ep04.html#cb130-4" tabindex="-1"></a>s_d <span class="ot">&lt;-</span> <span class="fu">sd</span>(d)</span>
+<span id="cb130-5"><a href="b-ep04.html#cb130-5" tabindex="-1"></a>se_d <span class="ot">&lt;-</span> s_d <span class="sc">/</span> <span class="fu">sqrt</span>(n)</span>
+<span id="cb130-6"><a href="b-ep04.html#cb130-6" tabindex="-1"></a>critical <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb130-7"><a href="b-ep04.html#cb130-7" tabindex="-1"></a>ci_d <span class="ot">&lt;-</span> d_bar <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> critical <span class="sc">*</span> se_d</span>
+<span id="cb130-8"><a href="b-ep04.html#cb130-8" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> d_bar <span class="sc">/</span> se_d</span>
+<span id="cb130-9"><a href="b-ep04.html#cb130-9" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb130-10"><a href="b-ep04.html#cb130-10" tabindex="-1"></a></span>
+<span id="cb130-11"><a href="b-ep04.html#cb130-11" tabindex="-1"></a><span class="fu">c</span>(<span class="at">estimate =</span> d_bar, <span class="at">sd =</span> s_d, <span class="at">se =</span> se_d, <span class="at">df =</span> n <span class="sc">-</span> <span class="dv">1</span>,</span>
+<span id="cb130-12"><a href="b-ep04.html#cb130-12" tabindex="-1"></a>  <span class="at">lower =</span> ci_d[<span class="dv">1</span>], <span class="at">upper =</span> ci_d[<span class="dv">2</span>],</span>
+<span id="cb130-13"><a href="b-ep04.html#cb130-13" tabindex="-1"></a>  <span class="at">t =</span> t_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
 <pre><code>##     estimate           sd           se           df        lower        upper 
 ## -2.240000000  7.707886555  0.770788656 99.000000000 -3.769411916 -0.710588084 
 ##            t      p_value 
@@ -307,25 +307,25 @@ into an interval for <span class="math inline">\(\delta_p\)</span>.</li>
 <summary>
 Check your answer
 </summary>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="b-ep04.html#cb128-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(pitch_sample)</span>
-<span id="cb128-2"><a href="b-ep04.html#cb128-2" tabindex="-1"></a>phat <span class="ot">&lt;-</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>deal_on_show)</span>
-<span id="cb128-3"><a href="b-ep04.html#cb128-3" tabindex="-1"></a>p0 <span class="ot">&lt;-</span> <span class="fl">0.50</span></span>
-<span id="cb128-4"><a href="b-ep04.html#cb128-4" tabindex="-1"></a>delta_hat <span class="ot">&lt;-</span> phat <span class="sc">-</span> p0</span>
-<span id="cb128-5"><a href="b-ep04.html#cb128-5" tabindex="-1"></a></span>
-<span id="cb128-6"><a href="b-ep04.html#cb128-6" tabindex="-1"></a>null_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0 <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0) <span class="sc">/</span> n)</span>
-<span id="cb128-7"><a href="b-ep04.html#cb128-7" tabindex="-1"></a>z_value <span class="ot">&lt;-</span> delta_hat <span class="sc">/</span> null_se</span>
-<span id="cb128-8"><a href="b-ep04.html#cb128-8" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(z_value))</span>
-<span id="cb128-9"><a href="b-ep04.html#cb128-9" tabindex="-1"></a></span>
-<span id="cb128-10"><a href="b-ep04.html#cb128-10" tabindex="-1"></a>estimated_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(phat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> phat) <span class="sc">/</span> n)</span>
-<span id="cb128-11"><a href="b-ep04.html#cb128-11" tabindex="-1"></a>ci_p <span class="ot">&lt;-</span> phat <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">*</span> estimated_se</span>
-<span id="cb128-12"><a href="b-ep04.html#cb128-12" tabindex="-1"></a>ci_delta <span class="ot">&lt;-</span> ci_p <span class="sc">-</span> p0</span>
-<span id="cb128-13"><a href="b-ep04.html#cb128-13" tabindex="-1"></a></span>
-<span id="cb128-14"><a href="b-ep04.html#cb128-14" tabindex="-1"></a><span class="fu">c</span>(<span class="at">phat =</span> phat, <span class="at">estimated_gap =</span> delta_hat,</span>
-<span id="cb128-15"><a href="b-ep04.html#cb128-15" tabindex="-1"></a>  <span class="at">z =</span> z_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="b-ep04.html#cb132-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(pitch_sample)</span>
+<span id="cb132-2"><a href="b-ep04.html#cb132-2" tabindex="-1"></a>phat <span class="ot">&lt;-</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>deal_on_show)</span>
+<span id="cb132-3"><a href="b-ep04.html#cb132-3" tabindex="-1"></a>p0 <span class="ot">&lt;-</span> <span class="fl">0.50</span></span>
+<span id="cb132-4"><a href="b-ep04.html#cb132-4" tabindex="-1"></a>delta_hat <span class="ot">&lt;-</span> phat <span class="sc">-</span> p0</span>
+<span id="cb132-5"><a href="b-ep04.html#cb132-5" tabindex="-1"></a></span>
+<span id="cb132-6"><a href="b-ep04.html#cb132-6" tabindex="-1"></a>null_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0 <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p0) <span class="sc">/</span> n)</span>
+<span id="cb132-7"><a href="b-ep04.html#cb132-7" tabindex="-1"></a>z_value <span class="ot">&lt;-</span> delta_hat <span class="sc">/</span> null_se</span>
+<span id="cb132-8"><a href="b-ep04.html#cb132-8" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(z_value))</span>
+<span id="cb132-9"><a href="b-ep04.html#cb132-9" tabindex="-1"></a></span>
+<span id="cb132-10"><a href="b-ep04.html#cb132-10" tabindex="-1"></a>estimated_se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(phat <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> phat) <span class="sc">/</span> n)</span>
+<span id="cb132-11"><a href="b-ep04.html#cb132-11" tabindex="-1"></a>ci_p <span class="ot">&lt;-</span> phat <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">*</span> estimated_se</span>
+<span id="cb132-12"><a href="b-ep04.html#cb132-12" tabindex="-1"></a>ci_delta <span class="ot">&lt;-</span> ci_p <span class="sc">-</span> p0</span>
+<span id="cb132-13"><a href="b-ep04.html#cb132-13" tabindex="-1"></a></span>
+<span id="cb132-14"><a href="b-ep04.html#cb132-14" tabindex="-1"></a><span class="fu">c</span>(<span class="at">phat =</span> phat, <span class="at">estimated_gap =</span> delta_hat,</span>
+<span id="cb132-15"><a href="b-ep04.html#cb132-15" tabindex="-1"></a>  <span class="at">z =</span> z_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
 <pre><code>##          phat estimated_gap             z       p_value 
 ##   0.640000000   0.140000000   2.800000000   0.005110261</code></pre>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="b-ep04.html#cb130-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">proportion_lower =</span> ci_p[<span class="dv">1</span>], <span class="at">proportion_upper =</span> ci_p[<span class="dv">2</span>],</span>
-<span id="cb130-2"><a href="b-ep04.html#cb130-2" tabindex="-1"></a>  <span class="at">gap_lower =</span> ci_delta[<span class="dv">1</span>], <span class="at">gap_upper =</span> ci_delta[<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="b-ep04.html#cb134-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">proportion_lower =</span> ci_p[<span class="dv">1</span>], <span class="at">proportion_upper =</span> ci_p[<span class="dv">2</span>],</span>
+<span id="cb134-2"><a href="b-ep04.html#cb134-2" tabindex="-1"></a>  <span class="at">gap_lower =</span> ci_delta[<span class="dv">1</span>], <span class="at">gap_upper =</span> ci_delta[<span class="dv">2</span>])</span></code></pre></div>
 <pre><code>## proportion_lower proportion_upper        gap_lower        gap_upper 
 ##          0.54592          0.73408          0.04592          0.23408</code></pre>
 <p><span class="math inline">\(\hat p=0.64\)</span>, so <span class="math inline">\(\widehat\delta_p=0.14\)</span>. Under the null,

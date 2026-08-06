@@ -307,27 +307,27 @@ make televised pitches representative of all entrepreneurs.</p>
 <div id="estimate-a-difference-from-a-benchmark" class="section level3 hasAnchor">
 <h3>Estimate a difference from a benchmark<a href="b09.html#estimate-a-difference-from-a-benchmark" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In the reproducible sample,</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="b09.html#cb108-1" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb108-2"><a href="b09.html#cb108-2" tabindex="-1"></a>  <span class="at">sample_mean_equity =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
-<span id="cb108-3"><a href="b09.html#cb108-3" tabindex="-1"></a>  <span class="at">sample_mean_gap =</span> gap_bar,</span>
-<span id="cb108-4"><a href="b09.html#cb108-4" tabindex="-1"></a>  <span class="at">sample_sd_gap =</span> gap_sd,</span>
-<span id="cb108-5"><a href="b09.html#cb108-5" tabindex="-1"></a>  <span class="at">standard_error_gap =</span> gap_se,</span>
-<span id="cb108-6"><a href="b09.html#cb108-6" tabindex="-1"></a>  <span class="at">degrees_of_freedom =</span> df</span>
-<span id="cb108-7"><a href="b09.html#cb108-7" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="b09.html#cb112-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb112-2"><a href="b09.html#cb112-2" tabindex="-1"></a>  <span class="at">sample_mean_equity =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
+<span id="cb112-3"><a href="b09.html#cb112-3" tabindex="-1"></a>  <span class="at">sample_mean_gap =</span> gap_bar,</span>
+<span id="cb112-4"><a href="b09.html#cb112-4" tabindex="-1"></a>  <span class="at">sample_sd_gap =</span> gap_sd,</span>
+<span id="cb112-5"><a href="b09.html#cb112-5" tabindex="-1"></a>  <span class="at">standard_error_gap =</span> gap_se,</span>
+<span id="cb112-6"><a href="b09.html#cb112-6" tabindex="-1"></a>  <span class="at">degrees_of_freedom =</span> df</span>
+<span id="cb112-7"><a href="b09.html#cb112-7" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## sample_mean_equity    sample_mean_gap      sample_sd_gap standard_error_gap 
 ##         12.7600000         -2.2400000          7.7078866          0.7707887 
 ## degrees_of_freedom 
 ##         99.0000000</code></pre>
 <p>The estimated population mean gap is <span class="math inline">\(-2.24\)</span> percentage points: the sample
 mean equity offer is 2.24 percentage points below the 15-point benchmark.</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="b09.html#cb110-1" tabindex="-1"></a>critical_t <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> df)</span>
-<span id="cb110-2"><a href="b09.html#cb110-2" tabindex="-1"></a>gap_ci <span class="ot">&lt;-</span> gap_bar <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> critical_t <span class="sc">*</span> gap_se</span>
-<span id="cb110-3"><a href="b09.html#cb110-3" tabindex="-1"></a>mean_ci <span class="ot">&lt;-</span> benchmark <span class="sc">+</span> gap_ci</span>
-<span id="cb110-4"><a href="b09.html#cb110-4" tabindex="-1"></a></span>
-<span id="cb110-5"><a href="b09.html#cb110-5" tabindex="-1"></a><span class="fu">c</span>(<span class="at">gap_lower =</span> gap_ci[<span class="dv">1</span>], <span class="at">gap_upper =</span> gap_ci[<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="b09.html#cb114-1" tabindex="-1"></a>critical_t <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> df)</span>
+<span id="cb114-2"><a href="b09.html#cb114-2" tabindex="-1"></a>gap_ci <span class="ot">&lt;-</span> gap_bar <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> critical_t <span class="sc">*</span> gap_se</span>
+<span id="cb114-3"><a href="b09.html#cb114-3" tabindex="-1"></a>mean_ci <span class="ot">&lt;-</span> benchmark <span class="sc">+</span> gap_ci</span>
+<span id="cb114-4"><a href="b09.html#cb114-4" tabindex="-1"></a></span>
+<span id="cb114-5"><a href="b09.html#cb114-5" tabindex="-1"></a><span class="fu">c</span>(<span class="at">gap_lower =</span> gap_ci[<span class="dv">1</span>], <span class="at">gap_upper =</span> gap_ci[<span class="dv">2</span>])</span></code></pre></div>
 <pre><code>##  gap_lower  gap_upper 
 ## -3.7694119 -0.7105881</code></pre>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="b09.html#cb112-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">mean_lower =</span> mean_ci[<span class="dv">1</span>], <span class="at">mean_upper =</span> mean_ci[<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="b09.html#cb116-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">mean_lower =</span> mean_ci[<span class="dv">1</span>], <span class="at">mean_upper =</span> mean_ci[<span class="dv">2</span>])</span></code></pre></div>
 <pre><code>## mean_lower mean_upper 
 ##   11.23059   14.28941</code></pre>
 <p>The 95% interval for the mean gap is approximately
@@ -353,16 +353,16 @@ T=
 =
 \frac{\bar D}{S_D/\sqrt n}.
 \]</span></p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="b09.html#cb114-1" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> gap_bar <span class="sc">/</span> gap_se</span>
-<span id="cb114-2"><a href="b09.html#cb114-2" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> df)</span>
-<span id="cb114-3"><a href="b09.html#cb114-3" tabindex="-1"></a></span>
-<span id="cb114-4"><a href="b09.html#cb114-4" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb114-5"><a href="b09.html#cb114-5" tabindex="-1"></a>  <span class="at">estimate =</span> gap_bar,</span>
-<span id="cb114-6"><a href="b09.html#cb114-6" tabindex="-1"></a>  <span class="at">standard_error =</span> gap_se,</span>
-<span id="cb114-7"><a href="b09.html#cb114-7" tabindex="-1"></a>  <span class="at">t_statistic =</span> t_value,</span>
-<span id="cb114-8"><a href="b09.html#cb114-8" tabindex="-1"></a>  <span class="at">degrees_of_freedom =</span> df,</span>
-<span id="cb114-9"><a href="b09.html#cb114-9" tabindex="-1"></a>  <span class="at">two_sided_p_value =</span> p_value</span>
-<span id="cb114-10"><a href="b09.html#cb114-10" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="b09.html#cb118-1" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> gap_bar <span class="sc">/</span> gap_se</span>
+<span id="cb118-2"><a href="b09.html#cb118-2" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> df)</span>
+<span id="cb118-3"><a href="b09.html#cb118-3" tabindex="-1"></a></span>
+<span id="cb118-4"><a href="b09.html#cb118-4" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb118-5"><a href="b09.html#cb118-5" tabindex="-1"></a>  <span class="at">estimate =</span> gap_bar,</span>
+<span id="cb118-6"><a href="b09.html#cb118-6" tabindex="-1"></a>  <span class="at">standard_error =</span> gap_se,</span>
+<span id="cb118-7"><a href="b09.html#cb118-7" tabindex="-1"></a>  <span class="at">t_statistic =</span> t_value,</span>
+<span id="cb118-8"><a href="b09.html#cb118-8" tabindex="-1"></a>  <span class="at">degrees_of_freedom =</span> df,</span>
+<span id="cb118-9"><a href="b09.html#cb118-9" tabindex="-1"></a>  <span class="at">two_sided_p_value =</span> p_value</span>
+<span id="cb118-10"><a href="b09.html#cb118-10" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##           estimate     standard_error        t_statistic degrees_of_freedom 
 ##       -2.240000000        0.770788656       -2.906114385       99.000000000 
 ##  two_sided_p_value 
@@ -388,6 +388,20 @@ gap.</p>
 provides evidence that mean initial equity in the recorded-pitch frame differs
 from 15 percentage points. The negative estimate indicates that it is lower.</p>
 </div>
+<div id="one-sided-alternatives-overview" class="section level3 hasAnchor">
+<h3>One-sided alternatives: overview<a href="b09.html#one-sided-alternatives-overview" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A one-sided alternative specifies a direction:</p>
+<p><span class="math display">\[
+H_1:\delta&gt;0
+\qquad\text{or}\qquad
+H_1:\delta&lt;0.
+\]</span></p>
+<p>Its p-value uses only the corresponding tail. The direction must follow from
+the research question and be chosen before the data are inspected; it is not
+valid to choose a tail because the observed estimate happens to point that
+way. Course practice and exams use two-sided tests, because a difference in
+either direction is usually relevant in business research.</p>
+</div>
 <div id="the-confidence-interval-and-test-tell-the-same-story" class="section level3 hasAnchor">
 <h3>The confidence interval and test tell the same story<a href="b09.html#the-confidence-interval-and-test-tell-the-same-story" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For the same two-sided t procedure:</p>
@@ -405,6 +419,17 @@ direction, plausible magnitude, and precision of the difference.</p>
 <p>The parameter is fixed; interval endpoints vary from sample to sample. If the
 same valid procedure were repeated many times, about 95% of the resulting
 intervals would contain the parameter.</p>
+<p>The next simulation repeats the random sample and interval calculation 100
+times. The fixed target is the mean initial equity among all 1,441 recorded
+pitches.</p>
+<p><img src="B09-confidence-intervals_files/figure-html/b09-coverage-simulation-1.png" width="672" /></p>
+<p>Each horizontal segment is one 95% confidence interval; its dot is the sample
+mean. The horizontal axis is mean initial equity in percentage points. The
+vertical axis simply orders the 100 repetitions so the intervals can be seen.
+The dark vertical line is the fixed target mean. In this run,
+96 of 100 intervals cross that line. A new run need not
+give exactly 95, but across many repetitions the proportion approaches about
+95% when the procedure works as intended.</p>
 <p>Do not say that this realised interval has a 95% probability of containing the
 fixed parameter. Also remember that a narrow interval does not repair
 selection bias, dependence, measurement error, or a wrong model.</p>

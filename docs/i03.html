@@ -259,14 +259,14 @@ compares that baseline with fitted values <span class="math inline">\(\hat y_i\)
 \]</span></p>
 <p>For ordinary least squares with an intercept,
 <span class="math inline">\(\text{SST}=\text{SSR}+\text{SSE}\)</span>.</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="i03.html#cb148-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> deals<span class="sc">$</span>deal_100k</span>
-<span id="cb148-2"><a href="i03.html#cb148-2" tabindex="-1"></a>yhat <span class="ot">&lt;-</span> <span class="fu">fitted</span>(deal_model)</span>
-<span id="cb148-3"><a href="i03.html#cb148-3" tabindex="-1"></a></span>
-<span id="cb148-4"><a href="i03.html#cb148-4" tabindex="-1"></a>SST <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb148-5"><a href="i03.html#cb148-5" tabindex="-1"></a>SSE <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb148-6"><a href="i03.html#cb148-6" tabindex="-1"></a>SSR <span class="ot">&lt;-</span> <span class="fu">sum</span>((yhat <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb148-7"><a href="i03.html#cb148-7" tabindex="-1"></a></span>
-<span id="cb148-8"><a href="i03.html#cb148-8" tabindex="-1"></a><span class="fu">c</span>(<span class="at">SST =</span> SST, <span class="at">SSR =</span> SSR, <span class="at">SSE =</span> SSE, <span class="at">check =</span> SSR <span class="sc">+</span> SSE)</span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="i03.html#cb152-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> deals<span class="sc">$</span>deal_100k</span>
+<span id="cb152-2"><a href="i03.html#cb152-2" tabindex="-1"></a>yhat <span class="ot">&lt;-</span> <span class="fu">fitted</span>(deal_model)</span>
+<span id="cb152-3"><a href="i03.html#cb152-3" tabindex="-1"></a></span>
+<span id="cb152-4"><a href="i03.html#cb152-4" tabindex="-1"></a>SST <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb152-5"><a href="i03.html#cb152-5" tabindex="-1"></a>SSE <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb152-6"><a href="i03.html#cb152-6" tabindex="-1"></a>SSR <span class="ot">&lt;-</span> <span class="fu">sum</span>((yhat <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb152-7"><a href="i03.html#cb152-7" tabindex="-1"></a></span>
+<span id="cb152-8"><a href="i03.html#cb152-8" tabindex="-1"></a><span class="fu">c</span>(<span class="at">SST =</span> SST, <span class="at">SSR =</span> SSR, <span class="at">SSE =</span> SSE, <span class="at">check =</span> SSR <span class="sc">+</span> SSE)</span></code></pre></div>
 <pre><code>##       SST       SSR       SSE     check 
 ## 10350.932  8044.112  2306.820 10350.932</code></pre>
 </div>
@@ -278,11 +278,11 @@ R^2=\frac{\text{SSR}}{\text{SST}}
 \]</span></p>
 <p>It is the proportion of observed sample variation in <span class="math inline">\(Y\)</span> explained by the
 fitted values from the model.</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="i03.html#cb150-1" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb150-2"><a href="i03.html#cb150-2" tabindex="-1"></a>  <span class="at">manual =</span> <span class="dv">1</span> <span class="sc">-</span> SSE <span class="sc">/</span> SST,</span>
-<span id="cb150-3"><a href="i03.html#cb150-3" tabindex="-1"></a>  <span class="at">from_R =</span> <span class="fu">summary</span>(deal_model)<span class="sc">$</span>r.squared,</span>
-<span id="cb150-4"><a href="i03.html#cb150-4" tabindex="-1"></a>  <span class="at">correlation_squared =</span> <span class="fu">cor</span>(deals<span class="sc">$</span>ask_100k, deals<span class="sc">$</span>deal_100k)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb150-5"><a href="i03.html#cb150-5" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="i03.html#cb154-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb154-2"><a href="i03.html#cb154-2" tabindex="-1"></a>  <span class="at">manual =</span> <span class="dv">1</span> <span class="sc">-</span> SSE <span class="sc">/</span> SST,</span>
+<span id="cb154-3"><a href="i03.html#cb154-3" tabindex="-1"></a>  <span class="at">from_R =</span> <span class="fu">summary</span>(deal_model)<span class="sc">$</span>r.squared,</span>
+<span id="cb154-4"><a href="i03.html#cb154-4" tabindex="-1"></a>  <span class="at">correlation_squared =</span> <span class="fu">cor</span>(deals<span class="sc">$</span>ask_100k, deals<span class="sc">$</span>deal_100k)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb154-5"><a href="i03.html#cb154-5" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##              manual              from_R correlation_squared 
 ##           0.7771389           0.7771389           0.7771389</code></pre>
 <p>Here <span class="math inline">\(R^2\approx0.777\)</span>: about 77.7% of the variation in agreed on-air deal
@@ -311,7 +311,7 @@ F=\frac{\text{SSR}/k}{\text{SSE}/(n-k-1)}.
 \]</span></p>
 <p>Large <span class="math inline">\(F\)</span> means the explained variation per predictor is large relative to
 the residual variation per residual degree of freedom.</p>
-<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="i03.html#cb152-1" tabindex="-1"></a><span class="fu">summary</span>(deal_model)</span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="i03.html#cb156-1" tabindex="-1"></a><span class="fu">summary</span>(deal_model)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = deal_100k ~ ask_100k, data = deals)
@@ -340,9 +340,9 @@ fits better than an intercept-only model under the inferential conditions.</p>
 <p><span class="math display">\[
 F=t^2.
 \]</span></p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="i03.html#cb154-1" tabindex="-1"></a>t_slope <span class="ot">&lt;-</span> <span class="fu">summary</span>(deal_model)<span class="sc">$</span>coefficients[<span class="st">&quot;ask_100k&quot;</span>, <span class="st">&quot;t value&quot;</span>]</span>
-<span id="cb154-2"><a href="i03.html#cb154-2" tabindex="-1"></a>f_model <span class="ot">&lt;-</span> <span class="fu">unname</span>(<span class="fu">summary</span>(deal_model)<span class="sc">$</span>fstatistic[<span class="st">&quot;value&quot;</span>])</span>
-<span id="cb154-3"><a href="i03.html#cb154-3" tabindex="-1"></a><span class="fu">c</span>(<span class="at">t_squared =</span> t_slope<span class="sc">^</span><span class="dv">2</span>, <span class="at">F =</span> f_model)</span></code></pre></div>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="i03.html#cb158-1" tabindex="-1"></a>t_slope <span class="ot">&lt;-</span> <span class="fu">summary</span>(deal_model)<span class="sc">$</span>coefficients[<span class="st">&quot;ask_100k&quot;</span>, <span class="st">&quot;t value&quot;</span>]</span>
+<span id="cb158-2"><a href="i03.html#cb158-2" tabindex="-1"></a>f_model <span class="ot">&lt;-</span> <span class="fu">unname</span>(<span class="fu">summary</span>(deal_model)<span class="sc">$</span>fstatistic[<span class="st">&quot;value&quot;</span>])</span>
+<span id="cb158-3"><a href="i03.html#cb158-3" tabindex="-1"></a><span class="fu">c</span>(<span class="at">t_squared =</span> t_slope<span class="sc">^</span><span class="dv">2</span>, <span class="at">F =</span> f_model)</span></code></pre></div>
 <pre><code>## t_squared         F 
 ##  3068.648  3068.648</code></pre>
 <p>This equivalence disappears when a multiple-regression F-test evaluates
@@ -363,7 +363,7 @@ decision support.</p>
 </div>
 <div id="read-the-complete-r-summary" class="section level3 hasAnchor">
 <h3>Read the complete R summary<a href="i03.html#read-the-complete-r-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="i03.html#cb156-1" tabindex="-1"></a><span class="fu">summary</span>(deal_model)</span></code></pre></div>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="i03.html#cb160-1" tabindex="-1"></a><span class="fu">summary</span>(deal_model)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = deal_100k ~ ask_100k, data = deals)

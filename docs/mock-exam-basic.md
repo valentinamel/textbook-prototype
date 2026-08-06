@@ -10,16 +10,16 @@ points**, so the exam grade is
 The real exam is closed book. The complete [QM Basic Formula
 Sheet](#formula-sheet) will be attached. Unless a question states otherwise,
 use a 5% significance level, report units, and show enough work for your method
-to be checked.
+to be checked. Use **180 minutes** as the practice time limit.
 
-| Question | Topic | Points |
-|---|---|---:|
-| 1 | Data and a histogram | 15 |
-| 2 | Probability and a discrete random variable | 20 |
-| 3 | Continuous distributions | 15 |
-| 4 | Sampling, confidence intervals, and a mean test | 25 |
-| 5 | A proportion test, errors, power, and R output | 25 |
-| **Total** |  | **100** |
+| Question | Topic | Points | Suggested minutes |
+|---|---|---:|---:|
+| 1 | Data and a histogram | 15 | 27 |
+| 2 | Probability and a discrete random variable | 20 | 36 |
+| 3 | Continuous distributions | 15 | 27 |
+| 4 | Sampling, confidence intervals, and a mean test | 25 | 45 |
+| 5 | A proportion test, errors, power, and R output | 25 | 45 |
+| **Total** |  | **100** | **180** |
 
 ## Question 1: Data and a histogram — 15 points
 

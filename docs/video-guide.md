@@ -138,7 +138,8 @@ No external video is assigned. Preparation is listed in the lecture chapter.
 - [07.2 Conditional PMFs](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/conditional-pmfs/)
   — a conditional distribution within a fixed value of another variable.
 - [07.4 Independence of Random Variables](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/independence-of-random-variables/)
-  — factorisation of the joint PMF.
+  — checking whether every joint probability equals the product of the two
+  corresponding marginal probabilities.
 - [12.10 Interpreting the Correlation Coefficient](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/interpreting-the-correlation-coefficient/)
   — what correlation does and does not describe.
 

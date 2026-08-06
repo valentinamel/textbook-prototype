@@ -239,39 +239,47 @@ provided.</p>
 <div class="formula-sheet">
 <div id="formula-notation" class="section level2 hasAnchor">
 <h2>Notation used throughout<a href="formula-sheet.html#formula-notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><span class="math inline">\(\Omega\)</span>: sample space; <span class="math inline">\(A,B\)</span>: events; <span class="math inline">\(A^c\)</span>: complement.</li>
-<li><span class="math inline">\(X,Y\)</span>: random variables; <span class="math inline">\(x_i,y_i\)</span>: observed values for row <span class="math inline">\(i\)</span>.</li>
-<li><span class="math inline">\(n\)</span>: sample size; <span class="math inline">\(N\)</span>: population size.</li>
-<li><span class="math inline">\(\mu=E[X]\)</span>, <span class="math inline">\(\sigma^2=\operatorname{Var}(X)\)</span>, and <span class="math inline">\(p\)</span>: population
-parameters.</li>
-<li><span class="math inline">\(\bar X, S^2,\widehat P\)</span>: estimators; <span class="math inline">\(\bar x,s^2,\hat p\)</span>: realised
-estimates.</li>
-<li><span class="math inline">\(\alpha\)</span>: significance level; <span class="math inline">\(df\)</span>: degrees of freedom.</li>
-</ul>
-<p>Unless stated otherwise, tests on this sheet are <strong>two-sided</strong>.</p>
+<p><span class="math display">\[
+\begin{array}{ll}
+\Omega&amp;\text{sample space}\\
+A,B&amp;\text{events}\\
+A^c&amp;\text{complement of }A\\
+X,Y&amp;\text{random variables}\\
+x_i,y_i&amp;\text{observed values in row }i\\
+n,N&amp;\text{sample size, population size}\\
+\mu,\sigma^2,p&amp;\text{population mean, variance, proportion}\\
+\bar X,S^2,\widehat P&amp;\text{estimators}\\
+\bar x,s^2,\hat p&amp;\text{realised estimates}\\
+\alpha&amp;\text{significance level}\\
+df&amp;\text{degrees of freedom}
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+H_0:\theta=\theta_0
+\qquad\text{versus}\qquad
+H_1:\theta\ne\theta_0
+\quad\text{(two-sided)}
+\]</span></p>
 </div>
 <div id="formula-l1" class="section level2 hasAnchor">
 <h2>Lecture 1 - Data summaries and units<a href="formula-sheet.html#formula-l1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For a category with count <span class="math inline">\(n_A\)</span> among <span class="math inline">\(n\)</span> observations,</p>
 <p><span class="math display">\[
 \text{proportion}=\frac{n_A}{n},
 \qquad
 \text{percentage}=100\frac{n_A}{n}\%.
 \]</span></p>
-<p>For values <span class="math inline">\(x_1,\ldots,x_n\)</span>,</p>
 <p><span class="math display">\[
 \bar x=\frac{1}{n}\sum_{i=1}^{n}x_i,
 \qquad
 \text{range}=\max_i x_i-\min_i x_i.
 \]</span></p>
-<p>A change from <span class="math inline">\(a\%\)</span> to <span class="math inline">\(b\%\)</span> is <span class="math inline">\(b-a\)</span> <strong>percentage points</strong>. Its
-relative percentage change is</p>
 <p><span class="math display">\[
-100\frac{b-a}{a}\% \quad (a\ne0).
+\begin{aligned}
+\text{percentage-point change}&amp;=b-a,\\
+\text{relative percentage change}&amp;=100\frac{b-a}{a}\%
+\quad(a\ne0).
+\end{aligned}
 \]</span></p>
-<p>Keep units throughout: a slope or rate has <strong>outcome units per predictor
-unit</strong>.</p>
 </div>
 <div id="formula-l2" class="section level2 hasAnchor">
 <h2>Lecture 2 - Probability foundations<a href="formula-sheet.html#formula-l2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -283,73 +291,77 @@ unit</strong>.</p>
 <p><span class="math display">\[
 P(A\cup B)=P(A)+P(B)-P(A\cap B).
 \]</span></p>
-<p>If <span class="math inline">\(A\cap B=\varnothing\)</span>, then</p>
 <p><span class="math display">\[
+A\cap B=\varnothing
+\quad\Longrightarrow\quad
 P(A\cup B)=P(A)+P(B).
 \]</span></p>
-<p>For a finite sample space with equally likely outcomes,</p>
 <p><span class="math display">\[
-P(A)=\frac{|A|}{|\Omega|}.
+P(A)=\frac{|A|}{|\Omega|}
+\quad\text{(equally likely outcomes)}.
 \]</span></p>
-<p>A random variable is a function <span class="math inline">\(X:\Omega\rightarrow\mathbb R\)</span>. An event is
-a subset of <span class="math inline">\(\Omega\)</span>, not a numerical variable.</p>
+<p><span class="math display">\[
+X:\Omega\rightarrow\mathbb R.
+\]</span></p>
+<p><span class="math display">\[
+B_i\cap B_j=\varnothing\ (i\ne j),
+\qquad
+\bigcup_{i=1}^{k}B_i=\Omega.
+\]</span></p>
 </div>
 <div id="formula-l3" class="section level2 hasAnchor">
 <h2>Lecture 3 - PMFs, CDFs, and expectation<a href="formula-sheet.html#formula-l3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For a discrete random variable with support <span class="math inline">\(\mathcal X\)</span>,</p>
 <p><span class="math display">\[
 p_X(x)=P(X=x),
 \qquad p_X(x)\ge0,
 \qquad \sum_{x\in\mathcal X}p_X(x)=1.
 \]</span></p>
-<p>The cumulative distribution function (CDF) is</p>
 <p><span class="math display">\[
 F_X(a)=P(X\le a)=\sum_{x\le a}p_X(x).
 \]</span></p>
-<p>For any CDF,</p>
 <p><span class="math display">\[
 P(a&lt;X\le b)=F_X(b)-F_X(a).
 \]</span></p>
-<p>Expectation and transformed expectation are</p>
 <p><span class="math display">\[
 E[X]=\sum_{x\in\mathcal X}x\,p_X(x),
 \qquad
 E[g(X)]=\sum_{x\in\mathcal X}g(x)p_X(x).
 \]</span></p>
-<p>If <span class="math inline">\(X\sim\operatorname{Bernoulli}(p)\)</span>,</p>
 <p><span class="math display">\[
+X\sim\operatorname{Bernoulli}(p):
+\qquad
 P(X=1)=p,\quad P(X=0)=1-p,\quad E[X]=p.
 \]</span></p>
 </div>
 <div id="formula-l4" class="section level2 hasAnchor">
 <h2>Lecture 4 - Variance and conditioning<a href="formula-sheet.html#formula-l4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let <span class="math inline">\(\mu=E[X]\)</span>. Then</p>
 <p><span class="math display">\[
-\operatorname{Var}(X)=E[(X-\mu)^2]
-=E[X^2]-\{E[X]\}^2,
+\mu=E[X],
 \qquad
+\operatorname{Var}(X)=E[(X-\mu)^2]
+=E[X^2]-\{E[X]\}^2.
+\]</span></p>
+<p><span class="math display">\[
 \operatorname{SD}(X)=\sqrt{\operatorname{Var}(X)}.
 \]</span></p>
-<p>For <span class="math inline">\(X\sim\operatorname{Bernoulli}(p)\)</span>,</p>
 <p><span class="math display">\[
+X\sim\operatorname{Bernoulli}(p):
+\qquad
 \operatorname{Var}(X)=p(1-p).
 \]</span></p>
-<p>The usual sample variance and SD are</p>
 <p><span class="math display">\[
 s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)^2,
 \qquad s=\sqrt{s^2}.
 \]</span></p>
-<p>For <span class="math inline">\(P(B)&gt;0\)</span>,</p>
 <p><span class="math display">\[
 P(A\mid B)=\frac{P(A\cap B)}{P(B)},
 \qquad
-P(A\cap B)=P(A\mid B)P(B).
+P(A\cap B)=P(A\mid B)P(B),
+\qquad P(B)&gt;0.
 \]</span></p>
-<p>If <span class="math inline">\(B_1,\ldots,B_k\)</span> partition <span class="math inline">\(\Omega\)</span>,</p>
 <p><span class="math display">\[
 P(A)=\sum_{i=1}^{k}P(A\mid B_i)P(B_i).
 \]</span></p>
-<p>Bayes’ rule is</p>
 <p><span class="math display">\[
 P(B_i\mid A)
 =\frac{P(A\mid B_i)P(B_i)}
@@ -358,22 +370,25 @@ P(B_i\mid A)
 </div>
 <div id="formula-l5" class="section level2 hasAnchor">
 <h2>Lecture 5 - Joint PMFs and correlation<a href="formula-sheet.html#formula-l5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For discrete <span class="math inline">\(X,Y\)</span>,</p>
 <p><span class="math display">\[
 p_{X,Y}(x,y)=P(X=x,Y=y).
 \]</span></p>
-<p>Marginal and conditional PMFs are</p>
 <p><span class="math display">\[
 p_X(x)=\sum_y p_{X,Y}(x,y),
 \qquad
 p_{X\mid Y}(x\mid y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}.
 \]</span></p>
-<p>Discrete <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent when, for every <span class="math inline">\(x,y\)</span>,</p>
 <p><span class="math display">\[
-p_{X,Y}(x,y)=p_X(x)p_Y(y).
+X\perp Y
+\quad\Longleftrightarrow\quad
+p_{X,Y}(x,y)=p_X(x)p_Y(y)
+\quad\text{for every }x,y.
 \]</span></p>
-<p>For independent events <span class="math inline">\(A,B\)</span> with <span class="math inline">\(P(B)&gt;0\)</span>,
-<span class="math inline">\(P(A\mid B)=P(A)\)</span>.</p>
+<p><span class="math display">\[
+A\perp B
+\quad\Longleftrightarrow\quad
+P(A\cap B)=P(A)P(B).
+\]</span></p>
 <p><span class="math display">\[
 \operatorname{Cov}(X,Y)
 =E[(X-\mu_X)(Y-\mu_Y)]
@@ -385,44 +400,57 @@ p_{X,Y}(x,y)=p_X(x)p_Y(y).
 {\operatorname{SD}(X)\operatorname{SD}(Y)},
 \qquad -1\le\rho_{XY}\le1.
 \]</span></p>
-<p>Sample covariance and correlation are</p>
 <p><span class="math display">\[
 s_{XY}=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)(y_i-\bar y),
 \qquad
 r_{XY}=\frac{s_{XY}}{s_Xs_Y}.
 \]</span></p>
-<p>Independence implies zero covariance when the relevant expectations exist;
-zero covariance does not generally imply independence.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div id="formula-l6" class="section level2 hasAnchor">
-<h2>Lecture 6 - Continuous distributions<a href="formula-sheet.html#formula-l6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For a continuous random variable with PDF <span class="math inline">\(f_X\)</span>,</p>
+<h2>Lecture 6 - Continuous distributions and quantiles<a href="formula-sheet.html#formula-l6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math display">\[
 f_X(x)\ge0,
-\qquad \int_{-\infty}^{\infty}f_X(x)\,dx=1,
-\qquad P(X=x)=0.
-\]</span></p>
-<p><span class="math display">\[
-P(a&lt;X\le b)=\int_a^b f_X(x)\,dx=F_X(b)-F_X(a).
-\]</span></p>
-<p>If <span class="math inline">\(X\sim U(a,b)\)</span>,</p>
-<p><span class="math display">\[
-f_X(x)=\frac{1}{b-a}\quad(a\le x\le b),
 \qquad
-P(c&lt;X&lt;d)=\frac{d-c}{b-a},
+P(X=x)=0,
+\qquad
+P(a&lt;X\le b)=F_X(b)-F_X(a).
 \]</span></p>
 <p><span class="math display">\[
+X\sim U(a,b):
+\qquad
+f_X(x)=
+\begin{cases}
+\dfrac{1}{b-a},&amp;a\le x\le b,\\
+0,&amp;\text{otherwise},
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[
+P(c&lt;X&lt;d)=\frac{d-c}{b-a},
+\qquad
 E[X]=\frac{a+b}{2},
 \qquad
 \operatorname{Var}(X)=\frac{(b-a)^2}{12}.
 \]</span></p>
-<p>If <span class="math inline">\(X\sim N(\mu,\sigma^2)\)</span>, then</p>
 <p><span class="math display">\[
+Q_1=q_{0.25},
+\qquad
+Q_2=q_{0.50},
+\qquad
+Q_3=q_{0.75},
+\qquad
+\operatorname{IQR}=Q_3-Q_1.
+\]</span></p>
+<p><span class="math display">\[
+X\sim N(\mu,\sigma^2),
+\qquad
 Z=\frac{X-\mu}{\sigma}\sim N(0,1).
 \]</span></p>
-<p>Approximately 68% lies within <span class="math inline">\(\mu\pm\sigma\)</span>, and 95% within
-<span class="math inline">\(\mu\pm1.96\sigma\)</span>.</p>
+<p><span class="math display">\[
+P(\mu-\sigma\le X\le\mu+\sigma)\approx0.68,
+\qquad
+P(\mu-1.96\sigma\le X\le\mu+1.96\sigma)\approx0.95.
+\]</span></p>
 </div>
 <div id="formula-l7" class="section level2 hasAnchor">
 <h2>Lecture 7 - Samples and estimators<a href="formula-sheet.html#formula-l7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -430,28 +458,22 @@ Z=\frac{X-\mu}{\sigma}\sim N(0,1).
 \bar X=\frac{1}{n}\sum_{i=1}^{n}X_i,
 \qquad
 \widehat P=\frac{1}{n}\sum_{i=1}^{n}X_i
-\quad\text{for a 0/1 variable}.
+\quad(X_i\in\{0,1\}).
 \]</span></p>
 <p><span class="math display">\[
 S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar X)^2,
-\qquad df=n-1.
+\qquad
+\sum_{i=1}^{n}(X_i-\bar X)=0,
+\qquad
+df=n-1.
 \]</span></p>
-<p>The degrees of freedom follow from the constraint</p>
 <p><span class="math display">\[
-\sum_{i=1}^{n}(X_i-\bar X)=0.
+n\le0.10N
+\quad\text{(sampling without replacement)}.
 \]</span></p>
-<p>For sampling without replacement, the course’s independence approximation
-uses the 10% condition:</p>
-<p><span class="math display">\[
-n\le0.10N.
-\]</span></p>
-<p>Random sampling supports generalisation to the sampling frame; random
-assignment supports causal treatment comparisons.</p>
 </div>
 <div id="formula-l8" class="section level2 hasAnchor">
 <h2>Lecture 8 - Sampling distributions and SEs<a href="formula-sheet.html#formula-l8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For independent, identically distributed observations with mean <span class="math inline">\(\mu\)</span> and
-variance <span class="math inline">\(\sigma^2\)</span>,</p>
 <p><span class="math display">\[
 E[\bar X]=\mu,
 \qquad
@@ -460,51 +482,47 @@ E[\bar X]=\mu,
 \operatorname{SE}(\bar X)=\frac{\sigma}{\sqrt n}
 \approx\frac{S}{\sqrt n}.
 \]</span></p>
-<p>The CLT gives, for sufficiently large <span class="math inline">\(n\)</span>,</p>
 <p><span class="math display">\[
 \frac{\bar X-\mu}{\sigma/\sqrt n}\ \dot\sim\ N(0,1),
 \qquad
 \bar X\ \dot\sim\ N\!\left(\mu,\frac{\sigma^2}{n}\right).
 \]</span></p>
-<p>For an independent normal sample with unknown <span class="math inline">\(\sigma\)</span>,</p>
 <p><span class="math display">\[
 T=\frac{\bar X-\mu}{S/\sqrt n}\sim t_{n-1}.
 \]</span></p>
-<p>For a sample proportion,</p>
 <p><span class="math display">\[
 E[\widehat P]=p,
 \qquad
 \operatorname{SE}(\widehat P)=\sqrt{\frac{p(1-p)}{n}}.
 \]</span></p>
-<p>Normal approximation working condition:</p>
 <p><span class="math display">\[
 np\ge10,
-\qquad n(1-p)\ge10.
+\qquad
+n(1-p)\ge10.
 \]</span></p>
-<p>Multiplying <span class="math inline">\(n\)</span> by <span class="math inline">\(c^2\)</span> divides the SE by <span class="math inline">\(c\)</span>.</p>
 </div>
 <div id="formula-l9" class="section level2 hasAnchor">
 <h2>Lecture 9 - Confidence intervals and zero tests<a href="formula-sheet.html#formula-l9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>General confidence-interval form:</p>
 <p><span class="math display">\[
 \text{estimate}\ \pm\ \text{critical value}\times\text{SE}.
 \]</span></p>
-<p>For a population mean with unknown <span class="math inline">\(\sigma\)</span>,</p>
 <p><span class="math display">\[
 \bar X\pm t_{1-\alpha/2,n-1}\frac{S}{\sqrt n}.
 \]</span></p>
-<p>For 95% procedures, <span class="math inline">\(z_{0.975}=1.960\)</span>. Selected critical values are</p>
 <p><span class="math display">\[
+z_{0.975}=1.960,
+\qquad
 \begin{array}{c|rrrrrr}
 df&amp;5&amp;10&amp;20&amp;30&amp;60&amp;\infty\\ \hline
 t_{0.975,df}&amp;2.571&amp;2.228&amp;2.086&amp;2.042&amp;2.000&amp;1.960
 \end{array}
 \]</span></p>
-<p>For a contrast <span class="math inline">\(\delta=\mu-\mu_0\)</span>,</p>
 <p><span class="math display">\[
+\delta=\mu-\mu_0,
+\qquad
 \widehat\delta=\bar X-\mu_0,
 \qquad
-T=\frac{\widehat\delta-0}{S/\sqrt n},
+T=\frac{\widehat\delta}{S/\sqrt n},
 \qquad df=n-1.
 \]</span></p>
 <p><span class="math display">\[
@@ -512,50 +530,48 @@ H_0:\delta=0
 \qquad\text{versus}\qquad
 H_1:\delta\ne0.
 \]</span></p>
-<p>The two-sided p-value is</p>
 <p><span class="math display">\[
-p=P\!\left(|T_{df}|\ge|t_{obs}|\mid H_0\right).
+p=P\!\left(|T_{df}|\ge|t_{obs}|\mid H_0\right),
+\qquad
+p\le\alpha\ \Longrightarrow\ \text{reject }H_0.
 \]</span></p>
-<p>Decision at level <span class="math inline">\(\alpha\)</span>: reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(p\le\alpha\)</span>; otherwise do
-not reject. For the same two-sided t procedure, the level-<span class="math inline">\(\alpha\)</span> test
-rejects zero exactly when the <span class="math inline">\(100(1-\alpha)\%\)</span> interval excludes zero.</p>
 </div>
 <div id="formula-l10" class="section level2 hasAnchor">
 <h2>Lecture 10 - Tests, errors, and power<a href="formula-sheet.html#formula-l10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For <span class="math inline">\(H_0:p=p_0\)</span> against <span class="math inline">\(H_1:p\ne p_0\)</span>, define
-<span class="math inline">\(\delta_p=p-p_0\)</span>. The null test statistic is</p>
+<p><span class="math display">\[
+H_0:p=p_0
+\qquad\text{versus}\qquad
+H_1:p\ne p_0.
+\]</span></p>
 <p><span class="math display">\[
 Z=\frac{\hat p-p_0}{\sqrt{p_0(1-p_0)/n}},
 \qquad
 p\text{-value}=2P(Z\ge|z_{obs}|).
 \]</span></p>
-<p>Check <span class="math inline">\(np_0\ge10\)</span> and <span class="math inline">\(n(1-p_0)\ge10\)</span> for the test. A large-sample
-proportion interval is</p>
+<p><span class="math display">\[
+np_0\ge10,
+\qquad
+n(1-p_0)\ge10.
+\]</span></p>
 <p><span class="math display">\[
 \hat p\pm z_{1-\alpha/2}
 \sqrt{\frac{\hat p(1-\hat p)}{n}}.
 \]</span></p>
-<p>The equivalent interval for <span class="math inline">\(p-p_0\)</span> subtracts <span class="math inline">\(p_0\)</span> from both endpoints.</p>
 <p><span class="math display">\[
-\begin{aligned}
-\text{Type I error: }&amp;\text{reject }H_0\text{ when }H_0\text{ is true},\\
-P(\text{Type I error})&amp;=\alpha,\\
-\text{Type II error: }&amp;\text{do not reject }H_0\text{ when a specified }H_1
-\text{ is true},\\
-\text{Power}&amp;=P(\text{reject }H_0\mid H_1\text{ is true}).
-\end{aligned}
-\]</span></p>
-<p>For a regression coefficient row,</p>
-<p><span class="math display">\[
-t=\frac{b_j-0}{\operatorname{SE}(b_j)},
+P(\text{Type I error})=\alpha,
 \qquad
-b_j\pm t_{1-\alpha/2,df}\operatorname{SE}(b_j),
+\text{Power}=P(\text{reject }H_0\mid H_1\text{ is true}).
 \]</span></p>
-<p>tests <span class="math inline">\(H_0:\beta_j=0\)</span> against <span class="math inline">\(H_1:\beta_j\ne0\)</span>. In R output:
-<code>Estimate</code> is <span class="math inline">\(b_j\)</span>, <code>Std. Error</code> is <span class="math inline">\(\operatorname{SE}(b_j)\)</span>, <code>t value</code>
-is their ratio, and <code>Pr(&gt;|t|)</code> is the two-sided p-value.</p>
-<p>Always report the estimate and units, uncertainty, decision, population/model
-scope, practical importance, and causal limit.</p>
+<p><span class="math display">\[
+t=\frac{b_j}{\operatorname{SE}(b_j)},
+\qquad
+b_j\pm t_{1-\alpha/2,df}\operatorname{SE}(b_j).
+\]</span></p>
+<p><span class="math display">\[
+H_0:\beta_j=0
+\qquad\text{versus}\qquad
+H_1:\beta_j\ne0.
+\]</span></p>
 </div>
 </div>
 

@@ -144,3 +144,30 @@ This file is for the teaching team. It is intentionally excluded from
   limits. Use common scales for direct panel comparisons and explicitly connect
   every displayed plot to the surrounding explanation.
 - Defer slide revisions until the textbook content is settled.
+
+## 2026-08-06
+
+- Prefer direct, intuitive language in QM Basic. Omit formal properties,
+  limiting notation, and technical qualifications that students are not asked
+  to use. For example, explain a discrete CDF as accumulating probability and
+  forming a step graph; do not introduce right-continuity, limits at infinity,
+  or left-limit notation.
+- Introduce partitions visually in Lecture 2. In Lecture 4, connect the law of
+  total probability explicitly to conditioning and the multiplication rule:
+  split the sample space, calculate the joint probability within each part,
+  then add the non-overlapping pieces.
+- Introduce quartiles and the IQR in Lecture 6, after the normal model and
+  before any tutorial asks students to use them.
+- Use visual comparisons whenever a definition depends on shape: same mean
+  with different spread, linear versus curved association, and repeated-sample
+  confidence-interval coverage.
+- Mention one-sided tests only as conceptual orientation in Lecture 9. Keep all
+  Basic practice, tutorials, formula-sheet tests, and assessed examples
+  two-sided.
+- Keep the attached Basic formula sheet to notation and formulas. Exclude
+  integrals and prose reminders of conceptual results students must know.
+- Benchmark the Basic mock as a 180-minute exam. The available December 2025
+  PDF contains the cover and reference tables but omits the question pages, so
+  exact task-by-task length comparison is not possible. The current mock has
+  five contextual questions, 26 required subparts, 100 points, and suggested
+  times totalling 180 minutes.

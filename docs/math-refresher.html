@@ -332,7 +332,7 @@ underlying fitted relationship.</p>
 \frac{12-8}{\sqrt{16}}=\frac{4}{4}=1.
 \]</span></p>
 <p>In R:</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="math-refresher.html#cb229-1" tabindex="-1"></a>(<span class="dv">12</span> <span class="sc">-</span> <span class="dv">8</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">16</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="math-refresher.html#cb233-1" tabindex="-1"></a>(<span class="dv">12</span> <span class="sc">-</span> <span class="dv">8</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">16</span>)</span></code></pre></div>
 <p>Use parentheses generously in code when they make the intended calculation
 clear.</p>
 </div>
@@ -484,7 +484,7 @@ df=n-1.
 <p>The notation <span class="math inline">\(t_{0.975,df}\)</span> means the value with 97.5% of a t distribution
 to its left. It leaves 2.5% in the right tail, so <span class="math inline">\(\pm t_{0.975,df}\)</span> are the
 critical values for a 95% two-sided procedure. In R:</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="math-refresher.html#cb230-1" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> <span class="dv">24</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="math-refresher.html#cb234-1" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="at">df =</span> <span class="dv">24</span>)</span></code></pre></div>
 <p>With few degrees of freedom, the t distribution has heavier tails and the
 critical value is larger. It approaches the standard normal distribution as
 the degrees of freedom increase.</p>

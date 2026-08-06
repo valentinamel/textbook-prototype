@@ -100,10 +100,22 @@ Expectation locates the centre of a distribution, but it does not describe how
 tightly values cluster around that centre. Two distributions can have the same
 expectation and very different spreads.
 
+The two distributions below both have expectation 1. In the left panel, most
+probability is concentrated at 1. In the right panel, most probability is
+farther from 1, at 0 and 2.
+
+<img src="B04-conditional-probability_files/figure-html/b04-same-mean-spread-1.png" width="672" />
+
+The horizontal axis lists the possible values and the vertical axis gives
+their probabilities. The dashed line marks the common expectation. The centre
+is the same, but Distribution B has greater spread because values 0 and 2
+receive much more probability. In fact,
+\(\operatorname{Var}(X)=0.20\) for A and \(0.90\) for B.
+
 To measure spread, start with the deviation \(X-\mu\), where
 \(\mu=E[X]\). Positive and negative deviations would cancel if they were
 averaged directly, so variance squares each deviation before taking its
-probability-weighted average. When \(E[X^2]<\infty\),
+probability-weighted average:
 
 \[
 \operatorname{Var}(X)
@@ -311,9 +323,11 @@ numerator while having different denominators.
 <p class="concept-video"><strong>MIT explanation (review):</strong>
 <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/total-probability-theorem/">02.7 Total Probability Theorem</a>.</p>
 
-Events \(B_1,\ldots,B_k\) form a **partition** of \(\Omega\) when they are
-mutually disjoint and their union is \(\Omega\). Every outcome belongs to
-exactly one part.
+Lecture 2 introduced a partition as a division of \(\Omega\) into
+non-overlapping events that cover every possible outcome. Conditioning gives
+the probability of \(A\) within each part. The multiplication rule turns each
+conditional probability into a joint piece, and adding the pieces gives the
+overall probability of \(A\). This is the **law of total probability**.
 
 If \(P(B_i)>0\), then:
 
@@ -342,6 +356,15 @@ c(
 
 The overall deal probability is a weighted average of the period-specific deal
 probabilities. The group probabilities supply the weights.
+
+<img src="B04-conditional-probability_files/figure-html/b04-total-probability-diagram-1.png" width="672" />
+
+The outer rectangle is \(\Omega\). Its two columns are the early and late
+parts of the partition; column width represents the probability of that
+period. Within each column, the lower coloured region represents a deal. Its
+area is
+\(P(D\mid\text{period})P(\text{period})=P(D\cap\text{period})\).
+The two coloured areas do not overlap, and their sum is \(P(D)\).
 
 ### Bayes' rule
 

@@ -76,7 +76,7 @@ The horizontal axis measures description length in words and the vertical axis
 counts pitches in each one-word interval. The teal vertical line marks the
 median. The distribution is mildly right-skewed: most descriptions contain
 3--7 words, with a small number extending farther to the right. The median is
-5 words; the first and third quartiles are 4 and 6 words.
+5 words.
 
 If needed, review [summary statistics](https://walshc.github.io/ebi-prog/dataframes-summary-statistics.html)
 and [plots](https://walshc.github.io/ebi-prog/intro-to-plotting.html) from
@@ -147,6 +147,13 @@ dataset. This does not imply the same probabilities for future entrepreneurs.
 | \(A\subseteq B\) | subset | every outcome in \(A\) is also in \(B\) |
 | \(A\cap B=\varnothing\) | disjoint | \(A\) and \(B\) cannot occur together |
 
+<img src="B02-typical-pitch_files/figure-html/b02-event-diagrams-1.png" width="672" />
+
+In each diagram, the outer rectangle is the sample space \(\Omega\), and the
+coloured area is the event named above the panel. These are set diagrams: the
+areas show which outcomes belong to an event, not the numerical size of its
+probability.
+
 Disjoint does **not** mean independent. If two disjoint events both have
 positive probability, observing one makes the other impossible. Independence,
 introduced in Lecture 5, means that observing one event does not change the
@@ -202,6 +209,17 @@ P(A\cup B)=P(A)+P(B)-P(A\cap B).
 
 The intersection is subtracted once because it was counted in both marginal
 probabilities.
+
+A **partition** divides \(\Omega\) into events that do not overlap and together
+include every possible outcome. Each outcome belongs to exactly one part. For
+example, Seasons 1--8 and Seasons 9--16 partition the recorded pitches into an
+early-period event \(L^c\) and a late-period event \(L\).
+
+<img src="B02-typical-pitch_files/figure-html/b02-partition-diagram-1.png" width="614.4" />
+
+The two coloured regions do not overlap, and together they fill the whole
+rectangle. Lecture 4 uses this idea to combine conditional probabilities from
+separate groups.
 
 
 ``` r

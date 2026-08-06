@@ -249,11 +249,11 @@ Check your preparation
 <div id="task-1-multiple-regression-coefficients" class="section level3 hasAnchor">
 <h3>Task 1 — Multiple-regression coefficients<a href="i-ep02.html#task-1-multiple-regression-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Fit:</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="i-ep02.html#cb183-1" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb183-2"><a href="i-ep02.html#cb183-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k <span class="sc">+</span> description_words,</span>
-<span id="cb183-3"><a href="i-ep02.html#cb183-3" tabindex="-1"></a>  <span class="at">data =</span> sharks</span>
-<span id="cb183-4"><a href="i-ep02.html#cb183-4" tabindex="-1"></a>)</span>
-<span id="cb183-5"><a href="i-ep02.html#cb183-5" tabindex="-1"></a><span class="fu">summary</span>(m1)</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="i-ep02.html#cb187-1" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb187-2"><a href="i-ep02.html#cb187-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k <span class="sc">+</span> description_words,</span>
+<span id="cb187-3"><a href="i-ep02.html#cb187-3" tabindex="-1"></a>  <span class="at">data =</span> sharks</span>
+<span id="cb187-4"><a href="i-ep02.html#cb187-4" tabindex="-1"></a>)</span>
+<span id="cb187-5"><a href="i-ep02.html#cb187-5" tabindex="-1"></a><span class="fu">summary</span>(m1)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = equity_offered_pct ~ season + ask_100k + description_words, 
@@ -297,11 +297,11 @@ possible causal threats.</p>
 </div>
 <div id="task-2-dummy-variables-and-a-partial-f-test" class="section level3 hasAnchor">
 <h3>Task 2 — Dummy variables and a partial F-test<a href="i-ep02.html#task-2-dummy-variables-and-a-partial-f-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="i-ep02.html#cb185-1" tabindex="-1"></a>reduced <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k,</span>
-<span id="cb185-2"><a href="i-ep02.html#cb185-2" tabindex="-1"></a>              <span class="at">data =</span> known_gender)</span>
-<span id="cb185-3"><a href="i-ep02.html#cb185-3" tabindex="-1"></a>complete <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k <span class="sc">+</span> gender,</span>
-<span id="cb185-4"><a href="i-ep02.html#cb185-4" tabindex="-1"></a>               <span class="at">data =</span> known_gender)</span>
-<span id="cb185-5"><a href="i-ep02.html#cb185-5" tabindex="-1"></a><span class="fu">summary</span>(complete)</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="i-ep02.html#cb189-1" tabindex="-1"></a>reduced <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k,</span>
+<span id="cb189-2"><a href="i-ep02.html#cb189-2" tabindex="-1"></a>              <span class="at">data =</span> known_gender)</span>
+<span id="cb189-3"><a href="i-ep02.html#cb189-3" tabindex="-1"></a>complete <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k <span class="sc">+</span> gender,</span>
+<span id="cb189-4"><a href="i-ep02.html#cb189-4" tabindex="-1"></a>               <span class="at">data =</span> known_gender)</span>
+<span id="cb189-5"><a href="i-ep02.html#cb189-5" tabindex="-1"></a><span class="fu">summary</span>(complete)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = equity_offered_pct ~ season + ask_100k + gender, 
@@ -324,7 +324,7 @@ possible causal threats.</p>
 ## Residual standard error: 7.612 on 1429 degrees of freedom
 ## Multiple R-squared:  0.1913, Adjusted R-squared:  0.189 
 ## F-statistic: 84.49 on 4 and 1429 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="i-ep02.html#cb187-1" tabindex="-1"></a><span class="fu">anova</span>(reduced, complete)</span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="i-ep02.html#cb191-1" tabindex="-1"></a><span class="fu">anova</span>(reduced, complete)</span></code></pre></div>
 <pre><code>## Analysis of Variance Table
 ## 
 ## Model 1: equity_offered_pct ~ season + ask_100k
@@ -355,11 +355,11 @@ The source coding and observational design prohibit a causal gender claim.</p>
 </div>
 <div id="task-3-interaction" class="section level3 hasAnchor">
 <h3>Task 3 — Interaction<a href="i-ep02.html#task-3-interaction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="i-ep02.html#cb189-1" tabindex="-1"></a>m_interaction <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb189-2"><a href="i-ep02.html#cb189-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season_c <span class="sc">*</span> women <span class="sc">+</span> ask_100k,</span>
-<span id="cb189-3"><a href="i-ep02.html#cb189-3" tabindex="-1"></a>  <span class="at">data =</span> known_gender</span>
-<span id="cb189-4"><a href="i-ep02.html#cb189-4" tabindex="-1"></a>)</span>
-<span id="cb189-5"><a href="i-ep02.html#cb189-5" tabindex="-1"></a><span class="fu">summary</span>(m_interaction)</span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="i-ep02.html#cb193-1" tabindex="-1"></a>m_interaction <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb193-2"><a href="i-ep02.html#cb193-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season_c <span class="sc">*</span> women <span class="sc">+</span> ask_100k,</span>
+<span id="cb193-3"><a href="i-ep02.html#cb193-3" tabindex="-1"></a>  <span class="at">data =</span> known_gender</span>
+<span id="cb193-4"><a href="i-ep02.html#cb193-4" tabindex="-1"></a>)</span>
+<span id="cb193-5"><a href="i-ep02.html#cb193-5" tabindex="-1"></a><span class="fu">summary</span>(m_interaction)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = equity_offered_pct ~ season_c * women + ask_100k, 
@@ -401,12 +401,12 @@ group coefficient compare groups at the average season instead of Season 0.</p>
 </div>
 <div id="task-4-polynomial-term" class="section level3 hasAnchor">
 <h3>Task 4 — Polynomial term<a href="i-ep02.html#task-4-polynomial-term" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="i-ep02.html#cb191-1" tabindex="-1"></a>m_linear <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k, <span class="at">data =</span> sharks)</span>
-<span id="cb191-2"><a href="i-ep02.html#cb191-2" tabindex="-1"></a>m_quadratic <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb191-3"><a href="i-ep02.html#cb191-3" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> <span class="fu">I</span>(season<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> ask_100k,</span>
-<span id="cb191-4"><a href="i-ep02.html#cb191-4" tabindex="-1"></a>  <span class="at">data =</span> sharks</span>
-<span id="cb191-5"><a href="i-ep02.html#cb191-5" tabindex="-1"></a>)</span>
-<span id="cb191-6"><a href="i-ep02.html#cb191-6" tabindex="-1"></a><span class="fu">summary</span>(m_quadratic)</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="i-ep02.html#cb195-1" tabindex="-1"></a>m_linear <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k, <span class="at">data =</span> sharks)</span>
+<span id="cb195-2"><a href="i-ep02.html#cb195-2" tabindex="-1"></a>m_quadratic <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb195-3"><a href="i-ep02.html#cb195-3" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> <span class="fu">I</span>(season<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> ask_100k,</span>
+<span id="cb195-4"><a href="i-ep02.html#cb195-4" tabindex="-1"></a>  <span class="at">data =</span> sharks</span>
+<span id="cb195-5"><a href="i-ep02.html#cb195-5" tabindex="-1"></a>)</span>
+<span id="cb195-6"><a href="i-ep02.html#cb195-6" tabindex="-1"></a><span class="fu">summary</span>(m_quadratic)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = equity_offered_pct ~ season + I(season^2) + ask_100k, 
@@ -428,7 +428,7 @@ group coefficient compare groups at the average season instead of Season 0.</p>
 ## Residual standard error: 7.57 on 1437 degrees of freedom
 ## Multiple R-squared:  0.1981, Adjusted R-squared:  0.1965 
 ## F-statistic: 118.3 on 3 and 1437 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="i-ep02.html#cb193-1" tabindex="-1"></a><span class="fu">anova</span>(m_linear, m_quadratic)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="i-ep02.html#cb197-1" tabindex="-1"></a><span class="fu">anova</span>(m_linear, m_quadratic)</span></code></pre></div>
 <pre><code>## Analysis of Variance Table
 ## 
 ## Model 1: equity_offered_pct ~ season + ask_100k
@@ -480,10 +480,10 @@ limits.</li>
 Check a model structure
 </summary>
 <p>A defensible solution could fit</p>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="i-ep02.html#cb195-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb195-2"><a href="i-ep02.html#cb195-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">*</span> gender <span class="sc">+</span> ask_100k,</span>
-<span id="cb195-3"><a href="i-ep02.html#cb195-3" tabindex="-1"></a>  <span class="at">data =</span> known_gender</span>
-<span id="cb195-4"><a href="i-ep02.html#cb195-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="i-ep02.html#cb199-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb199-2"><a href="i-ep02.html#cb199-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">*</span> gender <span class="sc">+</span> ask_100k,</span>
+<span id="cb199-3"><a href="i-ep02.html#cb199-3" tabindex="-1"></a>  <span class="at">data =</span> known_gender</span>
+<span id="cb199-4"><a href="i-ep02.html#cb199-4" tabindex="-1"></a>)</span></code></pre></div>
 <p>or a quadratic-season model with group dummies. Keep lower-order terms, name
 the reference group, interpret combined slopes or fitted contrasts, compare a
 nested reduced model with <code>anova(reduced, complete)</code>, inspect residuals, and

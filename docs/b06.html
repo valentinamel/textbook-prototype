@@ -214,6 +214,9 @@ use a CDF to calculate interval probabilities;
 recognise uniform and normal models;
 </li>
 <li>
+interpret quantiles and the interquartile range;
+</li>
+<li>
 standardise a normal random variable and calculate probabilities in R.
 </li>
 </ul>
@@ -268,12 +271,8 @@ P(X=x)=0.
 written <span class="math inline">\(f_X(x)\)</span>, is a non-negative curve whose total area is 1. The
 probability that <span class="math inline">\(X\)</span> lies between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the area under the
 curve between those values.</p>
-<p>For completeness, that area is written</p>
-<p><span class="math display">\[
-P(a&lt;X\le b)=\int_a^b f_X(x)\,dx.
-\]</span></p>
-<p>You will not be asked to evaluate integrals in this course. You do need to
-interpret areas and use R or supplied tables to calculate them.</p>
+<p>You do not need calculus in this course. You need to interpret probability as
+area and use a CDF, R, or supplied tables to calculate it.</p>
 <p>Density is not probability. A density can exceed 1 as long as the total area
 under the curve is 1.</p>
 </div>
@@ -364,6 +363,38 @@ is not convincing for individual offers. Later, the normal model will often
 describe a <strong>sampling distribution</strong> even when the original variable is not
 normal.</p>
 </div>
+<div id="quantiles-divide-a-distribution" class="section level3 hasAnchor">
+<h3>Quantiles divide a distribution<a href="b06.html#quantiles-divide-a-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>quantile</strong> is a boundary below which a chosen proportion of values lies.
+For example:</p>
+<ul>
+<li>the first quartile <span class="math inline">\(Q_1\)</span> has 25% of values at or below it;</li>
+<li>the median <span class="math inline">\(Q_2\)</span> has 50% of values at or below it;</li>
+<li>the third quartile <span class="math inline">\(Q_3\)</span> has 75% of values at or below it.</li>
+</ul>
+<p>The <strong>interquartile range</strong> is</p>
+<p><span class="math display">\[
+\operatorname{IQR}=Q_3-Q_1.
+\]</span></p>
+<p>It measures the width of the middle 50% of the distribution. Unlike the full
+range, it is not determined by the smallest and largest observations.</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="b06.html#cb96-1" tabindex="-1"></a>equity_quantiles <span class="ot">&lt;-</span> <span class="fu">quantile</span>(</span>
+<span id="cb96-2"><a href="b06.html#cb96-2" tabindex="-1"></a>  sharks<span class="sc">$</span>equity_offered_pct,</span>
+<span id="cb96-3"><a href="b06.html#cb96-3" tabindex="-1"></a>  <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.50</span>, <span class="fl">0.75</span>)</span>
+<span id="cb96-4"><a href="b06.html#cb96-4" tabindex="-1"></a>)</span>
+<span id="cb96-5"><a href="b06.html#cb96-5" tabindex="-1"></a>equity_quantiles</span></code></pre></div>
+<pre><code>## 25% 50% 75% 
+##   8  10  20</code></pre>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="b06.html#cb98-1" tabindex="-1"></a><span class="fu">IQR</span>(sharks<span class="sc">$</span>equity_offered_pct)</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<p><img src="B06-continuous-distributions_files/figure-html/b06-equity-cdf-quantiles-1.png" width="672" /></p>
+<p>The horizontal axis measures initial equity in percentage points; the vertical
+axis gives the proportion of recorded pitches at or below each value. To read
+<span class="math inline">\(Q_1\)</span>, begin at 0.25 on the vertical axis, move to the step graph, and then
+move down to the horizontal axis. Here <span class="math inline">\(Q_1=8\)</span>, the median is 10, and
+<span class="math inline">\(Q_3=20\)</span>. Therefore the IQR is <span class="math inline">\(20-8=12\)</span> percentage points: the middle
+half of recorded initial offers runs from 8% to 20%.</p>
+</div>
 <div id="standardising-normal-values" class="section level3 hasAnchor">
 <h3>Standardising normal values<a href="b06.html#standardising-normal-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If <span class="math inline">\(X\sim N(\mu,\sigma^2)\)</span>, then</p>
@@ -373,11 +404,11 @@ Z=\frac{X-\mu}{\sigma}\sim N(0,1).
 <p>A z-score reports how many standard deviations a value lies above or below
 the mean. In R, <code>pnorm()</code> calculates cumulative probabilities and <code>qnorm()</code>
 returns quantiles.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="b06.html#cb96-1" tabindex="-1"></a><span class="co"># P(X &lt;= 70) when X ~ N(50, 10^2)</span></span>
-<span id="cb96-2"><a href="b06.html#cb96-2" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">70</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="b06.html#cb100-1" tabindex="-1"></a><span class="co"># P(X &lt;= 70) when X ~ N(50, 10^2)</span></span>
+<span id="cb100-2"><a href="b06.html#cb100-2" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">70</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## [1] 0.9772499</code></pre>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="b06.html#cb98-1" tabindex="-1"></a><span class="co"># central 95% of the standard normal distribution</span></span>
-<span id="cb98-2"><a href="b06.html#cb98-2" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="b06.html#cb102-1" tabindex="-1"></a><span class="co"># central 95% of the standard normal distribution</span></span>
+<span id="cb102-2"><a href="b06.html#cb102-2" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span></code></pre></div>
 <pre><code>## [1] -1.959964  1.959964</code></pre>
 <p>For <span class="math inline">\(X\sim N(50,10^2)\)</span>, the value 70 has z-score
 <span class="math inline">\((70-50)/10=2\)</span>. About 97.7% of the distribution lies at or below it.</p>
@@ -392,6 +423,7 @@ returns quantiles.</p>
 <li>What quantity under a PDF represents probability?</li>
 <li>How do you obtain <span class="math inline">\(P(a&lt;X\le b)\)</span> from a CDF?</li>
 <li>What do <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> control in a normal model?</li>
+<li>What does the IQR measure?</li>
 <li>What does a z-score of <span class="math inline">\(-1.5\)</span> mean?</li>
 </ol>
 <details>
@@ -404,6 +436,7 @@ and therefore zero area.</li>
 <li>Area under the density curve.</li>
 <li><span class="math inline">\(F_X(b)-F_X(a)\)</span>.</li>
 <li><span class="math inline">\(\mu\)</span> controls the centre and <span class="math inline">\(\sigma\)</span> the spread.</li>
+<li>The width of the middle 50% of a distribution: <span class="math inline">\(Q_3-Q_1\)</span>.</li>
 <li>The value is 1.5 standard deviations below the mean.</li>
 </ol>
 </details>
@@ -416,6 +449,8 @@ and therefore zero area.</li>
 <li>Let <span class="math inline">\(Y\sim N(100,15^2)\)</span>. Calculate <span class="math inline">\(P(Y\le115)\)</span> and
 <span class="math inline">\(P(85&lt;Y&lt;115)\)</span> in R.</li>
 <li>Find the 90th percentile of <span class="math inline">\(N(100,15^2)\)</span>.</li>
+<li>Use <code>quantile(sharks$equity_offered_pct, c(0.25, 0.5, 0.75))</code> and
+<code>IQR(sharks$equity_offered_pct)</code>. Report and interpret the IQR.</li>
 <li>Explain why the normal curve in the graph is not a convincing model for
 offered equity.</li>
 <li>A uniform variable is recorded in minutes and then converted to seconds.
@@ -431,6 +466,9 @@ Check your answers
 <li><code>pnorm(115, 100, 15)</code> gives about 0.841; subtracting
 <code>pnorm(85, 100, 15)</code> from it gives about 0.683.</li>
 <li><code>qnorm(0.90, 100, 15)</code> gives about 119.2.</li>
+<li><span class="math inline">\(Q_1=8\)</span>, the median is 10, and <span class="math inline">\(Q_3=20\)</span>, so the IQR is
+<span class="math inline">\(20-8=12\)</span> percentage points. The middle half of the recorded initial
+equity offers lies from 8% to 20%.</li>
 <li>The empirical distribution is bounded, right-skewed, and concentrated at
 a few common percentages; the fitted normal curve does not reproduce those
 features.</li>

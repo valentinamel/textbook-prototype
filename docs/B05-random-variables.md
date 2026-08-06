@@ -187,8 +187,8 @@ Discrete random variables \(X\) and \(Y\) are independent if
 p_{X,Y}(x,y)=p_X(x)p_Y(y)
 \]
 
-for every pair \((x,y)\). One matching cell is not enough; the factorisation
-must hold across the full support.
+for every pair \((x,y)\). In a table, this equality must hold in every cell,
+for every possible combination of values.
 
 
 ``` r
@@ -203,8 +203,9 @@ c(observed_joint_11 = observed_joint_11,
 ##            0.3504511            0.3117717
 ```
 
-The mismatch in the \((1,1)\) cell already shows that the empirical variables
-are not independent.
+Checking one combination of values is not enough to establish independence. A
+mismatch in even one cell is enough to show dependence. Here, the mismatch in
+the \((1,1)\) cell shows that the empirical variables are not independent.
 
 ### Covariance comes from expectation
 
@@ -265,7 +266,7 @@ magnitude changes when either measurement unit changes.
 
 #### Independence implies zero covariance
 
-If \(X\) and \(Y\) are independent and have finite second moments, then
+If \(X\) and \(Y\) are independent, then
 
 \[
 E[XY]=E[X]E[Y],
@@ -280,7 +281,7 @@ covariance rules out linear co-movement, not every form of dependence.
 <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/the-correlation-coefficient/">12.8 The Correlation Coefficient</a> and
 <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/interpreting-the-correlation-coefficient/">12.10 Interpreting the Correlation Coefficient</a>.</p>
 
-For variables with positive finite standard deviations,
+For variables whose standard deviations are not zero,
 
 \[
 \rho_{XY}
@@ -308,6 +309,16 @@ c(from_definition = rho_xy,
 
 A correlation near zero can coexist with a strong curved relationship.
 A correlation near 1 or -1 does not establish causality.
+
+<img src="B05-random-variables_files/figure-html/b05-linear-curved-correlation-1.png" width="672" />
+
+Each point is one \((x,y)\) pair. The horizontal axis gives \(X\), and the
+vertical axis gives \(Y\) in standardised units so the panels can be compared.
+The orange line is the fitted linear summary. Pattern A follows an almost
+straight rising path, so its correlation is close to 1. Pattern B has a clear
+U-shaped relationship, but its fitted line is flat and its correlation is
+close to 0. Correlation measures only **linear** association; it can miss a
+strong relationship with another shape.
 
 #### Sample covariance and sample correlation
 
@@ -397,8 +408,8 @@ importance.
 2. Sum the joint PMF over every value of the other variable.
 3. Covariance has product units, so rescaling either variable rescales the
    covariance.
-4. With finite second moments, independence gives
-   \(E[XY]=E[X]E[Y]\), hence zero covariance.
+4. Independence gives \(E[XY]=E[X]E[Y]\), hence zero covariance for the
+   variables considered in this course.
 5. Correlation measures linear association; dependent variables can have zero
    linear association.
 

@@ -253,11 +253,11 @@ equation, slope interpretation, and intercept limitation.</p>
 <summary>
 Check your answer
 </summary>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="i-ep01.html#cb158-1" tabindex="-1"></a>deals <span class="ot">&lt;-</span> <span class="fu">subset</span>(sharks, deal_on_show <span class="sc">==</span> <span class="dv">1</span>)</span>
-<span id="cb158-2"><a href="i-ep01.html#cb158-2" tabindex="-1"></a>deals<span class="sc">$</span>ask_100k <span class="ot">&lt;-</span> deals<span class="sc">$</span>ask_amount_usd <span class="sc">/</span> <span class="dv">100000</span></span>
-<span id="cb158-3"><a href="i-ep01.html#cb158-3" tabindex="-1"></a>deals<span class="sc">$</span>deal_100k <span class="ot">&lt;-</span> deals<span class="sc">$</span>deal_amount_usd <span class="sc">/</span> <span class="dv">100000</span></span>
-<span id="cb158-4"><a href="i-ep01.html#cb158-4" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(deal_100k <span class="sc">~</span> ask_100k, <span class="at">data =</span> deals)</span>
-<span id="cb158-5"><a href="i-ep01.html#cb158-5" tabindex="-1"></a><span class="fu">coef</span>(m)</span></code></pre></div>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="i-ep01.html#cb162-1" tabindex="-1"></a>deals <span class="ot">&lt;-</span> <span class="fu">subset</span>(sharks, deal_on_show <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb162-2"><a href="i-ep01.html#cb162-2" tabindex="-1"></a>deals<span class="sc">$</span>ask_100k <span class="ot">&lt;-</span> deals<span class="sc">$</span>ask_amount_usd <span class="sc">/</span> <span class="dv">100000</span></span>
+<span id="cb162-3"><a href="i-ep01.html#cb162-3" tabindex="-1"></a>deals<span class="sc">$</span>deal_100k <span class="ot">&lt;-</span> deals<span class="sc">$</span>deal_amount_usd <span class="sc">/</span> <span class="dv">100000</span></span>
+<span id="cb162-4"><a href="i-ep01.html#cb162-4" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(deal_100k <span class="sc">~</span> ask_100k, <span class="at">data =</span> deals)</span>
+<span id="cb162-5"><a href="i-ep01.html#cb162-5" tabindex="-1"></a><span class="fu">coef</span>(m)</span></code></pre></div>
 <p>Among 882 on-air deals, the fitted equation is
 <span class="math inline">\(\hat y=0.276+1.009x\)</span>, with money in $100,000s. One additional $100,000
 requested is associated with about $100,900 more in fitted agreed amount. A
@@ -315,12 +315,12 @@ not remove influential observations, selection, or a misspecified mean.</p>
 <summary>
 Check your answer
 </summary>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="i-ep01.html#cb159-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> deals<span class="sc">$</span>deal_100k</span>
-<span id="cb159-2"><a href="i-ep01.html#cb159-2" tabindex="-1"></a>yhat <span class="ot">&lt;-</span> <span class="fu">fitted</span>(deal_model)</span>
-<span id="cb159-3"><a href="i-ep01.html#cb159-3" tabindex="-1"></a>SST <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb159-4"><a href="i-ep01.html#cb159-4" tabindex="-1"></a>SSE <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb159-5"><a href="i-ep01.html#cb159-5" tabindex="-1"></a>SSR <span class="ot">&lt;-</span> <span class="fu">sum</span>((yhat <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb159-6"><a href="i-ep01.html#cb159-6" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> SSE <span class="sc">/</span> SST</span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="i-ep01.html#cb163-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> deals<span class="sc">$</span>deal_100k</span>
+<span id="cb163-2"><a href="i-ep01.html#cb163-2" tabindex="-1"></a>yhat <span class="ot">&lt;-</span> <span class="fu">fitted</span>(deal_model)</span>
+<span id="cb163-3"><a href="i-ep01.html#cb163-3" tabindex="-1"></a>SST <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb163-4"><a href="i-ep01.html#cb163-4" tabindex="-1"></a>SSE <span class="ot">&lt;-</span> <span class="fu">sum</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb163-5"><a href="i-ep01.html#cb163-5" tabindex="-1"></a>SSR <span class="ot">&lt;-</span> <span class="fu">sum</span>((yhat <span class="sc">-</span> <span class="fu">mean</span>(y))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb163-6"><a href="i-ep01.html#cb163-6" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> SSE <span class="sc">/</span> SST</span></code></pre></div>
 <p>The values satisfy <span class="math inline">\(SST=SSR+SSE\)</span>, and <span class="math inline">\(R^2\approx0.777\)</span>. The model F
 statistic is about 3069, equal to the squared slope t statistic. Requested
 amount explains a large share of observed variation in agreed amount among

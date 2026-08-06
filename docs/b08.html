@@ -316,8 +316,8 @@ many observations are needed to halve it.</p>
 </div>
 <div id="the-central-limit-theorem" class="section level3 hasAnchor">
 <h3>The central limit theorem<a href="b08.html#the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The central limit theorem (CLT) says that, under independent sampling with
-finite variance, the standardised sample mean</p>
+<p>The central limit theorem (CLT) says that, under the independent-sampling
+conditions used in this course, the standardised sample mean</p>
 <p><span class="math display">\[
 Z=\frac{\bar X-\mu}{\sigma/\sqrt n}
 \]</span></p>
@@ -368,11 +368,11 @@ distribution after standardisation.</li>
 </ul>
 <p>Neither result repairs selection bias or dependence. More observations reduce
 random sampling error; they do not automatically make the data representative.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="b08.html#cb104-1" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb104-2"><a href="b08.html#cb104-2" tabindex="-1"></a>  <span class="at">SE_mean_n_25 =</span> sigma_equity <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">25</span>),</span>
-<span id="cb104-3"><a href="b08.html#cb104-3" tabindex="-1"></a>  <span class="at">SE_mean_n_100 =</span> sigma_equity <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">100</span>),</span>
-<span id="cb104-4"><a href="b08.html#cb104-4" tabindex="-1"></a>  <span class="at">SE_deal_proportion_n_100 =</span> <span class="fu">sqrt</span>(p_deal <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p_deal) <span class="sc">/</span> <span class="dv">100</span>)</span>
-<span id="cb104-5"><a href="b08.html#cb104-5" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="b08.html#cb108-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb108-2"><a href="b08.html#cb108-2" tabindex="-1"></a>  <span class="at">SE_mean_n_25 =</span> sigma_equity <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">25</span>),</span>
+<span id="cb108-3"><a href="b08.html#cb108-3" tabindex="-1"></a>  <span class="at">SE_mean_n_100 =</span> sigma_equity <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">100</span>),</span>
+<span id="cb108-4"><a href="b08.html#cb108-4" tabindex="-1"></a>  <span class="at">SE_deal_proportion_n_100 =</span> <span class="fu">sqrt</span>(p_deal <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p_deal) <span class="sc">/</span> <span class="dv">100</span>)</span>
+<span id="cb108-5"><a href="b08.html#cb108-5" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##             SE_mean_n_25            SE_mean_n_100 SE_deal_proportion_n_100 
 ##               1.68828494               0.84414247               0.04872773</code></pre>
 <p>Increasing the mean sample size from 25 to 100 halves its standard error.</p>

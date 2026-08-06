@@ -84,7 +84,7 @@ The horizontal axis measures description length in words and the vertical axis
 counts pitches in each one-word interval. The teal vertical line marks the
 median. The distribution is mildly right-skewed: most descriptions contain
 3--7 words, with a small number extending farther to the right. The median is
-5 words; the first and third quartiles are 4 and 6 words.
+5 words.
 
 If needed, review [summary statistics](https://walshc.github.io/ebi-prog/dataframes-summary-statistics.html)
 and [plots](https://walshc.github.io/ebi-prog/intro-to-plotting.html) from
@@ -155,6 +155,47 @@ dataset. This does not imply the same probabilities for future entrepreneurs.
 | \(A\subseteq B\) | subset | every outcome in \(A\) is also in \(B\) |
 | \(A\cap B=\varnothing\) | disjoint | \(A\) and \(B\) cannot occur together |
 
+```{r b02-event-diagrams, echo=FALSE, fig.width=7, fig.height=2.5}
+old_par <- par(no.readonly = TRUE)
+par(mfrow = c(1, 3), mar = c(0.5, 0.5, 2.1, 0.5), xaxs = "i", yaxs = "i")
+
+draw_frame <- function(title) {
+  plot(NA, xlim = c(0, 10), ylim = c(0, 7), axes = FALSE,
+       xlab = "", ylab = "", main = title, asp = 1)
+  rect(0.3, 0.3, 9.7, 6.7, border = "#17324D", lwd = 2)
+  text(9.1, 6.1, expression(Omega), col = "#17324D")
+}
+
+draw_frame("Complement: Aᶜ")
+rect(0.3, 0.3, 9.7, 6.7, col = "#DCEAF3", border = NA)
+rect(2.2, 1.5, 7.8, 5.5, col = "white", border = "#0072B2", lwd = 2)
+rect(0.3, 0.3, 9.7, 6.7, border = "#17324D", lwd = 2)
+text(5, 3.5, "A", col = "#0072B2")
+
+draw_frame("Intersection: A ∩ B")
+rect(1.4, 1.4, 6.2, 5.6, border = "#0072B2", lwd = 2)
+rect(3.8, 1.4, 8.6, 5.6, border = "#D55E00", lwd = 2)
+rect(3.8, 1.4, 6.2, 5.6, col = "#009E73", border = NA)
+text(2.4, 3.5, "A", col = "#0072B2")
+text(7.6, 3.5, "B", col = "#D55E00")
+
+draw_frame(expression("Union: " * A %union% B))
+rect(1.4, 1.4, 6.2, 5.6,
+     col = grDevices::adjustcolor("#0072B2", alpha.f = 0.45),
+     border = "#0072B2", lwd = 2)
+rect(3.8, 1.4, 8.6, 5.6,
+     col = grDevices::adjustcolor("#E69F00", alpha.f = 0.45),
+     border = "#D55E00", lwd = 2)
+text(2.4, 3.5, "A", col = "#0072B2")
+text(7.6, 3.5, "B", col = "#D55E00")
+par(old_par)
+```
+
+In each diagram, the outer rectangle is the sample space \(\Omega\), and the
+coloured area is the event named above the panel. These are set diagrams: the
+areas show which outcomes belong to an event, not the numerical size of its
+probability.
+
 Disjoint does **not** mean independent. If two disjoint events both have
 positive probability, observing one makes the other impossible. Independence,
 introduced in Lecture 5, means that observing one event does not change the
@@ -210,6 +251,31 @@ P(A\cup B)=P(A)+P(B)-P(A\cap B).
 
 The intersection is subtracted once because it was counted in both marginal
 probabilities.
+
+A **partition** divides \(\Omega\) into events that do not overlap and together
+include every possible outcome. Each outcome belongs to exactly one part. For
+example, Seasons 1--8 and Seasons 9--16 partition the recorded pitches into an
+early-period event \(L^c\) and a late-period event \(L\).
+
+```{r b02-partition-diagram, echo=FALSE, fig.width=6.4, fig.height=2.4}
+old_par <- par(no.readonly = TRUE)
+par(mar = c(0.3, 0.3, 0.3, 0.3))
+plot(NA, xlim = c(0, 10), ylim = c(0, 5), axes = FALSE,
+     xlab = "", ylab = "", xaxs = "i", yaxs = "i")
+rect(0.4, 0.4, 9.6, 4.6, border = "#17324D", lwd = 2)
+rect(0.4, 0.4, 4.9, 4.6, col = "#DCEAF3", border = NA)
+rect(4.9, 0.4, 9.6, 4.6, col = "#FDE5C1", border = NA)
+segments(4.9, 0.4, 4.9, 4.6, col = "#17324D", lwd = 2)
+rect(0.4, 0.4, 9.6, 4.6, border = "#17324D", lwd = 2)
+text(2.65, 2.5, expression(L^c), col = "#0072B2", cex = 1.25)
+text(7.25, 2.5, "L", col = "#D55E00", cex = 1.25)
+text(9.15, 4.15, expression(Omega), col = "#17324D")
+par(old_par)
+```
+
+The two coloured regions do not overlap, and together they fill the whole
+rectangle. Lecture 4 uses this idea to combine conditional probabilities from
+separate groups.
 
 ```{r b02-probability-rules}
 c(

@@ -361,7 +361,7 @@ diagnosis.</p>
 </div>
 <div id="standard-errors-and-confidence-intervals" class="section level3 hasAnchor">
 <h3>Standard errors and confidence intervals<a href="i02.html#standard-errors-and-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="i02.html#cb141-1" tabindex="-1"></a><span class="fu">summary</span>(deal_model)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="i02.html#cb145-1" tabindex="-1"></a><span class="fu">summary</span>(deal_model)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = deal_100k ~ ask_100k, data = deals)
@@ -380,7 +380,7 @@ diagnosis.</p>
 ## Residual standard error: 1.619 on 880 degrees of freedom
 ## Multiple R-squared:  0.7771, Adjusted R-squared:  0.7769 
 ## F-statistic:  3069 on 1 and 880 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="i02.html#cb143-1" tabindex="-1"></a><span class="fu">confint</span>(deal_model)</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="i02.html#cb147-1" tabindex="-1"></a><span class="fu">confint</span>(deal_model)</span></code></pre></div>
 <pre><code>##                 2.5 %    97.5 %
 ## (Intercept) 0.1335981 0.4178212
 ## ask_100k    0.9727782 1.0442414</code></pre>
@@ -408,14 +408,14 @@ H_1:\beta_1\ne0.
 <p><span class="math display">\[
 t=\frac{b_1-0}{\operatorname{SE}(b_1)}.
 \]</span></p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="i02.html#cb145-1" tabindex="-1"></a>coef_table <span class="ot">&lt;-</span> <span class="fu">summary</span>(deal_model)<span class="sc">$</span>coefficients</span>
-<span id="cb145-2"><a href="i02.html#cb145-2" tabindex="-1"></a>b1 <span class="ot">&lt;-</span> coef_table[<span class="st">&quot;ask_100k&quot;</span>, <span class="st">&quot;Estimate&quot;</span>]</span>
-<span id="cb145-3"><a href="i02.html#cb145-3" tabindex="-1"></a>se_b1 <span class="ot">&lt;-</span> coef_table[<span class="st">&quot;ask_100k&quot;</span>, <span class="st">&quot;Std. Error&quot;</span>]</span>
-<span id="cb145-4"><a href="i02.html#cb145-4" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> b1 <span class="sc">/</span> se_b1</span>
-<span id="cb145-5"><a href="i02.html#cb145-5" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> <span class="fu">df.residual</span>(deal_model))</span>
-<span id="cb145-6"><a href="i02.html#cb145-6" tabindex="-1"></a></span>
-<span id="cb145-7"><a href="i02.html#cb145-7" tabindex="-1"></a><span class="fu">c</span>(<span class="at">estimate =</span> b1, <span class="at">standard_error =</span> se_b1,</span>
-<span id="cb145-8"><a href="i02.html#cb145-8" tabindex="-1"></a>  <span class="at">t_statistic =</span> t_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="i02.html#cb149-1" tabindex="-1"></a>coef_table <span class="ot">&lt;-</span> <span class="fu">summary</span>(deal_model)<span class="sc">$</span>coefficients</span>
+<span id="cb149-2"><a href="i02.html#cb149-2" tabindex="-1"></a>b1 <span class="ot">&lt;-</span> coef_table[<span class="st">&quot;ask_100k&quot;</span>, <span class="st">&quot;Estimate&quot;</span>]</span>
+<span id="cb149-3"><a href="i02.html#cb149-3" tabindex="-1"></a>se_b1 <span class="ot">&lt;-</span> coef_table[<span class="st">&quot;ask_100k&quot;</span>, <span class="st">&quot;Std. Error&quot;</span>]</span>
+<span id="cb149-4"><a href="i02.html#cb149-4" tabindex="-1"></a>t_value <span class="ot">&lt;-</span> b1 <span class="sc">/</span> se_b1</span>
+<span id="cb149-5"><a href="i02.html#cb149-5" tabindex="-1"></a>p_value <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">pt</span>(<span class="sc">-</span><span class="fu">abs</span>(t_value), <span class="at">df =</span> <span class="fu">df.residual</span>(deal_model))</span>
+<span id="cb149-6"><a href="i02.html#cb149-6" tabindex="-1"></a></span>
+<span id="cb149-7"><a href="i02.html#cb149-7" tabindex="-1"></a><span class="fu">c</span>(<span class="at">estimate =</span> b1, <span class="at">standard_error =</span> se_b1,</span>
+<span id="cb149-8"><a href="i02.html#cb149-8" tabindex="-1"></a>  <span class="at">t_statistic =</span> t_value, <span class="at">p_value =</span> p_value)</span></code></pre></div>
 <pre><code>##       estimate standard_error    t_statistic        p_value 
 ##   1.008510e+00   1.820567e-02   5.539538e+01  4.161677e-289</code></pre>
 <p>The tiny p-value is evidence against a zero linear association in this
@@ -428,11 +428,11 @@ causes a larger deal.</p>
 <p>Heteroskedasticity-consistent, or <strong>robust</strong>, standard errors relax the
 constant-variance assumption for inference. The fitted coefficients remain
 the ordinary least-squares values; the estimated uncertainty changes.</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="i02.html#cb147-1" tabindex="-1"></a><span class="co"># Run this if these packages are available in the course R environment</span></span>
-<span id="cb147-2"><a href="i02.html#cb147-2" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
-<span id="cb147-3"><a href="i02.html#cb147-3" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
-<span id="cb147-4"><a href="i02.html#cb147-4" tabindex="-1"></a></span>
-<span id="cb147-5"><a href="i02.html#cb147-5" tabindex="-1"></a><span class="fu">coeftest</span>(deal_model, <span class="at">vcov. =</span> <span class="fu">vcovHC</span>(deal_model, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="i02.html#cb151-1" tabindex="-1"></a><span class="co"># Run this if these packages are available in the course R environment</span></span>
+<span id="cb151-2"><a href="i02.html#cb151-2" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
+<span id="cb151-3"><a href="i02.html#cb151-3" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
+<span id="cb151-4"><a href="i02.html#cb151-4" tabindex="-1"></a></span>
+<span id="cb151-5"><a href="i02.html#cb151-5" tabindex="-1"></a><span class="fu">coeftest</span>(deal_model, <span class="at">vcov. =</span> <span class="fu">vcovHC</span>(deal_model, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span></code></pre></div>
 <p>Robust SEs do not repair non-linearity, omitted-variable bias, dependence
 across rows, influential errors in the data, or non-random selection. They
 address one specific problem: misspecification of conditional error variance.</p>

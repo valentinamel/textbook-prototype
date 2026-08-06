@@ -128,8 +128,8 @@ many observations are needed to halve it.
 
 ### The central limit theorem
 
-The central limit theorem (CLT) says that, under independent sampling with
-finite variance, the standardised sample mean
+The central limit theorem (CLT) says that, under the independent-sampling
+conditions used in this course, the standardised sample mean
 
 \[
 Z=\frac{\bar X-\mu}{\sigma/\sqrt n}

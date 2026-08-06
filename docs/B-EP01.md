@@ -163,12 +163,12 @@ An output block describes word count:
 
 
 ```
-##      mean    median   minimum        q1        q3   maximum 
-##  4.995142  5.000000  1.000000  4.000000  6.000000 13.000000
+##      mean    median   minimum   maximum 
+##  4.995142  5.000000  1.000000 13.000000
 ```
 
-Write no more than 100 words. Compare mean and median, calculate the IQR,
-calculate the range, and state the measurement boundary. Then explain
+Write no more than 100 words. Compare mean and median, calculate the range,
+and state the measurement boundary. Then explain
 which value equals the expectation if the empirical distribution gives mass
 \(1/1441\) to each record.
 
@@ -176,8 +176,8 @@ which value equals the expectation if the empirical distribution gives mass
 <summary>Check a model answer</summary>
 
 The written descriptions have a mean length of about 5.0 words and a median
-of 5 words. Their IQR is \(6-4=2\) words, and their range is
-\(13-1=12\) words. The thin upper tail is consistent with the mildly
+of 5 words. Their range is \(13-1=12\) words. The thin upper tail is
+consistent with the mildly
 right-skewed histogram seen in Lecture 2. If each record receives probability
 \(1/1441\), the empirical expectation is the mean, about 5.0 words. These values
 describe written dataset text, not spoken-pitch length or quality.

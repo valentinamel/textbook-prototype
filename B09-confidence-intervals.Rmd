@@ -248,6 +248,22 @@ At \(\alpha=0.05\), reject \(H_0\) because \(p<0.05\). The random sample
 provides evidence that mean initial equity in the recorded-pitch frame differs
 from 15 percentage points. The negative estimate indicates that it is lower.
 
+### One-sided alternatives: overview
+
+A one-sided alternative specifies a direction:
+
+\[
+H_1:\delta>0
+\qquad\text{or}\qquad
+H_1:\delta<0.
+\]
+
+Its p-value uses only the corresponding tail. The direction must follow from
+the research question and be chosen before the data are inspected; it is not
+valid to choose a tail because the observed estimate happens to point that
+way. Course practice and exams use two-sided tests, because a difference in
+either direction is usually relevant in business research.
+
 ### The confidence interval and test tell the same story
 
 For the same two-sided t procedure:
@@ -265,6 +281,70 @@ direction, plausible magnitude, and precision of the difference.
 The parameter is fixed; interval endpoints vary from sample to sample. If the
 same valid procedure were repeated many times, about 95% of the resulting
 intervals would contain the parameter.
+
+The next simulation repeats the random sample and interval calculation 100
+times. The fixed target is the mean initial equity among all 1,441 recorded
+pitches.
+
+```{r b09-coverage-simulation, echo=FALSE, fig.width=7, fig.height=5.2}
+set.seed(209)
+B_coverage <- 100
+n_coverage <- 100
+target_mean <- mean(sharks$equity_offered_pct)
+ci_lower <- ci_upper <- ci_centre <- numeric(B_coverage)
+
+for (i in seq_len(B_coverage)) {
+  repeated_sample <- sample(
+    sharks$equity_offered_pct,
+    size = n_coverage,
+    replace = FALSE
+  )
+  repeated_mean <- mean(repeated_sample)
+  repeated_se <- sd(repeated_sample) / sqrt(n_coverage)
+  repeated_critical <- qt(0.975, df = n_coverage - 1)
+  ci_centre[i] <- repeated_mean
+  ci_lower[i] <- repeated_mean - repeated_critical * repeated_se
+  ci_upper[i] <- repeated_mean + repeated_critical * repeated_se
+}
+
+covered <- ci_lower <= target_mean & ci_upper >= target_mean
+interval_order <- order(ci_centre)
+plot_y <- seq_len(B_coverage)
+interval_colours <- ifelse(covered[interval_order], "#0072B2", "#D55E00")
+
+plot(
+  NA,
+  xlim = range(c(ci_lower, ci_upper, target_mean)),
+  ylim = c(1, B_coverage),
+  axes = FALSE, bty = "n",
+  xlab = "Mean initial equity offered (%)",
+  ylab = "Repeated sample (ordered by estimate)"
+)
+axis(1)
+axis(2, at = c(1, 20, 40, 60, 80, 100), las = 1)
+segments(
+  ci_lower[interval_order], plot_y,
+  ci_upper[interval_order], plot_y,
+  col = interval_colours, lwd = 1.8
+)
+points(ci_centre[interval_order], plot_y,
+       pch = 16, cex = 0.45, col = interval_colours)
+abline(v = target_mean, col = "#17324D", lwd = 2.5)
+legend(
+  "topleft",
+  legend = c("Contains target mean", "Misses target mean", "Target mean"),
+  col = c("#0072B2", "#D55E00", "#17324D"),
+  lwd = c(2, 2, 2.5), bty = "n"
+)
+```
+
+Each horizontal segment is one 95% confidence interval; its dot is the sample
+mean. The horizontal axis is mean initial equity in percentage points. The
+vertical axis simply orders the 100 repetitions so the intervals can be seen.
+The dark vertical line is the fixed target mean. In this run,
+`r sum(covered)` of 100 intervals cross that line. A new run need not
+give exactly 95, but across many repetitions the proportion approaches about
+95% when the procedure works as intended.
 
 Do not say that this realised interval has a 95% probability of containing the
 fixed parameter. Also remember that a narrow interval does not repair

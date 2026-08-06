@@ -238,6 +238,22 @@ At \(\alpha=0.05\), reject \(H_0\) because \(p<0.05\). The random sample
 provides evidence that mean initial equity in the recorded-pitch frame differs
 from 15 percentage points. The negative estimate indicates that it is lower.
 
+### One-sided alternatives: overview
+
+A one-sided alternative specifies a direction:
+
+\[
+H_1:\delta>0
+\qquad\text{or}\qquad
+H_1:\delta<0.
+\]
+
+Its p-value uses only the corresponding tail. The direction must follow from
+the research question and be chosen before the data are inspected; it is not
+valid to choose a tail because the observed estimate happens to point that
+way. Course practice and exams use two-sided tests, because a difference in
+either direction is usually relevant in business research.
+
 ### The confidence interval and test tell the same story
 
 For the same two-sided t procedure:
@@ -255,6 +271,20 @@ direction, plausible magnitude, and precision of the difference.
 The parameter is fixed; interval endpoints vary from sample to sample. If the
 same valid procedure were repeated many times, about 95% of the resulting
 intervals would contain the parameter.
+
+The next simulation repeats the random sample and interval calculation 100
+times. The fixed target is the mean initial equity among all 1,441 recorded
+pitches.
+
+<img src="B09-confidence-intervals_files/figure-html/b09-coverage-simulation-1.png" width="672" />
+
+Each horizontal segment is one 95% confidence interval; its dot is the sample
+mean. The horizontal axis is mean initial equity in percentage points. The
+vertical axis simply orders the 100 repetitions so the intervals can be seen.
+The dark vertical line is the fixed target mean. In this run,
+96 of 100 intervals cross that line. A new run need not
+give exactly 95, but across many repetitions the proportion approaches about
+95% when the procedure works as intended.
 
 Do not say that this realised interval has a 95% probability of containing the
 fixed parameter. Also remember that a narrow interval does not repair

@@ -8,6 +8,7 @@
 <li>identify a valid population and sampling frame;</li>
 <li>distinguish parameters, estimators, and estimates;</li>
 <li>calculate standard errors for a mean and proportion;</li>
+<li>calculate and interpret quartiles and the IQR;</li>
 <li>explain why a one-sample t procedure has \(n-1\) degrees of freedom;</li>
 <li>use the CLT without confusing observations and statistics;</li>
 <li>qualify conclusions when the sampling design is limited.</li>
@@ -81,18 +82,25 @@ c(
   n = nrow(pitch_sample),
   mean_equity = mean(pitch_sample$equity_offered_pct),
   sd_equity = sd(pitch_sample$equity_offered_pct),
+  q1_equity = unname(quantile(pitch_sample$equity_offered_pct, 0.25)),
+  median_equity = median(pitch_sample$equity_offered_pct),
+  q3_equity = unname(quantile(pitch_sample$equity_offered_pct, 0.75)),
   deal_proportion = mean(pitch_sample$deal_on_show)
 )
 ```
 
 ```
-##               n     mean_equity       sd_equity deal_proportion 
-##      100.000000       12.760000        7.707887        0.640000
+##               n     mean_equity       sd_equity       q1_equity   median_equity 
+##      100.000000       12.760000        7.707887        8.000000       10.000000 
+##       q3_equity deal_proportion 
+##       17.750000        0.640000
 ```
 
 1. Identify the parameter, estimator, and estimate for mean equity.
 2. Identify the parameter, estimator, and estimate for the deal proportion.
-3. Explain why a different seed can produce different estimates.
+3. Calculate the IQR of equity and interpret it.
+4. Explain why a different seed can produce different estimates and a
+   different IQR.
 
 <details>
 <summary>Check your answer</summary>
@@ -100,8 +108,12 @@ c(
 For equity, the parameter is the population mean \(\mu\), the estimator is
 \(\bar X\), and the estimate is \(\bar x=12.76\). For deal outcome, the
 parameter is the population proportion \(p\), the estimator is
-\(\widehat P\), and the estimate is \(\hat p=0.64\). A different seed selects
-a different random set of rows, so the realised statistics can change.
+\(\widehat P\), and the estimate is \(\hat p=0.64\). The sample quartiles are
+\(Q_1=8\) and \(Q_3=17.75\), so
+\(\operatorname{IQR}=17.75-8=9.75\) percentage points. The middle half of the
+sampled initial equity offers lies from 8% to 17.75%. A different seed selects
+a different random set of rows, so all realised sample statistics, including
+the IQR, can change.
 
 </details>
 

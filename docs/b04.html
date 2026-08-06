@@ -288,10 +288,19 @@ Check your denominators
 <p>Expectation locates the centre of a distribution, but it does not describe how
 tightly values cluster around that centre. Two distributions can have the same
 expectation and very different spreads.</p>
+<p>The two distributions below both have expectation 1. In the left panel, most
+probability is concentrated at 1. In the right panel, most probability is
+farther from 1, at 0 and 2.</p>
+<p><img src="B04-conditional-probability_files/figure-html/b04-same-mean-spread-1.png" width="672" /></p>
+<p>The horizontal axis lists the possible values and the vertical axis gives
+their probabilities. The dashed line marks the common expectation. The centre
+is the same, but Distribution B has greater spread because values 0 and 2
+receive much more probability. In fact,
+<span class="math inline">\(\operatorname{Var}(X)=0.20\)</span> for A and <span class="math inline">\(0.90\)</span> for B.</p>
 <p>To measure spread, start with the deviation <span class="math inline">\(X-\mu\)</span>, where
 <span class="math inline">\(\mu=E[X]\)</span>. Positive and negative deviations would cancel if they were
 averaged directly, so variance squares each deviation before taking its
-probability-weighted average. When <span class="math inline">\(E[X^2]&lt;\infty\)</span>,</p>
+probability-weighted average:</p>
 <p><span class="math display">\[
 \operatorname{Var}(X)
 =E[(X-\mu)^2]
@@ -443,9 +452,11 @@ numerator while having different denominators.</p>
 <strong>MIT explanation (review):</strong>
 <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/total-probability-theorem/">02.7 Total Probability Theorem</a>.
 </p>
-<p>Events <span class="math inline">\(B_1,\ldots,B_k\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span> when they are
-mutually disjoint and their union is <span class="math inline">\(\Omega\)</span>. Every outcome belongs to
-exactly one part.</p>
+<p>Lecture 2 introduced a partition as a division of <span class="math inline">\(\Omega\)</span> into
+non-overlapping events that cover every possible outcome. Conditioning gives
+the probability of <span class="math inline">\(A\)</span> within each part. The multiplication rule turns each
+conditional probability into a joint piece, and adding the pieces gives the
+overall probability of <span class="math inline">\(A\)</span>. This is the <strong>law of total probability</strong>.</p>
 <p>If <span class="math inline">\(P(B_i)&gt;0\)</span>, then:</p>
 <p><span class="math display">\[
 P(A)=\sum_{i=1}^{k}P(A\mid B_i)P(B_i).
@@ -462,6 +473,13 @@ P(D)=P(D\mid L^c)P(L^c)+P(D\mid L)P(L).
 ##    0.6120749    0.6120749</code></pre>
 <p>The overall deal probability is a weighted average of the period-specific deal
 probabilities. The group probabilities supply the weights.</p>
+<p><img src="B04-conditional-probability_files/figure-html/b04-total-probability-diagram-1.png" width="672" /></p>
+<p>The outer rectangle is <span class="math inline">\(\Omega\)</span>. Its two columns are the early and late
+parts of the partition; column width represents the probability of that
+period. Within each column, the lower coloured region represents a deal. Its
+area is
+<span class="math inline">\(P(D\mid\text{period})P(\text{period})=P(D\cap\text{period})\)</span>.
+The two coloured areas do not overlap, and their sum is <span class="math inline">\(P(D)\)</span>.</p>
 </div>
 <div id="bayes-rule" class="section level3 hasAnchor">
 <h3>Bayes’ rule<a href="b04.html#bayes-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>

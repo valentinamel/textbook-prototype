@@ -281,7 +281,7 @@ season\_c=season-\overline{season}.
 \]</span></p>
 <p>Then the lower-order <code>women</code> coefficient compares groups at the average season
 rather than at the unobserved Season 0.</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="i06.html#cb175-1" tabindex="-1"></a><span class="fu">summary</span>(interaction_model)</span></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="i06.html#cb179-1" tabindex="-1"></a><span class="fu">summary</span>(interaction_model)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = equity_offered_pct ~ season_c * women + ask_100k, 
@@ -326,7 +326,7 @@ an interaction is present.</p>
 one lower-order term is not individually significant. The lower-order terms
 define the lines whose difference the interaction describes.</p>
 <p>In R:</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="i06.html#cb177-1" tabindex="-1"></a><span class="fu">lm</span>(y <span class="sc">~</span> x <span class="sc">*</span> z, <span class="at">data =</span> df)  <span class="co"># expands to x + z + x:z</span></span></code></pre></div>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="i06.html#cb181-1" tabindex="-1"></a><span class="fu">lm</span>(y <span class="sc">~</span> x <span class="sc">*</span> z, <span class="at">data =</span> df)  <span class="co"># expands to x + z + x:z</span></span></code></pre></div>
 </div>
 <div id="polynomial-terms-model-curvature" class="section level3 hasAnchor">
 <h3>Polynomial terms model curvature<a href="i06.html#polynomial-terms-model-curvature" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -343,7 +343,7 @@ fitted mean by</p>
 \]</span></p>
 <p>Therefore do not interpret <span class="math inline">\(\beta_1\)</span> as the overall slope while <span class="math inline">\(x^2\)</span> is in
 the model. Compare fitted values or graph the curve.</p>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="i06.html#cb178-1" tabindex="-1"></a><span class="fu">summary</span>(poly_season)</span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="i06.html#cb182-1" tabindex="-1"></a><span class="fu">summary</span>(poly_season)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = equity_offered_pct ~ season + I(season^2) + ask_100k, 
@@ -365,7 +365,7 @@ the model. Compare fitted values or graph the curve.</p>
 ## Residual standard error: 7.57 on 1437 degrees of freedom
 ## Multiple R-squared:  0.1981, Adjusted R-squared:  0.1965 
 ## F-statistic: 118.3 on 3 and 1437 DF,  p-value: &lt; 2.2e-16</code></pre>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="i06.html#cb180-1" tabindex="-1"></a><span class="fu">anova</span>(linear_season, poly_season)</span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="i06.html#cb184-1" tabindex="-1"></a><span class="fu">anova</span>(linear_season, poly_season)</span></code></pre></div>
 <pre><code>## Analysis of Variance Table
 ## 
 ## Model 1: equity_offered_pct ~ season + ask_100k
@@ -440,13 +440,13 @@ Check your answers
 <li><p>For <span class="math inline">\(D=0\)</span>, the line is <span class="math inline">\(10+2X\)</span>. For <span class="math inline">\(D=1\)</span>, it is <span class="math inline">\(13+1.5X\)</span>.
 The <span class="math inline">\(D=1\)</span> slope is 0.5 units smaller.</p></li>
 <li><p>For example:</p>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="i06.html#cb182-1" tabindex="-1"></a>uncentered <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">*</span> women <span class="sc">+</span> ask_100k,</span>
-<span id="cb182-2"><a href="i06.html#cb182-2" tabindex="-1"></a>                 <span class="at">data =</span> known_gender)</span>
-<span id="cb182-3"><a href="i06.html#cb182-3" tabindex="-1"></a>centered <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season_c <span class="sc">*</span> women <span class="sc">+</span> ask_100k,</span>
-<span id="cb182-4"><a href="i06.html#cb182-4" tabindex="-1"></a>               <span class="at">data =</span> known_gender)</span>
-<span id="cb182-5"><a href="i06.html#cb182-5" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fu">fitted</span>(uncentered), <span class="fu">fitted</span>(centered))</span>
-<span id="cb182-6"><a href="i06.html#cb182-6" tabindex="-1"></a><span class="fu">coef</span>(uncentered)[<span class="st">&quot;season:women&quot;</span>]</span>
-<span id="cb182-7"><a href="i06.html#cb182-7" tabindex="-1"></a><span class="fu">coef</span>(centered)[<span class="st">&quot;season_c:women&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="i06.html#cb186-1" tabindex="-1"></a>uncentered <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">*</span> women <span class="sc">+</span> ask_100k,</span>
+<span id="cb186-2"><a href="i06.html#cb186-2" tabindex="-1"></a>                 <span class="at">data =</span> known_gender)</span>
+<span id="cb186-3"><a href="i06.html#cb186-3" tabindex="-1"></a>centered <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season_c <span class="sc">*</span> women <span class="sc">+</span> ask_100k,</span>
+<span id="cb186-4"><a href="i06.html#cb186-4" tabindex="-1"></a>               <span class="at">data =</span> known_gender)</span>
+<span id="cb186-5"><a href="i06.html#cb186-5" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fu">fitted</span>(uncentered), <span class="fu">fitted</span>(centered))</span>
+<span id="cb186-6"><a href="i06.html#cb186-6" tabindex="-1"></a><span class="fu">coef</span>(uncentered)[<span class="st">&quot;season:women&quot;</span>]</span>
+<span id="cb186-7"><a href="i06.html#cb186-7" tabindex="-1"></a><span class="fu">coef</span>(centered)[<span class="st">&quot;season_c:women&quot;</span>]</span></code></pre></div>
 <p>The fitted values agree and both interaction estimates are about
 <span class="math inline">\(-0.0615\)</span>. Centering changes the intercept and lower-order group
 coefficient, not fitted values, the interaction estimate, or model fit.</p></li>

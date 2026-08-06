@@ -282,11 +282,11 @@ dependent, although every draw has the same marginal distribution.</li>
 the dependence is weak. This course uses the 10% condition as a practical
 check: if <span class="math inline">\(n\le0.10N\)</span>, the usual independent-sample standard-error formulas
 are a good approximation.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="b07.html#cb100-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb100-2"><a href="b07.html#cb100-2" tabindex="-1"></a>sample_rows <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(sharks)), <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb100-3"><a href="b07.html#cb100-3" tabindex="-1"></a>pitch_sample <span class="ot">&lt;-</span> sharks[sample_rows, ]</span>
-<span id="cb100-4"><a href="b07.html#cb100-4" tabindex="-1"></a></span>
-<span id="cb100-5"><a href="b07.html#cb100-5" tabindex="-1"></a><span class="fu">nrow</span>(pitch_sample)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="b07.html#cb104-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb104-2"><a href="b07.html#cb104-2" tabindex="-1"></a>sample_rows <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(sharks)), <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb104-3"><a href="b07.html#cb104-3" tabindex="-1"></a>pitch_sample <span class="ot">&lt;-</span> sharks[sample_rows, ]</span>
+<span id="cb104-4"><a href="b07.html#cb104-4" tabindex="-1"></a></span>
+<span id="cb104-5"><a href="b07.html#cb104-5" tabindex="-1"></a><span class="fu">nrow</span>(pitch_sample)</span></code></pre></div>
 <pre><code>## [1] 100</code></pre>
 <p>Here <span class="math inline">\(100/1441\approx0.069&lt;0.10\)</span>.</p>
 </div>
@@ -388,11 +388,11 @@ slightly too small on average as a measure of population spread. Dividing by
 <span class="math inline">\(n-1\)</span>, rather than <span class="math inline">\(n\)</span>, corrects that downward bias under the random-sample
 model. Degrees of freedom count remaining independent information; they are
 not a percentage or a probability.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="b07.html#cb102-1" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb102-2"><a href="b07.html#cb102-2" tabindex="-1"></a>  <span class="at">sample_mean_equity =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
-<span id="cb102-3"><a href="b07.html#cb102-3" tabindex="-1"></a>  <span class="at">sample_sd_equity =</span> <span class="fu">sd</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
-<span id="cb102-4"><a href="b07.html#cb102-4" tabindex="-1"></a>  <span class="at">sample_deal_proportion =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>deal_on_show)</span>
-<span id="cb102-5"><a href="b07.html#cb102-5" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="b07.html#cb106-1" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb106-2"><a href="b07.html#cb106-2" tabindex="-1"></a>  <span class="at">sample_mean_equity =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
+<span id="cb106-3"><a href="b07.html#cb106-3" tabindex="-1"></a>  <span class="at">sample_sd_equity =</span> <span class="fu">sd</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
+<span id="cb106-4"><a href="b07.html#cb106-4" tabindex="-1"></a>  <span class="at">sample_deal_proportion =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>deal_on_show)</span>
+<span id="cb106-5"><a href="b07.html#cb106-5" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##     sample_mean_equity       sample_sd_equity sample_deal_proportion 
 ##              12.760000               7.707887               0.640000</code></pre>
 <p>For this realised sample, <span class="math inline">\(\bar x=12.76\)</span> percentage points,

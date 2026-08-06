@@ -271,11 +271,11 @@ values of the included variables.</p>
 <li><code>ask_100k</code>, requested dollars divided by 100,000;</li>
 <li><code>description_words</code>, the number of words in the source’s short description.</li>
 </ul>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="i04.html#cb160-1" tabindex="-1"></a>equity_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb160-2"><a href="i04.html#cb160-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k <span class="sc">+</span> description_words,</span>
-<span id="cb160-3"><a href="i04.html#cb160-3" tabindex="-1"></a>  <span class="at">data =</span> sharks</span>
-<span id="cb160-4"><a href="i04.html#cb160-4" tabindex="-1"></a>)</span>
-<span id="cb160-5"><a href="i04.html#cb160-5" tabindex="-1"></a><span class="fu">summary</span>(equity_model)</span></code></pre></div>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="i04.html#cb164-1" tabindex="-1"></a>equity_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb164-2"><a href="i04.html#cb164-2" tabindex="-1"></a>  equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k <span class="sc">+</span> description_words,</span>
+<span id="cb164-3"><a href="i04.html#cb164-3" tabindex="-1"></a>  <span class="at">data =</span> sharks</span>
+<span id="cb164-4"><a href="i04.html#cb164-4" tabindex="-1"></a>)</span>
+<span id="cb164-5"><a href="i04.html#cb164-5" tabindex="-1"></a><span class="fu">summary</span>(equity_model)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = equity_offered_pct ~ season + ask_100k + description_words, 
@@ -377,16 +377,16 @@ the same model interpretable.</p>
 <div id="why-coefficients-change" class="section level3 hasAnchor">
 <h3>Why coefficients change<a href="i04.html#why-coefficients-change" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Compare the season slope across specifications:</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="i04.html#cb162-1" tabindex="-1"></a>m_simple <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season, <span class="at">data =</span> sharks)</span>
-<span id="cb162-2"><a href="i04.html#cb162-2" tabindex="-1"></a>m_adjusted <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k,</span>
-<span id="cb162-3"><a href="i04.html#cb162-3" tabindex="-1"></a>                 <span class="at">data =</span> sharks)</span>
-<span id="cb162-4"><a href="i04.html#cb162-4" tabindex="-1"></a>m_full <span class="ot">&lt;-</span> equity_model</span>
-<span id="cb162-5"><a href="i04.html#cb162-5" tabindex="-1"></a></span>
-<span id="cb162-6"><a href="i04.html#cb162-6" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb162-7"><a href="i04.html#cb162-7" tabindex="-1"></a>  <span class="at">simple =</span> <span class="fu">coef</span>(m_simple)[<span class="st">&quot;season&quot;</span>],</span>
-<span id="cb162-8"><a href="i04.html#cb162-8" tabindex="-1"></a>  <span class="at">adjusted_for_ask =</span> <span class="fu">coef</span>(m_adjusted)[<span class="st">&quot;season&quot;</span>],</span>
-<span id="cb162-9"><a href="i04.html#cb162-9" tabindex="-1"></a>  <span class="at">adjusted_for_ask_and_words =</span> <span class="fu">coef</span>(m_full)[<span class="st">&quot;season&quot;</span>]</span>
-<span id="cb162-10"><a href="i04.html#cb162-10" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="i04.html#cb166-1" tabindex="-1"></a>m_simple <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season, <span class="at">data =</span> sharks)</span>
+<span id="cb166-2"><a href="i04.html#cb166-2" tabindex="-1"></a>m_adjusted <span class="ot">&lt;-</span> <span class="fu">lm</span>(equity_offered_pct <span class="sc">~</span> season <span class="sc">+</span> ask_100k,</span>
+<span id="cb166-3"><a href="i04.html#cb166-3" tabindex="-1"></a>                 <span class="at">data =</span> sharks)</span>
+<span id="cb166-4"><a href="i04.html#cb166-4" tabindex="-1"></a>m_full <span class="ot">&lt;-</span> equity_model</span>
+<span id="cb166-5"><a href="i04.html#cb166-5" tabindex="-1"></a></span>
+<span id="cb166-6"><a href="i04.html#cb166-6" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb166-7"><a href="i04.html#cb166-7" tabindex="-1"></a>  <span class="at">simple =</span> <span class="fu">coef</span>(m_simple)[<span class="st">&quot;season&quot;</span>],</span>
+<span id="cb166-8"><a href="i04.html#cb166-8" tabindex="-1"></a>  <span class="at">adjusted_for_ask =</span> <span class="fu">coef</span>(m_adjusted)[<span class="st">&quot;season&quot;</span>],</span>
+<span id="cb166-9"><a href="i04.html#cb166-9" tabindex="-1"></a>  <span class="at">adjusted_for_ask_and_words =</span> <span class="fu">coef</span>(m_full)[<span class="st">&quot;season&quot;</span>]</span>
+<span id="cb166-10"><a href="i04.html#cb166-10" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##                     simple.season           adjusted_for_ask.season 
 ##                        -0.8241241                        -0.8143307 
 ## adjusted_for_ask_and_words.season 

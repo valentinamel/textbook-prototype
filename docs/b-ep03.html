@@ -211,6 +211,9 @@ distinguish parameters, estimators, and estimates;
 calculate standard errors for a mean and proportion;
 </li>
 <li>
+calculate and interpret quartiles and the IQR;
+</li>
+<li>
 explain why a one-sample t procedure has <span class="math inline">\(n-1\)</span> degrees of freedom;
 </li>
 <li>
@@ -272,21 +275,28 @@ selection from that frame.</p>
 </div>
 <div id="task-2-reproduce-the-realised-sample" class="section level3 hasAnchor">
 <h3>Task 2 — Reproduce the realised sample<a href="b-ep03.html#task-2-reproduce-the-realised-sample" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="b-ep03.html#cb106-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb106-2"><a href="b-ep03.html#cb106-2" tabindex="-1"></a>pitch_sample <span class="ot">&lt;-</span> sharks[<span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(sharks)), <span class="dv">100</span>), ]</span>
-<span id="cb106-3"><a href="b-ep03.html#cb106-3" tabindex="-1"></a></span>
-<span id="cb106-4"><a href="b-ep03.html#cb106-4" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb106-5"><a href="b-ep03.html#cb106-5" tabindex="-1"></a>  <span class="at">n =</span> <span class="fu">nrow</span>(pitch_sample),</span>
-<span id="cb106-6"><a href="b-ep03.html#cb106-6" tabindex="-1"></a>  <span class="at">mean_equity =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
-<span id="cb106-7"><a href="b-ep03.html#cb106-7" tabindex="-1"></a>  <span class="at">sd_equity =</span> <span class="fu">sd</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
-<span id="cb106-8"><a href="b-ep03.html#cb106-8" tabindex="-1"></a>  <span class="at">deal_proportion =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>deal_on_show)</span>
-<span id="cb106-9"><a href="b-ep03.html#cb106-9" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##               n     mean_equity       sd_equity deal_proportion 
-##      100.000000       12.760000        7.707887        0.640000</code></pre>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="b-ep03.html#cb110-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb110-2"><a href="b-ep03.html#cb110-2" tabindex="-1"></a>pitch_sample <span class="ot">&lt;-</span> sharks[<span class="fu">sample</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(sharks)), <span class="dv">100</span>), ]</span>
+<span id="cb110-3"><a href="b-ep03.html#cb110-3" tabindex="-1"></a></span>
+<span id="cb110-4"><a href="b-ep03.html#cb110-4" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb110-5"><a href="b-ep03.html#cb110-5" tabindex="-1"></a>  <span class="at">n =</span> <span class="fu">nrow</span>(pitch_sample),</span>
+<span id="cb110-6"><a href="b-ep03.html#cb110-6" tabindex="-1"></a>  <span class="at">mean_equity =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
+<span id="cb110-7"><a href="b-ep03.html#cb110-7" tabindex="-1"></a>  <span class="at">sd_equity =</span> <span class="fu">sd</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
+<span id="cb110-8"><a href="b-ep03.html#cb110-8" tabindex="-1"></a>  <span class="at">q1_equity =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(pitch_sample<span class="sc">$</span>equity_offered_pct, <span class="fl">0.25</span>)),</span>
+<span id="cb110-9"><a href="b-ep03.html#cb110-9" tabindex="-1"></a>  <span class="at">median_equity =</span> <span class="fu">median</span>(pitch_sample<span class="sc">$</span>equity_offered_pct),</span>
+<span id="cb110-10"><a href="b-ep03.html#cb110-10" tabindex="-1"></a>  <span class="at">q3_equity =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(pitch_sample<span class="sc">$</span>equity_offered_pct, <span class="fl">0.75</span>)),</span>
+<span id="cb110-11"><a href="b-ep03.html#cb110-11" tabindex="-1"></a>  <span class="at">deal_proportion =</span> <span class="fu">mean</span>(pitch_sample<span class="sc">$</span>deal_on_show)</span>
+<span id="cb110-12"><a href="b-ep03.html#cb110-12" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##               n     mean_equity       sd_equity       q1_equity   median_equity 
+##      100.000000       12.760000        7.707887        8.000000       10.000000 
+##       q3_equity deal_proportion 
+##       17.750000        0.640000</code></pre>
 <ol style="list-style-type: decimal">
 <li>Identify the parameter, estimator, and estimate for mean equity.</li>
 <li>Identify the parameter, estimator, and estimate for the deal proportion.</li>
-<li>Explain why a different seed can produce different estimates.</li>
+<li>Calculate the IQR of equity and interpret it.</li>
+<li>Explain why a different seed can produce different estimates and a
+different IQR.</li>
 </ol>
 <details>
 <summary>
@@ -295,8 +305,12 @@ Check your answer
 <p>For equity, the parameter is the population mean <span class="math inline">\(\mu\)</span>, the estimator is
 <span class="math inline">\(\bar X\)</span>, and the estimate is <span class="math inline">\(\bar x=12.76\)</span>. For deal outcome, the
 parameter is the population proportion <span class="math inline">\(p\)</span>, the estimator is
-<span class="math inline">\(\widehat P\)</span>, and the estimate is <span class="math inline">\(\hat p=0.64\)</span>. A different seed selects
-a different random set of rows, so the realised statistics can change.</p>
+<span class="math inline">\(\widehat P\)</span>, and the estimate is <span class="math inline">\(\hat p=0.64\)</span>. The sample quartiles are
+<span class="math inline">\(Q_1=8\)</span> and <span class="math inline">\(Q_3=17.75\)</span>, so
+<span class="math inline">\(\operatorname{IQR}=17.75-8=9.75\)</span> percentage points. The middle half of the
+sampled initial equity offers lies from 8% to 17.75%. A different seed selects
+a different random set of rows, so all realised sample statistics, including
+the IQR, can change.</p>
 </details>
 </div>
 <div id="task-3-standard-errors-and-sample-size" class="section level3 hasAnchor">

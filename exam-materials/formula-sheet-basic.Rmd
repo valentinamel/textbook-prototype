@@ -26,12 +26,8 @@ header-includes:
 
 \begin{center}
 {\Large\bfseries QM Basic}\\[-1pt]
-{\normalsize Formula Sheet - Closed-book Written Exam Attachment}
+{\normalsize Formula Sheet - Lectures 1--10}
 \end{center}
-
-This sheet is cumulative. Each section identifies the lecture in which its
-material is first introduced. Definitions, conditions, units, and
-interpretation remain examinable even when a formula is provided.
 
 ```{r formula-sheet-pdf-content, child='../formula-sheet-content.Rmd'}
 ```

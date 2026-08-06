@@ -452,8 +452,8 @@ b_0=\bar y-b_1\bar x.
 </div>
 <div id="fit-and-read-the-model-in-r" class="section level3 hasAnchor">
 <h3>Fit and read the model in R<a href="i01.html#fit-and-read-the-model-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="i01.html#cb135-1" tabindex="-1"></a>deal_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(deal_100k <span class="sc">~</span> ask_100k, <span class="at">data =</span> deals)</span>
-<span id="cb135-2"><a href="i01.html#cb135-2" tabindex="-1"></a><span class="fu">coef</span>(deal_model)</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="i01.html#cb139-1" tabindex="-1"></a>deal_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(deal_100k <span class="sc">~</span> ask_100k, <span class="at">data =</span> deals)</span>
+<span id="cb139-2"><a href="i01.html#cb139-2" tabindex="-1"></a><span class="fu">coef</span>(deal_model)</span></code></pre></div>
 <pre><code>## (Intercept)    ask_100k 
 ##   0.2757097   1.0085098</code></pre>
 <p>The fitted equation is approximately</p>
@@ -470,11 +470,11 @@ more.</p>
 outside the observed range and is not substantively meaningful; an intercept
 can be mathematically necessary without having a useful standalone
 interpretation.</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="i01.html#cb137-1" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">data.frame</span>(</span>
-<span id="cb137-2"><a href="i01.html#cb137-2" tabindex="-1"></a>  <span class="at">observed =</span> deals<span class="sc">$</span>deal_100k,</span>
-<span id="cb137-3"><a href="i01.html#cb137-3" tabindex="-1"></a>  <span class="at">fitted =</span> <span class="fu">fitted</span>(deal_model),</span>
-<span id="cb137-4"><a href="i01.html#cb137-4" tabindex="-1"></a>  <span class="at">residual =</span> <span class="fu">residuals</span>(deal_model)</span>
-<span id="cb137-5"><a href="i01.html#cb137-5" tabindex="-1"></a>))</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="i01.html#cb141-1" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">data.frame</span>(</span>
+<span id="cb141-2"><a href="i01.html#cb141-2" tabindex="-1"></a>  <span class="at">observed =</span> deals<span class="sc">$</span>deal_100k,</span>
+<span id="cb141-3"><a href="i01.html#cb141-3" tabindex="-1"></a>  <span class="at">fitted =</span> <span class="fu">fitted</span>(deal_model),</span>
+<span id="cb141-4"><a href="i01.html#cb141-4" tabindex="-1"></a>  <span class="at">residual =</span> <span class="fu">residuals</span>(deal_model)</span>
+<span id="cb141-5"><a href="i01.html#cb141-5" tabindex="-1"></a>))</span></code></pre></div>
 <pre><code>##    observed    fitted   residual
 ## 1      0.50 0.7799646 -0.2799646
 ## 2      4.60 4.9148549 -0.3148549
@@ -486,7 +486,7 @@ interpretation.</p>
 </div>
 <div id="prediction-stays-inside-the-evidence-boundary" class="section level3 hasAnchor">
 <h3>Prediction stays inside the evidence boundary<a href="i01.html#prediction-stays-inside-the-evidence-boundary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="i01.html#cb139-1" tabindex="-1"></a><span class="fu">predict</span>(deal_model, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">ask_100k =</span> <span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="i01.html#cb143-1" tabindex="-1"></a><span class="fu">predict</span>(deal_model, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">ask_100k =</span> <span class="dv">3</span>))</span></code></pre></div>
 <pre><code>##        1 
 ## 3.301239</code></pre>
 <p>For a $300,000 request, the fitted mean agreed amount is about $330,000. This
