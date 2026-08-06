@@ -342,8 +342,10 @@ at random</strong>. The sample space is the set of 1,441 pitch records. Define:<
 Consequently, event probabilities equal relative frequencies in this fixed
 dataset. This does not imply the same probabilities for future entrepreneurs.</p>
 </div>
-<div id="event-language-is-set-language" class="section level4 hasAnchor">
-<h4>Event language is set language<a href="b02.html#event-language-is-set-language" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="combining-events" class="section level4 hasAnchor">
+<h4>Combining events<a href="b02.html#combining-events" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Events are sets of outcomes. Set notation therefore gives us a precise way to
+describe how events are combined.</p>
 <table>
 <colgroup>
 <col width="33%" />
@@ -385,11 +387,17 @@ dataset. This does not imply the same probabilities for future entrepreneurs.</p
 </tr>
 </tbody>
 </table>
-<p><img src="B02-typical-pitch_files/figure-html/b02-event-diagrams-1.png" width="672" /></p>
-<p>In each diagram, the outer rectangle is the sample space <span class="math inline">\(\Omega\)</span>, and the
-coloured area is the event named above the panel. These are set diagrams: the
-areas show which outcomes belong to an event, not the numerical size of its
-probability.</p>
+<p>To make the notation concrete, suppose one number is selected at random from</p>
+<p><span class="math display">\[
+\Omega=\{1,2,\ldots,12\}.
+\]</span></p>
+<p>Define <span class="math inline">\(A=\{1,2,3,5,6,9\}\)</span> and <span class="math inline">\(B=\{1,2,3,4\}\)</span>. Each diagram below shows
+the same sample space. A green circle means that the outcome belongs to the
+event named above the panel.</p>
+<p><img src="B02-typical-pitch_files/figure-html/b02-event-diagrams-1.png" width="768" /></p>
+<p>Thus <span class="math inline">\(A^c=\{4,7,8,10,11,12\}\)</span>, <span class="math inline">\(A\cap B=\{1,2,3\}\)</span>, and
+<span class="math inline">\(A\cup B=\{1,2,3,4,5,6,9\}\)</span>. Notice that <strong>or</strong> includes outcomes that are
+in both events: <span class="math inline">\(1,2,3\)</span> belong to the union as well as the intersection.</p>
 <p>Disjoint does <strong>not</strong> mean independent. If two disjoint events both have
 positive probability, observing one makes the other impossible. Independence,
 introduced in Lecture 5, means that observing one event does not change the

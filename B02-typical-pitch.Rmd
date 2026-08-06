@@ -145,7 +145,10 @@ Making the selection uniform means every record has probability \(1/1441\).
 Consequently, event probabilities equal relative frequencies in this fixed
 dataset. This does not imply the same probabilities for future entrepreneurs.
 
-#### Event language is set language
+#### Combining events
+
+Events are sets of outcomes. Set notation therefore gives us a precise way to
+describe how events are combined.
 
 | Notation | Name | Meaning |
 |---|---|---|
@@ -155,46 +158,64 @@ dataset. This does not imply the same probabilities for future entrepreneurs.
 | \(A\subseteq B\) | subset | every outcome in \(A\) is also in \(B\) |
 | \(A\cap B=\varnothing\) | disjoint | \(A\) and \(B\) cannot occur together |
 
-```{r b02-event-diagrams, echo=FALSE, fig.width=7, fig.height=2.5}
-old_par <- par(no.readonly = TRUE)
-par(mfrow = c(1, 3), mar = c(0.5, 0.5, 2.1, 0.5), xaxs = "i", yaxs = "i")
+To make the notation concrete, suppose one number is selected at random from
 
-draw_frame <- function(title) {
-  plot(NA, xlim = c(0, 10), ylim = c(0, 7), axes = FALSE,
-       xlab = "", ylab = "", main = title, asp = 1)
-  rect(0.3, 0.3, 9.7, 6.7, border = "#17324D", lwd = 2)
-  text(9.1, 6.1, expression(Omega), col = "#17324D")
+\[
+\Omega=\{1,2,\ldots,12\}.
+\]
+
+Define \(A=\{1,2,3,5,6,9\}\) and \(B=\{1,2,3,4\}\). Each diagram below shows
+the same sample space. A green circle means that the outcome belongs to the
+event named above the panel.
+
+```{r b02-event-diagrams, echo=FALSE, fig.width=8, fig.height=3.1}
+old_par <- par(no.readonly = TRUE)
+par(mfrow = c(1, 3), mar = c(0.6, 0.35, 2.8, 0.35),
+    xaxs = "i", yaxs = "i")
+
+omega <- 1:12
+A <- c(1, 2, 3, 5, 6, 9)
+B <- c(1, 2, 3, 4)
+
+event_sets <- list(
+  setdiff(omega, A),
+  intersect(A, B),
+  union(A, B)
+)
+panel_titles <- c("Complement", "Intersection", "Union")
+panel_meanings <- c("not A", "A and B", "A or B (or both)")
+
+draw_outcome_set <- function(selected, title, meaning) {
+  plot(NA, xlim = c(0.45, 4.55), ylim = c(0.35, 4.2), axes = FALSE,
+       xlab = "", ylab = "", asp = 1)
+  title(main = title, line = 1.2, cex.main = 1.05, col.main = "#17324D")
+  mtext(meaning, side = 3, line = 0.1, cex = 0.82, col = "#4B5563")
+
+  rect(0.62, 0.55, 4.38, 3.55, col = "#F4F7F9",
+       border = "#17324D", lwd = 1.4)
+  text(4.18, 3.76, expression(Omega), cex = 0.85, col = "#17324D")
+
+  x <- rep(1:4, 3)
+  y <- rep(3:1, each = 4)
+  is_selected <- omega %in% selected
+  symbols(x, y, circles = rep(0.25, 12), inches = FALSE,
+          bg = ifelse(is_selected, "#00796B", "white"),
+          fg = ifelse(is_selected, "#00695C", "#9AA7B2"),
+          lwd = 1.4, add = TRUE)
+  text(x, y, labels = omega,
+       col = ifelse(is_selected, "white", "#17324D"),
+       font = 2, cex = 0.82)
 }
 
-draw_frame("Complement: Aᶜ")
-rect(0.3, 0.3, 9.7, 6.7, col = "#DCEAF3", border = NA)
-rect(2.2, 1.5, 7.8, 5.5, col = "white", border = "#0072B2", lwd = 2)
-rect(0.3, 0.3, 9.7, 6.7, border = "#17324D", lwd = 2)
-text(5, 3.5, "A", col = "#0072B2")
-
-draw_frame("Intersection: A ∩ B")
-rect(1.4, 1.4, 6.2, 5.6, border = "#0072B2", lwd = 2)
-rect(3.8, 1.4, 8.6, 5.6, border = "#D55E00", lwd = 2)
-rect(3.8, 1.4, 6.2, 5.6, col = "#009E73", border = NA)
-text(2.4, 3.5, "A", col = "#0072B2")
-text(7.6, 3.5, "B", col = "#D55E00")
-
-draw_frame(expression("Union: " * A %union% B))
-rect(1.4, 1.4, 6.2, 5.6,
-     col = grDevices::adjustcolor("#0072B2", alpha.f = 0.45),
-     border = "#0072B2", lwd = 2)
-rect(3.8, 1.4, 8.6, 5.6,
-     col = grDevices::adjustcolor("#E69F00", alpha.f = 0.45),
-     border = "#D55E00", lwd = 2)
-text(2.4, 3.5, "A", col = "#0072B2")
-text(7.6, 3.5, "B", col = "#D55E00")
+for (i in seq_along(event_sets)) {
+  draw_outcome_set(event_sets[[i]], panel_titles[i], panel_meanings[i])
+}
 par(old_par)
 ```
 
-In each diagram, the outer rectangle is the sample space \(\Omega\), and the
-coloured area is the event named above the panel. These are set diagrams: the
-areas show which outcomes belong to an event, not the numerical size of its
-probability.
+Thus \(A^c=\{4,7,8,10,11,12\}\), \(A\cap B=\{1,2,3\}\), and
+\(A\cup B=\{1,2,3,4,5,6,9\}\). Notice that **or** includes outcomes that are
+in both events: \(1,2,3\) belong to the union as well as the intersection.
 
 Disjoint does **not** mean independent. If two disjoint events both have
 positive probability, observing one makes the other impossible. Independence,

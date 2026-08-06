@@ -137,7 +137,10 @@ Making the selection uniform means every record has probability \(1/1441\).
 Consequently, event probabilities equal relative frequencies in this fixed
 dataset. This does not imply the same probabilities for future entrepreneurs.
 
-#### Event language is set language
+#### Combining events
+
+Events are sets of outcomes. Set notation therefore gives us a precise way to
+describe how events are combined.
 
 | Notation | Name | Meaning |
 |---|---|---|
@@ -147,12 +150,21 @@ dataset. This does not imply the same probabilities for future entrepreneurs.
 | \(A\subseteq B\) | subset | every outcome in \(A\) is also in \(B\) |
 | \(A\cap B=\varnothing\) | disjoint | \(A\) and \(B\) cannot occur together |
 
-<img src="B02-typical-pitch_files/figure-html/b02-event-diagrams-1.png" width="672" />
+To make the notation concrete, suppose one number is selected at random from
 
-In each diagram, the outer rectangle is the sample space \(\Omega\), and the
-coloured area is the event named above the panel. These are set diagrams: the
-areas show which outcomes belong to an event, not the numerical size of its
-probability.
+\[
+\Omega=\{1,2,\ldots,12\}.
+\]
+
+Define \(A=\{1,2,3,5,6,9\}\) and \(B=\{1,2,3,4\}\). Each diagram below shows
+the same sample space. A green circle means that the outcome belongs to the
+event named above the panel.
+
+<img src="B02-typical-pitch_files/figure-html/b02-event-diagrams-1.png" width="768" />
+
+Thus \(A^c=\{4,7,8,10,11,12\}\), \(A\cap B=\{1,2,3\}\), and
+\(A\cup B=\{1,2,3,4,5,6,9\}\). Notice that **or** includes outcomes that are
+in both events: \(1,2,3\) belong to the union as well as the intersection.
 
 Disjoint does **not** mean independent. If two disjoint events both have
 positive probability, observing one makes the other impossible. Independence,
