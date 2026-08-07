@@ -246,33 +246,39 @@ A,B&amp;\text{events}\\
 A^c&amp;\text{complement of }A\\
 X,Y&amp;\text{random variables}\\
 x_i,y_i&amp;\text{observed values in row }i\\
-n,N&amp;\text{sample size, population size}\\
+n_A,n,N&amp;\text{count in }A\text{, sample size, population size}\\
 \mu,\sigma^2,p&amp;\text{population mean, variance, proportion}\\
-\bar X,S^2,\widehat P&amp;\text{estimators}\\
-\bar x,s^2,\hat p&amp;\text{realised estimates}\\
+\bar X,S^2,\widehat P&amp;\text{sample mean, variance, proportion estimators}\\
+\bar x,s^2,\hat p&amp;\text{corresponding realised estimates}\\
+\theta,\theta_0&amp;\text{parameter of interest, value specified by }H_0\\
+b_j,\beta_j&amp;\text{estimated coefficient, population coefficient}\\
+\operatorname{SE}(\cdot)&amp;\text{standard error}\\
 \alpha&amp;\text{significance level}\\
 df&amp;\text{degrees of freedom}
 \end{array}
 \]</span></p>
 <p><span class="math display">\[
+\text{Two-sided hypothesis test:}\qquad
 H_0:\theta=\theta_0
 \qquad\text{versus}\qquad
-H_1:\theta\ne\theta_0
-\quad\text{(two-sided)}
+H_1:\theta\ne\theta_0.
 \]</span></p>
 </div>
 <div id="formula-l1" class="section level2 hasAnchor">
 <h2>Lecture 1 - Data summaries and units<a href="formula-sheet.html#formula-l1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Proportions and percentages</strong></p>
 <p><span class="math display">\[
 \text{proportion}=\frac{n_A}{n},
 \qquad
 \text{percentage}=100\frac{n_A}{n}\%.
 \]</span></p>
+<p><strong>Sample mean and range</strong></p>
 <p><span class="math display">\[
 \bar x=\frac{1}{n}\sum_{i=1}^{n}x_i,
 \qquad
 \text{range}=\max_i x_i-\min_i x_i.
 \]</span></p>
+<p><strong>Changes between two percentages <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span></strong></p>
 <p><span class="math display">\[
 \begin{aligned}
 \text{percentage-point change}&amp;=b-a,\\
@@ -283,26 +289,32 @@ H_1:\theta\ne\theta_0
 </div>
 <div id="formula-l2" class="section level2 hasAnchor">
 <h2>Lecture 2 - Probability foundations<a href="formula-sheet.html#formula-l2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Probability bounds, sample space, and complement</strong></p>
 <p><span class="math display">\[
 0\le P(A)\le1,
 \qquad P(\Omega)=1,
 \qquad P(A^c)=1-P(A).
 \]</span></p>
+<p><strong>Addition rule</strong></p>
 <p><span class="math display">\[
 P(A\cup B)=P(A)+P(B)-P(A\cap B).
 \]</span></p>
+<p><strong>Addition rule for disjoint events</strong></p>
 <p><span class="math display">\[
 A\cap B=\varnothing
 \quad\Longrightarrow\quad
 P(A\cup B)=P(A)+P(B).
 \]</span></p>
+<p><strong>Equally likely outcomes</strong></p>
 <p><span class="math display">\[
 P(A)=\frac{|A|}{|\Omega|}
 \quad\text{(equally likely outcomes)}.
 \]</span></p>
+<p><strong>Random variable</strong></p>
 <p><span class="math display">\[
 X:\Omega\rightarrow\mathbb R.
 \]</span></p>
+<p><strong>Partition of the sample space</strong></p>
 <p><span class="math display">\[
 B_i\cap B_j=\varnothing\ (i\ne j),
 \qquad
@@ -311,22 +323,28 @@ B_i\cap B_j=\varnothing\ (i\ne j),
 </div>
 <div id="formula-l3" class="section level2 hasAnchor">
 <h2>Lecture 3 - PMFs, CDFs, and expectation<a href="formula-sheet.html#formula-l3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Probability mass function (PMF)</strong></p>
 <p><span class="math display">\[
 p_X(x)=P(X=x),
 \qquad p_X(x)\ge0,
 \qquad \sum_{x\in\mathcal X}p_X(x)=1.
 \]</span></p>
+<div style="page-break-after: always;"></div>
+<p><strong>Cumulative distribution function (CDF)</strong></p>
 <p><span class="math display">\[
 F_X(a)=P(X\le a)=\sum_{x\le a}p_X(x).
 \]</span></p>
+<p><strong>Interval probability from a CDF</strong></p>
 <p><span class="math display">\[
 P(a&lt;X\le b)=F_X(b)-F_X(a).
 \]</span></p>
+<p><strong>Expectation and expectation of a transformation</strong></p>
 <p><span class="math display">\[
 E[X]=\sum_{x\in\mathcal X}x\,p_X(x),
 \qquad
 E[g(X)]=\sum_{x\in\mathcal X}g(x)p_X(x).
 \]</span></p>
+<p><strong>Bernoulli distribution</strong></p>
 <p><span class="math display">\[
 X\sim\operatorname{Bernoulli}(p):
 \qquad
@@ -335,6 +353,7 @@ P(X=1)=p,\quad P(X=0)=1-p,\quad E[X]=p.
 </div>
 <div id="formula-l4" class="section level2 hasAnchor">
 <h2>Lecture 4 - Variance and conditioning<a href="formula-sheet.html#formula-l4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Population variance and standard deviation</strong></p>
 <p><span class="math display">\[
 \mu=E[X],
 \qquad
@@ -344,24 +363,29 @@ P(X=1)=p,\quad P(X=0)=1-p,\quad E[X]=p.
 <p><span class="math display">\[
 \operatorname{SD}(X)=\sqrt{\operatorname{Var}(X)}.
 \]</span></p>
+<p><strong>Bernoulli variance</strong></p>
 <p><span class="math display">\[
 X\sim\operatorname{Bernoulli}(p):
 \qquad
 \operatorname{Var}(X)=p(1-p).
 \]</span></p>
+<p><strong>Sample variance and standard deviation</strong></p>
 <p><span class="math display">\[
 s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)^2,
 \qquad s=\sqrt{s^2}.
 \]</span></p>
+<p><strong>Conditional probability and product rule</strong></p>
 <p><span class="math display">\[
 P(A\mid B)=\frac{P(A\cap B)}{P(B)},
 \qquad
 P(A\cap B)=P(A\mid B)P(B),
 \qquad P(B)&gt;0.
 \]</span></p>
+<p><strong>Law of total probability</strong></p>
 <p><span class="math display">\[
 P(A)=\sum_{i=1}^{k}P(A\mid B_i)P(B_i).
 \]</span></p>
+<p><strong>Bayes’ rule</strong></p>
 <p><span class="math display">\[
 P(B_i\mid A)
 =\frac{P(A\mid B_i)P(B_i)}
@@ -370,25 +394,30 @@ P(B_i\mid A)
 </div>
 <div id="formula-l5" class="section level2 hasAnchor">
 <h2>Lecture 5 - Joint PMFs and correlation<a href="formula-sheet.html#formula-l5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Joint PMF</strong></p>
 <p><span class="math display">\[
 p_{X,Y}(x,y)=P(X=x,Y=y).
 \]</span></p>
+<p><strong>Marginal and conditional PMFs</strong></p>
 <p><span class="math display">\[
 p_X(x)=\sum_y p_{X,Y}(x,y),
 \qquad
 p_{X\mid Y}(x\mid y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}.
 \]</span></p>
+<p><strong>Independence of random variables</strong></p>
 <p><span class="math display">\[
 X\perp Y
 \quad\Longleftrightarrow\quad
 p_{X,Y}(x,y)=p_X(x)p_Y(y)
 \quad\text{for every }x,y.
 \]</span></p>
+<p><strong>Independence of events</strong></p>
 <p><span class="math display">\[
 A\perp B
 \quad\Longleftrightarrow\quad
 P(A\cap B)=P(A)P(B).
 \]</span></p>
+<p><strong>Population covariance and correlation</strong></p>
 <p><span class="math display">\[
 \operatorname{Cov}(X,Y)
 =E[(X-\mu_X)(Y-\mu_Y)]
@@ -400,15 +429,16 @@ P(A\cap B)=P(A)P(B).
 {\operatorname{SD}(X)\operatorname{SD}(Y)},
 \qquad -1\le\rho_{XY}\le1.
 \]</span></p>
+<p><strong>Sample covariance and correlation</strong></p>
 <p><span class="math display">\[
 s_{XY}=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)(y_i-\bar y),
 \qquad
 r_{XY}=\frac{s_{XY}}{s_Xs_Y}.
 \]</span></p>
-<div style="page-break-after: always;"></div>
 </div>
 <div id="formula-l6" class="section level2 hasAnchor">
 <h2>Lecture 6 - Continuous distributions and quantiles<a href="formula-sheet.html#formula-l6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Continuous-distribution probabilities</strong></p>
 <p><span class="math display">\[
 f_X(x)\ge0,
 \qquad
@@ -416,6 +446,7 @@ P(X=x)=0,
 \qquad
 P(a&lt;X\le b)=F_X(b)-F_X(a).
 \]</span></p>
+<p><strong>Uniform distribution</strong></p>
 <p><span class="math display">\[
 X\sim U(a,b):
 \qquad
@@ -432,6 +463,7 @@ E[X]=\frac{a+b}{2},
 \qquad
 \operatorname{Var}(X)=\frac{(b-a)^2}{12}.
 \]</span></p>
+<p><strong>Quartiles and interquartile range</strong></p>
 <p><span class="math display">\[
 Q_1=q_{0.25},
 \qquad
@@ -441,6 +473,7 @@ Q_3=q_{0.75},
 \qquad
 \operatorname{IQR}=Q_3-Q_1.
 \]</span></p>
+<p><strong>Normal distribution and standardisation</strong></p>
 <p><span class="math display">\[
 X\sim N(\mu,\sigma^2),
 \qquad
@@ -454,12 +487,14 @@ P(\mu-1.96\sigma\le X\le\mu+1.96\sigma)\approx0.95.
 </div>
 <div id="formula-l7" class="section level2 hasAnchor">
 <h2>Lecture 7 - Samples and estimators<a href="formula-sheet.html#formula-l7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Sample mean and sample proportion estimators</strong></p>
 <p><span class="math display">\[
 \bar X=\frac{1}{n}\sum_{i=1}^{n}X_i,
 \qquad
 \widehat P=\frac{1}{n}\sum_{i=1}^{n}X_i
 \quad(X_i\in\{0,1\}).
 \]</span></p>
+<p><strong>Sample variance and degrees of freedom</strong></p>
 <p><span class="math display">\[
 S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar X)^2,
 \qquad
@@ -467,6 +502,7 @@ S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar X)^2,
 \qquad
 df=n-1.
 \]</span></p>
+<p><strong>10% condition for sampling without replacement</strong></p>
 <p><span class="math display">\[
 n\le0.10N
 \quad\text{(sampling without replacement)}.
@@ -474,6 +510,7 @@ n\le0.10N
 </div>
 <div id="formula-l8" class="section level2 hasAnchor">
 <h2>Lecture 8 - Sampling distributions and SEs<a href="formula-sheet.html#formula-l8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Sampling distribution of the sample mean</strong></p>
 <p><span class="math display">\[
 E[\bar X]=\mu,
 \qquad
@@ -487,14 +524,17 @@ E[\bar X]=\mu,
 \qquad
 \bar X\ \dot\sim\ N\!\left(\mu,\frac{\sigma^2}{n}\right).
 \]</span></p>
+<p><strong>One-sample <span class="math inline">\(t\)</span> statistic</strong></p>
 <p><span class="math display">\[
 T=\frac{\bar X-\mu}{S/\sqrt n}\sim t_{n-1}.
 \]</span></p>
+<p><strong>Sampling distribution of a sample proportion</strong></p>
 <p><span class="math display">\[
 E[\widehat P]=p,
 \qquad
 \operatorname{SE}(\widehat P)=\sqrt{\frac{p(1-p)}{n}}.
 \]</span></p>
+<p><strong>Success-failure condition</strong></p>
 <p><span class="math display">\[
 np\ge10,
 \qquad
@@ -502,13 +542,16 @@ n(1-p)\ge10.
 \]</span></p>
 </div>
 <div id="formula-l9" class="section level2 hasAnchor">
-<h2>Lecture 9 - Confidence intervals and zero tests<a href="formula-sheet.html#formula-l9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Lecture 9 - Confidence intervals and tests<a href="formula-sheet.html#formula-l9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>General confidence-interval form</strong></p>
 <p><span class="math display">\[
 \text{estimate}\ \pm\ \text{critical value}\times\text{SE}.
 \]</span></p>
+<p><strong>One-sample <span class="math inline">\(t\)</span> confidence interval for a mean</strong></p>
 <p><span class="math display">\[
 \bar X\pm t_{1-\alpha/2,n-1}\frac{S}{\sqrt n}.
 \]</span></p>
+<p><strong>Critical values for a 95% confidence interval</strong></p>
 <p><span class="math display">\[
 z_{0.975}=1.960,
 \qquad
@@ -517,6 +560,7 @@ df&amp;5&amp;10&amp;20&amp;30&amp;60&amp;\infty\\ \hline
 t_{0.975,df}&amp;2.571&amp;2.228&amp;2.086&amp;2.042&amp;2.000&amp;1.960
 \end{array}
 \]</span></p>
+<p><strong>Difference from a hypothesised mean</strong></p>
 <p><span class="math display">\[
 \delta=\mu-\mu_0,
 \qquad
@@ -525,11 +569,13 @@ t_{0.975,df}&amp;2.571&amp;2.228&amp;2.086&amp;2.042&amp;2.000&amp;1.960
 T=\frac{\widehat\delta}{S/\sqrt n},
 \qquad df=n-1.
 \]</span></p>
+<p><strong>Two-sided hypothesis test for a mean</strong></p>
 <p><span class="math display">\[
 H_0:\delta=0
 \qquad\text{versus}\qquad
 H_1:\delta\ne0.
 \]</span></p>
+<p><strong>Two-sided <span class="math inline">\(p\)</span>-value and decision rule</strong></p>
 <p><span class="math display">\[
 p=P\!\left(|T_{df}|\ge|t_{obs}|\mid H_0\right),
 \qquad
@@ -538,6 +584,7 @@ p\le\alpha\ \Longrightarrow\ \text{reject }H_0.
 </div>
 <div id="formula-l10" class="section level2 hasAnchor">
 <h2>Lecture 10 - Tests, errors, and power<a href="formula-sheet.html#formula-l10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Two-sided hypothesis test for a proportion</strong></p>
 <p><span class="math display">\[
 H_0:p=p_0
 \qquad\text{versus}\qquad
@@ -548,20 +595,24 @@ Z=\frac{\hat p-p_0}{\sqrt{p_0(1-p_0)/n}},
 \qquad
 p\text{-value}=2P(Z\ge|z_{obs}|).
 \]</span></p>
+<p><strong>Success-failure condition under <span class="math inline">\(H_0\)</span></strong></p>
 <p><span class="math display">\[
 np_0\ge10,
 \qquad
 n(1-p_0)\ge10.
 \]</span></p>
+<p><strong>Confidence interval for a proportion</strong></p>
 <p><span class="math display">\[
 \hat p\pm z_{1-\alpha/2}
 \sqrt{\frac{\hat p(1-\hat p)}{n}}.
 \]</span></p>
+<p><strong>Type I error and power</strong></p>
 <p><span class="math display">\[
 P(\text{Type I error})=\alpha,
 \qquad
 \text{Power}=P(\text{reject }H_0\mid H_1\text{ is true}).
 \]</span></p>
+<p><strong>Two-sided test and confidence interval for a regression coefficient</strong></p>
 <p><span class="math display">\[
 t=\frac{b_j}{\operatorname{SE}(b_j)},
 \qquad
